@@ -1,3 +1,17 @@
+/************ basics ************/
+
+a,
+a:hover,
+a:focus,
+button,
+button:hover,
+button:focus,
+input,
+input:hover,
+input:focus {
+    transition: .3s;
+}
+
 /************ homepage V1 ************/
 
 .cta-card .featured-card-single.card-layout-split {
@@ -9,6 +23,77 @@
 
 body.ribbit.interior #MainCopy_ContentWrapper {
     padding-top: 0;
+}
+
+/****** CTA tiles ******/
+
+.cta-tile a {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 24px 100px 24px 24px;
+    position: relative;
+    background: var(--hl-bs--gray-100);
+    margin-bottom: 30px;
+}
+.cta-tile.icon a {
+    padding-left: 110px;
+}
+.cta-tile.icon a > p:first-child {
+    margin-bottom: 0;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cta-tile.icon a i {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    background: var(--hl-bs--gray-300);
+    color: var(--hl-bs--primary);
+    font-size: 30px;
+}
+body.ribbit .cta-tile a {
+    color: var(--hl-bs--default-text);
+}
+.cta-tile a::after {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--hl-bs--link);
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f061';
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.cta-tile h3 {
+    margin-top: 0;
+    transition: .3s;
+}
+.cta-tile a:hover,
+.cta-tile a:focus {
+    background: var(--hl-bs--gray-200);
+    transition: .3s;
+    color: var(--hl-bs--primary);
+}
+.cta-tile a:hover::after,
+.cta-tile a:focus::after {
+    background: var(--hl-bs--link-hover);
+    transition: .3s;
+}
+.cta-tile.icon a:is(:hover, :focus) i {
+    background: var(--hl-bs--gray-400);
 }
 
 /************ footer ************/
