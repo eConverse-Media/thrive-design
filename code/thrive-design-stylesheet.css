@@ -1,4 +1,82 @@
+/************ homepage V1 ************/
+
 .cta-card .featured-card-single.card-layout-split {
     background: [PrimaryColor] !important;
     padding: 40px;
+}
+
+/************ interior pages ************/
+
+body.ribbit.interior #MainCopy_ContentWrapper {
+    padding-top: 0;
+}
+
+/************ footer ************/
+
+#FOOTER h2 {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 0;
+}
+#FOOTER .Footer {
+    padding: 0;
+}
+.footer-middle-row,
+.footer-bottom-row {
+    position: relative;
+}
+.footer-middle-row::before,
+.footer-bottom-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    border-top: 1px solid rgba(217,217,217,0.2);
+    display: block;
+}
+.footer-logo .HtmlContent {
+    height: 35px;
+}
+.footer-logo img {
+    max-height: 100%;
+    max-width: unset;
+}
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer-social ul {
+    list-style-type: none;
+    padding-left: 7px;
+    display: flex;
+    margin-bottom: 0;
+}
+.footer-social ul li {
+    margin-left: 3px;
+}
+.footer-social ul li a {
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+}
+#FOOTER .footer-social h2 {
+    margin-bottom: 0;
+}
+#FOOTER .footer-social a {
+    color: [FooterBackgroundColor];
+}
+#MPCopyright {
+    text-align: left;
+    padding: 0;
+}
+#MPFooterLink #MPFooterLinkContent {
+    text-align: right;
+    padding: 0;
 }
