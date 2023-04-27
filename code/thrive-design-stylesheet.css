@@ -1,5 +1,11 @@
 /************ basics ************/
 
+.hl-primary-row-bkgd {
+    color: var(--hl-bs--primary-opposite);
+}
+
+/****** links ******/
+
 a,
 a:hover,
 a:focus,
