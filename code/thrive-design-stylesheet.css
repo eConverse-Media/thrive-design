@@ -301,6 +301,12 @@ body.has-modal.modal-open {
     content: '\f00d';
 }
 
+/****** icon tiles ******/
+
+.icon-tile .featured-card .featured-card-image {
+    display: none;
+}
+
 /************ footer ************/
 
 #FOOTER h2 {
