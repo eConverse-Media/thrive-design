@@ -102,6 +102,205 @@ body.ribbit .cta-tile a {
     background: var(--hl-bs--gray-400);
 }
 
+/****** accordions ******/
+
+/*** accordions ***/
+.accordion-heading button {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--hl-bs--link);
+    background: transparent;
+    padding: 15px 10px;
+    margin: 0;
+    border: none;
+    border-top: 1px solid var(--hl-bs--gray-100);
+    cursor: pointer;
+    transition: .3s;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.accordion-heading button:hover,
+.accordion-heading button:focus {
+    color: var(--hl-bs--link-hover);
+    transition: .3s;
+}
+.accordion-heading button::before {
+    font-family: 'Font Awesome 6 Pro';
+    content: '\f078';
+    margin-right: 10px;
+}
+.open .accordion-heading button::before {
+    content: '\f077';
+}
+.accordion-text {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.accordion-wrap .ContentItemHtml, .accordion-wrap .ContentItemHtml:hover {
+    transition: none !important;
+}
+
+/****** team bio modals ******/
+
+body.has-modal::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: -1;
+    transition: 0.3s;
+    opacity: 0;
+}
+body.has-modal.modal-open::before {
+    z-index: 1000;
+    opacity: 1;
+    transition: .3s;
+}
+body.has-modal {
+    position: relative;
+}
+body.has-modal.modal-open {
+    overflow: hidden;
+}
+
+.team {
+    padding: 15px;
+    position: relative;
+}
+
+.team .HtmlContent {
+    position: relative;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.04), 0px 2px 16px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+    padding: 20px;
+    text-align: center;
+}
+
+.team .HtmlContent .img-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.team p a,
+.bio p a {
+    text-decoration: none;
+    color: var(--hl-bs--default-text);
+}
+
+.bio.no-contact-info p a::before,
+.bio.no-contact-info p:first-of-type::before {
+    display: none;
+}
+
+.bio p,
+.team p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.team h3,
+.bio h3 {
+    color: var(--hl-bs--primary);
+}
+
+.team h4,
+.bio h4 {
+    color: var(--hl-bs--default-text);
+}
+
+.team button {
+    background: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+    padding: 5px 10px;
+    border: none;
+}
+.team button:is(:hover, :focus) {
+    background: var(--hl-bs--primary-hover);
+}
+
+.bio {
+    display: none;
+    position: fixed;
+    height: 450px;
+    width: 800px;
+    top: calc(50% - 200px);
+    left: calc(50% - 350px);
+    border-radius: 4px;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 1px 6px 6px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.bio.open {
+    display: block;
+    z-index: 1020;
+}
+
+.bio .HtmlContent {
+    display: flex;
+    height: 100%;
+}
+
+.bio-image {
+    flex-basis: 30%;
+    padding-right: 15px;
+}
+
+.bio-image img {
+    max-height: 300px;
+}
+
+.bio-text {
+    flex-basis: 70%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.bio h3 {
+    margin-top: 0;
+}
+
+.bio h4 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--hl-bs--gray-100);
+}
+
+.bio button {
+    position: absolute;
+    color: var(--hl-bs--link);
+    background: transparent;
+    border: none;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    z-index: 20;
+}
+.bio button:is(:hover, :focus) {
+    color: var(--hl-bs--link-hover);
+}
+.bio button::before {
+    font-family: 'Font Awesome 6 Pro';
+    content: '\f00d';
+}
+
 /************ footer ************/
 
 #FOOTER h2 {
