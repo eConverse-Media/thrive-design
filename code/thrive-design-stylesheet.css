@@ -1,7 +1,17 @@
-/************ basics ************/
+/************ basics / reset ************/
 
 .hl-primary-row-bkgd {
     color: var(--hl-bs--primary-opposite);
+}
+.make-buttons em a,
+button,
+.btn {
+    background: linear-gradient(#0000, rgb(0 0 0/20%)) top/100% 800%;
+}
+.make-buttons em a:is(:hover, :focus),
+button:is(:hover, :focus),
+.btn:is(:hover, :focus) {
+    background-position: bottom;
 }
 
 /****** links ******/
@@ -14,8 +24,43 @@ button:hover,
 button:focus,
 input,
 input:hover,
-input:focus {
+input:focus,
+body .bootstrap-4 .btn,
+body .bootstrap-4 .btn:is(:hover, :focus) {
     transition: .3s;
+}
+
+/************ reset end ************/
+
+/************ buttons ************/
+
+.make-buttons em {
+    margin: -5px;
+    display: inline-block;
+}
+.make-buttons em a {
+    margin: 5px;
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: var(--hl-bs--primary-opposite);
+    background-color: var(--hl-bs--primary);
+}
+.make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary-opposite);
+}
+.hl-primary-row-bkgd .make-buttons em a,
+.hl-primary-row-bkgd.make-buttons em a {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-100);
+}
+.hl-primary-row-bkgd .make-buttons em a:is(:hover, :focus),
+.hl-primary-row-bkgd.make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-300);
 }
 
 /************ homepage V1 ************/
