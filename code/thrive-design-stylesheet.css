@@ -3,6 +3,40 @@
 .hl-primary-row-bkgd {
     color: var(--hl-bs--primary-opposite);
 }
+
+/****** resetting padding/margins ******/
+
+body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding {
+    padding-top: 0;
+}
+body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.row > div[class*="col-md-"] > .ContentUserControl:not(:first-child),
+.row > div[class*="col-md-"] > .ContentItemHtml:not(:first-child) {
+    margin-top: 16px;
+}
+body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:first-child {
+    padding-left: 8px;
+}
+body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last-child {
+    padding-right: 8px;
+}
+#PageTitleH1 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/*** padding/margins specifically for featured cards ***/
+
+.featured-card-multi {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/****** buttons ******/
+
 .make-buttons em a,
 .card.social ul li a,
 .cta-tile a::after,
@@ -133,13 +167,6 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 }
 
 /************ interior pages ************/
-
-body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding {
-    padding-top: 0;
-}
-body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding {
-    padding-bottom: 0;
-}
 
 /****** HTML cards ******/
 
@@ -308,8 +335,14 @@ body.has-modal.modal-open {
 }
 
 .team {
-    padding: 15px;
+    padding: 8px;
     position: relative;
+}
+
+.col-md-3 > .team,
+.col-md-3 > .team {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .team .HtmlContent {
