@@ -16,12 +16,21 @@ function handleLink(self) {
     }
 }
 
-function handleCTATiles() {
-    $('.cta-tile .HtmlContent').each(function() {
-        handleLink(this);
-    });
+function handleInteriorPadding() {
+    var firstRow = $('#MainCopy_ContentWrapper > .row:first-child'),
+        lastRow = $('#MainCopy_ContentWrapper > *:last-child').is('#MainCopy_extraPanel') ? $('#MainCopy_ContentWrapper > .row:nth-last-child(2)') : $('#MainCopy_ContentWrapper > .row:last-child');
+    
+    if ($(firstRow).hasClass('hl-secondary-row-bkgd') ||
+    $(firstRow).hasClass('hl-primary-row-bkgd')) {
+        $('#MainCopy_ContentWrapper').addClass('no-top-padding');
+    }
+
+    if ($(lastRow).hasClass('hl-secondary-row-bkgd') ||
+    $(lastRow).hasClass('hl-primary-row-bkgd')) {
+        $('#MainCopy_ContentWrapper').addClass('no-bottom-padding');
+    }
 }
 
 $(function () {
-    handleCTATiles();
+    handleInteriorPadding();
 });

@@ -4,14 +4,81 @@
     color: var(--hl-bs--primary-opposite);
 }
 .make-buttons em a,
+.card.social ul li a,
+.cta-tile a::after,
 button,
 .btn {
-    background: linear-gradient(#0000, rgb(0 0 0/20%)) top/100% 800%;
+    background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 .make-buttons em a:is(:hover, :focus),
+.card.social ul li a:is(:hover, :focus),
+.cta-tile a:is(:hover, :focus)::after,
 button:is(:hover, :focus),
-.btn:is(:hover, :focus) {
+.btn:is(:hover, :focus),
+.btn.btn-primary:is(:hover, :focus),
+body.ribbit .btn.btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary:focus, 
+body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
+.btn.btn-success:is(:hover, :focus),
+body.ribbit .btn-success:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-success:focus, 
+body.ribbit :not(.no-theme) .btn-success:hover:not(:disabled),
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus),
+.btn.btn-default:is(:hover, :focus),
+body.ribbit .btn.btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default:focus, 
+body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
+    background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
+}
+
+.make-buttons em a,
+button,
+.btn,
+.cta-tile a::after,
+.make-buttons em a:is(:hover, :focus),
+button:is(:hover, :focus),
+.btn:is(:hover, :focus),
+.cta-tile a:is(:hover, :focus)::after,
+.btn.btn-primary,
+.btn.btn-primary:is(:hover, :focus),
+body.ribbit .btn.btn-primary,
+body.ribbit .btn.btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary,
+body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary:focus, 
+body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled) {
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+    border: none;
+}
+.btn.btn-success,
+.btn.btn-success:is(:hover, :focus),
+body.ribbit .btn.btn-success,
+body.ribbit .btn.btn-success:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-success,
+body.ribbit :not(.no-theme) .btn-success:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-success:focus, 
+body.ribbit :not(.no-theme) .btn-success:hover:not(:disabled),
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary,
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus) {
+    background-color: var(--hl-bs--secondary);
+    color: var(--hl-bs--secondary-opposite); /* don't think this is right; looking for text-on-secondary */
+    border: none;
+}
+.btn.btn-default,
+.btn.btn-default:is(:hover, :focus),
+body.ribbit .btn.btn-default,
+body.ribbit .btn.btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default,
+body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default:focus, 
+body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
+    background-color: var(--hl-bs--gray-300);
+    color: var(--hl-bs--default-text);
+    border: none;
 }
 
 /****** links ******/
@@ -46,11 +113,6 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    color: var(--hl-bs--primary-opposite);
-    background-color: var(--hl-bs--primary);
-}
-.make-buttons em a:is(:hover, :focus) {
-    color: var(--hl-bs--primary-opposite);
 }
 .hl-primary-row-bkgd .make-buttons em a,
 .hl-primary-row-bkgd.make-buttons em a {
@@ -72,8 +134,42 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 /************ interior pages ************/
 
-body.ribbit.interior #MainCopy_ContentWrapper {
+body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding {
     padding-top: 0;
+}
+body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+/****** HTML cards ******/
+
+.card {
+    padding: 30px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+}
+.card.social ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.card.social ul li a {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+    display: inline-block;
+}
+.card.social ul li a:is(:hover, :focus) {
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
 }
 
 /****** CTA tiles ******/
@@ -118,7 +214,6 @@ body.ribbit .cta-tile a {
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--hl-bs--link);
     font-family: 'Font Awesome 5 Pro';
     content: '\f061';
     color: #fff;
@@ -140,7 +235,6 @@ body.ribbit .cta-tile a {
 }
 .cta-tile a:hover::after,
 .cta-tile a:focus::after {
-    background: var(--hl-bs--link-hover);
     transition: .3s;
 }
 .cta-tile.icon a:is(:hover, :focus) i {
@@ -220,7 +314,8 @@ body.has-modal.modal-open {
 
 .team .HtmlContent {
     position: relative;
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.04), 0px 2px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+    border-radius: 8px;
     transition: .3s;
     padding: 20px;
     text-align: center;
@@ -269,13 +364,8 @@ body.has-modal.modal-open {
 }
 
 .team button {
-    background: var(--hl-bs--primary);
-    color: var(--hl-bs--primary-opposite);
     padding: 5px 10px;
     border: none;
-}
-.team button:is(:hover, :focus) {
-    background: var(--hl-bs--primary-hover);
 }
 
 .bio {
@@ -350,6 +440,39 @@ body.has-modal.modal-open {
 
 .icon-tile .featured-card .featured-card-image {
     display: none;
+}
+
+/****** sponsors ******/
+
+#MPOuterMost #MPOuter .sponsors {
+    margin-top: 32px;
+}
+.sponsors > .col-md-12.slick-slider .slick-track {
+    display: flex;
+}
+.sponsors .slick-slider .sponsor {
+    padding: 0 15px;
+    display: flex;
+    height: auto;
+}
+.sponsor .HtmlContent {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    display: flex;
+}
+.sponsor a {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    text-decoration: none;
 }
 
 /************ footer ************/
