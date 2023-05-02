@@ -510,11 +510,20 @@ body.has-modal.modal-open {
 
 /************ footer ************/
 
+#MPOuterFooter {
+    padding: 0;
+}
+#MPFooterLink a {
+    letter-spacing: 0;
+    font-size: inherit;
+}
+
 #FOOTER h2 {
     font-size: 16px;
     line-height: 19px;
     margin-top: 0;
 }
+#FOOTER.col-md-12,
 #FOOTER .Footer {
     padding: 0;
 }
@@ -532,12 +541,11 @@ body.has-modal.modal-open {
     border-top: 1px solid rgba(217,217,217,0.2);
     display: block;
 }
-.footer-logo .HtmlContent {
-    height: 35px;
+.footer-logo p {
+    margin-bottom: 0;
 }
 .footer-logo img {
-    max-height: 100%;
-    max-width: unset;
+    max-height: 35px;
 }
 .footer-social {
     display: flex;
