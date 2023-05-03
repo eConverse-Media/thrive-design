@@ -1,12 +1,53 @@
 /************ basics / reset ************/
 
-.hl-primary-row-bkgd {
+.hl-primary-row-bkgd,
+.hl-primary-row-bkgd h1,
+.hl-primary-row-bkgd h2,
+.hl-primary-row-bkgd h3,
+.hl-primary-row-bkgd h4,
+.hl-primary-row-bkgd h5,
+.hl-primary-row-bkgd h6 {
     color: var(--hl-bs--primary-opposite);
 }
+
 /*** removing HTML Footer ***/
 
 .ContentItemHtml .HtmlFooter {
     display: none;
+}
+
+/*** flex rows ***/
+
+@media (min-width: 992px) {
+    .flex-row {
+        display: flex;
+        align-items: center;
+    }
+    .flex-row .HtmlContent > *:first-child {
+        margin-top: 0;
+    }
+    .flex-row .HtmlContent > *:last-child {
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 769px) {
+    .flex-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    body.ribbit .flex-heading h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/*** removing margin on final paragraph ***/
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 /*** preventing overflow on mobile ***/
@@ -81,13 +122,21 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last
     }
 }
 
+/****** unstyled lists ******/
+
+.unstyled-list ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
 /****** buttons ******/
 
 .make-buttons em a,
 .card.social ul li a,
 .cta-tile a::after,
 button,
-.btn {
+.btn,
+body.ribbit .btn {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 .make-buttons em a:is(:hover, :focus),
@@ -95,6 +144,7 @@ button,
 .cta-tile a:is(:hover, :focus)::after,
 button:is(:hover, :focus),
 .btn:is(:hover, :focus),
+body.ribbit .btn:is(:hover, :focus),
 .btn.btn-primary:is(:hover, :focus),
 body.ribbit .btn.btn-primary:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
@@ -117,6 +167,7 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
 .make-buttons em a,
 button,
 .btn,
+body.ribbit .btn,
 .cta-tile a::after,
 .make-buttons em a:is(:hover, :focus),
 button:is(:hover, :focus),
@@ -150,6 +201,10 @@ body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-pr
 }
 .btn.btn-default,
 .btn.btn-default:is(:hover, :focus),
+.btn.btn-default-override,
+.btn.btn-default-override:is(:hover, :focus),
+body.ribbit .btn.btn-default-override,
+body.ribbit .btn.btn-default-override:is(:hover, :focus),
 body.ribbit .btn.btn-default,
 body.ribbit .btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default,
@@ -159,6 +214,9 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
     background-color: var(--hl-bs--gray-300);
     color: var(--hl-bs--default-text);
     border: none;
+}
+.categorize-message-buttons button {
+    color: var(--hl-bs--default-text);
 }
 
 /****** links ******/
@@ -322,7 +380,7 @@ body.ribbit .cta-tile a {
     font-weight: 400;
     color: var(--hl-bs--link);
     background: transparent;
-    padding: 15px 10px;
+    padding: 15px 24px 15px 0;
     margin: 0;
     border: none;
     border-top: 1px solid var(--hl-bs--gray-100);
@@ -331,6 +389,7 @@ body.ribbit .cta-tile a {
     display: block;
     width: 100%;
     text-align: left;
+    position: relative;
 }
 .accordion-heading button:hover,
 .accordion-heading button:focus {
@@ -340,7 +399,10 @@ body.ribbit .cta-tile a {
 .accordion-heading button::before {
     font-family: 'Font Awesome 6 Pro';
     content: '\f078';
-    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .open .accordion-heading button::before {
     content: '\f077';
@@ -530,6 +592,9 @@ body.has-modal.modal-open {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+.icon-tile .featured-card .icon-container > .rounded {
+    border-radius: 50% !important;
 }
 
 /****** sponsors ******/
