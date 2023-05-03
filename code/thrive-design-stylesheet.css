@@ -272,6 +272,60 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 /************ interior pages ************/
 
+.ribbit h2.card-title {
+    /* font-size: 26px !important; */
+    font-weight: 800;
+}
+.bootstrap-4 .font-size-md, p, body {
+    color: #666666;
+    font-weight: 300;
+}
+body.ribbit h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 120%;
+    color: #272727;
+}
+body.ribbit h3 {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 140%;
+    color: #272727;
+}
+body.ribbit h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #272727;
+}
+body.ribbit h5 {
+    font-size: 16px;
+    font-weight: 800;
+}
+body.ribbit h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+body.ribbit .col-md-4 .ContentUserControl .heading, body.ribbit .col-md-6 .ContentUserControl .heading {
+    margin-left: 0;
+    margin-right: 0;
+}
+body.ribbit .col-md-4 .ContentUserControl .heading h2, body.ribbit .col-md-6 .ContentUserControl .heading h2, body.ribbit .col-md-4 .ContentItemHtml > h2, body.ribbit .col-md-6 .ContentItemHtml > h2 {
+    font-size: 16px;
+}
+.widget-header .font-size-sm {
+    font-size: 16px !important;
+    font-weight: 800;
+}
+body.ribbit h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+.col-md-12 > .FeaturedCardGrid .featured-card-single:not(.layout-hero) {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent !important;
+}
+
 /****** HTML cards ******/
 
 .card {
