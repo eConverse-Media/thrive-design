@@ -3,6 +3,17 @@
 .hl-primary-row-bkgd {
     color: var(--hl-bs--primary-opposite);
 }
+/*** removing HTML Footer ***/
+
+.ContentItemHtml .HtmlFooter {
+    display: none;
+}
+
+/*** preventing overflow on mobile ***/
+
+#MPOuterMost {
+    overflow-x: hidden;
+}
 
 /****** resetting padding/margins ******/
 
@@ -33,6 +44,41 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last
 .featured-card-multi {
     margin-left: -8px;
     margin-right: -8px;
+}
+
+/*** mobile padding ***/
+
+@media (max-width: 991px) {
+    #PageTitleH1 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:first-child {
+        padding-left: 0;
+    }
+    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last-child {
+        padding-right: 0;
+    }
+    .featured-card-multi {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
+
+@media (max-width: 992px) {
+    .interior .row-wide div[class*="section"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+@media (max-width: 991px) {
+    .interior .row-wide div[class*="section"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /****** buttons ******/
@@ -352,6 +398,10 @@ body.has-modal.modal-open {
     transition: .3s;
     padding: 20px;
     text-align: center;
+    width: 500px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team .HtmlContent .img-container {
@@ -471,8 +521,15 @@ body.has-modal.modal-open {
 
 /****** icon tiles ******/
 
-.icon-tile .featured-card .featured-card-image {
+.icon-tile .featured-card .featured-card-image,
+.icon-tile .featured-card-single > .flex-fill {
     display: none;
+}
+.icon-tile .featured-card .featured-card-single {
+    width: 500px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /****** sponsors ******/
@@ -484,7 +541,7 @@ body.has-modal.modal-open {
     display: flex;
 }
 .sponsors .slick-slider .sponsor {
-    padding: 0 15px;
+    padding: 0 8px;
     display: flex;
     height: auto;
 }
@@ -512,6 +569,9 @@ body.has-modal.modal-open {
 
 #MPOuterFooter {
     padding: 0;
+}
+#MPOuterFooter::after {
+    border: none;
 }
 #MPFooterLink a {
     letter-spacing: 0;
@@ -546,6 +606,7 @@ body.has-modal.modal-open {
 }
 .footer-logo img {
     max-height: 35px;
+    max-width: unset;
 }
 .footer-social {
     display: flex;
@@ -584,4 +645,29 @@ body.has-modal.modal-open {
 #MPFooterLink #MPFooterLinkContent {
     text-align: right;
     padding: 0;
+}
+
+/****** mobile ******/
+
+@media (max-width: 991px) {
+    .footer-middle-row::before, .footer-bottom-row::before {
+        left: 8px;
+        right: 8px;
+    }
+    #MPFooterLink .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .footer-middle-row,
+    #MPCopyright,
+    #MPFooterLink #MPFooterLinkContent {
+        text-align: center;
+    }
+    .footer-logo img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-social {
+        justify-content: center;
+    }
 }
