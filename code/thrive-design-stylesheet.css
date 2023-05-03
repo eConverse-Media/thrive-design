@@ -302,6 +302,17 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
 }
+.card img {
+    margin: -30px -30px 30px -30px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-width: calc(100% + 60px);
+}
+.card .HtmlContent > p i,
+.card .HtmlContent > i {
+    font-size: 40px;
+    color: var(--hl-bs--primary);
+}
 
 /****** CTA tiles ******/
 
