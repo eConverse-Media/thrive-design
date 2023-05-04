@@ -31,6 +31,22 @@ function handleInteriorPadding() {
     }
 }
 
+function handleLinkCards() {
+    $('.card.link-card').each(function () {
+        var self = $(this),
+            link = $(self).find('a'),
+            onclick = $(link).attr('onclick');
+            
+        $(self).find('i').prependTo($(self));
+        
+        $(self).wrapInner('<a onclick="' + onclick + '" />');
+
+        $(link).unwrap();
+        $(link).contents().unwrap();
+    });
+}
+
 $(function () {
     handleInteriorPadding();
+    handleLinkCards();
 });

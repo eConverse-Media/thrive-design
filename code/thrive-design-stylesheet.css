@@ -407,11 +407,55 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 /****** HTML cards ******/
 
-.card {
+body.ribbit .row-wide.cards > .col-md-12 {
+    display: flex;
+    margin: -8px;
+    width: calc(100% + 16px);
+}
+.cards .card {
+    margin: 8px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-basis: 20%;
+}
+.cards.row > .col-md-12 > .card.ContentItemHtml:not(:first-child) {
+    margin-top: 8px;
+}
+.cards .card.link-card a {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card,
+.card.link-card a {
     padding: 30px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 2px 1px rgba(124, 124, 124, .25);
+}
+.card.link-card a {
+    display: block;
+    text-decoration: none;
+    color: var(--hl-bs--default-text);
+}
+.card.link-card a:is(:hover, :focus) {
+    color: var(--hl-bs--default-text);
+    box-shadow: 0 0 4px 2px rgba(124, 124, 124, 0.25);
+}
+.card.link-card {
+    padding: 0;
+    box-shadow: none;
+}
+.card.link-card a i {
+    color: var(--hl-bs--primary);
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
 .card.social ul {

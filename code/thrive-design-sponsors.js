@@ -2,7 +2,7 @@ $(function () {
     $('.sponsors > .col-md-12').slick({
         dots: false,
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: true,
