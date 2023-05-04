@@ -63,6 +63,11 @@ function handleAjaxCall(self) {
         var img = $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type'),
             src = $(img).attr('src');
 
+      if(!!src) {
+        var img = $(resp).find('.media img'),
+        src = $(img).attr('src');
+      }
+
         if (!!src) {
             var url = "url('" + src + "')";
             $(self).find('.img-container').css('background-image', url);
