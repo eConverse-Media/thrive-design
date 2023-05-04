@@ -1,7 +1,7 @@
 $(function () {
 
     $('.top-resources ul li').each(function () {
-        handleAjaxCall(this);
+        handleLibraryAjax(this);
     });
 
     $('.top-resources ul li').wrapAll('<div class="top-resource-slider"></div>');
