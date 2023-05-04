@@ -878,16 +878,19 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     position: relative;
 }
 
-.top-blog-slider-wrapper ul li .title-row .col-md-3 {
+.top-blog-slider-wrapper ul li .title-row .col-md-3,
+.top-resource-slider-wrapper li .title-row .col-md-3 {
     display: none;
 }
 
-.top-blog-slider-wrapper ul li .title-row .col-md-3 {
+.top-blog-slider-wrapper ul li .title-row .col-md-9,
+.top-resource-slider-wrapper li .title-row .col-md-9 {
     width: 100%;
 }
 
 
-.top-blog-slider-wrapper ul li .img-container {
+.top-blog-slider-wrapper ul li .img-container,
+.top-resource-slider-wrapper li .img-container {
     position: absolute;
     top: 25px;
     left: 30px;
