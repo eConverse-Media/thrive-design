@@ -1,3 +1,4 @@
+
 $(function () {
 
     $('.top-blogs ul li').wrapAll('<div class="top-blogs-slider"></div>');
