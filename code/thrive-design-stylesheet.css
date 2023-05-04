@@ -868,7 +868,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     display: flex;
 }
 
-.top-blog-slider-wrapper ul li {
+.top-blog-slider-wrapper ul li, .top-resource-slider ul li {
     height: auto;
     background-color: white;
     border: 0;

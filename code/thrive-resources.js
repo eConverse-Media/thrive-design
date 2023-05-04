@@ -8,7 +8,7 @@ $(function () {
 
 
 
-    $('.top-blogs-slider').slick({
+    $('.top-resource-slider').slick({
         dots: false,
         arrows: true,
         infinite: true,
