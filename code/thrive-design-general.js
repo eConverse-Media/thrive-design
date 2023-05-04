@@ -64,7 +64,7 @@ function handleAjaxCall(self) {
             src = $(img).attr('src');
 
       if(!!src) {
-        var img = $(resp).find('.media img'),
+        var img = $(resp).find('.col-md-10 .media img'),
         src = $(img).attr('src');
       }
 
