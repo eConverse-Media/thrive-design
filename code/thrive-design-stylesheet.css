@@ -1,3 +1,64 @@
+/************ theme basics ************/
+
+.ribbit h2.card-title {
+    font-weight: 800;
+}
+.bootstrap-4 .font-size-md, p, body {
+    color: #666666;
+    font-weight: 300;
+}
+body.ribbit h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+body.ribbit h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 120%;
+}
+h2 {
+    color: #272727;
+}
+body.ribbit h3 {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 140%;
+}
+h3 {
+    color: #272727;
+}
+body.ribbit h4 {
+    font-size: 18px;
+    font-weight: 800;
+}
+h4 {
+    color: #272727;
+}
+body.ribbit h5 {
+    font-size: 16px;
+    font-weight: 800;
+}
+body.ribbit h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+body.ribbit .col-md-4 .ContentUserControl .heading, body.ribbit .col-md-6 .ContentUserControl .heading {
+    margin-left: 0;
+    margin-right: 0;
+}
+body.ribbit .col-md-4 .ContentUserControl .heading h2, body.ribbit .col-md-6 .ContentUserControl .heading h2, body.ribbit .col-md-4 .ContentItemHtml > h2, body.ribbit .col-md-6 .ContentItemHtml > h2 {
+    font-size: 16px;
+}
+.widget-header .font-size-sm {
+    font-size: 16px !important;
+    font-weight: 800;
+}
+.col-md-12 > .FeaturedCardGrid .featured-card-single:not(.layout-hero) {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent !important;
+}
+
 /************ basics / reset ************/
 
 .hl-primary-row-bkgd,
@@ -6,8 +67,19 @@
 .hl-primary-row-bkgd h3,
 .hl-primary-row-bkgd h4,
 .hl-primary-row-bkgd h5,
-.hl-primary-row-bkgd h6 {
+.hl-primary-row-bkgd h6,
+.hl-primary-row-bkgd p {
     color: var(--hl-bs--primary-opposite);
+}
+.hl-secondary-row-bkgd,
+.hl-secondary-row-bkgd h1,
+.hl-secondary-row-bkgd h2,
+.hl-secondary-row-bkgd h3,
+.hl-secondary-row-bkgd h4,
+.hl-secondary-row-bkgd h5,
+.hl-secondary-row-bkgd h6,
+.hl-secondary-row-bkgd p {
+    color: var(--hl-bs--btn-secondary-text);
 }
 
 /*** removing HTML Footer ***/
@@ -139,6 +211,10 @@ button,
 body.ribbit .btn {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
+.make-buttons em a,
+.bootstrap-4:not(#CreateBtnWrapper) .btn {
+    white-space: pre-wrap;
+}
 .make-buttons em a:is(:hover, :focus),
 .card.social ul li a:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
@@ -196,7 +272,7 @@ body.ribbit :not(.no-theme) .btn-success:hover:not(:disabled),
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary,
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus) {
     background-color: var(--hl-bs--secondary);
-    color: var(--hl-bs--secondary-opposite); /* don't think this is right; looking for text-on-secondary */
+    color: var(--hl-bs--btn-secondary-text); /* don't think this is right; looking for text-on-secondary */
     border: none;
 }
 .btn.btn-default,
@@ -217,6 +293,21 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
 }
 .categorize-message-buttons button {
     color: var(--hl-bs--default-text);
+}
+
+.btn.btn-link,
+.btn.btn-link:is(:hover,:focus),
+body.ribbit .btn.btn-link,
+body.ribbit .btn.btn-link:is(:hover, :focus) {
+    background: transparent;
+    color: var(--hl-bs--default-text);
+}
+
+/*** carets ***/
+
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle::after,
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle:is(:hover, :focus)::after {
+    border-top-color: var(--hl-bs--btn-secondary-text);
 }
 
 /****** links ******/
@@ -271,60 +362,6 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 }
 
 /************ interior pages ************/
-
-.ribbit h2.card-title {
-    /* font-size: 26px !important; */
-    font-weight: 800;
-}
-.bootstrap-4 .font-size-md, p, body {
-    color: #666666;
-    font-weight: 300;
-}
-body.ribbit h2 {
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 120%;
-    color: #272727;
-}
-body.ribbit h3 {
-    font-size: 21px;
-    font-weight: 800;
-    line-height: 140%;
-    color: #272727;
-}
-body.ribbit h4 {
-    font-size: 18px;
-    font-weight: 800;
-    color: #272727;
-}
-body.ribbit h5 {
-    font-size: 16px;
-    font-weight: 800;
-}
-body.ribbit h6 {
-    font-size: 14px;
-    font-weight: 400;
-}
-body.ribbit .col-md-4 .ContentUserControl .heading, body.ribbit .col-md-6 .ContentUserControl .heading {
-    margin-left: 0;
-    margin-right: 0;
-}
-body.ribbit .col-md-4 .ContentUserControl .heading h2, body.ribbit .col-md-6 .ContentUserControl .heading h2, body.ribbit .col-md-4 .ContentItemHtml > h2, body.ribbit .col-md-6 .ContentItemHtml > h2 {
-    font-size: 16px;
-}
-.widget-header .font-size-sm {
-    font-size: 16px !important;
-    font-weight: 800;
-}
-body.ribbit h1 {
-    font-size: 42px;
-    font-weight: 800;
-}
-.col-md-12 > .FeaturedCardGrid .featured-card-single:not(.layout-hero) {
-    border-radius: 0;
-    box-shadow: none;
-    background-color: transparent !important;
-}
 
 /****** HTML cards ******/
 
