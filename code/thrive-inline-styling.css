@@ -1,0 +1,91 @@
+<style>.top-blog-slider-wrapper {
+    /* background-color: #eee; */
+    /* padding: 40px 0; */
+}
+
+body.ribbit #MPOuterMost .top-blog-slider-wrapper>div {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+body.ribbit.blogs #MainCopy_ContentWrapper {
+    padding: 0;
+}
+
+.top-blogs ul .slick-track {
+    display: flex;
+}
+
+.top-blog-slider-wrapper ul li {
+    height: auto;
+    background-color: white;
+    border: 0;
+    margin: 0 15px;
+    /* width: calc(33.3333333333% - 30px) !important; */
+    padding: 215px 30px 25px;
+    position: relative;
+}
+
+.top-blog-slider-wrapper ul li .title-row .col-md-3 {
+    display: none;
+}
+
+.top-blog-slider-wrapper ul li .title-row .col-md-3 {
+    width: 100%;
+}
+
+
+.top-blog-slider-wrapper ul li .img-container {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    right: 30px;
+    height: 170px;
+    /* width: calc(100% - 60px); */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.thrive-blogs div[id*="FollowIcon"] {
+    display: none;
+}
+
+.thrive-blogs .blogs-block {
+    padding-left: 300px;
+    position: relative;
+    padding-bottom: 53px;
+}
+
+.thrive-blogs .blogs-block .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 142px;
+    background-size: cover;
+    background-position: center;
+}
+
+.thrive-blogs .blogs-block .title-row .col-md-8 {
+    width: 100%
+}
+
+.thrive-blogs .blogs-block .title-row .col-md-4 {
+    display: none;
+}
+
+.thrive-blogs .blogs-block .ByLine {
+    display: none;
+}
+
+.thrive-blogs .blogs-block .content-row .col-md-12 {
+    padding: 0;
+}
+
+.thrive-blogs .blogs-block .content-row .col-md-12 .margin-top-small {
+    margin-top: 0;
+}
+
+
+</style>
