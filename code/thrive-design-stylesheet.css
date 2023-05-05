@@ -973,6 +973,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     color: var(--hl-bs--default-text);
     display: block;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .latest-news-list .featured-blogs ul li .title-row   .col-md-3 {
