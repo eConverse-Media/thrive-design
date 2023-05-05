@@ -954,6 +954,16 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     width: 33.3333333333%;
     padding: 30px 25px;
     background-color: #eee;
+    border: 0;
+    margin: 0 15px;
+}
+
+.latest-news-list .featured-blogs ul li:first-of-type {
+    margin-left: 0;
+}
+
+.latest-news-list .featured-blogs ul li:last-of-type {
+    margin-right: 0;
 }
 
 .latest-news-list .featured-blogs ul li h3 a::before {
