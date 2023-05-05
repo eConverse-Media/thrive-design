@@ -990,9 +990,9 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     margin: 0 15px;
 }
 
-.latest-news-list .blogs-block:first-of-type,
-.latest-news-list .blogs-block:nth-of-type(4),
-.latest-news-list .blogs-block:nth-of-type(7) {
+.latest-news-list .blogs-block:nth-of-type(2),
+.latest-news-list .blogs-block:nth-of-type(5),
+.latest-news-list .blogs-block:nth-of-type(8) {
 margin-left: 0;
 }
 
