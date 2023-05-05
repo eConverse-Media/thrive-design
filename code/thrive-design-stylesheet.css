@@ -944,19 +944,19 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 /* Feratured Blogs List */
 
-.list .featured-blogs ul {
+.latest-news-list .featured-blogs ul {
     
         display: flex;
     
 }
 
-.list .featured-blogs ul li {
+.latest-news-list .featured-blogs ul li {
     width: 33.3333333333%;
     padding: 30px 25px;
     background-color: #eee;
 }
 
-.list .featured-blogs ul li h3 a::before {
+.latest-news-list .featured-blogs ul li h3 a::before {
     content: '\f03e';
     font-family: 'Font Awesome 5 Pro';
     font-weight: 300;
