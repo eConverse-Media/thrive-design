@@ -849,11 +849,7 @@ body.has-modal.modal-open {
     text-decoration: none;
 }
 
-.top-blog-slider-wrapper {
-    /* background-color: #eee; */
-    /* padding: 40px 0; */
-    /* testing repo */
-}
+
 
 body.ribbit #MPOuterMost .top-blog-slider-wrapper>div {
     max-width: 1200px;
@@ -989,15 +985,20 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     display: flex;
 }
 
-.latest-news-list .recent-blogs-react div {
+.latest-news-list .blogs-block  {
     width: 33.3333333333%;
     margin: 0 15px;
 }
 
-.latest-news-list .recent-blogs-react div:first-of-type,
-.latest-news-list .recent-blogs-react div:nth-of-type(4),
-.latest-news-list .recent-blogs-react div:nth-of-type(7) {
+.latest-news-list .blogs-block:first-of-type,
+.latest-news-list .blogs-block:nth-of-type(4),
+.latest-news-list .blogs-block:nth-of-type(7) {
 margin-left: 0;
+}
+
+.latest-news-list .blogs-block {
+    width: 33.3333333333%;
+    margin: 0 15px; 
 }
 
 /************ footer ************/
