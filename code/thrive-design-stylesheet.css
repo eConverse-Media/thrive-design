@@ -996,6 +996,13 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 margin-left: 0;
 }
 
+.latest-news-list .blogs-block:nth-of-type(4),
+.latest-news-list .blogs-block:nth-of-type(7),
+.latest-news-list .blogs-block:nth-of-type(10) {
+margin-roght: 0;
+}
+
+
 .latest-news-list .blogs-block {
     width: 33.3333333333%;
     margin: 0 15px; 
