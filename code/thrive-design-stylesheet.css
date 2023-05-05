@@ -961,6 +961,16 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     font-family: 'Font Awesome 5 Pro';
     font-weight: 300;
     color: var(--hl-bs--default-text);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.latest-news-list .featured-blogs ul li h3 a .col-md-3 {
+    display: none;
+}
+
+.latest-news-list .featured-blogs ul li h3 a .col-md-9 {
+    width: 100%;
 }
 
 /************ footer ************/
