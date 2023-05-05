@@ -988,6 +988,11 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .latest-news-list div[id*="BlogContents"] {
     display: flex;
+    flex-wrap: flex;
+}
+
+.latest-news-list div[id*="BlogContents"]> .row {
+    display: none;
 }
 
 .latest-news-list .blogs-block  {
