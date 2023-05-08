@@ -1316,6 +1316,128 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
     height: calc(100% - 170px);
 }
 
+
+/* Timeline Styling */
+
+.milestone-slider ul.slick-dots {
+    bottom: 0;
+    width: 380px;
+    left: calc(50% - 190px);
+}
+
+.milestone-slider .slick-arrow.slick-prev,
+.milestone-slider .slick-arrow.slick-next {
+    bottom: 2px;
+}
+
+.milestone-slider .slick-arrow.slick-prev {
+    left: calc(50% - 200px);
+}
+.milestone-slider .slick-arrow.slick-next {
+    right: calc(50% - 200px);
+}
+
+/************ milestone carousel ************/
+
+.milestone-slider.slick-dotted.slick-slider {
+    margin-bottom: 120px;
+}
+.milestone-slider.slick-dotted .slick-list {
+    height: 380px;
+}
+.milestone-slider.slick-dotted::before {
+    content: '';
+    opacity: 0.1;
+    border-top: 6px solid #005378;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 76px;
+}
+.milestone {
+    text-align: center;
+}
+.milestone .HtmlContent,
+.milestone h2 {
+    transition: .3s;
+    position: relative;
+}
+.milestone h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 48px;
+}
+.milestone h2::before,
+.milestone h2::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.milestone h2::before {
+    width: 25px;
+    height: 25px;
+    background: #009ADE;
+}
+.milestone h2::after {
+    width: 13px;
+    height: 13px;
+    background: #DEF5FF;
+}
+.milestone:not(.slick-current) h2 {
+    transform: translateY(10px);
+}
+.milestone.slick-current h2::before {
+    width: 45px;
+    height: 45px;
+    bottom: -30px;
+}
+.milestone.slick-current h2::after {
+    font-family: 'Font Awesome 5 Pro';
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: transparent;
+    color: #DEF5FF;
+    font-weight: 300;
+    font-size: 28px;
+    content: '\f277';
+    bottom: -30px;
+}
+.milestone .HtmlContent {
+    opacity: 0;
+    padding: 20px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+.milestone .HtmlContent::before,
+.milestone .HtmlContent::after {
+    content: '';
+    position: absolute;
+    width: 115px;
+    border-top: 1px solid #005378;
+    left: calc(50% - 57.5px);
+    top: 0;
+}
+.milestone .HtmlContent::after {
+    top: auto;
+    bottom: 0;
+}
+.milestone.slick-current .HtmlContent {
+    opacity: 1;
+}
+.milestone.slick-current h2,
+.milestone h3 {
+    color: #003045;
+}
+.milestone:not(.slick-current) h2 {
+    color: #009ADE;
+    font-size: 28px;
+}
+
 /************ footer ************/
 
 #MPOuterFooter {
