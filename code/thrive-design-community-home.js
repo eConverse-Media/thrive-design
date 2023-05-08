@@ -1,3 +1,17 @@
+function handleEmptyCommunityHtml() {
+    if (!($('.commHTMLOptionsToAttach .summary-edit').html())) {
+        $('.commHTMLOptionsToAttach').closest('.row-full').hide();
+    }
+}
+
+function handleAnnouncements() {
+    $('.HLAnnouncements ul').slick({
+        arrows: true,
+        dots: false,
+        autoplay: false
+    });
+}
+
 function handleResources() {
     $('.HLMyDocuments .Content ul li').each(function () {
         var self = $(this);
@@ -33,6 +47,8 @@ function handleRecentNews() {
 }
 
 $(function () {
+    handleEmptyCommunityHtml();
+    handleAnnouncements();
     handleResources();
     handleRecentNews();
 });

@@ -1125,6 +1125,20 @@ body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingCont
 
 /****** announcements ******/
 
+.groupdetails .HLAnnouncements {
+    background: var(--hl-bs--gray-200);
+}
+.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements {
+    border: none;
+}
+.groupdetails .HLAnnouncements ul li .content-row {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
 /****** events ******/
 
 /*** date blocks ***/
