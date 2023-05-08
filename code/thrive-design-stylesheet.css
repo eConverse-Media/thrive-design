@@ -249,7 +249,8 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last
 .cta-tile a::after,
 button,
 .btn,
-body.ribbit .btn {
+body.ribbit .btn,
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 
@@ -278,7 +279,8 @@ body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-pr
 body.ribbit .btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:focus,
-body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
+body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
@@ -301,7 +303,9 @@ body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-primary:focus,
 body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
 body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default,
-body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :focus) {
+body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
@@ -395,6 +399,9 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 .make-buttons em a {
     margin: 5px;
+}
+.make-buttons em a,
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn) {
     display: inline-block;
     font-style: normal;
     text-decoration: none;
@@ -1128,8 +1135,13 @@ body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingCont
 .groupdetails .HLAnnouncements {
     background: var(--hl-bs--gray-200);
 }
-.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements {
+.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements,
+body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
     border: none;
+}
+body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
+    padding: 0;
+    margin: 0;
 }
 .groupdetails .HLAnnouncements ul li .content-row {
     line-clamp: 3;
@@ -1137,6 +1149,9 @@ body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingCont
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
+}
+.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
+    display: none;
 }
 
 /****** events ******/

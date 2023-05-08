@@ -10,6 +10,22 @@ function handleAnnouncements() {
         dots: false,
         autoplay: false
     });
+
+    // handle link
+    $('.HLAnnouncements ul li').each(function () {
+        var self = $(this),
+            link = $(self).find('.content-row a[id*="More"]'),
+            href = $(link).attr('href'),
+            target = $(link).attr('target'),
+            rel = $(link).attr('rel'),
+            h3 = $(self).find('h3');
+
+        if (!!href) {
+            $(h3).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
+        }
+        
+        $(link).remove();
+    });
 }
 
 function handleResources() {
