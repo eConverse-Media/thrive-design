@@ -415,6 +415,20 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     background: var(--hl-bs--gray-300);
 }
 
+/* Header */
+
+
+
+body.ribbit #NAV > div {
+    padding: 0;
+}
+
+#MPOuterHeader #NAV #MPBottonBar {
+    max-width: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /************ homepage V1 ************/
 
 .cta-card .featured-card-single.card-layout-split {
