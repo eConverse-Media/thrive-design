@@ -1002,12 +1002,12 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 /* Feratured Blogs List */
 
-.latest-news-list .featured-blogs ul,
+.featured-blogs ul,
 .featured-resource ul {
         display: flex;
 }
 
-.latest-news-list .featured-blogs ul li,
+.featured-blogs ul li,
 .featured-resource ul li {
     width: 33.3333333333%;
     padding: 30px 25px;
@@ -1016,17 +1016,17 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     margin: 0 15px;
 }
 
-.latest-news-list .featured-blogs ul li:first-of-type,
+.featured-blogs ul li:first-of-type,
 .featured-resource ul li:first-of-type {
     margin-left: 0;
 }
 
-.latest-news-list .featured-blogs ul li:last-of-type,
+.featured-blogs ul li:last-of-type,
 .featured-resource ul li:last-of-type {
     margin-right: 0;
 }
 
-.latest-news-list .featured-blogs ul li h3 a::before,
+.featured-blogs ul li h3 a::before,
 .featured-resource ul li h3 a::before {
     content: '\f03e';
     font-family: 'Font Awesome 5 Pro';
@@ -1038,31 +1038,31 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     justify-content: center;
 }
 
-.latest-news-list .featured-blogs ul li .title-row   .col-md-3,
+.featured-blogs ul li .title-row   .col-md-3,
 .featured-resource ul li .title-row   .col-md-3 {
     display: none;
 }
 
-.latest-news-list .featured-blogs ul li .title-rwo   .col-md-9,
+.featured-blogs ul li .title-rwo   .col-md-9,
 .featured-resource ul li .title-rwo   .col-md-9 {
     width: 100%;
 }
 
-.latest-news-list .recent-blogs-react {
+.recent-blogs-react {
     display: flex;
 }
 
 
-.latest-news-list div[id*="BlogContents"] {
+div[id*="BlogContents"] {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
 }
 
-.latest-news-list div[id*="BlogContents"]> .row,
-.latest-news-list .row-border-top,
-.latest-news-list .blogs-block .col-md-4 {
+div[id*="BlogContents"]> .row,
+.row-border-top,
+.blogs-block .col-md-4 {
     display: none;
 }
 body.ribbit.interior.resource-list #MainCopy_ContentWrapper .resources-list div[id*="ContentPanel"] {
@@ -1077,7 +1077,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     padding-right: 0;
 }
 
-.latest-news-list .blogs-block,
+.blogs-block,
 .resources-list ul li  {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
@@ -1092,7 +1092,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     float: left;
 }
 
-.latest-news-list .blogs-block .img-container,
+.blogs-block .img-container,
 .resources-list ul li .img-container {
     height: 170px;
     position: absolute;
