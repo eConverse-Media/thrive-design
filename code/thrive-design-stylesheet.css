@@ -234,6 +234,14 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last
     list-style-type: none;
 }
 
+/****** background images ******/
+
+.bg-image,
+.img-container {
+    background-size: cover;
+    background-position: center;
+}
+
 /****** buttons ******/
 
 .make-buttons em a,
@@ -291,7 +299,9 @@ body.ribbit .btn.btn-primary:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-primary,
 body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-primary:focus,
-body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled) {
+body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
+body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default,
+body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
@@ -347,6 +357,15 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle::after,
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle:is(:hover, :focus)::after {
     border-top-color: var(--hl-bs--btn-secondary-text);
+}
+
+/*** widget buttons ***/
+
+body.ribbit .HLLandingControl div[id*="BottomLink"],
+body.ribbit .HLLandingControl div[id*="BottomLink"] > div,
+body.ribbit .HLLandingControl div[id*="MoreLink"],
+body.ribbit .HLLandingControl div[id*="MoreLink"] > div {
+    padding: 0;
 }
 
 /****** links ******/
@@ -1070,6 +1089,232 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     display: none;
 }
 
+/************ community landing pages ************/
+
+/****** all widgets ******/
+
+.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    padding: 20px;
+}
+body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl ul li {
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/****** discussions ******/
+
+body.ribbit.groupdetails .row-wide > div.col-md-8:not(.col-md-12) .HLLandingControl ul li,
+body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingControl ul li {
+    padding-left: 70px;
+    position: relative;
+}
+.groupdetails .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
+.groupdetails .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
+    padding: 0;
+    width: 100%;
+}
+.groupdetails .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
+.groupdetails .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/****** announcements ******/
+
+/****** events ******/
+
+/*** date blocks ***/
+
+.HLEventList ul li {
+    display: flex;
+    align-items: center;
+}
+.HLEventList ul li .col-md-2 {
+    width: 70px;
+    margin-right: 20px;
+}
+.HLEventList ul li .col-md-10 {
+    width: calc(100% - 90px);
+}
+.HLEventList ul li .date-block {
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background: var(--hl-bs--gray-200);
+}
+.HLEventList ul li .date-block .calendar-day {
+    display: none;
+}
+.HLEventList ul li .date-block .calendar-month,
+.HLEventList ul li .date-block .calendary-number {
+    color: var(--hl-bs--primary);
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/****** resources ******/
+
+body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLMyDocuments ul li {
+    position: relative;
+    padding: 0 0 20px 70px;
+}
+
+/*** icons ***/
+
+.HLMyDocuments .listIconContainer {
+    margin: 0;
+    position: absolute;
+    left: -70px;
+    top: 0;
+}
+.HLMyDocuments .libListReptEntAttchLble + div > .col-md-12 {
+    padding: 0;
+}
+.HLMyDocuments .listIconContainer img,
+.HLMyDocuments .libListReptEntAttchLble,
+.HLMyDocuments .pull-right .btn,
+.HLMyDocuments .listIconContainer > div.inline-block:not(:first-child) {
+    display: none;
+}
+.HLMyDocuments .listIconContainer:not(:empty) {
+    width: 50px;
+    height: 50px;
+    background: var(--hl-bs--gray-200);
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+}
+.HLMyDocuments .listIconContainer div {
+    background: transparent;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+.HLMyDocuments .listIconContainer div.iconNumberDiv {
+    display: none;
+}
+.HLMyDocuments .listIconContainer div::before {
+    font-family: 'Font Awesome 6 Pro';
+    font-size: 24px;
+    line-height: 50px;
+    color: var(--hl-bs--primary);
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeYoutube::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeYoutubeMul::before {
+    content: '\f167';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeWebinar::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeWebinarMul::before {
+    content: '\f1c8';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeDoc::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeDocMul::before {
+    content: '\f15b';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeSpreadsheet::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeSpreadsheetMul::before {
+    content: '\f65b';
+}
+
+.HLMyDocuments .listIconContainer div.has-image::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeImg::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeImgMul::before {
+    content: '\f1c5';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeVid::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeVidMul::before {
+    content: '\f1c8';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeAudio::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeAudioMul::before {
+    content: '\f1c7';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypePresentation::before,
+.HLMyDocuments .listIconContainer div.HLMListTypePresentationMul::before {
+    content: '\f1c4';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeWordDoc::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeWordDocMul::before {
+    content: '\f1c2';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeHyperlink::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeHyperlinkMul::before {
+    content: '\f0c1';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypePdf::before,
+.HLMyDocuments .listIconContainer div.HLMListTypePdfMul::before {
+    content: '\f1c1';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeZip::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeZipMul::before {
+    content: '\f1c6';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeProject::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeProjectMul::before {
+    content: '\f660';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeText::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeTextMul::before {
+    content: '\f15c';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeHtml::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeHtmlMul::before {
+    content: '\f1c9';
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeEps::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeEpsMul::before {
+    content: '\f1c5';
+}
+
+/****** recent news ******/
+
+.groupdetails .HLRecentBlogs ul {
+    margin: -15px;
+    display: flex;
+}
+body.ribbit.groupdetails .HLRecentBlogs ul li {
+    padding: 15px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 25%;
+    display: flex;
+    margin: 0;
+    border: none;
+    flex-direction: column;
+}
+.groupdetails .HLRecentBlogs ul li .img-container {
+    height: 170px;
+}
+.groupdetails .HLRecentBlogs ul li .text-container {
+    background: #fff;
+    padding: 25px 20px;
+    height: calc(100% - 170px);
+}
 
 /************ footer ************/
 
