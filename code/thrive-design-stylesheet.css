@@ -423,7 +423,7 @@ body.ribbit #NAV > div {
     padding: 0;
 }
 
-#MPOuterHeader #NAV #MPBottonBar {
+#MPOuterHeader #NAV #MPButtonBar {
     max-width: unset;
     padding-left: 15px;
     padding-right: 15px;
