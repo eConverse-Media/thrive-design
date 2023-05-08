@@ -1163,7 +1163,6 @@ body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLa
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    margin-bottom: 20px;
 }
 .groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     display: none;
