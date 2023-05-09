@@ -1463,6 +1463,17 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 
 /* Timeline Styling */
 
+.center-content {
+    display: flex;
+}
+
+.center-content>div:nth-of-type(2) {
+    display: flex;
+}
+
+.center-content>div:nth-of-type(2)>div {
+align-self: center;
+}
 .milestone-slider ul.slick-dots {
     bottom: 0;
     width: 380px;
@@ -1476,12 +1487,14 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 }
 
 .milestone-slider .slick-arrow.slick-prev {
-    left: calc(50% - 125px);
+    left: calc(50% - 132px);
     position: absolute;
     z-index: 5;
 }
 .milestone-slider .slick-arrow.slick-next {
     right: calc(50% - 125px);
+    position: absolute;
+    z-index: 5;
 }
 
 .milestone-slider .slick-arrow.slick-prev::before {
