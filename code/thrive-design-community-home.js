@@ -1,6 +1,10 @@
 function handleEmptyCommunityHtml() {
     if (!($('.commHTMLOptionsToAttach .summary-edit').html())) {
-        $('.commHTMLOptionsToAttach').closest('.row-full').hide();
+        $('.commHTMLOptionsToAttach').closest('.row-full').addClass('no-community-html');
+    } else {
+        $('.summary-edit .Content img').wrap('<div class="img-container" />');
+        $('.summary-edit .Content > p > .img-container').unwrap();
+        $('.summary-edit .Content > *:not(.img-container)').wrapAll('<div class="text-container" />');
     }
 }
 
@@ -8,7 +12,9 @@ function handleAnnouncements() {
     $('.HLAnnouncements ul').slick({
         arrows: true,
         dots: false,
-        autoplay: false
+        autoplay: false,
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-regular fa-arrow-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-regular fa-arrow-left"></i></button>'
     });
 
     // handle link

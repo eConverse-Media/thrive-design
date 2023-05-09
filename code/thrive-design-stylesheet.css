@@ -155,7 +155,8 @@ p:last-child {
 
 /****** resetting padding/margins ******/
 
-body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding {
+body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding,
+body.ribbit.interior.community-pages #MainCopy_ContentWrapper {
     padding-top: 0;
 }
 
@@ -177,8 +178,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last
 }
 
 #PageTitleH1 {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 20px 16px;
 }
 
 /*** padding/margins specifically for featured cards ***/
@@ -252,6 +252,11 @@ button,
 body.ribbit .btn,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
+}
+.moxman-btn button,
+.moxman-btn button:is(:hover, :focus) {
+    background: transparent;
+    color: #333;
 }
 
 .make-buttons em a,
@@ -1112,6 +1117,38 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 /************ community landing pages ************/
 
+/****** community tabs ******/
+
+body.ribbit .community-tabs-container-outer {
+    margin-top: 0;
+}
+body.ribbit.groupdetails .community-tabs-container-outer {
+    margin-bottom: 0;
+}
+body.ribbit .community-tabs-container-outer .community-tabs-container {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/****** community HTML ******/
+
+body.ribbit.groupdetails .row.no-community-html.row-full {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+}
+.summary-edit .Content {
+    display: flex;
+    align-items: center;
+}
+.summary-edit .img-container {
+    width: 42%;
+}
+.summary-edit .text-container {
+    width: 58%;
+    padding-right: 130px;
+}
+
 /****** all widgets ******/
 
 .groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl {
@@ -1148,6 +1185,7 @@ body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingCont
 
 .groupdetails .HLAnnouncements {
     background: var(--hl-bs--gray-200);
+    position: relative;
 }
 .groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements,
 body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
@@ -1166,6 +1204,33 @@ body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLa
 }
 .groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     display: none;
+}
+.groupdetails .HLAnnouncements ul li .DropDownGearBorderTop {
+    height: unset;
+}
+.groupdetails .HLAnnouncements ul li .HLContainer {
+    padding-bottom: 0;
+    padding-top: 20px;
+}
+
+/*** arrows ***/
+
+.HLAnnouncements .slick-arrow {
+    color: var(--hl-bs--primary);
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+.HLAnnouncements .slick-arrow.prev-arrow {
+    right: 24px;
+}
+.HLAnnouncements .slick-arrow:is(:hover, :focus) {
+    color: var(--hl-bs--secondary);
 }
 
 /****** events ******/
