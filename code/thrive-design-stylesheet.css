@@ -1438,14 +1438,12 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
     display: flex;
 }
 
-
 .center-content>div:nth-of-type(2) {
     display: flex;
 }
 
 .center-content>div:nth-of-type(2)>div {
-display: flex;
-align-content: center;
+align-self: center;
 }
 .milestone-slider ul.slick-dots {
     bottom: 0;
