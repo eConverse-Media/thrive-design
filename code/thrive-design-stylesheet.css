@@ -1092,7 +1092,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     float: left;
 }
 
-.top-blog-slider-wrapper .featured-blogs .blogs-slider-wrapper .img-container,
+.top-blogs-slider-wrapper .featured-blogs .blogs-slider-wrapper .img-container,
 .resources-list ul li .img-container {
     height: 170px;
     position: absolute;
