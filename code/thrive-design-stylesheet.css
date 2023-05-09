@@ -1464,6 +1464,9 @@ align-self: center;
 }
 .milestone-slider .slick-arrow.slick-next {
     right: calc(50% - 125px);
+    position: absolute;
+    z-index: 5;
+    top: 0;
 }
 
 .milestone-slider .slick-arrow.slick-prev::before {
