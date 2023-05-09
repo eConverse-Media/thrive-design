@@ -250,7 +250,8 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:last
 button,
 .btn,
 body.ribbit .btn,
-body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn) {
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit .summary-edit em a {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 .moxman-btn button,
@@ -285,7 +286,8 @@ body.ribbit .btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:focus,
 body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
-body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus) {
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
+body.ribbit .summary-edit em a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
@@ -310,7 +312,9 @@ body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
 body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default,
 body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
-body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus) {
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
+body.ribbit .summary-edit em a,
+body.ribbit .summary-edit em a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
@@ -406,7 +410,8 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     margin: 5px;
 }
 .make-buttons em a,
-body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn) {
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit .summary-edit em a {
     display: inline-block;
     font-style: normal;
     text-decoration: none;
@@ -1146,6 +1151,7 @@ body.ribbit .community-home .row.no-community-html.row-full {
 }
 .summary-edit .Content {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
 }
 .summary-edit .img-container {
@@ -1154,6 +1160,25 @@ body.ribbit .community-home .row.no-community-html.row-full {
 .summary-edit .text-container {
     width: 58%;
     padding-right: 130px;
+}
+.summary-edit .Content > ul {
+    width: 33.33333%;
+    padding-left: 0;
+    list-style-type: none;
+}
+.summary-edit .Content > ul + .text-container {
+    width: 66.66666667%;
+    padding-right: 180px;
+}
+.summary-edit .Content > ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.summary-edit .Content > ul li em a {
+    display: block;
+    text-align: center;
+}
+.summary-edit .Content .text-container h2:first-child {
+    margin-top: 0;
 }
 
 /****** all widgets ******/
@@ -1406,13 +1431,15 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
     content: '\f1c5';
 }
 
-/****** recent news ******/
+/****** recent news & featured resources ******/
 
-.community-home .HLRecentBlogs ul {
+.recent-news .HLRecentBlogs ul,
+.featured-resources .HLMyDocuments ul {
     margin: -15px;
     display: flex;
 }
-body.ribbit .community-home .HLRecentBlogs ul li {
+body.ribbit .recent-news .HLRecentBlogs ul li,
+body.ribbit .featured-resources .HLMyDocuments ul li {
     padding: 15px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -1422,10 +1449,12 @@ body.ribbit .community-home .HLRecentBlogs ul li {
     border: none;
     flex-direction: column;
 }
-.community-home .HLRecentBlogs ul li .img-container {
+.recent-news .HLRecentBlogs ul li .img-container,
+.featured-resources .HLMyDocuments ul li .img-container {
     height: 170px;
 }
-.community-home .HLRecentBlogs ul li .text-container {
+.recent-news .HLRecentBlogs ul li .text-container,
+.featured-resources .HLMyDocuments ul li .text-container {
     background: #fff;
     padding: 25px 20px;
     height: calc(100% - 170px);

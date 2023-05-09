@@ -16,11 +16,15 @@ function handleAjaxCall(self, asBackground) {
     });
     
     function success(resp) {
-        var img = $(resp).find('.blogs-block .blog-featured-image-row img');
-            
-        if (!($(img).attr('src'))) {
-            img = $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type')
+        
+        var img;
+
+        if (!!($(resp).find('.blogs-block').html())) {
+            img = !!($(resp).find('.blogs-block .blog-featured-image-row img').attr('src')) ? $(resp).find('.blogs-block .blog-featured-image-row img') : $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type');
+        } else {
+            img = !!($(resp).find('.Content > .row > .col-md-10 img').attr('src')) ? $(resp).find('.Content > .row > .col-md-10 img') : $(resp).find('div[id*="DetailPanel"] > .row > .col-md-10 > .row img');
         }
+
         var src = $(img).attr('src');
 
         if (!!src) {
