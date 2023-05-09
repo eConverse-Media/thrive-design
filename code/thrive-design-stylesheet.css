@@ -1122,7 +1122,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 body.ribbit .community-tabs-container-outer {
     margin-top: 0;
 }
-body.ribbit.groupdetails .community-tabs-container-outer {
+body.ribbit .community-home .community-tabs-container-outer {
     margin-bottom: 0;
 }
 body.ribbit .community-tabs-container-outer .community-tabs-container {
@@ -1132,7 +1132,7 @@ body.ribbit .community-tabs-container-outer .community-tabs-container {
 
 /****** community HTML ******/
 
-body.ribbit.groupdetails .row.no-community-html.row-full {
+body.ribbit .community-home .row.no-community-html.row-full {
     padding-top: 0;
     padding-bottom: 0;
     background: transparent;
@@ -1151,12 +1151,12 @@ body.ribbit.groupdetails .row.no-community-html.row-full {
 
 /****** all widgets ******/
 
-.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl {
+.community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     padding: 20px;
 }
-body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl ul li {
+body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl ul li {
     padding: 0 0 20px 0;
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -1164,18 +1164,18 @@ body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLa
 
 /****** discussions ******/
 
-body.ribbit.groupdetails .row-wide > div.col-md-8:not(.col-md-12) .HLLandingControl ul li,
-body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingControl ul li {
+body.ribbit .community-home .row-wide > div.col-md-8:not(.col-md-12) .HLLandingControl ul li,
+body.ribbit .community-home .row-wide > div.col-md-9:not(.col-md-12) .HLLandingControl ul li {
     padding-left: 70px;
     position: relative;
 }
-.groupdetails .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
-.groupdetails .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
+.community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
+.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
     padding: 0;
     width: 100%;
 }
-.groupdetails .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
-.groupdetails .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
+.community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
+.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
     position: absolute;
     left: 0;
     top: 0;
@@ -1183,32 +1183,32 @@ body.ribbit.groupdetails .row-wide > div.col-md-9:not(.col-md-12) .HLLandingCont
 
 /****** announcements ******/
 
-.groupdetails .HLAnnouncements {
+.community-home .HLAnnouncements {
     background: var(--hl-bs--gray-200);
     position: relative;
 }
-.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements,
-body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
+.community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements,
+body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
     border: none;
 }
-body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
+body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLAnnouncements ul li {
     padding: 0;
     margin: 0;
 }
-.groupdetails .HLAnnouncements ul li .content-row {
+.community-home .HLAnnouncements ul li .content-row {
     line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
 }
-.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
+.community-home .HLAnnouncements div[id*="MoreLinkPanel"] {
     display: none;
 }
-.groupdetails .HLAnnouncements ul li .DropDownGearBorderTop {
+.community-home .HLAnnouncements ul li .DropDownGearBorderTop {
     height: unset;
 }
-.groupdetails .HLAnnouncements ul li .HLContainer {
+.community-home .HLAnnouncements ul li .HLContainer {
     padding-bottom: 0;
     padding-top: 20px;
 }
@@ -1272,7 +1272,7 @@ body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLa
 
 /****** resources ******/
 
-body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLMyDocuments ul li {
+body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLMyDocuments ul li {
     position: relative;
     padding: 0 0 20px 70px;
 }
@@ -1401,11 +1401,11 @@ body.ribbit.groupdetails .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLa
 
 /****** recent news ******/
 
-.groupdetails .HLRecentBlogs ul {
+.community-home .HLRecentBlogs ul {
     margin: -15px;
     display: flex;
 }
-body.ribbit.groupdetails .HLRecentBlogs ul li {
+body.ribbit .community-home .HLRecentBlogs ul li {
     padding: 15px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -1415,10 +1415,10 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
     border: none;
     flex-direction: column;
 }
-.groupdetails .HLRecentBlogs ul li .img-container {
+.community-home .HLRecentBlogs ul li .img-container {
     height: 170px;
 }
-.groupdetails .HLRecentBlogs ul li .text-container {
+.community-home .HLRecentBlogs ul li .text-container {
     background: #fff;
     padding: 25px 20px;
     height: calc(100% - 170px);
