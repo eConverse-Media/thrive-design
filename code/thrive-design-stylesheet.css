@@ -1031,7 +1031,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     margin-right: 0;
 }
 
-.featured-blogs ul li h3 a::before,
+.featured-blogs.tile ul li h3 a::before,
 .featured-resource ul li h3 a::before {
     content: '\f03e';
     font-family: 'Font Awesome 5 Pro';
@@ -1083,7 +1083,8 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 }
 
 .featured-blogs .top-blogs-slider ul li,
-.resources-list ul li  {
+.resources-list ul li,
+.latest-news-list .blogs-block {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
     background: #eee;
@@ -1092,13 +1093,19 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     position: relative;
 }
 
+.featured-blogs.tile .top-blogs-slider ul li {
+    padding-top: 25px;
+    min-height: unset;
+}
+
 .resources-list ul li {
     min-height: 375px;
     float: left;
 }
 
-.top-blogs-slider-wrapper .featured-blogs .blogs-slider-wrapper .img-container,
-.resources-list ul li .img-container {
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
+.resources-list ul li .img-container, 
+.latest-news-list .blogs-block .img-container {
     height: 170px;
     position: absolute;
     top: 0;
@@ -1436,6 +1443,7 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 .milestone-slider .slick-arrow.slick-prev,
 .milestone-slider .slick-arrow.slick-next {
     bottom: 2px;
+    top: unset;
 }
 
 .milestone-slider .slick-arrow.slick-prev {
@@ -1444,6 +1452,18 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 .milestone-slider .slick-arrow.slick-next {
     right: calc(50% - 200px);
 }
+
+.milestone-slider .slick-arrow.slick-prev::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f053';
+}
+
+.milestone-slider .slick-arrow.slick-next::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f054';
+}
+
+
 
 /************ milestone carousel ************/
 
@@ -1492,7 +1512,7 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 .milestone h2::after {
     width: 13px;
     height: 13px;
-    background: #DEF5FF;
+    background: var(--hl-bs--gray-300);
 }
 .milestone:not(.slick-current) h2 {
     transform: translateY(10px);
@@ -1508,7 +1528,7 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
     height: 45px;
     line-height: 45px;
     background: transparent;
-    color: #DEF5FF;
+    color: var(--hl-bs--gray-300);
     font-weight: 300;
     font-size: 28px;
     content: '\f277';
