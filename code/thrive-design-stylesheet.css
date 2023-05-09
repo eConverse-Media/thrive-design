@@ -1442,17 +1442,17 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 
 .milestone-slider .slick-arrow.slick-prev,
 .milestone-slider .slick-arrow.slick-next {
-    bottom: 2px;
+    bottom: -9px;
     top: unset;
 }
 
 .milestone-slider .slick-arrow.slick-prev {
-    left: calc(50% - 200px);
+    left: calc(50% - 125px);
     position: absolute;
     z-index: 5;
 }
 .milestone-slider .slick-arrow.slick-next {
-    right: calc(50% - 200px);
+    right: calc(50% - 125px);
 }
 
 .milestone-slider .slick-arrow.slick-prev::before {
