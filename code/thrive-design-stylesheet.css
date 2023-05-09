@@ -1448,6 +1448,8 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 
 .milestone-slider .slick-arrow.slick-prev {
     left: calc(50% - 200px);
+    position: absolute;
+    z-index: 5;
 }
 .milestone-slider .slick-arrow.slick-next {
     right: calc(50% - 200px);
@@ -1456,11 +1458,17 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 .milestone-slider .slick-arrow.slick-prev::before {
     font-family: 'Font Awesome 5 Pro';
     content: '\f053';
+    color: var(--hl-bs--gray-500);
+    position: absolute;
+    z-index: 5;
 }
 
 .milestone-slider .slick-arrow.slick-next::before {
     font-family: 'Font Awesome 5 Pro';
     content: '\f054';
+    color: var(--hl-bs--gray-500);
+    position: relative;
+    z-index: 5;
 }
 
 
@@ -1476,7 +1484,7 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 .milestone-slider.slick-dotted::before {
     content: '';
     opacity: 0.1;
-    border-top: 6px solid #005378;
+    border-top: 6px solid var(--hl-bs--gray-500);
     position: absolute;
     left: 0;
     right: 0;
