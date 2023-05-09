@@ -1082,7 +1082,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     padding-right: 0;
 }
 
-.blogs-block,
+.featured-blogs .top-blogs-slider ul li,
 .resources-list ul li  {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
@@ -1097,7 +1097,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     float: left;
 }
 
-.blogs-block .img-container,
+.top-blogs-slider-wrapper .featured-blogs .blogs-slider-wrapper .img-container,
 .resources-list ul li .img-container {
     height: 170px;
     position: absolute;
