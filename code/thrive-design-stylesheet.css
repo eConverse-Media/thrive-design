@@ -1434,6 +1434,19 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 
 /* Timeline Styling */
 
+.center-content {
+    display: flex;
+}
+
+
+.center-content>div:nth-of-type(2) {
+    display: flex;
+}
+
+.center-content>div:nth-of-type(2)>div {
+display: flex;
+align-content: center;
+}
 .milestone-slider ul.slick-dots {
     bottom: 0;
     width: 380px;
@@ -1447,7 +1460,7 @@ body.ribbit.groupdetails .HLRecentBlogs ul li {
 }
 
 .milestone-slider .slick-arrow.slick-prev {
-    left: calc(50% - 125px);
+    left: calc(50% - 132px);
     position: absolute;
     z-index: 5;
 }
