@@ -966,6 +966,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     height: 142px;
     background-size: cover;
     background-position: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .thrive-blogs .blogs-block .title-row .col-md-8,
@@ -1136,14 +1138,16 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 .resources-list ul li .slick-next::before, 
 .latest-news-list .blogs-block .slick-next::before {
     content: '\f054';
-    color: var(--hl-bs--gray-500);
+    color: [PrimaryColor];
+    color: [SecondaryColor];
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-prev::before,
 .resources-list ul li .slick-prev::before, 
 .latest-news-list .blogs-block .slick-prev::before {
     content: '\f053';
-    color: var(--hl-bs--gray-500);
+    color: [PrimaryColor];
+    color: [SecondaryColor];
 }
 
 .resource-list .library-filterRow,
