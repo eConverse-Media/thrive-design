@@ -1125,6 +1125,27 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     border-top-left-radius: 8px;
 }
 
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow,
+.resources-list ul li .img-container, 
+.latest-news-list .blogs-block .slick-arrow {
+    font-family: 'Font Awesome 5 Pro'
+
+}
+
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .next-arrow,
+.resources-list ul li .next-slick, 
+.latest-news-list .blogs-block .next-arrow {
+    content: '/f054';
+    color: var(--hl-bs--gray-500);
+}
+
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .prev-arrow,
+.resources-list ul li .prev-arrow, 
+.latest-news-list .blogs-block .prev-arrow {
+    content: '/f053';
+    color: var(--hl-bs--gray-500);
+}
+
 .resource-list .library-filterRow,
 .resource-list .library-topRow,
 .resource-list .create-new-entry {
