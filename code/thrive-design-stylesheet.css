@@ -32,6 +32,13 @@ body.ribbit h3 {
     line-height: 140%;
 }
 
+h3.content-card-title.font-size-md {
+    font-size: 21px !important;
+    line-height: 140%;
+    font-weight: 800;
+    color: #272727;
+}
+
 h3 {
     color: #272727;
 }
@@ -411,7 +418,9 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 }
 .make-buttons em a,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
-body.ribbit .summary-edit em a {
+body.ribbit .summary-edit em a,
+body.ribbit .featured-card-single .btn,
+body.ribbit .featured-card-multi .btn {
     display: inline-block;
     font-style: normal;
     text-decoration: none;
@@ -454,6 +463,45 @@ body.ribbit #NAV > div {
 }
 
 /************ interior pages ************/
+
+/****** featured card styling ******/
+
+.col-md-4 .featured-card-single.card-layout-split,
+.col-md-3 .featured-card-single.card-layout-split,
+.col-md-4 .featured-card-single.card-layout-split .single-card-info,
+.col-md-3 .featured-card-single.card-layout-split .single-card-info {
+    min-height: unset;
+}
+.col-md-4 .featured-card-single.card-layout-split .featured-card-image,
+.col-md-3 .featured-card-single.card-layout-split .featured-card-image {
+    min-height: 200px;
+}
+
+/*** multiple instances of a featured card in a row ***/
+
+.flex-cards {
+    display: flex;
+}
+.flex-cards > .col-md-4, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading), 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill, .flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card > .featured-card-single, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid.icon-tile > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card > .featured-card-single > div:not(.flex-fill), 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card > .featured-card-single > div:not(.flex-fill) > .single-card-info, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card > .featured-card-single > div:not(.flex-fill) > .single-card-info > div, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card > .featured-card-single > div:not(.flex-fill) > .single-card-info > div > div, 
+.flex-cards > .col-md-4 > .FeaturedCardGrid > div:not(.heading) > span > .bootstrap-4 > .skeleton-loading-guard > .flex-fill > .featured-card > .featured-card-single > div:not(.flex-fill) > .single-card-info > div > div > .text-center {
+    flex-grow: 0 !important;
+    flex-shrink: 1 !important;
+    flex-basis: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
 
 /****** HTML cards ******/
 
@@ -558,6 +606,8 @@ body.ribbit .row-wide.cards > .col-md-12 {
     position: relative;
     background: var(--hl-bs--gray-100);
     margin-bottom: 30px;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .cta-tile.icon a {
@@ -772,6 +822,13 @@ body.has-modal.modal-open {
 .team button {
     padding: 5px 10px;
     border: none;
+    border-radius: 4px;
+    background: var(--hl-bs--gray-100);
+    color: var(--hl-bs--primary);
+}
+.team button:is(:hover, :focus) {
+    background: var(--hl-bs--gray-300);
+    color: var(--hl-bs--primary);
 }
 
 .bio {
