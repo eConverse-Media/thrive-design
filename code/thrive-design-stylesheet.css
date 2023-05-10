@@ -1135,14 +1135,14 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-next::before,
 .resources-list ul li .slick-next::before, 
 .latest-news-list .blogs-block .slick-next::before {
-    content: '/f054';
+    content: '\f054';
     color: var(--hl-bs--gray-500);
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-prev::before,
 .resources-list ul li .slick-prev::before, 
 .latest-news-list .blogs-block .slick-prev::before {
-    content: '/f053';
+    content: '\f053';
     color: var(--hl-bs--gray-500);
 }
 
