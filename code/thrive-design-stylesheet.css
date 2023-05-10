@@ -966,6 +966,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     height: 142px;
     background-size: cover;
     background-position: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .thrive-blogs .blogs-block .title-row .col-md-8,
@@ -1092,10 +1094,12 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 .latest-news-list .blogs-block {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
-    background: #eee;
-    padding: 190px 25px 30px;
+    background: #fff;
+    padding: 190px 30px 30px;
     min-height: 430px;
     position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(124, 124, 124, .25);
 }
 
 .featured-blogs.tile .top-blogs-slider ul li {
@@ -1119,6 +1123,31 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     width: 100%;
     background-size: cover;
     background-position: center;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow::before,
+.resources-list ul li .img-container, 
+.latest-news-list .blogs-block .slick-arrow::before {
+    font-family: 'Font Awesome 5 Pro'
+
+}
+
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-next::before,
+.resources-list ul li .slick-next::before, 
+.latest-news-list .blogs-block .slick-next::before {
+    content: '\f054';
+    color: [PrimaryColor];
+    color: [SecondaryColor];
+}
+
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-prev::before,
+.resources-list ul li .slick-prev::before, 
+.latest-news-list .blogs-block .slick-prev::before {
+    content: '\f053';
+    color: [PrimaryColor];
+    color: [SecondaryColor];
 }
 
 .resource-list .library-filterRow,
