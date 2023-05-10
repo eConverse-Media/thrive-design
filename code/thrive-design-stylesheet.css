@@ -1121,6 +1121,8 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     width: 100%;
     background-size: cover;
     background-position: center;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 .resource-list .library-filterRow,
