@@ -1132,16 +1132,16 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 }
 
-.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .next-arrow,
-.resources-list ul li .next-slick, 
-.latest-news-list .blogs-block .next-arrow {
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .next-arrow::before,
+.resources-list ul li .next-slick::before, 
+.latest-news-list .blogs-block .next-arrow::before {
     content: '/f054';
     color: var(--hl-bs--gray-500);
 }
 
-.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .prev-arrow,
-.resources-list ul li .prev-arrow, 
-.latest-news-list .blogs-block .prev-arrow {
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .prev-arrow::before,
+.resources-list ul li .prev-arrow::before, 
+.latest-news-list .blogs-block .prev-arrow::before {
     content: '/f053';
     color: var(--hl-bs--gray-500);
 }
