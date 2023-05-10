@@ -1092,10 +1092,12 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 .latest-news-list .blogs-block {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
-    background: #eee;
-    padding: 190px 25px 30px;
+    background: #fff;
+    padding: 190px 30px 30px;
     min-height: 430px;
     position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(124, 124, 124, .25);
 }
 
 .featured-blogs.tile .top-blogs-slider ul li {
