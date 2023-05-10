@@ -1587,7 +1587,7 @@ align-self: center;
 .milestone h2::before {
     width: 25px;
     height: 25px;
-    background: #009ADE;
+    background: [PrimaryColor];
 }
 .milestone h2::after {
     width: 13px;
@@ -1642,7 +1642,7 @@ align-self: center;
     color: #003045;
 }
 .milestone:not(.slick-current) h2 {
-    color: #009ADE;
+    color: [PrimaryColor];
     font-size: 28px;
 }
 
