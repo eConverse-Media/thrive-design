@@ -1125,9 +1125,9 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     border-top-left-radius: 8px;
 }
 
-.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow,
+.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow::before,
 .resources-list ul li .img-container, 
-.latest-news-list .blogs-block .slick-arrow {
+.latest-news-list .blogs-block .slick-arrow::before {
     font-family: 'Font Awesome 5 Pro'
 
 }
