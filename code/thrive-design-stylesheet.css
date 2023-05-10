@@ -1617,6 +1617,31 @@ align-self: center;
     font-size: 28px;
 }
 
+/************ FAQ page *************/
+
+/****** sticky side nav ******/
+
+body.ribbit .side-nav {
+    position: fixed;
+    left: calc(50% - 585px);
+}
+body.ribbit .side-nav h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 1230px) {
+    body.ribbit .side-nav {
+        left: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    body.ribbit .side-nav {
+        position: relative;
+        left: auto;
+    }
+}
+
 /************ footer ************/
 
 #MPOuterFooter {
