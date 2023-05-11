@@ -529,12 +529,12 @@ body.ribbit .row-wide.cards > .col-md-12 {
     justify-content: center;
     flex-direction: column;
 }
-.card,
+.card:not(.link-card),
 .card.link-card a {
     padding: 30px;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, .25);
+    box-shadow: 0 0 8px 1px rgba(124,124,124,0.10);
 }
 .card.link-card a {
     display: block;
@@ -543,7 +543,8 @@ body.ribbit .row-wide.cards > .col-md-12 {
 }
 .card.link-card a:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
-    box-shadow: 0 0 4px 2px rgba(124, 124, 124, 0.25);
+    box-shadow: 0 0 8px 6px rgba(124,124,124,0.10);
+    transform: translateY(-5px);
 }
 .card.link-card {
     padding: 0;
@@ -820,7 +821,7 @@ body.has-modal.modal-open {
 }
 
 .team button {
-    padding: 5px 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     background: var(--hl-bs--gray-100);
@@ -1732,6 +1733,9 @@ body.ribbit .side-nav h3 {
 
 #MPOuterFooter {
     padding: 0;
+}
+#MPOuterFooter p {
+    color: inherit;
 }
 
 #MPOuterFooter::after {
