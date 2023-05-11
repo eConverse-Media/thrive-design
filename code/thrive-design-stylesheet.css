@@ -1057,6 +1057,14 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     display: none;
 }
 
+.latest-news-list >div {
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 800;
+    color: #272727;
+    font-family: Inter,"Helvetica Neue",Arial,sans-serif;
+}
+
 .thrive-blogs .blogs-block .ByLine {
     display: none;
 }
