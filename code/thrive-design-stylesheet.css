@@ -1065,6 +1065,14 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     font-family: Inter,"Helvetica Neue",Arial,sans-serif;
 }
 
+.latest-news-list >div>div {
+    font-size: initial;
+    line-height: initial;
+    font-weight: initial;
+    color: initial;
+    font-family: initial;
+}
+
 .thrive-blogs .blogs-block .ByLine {
     display: none;
 }
