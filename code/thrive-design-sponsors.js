@@ -20,6 +20,18 @@ $(function () {
                     slidesToShow: 4,
                     centerMode: false
                 }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2
+                }
             }
         ]
     });
