@@ -1184,6 +1184,12 @@ div[id*="BlogContents"] {
     margin-right: -15px;
 }
 
+.latest-news-list div[id*="BlogContents"]> .row,
+.row-border-top,
+.blogs-block .col-md-4 {
+display: none;
+}
+
 div[id*="BlogContents"]> .row,
 .row-border-top,
 .blogs-block .col-md-4 {
@@ -1194,6 +1200,7 @@ div[id*="BlogContents"]> .row,
 
 .pagination > .active > span, .pagination > .active > span:hover, .pagination li.active > a, .pagination li.active > a:hover {
     background-color: [PrimaryColor];
+    border-color: [PrimaryColor];
 }
 
 body.ribbit.interior.resource-list #MainCopy_ContentWrapper .resources-list div[id*="ContentPanel"] {
