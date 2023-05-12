@@ -1187,7 +1187,7 @@ div[id*="BlogContents"] {
 div[id*="BlogContents"]> .row,
 .row-border-top,
 .blogs-block .col-md-4 {
-    display: none;
+    display: block;
 }
 body.ribbit.interior.resource-list #MainCopy_ContentWrapper .resources-list div[id*="ContentPanel"] {
     padding-left: 0;
