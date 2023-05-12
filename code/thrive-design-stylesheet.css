@@ -1190,13 +1190,7 @@ div[id*="BlogContents"] {
 display: none;
 }
 
-div[id*="BlogContents"]> .row,
-.row-border-top,
-.blogs-block .col-md-4 {
-    display: block;
-    border: 0;
-    margin: 0;
-}
+
 
 .pagination > .active > span, .pagination > .active > span:hover, .pagination li.active > a, .pagination li.active > a:hover {
     background-color: [PrimaryColor];
