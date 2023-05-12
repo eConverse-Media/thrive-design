@@ -1191,6 +1191,11 @@ div[id*="BlogContents"]> .row,
     border: 0;
     margin: 0;
 }
+
+.pagination > .active > span, .pagination > .active > span:hover, .pagination li.active > a, .pagination li.active > a:hover {
+    background-color: [PrimaryColor];
+}
+
 body.ribbit.interior.resource-list #MainCopy_ContentWrapper .resources-list div[id*="ContentPanel"] {
     padding-left: 0;
     padding-right: 0;
