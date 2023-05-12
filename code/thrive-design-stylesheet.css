@@ -503,6 +503,13 @@ body.ribbit #NAV > div {
     flex-direction: column;
 }
 
+/****** quick links cards ******/
+
+body.ribbit .QuickLinksWidget {
+    filter: none;
+    box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+}
+
 /****** HTML cards ******/
 
 body.ribbit .row-wide.cards > .col-md-12 {
@@ -534,7 +541,7 @@ body.ribbit .row-wide.cards > .col-md-12 {
     padding: 30px;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 0 8px 1px rgba(124,124,124,0.10);
+    box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
 }
 .card.link-card a {
     display: block;
@@ -543,7 +550,7 @@ body.ribbit .row-wide.cards > .col-md-12 {
 }
 .card.link-card a:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
-    box-shadow: 0 0 8px 6px rgba(124,124,124,0.10);
+    box-shadow: 0 0 4px 2px rgba(124,124,124,.25);
     transform: translateY(-5px);
 }
 .card.link-card {
