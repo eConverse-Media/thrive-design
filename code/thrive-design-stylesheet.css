@@ -370,6 +370,8 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
     border: none;
 }
 
+
+
 .categorize-message-buttons button {
     color: var(--hl-bs--default-text);
 }
@@ -451,6 +453,10 @@ body.ribbit .featured-card-multi .btn {
     background: var(--hl-bs--gray-300);
 }
 
+.hl-primary-row-bkgd .hero .make-buttons em+ em a {
+    color: var(--hl-bs--gray-100);
+    background: var(--hl-bs--secondary);
+}
 /* Header */
 
 
