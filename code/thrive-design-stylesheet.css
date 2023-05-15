@@ -411,6 +411,30 @@ body.ribbit .HLLandingControl div[id*="MoreLink"] > div {
     padding: 0;
 }
 
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
+    padding: 0;
+    box-shadow: none;
+    color: var(--hl-bs--default-text);
+    background: transparent;
+}
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default {
+    font-weight: 700;
+    text-decoration: underline;
+}
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
+    color: var(--hl-bs--link-hover);
+    text-decoration: none;
+}
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
+body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default i {
+    display: none;
+}
+
 /****** links ******/
 
 a,
@@ -1461,9 +1485,12 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
 
 /*** date blocks ***/
 
-.HLEventList ul li {
+.HLEventList ul li > .row {
     display: flex;
     align-items: center;
+}
+.home .HLEventList ul li > .row {
+    flex-direction: row-reverse;
 }
 .HLEventList ul li .col-md-2 {
     width: 70px;
