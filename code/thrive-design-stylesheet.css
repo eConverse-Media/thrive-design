@@ -443,7 +443,7 @@ body.ribbit .featured-card-multi .btn {
 
 .hl-primary-row-bkgd .make-buttons em a,
 .hl-primary-row-bkgd.make-buttons em a,
-.hl-primary-row-bkgd.make-buttons em + em a {
+.hl-primary-row-bkgd .make-buttons em + em a {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-100);
 }
