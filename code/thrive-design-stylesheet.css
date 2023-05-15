@@ -474,7 +474,7 @@ body.ribbit .featured-card-multi .btn {
 
 .hl-primary-row-bkgd .hero.image .make-buttons em a:is(:hover, :focus) {
     color: var(--hl-bs--primary);
-    background: var(--hl-bs--gray-100);
+    background: var(--hl-bs--gray-300);
 }
 
 
@@ -547,6 +547,15 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact {
     flex-basis: 100% !important;
     display: flex;
     flex-direction: column;
+}
+
+.FeaturedCardGrid.no-image .img-container {
+    display: none;
+}
+
+
+.FeaturedCardGrid.circle-icon .icon-container > div {
+    border-radius: 50%;
 }
 
 @media (max-width: 991px) {
