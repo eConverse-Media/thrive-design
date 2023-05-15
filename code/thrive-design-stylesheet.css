@@ -1097,7 +1097,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     display: none;
 }
 
-.latest-news-list >div {
+.latest-news-list:not(.bodyBackground) >div {
     font-size: 32px;
     line-height: 38.4px;
     font-weight: 800;
