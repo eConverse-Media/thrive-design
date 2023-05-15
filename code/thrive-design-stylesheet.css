@@ -442,7 +442,8 @@ body.ribbit .featured-card-multi .btn {
 }
 
 .hl-primary-row-bkgd .make-buttons em a,
-.hl-primary-row-bkgd.make-buttons em a {
+.hl-primary-row-bkgd.make-buttons em a,
+.hl-primary-row-bkgd.make-buttons em + em a {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-100);
 }
@@ -453,10 +454,19 @@ body.ribbit .featured-card-multi .btn {
     background: var(--hl-bs--gray-300);
 }
 
-.hl-primary-row-bkgd .hero .make-buttons em+ em a {
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a {
     color: var(--hl-bs--gray-100);
     background: var(--hl-bs--secondary);
 }
+
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-100);
+}
+
+
 /* Header */
 
 
