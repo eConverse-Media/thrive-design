@@ -1,5 +1,4 @@
 /************ theme basics ************/
-
 .ribbit h2.card-title {
     font-weight: 800;
 }
@@ -16,13 +15,17 @@ body.ribbit h1 {
     font-weight: 800;
 }
 
-body.ribbit h2 {
+body.ribbit h2,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .row.heading h2, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading h2 {
     font-size: 32px;
     font-weight: 800;
     line-height: 120%;
 }
 
-h2 {
+h2,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .row.heading h2, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading h2 {
     color: #272727;
 }
 
@@ -71,7 +74,9 @@ body.ribbit .col-md-6 .ContentUserControl .heading {
 body.ribbit .col-md-4 .ContentUserControl .heading h2,
 body.ribbit .col-md-6 .ContentUserControl .heading h2,
 body.ribbit .col-md-4 .ContentItemHtml>h2,
-body.ribbit .col-md-6 .ContentItemHtml>h2 {
+body.ribbit .col-md-6 .ContentItemHtml>h2,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl .row.heading h2, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact.card .row.heading h2 {
     font-size: 16px;
 }
 
@@ -115,6 +120,12 @@ body.ribbit .col-md-6 .ContentItemHtml>h2 {
 .hl-secondary-row-bkgd h6,
 .hl-secondary-row-bkgd p {
     color: var(--hl-bs--btn-secondary-text);
+}
+
+/*** getting rid of grey background on homepage ***/
+
+body.ribbit:not(.interior).bodyBackground {
+    background: transparent;
 }
 
 /*** removing HTML Footer ***/
@@ -472,6 +483,15 @@ body.ribbit #NAV > div {
     padding: 40px;
 }
 
+/************ resetting homepage widget styling ************/
+
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact {
+    background: transparent;
+    filter: none;
+    border-radius: 0;
+}
+
 /************ interior pages ************/
 
 /****** featured card styling ******/
@@ -558,7 +578,6 @@ body.ribbit .row-wide.cards > .col-md-12 {
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
-    max-width: 500px;
 }
 .card.link-card a {
     display: block;
@@ -617,6 +636,14 @@ body.ribbit .row-wide.cards > .col-md-12 {
 .card .HtmlContent>i {
     font-size: 40px;
     color: var(--hl-bs--primary);
+}
+
+@media (max-width: 991px) {
+    .card:not(.link-card),
+    .card.link-card a {
+        max-width: 500px;
+        width: 100%;
+    }
 }
 
 /****** CTA tiles ******/
