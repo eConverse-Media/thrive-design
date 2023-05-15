@@ -381,6 +381,8 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
     border: none;
 }
 
+
+
 .categorize-message-buttons button {
     color: var(--hl-bs--default-text);
 }
@@ -451,7 +453,8 @@ body.ribbit .featured-card-multi .btn {
 }
 
 .hl-primary-row-bkgd .make-buttons em a,
-.hl-primary-row-bkgd.make-buttons em a {
+.hl-primary-row-bkgd.make-buttons em a,
+.hl-primary-row-bkgd .hero.image  .make-buttons em + em a {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-100);
 }
@@ -461,6 +464,19 @@ body.ribbit .featured-card-multi .btn {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-300);
 }
+
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a {
+    color: var(--hl-bs--gray-100);
+    background: var(--hl-bs--secondary);
+}
+
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-100);
+}
+
 
 /* Header */
 
@@ -1095,7 +1111,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 }
 
 .thrive-blogs .blogs-block .title-row .col-md-8,
-.latest-news-list .blogs-block .col-md-8,
+.latest-news-list.ContentUserControl .blogs-block .col-md-8,
 .featured-blogs ul li .title-row .col-md-9,
 .featured-resource ul li .title-row .col-md-9  {
     width: 100%
@@ -1107,9 +1123,9 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     text-align: center;
 }
 
-.latest-news-list .blogs-block .col-md-8 h3,
-.latest-news-list .blogs-block,
-.latest-news-list .blogs-block .content-row  {
+.latest-news-list.ContentUserControl .blogs-block .col-md-8 h3,
+.latest-news-list.ContentUserControl .blogs-block,
+.latest-news-list.ContentUserControl .blogs-block .content-row  {
     text-align: center;
 }
 
@@ -1124,7 +1140,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     display: none;
 }
 
-.latest-news-list >div {
+.latest-news-list:not(.bodyBackground) >div {
     font-size: 32px;
     line-height: 38.4px;
     font-weight: 800;
@@ -1204,7 +1220,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 }
 
 
-div[id*="BlogContents"] {
+div[id*="BlogContents"].ContentUserControl.latest-news-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
@@ -1238,7 +1254,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .featured-blogs .top-blogs-slider ul li,
 .resources-list ul li,
-.latest-news-list .blogs-block {
+.latest-news-list.ContentUserControl .blogs-block {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
     background: #fff;
@@ -1261,7 +1277,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
 .resources-list ul li .img-container, 
-.latest-news-list .blogs-block .img-container {
+.latest-news-list.ContentUser-Control .blogs-block .img-container {
     height: 170px;
     position: absolute;
     top: 0;
@@ -1276,7 +1292,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow::before,
 .resources-list ul li .img-container, 
-.latest-news-list .blogs-block .slick-arrow::before {
+.latest-news-list.ContentUser-Control .blogs-block .slick-arrow::before {
     font-family: 'Font Awesome 5 Pro'
 
 }
@@ -1291,7 +1307,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-prev::before,
 .resources-list ul li .slick-prev::before, 
-.latest-news-list .blogs-block .slick-prev::before {
+.latest-news-list.ContentUserControl .blogs-block .slick-prev::before {
     content: '\f053';
     color: [PrimaryColor];
     color: [SecondaryColor];
