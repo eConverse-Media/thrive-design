@@ -472,6 +472,30 @@ body.ribbit #NAV > div {
     padding: 40px;
 }
 
+/************ homepage V1 ************/
+
+
+/* Homepage V2 */
+
+.hero.image {
+    display: flex;
+}
+
+.hero.image > div:nth-of-type(1) {
+    display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div {
+    display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
 /************ interior pages ************/
 
 /****** featured card styling ******/
