@@ -2033,6 +2033,7 @@ body.ribbit .side-nav h3 {
 .icon-list ul li {
     position: relative;
     padding-left: 55px;
+    margin-bottom: 1rem;
 }
 
 .icon-list ul li i {
