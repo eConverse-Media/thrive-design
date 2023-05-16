@@ -2048,7 +2048,7 @@ body.ribbit .side-nav h3 {
     align-items: center;
     justify-content: center;
     color: #333;
-    transform: translate(-50%)
+    transform: translateY(-50%)
 }
 
 /****** mobile ******/
