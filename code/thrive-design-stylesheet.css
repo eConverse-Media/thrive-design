@@ -531,6 +531,23 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact {
     filter: none;
     border-radius: 0;
 }
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .row.heading, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading {
+    padding: 0;
+    border: none;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact ul:not(.dropdown-menu)>ol {
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>a {
+    padding: 0 !important;
+}
 
 /************ interior pages ************/
 
@@ -1492,6 +1509,10 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
 
 /****** events ******/
 
+.HLEventList .pull-right + br {
+    display: none;
+}
+
 /*** date blocks ***/
 
 .HLEventList ul li > .row {
@@ -1518,6 +1539,9 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
     justify-content: center;
     background: var(--hl-bs--gray-200);
 }
+.HLEventList ul li .col-md-2 .margin-bottom-medium {
+    margin-bottom: 0;
+}
 .HLEventList ul li .date-block .calendar-day {
     display: none;
 }
@@ -1528,6 +1552,19 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
     line-height: 17px;
     text-transform: uppercase;
     font-weight: 600;
+}
+.home .HLEventList ul li .col-md-2 {
+    width: 140px;
+    margin-right: 0;
+}
+.home .HLEventList ul li .col-md-10 {
+    width: calc(100% - 140px);
+    padding-right: 30px;
+}
+.home .HLEventList ul li .date-block {
+    width: 140px;
+    height: 120px;
+    border-radius: 10px;
 }
 
 /****** resources ******/
@@ -1687,7 +1724,20 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     padding: 25px 20px;
     height: calc(100% - 170px);
 }
-
+.home .HLRecentBlogs ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.home .HLRecentBlogs ul li .img-container {
+    height: 120px;
+    width: 140px;
+    border-radius: 10px;
+}
+.home .HLRecentBlogs ul li .text-container {
+    width: calc(100% - 140px);
+    padding-right: 30px;
+}
 
 /* Timeline Styling */
 
