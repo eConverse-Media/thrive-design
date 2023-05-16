@@ -579,7 +579,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact {
 
 
 .FeaturedCardGrid.circle-icon .icon-container > div {
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 @media (max-width: 991px) {
