@@ -1994,6 +1994,9 @@ body.ribbit .side-nav h3 {
     top: 50%;
     left: 0;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #333;
 }
 
