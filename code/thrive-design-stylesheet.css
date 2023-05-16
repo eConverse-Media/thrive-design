@@ -1986,13 +1986,15 @@ body.ribbit .side-nav h3 {
 }
 
 .icon-list ul li i {
-    font-size: 20px;
-    background: var(--hl-bs--primary);
+    height: 30px;
+    width: 30px;
+    background: var(--hl-bs--secondary);
     border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 0;
-
+    font-size: 20px;
+    color: #333;
 }
 
 /****** mobile ******/
