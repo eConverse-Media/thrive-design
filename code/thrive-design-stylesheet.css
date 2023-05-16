@@ -1970,6 +1970,31 @@ body.ribbit .side-nav h3 {
     padding: 0;
 }
 
+/****** Icon List ******/
+
+.icon-list {
+    position: relative;
+}
+
+.icon-list ul {
+    list-style: none;
+}
+
+.icon-list ul li {
+    position: relative;
+    padding-left: 35px;
+}
+
+.icon-list ul li i {
+    font-size: 20px;
+    background: var(--hl-bs--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+
 /****** mobile ******/
 
 @media (max-width: 991px) {
