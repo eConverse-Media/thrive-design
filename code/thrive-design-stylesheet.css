@@ -1986,8 +1986,8 @@ body.ribbit .side-nav h3 {
 }
 
 .icon-list ul li i {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     background: var(--hl-bs--secondary);
     border-radius: 50%;
     position: absolute;
