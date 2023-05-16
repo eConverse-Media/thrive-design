@@ -596,7 +596,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandi
 
 
 .FeaturedCardGrid.circle-icon .icon-container > div {
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 @media (max-width: 991px) {
@@ -2018,6 +2018,37 @@ body.ribbit .side-nav h3 {
 #MPFooterLink #MPFooterLinkContent {
     text-align: right;
     padding: 0;
+}
+
+/****** Icon List ******/
+
+.icon-list {
+    position: relative;
+}
+
+.icon-list ul {
+    list-style: none;
+}
+
+.icon-list ul li {
+    position: relative;
+    padding-left: 55px;
+}
+
+.icon-list ul li i {
+    height: 40px;
+    width: 40px;
+    background: var(--hl-bs--secondary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transform: translate(-50%)
 }
 
 /****** mobile ******/
