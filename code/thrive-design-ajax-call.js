@@ -21,7 +21,10 @@ function handleAjaxCall(self, asBackground) {
 
         if (!!($(resp).find('.blogs-block').html())) {
             img = !!($(resp).find('.blogs-block .blog-featured-image-row img').attr('src')) ? $(resp).find('.blogs-block .blog-featured-image-row img') : $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type');
-        } else {
+        }
+        else if (!!($(resp).find('.ELNWebinar .').html())) {
+            img = !!($(resp).find('.ELNWebinar .col-md-12 .Content img').attr('src')) ? $(resp).find('.ELNWebinar .col-md-12 .Content img') : $(resp).find('.ELNWebinar .col-md-12 .Content img:first-of-type');
+        }   else {
             img = !!($(resp).find('.Content > .row > .col-md-10 img').attr('src')) ? $(resp).find('.Content > .row > .col-md-10 img') : $(resp).find('div[id*="DetailPanel"] > .row > .col-md-10 > .row img');
         }
 
