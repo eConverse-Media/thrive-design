@@ -279,7 +279,9 @@ button,
 .btn,
 body.ribbit .btn,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
-body.ribbit .summary-edit em a {
+body.ribbit .summary-edit em a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 .moxman-btn button,
@@ -315,7 +317,8 @@ body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:focus,
 body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
-body.ribbit .summary-edit em a:is(:hover, :focus) {
+body.ribbit .summary-edit em a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
@@ -342,7 +345,9 @@ body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :f
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a,
-body.ribbit .summary-edit em a:is(:hover, :focus) {
+body.ribbit .summary-edit em a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
@@ -411,22 +416,22 @@ body.ribbit .HLLandingControl div[id*="MoreLink"] > div {
     padding: 0;
 }
 
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default,
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
     padding: 0;
     box-shadow: none;
     color: var(--hl-bs--default-text);
     background: transparent;
 }
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default {
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="MoreLink"] .btn.btn-default {
     font-weight: 700;
     text-decoration: underline;
 }
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
-body.ribbit.home #MPOuterMost .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost div[class*="col-md-"] > div:not(.card) > .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
     color: var(--hl-bs--link-hover);
     text-decoration: none;
 }
@@ -467,7 +472,9 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
 body.ribbit .featured-card-single .btn,
-body.ribbit .featured-card-multi .btn {
+body.ribbit .featured-card-multi .btn,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl div[id$=_BottomLink] a:is(:hover, :focus) {
     display: inline-block;
     font-style: normal;
     text-decoration: none;
@@ -536,16 +543,22 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.he
     padding: 0;
     border: none;
 }
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl .row.heading, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card.ContentItemReact .row.heading {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact ul:not(.dropdown-menu)>ol {
-    padding: 0 0 10px 0;
-    margin: 0 0 10px 0;
+    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*, 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>a {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.card) .HLLandingControl div[id$=_BottomLink]>a {
     padding: 0 !important;
 }
 
@@ -1438,18 +1451,30 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
 
 /****** discussions ******/
 
-body.ribbit .community-home .row-wide > div.col-md-8:not(.col-md-12) .HLLandingControl ul li,
-body.ribbit .community-home .row-wide > div.col-md-9:not(.col-md-12) .HLLandingControl ul li {
+body.ribbit .community-home .row-wide > div.col-md-8 .HLLandingControl ul li,
+body.ribbit .community-home .row-wide > div.col-md-9 .HLLandingControl ul li,
+body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
+body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
+body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
+body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu)>ol,
+body.ribbit:not(.interior) .row>div.col-md-9>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
+body.ribbit:not(.interior) .row>div.col-md-9>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
+body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
+body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu)>ol {
     padding-left: 70px;
     position: relative;
 }
 .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
-.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
+.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10,
+.home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
+.home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
     padding: 0;
     width: 100%;
 }
 .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
-.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
+.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2,
+.home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
+.home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
     position: absolute;
     left: 0;
     top: 0;
