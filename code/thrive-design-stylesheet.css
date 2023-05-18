@@ -17,7 +17,8 @@ body.ribbit h1 {
 
 body.ribbit h2,
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .row.heading h2, 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading h2 {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading h2,
+body.ribbit.home .ContentMainHeader {
     font-size: 32px;
     font-weight: 800;
     line-height: 120%;
@@ -25,7 +26,8 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.he
 
 h2,
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .row.heading h2, 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading h2 {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.heading h2,
+body.ribbit.home .ContentMainHeader {
     color: #272727;
 }
 
@@ -76,7 +78,8 @@ body.ribbit .col-md-6 .ContentUserControl .heading h2,
 body.ribbit .col-md-4 .ContentItemHtml>h2,
 body.ribbit .col-md-6 .ContentItemHtml>h2,
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].card .HLLandingControl .row.heading h2, 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact.card .row.heading h2 {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact.card .row.heading h2,
+body.ribbit.home .ContentMainHeader {
     font-size: 16px;
 }
 
@@ -89,6 +92,14 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact.card .r
     border-radius: 0;
     box-shadow: none;
     background-color: transparent !important;
+}
+
+body.ribbit .overline p:first-of-type > strong {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 @media (max-width: 991px) {
@@ -550,10 +561,18 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.he
     border: none;
 }
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl .row.heading, 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card.ContentItemReact .row.heading {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card.ContentItemReact .row.heading,
+body.ribbit.home .ContentMainHeader,
+body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header {
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     margin-bottom: 20px;
+}
+body.ribbit .narrow-widget.widget-container .widget-header {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
 }
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
@@ -563,9 +582,107 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact ul:not(
     margin: 0 0 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].leaderboard .HLLandingControl ul:not(.dropdown-menu)>li, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].leaderboard .HLLandingControl ul:not(.dropdown-menu)>ol {
+    margin-bottom: 0;
+    border-bottom: none;
+}
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*, 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.card) .HLLandingControl div[id$=_BottomLink]>a {
     padding: 0 !important;
+}
+
+/****** engagement leaderboard ******/
+
+.leaderboard .Content ul li,
+.leaderboard .Content ul li .title-row {
+    display: flex;
+    align-items: center;
+}
+.leaderboard .Content ul li .title-row {
+    width: 75%;
+}
+.leaderboard .Content ul li .content-row {
+    width: 25%;
+}
+.leaderboard .Content ul li .title-row img {
+    max-height: 30px;
+    max-width: 30px;
+}
+.leaderboard .Content ul li .title-row .Picture {
+    width: 30px;
+    margin-right: 10px;
+}
+.leaderboard .Content ul li .title-row .col-md-9 {
+    width: calc(100% - 40px);
+    padding: 0;
+}
+.leaderboard .Content ul li .content-row .Picture {
+    display: none;
+}
+.leaderboard .Content ul li .content-row .col-md-9 {
+    padding: 0;
+    width: 100%;
+    text-align: right;
+}
+body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--hl-bs--default-text);
+}
+.leaderboard .Content ul li .content-row .points-label {
+    background: transparent;
+    padding: 0;
+    color: var(--hl-bs--default-text);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+/****** promo tile ******/
+
+.promo-tile {
+    position: relative;
+ }
+.promo-tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--hl-bs--primary);
+    opacity: 0.5;
+}
+.promo-tile .HtmlContent {
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.promo-tile .HtmlContent p {
+    color: #fff;
+}
+.promo-tile .HtmlContent > h2:nth-child(2),
+.promo-tile.overline .HtmlContent > p:nth-child(2) {
+    margin-top: auto;
+}
+.promo-tile.overline .HtmlContent > p:first-of-type > strong {
+    color: var(--hl-bs--btn-secondary-text);
+    font-size: 1rem;
+    padding: 0.3rem 0.6rem;
+    background: var(--hl-bs--secondary);
+    border-radius: 4px;
+}
+.promo-tile h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.promo-tile h2 {
+    color: #fff;
 }
 
 /************ interior pages ************/
@@ -628,7 +745,13 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.car
 
 body.ribbit .QuickLinksWidget {
     filter: none;
-    box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+    box-shadow: none;
+}
+body.ribbit .QuickLinksWidget .widget-header h2 {
+    font-weight: 800;
+    font-size: 16px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /****** HTML cards ******/
@@ -638,7 +761,7 @@ body.ribbit .row-wide.cards > .col-md-12 {
     margin: -8px;
     width: calc(100% + 16px);
 }
-.cards .card {
+.cards {
     margin: 8px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -658,11 +781,21 @@ body.ribbit .row-wide.cards > .col-md-12 {
     flex-direction: column;
 }
 .card:not(.link-card),
-.card.link-card a {
+.card.link-card a,
+body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links {
     padding: 30px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+}
+.col-md-3 .card:not(.link-card),
+.col-md-3 .card.link-card a,
+body.ribbit .col-md-3 .QuickLinksWidget .bootstrap-4 .quick-links {
+    padding: 20px;
+}
+body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
+    padding-left: 0;
+    padding-right: 0;
 }
 .card.link-card a {
     display: block;
@@ -891,7 +1024,7 @@ body.has-modal::before {
     opacity: 0;
 }
 
-body.has-modal.modal-open::before {
+body.has-modal.bio-modal-open::before {
     z-index: 1200;
     opacity: 1;
     transition: .3s;
@@ -901,7 +1034,7 @@ body.has-modal {
     position: relative;
 }
 
-body.has-modal.modal-open {
+body.has-modal.bio-modal-open {
     overflow: hidden;
 }
 
@@ -1457,8 +1590,8 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
 
 /****** discussions ******/
 
-body.ribbit .community-home .row-wide > div.col-md-8 .HLLandingControl ul li,
-body.ribbit .community-home .row-wide > div.col-md-9 .HLLandingControl ul li,
+body.ribbit #MPOuterMost .community-home .row-wide > div.col-md-8 .HLLandingControl ul li,
+body.ribbit #MPOuterMost .community-home .row-wide > div.col-md-9 .HLLandingControl ul li,
 body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
 body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
 body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
@@ -1470,15 +1603,15 @@ body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdo
     padding-left: 70px;
     position: relative;
 }
-.community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
-.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10,
+#MPOuterMost .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
+#MPOuterMost .community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10,
 .home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
 .home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
     padding: 0;
     width: 100%;
 }
-.community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
-.community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2,
+#MPOuterMost .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
+#MPOuterMost .community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2,
 .home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
 .home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
     position: absolute;
