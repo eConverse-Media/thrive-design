@@ -560,10 +560,10 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact .row.he
     padding: 0;
     border: none;
 }
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl .row.heading, 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card.ContentItemReact .row.heading,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl .row.heading h2, 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card.ContentItemReact .row.heading h2,
 body.ribbit.home .ContentMainHeader,
-body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header {
+body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2 {
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     margin-bottom: 20px;
@@ -572,7 +572,17 @@ body.ribbit .narrow-widget.widget-container .widget-header {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0 !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 0 !important;
+}
+body.ribbit .narrow-widget.widget-container .widget-header:not(:last-child) {
+    border-bottom: none;
+}
+body.ribbit .QuickLinksWidget .widget-header h2 {
+    font-weight: 800;
+    font-size: 16px !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    flex-basis: 100%;
 }
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
@@ -593,6 +603,45 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.car
 }
 
 /****** engagement leaderboard ******/
+
+/*** tabs ***/
+
+body.ribbit .leaderboard .nav-tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+body.ribbit .leaderboard .nav-tabs > li {
+    display: block;
+    margin-bottom: 0;
+    border: none;
+}
+body.ribbit .leaderboard .nav-tabs > li > a {
+    padding: 0;
+    border: none;
+    transform: none;
+    font-weight: 600;
+    border-radius: 0;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0.5;
+    background: transparent;
+    color: var(--hl-bs--default-text);
+    margin: 0;
+}
+body.ribbit .leaderboard .nav-tabs > li > a:is(:hover, :focus),
+body.ribbit .leaderboard .nav-tabs > li.active > a,
+body.ribbit .leaderboard .nav-tabs > li.active > a:is(:hover, :focus) {
+    opacity: 1;
+}
+
+/*** content ***/
+
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content].leaderboard .HLLandingControl ul:not(.dropdown-menu)>li:last-child {
+    padding-bottom: 0;
+}
 
 .leaderboard .Content ul li,
 .leaderboard .Content ul li .title-row {
@@ -746,12 +795,6 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 body.ribbit .QuickLinksWidget {
     filter: none;
     box-shadow: none;
-}
-body.ribbit .QuickLinksWidget .widget-header h2 {
-    font-weight: 800;
-    font-size: 16px !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
 }
 
 /****** HTML cards ******/
