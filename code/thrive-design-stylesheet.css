@@ -1499,8 +1499,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .featured-blogs ul,
 .featured-resource ul,
-.featured-tile-slider-wrapper  {
-        display: flex !important;
+.featured-tile-slider-wrapper .slick-list {
+        display: flex;
 }
 
 .featured-blogs ul li,
