@@ -69,28 +69,32 @@ function handleLibraryAjax(self, asBackground) {
     });
     
     function success(resp) {
-        var img = $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type'),
-            src = $(img).attr('src');
+
+        var img;
+
+        if (!!($(resp).find('div[id*="DetailPanel"]').html())) {
+            console.log('not webinar');
+            img = !!($(resp).find('div[id*="DetailPanel"] img').attr('src')) ? $(resp).find('div[id*="DetailPanel"] > .row   .col-md-10 img:first-of-type') : $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type');
+        }
+        else if (!!($(resp).find('.ELNWebinar').html())) {
+            console.log('webinar');
+            img = !!($(resp).find('.ELNWebinar .col-md-10 span[id*="Description"] img').attr('src')) ? $(resp).find('.ELNWebinar .col-md-12 .Content img') : $(resp).find('.ELNWebinar .col-md-12 .Content img:first-of-type');
+        }   
+
+        var src = $(img).attr('src');
 
         if (!!src) {
             var url = "url('" + src + "')";
-            
-            
             if (asBackground) {
                 $(self).css('background-image', url);
-            }
-             else {
+            } else {
                 $(self).find('.img-container').css('background-image', url);
             }
-
-        } 
-        else if (!!($(resp).find('.ELNWebinar').html())) {
-            img = !!($(resp).find('.ELNWebinar .col-md-12 .Content img').attr('src')) ? $(resp).find('.ELNWebinar .col-md-12 .Content img') : $(resp).find('.ELNWebinar .col-md-12 .Content img:first-of-type');
-        }   
-        
-        else {
+        } else {
             $(self).find('.img-container').addClass('no-ajax-image');
         }
+        
+
         
         removeLoading();
     }
