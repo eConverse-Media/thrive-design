@@ -13,14 +13,7 @@ function handleCommunityHtml() {
 }
 
 function handleAnnouncements() {
-    $('.HLAnnouncements ul').slick({
-        arrows: true,
-        dots: false,
-        autoplay: false,
-        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-regular fa-arrow-right"></i></button>',
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-regular fa-arrow-left"></i></button>'
-    });
-
+    
     // handle link
     $('.HLAnnouncements ul li').each(function () {
         var self = $(this),
@@ -35,6 +28,16 @@ function handleAnnouncements() {
         }
         
         $(link).remove();
+    });
+
+    // handle carousel
+    $('.HLAnnouncements ul').slick({
+        arrows: true,
+        dots: false,
+        autoplay: false,
+        inifinite: false,
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-regular fa-arrow-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-regular fa-arrow-left"></i></button>'
     });
 }
 

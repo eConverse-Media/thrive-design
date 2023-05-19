@@ -200,9 +200,9 @@ body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding {
     padding-bottom: 0;
 }
 
-.row>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
-.row>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
-    margin-top: 16px;
+#MainCopy_ContentWrapper .row>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
+#MainCopy_ContentWrapper .row>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
+    margin-top: 24px;
 }
 
 body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*=col-md-]:first-child {
@@ -602,6 +602,30 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.car
     padding: 0 !important;
 }
 
+/************ homepage v3 ************/
+
+.hero.with-bg {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero.with-bg::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--hl-bs--primary);
+    opacity: 0.5;
+}
+.hero.with-bg .hero-text h1,
+.hero.with-bg .hero-text h2,
+.hero.with-bg .hero-text p {
+    color: #fff;
+}
+
 /****** engagement leaderboard ******/
 
 /*** tabs ***/
@@ -636,6 +660,14 @@ body.ribbit .leaderboard .nav-tabs > li.active > a,
 body.ribbit .leaderboard .nav-tabs > li.active > a:is(:hover, :focus) {
     opacity: 1;
 }
+
+/*** removing clearfix to allow nav tabs to have space-between justification ***/
+
+.leaderboard .nav-tabs::before, 
+.leaderboard .nav-tabs::after {
+    display: none;
+}
+
 
 /*** content ***/
 
@@ -692,10 +724,17 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 
 /****** promo tile ******/
 
-.promo-tile {
+.promo-tile a {
+    text-decoration: none;
+}
+.promo-tile .HtmlContent {
     position: relative;
- }
-.promo-tile::before {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.promo-tile .HtmlContent::before {
     content: '';
     position: absolute;
     top: 0;
@@ -704,13 +743,14 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
     bottom: 0;
     background: var(--hl-bs--primary);
     opacity: 0.5;
+    transition: .3s;
 }
-.promo-tile .HtmlContent {
+.promo-tile a:is(:hover, :focus) .HtmlContent::before {
+    opacity: 0.8;
+    transition: .3s;
+}
+.promo-tile .HtmlContent > * {
     position: relative;
-    min-height: 340px;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
 }
 .promo-tile .HtmlContent p {
     color: #fff;
@@ -804,14 +844,20 @@ body.ribbit .row-wide.cards > .col-md-12 {
     margin: -8px;
     width: calc(100% + 16px);
 }
-.cards {
+.cards .card {
     margin: 8px;
     flex-grow: 0;
     flex-shrink: 1;
     display: flex;
     flex-basis: 20%;
 }
-.cards.row > .col-md-12 > .card.ContentItemHtml:not(:first-child) {
+.col-md-6 .cards .card {
+    flex-basis: 33.333333%;
+}
+body.ribbit.home #MainCopy_ContentWrapper .cards .card {
+    margin: 8px;
+} 
+#MainCopy_ContentWrapper .cards.row > .col-md-12 > .card.ContentItemHtml:not(:first-child) {
     margin-top: 8px;
 }
 .cards .card.link-card a {
@@ -893,10 +939,29 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
     max-width: calc(100% + 60px);
 }
 
+.card.member-card .HtmlContent > p:first-child > strong {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+}
+.card.member-card .HtmlContent > p:first-child > strong img {
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+}
+
 .card .HtmlContent>p i,
 .card .HtmlContent>i {
     font-size: 40px;
     color: var(--hl-bs--primary);
+}
+
+.card.make-buttons em:not(:last-child) {
+    margin-right: 15px;
 }
 
 @media (max-width: 991px) {
