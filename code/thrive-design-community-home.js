@@ -35,7 +35,7 @@ function handleAnnouncements() {
         arrows: true,
         dots: false,
         autoplay: false,
-        inifinite: false,
+        infinite: false,
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-regular fa-arrow-right"></i></button>',
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-regular fa-arrow-left"></i></button>'
     });

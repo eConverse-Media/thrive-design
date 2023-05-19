@@ -1775,7 +1775,10 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
 .HLAnnouncements .slick-arrow.prev-arrow {
     right: 24px;
 }
-.HLAnnouncements .slick-arrow:is(:hover, :focus) {
+.HLAnnouncements .slick-arrow.slick-disabled {
+    cursor: default;
+}
+.HLAnnouncements .slick-arrow:not(.slick-disabled):is(:hover, :focus) {
     color: var(--hl-bs--secondary);
 }
 
