@@ -1498,7 +1498,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 /* Feratured Blogs List */
 
 .featured-blogs ul,
-.featured-resource ul {
+.featured-resource ul,
+.featured-tile-slider ul {
         display: flex;
 }
 
