@@ -1530,7 +1530,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 }
 
 
-div[id*="BlogContents"].ContentUserControl.latest-news-list {
+.ContentUserControl.latest-news-list div[id*="BlogContents"] {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
