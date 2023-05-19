@@ -1499,7 +1499,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .featured-blogs ul,
 .featured-resource ul,
-.featured-tile-slider-wrapper ul {
+.featured-tile-slider-wrapper  {
         display: flex;
 }
 
