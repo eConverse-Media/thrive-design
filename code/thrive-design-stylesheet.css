@@ -1398,11 +1398,15 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     background-position: center;
 }
 
+.latest-news-list .blogs-block {
+    overflow: hidden;
+}
 
 .latest-news-list .blogs-block .img-container {
     top: 0px;
     left: 0px;
     right: 0px;
+    
 }
 
 
