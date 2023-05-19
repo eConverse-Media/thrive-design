@@ -1393,7 +1393,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 .top-blog-slider-wrapper ul li .img-container,
 .top-resource-slider li .img-container,
 .latest-news-list .blogs-block .img-container,
-.top-tile-slider ul li .img-container {
+.featured-tile-slider ul li .img-container {
     position: absolute;
     top: 25px;
     left: 30px;
@@ -1408,7 +1408,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     overflow: hidden;
 }
 
-.latest-news-list .blogs-block .img-container {
+.featured-tile-slider .blogs-block .img-container,
+.featured-tile-slider ul .featured-tile-slider-wrapper li .img-container {
     top: 0px;
     left: 0px;
     right: 0px;
@@ -1499,7 +1500,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .featured-blogs ul,
 .featured-resource ul,
-.featured-tile-slider-wrapper .slick-list {
+.featured-tile-slider-wrapper .slick-list .slick-track{
         display: flex;
 }
 
@@ -1535,12 +1536,14 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 }
 
 .featured-blogs ul li .title-row   .col-md-3,
-.featured-resource ul li .title-row   .col-md-3 {
+.featured-resource ul li .title-row   .col-md-3,
+.featured-tile-slider-wrapper  li .col-md-3 {
     display: none;
 }
 
 .featured-blogs ul li .title-rwo   .col-md-9,
-.featured-resource ul li .title-rwo   .col-md-9 {
+.featured-resource ul li .title-rwo   .col-md-9,
+.featured-tile-slider-wrapper  li .col-md-9 {
     width: 100%;
 }
 
@@ -1583,7 +1586,9 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .featured-blogs .top-blogs-slider ul li,
 .resources-list ul li,
-.latest-news-list.ContentUserControl .blogs-block {
+.latest-news-list.ContentUserControl .blogs-block,
+.featured-tile-slider li,
+.featured-tile-slider .blogs-block {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
     background: #fff;
@@ -1606,7 +1611,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
 .resources-list ul li .img-container, 
-.latest-news-list.ContentUser-Control .blogs-block .img-container {
+.latest-news-list.ContentUser-Control .blogs-block .img-container, .featured-tile-slider .featured-tile-slider-wrapper li .img-container {
     height: 170px;
     position: absolute;
     top: 0;
@@ -1621,14 +1626,18 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow::before,
 .resources-list ul li .img-container, 
-.latest-news-list.ContentUser-Control .blogs-block .slick-arrow::before {
+.latest-news-list.ContentUserControl .blogs-block .slick-arrow::before,
+.featured-tile-slider-wrapper .Content-User-Control .blogs-block .slick-arrow::before,
+.featured-tile-slider.ContentUserControl .slick-arrow::before {
     font-family: 'Font Awesome 5 Pro'
 
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-next::before,
 .resources-list ul li .slick-next::before, 
-.latest-news-list .blogs-block .slick-next::before {
+.latest-news-list .blogs-block .slick-next::before,
+.featured-tile-slider-wrapper .ContentUserControl .blogs-block .slick-arrow::before,
+.featured-tile-slider.ContentUserControl  .slick-arrow::before  {
     content: '\f054';
     color: [PrimaryColor];
     color: [SecondaryColor];
@@ -1636,7 +1645,8 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-prev::before,
 .resources-list ul li .slick-prev::before, 
-.latest-news-list.ContentUserControl .blogs-block .slick-prev::before {
+.latest-news-list.ContentUserControl .blogs-block .slick-prev::before,
+.featured-tile-slider.ContentUserControl  .slick-prev::before {
     content: '\f053';
     color: [PrimaryColor];
     color: [SecondaryColor];
