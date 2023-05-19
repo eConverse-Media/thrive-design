@@ -1387,7 +1387,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .top-blog-slider-wrapper ul li .img-container,
 .top-resource-slider li .img-container,
-.latest-news-list li .img-container {
+.latest-news-list .blogs-block .img-container {
     position: absolute;
     top: 25px;
     left: 30px;
