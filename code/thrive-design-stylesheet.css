@@ -1399,6 +1399,13 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 }
 
 
+.latest-news-list .blogs-block .img-container {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
 .thrive-blogs div[id*="FollowIcon"] {
     display: none;
 }
