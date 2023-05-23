@@ -1,14 +1,8 @@
 $(function () {
 
-    $('.top-resources ul li').each(function () {
-        handleLibraryAjax(this);
-    });
+    $('.top-resources ul li, .featured-tile-slider ul li').wrapAll('<div class="featured-tile-slider-wrapper"></div>');
 
-    $('.top-resources ul li').wrapAll('<div class="top-resource-slider"></div>');
-
-
-
-    $('.top-resource-slider').slick({
+    $('.featured-tile-slider-wrapper').slick({
         dots: false,
         arrows: true,
         infinite: true,
@@ -16,6 +10,19 @@ $(function () {
         // autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1
+    });
+
+    $('.featured-tile-slider ul li').each(function () {
+        handleLibraryAjax(this);
+    });
+
+    $('.featured-tile-slider ul li').each(function () {
+        handleLibraryAjax(this);
+    });
+
+
+    $('.latest-news-list .blogs-block, .featured-tile-slider ul li').each(function () {
+        handleAjaxCall(this);
     });
 
 
