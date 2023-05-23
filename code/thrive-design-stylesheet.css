@@ -1702,10 +1702,6 @@ body.ribbit .community-home .row.no-community-html.row-full {
     padding-bottom: 0;
     background: transparent;
 }
-.commHTMLOptionsToAttach > div > .col-md-12 {
-    padding-left: 0;
-    padding-right: 0;
-}
 .summary-edit .Content {
     display: flex;
     flex-direction: row-reverse;
@@ -1738,6 +1734,15 @@ body.ribbit .community-home .row.no-community-html.row-full {
     margin-top: 0;
 }
 
+/*** responsive ***/
+
+@media (max-width: 1200px) {
+    .commHTMLOptionsToAttach > div > .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 /****** all widgets ******/
 
 .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .HLLandingControl {
@@ -1750,36 +1755,48 @@ body.ribbit .community-home .row-wide > div[class*="col-md-"]:not(.col-md-12) .H
     margin-bottom: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
+.HLLandingControl .title-row div.col-sm-2.col-md-2 {
+    width: 50px;
+    margin-right: 15px;
+    float: left;
+}
+.HLLandingControl .title-row .col-md-10.col-sm-10 {
+    width: calc(100% - 65px);
+    padding: 0;
+    float: left;
+}
 
 /****** discussions ******/
 
-body.ribbit #MPOuterMost .community-home .row-wide > div.col-md-8 .HLLandingControl ul li,
-body.ribbit #MPOuterMost .community-home .row-wide > div.col-md-9 .HLLandingControl ul li,
-body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
-body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
-body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
-body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu)>ol,
-body.ribbit:not(.interior) .row>div.col-md-9>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
-body.ribbit:not(.interior) .row>div.col-md-9>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
-body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
-body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu)>ol {
-    padding-left: 70px;
-    position: relative;
-}
-#MPOuterMost .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
-#MPOuterMost .community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10,
-.home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
-.home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
-    padding: 0;
-    width: 100%;
-}
-#MPOuterMost .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
-#MPOuterMost .community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2,
-.home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
-.home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
-    position: absolute;
-    left: 0;
-    top: 0;
+@media (min-width: 426px) {
+    body.ribbit #MPOuterMost .community-home .row-wide > div.col-md-8 .HLLandingControl ul li,
+    body.ribbit #MPOuterMost .community-home .row-wide > div.col-md-9 .HLLandingControl ul li,
+    body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
+    body.ribbit:not(.interior) .row>div.col-md-8>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
+    body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
+    body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu)>ol,
+    body.ribbit:not(.interior) .row>div.col-md-9>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li, 
+    body.ribbit:not(.interior) .row>div.col-md-9>div[class*=Content]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol, 
+    body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li, 
+    body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu)>ol {
+        padding-left: 70px;
+        position: relative;
+    }
+    #MPOuterMost .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
+    #MPOuterMost .community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10,
+    .home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-10,
+    .home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-10 {
+        padding: 0;
+        width: 100%;
+    }
+    #MPOuterMost .community-home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
+    #MPOuterMost .community-home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2,
+    .home .row-wide > .col-md-8 .HLLandingControl ul li .col-md-2,
+    .home .row-wide > .col-md-9 .HLLandingControl ul li .col-md-2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }
 
 /****** announcements ******/
@@ -2069,7 +2086,39 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     padding-right: 30px;
 }
 
-/* Timeline Styling */
+/****** responsive ******/
+
+@media (max-width: 991px) {
+    .summary-edit .Content {
+        display: block;
+    }
+    .summary-edit .text-container,
+    .summary-edit .img-container {
+        width: 100%;
+    }
+    .summary-edit .text-container {
+        padding-right: 0;
+        margin-top: 40px;
+    }
+    .recent-news .HLRecentBlogs ul,
+    .featured-resources .HLMyDocuments ul {
+        flex-wrap: wrap;
+        margin: -5px;
+    }
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+        flex-basis: 50%;
+        padding: 5px;
+    }
+}
+@media (max-width: 425px) {
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+        flex-basis: 100%;
+    }
+}
+
+/************ Timeline Styling ************/
 
 .center-content {
     display: flex;
