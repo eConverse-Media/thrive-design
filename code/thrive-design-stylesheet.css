@@ -162,13 +162,16 @@ body.ribbit:not(.interior).bodyBackground {
     }
 }
 
+.flex-heading {
+    margin-bottom: 10px;
+}
+
 @media (min-width: 769px) {
     .flex-heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: 20px;
-        margin-bottom: 10px;
     }
 
     body.ribbit .flex-heading h2 {
@@ -849,10 +852,10 @@ body.ribbit .row-wide.cards > .col-md-12 {
     flex-grow: 0;
     flex-shrink: 1;
     display: flex;
-    flex-basis: 20%;
+    flex-basis: calc(20% - 16px);
 }
 .col-md-6 .cards .card {
-    flex-basis: 33.333333%;
+    flex-basis: calc(33.333333% - 16px);
 }
 body.ribbit.home #MainCopy_ContentWrapper .cards .card {
     margin: 8px;
@@ -965,10 +968,29 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
 }
 
 @media (max-width: 991px) {
+    .cards > .col-md-12 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cards .card {
+        flex-basis: calc(33.333333% - 16px);
+    }
     .card:not(.link-card),
     .card.link-card a {
         max-width: 500px;
         width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .cards .card,
+    .col-md-6 .cards .card {
+        flex-basis: calc(50% - 16px);
+    }
+}
+@media (max-width: 360px) {
+    .cards .card,
+    .col-md-6 .cards .card {
+        flex-basis: calc(100% - 16px);
     }
 }
 
@@ -1650,6 +1672,10 @@ body.ribbit .community-home .row.no-community-html.row-full {
     padding-top: 0;
     padding-bottom: 0;
     background: transparent;
+}
+.commHTMLOptionsToAttach > div > .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
 }
 .summary-edit .Content {
     display: flex;
