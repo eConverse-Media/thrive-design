@@ -1633,7 +1633,8 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
 .resources-list ul li .img-container, 
-.latest-news-list.ContentUser-Control .blogs-block .img-container, .featured-tile-slider .featured-tile-slider-wrapper li .img-container {
+.latest-news-list.ContentUser-Control .blogs-block .img-container, .featured-tile-slider .featured-tile-slider-wrapper li .img-container,
+.featured-cards ul li {
     height: 170px;
     position: absolute;
     top: 0;
