@@ -1606,6 +1606,11 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     padding-right: 0;
 }
 
+.featured-card ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .featured-blogs .top-blogs-slider ul li,
 .resources-list ul li,
 .latest-news-list.ContentUserControl .blogs-block,
@@ -1629,7 +1634,6 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 
 .resources-list ul li, .featured-cards ul li {
     min-height: 375px;
-    float: left;
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
