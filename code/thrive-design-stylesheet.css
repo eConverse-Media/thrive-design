@@ -1610,11 +1610,12 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 .resources-list ul li,
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li,
-.featured-tile-slider .blogs-block {
+.featured-tile-slider .blogs-block,
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl  div .Content > ul li {
     width: calc(25% - 30px);
-    margin: 0 15px 30px;
+    margin: 0 15px 30px !important;
     background: #fff;
-    padding: 190px 30px 30px;
+    padding: 190px 30px 30px !important;
     min-height: 430px;
     position: relative;
     border-radius: 8px;
@@ -1626,7 +1627,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
     min-height: unset;
 }
 
-.resources-list ul li {
+.resources-list ul li, .featured-cards ul li {
     min-height: 375px;
     float: left;
 }
@@ -1634,7 +1635,7 @@ body.ribbit.interior #MainCopy_ContentWrapper > .row > div[class*="col-md-"] > d
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
 .resources-list ul li .img-container, 
 .latest-news-list.ContentUser-Control .blogs-block .img-container, .featured-tile-slider .featured-tile-slider-wrapper li .img-container,
-.featured-cards ul li {
+.featured-cards ul li .img-container {
     height: 170px;
     position: absolute;
     top: 0;
