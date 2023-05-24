@@ -2461,16 +2461,37 @@ body.ribbit
 
 /****** Event Cards  ******/
 
-.cards>.HLEventList ul {
+.cards.events {
+    position: relative;
+}
+
+.cards.events>.HLEventList ul:not(.dropdown-menu) {
   display: flex;
   justify-content: space-evenly;
 }
 
-.cards>.HLEventList ul li {
+.cards.events>.HLEventList ul:not(.dropdown-menu) li {
   padding: 30px;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+  margin: 0 15px;
+}
+
+.cards.events>.HLEventList ul:not(.dropdown-menu) li:first-of-type {
+    margin-left: 0;
+}
+
+
+.cards.events>.HLEventList ul:not(.dropdown-menu) li:last-of-type {
+    margin-right: 0;
+}
+
+
+.cards.events .add-event-button {
+    position: absolute;
+    top: -50px;
+    right: 0;
 }
 
 /****** resources ******/
