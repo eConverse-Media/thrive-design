@@ -1788,7 +1788,6 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
   background-color: white;
   border: 0;
   margin: 0 15px;
-  /* width: calc(33.3333333333% - 30px) !important; */
   padding: 215px 30px 25px;
   position: relative;
 }
@@ -2016,21 +2015,36 @@ body.ribbit.interior
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li,
 .featured-tile-slider .blogs-block,
-.featured-cards
-  div[id*="Main"]
-  .SearchResults.HLLandingControl
-  div
-  .Content
-  > ul
-  li {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li{
   width: calc(25% - 30px);
-  margin: 0 15px 30px !important;
+  margin: 0 15px 30px;
   background: #fff;
-  padding: 190px 30px 30px !important;
+  padding: 190px 30px 30px;
   min-height: 430px;
   position: relative;
   border-radius: 8px;
   box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+}
+
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
+    margin-left: 0;
+}
+
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type {
+    margin-right: 0;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li {
+    min-height: unset;
+    padding-top: 130px;
+}
+
+
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content > ul li:not(.slick-slide) .img-container {
+    width: 100%;
+    height: 110px;
 }
 
 .featured-blogs.tile .top-blogs-slider ul li {
@@ -2470,20 +2484,23 @@ body.ribbit
   justify-content: space-evenly;
 }
 
-.cards.events>.HLEventList ul:not(.dropdown-menu) li {
-  padding: 30px;
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li
+{
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
   margin: 0 15px;
+  position: relative;
+  width: calc(25% - 30px);
+  overflow: hidden;
 }
 
-.cards.events>.HLEventList ul:not(.dropdown-menu) li:first-of-type {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
     margin-left: 0;
 }
 
 
-.cards.events>.HLEventList ul:not(.dropdown-menu) li:last-of-type {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type {
     margin-right: 0;
 }
 
@@ -2493,6 +2510,82 @@ body.ribbit
     top: -50px;
     right: 0;
 }
+
+.cards.events div[id*="Thumbnail"] {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 50px;
+    z-index: 10;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10 {
+    width: 100%;
+}
+
+
+.home .cards.events .HLEventList ul li .date-block {
+    width: 50px;
+    height: 50px;
+}
+
+.home .cards.events .HLEventList ul li .col-md-2 {
+    width: 50px;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-3 {
+    width: 100%;
+}
+
+.cards.events .HLLandingControl.HLEventList .title-row img {
+    height: 110px;
+    width: 100%;
+    max-height: unset;
+    max-width: initial;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .timeAgoFormat,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 div
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div {
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .div:last-of-type,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div:last-of-type {
+    padding-bottom: 30px;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p:empty,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p.break-word,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p:empty,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p.break-word {
+    display: none;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3 {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 /****** resources ******/
 
