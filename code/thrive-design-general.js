@@ -38,8 +38,25 @@ function handleEvents() {
     });
 }
 
+function handleSlider() {
+
+    $('.slide').wrapAll('<div class="slider"></div>');
+
+    $('.slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        fade: false,
+        // autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
     handleEvents();
+    handleSlider
 });
