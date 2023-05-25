@@ -40,6 +40,16 @@ function handleEvents() {
 
 function handleSlider() {
 
+    $('.slide').each(function(){
+        const img = $(this).find('img');
+        const HtmlContent = $(this).find('.HtmlContent');
+        $(HtmlContent).append('<div class="img-container"></div>');
+        const imgContainer = $(this).find('.img-container');
+        const imgSrc = $(img).attr('src');
+        $(imgContainer).css('background-image', 'url("'+ imgSrc + '")');
+        $(img).hide();
+    });
+
     $('.slide').wrapAll('<div class="slider"></div>');
 
     $('.slider').slick({
@@ -48,7 +58,7 @@ function handleSlider() {
         infinite: true,
         fade: false,
         // autoplay: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1
     });
 
@@ -58,5 +68,5 @@ $(function () {
     handleInteriorPadding();
     handleLinkCards();
     handleEvents();
-    handleSlider
+    handleSlider();
 });
