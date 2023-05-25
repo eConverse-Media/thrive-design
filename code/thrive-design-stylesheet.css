@@ -2519,22 +2519,26 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
     z-index: 10;
 }
 
-.home .cards.events .HLEventList ul li .col-md-10 {
+.home .cards.events .HLEventList ul li .col-md-10,
+.memberhome .cards.events .HLEventList ul li .col-md-10  {
     width: 100%;
 }
 
 
-.home .cards.events .HLEventList ul li .date-block {
+.home .cards.events .HLEventList ul li .date-block,
+.memberhome .cards.events .HLEventList ul li .date-block {
     width: 50px;
     height: 50px;
 }
 
-.home .cards.events .HLEventList ul li .col-md-2 {
+.home .cards.events .HLEventList ul li .col-md-2,
+.memberhome .cards.events .HLEventList ul li .col-md-2 {
     width: 50px;
 }
 
 
-.home .cards.events .HLEventList ul li .col-md-10 .title-row {
+.home .cards.events .HLEventList ul li .col-md-10 .title-row,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row {
     display: flex;
     flex-direction: column-reverse;
 }
