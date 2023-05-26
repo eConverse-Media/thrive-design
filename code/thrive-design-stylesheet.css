@@ -2690,17 +2690,44 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 
 /****** Activity Feed Styling Reset ******/
 
-.feed-widget-list-start .hl-profile-avatar.lg img {
+.feed-list .hl-profile-avatar.lg img {
   width: 3.5em;
   height: 3.5em;
   margin: unset;
 }
 
-.feed-widget-list-start .text-secondary.mt-2 {
+.feed-list .text-secondary.mt-2 {
   padding-left: 4.2em;
 }
 
+.feed-list .p-2 {
+  border-top: 0
+}
 
+
+.feed-list .feed-item-row.card {
+  box-shadow: none;
+}
+
+.feed-list .feed-title {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading {
+  padding: .5em;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+  border: 1px solid var(--hl-bs--bg2);
+  overflow: hidden;
+}
+
+.feed-list .layout-grid-cell-children {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+  overflow: hidden;
+}
 /****** resources ******/
 
 body.ribbit
