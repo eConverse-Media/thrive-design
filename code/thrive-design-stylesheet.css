@@ -2140,7 +2140,7 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   border-top-left-radius: 8px;
 }
 
-.featured-card ul li .col-md-3 {
+.featured-cards ul li .col-md-3 {
   display: none;
 }
 
@@ -2631,7 +2631,7 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .timeAgoFormat,
-.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 div
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 div,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
@@ -2650,9 +2650,16 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 }
 
 
-.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .div:last-of-type,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div,
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .div:last-of-type,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div:last-of-type,
-.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .div:last-of-type,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .div:last-of-type {
+  padding-right: 70px;
+}
 .memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div:last-of-type {
     padding-bottom: 30px;
 }
