@@ -2742,6 +2742,9 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.he
 .feed-list .images-preview .img-slot {
   border-radius: 8px;
 }
+.bootstrap-4 .feed-list .btn-sm.btn-ghost {
+  margin-left: 4.2em;
+}
 
 .bootstrap-4 .btn-sm.btn-ghost  .text-meta {
   color: var(--hl-bs--primary-opposite) !important;
@@ -2749,6 +2752,10 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.he
 
 .bootstrap-4 .btn-sm.btn-ghost:hover  .text-meta {
   color: var(--hl-bs--btn-ghost-text-hover) !important;
+}
+
+.bootsrap-4 .card img.file-type-icon {
+  margin: unset;
 }
 
 /****** resources ******/
