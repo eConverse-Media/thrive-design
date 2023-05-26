@@ -2724,7 +2724,6 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.he
   padding: .5em;
   border-radius: 8px;
   box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
-  overflow: hidden;
 }
 
 .feed-list .layout-grid-cell-children {
@@ -2734,10 +2733,6 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.he
   overflow: hidden;
 }
 
-
-.feed-list .mt-2.text-secondary .tag-list  {
-  margin-left: -4.2em;
-}
 
 .feed-list .images-preview .img-slot {
   border-radius: 8px;
