@@ -2653,7 +2653,9 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
-.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div {
+  padding-right: 70px;
+}
 
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .div:last-of-type,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div:last-of-type,
