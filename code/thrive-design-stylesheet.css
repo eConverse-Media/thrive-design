@@ -1074,11 +1074,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement::after {
   content: 'Connect with members!';
-
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 13px;
+  transform: translateY(-72%);
+  left: 230px;
+  padding-left: 13px;
 }
 
 
@@ -2872,6 +2872,13 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 
 .center-content > div:nth-of-type(2) > div {
   align-self: center;
+}
+
+.center-content.left > div:first-of-type {
+  font-display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 .milestone-slider ul.slick-dots {
   bottom: 0;
