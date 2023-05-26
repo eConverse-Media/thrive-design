@@ -752,6 +752,27 @@ body.ribbit #NAV > div {
   padding: 40px;
 }
 
+.hero.image {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1) {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div>div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
 /************ resetting homepage widget styling ************/
 
 body.ribbit:not(.interior)
