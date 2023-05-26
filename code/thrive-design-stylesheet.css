@@ -2742,6 +2742,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.he
 .feed-list .images-preview .img-slot {
   border-radius: 8px;
 }
+
+.feed-list .bootstrap-4 .text-meta {
+  color: var(--hl-bs--primary-opposite) !important;
+}
+
 /****** resources ******/
 
 body.ribbit
