@@ -2140,6 +2140,14 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   border-top-left-radius: 8px;
 }
 
+.featured-card ul li .col-md-3 {
+  display: none;
+}
+
+
+.featured-cards .title-row .col-md-9 {
+  width: 100%;
+}
 .top-blog-slider-wrapper
   .featured-blogs
   .HLLandingControl
