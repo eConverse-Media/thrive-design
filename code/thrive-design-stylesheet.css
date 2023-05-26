@@ -1076,6 +1076,15 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   background-color: transparent;
   border: none;
   box-shadow: none;
+  margin-left: -10px;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li img  {
+  border: 2px solid #fff;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li:first-of-type {
+  margin-left: 0;
 }
 
 .HLLandingControl.HLEngagement ul.display-horizontal li a[id*="NameLink"] {
