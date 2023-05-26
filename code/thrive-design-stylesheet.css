@@ -1915,14 +1915,14 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .thrive-blogs .blogs-block .title-row .col-md-8,
 .latest-news-list.ContentUserControl .blogs-block .col-md-8,
-.featured-blogs ul li .title-row .col-md-9,
-.featured-resource ul li .title-row .col-md-9 {
+.ContentUserControl.featured-blogs ul li .title-row .col-md-9,
+.ContentUserControl.featured-resource ul li .title-row .col-md-9 {
   width: 100%;
 }
 
-.featured-blogs ul li .title-row h3,
-.featured-resource ul li .title-row h3,
-.resources-list ul li .title-row h3 {
+.ContentUserControl.featured-blogs ul li .title-row h3,
+.ContentUserControl.featured-resource ul li .title-row h3,
+.ContentUserControl.resources-list ul li .title-row h3 {
   text-align: center;
 }
 
@@ -1932,9 +1932,9 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
   text-align: center;
 }
 
-.resources-list ul li .text-container .row p,
-.resources-list ul li .ByLine,
-.resources-list ul li {
+.ContentUserControl.resources-list ul li .text-container .row p,
+.ContentUserControl.resources-list ul li .ByLine,
+.ContentUserControl.resources-list ul li {
   text-align: center;
 }
 
@@ -1972,14 +1972,14 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 /* Feratured Blogs List */
 
-.featured-blogs ul,
-.featured-resource ul,
+.ContentUserControl.featured-blogs ul,
+.ContentUserControl.featured-resource ul,
 .featured-tile-slider-wrapper .slick-list .slick-track {
   display: flex;
 }
 
-.featured-blogs ul li,
-.featured-resource ul li {
+.ContentUserControl.featured-blogs ul li,
+.ContentUserControl.featured-resource ul li {
   width: 33.3333333333%;
   padding: 30px 25px;
   background-color: #eee;
@@ -1987,18 +1987,18 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
   margin: 0 15px;
 }
 
-.featured-blogs ul li:first-of-type,
-.featured-resource ul li:first-of-type {
+.ContentUserControl.featured-blogs ul li:first-of-type,
+.ContentUserControl.featured-resource ul li:first-of-type {
   margin-left: 0;
 }
 
-.featured-blogs ul li:last-of-type,
-.featured-resource ul li:last-of-type {
+.ContentUserControl.featured-blogs ul li:last-of-type,
+.ContentUserControl.featured-resource ul li:last-of-type {
   margin-right: 0;
 }
 
-.featured-blogs.tile ul li h3 a::before,
-.featured-resource ul li h3 a::before {
+.ContentUserControl.featured-blogs.tile ul li h3 a::before,
+.ContentUserControl.featured-resource ul li h3 a::before {
   content: "\f03e";
   font-family: "Font Awesome 5 Pro";
   font-weight: 300;
@@ -2009,14 +2009,14 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
   justify-content: center;
 }
 
-.featured-blogs ul li .title-row .col-md-3,
-.featured-resource ul li .title-row .col-md-3,
+.ContentUserControl.featured-blogs ul li .title-row .col-md-3,
+.ContentUserControl.featured-resource ul li .title-row .col-md-3,
 .featured-tile-slider-wrapper li .col-md-3 {
   display: none;
 }
 
-.featured-blogs ul li .title-rwo .col-md-9,
-.featured-resource ul li .title-rwo .col-md-9,
+.ContentUserControl.featured-blogs ul li .title-rwo .col-md-9,
+.ContentUserControl.featured-resource ul li .title-rwo .col-md-9,
 .featured-tile-slider-wrapper li .col-md-9 {
   width: 100%;
 }
@@ -2048,7 +2048,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 body.ribbit.interior.resource-list
   #MainCopy_ContentWrapper
-  .resources-list
+  .ContentUserControl.resources-list
   div[id*="ContentPanel"] {
   padding-left: 0;
   padding-right: 0;
@@ -2072,8 +2072,8 @@ body.ribbit.interior
   justify-content: space-evenly;
 }
 
-.featured-blogs .top-blogs-slider ul li,
-.resources-list ul li,
+.ContentUserControl.featured-blogs .top-blogs-slider ul li,
+.ContentUserControl.resources-list ul li,
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li,
 .featured-tile-slider .blogs-block,
@@ -2109,22 +2109,22 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
     height: 110px;
 }
 
-.featured-blogs.tile .top-blogs-slider ul li {
+.ContentUserControl.featured-blogs.tile .top-blogs-slider ul li {
   padding-top: 25px;
   min-height: unset;
 }
 
-.resources-list ul li,
+.ContentUserControl.resources-list ul li,
 .featured-cards ul li {
   min-height: 375px;
 }
 
 .top-blog-slider-wrapper
-  .featured-blogs
+  .ContentUserControl.featured-blogs
   .HLLandingControl
   .top-blogs-slider
   .img-container,
-.resources-list ul li .img-container,
+.ContentUserControl.resources-list ul li .img-container,
 .latest-news-list.ContentUser-Control .blogs-block .img-container,
 .featured-tile-slider .featured-tile-slider-wrapper li .img-container,
 .featured-cards ul li .img-container {
@@ -2149,11 +2149,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   width: 100%;
 }
 .top-blog-slider-wrapper
-  .featured-blogs
+  .ContentUserControl.featured-blogs
   .HLLandingControl
   .top-blogs-slider
   .slick-arrow::before,
-.resources-list ul li .img-container,
+.ContentUserControl.resources-list ul li .img-container,
 .latest-news-list.ContentUserControl .blogs-block .slick-arrow::before,
 .featured-tile-slider-wrapper
   .Content-User-Control
@@ -2164,11 +2164,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 }
 
 .top-blog-slider-wrapper
-  .featured-blogs
+  .ContentUserControl.featured-blogs
   .HLLandingControl
   .top-blogs-slider
   .slick-next::before,
-.resources-list ul li .slick-next::before,
+.ContentUserControl.resources-list ul li .slick-next::before,
 .latest-news-list .blogs-block .slick-next::before,
 .featured-tile-slider-wrapper
   .ContentUserControl
@@ -2181,11 +2181,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 }
 
 .top-blog-slider-wrapper
-  .featured-blogs
+  .ContentUserControl.featured-blogs
   .HLLandingControl
   .top-blogs-slider
   .slick-prev::before,
-.resources-list ul li .slick-prev::before,
+.ContentUserControl.resources-list ul li .slick-prev::before,
 .latest-news-list.ContentUserControl .blogs-block .slick-prev::before,
 .featured-tile-slider.ContentUserControl .slick-prev::before {
   content: "\f053";
@@ -2896,12 +2896,12 @@ body.ribbit
 /****** recent news & featured resources ******/
 
 .recent-news .HLRecentBlogs ul,
-.featured-resources .HLMyDocuments ul {
+.ContentUserControl.featured-resources .HLMyDocuments ul {
   margin: -15px;
   display: flex;
 }
 body.ribbit .recent-news .HLRecentBlogs ul li,
-body.ribbit .featured-resources .HLMyDocuments ul li {
+body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
   padding: 15px;
   flex-grow: 0;
   flex-shrink: 1;
@@ -2912,11 +2912,11 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
   flex-direction: column;
 }
 .recent-news .HLRecentBlogs ul li .img-container,
-.featured-resources .HLMyDocuments ul li .img-container {
+.ContentUserControl.featured-resources .HLMyDocuments ul li .img-container {
   height: 170px;
 }
 .recent-news .HLRecentBlogs ul li .text-container,
-.featured-resources .HLMyDocuments ul li .text-container {
+.ContentUserControl.featured-resources .HLMyDocuments ul li .text-container {
   background: #fff;
   padding: 25px 20px;
   height: calc(100% - 170px);
@@ -2951,19 +2951,19 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     margin-top: 40px;
   }
   .recent-news .HLRecentBlogs ul,
-  .featured-resources .HLMyDocuments ul {
+  .ContentUserControl.featured-resources .HLMyDocuments ul {
     flex-wrap: wrap;
     margin: -5px;
   }
   body.ribbit .recent-news .HLRecentBlogs ul li,
-  body.ribbit .featured-resources .HLMyDocuments ul li {
+  body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
     flex-basis: 50%;
     padding: 5px;
   }
 }
 @media (max-width: 425px) {
   body.ribbit .recent-news .HLRecentBlogs ul li,
-  body.ribbit .featured-resources .HLMyDocuments ul li {
+  body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
     flex-basis: 100%;
   }
 }
