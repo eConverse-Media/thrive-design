@@ -2715,10 +2715,14 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 }
 
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading {
+  border: 1px solid var(--hl-bs--bg2);
+  border-radius: 8px;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading > div {
   padding: .5em;
   border-radius: 8px;
   box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
-  border: 1px solid var(--hl-bs--bg2);
   overflow: hidden;
 }
 
