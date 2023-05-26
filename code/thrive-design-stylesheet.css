@@ -1068,13 +1068,14 @@ body.ribbit
 
 /****** Most Active Members ******/
 
-.HLLandingControl ul.display-horizontal li {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li {
   max-width: unset;
   min-width: unset;
   width: 50px;
   height: 50px;
   background-color: transparent;
   border: none;
+  box-shadow: none;
 }
 
 .HLLandingControl.HLEngagement ul.display-horizontal li a[id*="NameLink"] {
