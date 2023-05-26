@@ -1392,7 +1392,7 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
   color: var(--hl-bs--primary-opposite);
 }
 
-.card img {
+.ContentItemHtml.card img {
   margin: -30px -30px 30px -30px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
