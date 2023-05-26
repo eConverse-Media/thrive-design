@@ -2700,7 +2700,8 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   padding-left: 4.2em;
 }
 
-.feed-list .p-2 {
+.FeedWidget .feed-list .p-2,
+.FeedWidget .feed-list .p-2 {
   border-top: 0 !important;
 }
 
@@ -2731,6 +2732,15 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.he
   background: #fff;
   box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
   overflow: hidden;
+}
+
+
+.feed-list .mt-2.text-secondary  {
+  padding-left: 0;
+}
+
+.feed-list .images-preview .img-slot {
+  border-radius: 8px;
 }
 /****** resources ******/
 
