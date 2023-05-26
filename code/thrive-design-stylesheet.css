@@ -2875,7 +2875,7 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 }
 
 .center-content.left > div:first-of-type {
-  font-display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 
