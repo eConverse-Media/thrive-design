@@ -1068,6 +1068,20 @@ body.ribbit
 
 /****** Most Active Members ******/
 
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement {
+  position: relative;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement::after {
+  content: 'Connect with members!';
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+}
+
+
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li {
   max-width: unset;
   min-width: unset;
@@ -1081,6 +1095,7 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li img  {
   border: 2px solid #fff;
+  border-radius: 50%;
 }
 
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li:first-of-type {
