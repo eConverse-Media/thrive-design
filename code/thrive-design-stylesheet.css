@@ -2931,6 +2931,109 @@ body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
   padding-right: 30px;
 }
 
+
+/************ suggested contacts ************/
+
+.people-you-should-know h2 {
+  margin-bottom: 20px;
+}
+
+.HL-contact-suggestions {
+  margin-bottom: 10px;
+}
+
+.HL-contact-suggestions.HLLandingControl .Content ul li {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+  border: none;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+}
+
+.HL-contact-suggestions ul li a[title="User Name Image"] {
+  width: 50px;
+  height: 50px;
+}
+
+.HL-contact-suggestions .btn {
+  text-transform: none;
+  font-weight: 600;
+  width: 55px;
+  padding: 3px 10px;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .update-friend {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary {
+  margin-top: 0;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary::before {
+  font-size: 12px;
+  line-height: 16px;
+  content: 'Add';
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default {
+  margin-top: 10px;
+}
+
+.HL-contact-suggestions .btn-default {
+  background-color: #D1232A;
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.HL-contact-suggestions .btn-default:hover,
+.HL-contact-suggestions .btn-default:focus {
+  background-color: #D6393F;
+  color: #fff;
+  border: none;
+}
+
+.HL-contact-suggestions ul li .col-md-2 {
+  width: 50px;
+  padding: 0;
+  margin-right: 20px;
+  float: left;
+}
+
+.HL-contact-suggestions ul li .col-md-6 {
+  width: calc(100% - 125px);
+  padding-right: 15px;
+  padding-left: 0;
+  float: left;
+}
+
+.HL-contact-suggestions ul li .col-md-4 {
+  width: 55px;
+  padding: 0;
+  float: left;
+}
+
+.HL-contact-suggestions ul li h3 {
+  margin-bottom: 6px;
+}
+
+.HL-contact-suggestions ul li .details {
+  color: #848785;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.HL-contact-suggestions ul li .details span:empty+br {
+  display: none;
+}
+
 /****** responsive ******/
 
 @media (max-width: 991px) {
