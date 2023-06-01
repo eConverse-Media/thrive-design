@@ -3341,4 +3341,40 @@ body.ribbit .side-nav h3 {
   .footer-social {
     justify-content: center;
   }
+
+  .card:not(.link-card), .card.link-card a { 
+    max-width: 100%;
+  }
+
+  .featured-cards ul {
+    flex-direction: column;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li {
+    width: calc(100% -30px);
+  }
+}
+
+@media (width < 767px) {
+  .slider .slide .HtmlContent h6, .slider .slide .HtmlContent h2, .slider .slide .HtmlContent p {
+    width: 100%;
+  }
+
+  .slider .slide .HtmlContent {
+    padding-bottom: 217px;
+  }
+  .slider .slide .HtmlContent .img-container {
+    top: unset;
+    bottom: 0;
+    transform: unset;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .ribbit .profile-snippet-card .profile-snippet-bio {
+    padding-top: 0;
+  }
+
+
 }
