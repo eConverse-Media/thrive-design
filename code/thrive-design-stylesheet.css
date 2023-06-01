@@ -471,10 +471,17 @@ body.ribbit:not(.interior)
   > div[class*="Content"].card
   .HLLandingControl
   div[id$="_BottomLink"]
-  a:is(:hover, :focus) {
+  a:is(:hover, :focus),
+  .narrow-widget a.link-standalone {
   background-color: var(--hl-bs--primary);
   color: var(--hl-bs--primary-opposite);
   border: none;
+}
+
+
+.ribbit .narrow-widget a.link-standalone {
+  color: #fff;
+  font-size: 16px !important;
 }
 
 .btn.btn-success,
@@ -503,6 +510,10 @@ body.ribbit
   color: var(--hl-bs--btn-secondary-text);
   /* don't think this is right; looking for text-on-secondary */
   border: none;
+}
+
+.narrow-widget a.link-standalone i {
+  display: none;
 }
 
 .btn.btn-default,
@@ -549,10 +560,13 @@ body.ribbit
   .card-edit
   .btn-group
   .btn-group
-  .btn-primary.dropdown-toggle:is(:hover, :focus)::after {
+  .btn-primary.dropdown-toggle:is(:hover, :focus)::after{
   border-top-color: var(--hl-bs--btn-secondary-text);
 }
 
+.LibraryEntriesDashboard .page-size-caret svg {
+  color: var(--hl-bs--primary-opposite);
+}
 /*** widget buttons ***/
 
 body.ribbit .HLLandingControl div[id*="BottomLink"],
@@ -695,7 +709,8 @@ body.ribbit:not(.interior)
   > div[class*="Content"].card
   .HLLandingControl
   div[id$="_BottomLink"]
-  a:is(:hover, :focus) {
+  a:is(:hover, :focus),
+  .narrow-widget a.link-standalone {
   display: inline-block;
   font-style: normal;
   text-decoration: none;
@@ -743,6 +758,18 @@ body.ribbit #NAV > div {
 
 #MPOuterHeader #NAV #MPButtonBar .navbar-header {
   min-width: 190px;
+}
+
+
+body.ribbit #LogoNavPlaceholder {
+  margin: 0;
+}
+
+
+/************ Layout Classes ************/
+
+.no-bottom-padding {
+  padding-bottom: 0 !important;
 }
 
 /************ homepage V1 ************/
@@ -817,7 +844,8 @@ body.ribbit
   .ContentUserControl
   .narrow-widget.widget-container
   .widget-header
-  h2 {
+  h2,
+  .people-you-should-know h2 {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -831,6 +859,17 @@ body.ribbit .narrow-widget.widget-container .widget-header {
 body.ribbit .narrow-widget.widget-container .widget-header:not(:last-child) {
   border-bottom: none;
 }
+
+
+body.ribbit .narrow-widget.widget-container .widget-content-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.ribbit .QuickLinksWidget > div {
+  padding: 16px;
+  }
+
 body.ribbit .QuickLinksWidget .widget-header h2 {
   font-weight: 800;
   font-size: 16px !important;
@@ -1289,6 +1328,11 @@ display: none;
 
 /****** quick links cards ******/
 
+.flex-cards div[class*="section"] > div {
+  height: 100%;
+  margin: 0;
+}
+
 body.ribbit .QuickLinksWidget {
   filter: none;
   box-shadow: none;
@@ -1331,7 +1375,8 @@ body.ribbit.home #MainCopy_ContentWrapper .cards .card {
 }
 .card:not(.link-card),
 .card.link-card a,
-body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links {
+body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
+.people-you-should-know {
   padding: 30px;
   border-radius: 8px;
   background: #fff;
@@ -1880,6 +1925,12 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
   background-position: center;
 }
 
+.latest-news-list .blogs-block .img-container {
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
 .latest-news-list .blogs-block {
   overflow: hidden;
 }
@@ -1889,6 +1940,51 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
   top: 0px;
   left: 0px;
   right: 0px;
+}
+
+.featured-tile-slider ul li {
+  margin-bottom: 0;
+}
+
+.featured-tile-slider ul li .text-container {
+  text-align: center;
+}
+
+.img-container.loading {
+  animation: colorchange 1.5s infinite;
+  -webkit-animation: colorchange 1.5s infinite;
+}
+
+@keyframes colorchange {
+  0% {
+      background: #f2f2f2;
+  }
+
+  50% {
+      background: #ddd;
+  }
+
+  100% {
+      background: #f2f2f2;
+  }
+}
+
+
+.img-container.no-ajax-image {
+  background-image: url();
+  background-color: #d9d9da;
+  position: relative;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.img-container.no-ajax-image::before {
+  content: '\f15b';
+  font-family: 'Font Awesome 5 Pro';
+  color: #a4a4a4;
+
 }
 
 .thrive-blogs div[id*="FollowIcon"] {
@@ -1936,6 +2032,11 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 .ContentUserControl.resources-list ul li .ByLine,
 .ContentUserControl.resources-list ul li {
   text-align: center;
+}
+
+.ContentUserControl.resources-list ul li {
+  display: inline-block;
+  float: left;
 }
 
 .thrive-blogs .blogs-block .title-row .col-md-4,
@@ -2252,6 +2353,25 @@ body.ribbit .community-home .row.no-community-html.row-full {
 .summary-edit .Content .text-container h2:first-child {
   margin-top: 0;
 }
+
+/****** React Library Widget *******/
+
+.LibraryEntriesDashboard {
+  position: relative;
+}
+
+.LibraryEntriesDashboard .heading {
+  position: absolute;
+  position: absolute;
+  top: 27px;
+  right: 135px;
+}
+
+.LibraryEntriesDashboard .bootstrap-4 .bg-bg1 {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--hl-bs--bg3);
+}
+
 
 /*** responsive ***/
 
@@ -2679,7 +2799,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
 .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
-.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div {
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div {
   padding-right: 70px;
 }
 
@@ -2696,6 +2820,11 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   margin: unset;
 }
 
+.profile-snippet-bio div.text-center {
+  text-align: left !important;
+  padding-left: 20px;
+}
+
 .feed-list .text-secondary.mt-2.font-size-xs {
   padding-left: 4.2em;
 }
@@ -2705,6 +2834,14 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   border-top: 0 !important;
 }
 
+.profile-snippet-progress .progress {
+  height: 1em;
+}
+
+.ribbit .profile-snippet-stats > a {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
 
 .feed-list .feed-item-row.card {
   box-shadow: none;
@@ -2934,32 +3071,35 @@ body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
 
 /************ suggested contacts ************/
 
-.people-you-should-know h2 {
-  margin-bottom: 20px;
+
+.people-you-should-know, .MyCommunitiesQuickList h2 {
+  padding: 20px;
 }
 
-.HL-contact-suggestions {
+.people-you-should-know h2, .MyCommunitiesQuickList h2 {
+  margin-bottom: 15px;
+  font-size: 14px !important;
+  margin-top: 0;
+}
+
+.people-you-should-know .HL-contact-suggestions {
   margin-bottom: 10px;
 }
 
-.HL-contact-suggestions.HLLandingControl .Content ul li {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.06);
-  border-radius: 5px;
+.people-you-should-know .HL-contact-suggestions.HLLandingControl .Content ul li {
+  background: transparent;
   border: none;
-  padding: 20px 30px;
-  margin-bottom: 10px;
 }
 
-.HL-contact-suggestions ul li a[title="User Name Image"] {
+.people-you-should-know .HL-contact-suggestions ul li a[title="User Name Image"] {
   width: 50px;
   height: 50px;
 }
 
-.HL-contact-suggestions .btn {
+.people-you-should-know .HL-contact-suggestions .btn {
   text-transform: none;
   font-weight: 600;
-  width: 55px;
+  width: 13px;
   padding: 3px 10px;
 }
 
@@ -2973,65 +3113,263 @@ body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
   border: none;
   font-size: 0;
   line-height: 0;
+  background: transparent;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary:is(:hover, :focus) {
+  background: transparent;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary::before {
   font-size: 12px;
   line-height: 16px;
-  content: 'Add';
+  content: '\f058';
+  color: #28a745;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default {
   margin-top: 10px;
 }
 
-.HL-contact-suggestions .btn-default {
-  background-color: #D1232A;
-  color: #fff;
+.memberhome #MPOuterMost .people-you-should-know .HL-contact-suggestions .ignore-contact {
+  background: transparent;
   border: none;
-  font-size: 12px;
+  font-size: 0px;
   line-height: 16px;
 }
 
-.HL-contact-suggestions .btn-default:hover,
-.HL-contact-suggestions .btn-default:focus {
+.memberhome #MPOuterMost .people-you-should-know .HL-contact-suggestions .ignore-contact::before {
+  color: #D6393F;
+}
+
+.people-you-should-know .HL-contact-suggestions .btn-default:hover,
+.people-you-should-know .HL-contact-suggestions .btn-default:focus {
   background-color: #D6393F;
   color: #fff;
   border: none;
 }
 
-.HL-contact-suggestions ul li .col-md-2 {
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default::before {
+  font-size: 12px;
+  line-height: 16px;
+  content: '\f057';
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default:is(:hover, :focus)::before, .people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary:is(:hover, :focus)::before  {
+  font-weight:  700;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li .col-md-2 {
   width: 50px;
   padding: 0;
   margin-right: 20px;
   float: left;
 }
 
-.HL-contact-suggestions ul li .col-md-6 {
-  width: calc(100% - 125px);
+.people-you-should-know .HL-contact-suggestions ul li .col-md-6 {
+  width: calc(100% - 90px);
   padding-right: 15px;
   padding-left: 0;
   float: left;
 }
 
-.HL-contact-suggestions ul li .col-md-4 {
-  width: 55px;
+.people-you-should-know .HL-contact-suggestions ul li .col-md-4 {
+  width: 13px;
   padding: 0;
   float: left;
 }
 
-.HL-contact-suggestions ul li h3 {
+.people-you-should-know .HL-contact-suggestions ul li h3 {
   margin-bottom: 6px;
 }
 
-.HL-contact-suggestions ul li .details {
+.people-you-should-know .HL-contact-suggestions ul li .details {
   color: #848785;
   font-size: 12px;
   line-height: 16px;
 }
 
-.HL-contact-suggestions ul li .details span:empty+br {
+.people-you-should-know .HL-contact-suggestions ul li .details span:empty+br {
   display: none;
+}
+
+/****** Events Page ******/
+
+.community-events-list h3 a {
+  font-size: 21px !important;
+}
+
+.community-events-list .calendar-stamp {
+  background-color: var(--hl-bs--primary);
+  color: var(--hl-bs--secondary);
+}
+
+.community-events-list .font-size-xs {
+  font-size: 16px !important;
+}
+
+.ribbit .community-events-list .font-size-xs div {
+  font-size: 16px !important;
+}
+/****** hero ******/
+
+.profile-snippet-card,.profile-snippet.bootstrap-4 .bg-alt-bg5, .profile-snippet div 
+ {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.ribbit .profile-snippet-card .profile-snippet-bio {
+  flex-direction: row !important;
+  display: block !important;
+  position: relative;
+  padding-bottom: 0 !important;
+}
+
+
+.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(2) {
+  width: calc(100% - 96px);
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+  width: calc(100% - 96px);
+  position: absolute;
+  top: 55%;
+  right: 0;
+}
+
+.profile-snippet-card .profile-snippet-bio .profile-snippet-avatar {
+  flex-shrink: 0;
+}
+
+
+.bootstrap-4 .hl-widget-card > :first-child > :first-child {
+  flex-wrap: wrap;
+}
+
+.ribbit .profile-snippet-card .border-top {
+  border-top: 0 !important;
+}
+
+.ribbit .profile-snippet-card span.font-size-sm {
+  font-weight: 700;
+  color: #fff;
+}
+
+/****** hero slider ******/
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.slider .slide .HtmlContent {
+  position: relative;
+}
+
+.slider .slide .HtmlContent h6,
+.slider .slide .HtmlContent h2,
+.slider .slide .HtmlContent p {
+width: 50%;
+padding-right: 42px;
+padding-left: 20px;
+}
+
+
+.slider .slide .HtmlContent h6 {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.slider .slide .HtmlContent h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.slider .slide .HtmlContent p {
+  font-size: 12px;
+}
+
+.slider .slide .HtmlContent .img-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 50%;
+  height: 217px;
+}
+
+.slider .slick-dots {
+  text-align: left;
+  padding-left: 15px;
+  bottom: 25px;
+}
+
+.slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+
+.slider .slick-dots li.slick-active {
+  background: white;
+}
+
+.slider .slick-dots li button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.slider .slick-dots button::before {
+  height: 10px;
+  width: 10px;
+}
+
+.slider li.slick-dotsbutton::before,
+.slider li.slick-active button::before {
+  color: transparent !important;
+}
+
+
+.slider  .slick-arrow::before {
+font-family: 'Font Awesome 5 Pro';
+font-size: 37px;
+}
+
+.slider  .slick-prev {
+  left: 15px;
+}
+
+.slider  .slick-next {
+  right: 15px;
+}
+
+.slider  .slick-prev::before {
+  content: '\f053';
+}
+
+.slider  .slick-next::before {
+  content: '\f054';
+}
+
+/****** Interior Header Title *******/
+
+#InteriorPageTitle svg {
+  display: none;
+}
+
+#InteriorPageTitle {
+  background: radial-gradient(21.74% 226.67% at 71.71% 0%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) , radial-gradient(18.34% 191.25% at 74.21% 173.33%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%) , radial-gradient(70.32% 733.33% at 16.89% 117.92%, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%) , var(--hl-bs--primary);
 }
 
 /****** responsive ******/
@@ -3064,6 +3402,31 @@ body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
   body.ribbit .ContentUserControl.featured-resources .HLMyDocuments ul li {
     flex-basis: 100%;
   }
+}
+
+
+/****** My Followed Content ******/
+
+.recently-followed h2 {
+  display: block;
+  margin-top: 20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;  
+}
+
+
+/****** My Communities/ My Followed Content ******/
+
+
+.narrow-widget.mc-quick-list-container h2,
+.narrow-widget.recently-followed h2 {
+  padding: 20px 0 10px !important;
+  display: block;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /************ Timeline Styling ************/
@@ -3412,4 +3775,32 @@ body.ribbit .side-nav h3 {
   .footer-social {
     justify-content: center;
   }
+
+  .card:not(.link-card), .card.link-card a { 
+    max-width: 100%;
+  }
+}
+
+@media (width < 767px) {
+  .slider .slide .HtmlContent h6, .slider .slide .HtmlContent h2, .slider .slide .HtmlContent p {
+    width: 100%;
+  }
+
+  .slider .slide .HtmlContent {
+    padding-bottom: 217px;
+  }
+  .slider .slide .HtmlContent .img-container {
+    top: unset;
+    bottom: 0;
+    transform: unset;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .ribbit .profile-snippet-card .profile-snippet-bio {
+    padding-top: 0;
+  }
+
+
 }

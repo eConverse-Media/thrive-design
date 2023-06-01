@@ -69,4 +69,5 @@ $(function () {
     handleLinkCards();
     handleEvents();
     handleSlider();
+    $('.people-you-should-know').append($('.suggested-contacts-btn'));
 });
