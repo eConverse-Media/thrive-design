@@ -619,6 +619,15 @@ body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h
     margin-bottom: 20px;
 }
 
+body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2 {
+  width: calc(100% - 30px);
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 body.ribbit .narrow-widget.widget-container .widget-header {
     padding-left: 0;
     padding-right: 0;
@@ -2672,8 +2681,7 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 
 /************ suggested contacts ************/
 
-
-.people-you-should-know, .MyCommunitiesQuickList h2 {
+ .MyCommunitiesQuickList h2 {
   padding: 20px;
 }
 
@@ -2818,7 +2826,7 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 }
 /****** hero ******/
 
-.profile-snippet-card,.profile-snippet.bootstrap-4 .bg-alt-bg5, .profile-snippet div 
+.no-bg .profile-snippet-card,.profile-snippet.bootstrap-4 .bg-alt-bg5, .profile-snippet div 
  {
   background-color: transparent !important;
   box-shadow: none;
@@ -3062,9 +3070,6 @@ font-size: 37px;
 
 /************ milestone carousel ************/
 
-.milestone-slider.slick-dotted.slick-slider {
-    margin-bottom: 120px;
-}
 
 .milestone-slider.slick-dotted .slick-list {
     height: 380px;
@@ -3115,7 +3120,7 @@ font-size: 37px;
 .milestone h2::after {
     width: 13px;
     height: 13px;
-    background: var(--hl-bs--gray-300);
+    background: transparent;
 }
 
 .milestone:not(.slick-current) h2 {
@@ -3151,7 +3156,7 @@ font-size: 37px;
 
 .milestone .HtmlContent::before,
 .milestone .HtmlContent::after {
-    content: "";
+    content: none;
     position: absolute;
     width: 115px;
     border-top: 1px solid #005378;
@@ -3176,6 +3181,10 @@ font-size: 37px;
 .milestone:not(.slick-current) h2 {
     color: [PrimaryColor];
     font-size: 28px;
+}
+
+.slick-dots li button::before {
+  font-size: 10px;
 }
 
 /************ FAQ page *************/
@@ -3371,4 +3380,68 @@ body.ribbit.memberhome #MPOuterFooter {
   .footer-social {
     justify-content: center;
   }
+
+  .card:not(.link-card), .card.link-card a { 
+    max-width: 100%;
+  }
+
+  .featured-cards ul {
+    flex-direction: column;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li {
+    width: calc(100% - 30px);
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
+    margin-left: 15px;
+  }
+
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type {
+    margin-right: 15px;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li {
+    width: calc(100% - 30px);
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
+    margin-left: 15px;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type { margin-right: 15px; 
+  }
+
+  .cards.events > .HLEventList ul:not(.dropdown-menu) {
+    flex-direction: column;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li {
+    margin-bottom: 15px;
+  }
+}
+
+@media (width < 767px) {
+  .slider .slide .HtmlContent h6, .slider .slide .HtmlContent h2, .slider .slide .HtmlContent p {
+    width: 100%;
+  }
+
+  .slider .slide .HtmlContent {
+    padding-bottom: 217px;
+  }
+  .slider .slide .HtmlContent .img-container {
+    top: unset;
+    bottom: 0;
+    transform: unset;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .ribbit .profile-snippet-card .profile-snippet-bio {
+    padding-top: 0;
+  }
+
+
 }
