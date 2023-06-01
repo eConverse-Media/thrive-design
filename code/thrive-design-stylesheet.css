@@ -3351,7 +3351,27 @@ body.ribbit .side-nav h3 {
   }
 
   body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li {
-    width: calc(100% -30px);
+    width: calc(100% - 30px);
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
+    margin-left: 15px;
+  }
+
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type {
+    margin-right: 15px;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li {
+    width: calc(100% - 30px);
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
+    margin-left: 15px;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type { margin-right: 15px; 
   }
 }
 
