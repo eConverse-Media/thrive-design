@@ -64,10 +64,26 @@ function handleSlider() {
 
 }
 
+function handlePromoTile() {
+    var promoTile = $('.promo-tile'),
+        link = $(promoTile).find('a');
+
+    if (!!($(link).attr('href'))) {
+        $(promoTile).wrapInner('<a href="' + $(link).attr('href') + '" target="' + $(link).attr('target') + '" rel="' + $(link).attr('rel') + '" />');
+        $(promoTile).find('a a').remove();
+    }
+}
+
+function handleHero() {
+    handleBgImage($('.hero-text'), $('.hero'));
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
     handleEvents();
     handleSlider();
+    handlePromoTile();
+    handleHero();
     $('.people-you-should-know').append($('.suggested-contacts-btn'));
 });
