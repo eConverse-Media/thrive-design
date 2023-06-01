@@ -3,6 +3,10 @@
     font-weight: 800;
 }
 
+.ribbit .col-md-4 h2.card-title {
+  font-size: 21px;
+}
+
 .bootstrap-4 .font-size-md,
 p,
 body {
@@ -2826,7 +2830,7 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 }
 /****** hero ******/
 
-.no-bg .profile-snippet-card,.profile-snippet.bootstrap-4 .bg-alt-bg5, .profile-snippet div 
+.no-bg .profile-snippet-card,.no-bg .profile-snippet.bootstrap-4 .bg-alt-bg5,.no-bg .profile-snippet div 
  {
   background-color: transparent !important;
   box-shadow: none;
