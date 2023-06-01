@@ -369,6 +369,12 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card
     border: none;
 }
 
+
+.ribbit .narrow-widget a.link-standalone {
+  color: #fff;
+  font-size: 16px !important;
+}
+
 .btn.btn-success,
 .btn.btn-success:is(:hover, :focus),
 body.ribbit .btn.btn-success,
@@ -383,6 +389,10 @@ body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-pr
     color: var(--hl-bs--btn-secondary-text);
     /* don't think this is right; looking for text-on-secondary */
     border: none;
+}
+
+.narrow-widget a.link-standalone i {
+  display: none;
 }
 
 .btn.btn-default,
@@ -421,6 +431,9 @@ body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-pr
     border-top-color: var(--hl-bs--btn-secondary-text);
 }
 
+.LibraryEntriesDashboard .page-size-caret svg {
+  color: var(--hl-bs--primary-opposite);
+}
 /*** widget buttons ***/
 
 body.ribbit .HLLandingControl div[id*="BottomLink"],
@@ -542,12 +555,45 @@ body.ribbit #NAV>div {
     min-width: 190px;
 }
 
+
+body.ribbit #LogoNavPlaceholder {
+  margin: 0;
+}
+
+
+/************ Layout Classes ************/
+
+.no-bottom-padding {
+  padding-bottom: 0 !important;
+}
+
 /************ homepage V1 ************/
 
 .cta-card .featured-card-single.card-layout-split {
     background: [PrimaryColor] !important;
     padding: 40px;
 }
+
+.hero.image {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1) {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div>div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
 
 /************ resetting homepage widget styling ************/
 
@@ -583,6 +629,16 @@ body.ribbit .narrow-widget.widget-container .widget-header {
 body.ribbit .narrow-widget.widget-container .widget-header:not(:last-child) {
     border-bottom: none;
 }
+
+
+body.ribbit .narrow-widget.widget-container .widget-content-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.ribbit .QuickLinksWidget > div {
+  padding: 16px;
+  }
 
 body.ribbit .QuickLinksWidget .widget-header h2 {
     font-weight: 800;
@@ -806,6 +862,47 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
     color: #fff;
 }
 
+/****** Most Active Members ******/
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement {
+  position: relative;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement::after {
+  content: 'Connect with members!';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-72%);
+  left: 230px;
+  padding-left: 13px;
+}
+
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li {
+  max-width: unset;
+  min-width: unset;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin-left: -10px;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li img  {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li:first-of-type {
+  margin-left: 0;
+}
+
+.HLLandingControl.HLEngagement ul.display-horizontal li a[id*="NameLink"] {
+display: none;
+}
+
+
 /************ interior pages ************/
 
 /****** featured card styling ******/
@@ -866,6 +963,11 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 
 /****** quick links cards ******/
 
+.flex-cards div[class*="section"] > div {
+  height: 100%;
+  margin: 0;
+}
+
 body.ribbit .QuickLinksWidget {
     filter: none;
     box-shadow: none;
@@ -912,10 +1014,10 @@ body.ribbit.home #MainCopy_ContentWrapper .cards .card {
 .card:not(.link-card),
 .card.link-card a,
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links {
-    padding: 30px;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+  padding: 30px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
 
 .col-md-3 .card:not(.link-card),
@@ -978,11 +1080,11 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
     color: var(--hl-bs--primary-opposite);
 }
 
-.card img {
-    margin: -30px -30px 30px -30px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    max-width: calc(100% + 60px);
+.ContentItemHtml.card img {
+  margin: -30px -30px 30px -30px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  max-width: calc(100% + 60px);
 }
 
 .card.member-card .HtmlContent>p:first-child>strong {
@@ -1441,13 +1543,12 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 .top-blog-slider-wrapper ul li,
 .top-resource-slider li,
 .top-tile-slider ul li {
-    height: auto;
-    background-color: white;
-    border: 0;
-    margin: 0 15px;
-    /* width: calc(33.3333333333% - 30px) !important; */
-    padding: 215px 30px 25px;
-    position: relative;
+  height: auto;
+  background-color: white;
+  border: 0;
+  margin: 0 15px;
+  padding: 215px 30px 25px;
+  position: relative;
 }
 
 .top-blog-slider-wrapper ul li .title-row .col-md-3,
@@ -1476,6 +1577,12 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     background-position: center;
 }
 
+.latest-news-list .blogs-block .img-container {
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
 .latest-news-list .blogs-block {
     overflow: hidden;
 }
@@ -1485,6 +1592,51 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     top: 0px;
     left: 0px;
     right: 0px;
+}
+
+.featured-tile-slider ul li {
+  margin-bottom: 0;
+}
+
+.featured-tile-slider ul li .text-container {
+  text-align: center;
+}
+
+.img-container.loading {
+  animation: colorchange 1.5s infinite;
+  -webkit-animation: colorchange 1.5s infinite;
+}
+
+@keyframes colorchange {
+  0% {
+      background: #f2f2f2;
+  }
+
+  50% {
+      background: #ddd;
+  }
+
+  100% {
+      background: #f2f2f2;
+  }
+}
+
+
+.img-container.no-ajax-image {
+  background-image: url();
+  background-color: #d9d9da;
+  position: relative;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.img-container.no-ajax-image::before {
+  content: '\f15b';
+  font-family: 'Font Awesome 5 Pro';
+  color: #a4a4a4;
+
 }
 
 .thrive-blogs div[id*="FollowIcon"] {
@@ -1511,15 +1663,15 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .thrive-blogs .blogs-block .title-row .col-md-8,
 .latest-news-list.ContentUserControl .blogs-block .col-md-8,
-.featured-blogs ul li .title-row .col-md-9,
-.featured-resource ul li .title-row .col-md-9 {
-    width: 100%;
+.ContentUserControl.featured-blogs ul li .title-row .col-md-9,
+.ContentUserControl.featured-resource ul li .title-row .col-md-9 {
+  width: 100%;
 }
 
-.featured-blogs ul li .title-row h3,
-.featured-resource ul li .title-row h3,
-.resources-list ul li .title-row h3 {
-    text-align: center;
+.ContentUserControl.featured-blogs ul li .title-row h3,
+.ContentUserControl.featured-resource ul li .title-row h3,
+.ContentUserControl.resources-list ul li .title-row h3 {
+  text-align: center;
 }
 
 .latest-news-list.ContentUserControl .blogs-block .col-md-8 h3,
@@ -1528,10 +1680,15 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     text-align: center;
 }
 
-.resources-list ul li .text-container .row p,
-.resources-list ul li .ByLine,
-.resources-list ul li {
-    text-align: center;
+.ContentUserControl.resources-list ul li .text-container .row p,
+.ContentUserControl.resources-list ul li .ByLine,
+.ContentUserControl.resources-list ul li {
+  text-align: center;
+}
+
+.ContentUserControl.resources-list ul li {
+  display: inline-block;
+  float: left;
 }
 
 .thrive-blogs .blogs-block .title-row .col-md-4,
@@ -1568,51 +1725,51 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 /* Feratured Blogs List */
 
-.featured-blogs ul,
-.featured-resource ul,
+.ContentUserControl.featured-blogs ul,
+.ContentUserControl.featured-resource ul,
 .featured-tile-slider-wrapper .slick-list .slick-track {
     display: flex;
 }
 
-.featured-blogs ul li,
-.featured-resource ul li {
-    width: 33.3333333333%;
-    padding: 30px 25px;
-    background-color: #eee;
-    border: 0;
-    margin: 0 15px;
+.ContentUserControl.featured-blogs ul li,
+.ContentUserControl.featured-resource ul li {
+  width: 33.3333333333%;
+  padding: 30px 25px;
+  background-color: #eee;
+  border: 0;
+  margin: 0 15px;
 }
 
-.featured-blogs ul li:first-of-type,
-.featured-resource ul li:first-of-type {
-    margin-left: 0;
+.ContentUserControl.featured-blogs ul li:first-of-type,
+.ContentUserControl.featured-resource ul li:first-of-type {
+  margin-left: 0;
 }
 
-.featured-blogs ul li:last-of-type,
-.featured-resource ul li:last-of-type {
-    margin-right: 0;
+.ContentUserControl.featured-blogs ul li:last-of-type,
+.ContentUserControl.featured-resource ul li:last-of-type {
+  margin-right: 0;
 }
 
-.featured-blogs.tile ul li h3 a::before,
-.featured-resource ul li h3 a::before {
-    content: "\f03e";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 300;
-    color: var(--hl-bs--default-text);
-    display: block;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
+.ContentUserControl.featured-blogs.tile ul li h3 a::before,
+.ContentUserControl.featured-resource ul li h3 a::before {
+  content: "\f03e";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+  color: var(--hl-bs--default-text);
+  display: block;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }
 
-.featured-blogs ul li .title-row .col-md-3,
-.featured-resource ul li .title-row .col-md-3,
+.ContentUserControl.featured-blogs ul li .title-row .col-md-3,
+.ContentUserControl.featured-resource ul li .title-row .col-md-3,
 .featured-tile-slider-wrapper li .col-md-3 {
     display: none;
 }
 
-.featured-blogs ul li .title-rwo .col-md-9,
-.featured-resource ul li .title-rwo .col-md-9,
+.ContentUserControl.featured-blogs ul li .title-rwo .col-md-9,
+.ContentUserControl.featured-resource ul li .title-rwo .col-md-9,
 .featured-tile-slider-wrapper li .col-md-9 {
     width: 100%;
 }
@@ -1659,28 +1816,49 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
     justify-content: space-evenly;
 }
 
-.featured-blogs .top-blogs-slider ul li,
-.resources-list ul li,
+.ContentUserControl.featured-blogs .top-blogs-slider ul li,
+.ContentUserControl.resources-list ul li,
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li,
 .featured-tile-slider .blogs-block,
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li {
-    width: calc(25% - 30px);
-    margin: 0 15px 30px !important;
-    background: #fff;
-    padding: 190px 30px 30px !important;
-    min-height: 430px;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li{
+  width: calc(25% - 30px);
+  margin: 0 15px 30px;
+  background: #fff;
+  padding: 190px 30px 30px;
+  min-height: 430px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
 
-.featured-blogs.tile .top-blogs-slider ul li {
-    padding-top: 25px;
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
+    margin-left: 0;
+}
+
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type {
+    margin-right: 0;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li {
     min-height: unset;
+    padding-top: 130px;
 }
 
-.resources-list ul li,
+
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content > ul li:not(.slick-slide) .img-container {
+    width: 100%;
+    height: 110px;
+}
+
+.ContentUserControl.featured-blogs.tile .top-blogs-slider ul li {
+  padding-top: 25px;
+  min-height: unset;
+}
+
+.ContentUserControl.resources-list ul li,
 .featured-cards ul li {
     min-height: 375px;
 }
@@ -1702,8 +1880,20 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
     border-top-left-radius: 8px;
 }
 
-.top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-arrow::before,
-.resources-list ul li .img-container,
+.featured-cards ul li .col-md-3 {
+  display: none;
+}
+
+
+.featured-cards .title-row .col-md-9 {
+  width: 100%;
+}
+.top-blog-slider-wrapper
+  .ContentUserControl.featured-blogs
+  .HLLandingControl
+  .top-blogs-slider
+  .slick-arrow::before,
+.ContentUserControl.resources-list ul li .img-container,
 .latest-news-list.ContentUserControl .blogs-block .slick-arrow::before,
 .featured-tile-slider-wrapper .Content-User-Control .blogs-block .slick-arrow::before,
 .featured-tile-slider.ContentUserControl .slick-arrow::before {
@@ -1798,6 +1988,25 @@ body.ribbit .community-home .row.no-community-html.row-full {
 .summary-edit .Content .text-container h2:first-child {
     margin-top: 0;
 }
+
+/****** React Library Widget *******/
+
+.LibraryEntriesDashboard {
+  position: relative;
+}
+
+.LibraryEntriesDashboard .heading {
+  position: absolute;
+  position: absolute;
+  top: 27px;
+  right: 135px;
+}
+
+.LibraryEntriesDashboard .bootstrap-4 .bg-bg1 {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--hl-bs--bg3);
+}
+
 
 /*** responsive ***/
 
@@ -2015,20 +2224,23 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     justify-content: space-evenly;
 }
 
-.cards.events>.HLEventList ul:not(.dropdown-menu) li {
-    padding: 30px;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
-    margin: 0 15px;
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li
+{
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+  margin: 0 15px;
+  position: relative;
+  width: calc(25% - 30px);
+  overflow: hidden;
 }
 
-.cards.events>.HLEventList ul:not(.dropdown-menu) li:first-of-type {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
     margin-left: 0;
 }
 
 
-.cards.events>.HLEventList ul:not(.dropdown-menu) li:last-of-type {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type {
     margin-right: 0;
 }
 
@@ -2037,6 +2249,195 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     position: absolute;
     top: -50px;
     right: 0;
+}
+
+.cards.events div[id*="Thumbnail"] {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 50px;
+    z-index: 10;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10,
+.memberhome .cards.events .HLEventList ul li .col-md-10  {
+    width: 100%;
+}
+
+
+.home .cards.events .HLEventList ul li .date-block,
+.memberhome .cards.events .HLEventList ul li .date-block {
+    width: 50px;
+    height: 50px;
+}
+
+.home .cards.events .HLEventList ul li .col-md-2,
+.memberhome .cards.events .HLEventList ul li .col-md-2 {
+    width: 50px;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-3 {
+    width: 100%;
+}
+
+.cards.events .HLLandingControl.HLEventList .title-row img {
+    height: 110px;
+    width: 100%;
+    max-height: unset;
+    max-width: initial;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .timeAgoFormat,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 div,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 .timeAgoFormat,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 div
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div {
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div:last-of-type {
+    padding-bottom: 30px;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p:empty,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p.break-word,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p:empty,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p.break-word,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p:empty,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 p.break-word,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p:empty,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p.break-word {
+    display: none;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3 {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 p,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 .timeAgoFormat,
+.memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 div {
+  padding-right: 70px;
+}
+
+.home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3, .home .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3, .memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-9 h3, .memberhome .cards.events .HLEventList ul li .col-md-10 .title-row .col-md-12 h3 {
+  padding-right: 70px;
+}
+
+
+/****** Activity Feed Styling Reset ******/
+
+.feed-list .hl-profile-avatar.lg img {
+  width: 3.5em;
+  height: 3.5em;
+  margin: unset;
+}
+
+.profile-snippet-bio div.text-center {
+  text-align: left !important;
+  padding-left: 20px;
+}
+
+.feed-list .text-secondary.mt-2.font-size-xs {
+  padding-left: 4.2em;
+}
+
+.FeedWidget .feed-list .p-2,
+.FeedWidget .feed-list .p-2 {
+  border-top: 0 !important;
+}
+
+.profile-snippet-progress .progress {
+  height: 1em;
+}
+
+.ribbit .profile-snippet-stats > a {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+
+.feed-list .feed-item-row.card {
+  box-shadow: none;
+}
+
+.feed-list .feed-title {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading {
+  border: 1px solid var(--hl-bs--bg2);
+  border-radius: 8px;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading > div {
+  padding: .5em;
+  border-radius: 8px;
+  box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+}
+
+.feed-list .layout-grid-cell-children {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+  overflow: hidden;
+}
+
+
+.feed-list .images-preview .img-slot {
+  border-radius: 8px;
+}
+.bootstrap-4 .feed-list .btn-sm.btn-ghost {
+  margin-left: 4.2em;
+}
+
+.bootstrap-4 .btn-sm.btn-ghost  .text-meta {
+  color: var(--hl-bs--primary-opposite) !important;
+}
+
+.bootstrap-4 .btn-sm.btn-ghost:hover  .text-meta {
+  color: var(--hl-bs--btn-ghost-text-hover) !important;
+}
+
+.bootstrap-4 .card img.file-type-icon {
+  margin: unset;
 }
 
 /****** resources ******/
@@ -2178,32 +2579,32 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 
 .recent-news .HLRecentBlogs ul,
 .featured-resources .HLMyDocuments ul {
-    margin: -15px;
-    display: flex;
+  margin: -15px;
+  display: flex;
 }
 
 body.ribbit .recent-news .HLRecentBlogs ul li,
 body.ribbit .featured-resources .HLMyDocuments ul li {
-    padding: 15px;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: 25%;
-    display: flex;
-    margin: 0;
-    border: none;
-    flex-direction: column;
+  padding: 15px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 25%;
+  display: flex;
+  margin: 0;
+  border: none;
+  flex-direction: column;
 }
 
 .recent-news .HLRecentBlogs ul li .img-container,
 .featured-resources .HLMyDocuments ul li .img-container {
-    height: 170px;
+  height: 170px;
 }
 
 .recent-news .HLRecentBlogs ul li .text-container,
 .featured-resources .HLMyDocuments ul li .text-container {
-    background: #fff;
-    padding: 25px 20px;
-    height: calc(100% - 170px);
+  background: #fff;
+  padding: 25px 20px;
+  height: calc(100% - 170px);
 }
 
 .home .HLRecentBlogs ul li {
@@ -2223,62 +2624,341 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     padding-right: 30px;
 }
 
+
+/************ suggested contacts ************/
+
+
+.people-you-should-know, .MyCommunitiesQuickList h2 {
+  padding: 20px;
+}
+
+.people-you-should-know h2, .MyCommunitiesQuickList h2 {
+  margin-bottom: 15px;
+  font-size: 14px !important;
+  margin-top: 0;
+}
+
+.people-you-should-know .HL-contact-suggestions {
+  margin-bottom: 10px;
+}
+
+.people-you-should-know .HL-contact-suggestions.HLLandingControl .Content ul li {
+  background: transparent;
+  border: none;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li a[title="User Name Image"] {
+  width: 50px;
+  height: 50px;
+}
+
+.people-you-should-know .HL-contact-suggestions .btn {
+  text-transform: none;
+  font-weight: 600;
+  width: 13px;
+  padding: 3px 10px;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .update-friend {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary {
+  margin-top: 0;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+  background: transparent;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary:is(:hover, :focus) {
+  background: transparent;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary::before {
+  font-size: 12px;
+  line-height: 16px;
+  content: '\f058';
+  color: #28a745;
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default {
+  margin-top: 10px;
+}
+
+.memberhome #MPOuterMost .people-you-should-know .HL-contact-suggestions .ignore-contact {
+  background: transparent;
+  border: none;
+  font-size: 0px;
+  line-height: 16px;
+}
+
+.memberhome #MPOuterMost .people-you-should-know .HL-contact-suggestions .ignore-contact::before {
+  color: #D6393F;
+}
+
+.people-you-should-know .HL-contact-suggestions .btn-default:hover,
+.people-you-should-know .HL-contact-suggestions .btn-default:focus {
+  background-color: #D6393F;
+  color: #fff;
+  border: none;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default::before {
+  font-size: 12px;
+  line-height: 16px;
+  content: '\f057';
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 300;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default:is(:hover, :focus)::before, .people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary:is(:hover, :focus)::before  {
+  font-weight:  700;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li .col-md-2 {
+  width: 50px;
+  padding: 0;
+  margin-right: 20px;
+  float: left;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li .col-md-6 {
+  width: calc(100% - 90px);
+  padding-right: 15px;
+  padding-left: 0;
+  float: left;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li .col-md-4 {
+  width: 13px;
+  padding: 0;
+  float: left;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li h3 {
+  margin-bottom: 6px;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li .details {
+  color: #848785;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.people-you-should-know .HL-contact-suggestions ul li .details span:empty+br {
+  display: none;
+}
+
+/****** Events Page ******/
+
+.community-events-list h3 a {
+  font-size: 21px !important;
+}
+
+.community-events-list .calendar-stamp {
+  background-color: var(--hl-bs--primary);
+  color: var(--hl-bs--secondary);
+}
+
+.community-events-list .font-size-xs {
+  font-size: 16px !important;
+}
+
+.ribbit .community-events-list .font-size-xs div {
+  font-size: 16px !important;
+}
+/****** hero ******/
+
+.profile-snippet-card,.profile-snippet.bootstrap-4 .bg-alt-bg5, .profile-snippet div 
+ {
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.ribbit .profile-snippet-card .profile-snippet-bio {
+  flex-direction: row !important;
+  display: block !important;
+  position: relative;
+  padding-bottom: 0 !important;
+}
+
+
+.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(2) {
+  width: calc(100% - 96px);
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+  width: calc(100% - 96px);
+  position: absolute;
+  top: 55%;
+  right: 0;
+}
+
+.profile-snippet-card .profile-snippet-bio .profile-snippet-avatar {
+  flex-shrink: 0;
+}
+
+
+.bootstrap-4 .hl-widget-card > :first-child > :first-child {
+  flex-wrap: wrap;
+}
+
+.ribbit .profile-snippet-card .border-top {
+  border-top: 0 !important;
+}
+
+.ribbit .profile-snippet-card span.font-size-sm {
+  font-weight: 700;
+  color: #fff;
+}
+
+/****** hero slider ******/
+
+.slider {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.slider .slide .HtmlContent {
+  position: relative;
+}
+
+.slider .slide .HtmlContent h6,
+.slider .slide .HtmlContent h2,
+.slider .slide .HtmlContent p {
+width: 50%;
+padding-right: 42px;
+padding-left: 20px;
+}
+
+
+.slider .slide .HtmlContent h6 {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.slider .slide .HtmlContent h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.slider .slide .HtmlContent p {
+  font-size: 12px;
+}
+
+.slider .slide .HtmlContent .img-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 50%;
+  height: 217px;
+}
+
+.slider .slick-dots {
+  text-align: left;
+  padding-left: 15px;
+  bottom: 25px;
+}
+
+.slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+
+.slider .slick-dots li.slick-active {
+  background: white;
+}
+
+.slider .slick-dots li button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.slider .slick-dots button::before {
+  height: 10px;
+  width: 10px;
+}
+
+.slider li.slick-dotsbutton::before,
+.slider li.slick-active button::before {
+  color: transparent !important;
+}
+
+
+.slider  .slick-arrow::before {
+font-family: 'Font Awesome 5 Pro';
+font-size: 37px;
+}
+
+.slider  .slick-prev {
+  left: 15px;
+}
+
+.slider  .slick-next {
+  right: 15px;
+}
+
+.slider  .slick-prev::before {
+  content: '\f053';
+}
+
+.slider  .slick-next::before {
+  content: '\f054';
+}
+
+/****** Interior Header Title *******/
+
+#InteriorPageTitle svg {
+  display: none;
+}
+
+#InteriorPageTitle {
+  background: radial-gradient(21.74% 226.67% at 71.71% 0%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%) , radial-gradient(18.34% 191.25% at 74.21% 173.33%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%) , radial-gradient(70.32% 733.33% at 16.89% 117.92%, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%) , var(--hl-bs--primary);
+}
+
 /****** responsive ******/
 
 @media (max-width: 991px) {
-    .summary-edit .Content {
-        display: block;
-    }
-
-    .summary-edit .text-container,
-    .summary-edit .img-container {
-        width: 100%;
-    }
-
-    .summary-edit .text-container {
-        padding-right: 0;
-        margin-top: 40px;
-    }
-
-    .recent-news .HLRecentBlogs ul,
-    .featured-resources .HLMyDocuments ul {
-        flex-wrap: wrap;
-        margin: -5px;
-    }
-
-    body.ribbit .recent-news .HLRecentBlogs ul li,
-    body.ribbit .featured-resources .HLMyDocuments ul li {
-        flex-basis: 50%;
-        padding: 5px;
-    }
+  .summary-edit .Content {
+    display: block;
+  }
+  .summary-edit .text-container,
+  .summary-edit .img-container {
+    width: 100%;
+  }
+  .summary-edit .text-container {
+    padding-right: 0;
+    margin-top: 40px;
+  }
+  .recent-news .HLRecentBlogs ul,
+  .featured-resources .HLMyDocuments ul {
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  body.ribbit .recent-news .HLRecentBlogs ul li,
+  body.ribbit .featured-resources .HLMyDocuments ul li {
+    flex-basis: 50%;
+    padding: 5px;
+  }
 }
 
 @media (max-width: 425px) {
-
-    body.ribbit .recent-news .HLRecentBlogs ul li,
-    body.ribbit .featured-resources .HLMyDocuments ul li {
-        flex-basis: 100%;
-    }
-}
-
-@media (max-width: 375px) {
-
-    .home .HLRecentBlogs ul li,
-    .home .HLEventList ul li>.row {
-        flex-direction: column;
-    }
-    .home .HLEventList ul li .col-md-2 {
-        width: 100%;
-     }
-    .home .HLRecentBlogs ul li .img-container,
-    .home .HLEventList ul li .date-block {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    .home .HLEventList ul li .col-md-10,
-    .home .HLRecentBlogs ul li .text-container {
-        width: 100%;
-    }
+  body.ribbit .recent-news .HLRecentBlogs ul li,
+  body.ribbit .featured-resources .HLMyDocuments ul li {
+    flex-basis: 100%;
+  }
 }
 
 /************ Timeline Styling ************/
@@ -2294,7 +2974,6 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 .center-content>div:nth-of-type(2)>div {
     align-self: center;
 }
-
 .milestone-slider ul.slick-dots {
     bottom: 0;
     width: 380px;
@@ -2639,7 +3318,7 @@ body.ribbit .side-nav h3 {
         margin-right: auto;
     }
 
-    .footer-social {
-        justify-content: center;
-    }
+  .footer-social {
+    justify-content: center;
+  }
 }

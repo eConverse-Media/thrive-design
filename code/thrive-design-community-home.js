@@ -68,7 +68,7 @@ function handleSidebarResources() {
 }
 
 function handleNewsAndResources() {
-    $('.recent-news .HLRecentBlogs ul li, .featured-resources .HLMyDocuments ul li').each(function () {
+    $('.recent-news .HLRecentBlogs ul li, .ContentUserControl.featured-resources .HLMyDocuments ul li').each(function () {
         var self = $(this);
 
         handleAjaxCall(self);

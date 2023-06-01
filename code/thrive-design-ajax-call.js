@@ -15,6 +15,7 @@ function handleAjaxCall(self, asBackground) {
         error: removeLoading
     });
     
+
     function success(resp) {
         
         var img;
@@ -23,32 +24,34 @@ function handleAjaxCall(self, asBackground) {
             img = !!($(resp).find('.blogs-block .blog-featured-image-row img').attr('src')) ? $(resp).find('.blogs-block .blog-featured-image-row img') : $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type');
         }
 
-        
-   else {
-            img = !!($(resp).find('.Content > .row > .col-md-10 img').attr('src')) ? $(resp).find('.Content > .row > .col-md-10 img') : $(resp).find('div[id*="DetailPanel"] > .row > .col-md-10 > .row img');
-        }
 
-    
 
         var src = $(img).attr('src');
+        console.log('source: ', src);
 
         if (!!src) {
             var url = "url('" + src + "')";
             if (asBackground) {
                 $(self).css('background-image', url);
+                $(self).find('.img-container').removeClass('no-ajax-image');
+                $(self).find('.img-container').removeClass('loading');
             } else {
                 $(self).find('.img-container').css('background-image', url);
+                $(self).find('.img-container').removeClass('no-ajax-image');
+                $(self).find('.img-container').removeClass('loading');
             }
         } else {
             $(self).find('.img-container').addClass('no-ajax-image');
+        $(self).find('.img-container').removeClass('loading');
         }
-        
         removeLoading();
     }
 
     function removeLoading() {
         $(self).find('.img-container').removeClass('loading');
-    }
+
+
+}
 }
 
 function handleLibraryAjax(self, asBackground) {
@@ -73,11 +76,9 @@ function handleLibraryAjax(self, asBackground) {
         var img;
 
         if (!!($(resp).find('div[id*="DetailPanel"]').html())) {
-            console.log('not webinar');
             img = !!($(resp).find('div[id*="DetailPanel"] img').attr('src')) ? $(resp).find('div[id*="DetailPanel"] > .row   .col-md-10 img:first-of-type') : $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type');
         }
         else if (!!($(resp).find('.ELNWebinar').html())) {
-            console.log('webinar');
             img = !!($(resp).find('.ELNWebinar .col-md-10 span[id*="Description"] img').attr('src')) ? $(resp).find('.ELNWebinar .col-md-12 .Content img') : $(resp).find('.ELNWebinar .col-md-12 .Content img:first-of-type');
         }   
 
@@ -87,19 +88,24 @@ function handleLibraryAjax(self, asBackground) {
             var url = "url('" + src + "')";
             if (asBackground) {
                 $(self).css('background-image', url);
+                $(self).find('.img-container').removeClass('no-ajax-image');
+                $(self).find('.img-container').removeClass('loading');
             } else {
                 $(self).find('.img-container').css('background-image', url);
+                $(self).find('.img-container').removeClass('no-ajax-image');
+                $(self).find('.img-container').removeClass('loading');
             }
         } else {
             $(self).find('.img-container').addClass('no-ajax-image');
+        $(self).find('.img-container').removeClass('loading');
         }
-        
-
+    }
         
         removeLoading();
     }
 
     function removeLoading() {
         $(self).find('.img-container').removeClass('loading');
+
+
     }
-}
