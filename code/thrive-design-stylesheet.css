@@ -3373,6 +3373,14 @@ body.ribbit .side-nav h3 {
 
   body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li:last-of-type { margin-right: 15px; 
   }
+
+  .cards.events > .HLEventList ul:not(.dropdown-menu) {
+    flex-direction: column;
+  }
+
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li {
+    margin-bottom: 15px;
+  }
 }
 
 @media (width < 767px) {
