@@ -636,9 +636,29 @@ body.ribbit .narrow-widget.widget-container .widget-content-item {
   padding-right: 0;
 }
 
-body.ribbit .QuickLinksWidget > div {
+body.ribbit .narrow-widget.widget-container .widget-content-item .MyCommunitiesQuickList {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+body.ribbit .QuickLinksWidget > div .quick-links-container {
   padding: 16px;
   }
+
+ .MyCommunitiesQuickList a.link-container.link-container-link {
+  padding-left: 21px;
+  padding-right: 21px;
+  display: block;
+  }
+
+body.ribbit .QuickLinksWidget > div .quick-links-container .justify-content-between {
+  align-items: start !important;
+}
+
+body.ribbit .recently-followed .link-container-content {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
 body.ribbit .QuickLinksWidget .widget-header h2 {
     font-weight: 800;
@@ -864,11 +884,11 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 
 /****** Most Active Members ******/
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
   position: relative;
 }
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement::after {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
   content: 'Connect with members!';
   position: absolute;
   top: 50%;
@@ -878,7 +898,7 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 }
 
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li {
   max-width: unset;
   min-width: unset;
   width: 50px;
@@ -889,16 +909,16 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   margin-left: -10px;
 }
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li img  {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li img  {
   border: 2px solid #fff;
   border-radius: 50%;
 }
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li:first-of-type {
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community  .HLLandingControl.HLEngagement ul:not(.dropdown-menu) > li:first-of-type {
   margin-left: 0;
 }
 
-.HLLandingControl.HLEngagement ul.display-horizontal li a[id*="NameLink"] {
+.explore-community .HLLandingControl.HLEngagement ul.display-horizontal li a[id*="NameLink"] {
 display: none;
 }
 
