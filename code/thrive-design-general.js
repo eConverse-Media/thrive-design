@@ -78,6 +78,15 @@ function handleHero() {
     handleBgImage($('.hero-text'), $('.hero'));
 }
 
+function handlePageTitleBg() {
+    var src = $('.page-title-bg img').attr('src');
+
+    if (!!(src)) {
+        handleBgImage($('.page-title-bg'), $('#InteriorPageTitle'));
+        $('#InteriorPageTitle').addClass('has-bg-img');
+    }
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
@@ -85,5 +94,6 @@ $(function () {
     handleSlider();
     handlePromoTile();
     handleHero();
+    handlePageTitleBg();
     $('.people-you-should-know').append($('.suggested-contacts-btn'));
 });
