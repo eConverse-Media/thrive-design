@@ -281,6 +281,51 @@ body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
     list-style-type: none;
 }
 
+/****** tables ******/
+
+/*** default table style ***/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+}
+table th {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: inherit;
+    border: 0;
+}
+table tr:nth-child(2n) {
+    border-bottom: 2px solid #ededed;
+    background: #FaFaFa;
+}
+table tr td {
+    padding: 15px;
+    vertical-align: middle;
+    border: 0;
+}
+
+/*** plain table style ***/
+.plain-table tr td {
+    padding: 10px 15px;
+    vertical-align: middle;
+    border: solid;
+    border-width: 1px;
+    background-color: #FFF;
+    border-color: #EDEDED;
+}
+.plain-table th {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: inherit;
+    background-color: #FaFaFa;
+    border: 1px solid #f5f5f5;
+}
+.plain-table tr:nth-child(2n) {
+    border-bottom: 1px solid #EDEDED;
+    background: #FFF;
+}
+
 /****** background images ******/
 
 .bg-image,
