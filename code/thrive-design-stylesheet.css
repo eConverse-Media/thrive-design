@@ -1888,7 +1888,8 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li,
 .featured-tile-slider .blogs-block,
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li{
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li,
+.fetch-test ul li {
   width: calc(25% - 30px);
   margin: 0 15px 30px;
   background: #fff;
