@@ -336,6 +336,30 @@ table tr td {
 
 /****** buttons ******/
 
+.make-buttons em {
+    margin: -5px;
+    display: inline-block;
+}
+
+.make-buttons em a {
+    margin: 5px;
+}
+
+.make-buttons em a,
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit .summary-edit em a,
+body.ribbit .featured-card-single .btn,
+body.ribbit .featured-card-multi .btn,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus) {
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
 .make-buttons em a,
 .card.social ul li a,
 .cta-tile a::after,
@@ -473,6 +497,29 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
 }
 
+.hl-primary-row-bkgd .make-buttons em a,
+.hl-primary-row-bkgd.make-buttons em a,
+.hl-primary-row-bkgd .hero.image .make-buttons em+em a {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-100);
+}
+
+.hl-primary-row-bkgd .make-buttons em a:is(:hover, :focus),
+.hl-primary-row-bkgd.make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-300);
+}
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a {
+    color: var(--hl-bs--gray-100);
+    background: var(--hl-bs--secondary);
+}
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-300);
+}
+
 /*** carets ***/
 
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle::after,
@@ -545,56 +592,13 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 /************ reset end ************/
 
-/************ buttons ************/
+/************ Layout Classes ************/
 
-.make-buttons em {
-    margin: -5px;
-    display: inline-block;
+.no-bottom-padding {
+  padding-bottom: 0 !important;
 }
 
-.make-buttons em a {
-    margin: 5px;
-}
-
-.make-buttons em a,
-body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
-body.ribbit .summary-edit em a,
-body.ribbit .featured-card-single .btn,
-body.ribbit .featured-card-multi .btn,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus) {
-    display: inline-block;
-    font-style: normal;
-    text-decoration: none;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-}
-
-.hl-primary-row-bkgd .make-buttons em a,
-.hl-primary-row-bkgd.make-buttons em a,
-.hl-primary-row-bkgd .hero.image .make-buttons em+em a {
-    color: var(--hl-bs--primary);
-    background: var(--hl-bs--gray-100);
-}
-
-.hl-primary-row-bkgd .make-buttons em a:is(:hover, :focus),
-.hl-primary-row-bkgd.make-buttons em a:is(:hover, :focus) {
-    color: var(--hl-bs--primary);
-    background: var(--hl-bs--gray-300);
-}
-
-.hl-primary-row-bkgd .hero.image .make-buttons em a {
-    color: var(--hl-bs--gray-100);
-    background: var(--hl-bs--secondary);
-}
-
-.hl-primary-row-bkgd .hero.image .make-buttons em a:is(:hover, :focus) {
-    color: var(--hl-bs--primary);
-    background: var(--hl-bs--gray-300);
-}
-
-/* Header */
+/************ Header ************/
 
 body.ribbit #NAV>div {
     padding: 0;
@@ -606,7 +610,7 @@ body.ribbit #NAV>div {
     padding-right: 15px;
 }
 
-/* give more space for logo so no squishing */
+/******* logo *******/
 
 #MPOuterHeader #NAV #MPButtonBar .navbar-header {
     min-width: 190px;
@@ -616,41 +620,6 @@ body.ribbit #NAV>div {
 body.ribbit #LogoNavPlaceholder {
   margin: 0;
 }
-
-
-/************ Layout Classes ************/
-
-.no-bottom-padding {
-  padding-bottom: 0 !important;
-}
-
-/************ homepage V1 ************/
-
-.cta-card .featured-card-single.card-layout-split {
-    background: [PrimaryColor] !important;
-    padding: 40px;
-}
-
-.hero.image {
-  display: flex;
-}
-
-.hero.image > div:nth-of-type(1) {
-  display: flex;
-}
-
-.hero.image > div:nth-of-type(1)>div {
-  display: flex;
-}
-
-.hero.image > div:nth-of-type(1)>div>div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-
 
 /************ resetting homepage widget styling ************/
 
@@ -754,7 +723,112 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding: 0 !important;
 }
 
+/****** Activity Feed Styling Reset ******/
+
+.feed-list .hl-profile-avatar.lg img {
+    width: 3.5em;
+    height: 3.5em;
+    margin: unset;
+  }
+  
+  .profile-snippet-bio div.text-center {
+    text-align: left !important;
+    padding-left: 20px;
+  }
+  
+  .feed-list .text-secondary.mt-2.font-size-xs {
+    padding-left: 4.2em;
+  }
+  
+  .FeedWidget .feed-list .p-2,
+  .FeedWidget .feed-list .p-2 {
+    border-top: 0 !important;
+  }
+  
+  .profile-snippet-progress .progress {
+    height: 1em;
+  }
+  
+  .ribbit .profile-snippet-stats > a {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+  
+  .feed-list .feed-item-row.card {
+    box-shadow: none;
+  }
+  
+  .feed-list .feed-title {
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+  
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading {
+    border: 1px solid var(--hl-bs--bg2);
+    border-radius: 8px;
+  }
+  
+  body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading > div {
+    padding: .5em;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
+  }
+  
+  .feed-list .layout-grid-cell-children {
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+    overflow: hidden;
+  }
+  
+  
+  .feed-list .images-preview .img-slot {
+    border-radius: 8px;
+  }
+  .bootstrap-4 .feed-list .btn-sm.btn-ghost {
+    margin-left: 4.2em;
+  }
+  
+  .bootstrap-4 .btn-sm.btn-ghost  .text-meta {
+    color: var(--hl-bs--primary-opposite) !important;
+  }
+  
+  .bootstrap-4 .btn-sm.btn-ghost:hover  .text-meta {
+    color: var(--hl-bs--btn-ghost-text-hover) !important;
+  }
+  
+  .bootstrap-4 .card img.file-type-icon {
+    margin: unset;
+  }
+
+/************ homepage V1 ************/
+
+.cta-card .featured-card-single.card-layout-split {
+    background: [PrimaryColor] !important;
+    padding: 40px;
+}
+
+.hero.image {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1) {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div {
+  display: flex;
+}
+
+.hero.image > div:nth-of-type(1)>div>div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 /************ homepage v3 ************/
+
+/****** hero ******/
 
 .hero.with-bg {
     background-size: cover;
@@ -1863,7 +1937,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     margin-top: 0;
 }
 
-/* Feratured Blogs List */
+/****** Featured Blogs List ******/
 
 .ContentUserControl.featured-blogs ul,
 .ContentUserControl.featured-resource ul,
@@ -2502,85 +2576,6 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   padding-right: 70px;
 }
 
-
-/****** Activity Feed Styling Reset ******/
-
-.feed-list .hl-profile-avatar.lg img {
-  width: 3.5em;
-  height: 3.5em;
-  margin: unset;
-}
-
-.profile-snippet-bio div.text-center {
-  text-align: left !important;
-  padding-left: 20px;
-}
-
-.feed-list .text-secondary.mt-2.font-size-xs {
-  padding-left: 4.2em;
-}
-
-.FeedWidget .feed-list .p-2,
-.FeedWidget .feed-list .p-2 {
-  border-top: 0 !important;
-}
-
-.profile-snippet-progress .progress {
-  height: 1em;
-}
-
-.ribbit .profile-snippet-stats > a {
-  display: flex !important;
-  flex-direction: column-reverse !important;
-}
-
-.feed-list .feed-item-row.card {
-  box-shadow: none;
-}
-
-.feed-list .feed-title {
-  margin-bottom: 1em;
-  padding: 1em;
-}
-
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading {
-  border: 1px solid var(--hl-bs--bg2);
-  border-radius: 8px;
-}
-
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div.FeedWidget .row.heading > div {
-  padding: .5em;
-  border-radius: 8px;
-  box-shadow: 0 0 2px 1px rgba(124,124,124,.25);
-}
-
-.feed-list .layout-grid-cell-children {
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
-  overflow: hidden;
-}
-
-
-.feed-list .images-preview .img-slot {
-  border-radius: 8px;
-}
-.bootstrap-4 .feed-list .btn-sm.btn-ghost {
-  margin-left: 4.2em;
-}
-
-.bootstrap-4 .btn-sm.btn-ghost  .text-meta {
-  color: var(--hl-bs--primary-opposite) !important;
-}
-
-.bootstrap-4 .btn-sm.btn-ghost:hover  .text-meta {
-  color: var(--hl-bs--btn-ghost-text-hover) !important;
-}
-
-.bootstrap-4 .card img.file-type-icon {
-  margin: unset;
-}
-
 /****** resources ******/
 
 body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLMyDocuments ul li {
@@ -2893,7 +2888,40 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
   display: none;
 }
 
-/****** Events Page ******/
+/****** responsive ******/
+
+@media (max-width: 991px) {
+    .summary-edit .Content {
+      display: block;
+    }
+    .summary-edit .text-container,
+    .summary-edit .img-container {
+      width: 100%;
+    }
+    .summary-edit .text-container {
+      padding-right: 0;
+      margin-top: 40px;
+    }
+    .recent-news .HLRecentBlogs ul,
+    .featured-resources .HLMyDocuments ul {
+      flex-wrap: wrap;
+      margin: -5px;
+    }
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+      flex-basis: 50%;
+      padding: 5px;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+      flex-basis: 100%;
+    }
+  }
+
+/************ Events Page ************/
 
 .community-events-list h3 a {
   font-size: 21px !important;
@@ -3086,39 +3114,6 @@ font-size: 37px;
     right: 0;
     bottom: 0;
     content: '';
-}
-
-/****** responsive ******/
-
-@media (max-width: 991px) {
-  .summary-edit .Content {
-    display: block;
-  }
-  .summary-edit .text-container,
-  .summary-edit .img-container {
-    width: 100%;
-  }
-  .summary-edit .text-container {
-    padding-right: 0;
-    margin-top: 40px;
-  }
-  .recent-news .HLRecentBlogs ul,
-  .featured-resources .HLMyDocuments ul {
-    flex-wrap: wrap;
-    margin: -5px;
-  }
-  body.ribbit .recent-news .HLRecentBlogs ul li,
-  body.ribbit .featured-resources .HLMyDocuments ul li {
-    flex-basis: 50%;
-    padding: 5px;
-  }
-}
-
-@media (max-width: 425px) {
-  body.ribbit .recent-news .HLRecentBlogs ul li,
-  body.ribbit .featured-resources .HLMyDocuments ul li {
-    flex-basis: 100%;
-  }
 }
 
 /************ Timeline Styling ************/
