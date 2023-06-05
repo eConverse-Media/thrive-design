@@ -490,6 +490,14 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     transition: 0.3s;
 }
 
+/****** borders ******/
+
+.border-bottom {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--hl-bs--gray-200);
+}
+
 /************ reset end ************/
 
 /************ buttons ************/
@@ -1077,6 +1085,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
   background: #fff;
   box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
+.card.gray-card {
+    box-shadow: none;
+    background: var(--hl-bs--gray-100);
+}
 
 .col-md-3 .card:not(.link-card),
 .col-md-3 .card.link-card a,
@@ -1548,18 +1560,34 @@ body.has-modal.bio-modal-open {
 
 /****** sponsors ******/
 
-#MPOuterMost #MPOuter .sponsors {
+#MPOuterMost #MPOuter .sponsors,
+#MPOuterMost #MPOuter .grid-sponsors {
     margin-top: 32px;
 }
 
-.sponsors>.col-md-12.slick-slider .slick-track {
+.sponsors>.col-md-12.slick-slider .slick-track,
+.grid-sponsors > .col-md-12 {
     display: flex;
 }
+.grid-sponsors > .col-md-12 {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
-.sponsors .slick-slider .sponsor {
+#MainCopy_ContentWrapper .grid-sponsors>div[class*="col-md-"]>.ContentUserControl:not(:first-child), 
+#MainCopy_ContentWrapper .grid-sponsors>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
+    margin-top: 0;
+}
+
+.sponsors .slick-slider .sponsor,
+.grid-sponsors .sponsor {
     padding: 0 8px;
     display: flex;
     height: auto;
+}
+.grid-sponsors .sponsor {
+    padding: 8px;
 }
 
 .sponsor .HtmlContent {
