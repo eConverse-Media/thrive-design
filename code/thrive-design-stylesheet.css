@@ -1628,7 +1628,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .top-blog-slider-wrapper ul li,
 .top-resource-slider li,
-.top-tile-slider ul li {
+.top-tile-slider ul li,
+.fetch-test ul li {
   height: auto;
   background-color: white;
   border: 0;
@@ -1639,20 +1640,23 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .top-blog-slider-wrapper ul li .title-row .col-md-3,
 .top-resource-slider li .title-row .col-md-3,
-.top-tile-slider li .title-row .col-md-3 {
+.top-tile-slider li .title-row .col-md-3,
+.fetch-test li .title-row .col-md-3 {
     display: none;
 }
 
 .top-blog-slider-wrapper ul li .title-row .col-md-9,
 .top-resource-slider li .title-row .col-md-9,
-.top-tile-slider li .title-row .col-md-9 {
+.top-tile-slider li .title-row .col-md-9,
+.fetch-test li .title-row .col-md-9 {
     width: 100%;
 }
 
 .top-blog-slider-wrapper ul li .img-container,
 .top-resource-slider li .img-container,
 .latest-news-list .blogs-block .img-container,
-.featured-tile-slider ul li .img-container {
+.featured-tile-slider ul li .img-container,
+.fetch-test ul li .img-container {
     position: absolute;
     top: 25px;
     left: 30px;
@@ -1756,7 +1760,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .ContentUserControl.featured-blogs ul li .title-row h3,
 .ContentUserControl.featured-resource ul li .title-row h3,
-.ContentUserControl.resources-list ul li .title-row h3 {
+.ContentUserControl.resources-list ul li .title-row h3,
+.ContentUserControl.fetch-test ul li .title-row h3 {
   text-align: center;
 }
 
@@ -1768,11 +1773,15 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .ContentUserControl.resources-list ul li .text-container .row p,
 .ContentUserControl.resources-list ul li .ByLine,
-.ContentUserControl.resources-list ul li {
+.ContentUserControl.resources-list ul li,
+.ContentUserControl.fetch-test ul li .text-container .row p,
+.ContentUserControl.fetch-test ul li .ByLine,
+.ContentUserControl.fetch-test ul li {
   text-align: center;
 }
 
-.ContentUserControl.resources-list ul li {
+.ContentUserControl.resources-list ul li,
+.ContentUserControl.fetch-test ul li {
   display: inline-block;
   float: left;
 }
@@ -1907,7 +1916,8 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li,
 .featured-tile-slider .blogs-block,
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li{
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li,
+.fetch-test ul li {
   width: calc(25% - 30px);
   margin: 0 15px 30px;
   background: #fff;
