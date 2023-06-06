@@ -187,6 +187,10 @@ body.ribbit:not(.interior).bodyBackground {
 
 /* slideout search */
 
+#MPSearchBlock {
+    display: none;
+}
+
 .slideout-search {
     float: right;
     margin-right: 30px;
