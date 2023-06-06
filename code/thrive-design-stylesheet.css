@@ -421,6 +421,10 @@ body.ribbit .btn,
 button:is(:hover, :focus),
 .btn:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
+.btn.btn-info,
+.btn.btn-info:is(:hover, :focus),
+body.ribbit .btn.btn-info,
+body.ribbit .btn.btn-info:is(:hover, :focus),
 .btn.btn-primary,
 .btn.btn-primary:is(:hover, :focus),
 body.ribbit .btn.btn-primary,
@@ -3312,6 +3316,89 @@ body.ribbit .side-nav h3 {
     body.ribbit .side-nav {
         position: relative;
         left: auto;
+    }
+}
+
+/************ ideation page ************/
+
+.ideation-home .ideation-filter .ideation-filter-buttons {
+    width: auto;
+}
+.ideation-card-container .card-content {
+    padding: 0;
+}
+.ideation-home .ideation-status {
+    margin-top: 0;
+}
+.ideation-home .ideation-card-container {
+    margin: 0 -5px -5px -5px;
+}
+.ideation-card-container .card {
+    border: none;
+}
+.ideation-home .ideation-title div {
+    min-height: unset;
+}
+body.ribbit .ideation-home .ideation-vote .btn-secondary {
+    background: transparent;
+    padding: 0;
+}
+.ideation-vote .badge.badge-default {
+    transition: .3s;
+    background-color: var(--hl-bs--gray-200);
+}
+.ideation-home .ideation-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.ideation-home .ideation-footer::before,
+.ideation-home .ideation-footer::after {
+    display: none;
+}
+
+.ideation-home .ideation-footer div.vote-section,
+.ideation-home .ideation-footer div.comment {
+    width: auto;
+    padding: 0;
+}
+
+/****** responsive ******/
+
+@media only screen and (max-width: 1190px) {
+    .ideation-home .ideation-filter .ideation-filter-buttons {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .ideation-home .card-content > .row,
+    .ideation-home > .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .ideation-home .ideation-byline .row .col-md-3 {
+        padding: 0;
+        width: 70px;
+        margin-right: 15px;
+        float: left;
+    }
+    .ideation-home .ideation-byline .row .col-md-9 {
+        padding: 0;
+        width: calc(100% - 85px);
+        float: left;
+    }
+}
+@media (max-width: 768px) {
+    .ideation-home .ideation-footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (max-width: 600px) {
+    .ideation-filter .btn-group {
+        margin-bottom: 5px;
     }
 }
 
