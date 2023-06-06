@@ -29,10 +29,11 @@ function handleAjaxCall(self, asBackground) {
         var src = $(img).attr('src');
         console.log('source: ', src);
 
+
         if (!!src) {
             var url = "url('" + src + "')";
             if (asBackground) {
-                $(self).css('background-image', url);
+                $(self).find('.img-container').css('background-image', url);
                 $(self).find('.img-container').removeClass('no-ajax-image');
                 $(self).find('.img-container').removeClass('loading');
             } else {
@@ -44,10 +45,10 @@ function handleAjaxCall(self, asBackground) {
             $(self).find('.img-container').addClass('no-ajax-image');
         $(self).find('.img-container').removeClass('loading');
         }
-        removeLoading();
     }
 
     function removeLoading() {
+        $(self).find('.img-container').removeClass('no-ajax-image');
         $(self).find('.img-container').removeClass('loading');
 
 
