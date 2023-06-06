@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    let links = document.querySelectorAll('.HLLandingControl ul li a[id*="hypTitle"]');   
+    let links = document.querySelectorAll('.fetch-test .HLLandingControl ul li a[id*="hypTitle"]');   
 
     let linksArr = Array.from(links);
 

@@ -1848,6 +1848,12 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 }
 
+
+
+.img-container.no-ajax-image[background-image]::before {
+    color: transparent;
+}
+
 .thrive-blogs div[id*="FollowIcon"] {
     display: none;
 }
@@ -2082,7 +2088,8 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .resources-list ul li .img-container,
 .latest-news-list.ContentUser-Control .blogs-block .img-container,
 .featured-tile-slider .featured-tile-slider-wrapper li .img-container,
-.featured-cards ul li .img-container {
+.featured-cards ul li .img-container,
+.fetch-test ul li .img-container {
     height: 170px;
     position: absolute;
     top: 0;
