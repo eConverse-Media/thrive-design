@@ -296,7 +296,6 @@ body.ribbit:not(.interior).bodyBackground {
     line-height: 18px;
     height: unset;
     width: 30px;
-    float: right;
 }
 
 .slideout-search-btn.open {
@@ -329,7 +328,7 @@ body.ribbit:not(.interior).bodyBackground {
     cursor: pointer;
     font-size: 15px;
     line-height: 18px;
-    float: left;
+    float: right;
     margin-top: 0;
     color: #1F0737;
     padding: 5px 0;
