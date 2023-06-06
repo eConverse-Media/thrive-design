@@ -207,6 +207,7 @@ body.ribbit:not(.interior).bodyBackground {
     opacity: 0;
     transition: 0.3s;
     transition-delay: 0.3s;
+    right: 0;
 }
 
 .slideout-search-bar.open {
@@ -295,6 +296,7 @@ body.ribbit:not(.interior).bodyBackground {
     line-height: 18px;
     height: unset;
     width: 30px;
+    float: right;
 }
 
 .slideout-search-btn.open {
