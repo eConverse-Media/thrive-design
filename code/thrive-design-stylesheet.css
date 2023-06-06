@@ -193,13 +193,15 @@ body.ribbit:not(.interior).bodyBackground {
 
 .slideout-search {
     float: right;
+    width: 30px;
+    position: relative;
 }
 
 .slideout-search-bar {
-    right: 120px;
-    position: absolute;
+/*     right: 120px;
+ */    position: absolute;
     height: 30px;
-    top: 0px;
+ /*    top: 0px; */
     padding: 0;
     z-index: -1;
     opacity: 0;
@@ -254,7 +256,7 @@ body.ribbit:not(.interior).bodyBackground {
     font-size: 16px;
     line-height: 1;
     font-weight: 300;
-    color: #76BC43;
+    color: var(--hl-bs--primary);
     position: absolute;
     left: 0;
     bottom: 5px;
@@ -292,6 +294,7 @@ body.ribbit:not(.interior).bodyBackground {
     font-size: 15px;
     line-height: 18px;
     height: unset;
+    width: 30px;
 }
 
 .slideout-search-btn.open {
