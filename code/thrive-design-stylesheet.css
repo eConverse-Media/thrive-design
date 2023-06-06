@@ -878,6 +878,221 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     opacity: 1;
 }
 
+/* search column */
+
+#searchColumn {
+    display: none;
+}
+
+
+/* slideout search */
+
+.slideout-search {
+    float: right;
+    margin-right: 30px;
+}
+
+.slideout-search-bar {
+    right: 120px;
+    position: absolute;
+    height: 30px;
+    top: 0px;
+    padding: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.slideout-search-bar.open {
+    opacity: 1;
+    z-index: 60;
+    transition: 0.3s;
+    background-color: white;
+    width: 248px;
+}
+
+.slideout-search-bar input[id$="SearchTerm"] {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    height: 30px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 300;
+    line-height: 18px;
+    width: 0;
+    padding: 0;
+    float: right;
+    transition: 0.3s;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.slideout-search-bar.open .input-group {
+    width: 100%;
+}
+
+.slideout-search-bar.open input[id$="SearchTerm"] {
+    width: 100%;
+    padding: 6px 12px 4px 20px;
+    position: relative;
+    box-shadow: none;
+}
+
+.slideout-search-bar.open input[id$="SearchTerm"]:focus {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+.slideout-search-bar.open .input-group::before {
+    content: '\f002';
+    font-family: 'Font Awesome 5 Pro';
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 300;
+    color: #76BC43;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    z-index: 1;
+}
+
+.slideout-search-bar.open input[id$="SearchTerm"]::placeholder {
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.slideout-search-bar button[id$="SearchButton"],
+.slideout-search-btn {
+    width: 68px;
+    height: 30px;
+    opacity: 0;
+    transition: 0.3s;
+    color: #fff;
+    background-color: #76BC43;
+    line-height: 30px;
+    text-align: center;
+}
+
+.slideout-search-bar button[id$="SearchButton"] {
+    width: 30px;
+    border-radius: 0;
+}
+
+.slideout-search-btn {
+    background-color: transparent;
+    color: #76BC43;
+    font-size: 15px;
+    line-height: 18px;
+    height: unset;
+}
+
+.slideout-search-btn.open {
+    width: 248px;
+}
+
+.slideout-search-btn i {
+    font-weight: 500;
+    font-family: 'Font Awesome 5 Pro';
+    margin-right: 2px;
+    display: inline-block;
+}
+
+.slideout-search-btn i::before {
+    content: '\f002';
+}
+
+.slideout-search-bar button[id$="SearchButton"] {
+    padding-right: 18px;
+    padding-top: 2px;
+}
+
+.slideout-search-bar button[id$="SearchButton"] .glyphicon-search {
+    top: 0;
+    width: 100%;
+}
+
+.slideout-search-btn {
+    opacity: 1;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 18px;
+    float: left;
+    margin-top: 0;
+    color: #1F0737;
+    padding: 5px 0;
+}
+
+.slideout-search-bar.open button[id$="SearchButton"] {
+    opacity: 1;
+    padding: 0;
+}
+
+.slideout-search-bar .btn {
+    border: none;
+}
+
+.slideout-search-bar .glyphicon.glyphicon-search::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: "\f002";
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+.slideout-search-bar .glyphicon.glyphicon-search {
+    vertical-align: baseline !important;
+}
+
+.slideout-search-btn {
+    margin-top: 0px;
+    position: relative;
+    z-index: 50;
+}
+
+.slideout-search-bar .input-group-btn .btn {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.slideout-search-btn:hover,
+.slideout-search-btn:focus {
+    background-color: transparent;
+    color: #0F4B8F;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.slideout-search-btn:hover i,
+.slideout-search-btn:focus i {
+    color: #0F4B8F;
+}
+
+.slideout-search-bar button[id$="SearchButton"]:hover,
+.slideout-search-bar button[id$="SearchButton"]:focus {
+    background-color: #76BC43;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.slideout-search-btn i {
+    font-size: 16px;
+    line-height: 18px;
+    color: #76BC43;
+}
+
+.slideout-search-bar.open .SearchInputs .input-group-btn {
+    display: none;
+}
+
+
 /****** engagement leaderboard ******/
 
 /*** tabs ***/
@@ -1848,9 +2063,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 }
 
-
-
-.img-container.no-ajax-image[background-image]::before {
+.img-container.no-ajax-image[style*="background-image:"]::before {
     color: transparent;
 }
 
@@ -1984,13 +2197,15 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 .ContentUserControl.featured-blogs ul li .title-row .col-md-3,
 .ContentUserControl.featured-resource ul li .title-row .col-md-3,
-.featured-tile-slider-wrapper li .col-md-3 {
+.featured-tile-slider-wrapper li .col-md-3,
+.resources-list li .col-md-3 {
     display: none;
 }
 
 .ContentUserControl.featured-blogs ul li .title-rwo .col-md-9,
 .ContentUserControl.featured-resource ul li .title-rwo .col-md-9,
-.featured-tile-slider-wrapper li .col-md-9 {
+.featured-tile-slider-wrapper li .col-md-9,
+.resources-list li .col-md-3  {
     width: 100%;
 }
 
