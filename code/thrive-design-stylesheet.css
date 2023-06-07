@@ -1024,7 +1024,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 /************ homepage V1 ************/
 
 .cta-card .featured-card-single.card-layout-split {
-    background: [PrimaryColor] !important;
+    background: var(--hl-bs--primary) !important;
     padding: 40px;
 }
 
@@ -2234,8 +2234,8 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 .pagination>.active>span:hover,
 .pagination li.active>a,
 .pagination li.active>a:hover {
-    background-color: [PrimaryColor];
-    border-color: [PrimaryColor];
+    background-color: var(--hl-bs--primary);
+    
 }
 
 body.ribbit.interior.resource-list #MainCopy_ContentWrapper .resources-list div[id*="ContentPanel"] {
@@ -2353,8 +2353,7 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .featured-tile-slider-wrapper .ContentUserControl .blogs-block .slick-arrow::before,
 .featured-tile-slider.ContentUserControl .slick-arrow::before {
     content: "\f054";
-    color: [PrimaryColor];
-    color: [SecondaryColor];
+    color: var(--hl-bs--secondary);
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .slick-prev::before,
@@ -2362,8 +2361,7 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .latest-news-list.ContentUserControl .blogs-block .slick-prev::before,
 .featured-tile-slider.ContentUserControl .slick-prev::before {
     content: "\f053";
-    color: [PrimaryColor];
-    color: [SecondaryColor];
+    color: var(--hl-bs--secondary);
 }
 
 .resource-list .library-filterRow,
@@ -3448,7 +3446,7 @@ font-size: 37px;
 .milestone h2::before {
     width: 25px;
     height: 25px;
-    background: [PrimaryColor];
+    background: var(--hl-bs--primary);
 }
 
 .milestone h2::after {
@@ -3513,7 +3511,7 @@ font-size: 37px;
 }
 
 .milestone:not(.slick-current) h2 {
-    color: [PrimaryColor];
+    color: var(--hl-bs--primary);
     font-size: 28px;
 }
 
