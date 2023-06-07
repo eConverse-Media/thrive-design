@@ -241,7 +241,7 @@ body.ribbit:not(.interior).bodyBackground {
 
 .slideout-search-bar.open input[id$="SearchTerm"] {
     width: 100%;
-    padding: 6px 12px 4px 20px;
+    padding: 6px 12px 4px 30px;
     position: relative;
     box-shadow: none;
 }
@@ -259,8 +259,8 @@ body.ribbit:not(.interior).bodyBackground {
     font-weight: 300;
     color: var(--hl-bs--primary);
     position: absolute;
-    left: 0;
-    bottom: 5px;
+    left: 5px;
+    bottom: 8px;
     z-index: 1;
 }
 
@@ -1965,7 +1965,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
     display: flex;
 }
 
-.top-blog-slider-wrapper ul li,
+.top-blog-slider-wrapper ul:not(.slick-dots) > li,
 .top-resource-slider li,
 .top-tile-slider ul li,
 .fetch-test ul li {
@@ -2052,7 +2052,6 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 
 .img-container.no-ajax-image {
-  background-image: url();
   background-color: #d9d9da;
   position: relative;  
   display: flex;
@@ -2070,7 +2069,7 @@ body.ribbit.blogs #MainCopy_ContentWrapper {
 
 
 
-.img-container.no-ajax-image[background-image]::before {
+.img-container.no-ajax-image[style*="background-image"]::before {
     color: transparent;
 }
 
@@ -2259,7 +2258,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
 .ContentUserControl.featured-blogs .top-blogs-slider ul li,
 .ContentUserControl.resources-list ul li,
 .latest-news-list.ContentUserControl .blogs-block,
-.featured-tile-slider li,
+.featured-tile-slider li:not([id*="slick-slide"]),
 .featured-tile-slider .blogs-block,
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li,
 .fetch-test ul li {
@@ -2272,6 +2271,8 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
   border-radius: 8px;
   box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
+
+
 
 
 body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu) > li:first-of-type {
@@ -2292,6 +2293,10 @@ body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:
 .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content > ul li:not(.slick-slide) .img-container {
     width: 100%;
     height: 110px;
+}
+
+.slick-dots .img-container {
+    display: none;
 }
 
 .ContentUserControl.featured-blogs.tile .top-blogs-slider ul li {
@@ -3832,6 +3837,33 @@ body.ribbit.memberhome #MPOuterFooter {
   body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu) > li {
     margin-bottom: 15px;
   }
+
+   .ribbit .featured-tile-slider-wrapper .slick-dots li {
+    border-bottom: none;
+  }
+
+  .thrive-blogs .blogs-block {
+    padding-top: 170px;
+    position: relative;
+    padding-bottom: 25px;
+    padding-left: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.thrive-blogs .blogs-block .img-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 170px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+}
 }
 
 @media (width < 767px) {
@@ -3855,5 +3887,8 @@ body.ribbit.memberhome #MPOuterFooter {
     padding-top: 0;
   }
 
+  .ContentUserControl.featured-blogs ul, .ContentUserControl.featured-resource ul, .featured-tile-slider-wrapper .slick-list .slick-track {
+    flex-direction: columns;
+  }
 
 }

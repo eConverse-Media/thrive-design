@@ -9,14 +9,28 @@ $(function () {
         fade: false,
         // autoplay: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true
+                }
+            }
+        ]
     });
 
-    $('.featured-tile-slider ul li').each(function () {
-        handleLibraryAjax(this);
-    });
 
-    $('.featured-tile-slider ul li').each(function () {
+    $('.featured-tile-slider ul:not(.slick-dots) > li').each(function () {
         handleLibraryAjax(this);
     });
 
