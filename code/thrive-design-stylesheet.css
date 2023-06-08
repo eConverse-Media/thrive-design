@@ -392,7 +392,7 @@ body.ribbit:not(.interior).bodyBackground {
 .slideout-search-btn i {
     font-size: 16px;
     line-height: 18px;
-    color: #76BC43;
+    color: var(--hl-bs--secondary);
 }
 
 .slideout-search-bar.open .SearchInputs .input-group-btn {
