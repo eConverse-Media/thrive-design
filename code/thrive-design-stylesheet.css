@@ -3928,6 +3928,14 @@ body.ribbit.memberhome #MPOuterFooter {
     width: 100%;
 }
 
+#slideout-search {
+    display: none;
+}
+
+#MPSearchBlock {
+    display: block;
+}
+
 }
 
 
