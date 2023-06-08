@@ -3862,6 +3862,22 @@ body.ribbit.memberhome #MPOuterFooter {
     border-top-right-radius: 8px;
     border-bottom-left-radius: 0px;
 }
+
+.ContentUserControl.featured-blogs ul {
+    flex-direction: column
+}
+
+.ContentUserControl.featured-blogs ul li {
+    width: 100%;
+}
+
+.ContentUserControl.featured-blogs ul li:first-of-type {
+    margin-left: 15px;
+}
+
+.ContentUserControl.featured-blogs ul li:last-of-type {
+    margin-right: 15px;
+}
 }
 
 @media (width < 767px) {
