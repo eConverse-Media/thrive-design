@@ -1,4 +1,5 @@
 /************ theme basics ************/
+
 .ribbit h2.card-title {
     font-weight: 800;
 }
@@ -311,6 +312,7 @@ body.ribbit:not(.interior).bodyBackground {
 
 .slideout-search-btn i::before {
     content: '\f002';
+    color: #272727;
 }
 
 .slideout-search-bar button[id$="SearchButton"] {
@@ -754,6 +756,10 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /*** carets ***/
 
+body.ribbit .navbar-default.navbar-nav > .dropdown > a.caret::before, body.ribbit .nav-tabs > li > a.caret::before, body.ribbit .caret::before {
+    color: #ccc;
+}
+
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle::after,
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle:is(:hover, :focus)::after {
     border-top-color: var(--hl-bs--btn-secondary-text);
@@ -832,14 +838,98 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 /************ Header ************/
 
+body.ribbit #NAV {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+}
+
 body.ribbit #NAV>div {
-    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #MPOuterHeader #NAV #MPButtonBar {
-    max-width: unset;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.ribbit .navbar, body.ribbit .navbar-default .navbar-nav > li > a {
+    font-weight: 600;
+}
+
+/* Nav Bar */
+
+body.ribbit .navbar, body.ribbit .navbar-default .navbar-nav, 
+body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default {
+    padding: 0;
+}
+
+body.ribbit #NAV * {
+    line-height: 1;
+}
+
+/* Nav Items */
+
+body.ribbit #NAV .navbar-nav > li {
+    line-height: 1;
+}
+
+body.ribbit #NAV .navbar-nav > li > a {
+    line-height: 16.94px;
+    font-size: 14px;
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
+}
+
+/* Nav Active Hover */
+body.ribbit :not(.no-theme) .navbar .navbar-nav > .active > a, body.ribbit :not(.no-theme) .navbar .navbar-nav > .active > a:hover, body.ribbit :not(.no-theme) .navbar .navbar-nav > .active > a:focus, body.ribbit :not(.no-theme) .navbar .navbar-nav > li > a:hover, body.ribbit :not(.no-theme) .navbar-default .navbar-nav > .open > a, body.ribbit :not(.no-theme) .navbar-default .navbar-nav > .open > a:hover, body.ribbit :not(.no-theme) .navbar-default .navbar-nav > .open > a:focus {
+    color: var(--hl-bs--primary);
+}
+
+/* Nav Dropdown */
+
+.navbar-nav > li > .dropdown-menu {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+    min-width: 221px;
+    border-radius: 8px;
+}
+
+
+body.ribbit #MPButtonBar .dropdown-menu li a {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: inline-block;
+}
+
+.nav.navbar-nav .dropdown-submenu > ul.dropdown-submenu {
+    padding: 0;
+    margin: 0;
+}
+
+/* Dropdown avtive/hover state */
+
+body.ribbit #MPButtonBar .dropdown-menu > li > a:hover, body.ribbit #MPButtonBar .dropdown-menu > li > a:focus, body.ribbit #MPButtonBar .dropdown-menu li a:hover, body.ribbit #MPButtonBar .dropdown-menu li a:focus, body.ribbit #MPButtonBar .dropdown-menu .active > li > a:hover, body.ribbit #MPButtonBar .dropdown-menu > li > a:focus {
+    background: #f7f6f6;
+    border-radius: 4px;
+}
+
+body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu > ul.dropdown-submenu li a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    display: inline-block;
+}
+
+
+body.ribbit #MPButtonBar .dropdown-menu li {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+body.ribbit #MPButtonBar .dropdown-menu .active > a {
+    display: inline-block;
+    background: #F7F6F6;
+    border-radius: 4px;
 }
 
 /******* logo *******/
@@ -1369,6 +1459,15 @@ display: none;
 
 .FeaturedCardGrid.circle-icon .icon-container>div {
     border-radius: 50% !important;
+}
+
+/* Nav width for under 1600px screens */
+
+@media (width < 1600px) {
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 50px;
+        margin-right: 50px
+    }
 }
 
 @media (max-width: 991px) {
