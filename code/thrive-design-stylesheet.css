@@ -606,6 +606,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card
 button:is(:hover, :focus),
 .btn:is(:hover, :focus),
 body.ribbit .btn:is(:hover, :focus),
+body.ribbit .btn:is(:hover, :focus),
 .btn.btn-primary:is(:hover, :focus),
 body.ribbit .btn.btn-primary:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
@@ -632,6 +633,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card
 button,
 .btn,
 body.ribbit .btn,
+body.ribbit .btn:is(:hover, :focus),
+body.ribbit .btn:is(:hover, :focus):not(.disabled),
 .cta-tile a::after,
 .make-buttons em a:is(:hover, :focus),
 button:is(:hover, :focus),
@@ -661,7 +664,16 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card
     color: var(--hl-bs--primary-opposite);
     border: none;
 }
-
+body.ribbit .btn-ghost {
+    color: var(--hl-bs--default-text);
+    background-color: var(--hl-bs--gray-100);
+    border: none;
+}
+body.ribbit .btn-ghost:is(:hover, :focus),
+body.ribbit .btn-ghost:is(:hover, :focus):not(.disabled) {
+    color: var(--hl-bs--default-text);
+    background: var(--hl-bs--gray-300);
+}
 
 .ribbit .narrow-widget a.link-standalone {
   color: #fff;
