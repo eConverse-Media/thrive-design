@@ -60,7 +60,7 @@ h3.content-card-title.font-size-md {
     line-height: 130%;
     font-weight: 700;
     color: #272727;
-    margin-bottom: 8px;
+    margin-bottom: 8px !important;
 }
 
 h3 {
