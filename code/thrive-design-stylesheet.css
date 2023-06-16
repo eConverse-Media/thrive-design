@@ -105,7 +105,7 @@ body.ribbit.home .ContentMainHeader {
 /* Paragprah on multi Card */
 .ribbit .featured-card-multi p.card-description {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 140%;
 }
 
