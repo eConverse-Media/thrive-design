@@ -60,6 +60,7 @@ h3.content-card-title.font-size-md {
     line-height: 130%;
     font-weight: 700;
     color: #272727;
+    margin-bottom: 8px;
 }
 
 h3 {
@@ -99,6 +100,13 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact.card .row.heading h2,
 body.ribbit.home .ContentMainHeader {
     font-size: 16px;
+}
+
+/* Paragprah on multi Card */
+.ribbit .featured-card-multi p.card-description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
 }
 
 .widget-header .font-size-sm {
@@ -155,6 +163,23 @@ body.ribbit .overline p:first-of-type>strong {
 
 body.ribbit:not(.interior).bodyBackground {
     background: transparent;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.25);
+  
 }
 
 /*** removing HTML Footer ***/
