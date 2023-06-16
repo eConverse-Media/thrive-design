@@ -487,6 +487,10 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
     margin-right: -8px;
 }
 
+.featured-card-multi .bootstrap-4 .p-2 {
+    padding: 24px !important;
+}
+
 body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
     width: calc(100% + 24px) !important;
 }
