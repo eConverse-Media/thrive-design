@@ -1,11 +1,24 @@
 /************ theme basics ************/
 
 .ribbit h2.card-title {
-    font-weight: 800;
+    font-weight: 700;
+    font-size: 42px !important;
+    line-height: 46.2px ;
+    margin-bottom: 10px;
 }
 
 .ribbit .col-md-4 h2.card-title {
   font-size: 21px !important;
+}
+
+.ribbit p.card-description {
+    font-weight: 400;
+    font-size: 18px !important;
+    line-height: 25.2px ;
+}
+
+.ribbit .text-truncate {
+    font-weight: 600;
 }
 
 .bootstrap-4 .font-size-md,
@@ -43,9 +56,9 @@ body.ribbit h3 {
 }
 
 h3.content-card-title.font-size-md {
-    font-size: 21px !important;
-    line-height: 140%;
-    font-weight: 800;
+    font-size: 18px !important;
+    line-height: 130%;
+    font-weight: 700;
     color: #272727;
 }
 
@@ -451,6 +464,12 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 
 body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
     width: calc(100% + 16px) !important;
+}
+
+/* Featured cards Multi Images */
+
+.featured-card-multi .multi-featured-card.featured-card .featured-card-image {
+    height: 140px;
 }
 
 /*** mobile padding ***/
