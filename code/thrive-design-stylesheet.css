@@ -488,7 +488,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 }
 
  .bootstrap-4 .featured-card-multi .p-2 {
-    padding: 12px !important;
+    padding: 0 12px !important;
 }
 
 body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
@@ -883,6 +883,10 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 .no-bottom-padding {
   padding-bottom: 0 !important;
 }
+
+.no-top-padding {
+    padding-top: 0 !important;
+  }
 
 /************ Header ************/
 
