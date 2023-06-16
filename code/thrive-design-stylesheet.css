@@ -488,7 +488,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 }
 
 body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
-    width: calc(100% + 16px) !important;
+    width: calc(100% + 24px) !important;
 }
 
 /* Featured cards Multi Images */
