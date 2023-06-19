@@ -1648,6 +1648,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
 
+#MPOuterMost .ContentItemHtml.card {
+    padding: 16px;
+}
+
 .card.gray-card {
     box-shadow: none;
     background: var(--hl-bs--gray-100);
