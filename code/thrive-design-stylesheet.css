@@ -1661,13 +1661,21 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
-#MPOuterMost .ContentItemHtml.card {
+#MPOuterMost .ContentItemHtml.card.img {
+    padding: 0px;
+}
+
+#MPOuterMost .ContentItemHtml.card.img .text-container {
     padding: 16px;
 }
 
 .card.gray-card {
     box-shadow: none;
     background: var(--hl-bs--gray-100);
+}
+
+.ContentItemHtml.card.img .text-container img {
+    display: none;
 }
 
 .col-md-3 .card:not(.link-card),
