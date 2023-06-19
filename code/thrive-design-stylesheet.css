@@ -42,6 +42,13 @@ body.ribbit.home .ContentMainHeader {
     line-height: 120%;
 }
 
+body.ribbit #MPOuterMost #MPOuter .overlay h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
 h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact .row.heading h2,
@@ -189,6 +196,9 @@ body.ribbit:not(.interior).bodyBackground {
 .hl-primary-row-bkgd.overlay h6,
 .hl-primary-row-bkgd.overlay p {
     color: #000;
+}
+.hl-primary-row-bkgd.overlay p {
+    margin-bottom: 24px;
 }
 
 /*** removing HTML Footer ***/
@@ -1081,14 +1091,18 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.card.ContentItemReact 
 body.ribbit.home .ContentMainHeader,
 body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2 {
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: 500;
+    font-size: 12px !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    flex-basis: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #666;
 }
 
 body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2 {
-    width: calc(100% - 30px);
-    margin-left: 16px;
-    margin-right: 16px;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
@@ -1133,14 +1147,6 @@ body.ribbit .QuickLinksWidget>div .quick-links-container .justify-content-betwee
 body.ribbit .recently-followed .link-container-content {
     padding-left: 16px;
     padding-right: 16px;
-}
-
-body.ribbit .QuickLinksWidget .widget-header h2 {
-    font-weight: 800;
-    font-size: 16px !important;
-    margin-top: 0 !important;
-    margin-bottom: 20px !important;
-    flex-basis: 100%;
 }
 
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li,
@@ -1430,6 +1436,11 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 
 /****** promo tile ******/
 
+.promo-tile {
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+}
 .promo-tile a {
     text-decoration: none;
 }
@@ -1449,14 +1460,7 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--hl-bs--primary);
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-.promo-tile a:is(:hover, :focus) .HtmlContent::before {
-    opacity: 0.8;
-    transition: 0.3s;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -8.53%, rgba(0, 0, 0, 0.6) 69.56%);
 }
 
 .promo-tile .HtmlContent>* {
@@ -1466,6 +1470,9 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 .promo-tile .HtmlContent p {
     color: #fff;
 }
+.promo-tile .HtmlContent p:last-child {
+    border-bottom: 0;
+}
 
 .promo-tile .HtmlContent>h2:nth-child(2),
 .promo-tile.overline .HtmlContent>p:nth-child(2) {
@@ -1474,15 +1481,21 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 
 .promo-tile.overline .HtmlContent>p:first-of-type>strong {
     color: var(--hl-bs--btn-secondary-text);
-    font-size: 1rem;
-    padding: 0.3rem 0.6rem;
+    font-size: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 4px;
     background: var(--hl-bs--secondary);
     border-radius: 4px;
+    margin-bottom: 0;
 }
 
 .promo-tile h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .promo-tile h2 {
@@ -1650,7 +1663,6 @@ body.ribbit.home #MainCopy_ContentWrapper .cards .card {
     line-height: 1.2;
     text-transform: capitalize;
 }
-
 .card:not(.link-card),
 .card.link-card a,
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
@@ -1661,7 +1673,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
-#MPOuterMost .ContentItemHtml.card {
+#MPOuterMost .ContentItemHtml.card:not(.link-card) {
     padding: 16px;
 }
 
@@ -1689,8 +1701,7 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
 
 .card.link-card a:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
-    box-shadow: 0 0 4px 2px rgba(124, 124, 124, 0.25);
-    transform: translateY(-5px);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
 .card.link-card {
