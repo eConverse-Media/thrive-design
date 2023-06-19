@@ -899,6 +899,10 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     padding-top: 0 !important;
 }
 
+.border-radius-8 {
+    border-radius: 8px !important;
+}
+
 /************ Header ************/
 
 body.ribbit #NAV {
