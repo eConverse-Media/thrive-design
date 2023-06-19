@@ -20,17 +20,8 @@ function handleLinkCards() {
             onclick = $(link).attr('onclick');
             
         $(self).find('i').prependTo($(self));
-
-        if (!!onclick) {
-            $(self).wrapInner('<a onclick="' + onclick + '" />');
-        } else {
-            var href = $(link).attr('href'),
-                target = $(link).attr('target'),
-                rel = $(link).attr('rel');
-
-            $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
-        }
         
+        $(self).wrapInner('<a onclick="' + onclick + '" />');
 
         $(link).unwrap();
         $(link).contents().unwrap();
@@ -96,6 +87,17 @@ function handlePageTitleBg() {
     }
 }
 
+function handleImageCards() {
+
+
+    $('.ContentItemHtml.card.img').each(function() {
+        $(this).wrapInner('<div class="text-container"></div>');
+        let Img = $(this).find('img');
+        let ImgSrc = $(Img).attr('src');
+        $(this).prepend('<div class="img-container"><img src="' + ImgSrc + '"></div> ');
+    });
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
@@ -105,4 +107,5 @@ $(function () {
     handleHero();
     handlePageTitleBg();
     $('.people-you-should-know').append($('.suggested-contacts-btn'));
+    handleImageCards();
 });

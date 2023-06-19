@@ -2,13 +2,13 @@
 
 .ribbit h2.card-title {
     font-weight: 700;
-    font-size: 42px !important;
+    font-size: 42px;
     line-height: 46.2px;
     margin-bottom: 10px;
 }
 
 .ribbit .col-md-4 h2.card-title {
-    font-size: 21px !important;
+    font-size: 21px;
 }
 
 .ribbit p.card-description {
@@ -1673,14 +1673,63 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
-#MPOuterMost .ContentItemHtml.card:not(.link-card) {
+#MPOuterMost .ContentItemHtml.card.img {
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+#MPOuterMost .ContentItemHtml.card.img i:not(.fa-pen) {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: var(--hl-bs--secondary);
+    font-size: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -76px;
+    margin-left: 8px;
+}
+
+#MPOuterMost .ContentItemHtml.card.img .text-container {
     padding: 16px;
+}
+
+.card:not(.link-card) {
+    padding: 16px;
+    position: relative;
 }
 
 .card.gray-card {
     box-shadow: none;
     background: var(--hl-bs--gray-100);
 }
+
+.ContentItemHtml.card.img .text-container img {
+    display: none;
+}
+
+
+.ContentItemHtml.card.img .img-container {
+    position: relative;
+    height: 205.717px;
+    aspect-ratio: 2.81;
+} 
+
+
+.ContentItemHtml.card.img .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
 
 .col-md-3 .card:not(.link-card),
 .col-md-3 .card.link-card a,
