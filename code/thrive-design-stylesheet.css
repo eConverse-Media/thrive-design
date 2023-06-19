@@ -908,6 +908,38 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     padding-top: 0 !important;
 }
 
+.border-radius-8 {
+    border-radius: 8px !important;
+    padding: 0 !important;
+}
+
+.padding-32, .padding div {
+    padding: 0px !important;
+}
+
+
+.padding-32 .featured-card-single {
+    padding: 32px !important;
+}
+
+.border-radius-8 .featured-card-image {
+    border-radius: 8px !important;
+    padding: 0 !important;
+}
+
+
+
+.padding-32 .featured-card-single {
+    padding:  32px 24px !important;
+}
+
+.padding-32 .featured-card-single .single-card-info {
+    padding: 0 !important;
+}
+.padding-32 {
+    padding: 32px;
+}
+
 /************ Header ************/
 
 body.ribbit #NAV {
@@ -1629,6 +1661,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
+#MPOuterMost .ContentItemHtml.card {
+    padding: 16px;
+}
+
 .card.gray-card {
     box-shadow: none;
     background: var(--hl-bs--gray-100);
@@ -1700,10 +1736,10 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
 }
 
 .ContentItemHtml.card img {
-    margin: -30px -30px 30px -30px;
+    margin: -16px -16px 16px -16px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    max-width: calc(100% + 60px);
+    max-width: calc(100% + 32px);
 }
 
 .card.member-card .HtmlContent>p:first-child>strong {
