@@ -178,8 +178,17 @@ body.ribbit:not(.interior).bodyBackground {
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(200, 200, 200, 0.25);
-
+    background-color: rgba(244, 244, 244, 0.85);
+}
+.hl-primary-row-bkgd.overlay, 
+.hl-primary-row-bkgd.overlay h1,
+.hl-primary-row-bkgd.overlay h2,
+.hl-primary-row-bkgd.overlay h3,
+.hl-primary-row-bkgd.overlay h4,
+.hl-primary-row-bkgd.overlay h5,
+.hl-primary-row-bkgd.overlay h6,
+.hl-primary-row-bkgd.overlay p {
+    color: #000;
 }
 
 /*** removing HTML Footer ***/
@@ -787,15 +796,15 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
 }
 
-.hl-primary-row-bkgd .make-buttons em a,
-.hl-primary-row-bkgd.make-buttons em a,
-.hl-primary-row-bkgd .hero.image .make-buttons em+em a {
+.hl-primary-row-bkgd:not(.overlay) .make-buttons em a,
+.hl-primary-row-bkgd:not(.overlay).make-buttons em a,
+.hl-primary-row-bkgd:not(.overlay) .hero.image .make-buttons em+em a {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-100);
 }
 
-.hl-primary-row-bkgd .make-buttons em a:is(:hover, :focus),
-.hl-primary-row-bkgd.make-buttons em a:is(:hover, :focus) {
+.hl-primary-row-bkgd:not(.overlay) .make-buttons em a:is(:hover, :focus),
+.hl-primary-row-bkgd:not(.overlay).make-buttons em a:is(:hover, :focus) {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-300);
 }
@@ -1604,16 +1613,20 @@ body.ribbit.home #MainCopy_ContentWrapper .cards .card {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    text-transform: capitalize;
 }
 
 .card:not(.link-card),
 .card.link-card a,
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.card {
-    padding: 30px;
+    padding: 16px;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
 .card.gray-card {
@@ -1652,7 +1665,12 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
 .card.link-card a i {
     color: var(--hl-bs--primary);
     font-size: 32px;
-    line-height: 1.2;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--hl-bs--secondary);
     margin-bottom: 10px;
 }
 

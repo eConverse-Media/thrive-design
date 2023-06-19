@@ -20,8 +20,17 @@ function handleLinkCards() {
             onclick = $(link).attr('onclick');
             
         $(self).find('i').prependTo($(self));
+
+        if (!!onclick) {
+            $(self).wrapInner('<a onclick="' + onclick + '" />');
+        } else {
+            var href = $(link).attr('href'),
+                target = $(link).attr('target'),
+                rel = $(link).attr('rel');
+
+            $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
+        }
         
-        $(self).wrapInner('<a onclick="' + onclick + '" />');
 
         $(link).unwrap();
         $(link).contents().unwrap();
