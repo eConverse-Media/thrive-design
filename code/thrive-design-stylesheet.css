@@ -904,7 +904,9 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     padding: 0 !important;
 }
 
-
+.padding-32, .padding div {
+    padding: 0px !important;
+}
 
 
 .padding-32 .featured-card-single {
