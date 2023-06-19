@@ -913,6 +913,14 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     padding: 32px !important;
 }
 
+
+.padding-32 .featured-card-single {
+    padding: 32px !important;
+}
+
+.padding-32 .featured-card-single .single-card-info {
+    padding: 0 !important;
+}
 .padding-32 {
     padding: 32px;
 }
