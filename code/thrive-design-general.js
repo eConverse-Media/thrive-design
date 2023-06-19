@@ -96,6 +96,15 @@ function handlePageTitleBg() {
     }
 }
 
+function handleImageCards() {
+     $('.ContentItemHtml.card.img').each(() => {
+        $(this).wrapInner('<div class="text-content"></div>');
+        let Img = $(this).find('img');
+        let ImgSrc = $(Img).attr('src');
+        $(this).prepend('<div class="img-container"><img src="' + imgSrc + '"></div> ');
+    });
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
@@ -105,4 +114,5 @@ $(function () {
     handleHero();
     handlePageTitleBg();
     $('.people-you-should-know').append($('.suggested-contacts-btn'));
+    handleImageCards();
 });
