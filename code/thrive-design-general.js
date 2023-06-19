@@ -91,7 +91,7 @@ function handleImageCards() {
 
 
     $('.ContentItemHtml.card.img').each(function() {
-        $(this).wrapInner('<div class="text-content"></div>');
+        $(this).wrapInner('<div class="text-container"></div>');
         let Img = $(this).find('img');
         let ImgSrc = $(Img).attr('src');
         $(this).prepend('<div class="img-container"><img src="' + ImgSrc + '"></div> ');

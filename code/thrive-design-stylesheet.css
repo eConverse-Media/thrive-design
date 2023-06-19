@@ -1663,6 +1663,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 
 #MPOuterMost .ContentItemHtml.card.img {
     padding: 0px;
+    overflow: hidden;
 }
 
 #MPOuterMost .ContentItemHtml.card.img .text-container {
@@ -1677,6 +1678,23 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 .ContentItemHtml.card.img .text-container img {
     display: none;
 }
+
+
+.ContentItemHtml.card.img .img-container {
+    position: relative;
+} 
+
+
+.ContentItemHtml.card.img .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    width: 100%;
+}
+
+
 
 .col-md-3 .card:not(.link-card),
 .col-md-3 .card.link-card a,
