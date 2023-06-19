@@ -913,9 +913,15 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     padding: 32px !important;
 }
 
+.border-radius-8 .featured-card-image {
+    border-radius: 8px !important;
+    padding: 0 !important;
+}
+
+
 
 .padding-32 .featured-card-single {
-    padding: 32px !important;
+    padding:  32px 24px !important;
 }
 
 .padding-32 .featured-card-single .single-card-info {
@@ -1708,10 +1714,10 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
 }
 
 .ContentItemHtml.card img {
-    margin: -30px -30px 30px -30px;
+    margin: -16px -16px 16px -16px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    max-width: calc(100% + 60px);
+    max-width: calc(100% + 32px);
 }
 
 .card.member-card .HtmlContent>p:first-child>strong {
