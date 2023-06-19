@@ -1682,6 +1682,15 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 
 #MPOuterMost .ContentItemHtml.card.img .text-container {
     padding: 16px;
+    position: relative;
+}
+
+
+#MPOuterMost .ContentItemHtml.card.img .text-container h3 {
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 8px;
 }
 
 .card.gray-card {
