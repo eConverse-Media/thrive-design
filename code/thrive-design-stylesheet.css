@@ -1691,11 +1691,11 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     justify-content: center;
     align-items: center;
     margin-top: -76px;
-    margin-left: 8px;
 }
 
 #MPOuterMost .ContentItemHtml.card.img .text-container {
-    padding: 16px;
+    padding: 24px;
+    position: relative;
 }
 
 .card:not(.link-card) {
