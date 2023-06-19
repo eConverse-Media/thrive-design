@@ -1668,7 +1668,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 }
 
 
-#MPOuterMost .ContentItemHtml.card.img i {
+#MPOuterMost .ContentItemHtml.card.img i:not(.fa-pen) {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -1678,6 +1678,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -76px;
+    margin-left: 8px;
 }
 
 #MPOuterMost .ContentItemHtml.card.img .text-container {
@@ -1691,6 +1693,19 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     font-size: 18px;
     line-height: 130%;
     margin-bottom: 8px;
+}
+
+
+#MPOuterMost .ContentItemHtml.card.img .text-container p {
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 140%;
+    color: #595959;
+}
+
+
+#MPOuterMost .ContentItemHtml.card.img .text-container p em a {
+    margin-top: 32px;
 }
 
 .card.gray-card {
