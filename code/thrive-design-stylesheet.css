@@ -2090,6 +2090,7 @@ body.has-modal.bio-modal-open {
     margin-bottom: 24px;
     overflow: hidden;
     border-radius: 50%;
+    width: 100%;
 }
 
 .team p a,
