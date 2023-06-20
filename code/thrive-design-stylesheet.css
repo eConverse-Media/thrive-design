@@ -1734,9 +1734,19 @@ body.ribbit .two-html-cards {
     padding-right: 0;
 }
 
+body.ribbit .two-html-cards .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
 
-body.ribbit .two-html-cards > div {
+
+body.ribbit .two-html-cards .row >:nth-of-type(1) {
     padding-left: 0px;
+    padding-right: 24px;
+}
+
+body.ribbit .two-html-cards .row >:nth-of-type(2) {
+    padding-left: 24px;
     padding-right: 0px;
 }
 
