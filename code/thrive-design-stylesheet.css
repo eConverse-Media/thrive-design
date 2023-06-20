@@ -1730,10 +1730,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     width: 100%;
 }
 
-body.ribbit .two-html-cards {
-    padding-left: 0;
-    padding-right: 0;
-}
 
 body.ribbit .two-html-cards .col-md-12 {
     padding-left: 0;
