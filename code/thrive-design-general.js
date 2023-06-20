@@ -99,7 +99,7 @@ function handleImageCards() {
 }
 
 function handleDiscussionByLine() {
-    $('.HLDiscussions ul li').each(function () {
+    $('.HLLandingControl ul li').each(function () {
         var self = $(this),
             byline = $(self).find('.ByLine'),
             bylineLink = $(byline).find('a'),
@@ -113,9 +113,21 @@ function handleDiscussionByLine() {
         $(bylineLink).prependTo(byline);
 
         // handle community
-        $(postedIn).find('a').insertAfter($(bylineLink));
+        $(postedIn).find('a:not([id*="ContainerLink"])').insertAfter($(bylineLink));
         $(bylineLink).after(' in ');
         $(postedIn).hide();
+    });
+}
+
+function handleFeaturedMember() {
+    $('.member-card').each(function () {
+        var self = $(this),
+            img = $(self).find('img').closest('strong'),
+            name = $(self).find('h3');
+
+        $(img).wrap('<div class="user-details" />');
+        $(name).appendTo('.user-details');
+        $('p .user-details').unwrap();
     });
 }
 
@@ -130,4 +142,5 @@ $(function () {
     $('.people-you-should-know').append($('.suggested-contacts-btn'));
     handleImageCards();
     handleDiscussionByLine();
+    handleFeaturedMember();
 });

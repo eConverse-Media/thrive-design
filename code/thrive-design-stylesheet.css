@@ -898,6 +898,24 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     transition: 0.3s;
 }
 
+.make-link em a {
+    font-style: normal;
+    color: var(--hl-bs--primary);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+}
+.make-link em a:is(:hover, :focus) {
+    text-decoration: underline;
+}
+.make-link em a::after {
+    font-family: 'Font Awesome 6 Pro';
+    margin-left: 8px;
+    content: '\f061';
+    font-weight: 900;
+}
+
 /****** borders ******/
 
 .border-bottom {
@@ -1089,7 +1107,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact .row.
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.card[class*="Content"] .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.card.ContentItemReact .row.heading h2,
 body.ribbit.home .ContentMainHeader,
-body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2 {
+body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2,
+body.ribbit .card h2 {
     padding-bottom: 10px;
     border-bottom: 1px solid #e9e9e9;
     font-weight: 500;
@@ -1147,6 +1166,31 @@ body.ribbit .QuickLinksWidget>div .quick-links-container .justify-content-betwee
 body.ribbit .recently-followed .link-container-content {
     padding-left: 16px;
     padding-right: 16px;
+}
+body.ribbit a.link-container.link-container-link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: #272727;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+}
+body.ribbit a.link-container.link-container-link:is(:hover, :focus) {
+    text-decoration: none;
+    background-color: #F7F6F6;
+}
+body.ribbit a.link-container.link-container-link .widget-content-item {
+    padding: 0 !important;
+}
+body.ribbit .QuickLinksWidget .spaced-row.spaced-row-1 {
+    margin: 0;
+}
+body.ribbit .QuickLinksWidget .spaced-row.spaced-row-1>* {
+    margin: 0;
+}
+body.ribbit .QuickLinksWidget .spaced-row.spaced-row-1>* .rounded {
+    margin-right: 8px;
 }
 
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li,
@@ -1348,21 +1392,23 @@ body.ribbit .leaderboard .nav-tabs>li {
 body.ribbit .leaderboard .nav-tabs>li>a {
     padding: 0;
     border: none;
+    border-bottom: 1px solid transparent;
     transform: none;
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 0;
     font-size: 12px;
     line-height: 15px;
-    opacity: 0.5;
     background: transparent;
-    color: var(--hl-bs--default-text);
+    color: #666666;
     margin: 0;
 }
 
 body.ribbit .leaderboard .nav-tabs>li>a:is(:hover, :focus),
 body.ribbit .leaderboard .nav-tabs>li.active>a,
 body.ribbit .leaderboard .nav-tabs>li.active>a:is(:hover, :focus) {
-    opacity: 1;
+    color: #000000;
+    font-weight: 700;
+    border-bottom-color: #272727;
 }
 
 /*** removing clearfix to allow nav tabs to have space-between justification ***/
@@ -1421,17 +1467,17 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
-    color: var(--hl-bs--default-text);
+    line-height: 1.2;
+    color: #272727;
 }
 
 .leaderboard .Content ul li .content-row .points-label {
     background: transparent;
     padding: 0;
-    color: var(--hl-bs--default-text);
+    color: #9A9A9A;
+    font-weight: 300;
     font-size: 12px;
     line-height: 15px;
-    font-weight: 400;
 }
 
 /****** promo tile ******/
@@ -1757,6 +1803,9 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
     padding-left: 0;
     padding-right: 0;
 }
+body.ribbit .bootstrap-4 .mb-4.quick-links-container {
+    margin-bottom: 0 !important;
+}
 
 .card.link-card a {
     display: block;
@@ -1817,8 +1866,12 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
     border-top-right-radius: 8px;
     max-width: calc(100% + 32px);
 }
-
-.card.member-card .HtmlContent>p:first-child>strong {
+.card.member-card .user-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.card.member-card .user-details>strong {
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1828,10 +1881,22 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
     height: 50px;
 }
 
-.card.member-card .HtmlContent>p:first-child>strong img {
+.card.member-card .user-details>strong img {
     margin: 0;
     max-width: 100%;
     border-radius: 0;
+}
+.card.member-card .user-details h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 16px;
+}
+.card.member-card p:not(:last-child) {
+    margin-bottom: 8px;
+}
+.card.member-card p:last-child {
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card .HtmlContent>p i,
@@ -2803,19 +2868,25 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     float: left;
 }
 
-.HLLandingControl .title-row .col-md-10.col-sm-10 {
+.HLLandingControl .title-row .col-md-10.col-sm-10,
+.HLLandingControl ul li .title-row .col-md-7.col-sm-7 {
     width: calc(100% - 64px);
     padding: 0;
     float: left;
 }
-
-/****** discussions ******/
-
-.HLLandingControl.HLDiscussions .title-row img {
+.HLLandingControl .title-row img {
     width: 48px;
     height: 48px;
 }
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLDiscussions p,
+.HLLandingControl.SearchResults ul li .row.title-row .col-sm-3.col-md-3.pull-right {
+    display: none;
+}
+.HLLandingControl.SearchResults ul li .row.title-row .col-md-9 {
+    width: 100%;
+}
+
+
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl p,
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .title-row .ByLine {
     font-weight: 300;
     font-size: 16px;
@@ -2826,12 +2897,31 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandi
     font-size: 13px;
 }
 
-body.ribbit .HLLandingControl.HLDiscussions .title-row .ByLine a {
+body.ribbit #MPOuterMost .HLLandingControl .title-row .ByLine a {
     font-weight: 600;
     font-size: 13px;
     line-height: 1.4;
     color: #272727;
     text-decoration: none;
+}
+body.ribbit #MPOuterMost .HLLandingControl .title-row .ByLine a:is(:hover, :focus) {
+    text-decoration: underline; 
+    color: var(--hl-bs--primary);
+}
+
+/****** tags ******/
+
+body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag {
+    color: #595959;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    background: #F7F9FA;
+    border-radius: 4px;
+    border: none;
 }
 
 /****** announcements ******/
