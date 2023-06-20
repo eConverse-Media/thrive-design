@@ -1729,13 +1729,13 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     width: 100%;
 }
 
-.two-html-cards {
+body.ribbit .two-html-cards {
     padding-left: 0;
     padding-right: 0;
 }
 
 
-.two-html-cards > div {
+body.ribbit .two-html-cards > div {
     padding-left: 0px;
     padding-right: 0px;
 }
