@@ -1717,6 +1717,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     position: relative;
     height: 205.717px;
     aspect-ratio: 2.81;
+    width: 100%;
 } 
 
 
@@ -2090,7 +2091,6 @@ body.has-modal.bio-modal-open {
     margin-bottom: 24px;
     overflow: hidden;
     border-radius: 50%;
-    width: 100%;
 }
 
 .team p a,
