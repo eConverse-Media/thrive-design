@@ -485,7 +485,7 @@ body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding {
 
 #MainCopy_ContentWrapper .row>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
 #MainCopy_ContentWrapper .row>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
-    margin-top: 24px;
+    margin-top: 16px;
 }
 
 body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:first-child {
@@ -1291,8 +1291,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--hl-bs--primary);
-    opacity: 0.5;
+    background: linear-gradient(to right, var(--hl-bs--primary), transparent);
+    opacity: 0.8;
 }
 
 .hero.with-bg .hero-text h1,
@@ -2782,51 +2782,40 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 }
 
 .HLLandingControl .title-row div.col-sm-2.col-md-2 {
-    width: 50px;
-    margin-right: 15px;
+    width: 48px;
+    margin-right: 16px;
     float: left;
 }
 
 .HLLandingControl .title-row .col-md-10.col-sm-10 {
-    width: calc(100% - 65px);
+    width: calc(100% - 64px);
     padding: 0;
     float: left;
 }
 
 /****** discussions ******/
 
-@media (min-width: 426px) {
+.HLLandingControl.HLDiscussions .title-row img {
+    width: 48px;
+    height: 48px;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLDiscussions p,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .title-row .ByLine {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #595959;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .title-row .ByLine {
+    font-size: 13px;
+}
 
-    body.ribbit #MPOuterMost .community-home .row-wide>div.col-md-8 .HLLandingControl ul li,
-    body.ribbit #MPOuterMost .community-home .row-wide>div.col-md-9 .HLLandingControl ul li,
-    body.ribbit:not(.interior) .row>div.col-md-8>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li,
-    body.ribbit:not(.interior) .row>div.col-md-8>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol,
-    body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li,
-    body.ribbit:not(.interior) .row>div.col-md-8>div.ContentItemReact ul:not(.dropdown-menu)>ol,
-    body.ribbit:not(.interior) .row>div.col-md-9>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li,
-    body.ribbit:not(.interior) .row>div.col-md-9>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol,
-    body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li,
-    body.ribbit:not(.interior) .row>div.col-md-9>div.ContentItemReact ul:not(.dropdown-menu)>ol {
-        padding-left: 70px;
-        position: relative;
-    }
-
-    #MPOuterMost .community-home .row-wide>.col-md-8 .HLLandingControl ul li .col-md-10,
-    #MPOuterMost .community-home .row-wide>.col-md-9 .HLLandingControl ul li .col-md-10,
-    .home .row-wide>.col-md-8 .HLLandingControl ul li .col-md-10,
-    .home .row-wide>.col-md-9 .HLLandingControl ul li .col-md-10 {
-        padding: 0;
-        width: 100%;
-    }
-
-    #MPOuterMost .community-home .row-wide>.col-md-8 .HLLandingControl ul li .col-md-2,
-    #MPOuterMost .community-home .row-wide>.col-md-9 .HLLandingControl ul li .col-md-2,
-    .home .row-wide>.col-md-8 .HLLandingControl ul li .col-md-2,
-    .home .row-wide>.col-md-9 .HLLandingControl ul li .col-md-2 {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+body.ribbit .HLLandingControl.HLDiscussions .title-row .ByLine a {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #272727;
+    text-decoration: none;
 }
 
 /****** announcements ******/

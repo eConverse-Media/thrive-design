@@ -98,6 +98,27 @@ function handleImageCards() {
     });
 }
 
+function handleDiscussionByLine() {
+    $('.HLDiscussions ul li').each(function () {
+        var self = $(this),
+            byline = $(self).find('.ByLine'),
+            bylineLink = $(byline).find('a'),
+            postedIn = $(self).find('h5');
+
+        // handle errant comma
+
+        $(bylineLink).insertBefore(byline);
+        var trimmedByline = $(byline).text().trim().slice(1, $(byline).text().trim().length);
+        $(byline).text(trimmedByline);
+        $(bylineLink).prependTo(byline);
+
+        // handle community
+        $(postedIn).find('a').insertAfter($(bylineLink));
+        $(bylineLink).after(' in ');
+        $(postedIn).hide();
+    });
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
@@ -108,4 +129,5 @@ $(function () {
     handlePageTitleBg();
     $('.people-you-should-know').append($('.suggested-contacts-btn'));
     handleImageCards();
+    handleDiscussionByLine();
 });
