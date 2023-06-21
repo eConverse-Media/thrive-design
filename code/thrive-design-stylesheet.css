@@ -11,10 +11,26 @@
     font-size: 21px;
 }
 
+.ribbit .col-md-3 h2.card-title {
+    font-size: 18px !important;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
 .ribbit p.card-description {
     font-weight: 400;
     font-size: 18px !important;
     line-height: 25.2px;
+}
+
+.ribbit .col-md-3 p.card-description {
+    font-weight: 300;
+    font-size: 14px !important;
+    line-height: 1.4;
+}
+
+.ribbit .col-md-3 .bootstrap-4 .featured-card .py-5 {
+    padding: 16px !important;
 }
 
 .ribbit .text-truncate {
@@ -166,10 +182,13 @@ body.ribbit .overline p:first-of-type>strong {
     color: var(--hl-bs--btn-secondary-text);
 }
 
-/*** getting rid of grey background on homepage ***/
+/*** homepage backgrounds ***/
 
 body.ribbit:not(.interior).bodyBackground {
-    background: transparent;
+    background-color: rgba(245, 245, 245, 0.97);
+}
+.row-full.bg-white {
+    background-color: #fff;
 }
 
 .overlay {
@@ -642,7 +661,9 @@ body.ribbit .summary-edit em a,
 body.ribbit .featured-card-single .btn,
 body.ribbit .featured-card-multi .btn,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus) {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
     display: inline-block;
     font-style: normal;
     text-decoration: none;
@@ -660,7 +681,8 @@ body.ribbit .btn,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus) {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 
@@ -699,7 +721,8 @@ body.ribbit :not(.no-theme) .btn-default:focus,
 body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a:is(:hover, :focus),
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus) {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
@@ -734,7 +757,9 @@ body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLink
 body.ribbit .summary-edit em a,
 body.ribbit .summary-edit em a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus) {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
@@ -1076,6 +1101,15 @@ body.ribbit #MPButtonBar .dropdown-menu .active>a {
     display: inline-block;
     background: #F7F6F6;
     border-radius: 4px;
+}
+
+/* Nav width for under 1600px screens */
+
+@media (width < 1600px) {
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 50px;
+        margin-right: 50px
+    }
 }
 
 /******* logo *******/
@@ -1602,7 +1636,11 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 .col-md-4 .featured-card-single.card-layout-split .featured-card-image,
 .col-md-3 .featured-card-single.card-layout-split .featured-card-image {
-    min-height: 200px;
+    min-height: 150px;
+}
+#MPOuterMost #MPOuter #MainCopy_ContentWrapper .featured-card-single {
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
 /*** multiple instances of a featured card in a row ***/
@@ -1641,19 +1679,44 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     border-radius: 50% !important;
 }
 
-/* Nav width for under 1600px screens */
-
-@media (width < 1600px) {
-    #MPOuterHeader #NAV #MPButtonBar {
-        margin-left: 50px;
-        margin-right: 50px
-    }
-}
 
 @media (max-width: 991px) {
     .flex-cards {
         display: block;
     }
+}
+
+/*** narrow column featured cards ***/
+
+#MPOuterMost .col-md-3 .featured-card-single .btn {
+    font-style: normal;
+    color: var(--hl-bs--primary) !important;
+    border: none !important;
+    background: transparent !important;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.col-md-3 .featured-card-single .btn:active {
+    box-shadow: none;
+}
+.col-md-3 .featured-card-single .btn div {
+    display: inline;
+}
+#MPOuterMost .col-md-3 .featured-card-single .btn:is(:hover, :focus) {
+    text-decoration: underline;
+}
+.col-md-3 .featured-card-single .btn::after {
+    font-family: 'Font Awesome 6 Pro';
+    margin-left: 8px;
+    content: '\f061';
+    font-weight: 900;
+}
+.col-md-3 .featured-card-single .spaced-row.spaced-row-2 {
+    margin: 0;
 }
 
 /****** quick links cards ******/
@@ -1796,7 +1859,7 @@ body.ribbit .two-html-cards .row >:nth-of-type(2) {
 .col-md-3 .card:not(.link-card),
 .col-md-3 .card.link-card a,
 body.ribbit .col-md-3 .QuickLinksWidget .bootstrap-4 .quick-links {
-    padding: 20px;
+    padding: 16px;
 }
 
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
@@ -1805,6 +1868,16 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
 }
 body.ribbit .bootstrap-4 .mb-4.quick-links-container {
     margin-bottom: 0 !important;
+}
+.col-md-3 .card h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+.col-md-3 .card p {
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 .card.link-card a {
@@ -2909,6 +2982,10 @@ body.ribbit #MPOuterMost .HLLandingControl .title-row .ByLine a:is(:hover, :focu
     color: var(--hl-bs--primary);
 }
 
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] {
+    padding: 0;
+}
+
 /****** tags ******/
 
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag {
@@ -2922,6 +2999,10 @@ body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag {
     background: #F7F9FA;
     border-radius: 4px;
     border: none;
+}
+body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag:is(:hover, :focus) {
+    background-color: #D9D9D9;
+    text-decoration: none;
 }
 
 /****** announcements ******/
