@@ -99,7 +99,7 @@ function handleImageCards() {
 }
 
 function handleDiscussionByLine() {
-    $('.HLLandingControl ul li').each(function () {
+    $('.discussions .HLLandingControl ul li').each(function () {
         var self = $(this),
             byline = $(self).find('.ByLine'),
             bylineLink = $(byline).find('a'),
@@ -131,6 +131,36 @@ function handleFeaturedMember() {
     });
 }
 
+function handleBlogs() {
+    $('.home .col-md-6 .HLRecentBlogs ul li').each(function () {
+        var self = $(this);
+            img = $(self).find('a[id*="lnkDisplay"]'),
+            byline = $(self).find('.ByLine'),
+            bylineLink = $(byline).find('a');
+
+        // handle image
+        handleAjaxCall(self);
+
+        // handle byline and image
+        if (!!$(bylineLink).html()) {
+            $(bylineLink).insertBefore(byline);
+            
+            var text = $(byline).text();
+            text = $.trim(text);
+            text = text.substring(4, text.length);
+            text = $.trim(text);
+
+            $(byline).text(text);
+            $(byline).prepend(bylineLink);
+
+        }
+
+        if (!!($(img).find('img').attr('src'))) {
+            $(img).prependTo(byline);
+        }
+    });
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
@@ -143,4 +173,5 @@ $(function () {
     handleImageCards();
     handleDiscussionByLine();
     handleFeaturedMember();
+    handleBlogs();
 });
