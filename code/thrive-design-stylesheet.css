@@ -52,7 +52,7 @@ body.ribbit h1 {
 body.ribbit h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact .row.heading h2,
-body.ribbit.home .ContentMainHeader {
+body.ribbit .card .ContentMainHeader {
     font-size: 32px;
     font-weight: 800;
     line-height: 120%;
@@ -68,7 +68,7 @@ body.ribbit #MPOuterMost #MPOuter .overlay h2 {
 h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact .row.heading h2,
-body.ribbit.home .ContentMainHeader {
+body.ribbit .card .ContentMainHeader {
     color: #272727;
 }
 
@@ -121,7 +121,7 @@ body.ribbit .col-md-4 .ContentItemHtml>h2,
 body.ribbit .col-md-6 .ContentItemHtml>h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact.card .row.heading h2,
-body.ribbit.home .ContentMainHeader {
+body.ribbit .card .ContentMainHeader {
     font-size: 16px;
 }
 
@@ -180,6 +180,13 @@ body.ribbit .overline p:first-of-type>strong {
 .hl-secondary-row-bkgd h6,
 .hl-secondary-row-bkgd p {
     color: var(--hl-bs--btn-secondary-text);
+}
+
+body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+    margin-top: 0;
+}
+body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+    margin-bottom: 16px;
 }
 
 /*** homepage backgrounds ***/
@@ -1146,7 +1153,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact .row.
 
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.card[class*="Content"] .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.card.ContentItemReact .row.heading h2,
-body.ribbit.home .ContentMainHeader,
+body.ribbit .card .ContentMainHeader,
 body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2,
 body.ribbit .card h2 {
     padding-bottom: 10px;
@@ -1233,8 +1240,8 @@ body.ribbit .QuickLinksWidget .spaced-row.spaced-row-1>* .rounded {
     margin-right: 8px;
 }
 
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentUserControl:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>li,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentUserControl:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact ul:not(.dropdown-menu)>ol {
     padding: 0 0 20px 0;
@@ -3178,7 +3185,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(244, 244, 244, 0.85);
+    background: rgba(251, 251, 251, .98);
 }
 #MPOuterMost #MPOuter .col-md-6 .HLEventList ul li *,
 #MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li * {
@@ -4277,6 +4284,111 @@ body.ribbit .ideation-home .ideation-vote .btn-secondary {
     .ideation-filter .btn-group {
         margin-bottom: 5px;
     }
+}
+
+/************ profile card ************/
+
+.profile-snippet-card.hl-widget-card.bg-alt-bg5 {
+    background-color: var(--hl-bs--primary) !important;
+}
+body.ribbit .profile-snippet-card .profile-snippet-bio {
+    flex-direction: column !important;
+    display: flex !important;
+    padding-bottom: 16px !important;
+}
+body.ribbit .profile-snippet-bio .profile-snippet-avatar {
+    width: 102px;
+    height: 102px;
+    border: 3px solid #fff;
+    margin-bottom: 8px;
+}
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(2) {
+    margin-top: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.3;
+    font-weight: 700;
+}
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+    font-size: 14px !important;
+    font-weight: 300;
+    line-height: 1.4;
+}
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(2),
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+    position: relative;
+    width: 100%;
+    top: auto;
+    text-align: center !important;
+    padding-left: 0;
+}
+body.ribbit .profile-snippet-card .profile-snippet-bio,
+body.ribbit .profile-snippet-progress,
+body.ribbit .hl-widget-card .profile-badge-container {
+    border-bottom: 1px solid rgba(242, 242, 242, 0.20);
+}
+body.ribbit .profile-snippet-progress > .d-flex > span:first-child {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+body.ribbit .profile-snippet-progress > .d-flex > span:last-child {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+body.ribbit .profile-snippet-progress > .my-2 {
+    margin-bottom: 0 !important;
+}
+body.ribbit .profile-snippet-progress > .my-2 .progress {
+    border-radius: 20px;
+    background: #f7f7f7 !important;
+    padding: 2px;
+    height: 14px;
+}
+body.ribbit .profile-snippet-progress > .my-2 .progress-bar {
+    background: linear-gradient(90deg, #48A9C5 0%, #70D9F8 100%);
+    border-radius: 20px;
+}
+body.ribbit .hl-widget-card .profile-badge-container {
+    padding: 16px;
+}
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row {
+    padding: 0;
+    margin-right: 16px;
+    justify-content: flex-start;
+    align-items: center;
+}
+body.ribbit .badge-container.stacked.stacked {
+    height: auto;
+}
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row + a {
+    align-items: flex-end !important;
+    text-align: right !important;
+    font-size: 14px !important;
+    line-height: 1.2;
+}
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row + a strong {
+    font-weight: 600;
+}
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row + a span {
+    font-weight: 300;
+}
+body.ribbit .profile-snippet-stats .btn-alt-ghost {
+    flex-direction: column !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+body.ribbit .profile-snippet-stats .btn-alt-ghost div:first-child {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+}
+body.ribbit .profile-snippet-stats .btn-alt-ghost div:last-child {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 /************ footer ************/
