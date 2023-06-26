@@ -1259,6 +1259,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.card) .HLLandingControl div[id$="_BottomLink"]>a {
     padding: 0 !important;
 }
+body.ribbit #MPOuter #MainCopy_ContentWrapper>.row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLEngagement {
+    border-top: none;
+}
 
 /****** Activity Feed Styling Reset ******/
 
@@ -1422,7 +1425,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 /*** tabs ***/
 
-body.ribbit .leaderboard .nav-tabs {
+body.ribbit #MPOuterMost #MPOuter .leaderboard .nav-tabs {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1430,13 +1433,16 @@ body.ribbit .leaderboard .nav-tabs {
     padding-bottom: 10px;
 }
 
-body.ribbit .leaderboard .nav-tabs>li {
+body.ribbit #MPOuterMost #MPOuter .leaderboard .nav-tabs>li {
     display: block;
     margin-bottom: 0;
     border: none;
+    flex-grow: unset;
+    flex-shrink: unset;
+    flex-basis: unset;
 }
 
-body.ribbit .leaderboard .nav-tabs>li>a {
+body.ribbit #MPOuterMost #MPOuter .leaderboard .nav-tabs>li>a {
     padding: 0;
     border: none;
     border-bottom: 1px solid transparent;
@@ -1450,8 +1456,8 @@ body.ribbit .leaderboard .nav-tabs>li>a {
     margin: 0;
 }
 
-body.ribbit .leaderboard .nav-tabs>li>a:is(:hover, :focus),
-body.ribbit .leaderboard .nav-tabs>li.active>a,
+body.ribbit #MPOuterMost #MPOuter .leaderboard .nav-tabs>li>a:is(:hover, :focus),
+body.ribbit #MPOuterMost #MPOuter .leaderboard .nav-tabs>li.active>a,
 body.ribbit .leaderboard .nav-tabs>li.active>a:is(:hover, :focus) {
     color: #000000;
     font-weight: 700;
@@ -1460,8 +1466,8 @@ body.ribbit .leaderboard .nav-tabs>li.active>a:is(:hover, :focus) {
 
 /*** removing clearfix to allow nav tabs to have space-between justification ***/
 
-.leaderboard .nav-tabs::before,
-.leaderboard .nav-tabs::after {
+#MPOuterMost #MPOuter .leaderboard .nav-tabs::before,
+#MPOuterMost #MPOuter .leaderboard .nav-tabs::after {
     display: none;
 }
 
@@ -4346,7 +4352,6 @@ body.ribbit .profile-snippet-progress > .my-2 .progress {
     height: 14px;
 }
 body.ribbit .profile-snippet-progress > .my-2 .progress-bar {
-    background: linear-gradient(90deg, #48A9C5 0%, #70D9F8 100%);
     border-radius: 20px;
 }
 body.ribbit .hl-widget-card .profile-badge-container {
