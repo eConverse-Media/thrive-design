@@ -131,33 +131,71 @@ function handleFeaturedMember() {
     });
 }
 
-function handleBlogs() {
-    $('.home .col-md-6 .HLRecentBlogs ul li').each(function () {
+function handleByLineAndLink(self) {
+    var img = $(self).find('a[id*="lnkDisplay"]'),
+        byline = $(self).find('.ByLine'),
+        bylineLink = $(byline).find('a');
+
+    if (!!$(bylineLink).html()) {
+        $(bylineLink).insertBefore(byline);
+        
+        var text = $(byline).text();
+        text = $.trim(text);
+        text = text.substring(4, text.length);
+        text = $.trim(text);
+
+        $(byline).text(text);
+        $(byline).prepend(bylineLink);
+
+    }
+
+    if (!!($(img).find('img').attr('src'))) {
+        $(img).prependTo(byline);
+    }
+}
+
+function handleResources() {
+    $('.col-md-6 .HLMyDocuments ul li').each(function() {
         var self = $(this);
-            img = $(self).find('a[id*="lnkDisplay"]'),
-            byline = $(self).find('.ByLine'),
-            bylineLink = $(byline).find('a');
+
+        handleAjaxCall(self);
+        handleByLineAndLink(self);
+    });
+
+    $('.HLMyDocuments .Content ul li').each(function () {
+        var self = $(this);
+
+        // handle icons
+        var iconContainer = $(self).find('.libListReptEntAttchLble').parent();
+
+        $(iconContainer).prependTo(self);
+
+        $(self).find('.listIconContainer a').contents().unwrap();
+        $(self).find('.listIconContainer img').parent().addClass('has-image');
+
+        $(self).find('.listIconContainer').each(function () {
+            var container = $(this);
+
+            if (!($(container).find('> *').html())) {
+                var text = $(container).text();
+
+                text = $.trim(text);
+                $(container).text(text);
+            }
+        });
+    });
+}
+
+function handleBlogs() {
+    $('.col-md-6 .HLRecentBlogs ul li').each(function () {
+        var self = $(this);
 
         // handle image
+
         handleAjaxCall(self);
 
-        // handle byline and image
-        if (!!$(bylineLink).html()) {
-            $(bylineLink).insertBefore(byline);
-            
-            var text = $(byline).text();
-            text = $.trim(text);
-            text = text.substring(4, text.length);
-            text = $.trim(text);
-
-            $(byline).text(text);
-            $(byline).prepend(bylineLink);
-
-        }
-
-        if (!!($(img).find('img').attr('src'))) {
-            $(img).prependTo(byline);
-        }
+        // handle byline and user image
+        handleByLineAndLink(self);
     });
 }
 
@@ -174,4 +212,5 @@ $(function () {
     handleDiscussionByLine();
     handleFeaturedMember();
     handleBlogs();
+    handleResources();
 });
