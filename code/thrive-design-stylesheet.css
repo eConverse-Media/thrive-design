@@ -229,9 +229,6 @@ body.ribbit:not(.interior).bodyBackground {
 .hl-primary-row-bkgd.overlay p {
     color: #000;
 }
-.hl-primary-row-bkgd.overlay p {
-    margin-bottom: 24px;
-}
 
 /*** removing HTML Footer ***/
 
@@ -542,7 +539,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 #PageTitleH1 {
     padding: 20px 16px;
 }
-body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]):last-child {
     margin-bottom: 0;
 }
 
@@ -694,8 +691,8 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     display: inline-block;
     font-style: normal;
     text-decoration: none;
-    padding: 8px 18px;
-    border: 2px solid transparent;
+    padding: 10px 20px;
+    border: none;
     border-radius: 4px;
     font-weight: 600;
 }
@@ -790,26 +787,27 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
-    border: 2px solid transparent;
+    border: none;
 }
 
 .make-buttons.outline em a,
 .make-buttons.outline-first em:first-child a:first-child {
     background: transparent;
     color: #fff;
-    border-color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 18px;
 }
 .make-buttons.outline em a:is(:hover, :focus),
 .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
     color: var(--hl-bs--primary);
     background-color: #fff;
-    border-color: #fff;
+    border: 2px solid #fff;
 }
 
 body.ribbit .btn-ghost {
     color: var(--hl-bs--default-text);
     background: var(--hl-bs--gray-100);
-    border: 2px solid transparent;
+    border: none;
 }
 
 body.ribbit .btn-ghost:is(:hover, :focus),
@@ -835,7 +833,7 @@ body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-pr
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus) {
     background-color: var(--hl-bs--secondary);
     color: var(--hl-bs--btn-secondary-text);
-    border: 2px solid transparent;
+    border: none;
 }
 
 .narrow-widget a.link-standalone i {
@@ -850,6 +848,8 @@ body.ribbit .btn.btn-default-override,
 body.ribbit .btn.btn-default-override:is(:hover, :focus),
 body.ribbit .btn.btn-default,
 body.ribbit .btn.btn-default:is(:hover, :focus),
+body.ribbit .people-you-should-know .HLLandingControl .btn.btn-default,
+body.ribbit .people-you-should-know .HLLandingControl .btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default,
 body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:focus,
@@ -858,7 +858,7 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
 .volunteer-opportunities-filter .bootstrap-select button.btn.btn-default:is(:hover, :focus) {
     background-color: var(--hl-bs--gray-300);
     color: var(--hl-bs--default-text);
-    border: 2px solid transparent;
+    border: none;
 }
 
 body.ribbit .btn.btn-default .caret::before {
@@ -972,7 +972,8 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 .make-link em a,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default, 
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
-.card.full-width-icon .card-link {
+.card.full-width-icon .card-link,
+body.ribbit .make-link-standalone a.link-standalone {
     font-style: normal;
     color: var(--hl-bs--primary);
     font-weight: 600;
@@ -994,14 +995,17 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 .make-link em a:is(:hover, :focus),
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus), 
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
-.card.full-width-icon a:is(:hover, :focus) .card-link {
-    border-bottom-color: var(--hl-bs--primary);;
+.card.full-width-icon a:is(:hover, :focus) .card-link,
+body.ribbit .make-link-standalone a.link-standalone:is(:hover, :focus) {
+    border-bottom-color: var(--hl-bs--primary);
+    text-decoration: none;
 }
 .make-link em a::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after, 
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
 .card.full-width-icon em::after,
-.card.full-width-icon .card-link::after {
+.card.full-width-icon .card-link::after,
+body.ribbit .make-link-standalone a.link-standalone::after {
     font-family: 'Font Awesome 6 Pro';
     margin-left: 8px;
     content: '\f061';
@@ -1268,7 +1272,7 @@ body.ribbit .narrow-widget.widget-container .widget-content-item .MyCommunitiesQ
     padding-right: 16px;
 }
 
-body.ribbit .QuickLinksWidget>div .quick-links-container {
+body.ribbit .narrow-widget.widget-container {
     padding: 16px;
 }
 
@@ -1333,6 +1337,22 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 }
 body.ribbit #MPOuter #MainCopy_ContentWrapper>.row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLEngagement {
     border-top: none;
+}
+
+body.ribbit .widget-container .view-more-link {
+    padding: 16px 0 0 0 !important;
+    border-top: 1px solid #E9E9E9;
+}
+body.ribbit .no-link .widget-container .view-more-link {
+    display: none;
+}
+body.ribbit .recently-followed .link-container-content {
+    padding-left: 0;
+    padding-right: 0;
+}
+body.ribbit a.link-container.link-container-link {
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
 /****** Activity Feed Styling Reset ******/
@@ -1454,7 +1474,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 /****** hero ******/
 
-.hero.radial-gradient-bg,
+.hl-primary-row-bkgd.radial-gradient-bg,
 .hero.with-bg {
     position: relative;
 }
@@ -1464,7 +1484,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     background-position: center;
 }
 
-.hero.radial-gradient-bg::before,
+.hl-primary-row-bkgd.radial-gradient-bg::before,
 .hero.with-bg::before {
     display: block;
     content: "";
@@ -1475,7 +1495,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     bottom: 0;
     opacity: 0.8;
 }
-.hero.radial-gradient-bg::before {
+.hl-primary-row-bkgd.radial-gradient-bg::before {
     background: radial-gradient(145.93% 137.01% at 71.71% -0.00%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(30.03% 106.80% at 73.42% 141.50%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(96.99% 34.59% at -0.00% 100.00%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.00) 100%);
     mix-blend-mode: soft-light;
 }
@@ -1483,9 +1503,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     background: linear-gradient(to right, var(--hl-bs--primary), transparent);
 }
 
-.hero.radial-gradient-bg h1,
-.hero.radial-gradient-bg h2,
-.hero.radial-gradient-bg p,
+.hl-primary-row-bkgd.radial-gradient-bg h1,
+.hl-primary-row-bkgd.radial-gradient-bg h2,
+.hl-primary-row-bkgd.radial-gradient-bg p,
 .hero.with-bg .hero-text h1,
 .hero.with-bg .hero-text h2,
 .hero.with-bg .hero-text p {
@@ -1740,11 +1760,14 @@ body.ribbit .feed-list .layout-grid-cell {
 body.ribbit .feed-list .layout-grid-cell-children {
     padding: 8px;
 }
+.feed-list .images-preview {
+    padding: 16px;
+}
 .feed-list .hl-profile-avatar.lg img {
     width: 48px;
     height: 48px;
 }
-.feed-list .layout-grid-cell-children .feed-item-row > div:first-child > div:first-child > div:first-child {
+.feed-list .layout-grid-cell-children .feed-item-row > div > div.flex-grow-1 > div.pe-2.me-1:first-child {
     padding-right: 0 !important;
     margin-right: 16px !important;
 }
@@ -2119,7 +2142,7 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links .widget-content-item {
     padding-left: 0;
     padding-right: 0;
 }
-body.ribbit .bootstrap-4 .mb-4.quick-links-container {
+body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     margin-bottom: 0 !important;
 }
 .col-md-3 .card h3 {
@@ -4115,100 +4138,36 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     margin-bottom: 10px;
 }
 
-.people-you-should-know .HL-contact-suggestions.HLLandingControl .Content ul li {
+#MPOuterMost #MPOuter .people-you-should-know .HL-contact-suggestions.HLLandingControl .Content ul li {
     background: transparent;
     border: none;
+    border-bottom: 1px solid #E9E9E9;
+    padding: 0 0 16px 0;
+    margin-bottom: 16px;
 }
 
-.people-you-should-know .HL-contact-suggestions ul li a[title="User Name Image"] {
-    width: 50px;
-    height: 50px;
+.people-you-should-know .HL-contact-suggestions ul li .col-md-2 a,
+.people-you-should-know .HL-contact-suggestions ul li .col-md-2 a img {
+    width: 40px;
+    height: 40px;
 }
 
-.people-you-should-know .HL-contact-suggestions .btn {
-    text-transform: none;
-    font-weight: 600;
-    width: 13px;
-    padding: 3px 10px;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .update-friend {
-    font-size: 12px;
-    line-height: 16px;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary {
-    margin-top: 0;
-    border: none;
-    font-size: 0;
-    line-height: 0;
-    background: transparent;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary:is(:hover, :focus) {
-    background: transparent;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary::before {
-    font-size: 12px;
-    line-height: 16px;
-    content: '\f058';
-    color: #28a745;
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 300;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default {
-    margin-top: 10px;
-}
-
-.memberhome #MPOuterMost .people-you-should-know .HL-contact-suggestions .ignore-contact {
-    background: transparent;
-    border: none;
-    font-size: 0px;
-    line-height: 16px;
-}
-
-.memberhome #MPOuterMost .people-you-should-know .HL-contact-suggestions .ignore-contact::before {
-    color: #D6393F;
-}
-
-.people-you-should-know .HL-contact-suggestions .btn-default:hover,
-.people-you-should-know .HL-contact-suggestions .btn-default:focus {
-    background-color: #D6393F;
-    color: #fff;
-    border: none;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default::before {
-    font-size: 12px;
-    line-height: 16px;
-    content: '\f057';
-    font-family: 'Font Awesome 5 Pro';
-    font-weight: 300;
-}
-
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-default:is(:hover, :focus)::before,
-.people-you-should-know .HLLandingControl.HL-contact-suggestions .text-center .btn-primary:is(:hover, :focus)::before {
-    font-weight: 700;
-}
-
-.people-you-should-know .HL-contact-suggestions ul li .col-md-2 {
-    width: 50px;
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .col-md-2 {
+    width: 40px;
     padding: 0;
-    margin-right: 20px;
+    margin-right: 8px;
     float: left;
 }
 
 .people-you-should-know .HL-contact-suggestions ul li .col-md-6 {
-    width: calc(100% - 90px);
+    width: calc(100% - 102px);
     padding-right: 15px;
     padding-left: 0;
     float: left;
 }
 
 .people-you-should-know .HL-contact-suggestions ul li .col-md-4 {
-    width: 13px;
+    width: 54px;
     padding: 0;
     float: left;
 }
@@ -4218,13 +4177,43 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 }
 
 .people-you-should-know .HL-contact-suggestions ul li .details {
-    color: #848785;
-    font-size: 12px;
-    line-height: 16px;
+    color: #272727;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 .people-you-should-know .HL-contact-suggestions ul li .details span:empty+br {
     display: none;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .people-you-should-know .HLLandingControl>.Content h3 a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend {
+    display: flex;
+    flex-direction: column;
+}
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn {
+    font-size: 0;
+    line-height: 0;
+    padding: 4px 10px;
+    text-transform: none;
+}
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary {
+    margin-top: 0;
+}
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn::before {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 600;
+}
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
+    content: 'Add';
+}
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default::before {
+    content: 'Ignore';
 }
 
 /****** responsive ******/
@@ -4293,7 +4282,7 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     box-shadow: none;
 }
 
-.ribbit .profile-snippet-card .profile-snippet-bio {
+body.ribbit #MPOuterMost .profile-snippet-card .profile-snippet-bio {
     flex-direction: row !important;
     display: block !important;
     position: relative;
