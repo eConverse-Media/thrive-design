@@ -17,12 +17,25 @@ function handleLinkCards() {
     $('.card.link-card').each(function () {
         var self = $(this),
             link = $(self).find('a'),
-            onclick = $(link).attr('onclick');
+            onclick = $(link).attr('onclick'),
+            href = $(link).attr('href');
             
-        $(self).find('i').prependTo($(self));
+        if ($(self).hasClass('full-width-icon')) {
+            $(self).find('i').parent().prependTo($(self));
+        } else {
+            $(self).find('i').prependTo($(self));
+        }
         
-        $(self).wrapInner('<a onclick="' + onclick + '" />');
+        if (!!onclick) {
+            $(self).wrapInner('<a onclick="' + onclick + '" />');
+        } else {
+            var target = $(link).attr('target'),
+                rel = $(link).attr('rel');
 
+            $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
+            $(link).closest('p').addClass('card-link');
+        }
+        
         $(link).unwrap();
         $(link).contents().unwrap();
     });
@@ -199,6 +212,12 @@ function handleBlogs() {
     });
 }
 
+function handleFeaturedCards() {
+    $('.featured-cards ul li').each(function () {
+        handleLibraryAjax(this);
+    });
+}
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
@@ -213,4 +232,5 @@ $(function () {
     handleFeaturedMember();
     handleBlogs();
     handleResources();
+    handleFeaturedCards();
 });

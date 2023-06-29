@@ -53,14 +53,12 @@ body.ribbit h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact .row.heading h2,
 body.ribbit .card .ContentMainHeader {
-    font-size: 32px;
-    font-weight: 800;
+    font-size: 30px;
+    font-weight: 700;
     line-height: 120%;
 }
 
 body.ribbit #MPOuterMost #MPOuter .overlay h2 {
-    font-size: 30px;
-    font-weight: 700;
     margin-top: 0;
     margin-bottom: 8px;
 }
@@ -92,7 +90,7 @@ h3 {
 
 body.ribbit h4 {
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h4 {
@@ -160,6 +158,10 @@ body.ribbit .overline p:first-of-type>strong {
 
 /************ basics / reset ************/
 
+body {
+    overflow-x: hidden;
+}
+
 .hl-primary-row-bkgd,
 .hl-primary-row-bkgd h1,
 .hl-primary-row-bkgd h2,
@@ -187,6 +189,10 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>d
 }
 body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
     margin-bottom: 16px;
+}
+
+.rounded-img img {
+    border-radius: 8px;
 }
 
 /*** homepage backgrounds ***/
@@ -504,8 +510,19 @@ body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding,
 body.ribbit.interior.community-pages #MainCopy_ContentWrapper {
     padding-top: 0;
 }
+body.ribbit.home #MainCopy_ContentWrapper>.row-wide:not(:last-child,.home-hero,.primary-row,.secondary-row) {
+    padding-bottom: 0;
+}
+body.ribbit.home #MainCopy_ContentWrapper>.row-wide:not(:first-child,.home-hero,.primary-row,.secondary-row) {
+    padding-top: 0;
+}
 
-body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding {
+body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding:not(:first-child,.home-hero,.primary-row,.secondary-row) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding,
+body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding.no-bottom-padding:not(:first-child,.home-hero,.primary-row,.secondary-row) {
     padding-bottom: 0;
 }
 
@@ -524,6 +541,9 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 
 #PageTitleH1 {
     padding: 20px 16px;
+}
+body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+    margin-bottom: 0;
 }
 
 /*** padding/margins specifically for featured cards ***/
@@ -654,12 +674,12 @@ table tr td {
 /****** buttons ******/
 
 .make-buttons em {
-    margin: -5px;
+    margin: -8px;
     display: inline-block;
 }
 
 .make-buttons em a {
-    margin: 5px;
+    margin: 8px;
 }
 
 .make-buttons em a,
@@ -674,9 +694,10 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     display: inline-block;
     font-style: normal;
     text-decoration: none;
-    padding: 10px 20px;
-    border: none;
+    padding: 8px 18px;
+    border: 2px solid transparent;
     border-radius: 4px;
+    font-weight: 600;
 }
 
 .make-buttons em a,
@@ -769,13 +790,26 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
-    border: none;
+    border: 2px solid transparent;
+}
+
+.make-buttons.outline em a,
+.make-buttons.outline-first em:first-child a:first-child {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+.make-buttons.outline em a:is(:hover, :focus),
+.make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background-color: #fff;
+    border-color: #fff;
 }
 
 body.ribbit .btn-ghost {
     color: var(--hl-bs--default-text);
-    background-color: var(--hl-bs--gray-100);
-    border: none;
+    background: var(--hl-bs--gray-100);
+    border: 2px solid transparent;
 }
 
 body.ribbit .btn-ghost:is(:hover, :focus),
@@ -801,8 +835,7 @@ body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-pr
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus) {
     background-color: var(--hl-bs--secondary);
     color: var(--hl-bs--btn-secondary-text);
-    /* don't think this is right; looking for text-on-secondary */
-    border: none;
+    border: 2px solid transparent;
 }
 
 .narrow-widget a.link-standalone i {
@@ -820,10 +853,16 @@ body.ribbit .btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default,
 body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .btn-default:focus,
-body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled) {
+body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
+.volunteer-opportunities-filter .bootstrap-select button.btn.btn-default,
+.volunteer-opportunities-filter .bootstrap-select button.btn.btn-default:is(:hover, :focus) {
     background-color: var(--hl-bs--gray-300);
     color: var(--hl-bs--default-text);
-    border: none;
+    border: 2px solid transparent;
+}
+
+body.ribbit .btn.btn-default .caret::before {
+    color: var(--hl-bs--default-text);
 }
 
 .categorize-message-buttons button {
@@ -863,10 +902,16 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /*** carets ***/
 
-body.ribbit .navbar-default.navbar-nav>.dropdown>a.caret::before,
+body.ribbit .navbar-default .navbar-nav>.dropdown>a .caret::before,
 body.ribbit .nav-tabs>li>a.caret::before,
 body.ribbit .caret::before {
     color: #ccc;
+    transition: .3s;
+}
+body.ribbit .navbar-default .navbar-nav>.dropdown>a:is(:hover, :focus) .caret::before,
+body.ribbit .navbar-default .navbar-nav>.dropdown.active>a .caret::before {
+    color: var(--hl-bs--primary);
+    transition: .3s;
 }
 
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle::after,
@@ -926,7 +971,8 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 
 .make-link em a,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default, 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default {
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+.card.full-width-icon .card-link {
     font-style: normal;
     color: var(--hl-bs--primary);
     font-weight: 600;
@@ -935,19 +981,27 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
+.card.full-width-icon .card-link {
+    display: inline-block;
+    transition: .3s;
+}
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default, 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default {
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+.card.full-width-icon .card-link {
     font-size: 16px;
     line-height: 19px;
 }
 .make-link em a:is(:hover, :focus),
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus), 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus) {
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
+.card.full-width-icon a:is(:hover, :focus) .card-link {
     border-bottom-color: var(--hl-bs--primary);;
 }
 .make-link em a::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after, 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after {
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
+.card.full-width-icon em::after,
+.card.full-width-icon .card-link::after {
     font-family: 'Font Awesome 6 Pro';
     margin-left: 8px;
     content: '\f061';
@@ -1047,10 +1101,10 @@ body.ribbit #NAV .navbar-nav>li {
 }
 
 body.ribbit #NAV .navbar-nav>li>a {
-    line-height: 16.94px;
+    line-height: 1.4;
     font-size: 14px;
-    padding-top: 16.5px;
-    padding-bottom: 16.5px;
+    padding: 8px 16px;
+    font-weight: 600;
 }
 
 /* Nav Active Hover */
@@ -1067,16 +1121,15 @@ body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:focus {
 /* Nav Dropdown */
 
 .navbar-nav>li>.dropdown-menu {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 2px 16px 0px rgba(0, 0, 0, 0.15);
     min-width: 221px;
     border-radius: 8px;
+    padding: 16px;
 }
 
 
 body.ribbit #MPButtonBar .dropdown-menu li a {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 8px 16px;
     display: inline-block;
 }
 
@@ -1099,16 +1152,15 @@ body.ribbit #MPButtonBar .dropdown-menu>li>a:focus {
 
 body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li a {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 300;
     color: #666;
     display: inline-block;
 }
-
-
-body.ribbit #MPButtonBar .dropdown-menu li {
-    margin-left: 16px;
-    margin-right: 16px;
+body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li a:is(:hover, :focus),
+body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li.active a {
+    font-weight: 500;
 }
+
 
 body.ribbit #MPButtonBar .dropdown-menu .active>a {
     display: inline-block;
@@ -1157,16 +1209,30 @@ body.ribbit .card .ContentMainHeader,
 body.ribbit .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2,
 body.ribbit .card h2 {
-    padding-bottom: 10px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #e9e9e9;
     font-weight: 500;
     font-size: 12px !important;
     margin-top: 0 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 16px !important;
     flex-basis: 100%;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #666;
+}
+
+body.ribbit .alt-h2 h2,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.alt-h2[class*="Content"] .HLLandingControl .row.heading h2,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.alt-h2.ContentItemReact .row.heading h2 {
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl>.Content h3 a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 body.ribbit .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader {
@@ -1250,8 +1316,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentUserControl:not
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentUserControl:not(.engagement-leaderboard) .HLLandingControl ul:not(.dropdown-menu)>ol,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact ul:not(.dropdown-menu):not(.rw-list):not(.rw-multiselect-taglist)>li,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact ul:not(.dropdown-menu)>ol {
-    padding: 0 0 20px 0;
-    margin: 0 0 20px 0;
+    padding: 0 0 16px 0;
+    margin: 0 0 16px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -1348,6 +1414,17 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     margin: unset;
 }
 
+/************ homepage ************/
+
+.home .row-wide > .col-md-6:first-child,
+.memberhome .row-wide > .col-md-6:first-child {
+    padding-right: 24px;
+}
+.home .row-wide > .col-md-6:last-child,
+.memberhome .row-wide > .col-md-6:last-child {
+    padding-left: 24px;
+}
+
 /************ homepage V1 ************/
 
 .cta-card .featured-card-single.card-layout-split {
@@ -1377,12 +1454,17 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 /****** hero ******/
 
+.hero.radial-gradient-bg,
 .hero.with-bg {
-    background-size: cover;
-    background-position: center;
     position: relative;
 }
 
+.hero.with-bg {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero.radial-gradient-bg::before,
 .hero.with-bg::before {
     display: block;
     content: "";
@@ -1391,14 +1473,26 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, var(--hl-bs--primary), transparent);
     opacity: 0.8;
 }
+.hero.radial-gradient-bg::before {
+    background: radial-gradient(145.93% 137.01% at 71.71% -0.00%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(30.03% 106.80% at 73.42% 141.50%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(96.99% 34.59% at -0.00% 100.00%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.00) 100%);
+    mix-blend-mode: soft-light;
+}
+.hero.with-bg::before {
+    background: linear-gradient(to right, var(--hl-bs--primary), transparent);
+}
 
+.hero.radial-gradient-bg h1,
+.hero.radial-gradient-bg h2,
+.hero.radial-gradient-bg p,
 .hero.with-bg .hero-text h1,
 .hero.with-bg .hero-text h2,
 .hero.with-bg .hero-text p {
-    color: #fff;
+    color: var(--hl-bs--primary-opposite);
+}
+.hero-text p {
+    margin-bottom: 16px;
 }
 
 /*** hero on member home ***/
@@ -1425,6 +1519,21 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 .hero .slick-arrow:is(:hover, :focus) {
     opacity: 1;
+}
+
+/*** responsive ***/
+
+@media (max-width: 991px) {
+    .hero.with-bg::before {
+        background: linear-gradient(to bottom, var(--hl-bs--primary), transparent);
+    }
+}
+
+@media (max-width: 550px) {
+    .hero .card.make-buttons em {
+        display: block;
+        margin-bottom: 8px;
+    }
 }
 
 /****** engagement leaderboard ******/
@@ -1877,6 +1986,7 @@ body.ribbit .row-wide.cards>.col-md-12 {
     display: flex;
     margin: -8px;
     width: calc(100% + 16px);
+    padding: 0;
 }
 
 .cards .card {
@@ -2123,6 +2233,53 @@ body.ribbit .bootstrap-4 .mb-4.quick-links-container {
 
 .card.make-buttons em:not(:last-child) {
     margin-right: 15px;
+}
+.cards > div[class*="col-md-"] > a,
+.cards > div[class*="col-md-"] > a:is(:hover, :focus) {
+    text-decoration: none;
+    color: #595959;
+}
+.card.full-width-icon {
+    text-align: center;
+}
+.card.full-width-icon.link-card a > p:first-child i {
+    background: transparent;
+    margin-bottom: 0;
+}
+.card.full-width-icon a > p:first-child {
+    background-color: var(--hl-bs--secondary);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 0;
+    position: relative;
+}
+.card.full-width-icon a > p:first-child i {
+    color: var(--hl-bs--btn-secondary-text);
+    position: relative;
+}
+.card.full-width-icon a > p:first-child::before {
+    background-color: transparent;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .3s;
+}
+.card.full-width-icon a:is(:hover, :focus) > p:first-child::before {
+    background-color: rgba(255,255,255,0.6);
+}
+.card.full-width-icon h4 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.card.full-width-icon p:nth-last-child(2) {
+    margin-bottom: 24px;
 }
 
 @media (max-width: 991px) {
@@ -2894,10 +3051,112 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding-top: 130px;
 }
 
-
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .img-container {
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
+.event-cards .Content ul {
+    margin: 12px -12px -12px -12px;
+    display: flex;
+}
+#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
+#MPOuterMost #MPOuter .event-cards .Content ul li {
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: calc(25% - 24px);
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    border: none;
+    border-radius: 8px;
+}
+.event-cards .Content ul li > div,
+.event-cards .Content ul li > div > div {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+}
+.event-cards .Content ul li .title-row {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    flex-direction: column-reverse;
+    background: #fff;
+    border-radius: 8px;
+}
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .img-container,
+#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-3 {
     width: 100%;
-    height: 110px;
+    height: 140px;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+}
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container,
+#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-9 {
+    padding: 16px;
+}
+#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-9 {
+    padding: 16px !important;
+    width: 100%;
+}
+#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-12 {
+    padding: 156px 16px 16px 16px !important;
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    border-radius: 8px;
+}
+#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-12::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: var(--hl-bs--bg3);
+    font-family: 'Font Awesome 6 Pro';
+    content: '\f073';
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--hl-bs--gray-500);
+    border-radius: 8px 8px 0 0;
+}
+.event-cards .HLLandingControl.HLEventList .title-row img {
+    max-width: 100%;
+    max-height: unset;
+    width: auto;
+    height: auto;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Content] .SearchResults>div>.Content p,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.event-cards[class*=Content] .HLEventList>.Content .timeAgoFormat {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Content] .SearchResults>div>.Content h3,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.event-cards[class*=Content] .HLEventList>.Content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Content] .SearchResults>div>.Content h3 a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.event-cards[class*=Content] .HLEventList>.Content h3 a {
+    font-size: 18px;
+    line-height: 1.3;
+    color: #272727;
+    font-weight: 700;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Content] .SearchResults>div>.Content div[id*=_lvSearchResults_pnlTitleRow_] {
+    margin-bottom: 0;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Content] .HLLandingControl p {
+    margin-top: 0;
 }
 
 .slick-dots .img-container {
@@ -3073,8 +3332,8 @@ body.ribbit .community-home .row.no-community-html.row-full {
 }
 
 body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLLandingControl ul li {
-    padding: 0 0 20px 0;
-    margin-bottom: 20px;
+    padding: 0 0 16px 0;
+    margin-bottom: 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -3112,7 +3371,9 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandi
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl .title-row .ByLine {
     font-size: 13px;
 }
-
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl p {
+    margin-top: 0;
+}
 body.ribbit #MPOuterMost .HLLandingControl .title-row .ByLine a {
     font-weight: 600;
     font-size: 13px;
@@ -3234,7 +3495,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     align-items: center;
 }
 
-.home .HLEventList ul li>.row {
+.col-md-6 .HLEventList ul li>.row {
     flex-direction: row-reverse;
 }
 
@@ -3275,17 +3536,17 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     font-weight: 600;
 }
 
-.home .HLEventList ul li .col-md-2 {
+.col-md-6 .HLEventList ul li .col-md-2 {
     width: 140px;
     margin-right: 0;
 }
 
-.home .HLEventList ul li .col-md-10 {
+.col-md-6 .HLEventList ul li .col-md-10 {
     width: calc(100% - 140px);
     padding-right: 30px;
 }
 
-.home .HLEventList ul li .date-block {
+.col-md-6 .HLEventList ul li .date-block {
     width: 140px;
     height: 120px;
     border-radius: 10px;
@@ -3352,6 +3613,29 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 #MPOuterMost #MPOuter .col-md-6 .HLEventList ul li h3 a:is(:hover, :focus),
 #MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li h3 a:is(:hover, :focus) {
     color: var(--hl-bs--primary);
+}
+.col-md-6 .HLRecentBlogs ul li,
+.col-md-6 .HLMyDocuments ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-md-6 .HLRecentBlogs ul li .img-container,
+.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) {
+    height: 120px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: auto;
+}
+.col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image {
+    display: none;
+}
+.col-md-6 .HLRecentBlogs ul li .text-container,
+.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+    width: calc(100% - 140px);
+    padding-right: 30px;
 }
 
 /* date blocks */
@@ -3421,6 +3705,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    flex-wrap: wrap;
 }
 .col-md-6 .HLRecentBlogs ul li .ByLine a,
 .col-md-6 .HLMyDocuments ul li .ByLine a {
@@ -3470,8 +3755,29 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 #MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li div[id*="DocumentsList_DisplayDocFiles"] .col-md-12 {
     position: static;
 }
-.col-md-6 .HLMyDocuments ul li .text-container {
-    padding-right: 24px;
+
+/****** responsive ******/
+
+
+@media (max-width: 550px) {
+    .col-md-6 .HLEventList ul li>.row,
+    .col-md-6 .HLRecentBlogs ul li, 
+    .col-md-6 .HLMyDocuments ul li {
+        flex-direction: column;
+    }
+    .home .col-md-6 .HLEventList ul li .date-block,
+    .col-md-6 .HLRecentBlogs ul li .img-container, 
+    .col-md-6 .HLMyDocuments ul li .img-container {
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home .col-md-6 .HLEventList ul li .col-md-10,
+    .col-md-6 .HLRecentBlogs ul li .text-container, 
+    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+        width: 100%;
+        padding-right: 0;
+    }
 }
 
 /****** Event Cards  ******/
@@ -3627,7 +3933,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLLandingControl.HLMyDocuments ul li {
     position: relative;
-    padding: 0 0 20px 70px;
+    padding: 0 0 16px 70px;
 }
 
 /*** icons ***/
@@ -3790,32 +4096,6 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
     height: calc(100% - 170px);
 }
 
-.home .HLRecentBlogs ul li,
-.memberhome .HLRecentBlogs ul li,
-.col-md-6 .HLMyDocuments ul li {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.home .HLRecentBlogs ul li .img-container,
-.memberhome .HLRecentBlogs ul li .img-container,
-.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) {
-    height: 120px;
-    width: 140px;
-    border-radius: 10px;
-    margin-left: auto;
-}
-.col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image {
-    display: none;
-}
-.home .HLRecentBlogs ul li .text-container,
-.memberhome .HLRecentBlogs ul li .text-container,
-.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
-    width: calc(100% - 140px);
-    padding-right: 30px;
-}
 
 
 /************ suggested contacts ************/
@@ -4702,28 +4982,35 @@ body.ribbit.memberhome #MPOuterFooter {
 
 .icon-list ul {
     list-style: none;
+    padding-left: 0;
 }
 
 .icon-list ul li {
     position: relative;
-    padding-left: 55px;
-    margin-bottom: 1rem;
+    padding-left: 76px;
+    margin-bottom: 24px;
+}
+.icon-list ul li:last-child {
+    margin-bottom: 0;
 }
 
 .icon-list ul li i {
-    height: 40px;
-    width: 40px;
-    background: var(--hl-bs--secondary);
+    height: 60px;
+    width: 60px;
+    background: var(--hl-bs--primary);
     border-radius: 50%;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    font-size: 25px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
-    transform: translateY(-50%);
+    color: var(--hl-bs--primary-opposite);
+}
+.icon-list ul li h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 /****** mobile ******/
