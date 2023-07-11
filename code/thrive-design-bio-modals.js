@@ -10,7 +10,7 @@ $(function () {
 			img = $(self).find('img'),
             name = $(self).find('h3'),
             position = $(self).find('h4'),
-			link = "<button type='button' onclick='openModal(\"" + klass + "\");'>Learn More</button>",
+			link = "<button type='button' onclick='openModal(\"" + klass + "\");'></button>",
 			bioImage = $(img).clone(),
 			bioSelector = '.bio.' + klass,
 			bio = $(bioSelector).find('.HtmlContent');
@@ -21,10 +21,11 @@ $(function () {
         $(position).clone().prependTo($(bio).find('.bio-text'));
 		$(name).clone().prependTo($(bio).find('.bio-text'));
 			
-		$(self).find('.HtmlContent').append(link);
+		// $(self).find('.HtmlContent').append(link);
 		$(self).find('.HtmlContent').wrapInner('<div class="text-container" />');
 		$(self).find('img').prependTo($(self).find('.HtmlContent'));
 		$(self).find('img').wrap('<div class="img-container" />');
+        $(self).wrapInner(link);
 	});
 	
 	$('.bio').prepend('<button type="button" onclick="closeModal();" class="close-modal"></button>');

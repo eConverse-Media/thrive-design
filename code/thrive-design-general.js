@@ -19,13 +19,7 @@ function handleLinkCards() {
             link = $(self).find('a'),
             onclick = $(link).attr('onclick'),
             href = $(link).attr('href');
-            
-        if ($(self).hasClass('full-width-icon')) {
-            $(self).find('i').parent().prependTo($(self));
-        } else {
-            $(self).find('i').prependTo($(self));
-        }
-        
+
         if (!!onclick) {
             $(self).wrapInner('<a onclick="' + onclick + '" />');
         } else {
@@ -36,7 +30,6 @@ function handleLinkCards() {
             $(link).closest('p').addClass('card-link');
         }
         
-        $(link).unwrap();
         $(link).contents().unwrap();
     });
 }
@@ -66,13 +59,15 @@ function handleSlider() {
     $('.slide').wrapAll('<div class="slider"></div>');
 
     $('.slider').slick({
-        dots: false,
+        dots: true,
         arrows: true,
         infinite: true,
         fade: false,
         // autoplay: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
     });
 
 }
