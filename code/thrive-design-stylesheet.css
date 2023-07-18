@@ -910,19 +910,17 @@ body.ribbit .navbar-default .navbar-nav>li>a {
     float: right;
     width: 30px;
     position: relative;
+    background-color: #fff;
 }
 
 .slideout-search-bar {
-    /*     right: 120px;
- */
     position: absolute;
     height: 30px;
-    /*    top: 0px; */
     padding: 0;
     z-index: -1;
     opacity: 0;
     transition: 0.3s;
-    transition-delay: 0.3s;
+    /* transition-delay: 0.3s; */
     right: 0;
 }
 
@@ -931,13 +929,10 @@ body.ribbit .navbar-default .navbar-nav>li>a {
     z-index: 60;
     transition: 0.3s;
     background-color: white;
-    width: 248px;
+    width: 275px;
 }
 
-.slideout-search-bar input[id$="SearchTerm"] {
-    border-left: none;
-    border-right: none;
-    border-top: none;
+#MPOuterMost .slideout-search-bar input[id$="SearchTerm"] {
     height: 30px;
     font-size: 15px;
     text-transform: none;
@@ -948,44 +943,59 @@ body.ribbit .navbar-default .navbar-nav>li>a {
     float: right;
     transition: 0.3s;
     background-color: #fff;
-    border-radius: 0;
+    border-radius: 32px;
+    border: none;
+    box-shadow: none;
 }
 
 .slideout-search-bar.open .input-group {
     width: 100%;
 }
 
-.slideout-search-bar.open input[id$="SearchTerm"] {
+#MPOuterMost .slideout-search-bar.open input[id$="SearchTerm"] {
     width: 100%;
     padding: 6px 12px 4px 30px;
     position: relative;
     box-shadow: none;
+    border: 1px solid #CCC;
+    transition: .3s;
 }
 
-.slideout-search-bar.open input[id$="SearchTerm"]:focus {
-    border-color: #ccc;
-    box-shadow: none;
+#MPOuterMost .slideout-search-bar.open input[id$="SearchTerm"]:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(102,175,233,0.6);
+    outline: none;
 }
-
-.slideout-search-bar.open .input-group::before {
-    content: '\f002';
-    font-family: 'Font Awesome 5 Pro';
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 300;
-    color: var(--hl-bs--primary);
+.slideout-search-bar .input-group-btn {
     position: absolute;
-    left: 5px;
-    bottom: 8px;
-    z-index: 1;
+    left: 4px;
+    top: 0;
+    width: auto;
+    opacity: 0;
+    z-index: -1;
+}
+.slideout-search-bar.open .input-group-btn {
+    opacity: 1;
+    z-index: 5;
+    transition: .3s;
+    transition-delay: .2s;
+}
+#MPOuterMost .slideout-search-bar button[id*="SearchButton"] {
+    background: transparent;
+    color: var(--hl-bs--default-text);
 }
 
-.slideout-search-bar.open input[id$="SearchTerm"]::placeholder {
+.slideout-search-bar input[id$="SearchTerm"]::placeholder {
     font-style: normal;
     font-size: 15px;
     line-height: 18px;
     text-transform: none;
     font-weight: 400;
+    opacity: 0;
+}
+.slideout-search-bar.open input[id$="SearchTerm"]::placeholder {
+    opacity: 1;
+    transition: .3s;
 }
 
 .slideout-search-bar button[id$="SearchButton"],
@@ -994,8 +1004,6 @@ body.ribbit .navbar-default .navbar-nav>li>a {
     height: 30px;
     opacity: 0;
     transition: 0.3s;
-    color: #fff;
-    background-color: #76BC43;
     line-height: 30px;
     text-align: center;
 }
@@ -1007,15 +1015,16 @@ body.ribbit .navbar-default .navbar-nav>li>a {
 
 .slideout-search-btn {
     background-color: transparent;
-    color: #76BC43;
     font-size: 15px;
     line-height: 18px;
     height: unset;
     width: 30px;
+    opacity: 1;
+    /* transition: .3s; */
 }
 
 .slideout-search-btn.open {
-    width: 248px;
+    opacity: 0;
 }
 
 .slideout-search-btn i {
@@ -1027,7 +1036,6 @@ body.ribbit .navbar-default .navbar-nav>li>a {
 
 .slideout-search-btn i::before {
     content: '\f002';
-    color: #272727;
 }
 
 .slideout-search-bar button[id$="SearchButton"] {
@@ -1047,8 +1055,10 @@ body.ribbit .navbar-default .navbar-nav>li>a {
     line-height: 18px;
     float: right;
     margin-top: 0;
-    color: #1F0737;
     padding: 5px 0;
+    position: relative;
+    z-index: 50;
+    transition: .3s;
 }
 
 .slideout-search-bar.open button[id$="SearchButton"] {
@@ -1074,34 +1084,20 @@ body.ribbit .navbar-default .navbar-nav>li>a {
     vertical-align: baseline !important;
 }
 
-.slideout-search-btn {
-    margin-top: 0px;
-    position: relative;
-    z-index: 50;
-}
-
 .slideout-search-bar .input-group-btn .btn {
     box-shadow: none;
     -webkit-box-shadow: none;
 }
 
-.slideout-search-btn:hover,
-.slideout-search-btn:focus {
-    background-color: transparent;
-    color: #0F4B8F;
-    transition: 0.3s;
-    border-radius: 0;
-}
-
 .slideout-search-btn:hover i,
 .slideout-search-btn:focus i {
-    color: #0F4B8F;
+    color: var(--hl-bs--primary);
+    transition: .3s;
 }
 
-.slideout-search-bar button[id$="SearchButton"]:hover,
-.slideout-search-bar button[id$="SearchButton"]:focus {
-    background-color: #76BC43;
-    color: #fff;
+#MPOuterMost .slideout-search-bar button[id$="SearchButton"]:hover,
+#MPOuterMost .slideout-search-bar button[id$="SearchButton"]:focus {
+    color: var(--hl-bs--primary);
     transition: 0.3s;
     border-radius: 0;
 }
@@ -1109,11 +1105,8 @@ body.ribbit .navbar-default .navbar-nav>li>a {
 .slideout-search-btn i {
     font-size: 16px;
     line-height: 18px;
-    color: var(--hl-bs--secondary);
-}
-
-.slideout-search-bar.open .SearchInputs .input-group-btn {
-    display: none;
+    color: var(--hl-bs--default-text);
+    transition: .3s;
 }
 
 /* Nav Bar */

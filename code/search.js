@@ -1,8 +1,7 @@
 $(function () {
-    $('#MPAuxNav #AuxMenu').append('<div class="slideout-search" />');
+    $('#RibbitWelcome').before('<div class="slideout-search" />');
     $('.slideout-search-btn').appendTo('.slideout-search');
     $('.slideout-search-bar').appendTo('.slideout-search');
-    $('.slideout-search-bar button[id$="SearchButton"]').hide();
     $(document).bind('click', function (e) {
         if ($('.slideout-search-bar button').is(e.target)) {
             return;
@@ -12,7 +11,6 @@ $(function () {
             !($('.slideout-search-bar').hasClass('open'))) {
             $('.slideout-search-bar').addClass('open');
             $('.slideout-search-btn').addClass('open');
-            $('.slideout-search-bar button[id$="SearchButton"]').fadeIn();
             $('.slideout-search-bar input').focus();
         } else if ($('.slideout-search-bar').hasClass('open') &&
             !$('.SearchInputs .form-control').is(e.target)) {
