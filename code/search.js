@@ -1,25 +1,53 @@
-$(function () {
-    $('#RibbitWelcome').before('<div class="slideout-search" />');
-    $('.slideout-search-btn').appendTo('.slideout-search');
-    $('.slideout-search-bar').appendTo('.slideout-search');
-    $(document).bind('click', function (e) {
-        if ($('.slideout-search-bar button').is(e.target)) {
-            return;
-        } else if (($('.slideout-search-btn').is(e.target) ||
-            $('.slideout-search-btn i').is(e.target) ||
-            $('.slideout-search-btn div').is(e.target)) &&
-            !($('.slideout-search-bar').hasClass('open'))) {
-            $('.slideout-search-bar').addClass('open');
-            $('.slideout-search-btn').addClass('open');
-            $('.slideout-search-bar input').focus();
-        } else if ($('.slideout-search-bar').hasClass('open') &&
-            !$('.SearchInputs .form-control').is(e.target)) {
-            $('.slideout-search-bar').removeClass('open');
-            $('.slideout-search-btn').removeClass('open');
+handleSearch = () => {
+    $(".search-bar-top").wrap('<div class="search-wrap" />');
+    $(".search-wrap").append(
+        '<button class="search-btn-top" type="button" onclick="toggleSearch();"></button>'
+    );
+    $(".search-bar-top .form-control").attr("placeholder", "Search...");
+    $("#searchColumn .form-control").attr("placeholder", "Search...");
+    $(".homepage-search .SearchInputs .form-control").attr(
+        "placeholder",
+        "Search..."
+    );
 
-        } else {
-            return;
+    $(".search-wrap").insertAfter("#MPSearchBlock");
+    $(document).click(function (e) {
+        var searchBar = $(".search-bar-top"),
+            searchButton = $(".search-btn-top"),
+            target = e.target;
+
+        if (
+            !$(target).is(searchBar) &&
+            !$(target).is(searchButton) &&
+            !$(target).closest(".search-bar-top").html() &&
+            !$(target).closest(".search-btn-top").html()
+        ) {
+            closeSearch();
         }
     });
-    $('.slideout-search-bar .input-group input[id$="SearchTerm"]').attr('placeholder', 'Search something here...');
+
+    if ($("#RibbitWelcome > .Login").length) {
+        $(".search-wrap").addClass("not-logged-in");
+    }
+};
+
+toggleSearch = () => {
+    if ($(".search-wrap").hasClass("open")) {
+        closeSearch();
+    } else {
+        openSearch();
+    }
+};
+
+closeSearch = () => {
+    $(".search-wrap").removeClass("open");
+};
+
+openSearch = () => {
+    $(".search-wrap").addClass("open");
+    $(".search-bar-top .form-control").focus();
+};
+
+$(function () {
+    handleSearch();
 });
