@@ -391,6 +391,12 @@ body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
 
 /*** mobile padding ***/
 
+@media (max-width: 1135px) {
+    .featured-card-multi .flex-grow-1.flex-shrink-1 {
+        margin: 1em 0;
+    }
+}
+
 @media (max-width: 991px) {
     #PageTitleH1 {
         padding-left: 8px;
