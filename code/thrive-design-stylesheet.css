@@ -934,7 +934,6 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
 }
 
 .search-wrap {
-    float: left;
     border: 1px solid transparent;
     border-radius: 50px;
     overflow: hidden;
@@ -942,8 +941,6 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
     height: 48px;
     transition: width .3s;
     background: #fff;
-    position: absolute;
-    right: 46px;
 }
 
 .search-wrap.not-logged-in {
