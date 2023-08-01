@@ -834,7 +834,6 @@ body.ribbit .make-link-standalone a.link-standalone:is(:hover, :focus) {
 .make-link em a::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
-.card.full-width-icon em::after,
 .card.full-width-icon .card-link::after,
 body.ribbit .make-link-standalone a.link-standalone::after {
     font-family: 'Font Awesome 6 Pro';
@@ -921,7 +920,8 @@ body.ribbit .navbar-default .navbar-nav>li>a {
 
 /****** search ******/
 
-body.ribbit #SearchControl_SearchButton {
+body.ribbit #SearchControl_SearchButton,
+#MPOuterMost #MPSearchBlock {
     display: none;
 }
 
@@ -2228,7 +2228,8 @@ body.ribbit .QuickLinksWidget {
     flex-direction: column;
 }
 
-.card:not(.link-card):not(.team),
+.ContentItemHtml.card:not(.link-card):not(.team),
+.ContentItemMVC.card,
 .card.link-card a,
 .card.team button,
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
@@ -2278,7 +2279,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     position: relative;
 }
 
-.card:not(.link-card):not(.team) {
+.ContentItemHtml.card:not(.link-card):not(.team),
+.ContentItemMVC.card {
     padding: 16px;
     position: relative;
 }
@@ -2553,7 +2555,8 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
         flex-basis: calc(33.333333% - 16px);
     }
 
-    .card:not(.link-card):not(.team),
+    .ContentItemHtml.card:not(.link-card):not(.team),
+    .ContentItemMVC.card,
     .card.link-card a,
     .card.team button {
         max-width: 500px;
@@ -2866,10 +2869,10 @@ body.has-modal.bio-modal-open {
     margin-top: 32px;
 }
 
-.sponsors>.col-md-12.slick-slider .slick-track,
+/* .sponsors>.col-md-12.slick-slider .slick-track,
 .grid-sponsors>.col-md-12 {
     display: flex;
-}
+} */
 
 .grid-sponsors>.col-md-12 {
     flex-wrap: wrap;
@@ -3301,14 +3304,14 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     overflow: hidden;
 }
 
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container,
-#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-9 {
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container {
     padding: 16px;
 }
 
 #MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-9 {
     padding: 16px !important;
     width: 100%;
+    margin-bottom: auto;
 }
 
 #MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-12 {
@@ -4883,6 +4886,7 @@ body.ribbit .profile-snippet-card .profile-snippet-bio {
 body.ribbit .col-md-3 .profile-snippet-card .profile-snippet-bio {
     padding-bottom: 16px !important;
     padding-left: 0 !important;
+    padding-right: 0 !important;
     align-content: center;
     min-height: 126px;
 }
@@ -4980,7 +4984,7 @@ body.ribbit .profile-snippet-progress>.my-2 .progress-bar {
     border-radius: 20px;
 }
 
-body.ribbit .profile-snippet-card .p-3:not(.profile-snippet-bio) {
+body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
@@ -5240,7 +5244,8 @@ body.ribbit.memberhome #MPFooterLink {
         justify-content: center;
     }
 
-    .card:not(.link-card):not(.team),
+    .ContentItemHtml.card:not(.link-card):not(.team),
+    .ContentItemMVC.card,
     .card.link-card a,
     .card.team button {
         max-width: 100%;
