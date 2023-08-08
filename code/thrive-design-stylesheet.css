@@ -1,3 +1,9 @@
+/************ adding text on secondary variable ************/
+
+:root {
+    --ui-secondary-text: [TextOnSecondary];
+}
+
 /************ theme basics ************/
 
 .ribbit h2.card-title {
@@ -116,11 +122,17 @@ body.ribbit .col-md-6 .ContentUserControl .heading {
 body.ribbit .col-md-4 .ContentUserControl .heading h2,
 body.ribbit .col-md-6 .ContentUserControl .heading h2,
 body.ribbit .col-md-4 .ContentItemHtml>h2,
-body.ribbit .col-md-6 .ContentItemHtml>h2,
+body.ribbit .row:not(.flex-row) > .col-md-6 .ContentItemHtml>h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact.card .row.heading h2,
 body.ribbit .card .ContentMainHeader {
     font-size: 16px;
+}
+
+/*** paragraph with extra margin ***/
+
+body.ribbit .extra-p-margin p:not(:last-child) {
+    margin-bottom: 24px;
 }
 
 /* Paragraph on multi Card */
@@ -181,7 +193,7 @@ body {
 .hl-secondary-row-bkgd h5,
 .hl-secondary-row-bkgd h6,
 .hl-secondary-row-bkgd p {
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
 }
 
 body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
@@ -664,7 +676,7 @@ body.ribbit :not(.no-theme) .btn-success:hover:not(:disabled),
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary,
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus) {
     background-color: var(--hl-bs--secondary);
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
     border: none;
 }
 
@@ -749,7 +761,7 @@ body.ribbit .navbar-default .navbar-nav>.dropdown.active>a .caret::before {
 
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle::after,
 body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary.dropdown-toggle:is(:hover, :focus)::after {
-    border-top-color: var(--hl-bs--btn-secondary-text);
+    border-top-color: var(--ui-secondary-text);
 }
 
 .LibraryEntriesDashboard .page-size-caret svg {
@@ -1889,7 +1901,7 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
 }
 
 .promo-tile.overline .HtmlContent>p:first-of-type>strong {
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
     font-size: 10px;
     line-height: 1.2;
     text-transform: uppercase;
@@ -2289,7 +2301,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     position: relative;
 }
 
-.card.gray-card {
+#MPOuterMost #MPOuter .card.gray-card {
     box-shadow: none;
     background: var(--hl-bs--gray-100);
 }
@@ -2488,7 +2500,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 
 .card.full-width-icon .HtmlContent>p:first-child i {
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
     position: relative;
 }
 
@@ -2515,6 +2527,56 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 .card.full-width-icon p:nth-last-child(2) {
     margin-bottom: 24px;
 }
+
+/****** primary + secondary cards ******/
+
+/*** primary ***/
+
+#MPOuterMost #MPOuter .card.primary {
+    background-color: var(--hl-bs--primary);
+}
+#MPOuterMost #MPOuter .card.primary h2,
+#MPOuterMost #MPOuter .card.primary h3,
+#MPOuterMost #MPOuter .card.primary h4,
+#MPOuterMost #MPOuter .card.primary h5,
+#MPOuterMost #MPOuter .card.primary p {
+    color: var(--hl-bs--primary-opposite);
+}
+#MPOuterMost #MPOuter .card.primary.make-buttons em a {
+    color: var(--hl-bs--primary-opposite);
+    background: transparent;
+    border: 2px solid var(--hl-bs--primary-opposite);
+}
+#MPOuterMost #MPOuter .card.primary.make-buttons em a:is(:hover, :focus) {
+    border-color: var(--hl-bs--primary-opposite);
+    background: var(--hl-bs--primary-opposite);
+    color: var(--hl-bs--primary);
+}
+
+/*** secondary ***/
+
+#MPOuterMost #MPOuter .card.secondary {
+    background-color: var(--hl-bs--secondary);
+}
+#MPOuterMost #MPOuter .card.secondary h2,
+#MPOuterMost #MPOuter .card.secondary h3,
+#MPOuterMost #MPOuter .card.secondary h4,
+#MPOuterMost #MPOuter .card.secondary h5,
+#MPOuterMost #MPOuter .card.secondary p {
+    color: var(--ui-secondary-text);
+}
+#MPOuterMost #MPOuter .card.secondary.make-buttons em a {
+    color: var(--ui-secondary-text);
+    background: transparent;
+    border: 2px solid var(--ui-secondary-text);
+}
+#MPOuterMost #MPOuter .card.secondary.make-buttons em a:is(:hover, :focus) {
+    border-color: var(--ui-secondary-text);
+    background: var(--ui-secondary-text);
+    color: var(--hl-bs--secondary);
+}
+
+/****** bios ******/
 
 .team {
     padding: 8px;
@@ -3905,7 +3967,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 }
 
 .col-md-6 .HLEventList ul li .date-block .calendary-number {
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
     font-weight: 700;
     font-size: 51px;
     margin-bottom: 8px;
@@ -3919,7 +3981,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 }
 
 .col-md-6 .HLEventList ul li .date-block .calendar-month {
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
     text-transform: uppercase;
     font-weight: 400;
     font-size: 18px;
@@ -4000,7 +4062,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 }
 
 .col-md-6 .HLMyDocuments .listIconContainer div::before {
-    color: var(--hl-bs--btn-secondary-text);
+    color: var(--ui-secondary-text);
     font-size: 24px;
     line-height: 1;
 }
