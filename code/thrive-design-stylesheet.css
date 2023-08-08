@@ -821,7 +821,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 .make-buttons.dark-outline em a {
     background: transparent;
     color: var(--hl-bs--primary);
-    border-color: 2px solid var(--hgl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
     border-radius: 4px;
     transition: 0.3s;
 }
