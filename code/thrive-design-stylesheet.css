@@ -1599,16 +1599,13 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 @media (min-width: 992px) {
     .row-wide:not(.default-pad) > .col-md-6:first-child,
-    .row-wide:not(.default-pad) > .col-md-8:first-child,
-    .row-wide:not(.default-pad) > .col-md-9:first-child {
+    .row-wide:not(.default-pad) > .col-md-8:first-child {
         padding-right: 24px;
     }
     
     .row-wide:not(.default-pad) > .col-md-6:last-child,
     .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
-    .row-wide:not(.default-pad) > .col-md-9 + .col-md-3,
-    .row-wide:not(.default-pad) > .col-md-8:last-child,
-    .row-wide:not(.default-pad) > .col-md-9:last-child {
+    .row-wide:not(.default-pad) > .col-md-8:last-child {
         padding-left: 24px;
     }
 }
@@ -2277,18 +2274,19 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
     flex-direction: column;
 }
-.flex-cards .card.img {
+.flex-cards .card.ContentItemHtml {
     display: flex;
     flex-direction: column;
 }
 .flex-cards .card.img .text-container,
-.flex-cards .card.img .text-container .HtmlContent {
+.flex-cards .card .HtmlContent {
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: unset;
 }
-.flex-cards .card.img.make-buttons .text-container p:last-child {
+.flex-cards .card.make-buttons p:last-child,
+.flex-cards .card.make-link p:last-child {
     margin-top: auto;
 }
 
@@ -2389,11 +2387,21 @@ body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.card,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.heading,
 .feed-list .layout-grid-cell-children {
-    padding: 16px;
+    padding: 24px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
     border: none;
+}
+.col-md-3 .ContentItemHtml.card:not(.link-card):not(.team),
+.col-md-3 .ContentItemMVC.card,
+.col-md-3 .ContentUserControl.card,
+.col-md-3 .card.link-card a,
+.col-md-3 .card.team button,
+body.ribbit .col-md-3 .QuickLinksWidget .bootstrap-4 .quick-links,
+body.ribbit:not(.interior) .row>div.col-md-3 >div[class*="Content"] .HLLandingControl.card,
+body.ribbit:not(.interior) .row>div.col-md-3 >div.FeedWidget .row.heading {
+    padding: 16px;
 }
 
 #MPOuterMost .ContentItemHtml.card.img {
@@ -2413,7 +2421,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     color: var(--hl-bs--default-text);
 }
 
-#MPOuterMost .ContentItemHtml.card.img h3 {
+#MPOuterMost .ContentItemHtml.card h3 {
     margin-top: 0;
 }
 
@@ -2423,6 +2431,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     border-radius: 50%;
     border: 3px solid #fff;
     background-color: var(--hl-bs--secondary);
+    color: var(--ui-secondary-text);
     font-size: 44px;
     display: flex;
     justify-content: center;
@@ -2442,7 +2451,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 .ContentItemHtml.card:not(.link-card):not(.team),
 .ContentItemMVC.card {
-    padding: 16px;
     position: relative;
 }
 
