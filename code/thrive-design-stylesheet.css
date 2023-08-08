@@ -2,6 +2,8 @@
 
 :root {
     --ui-secondary-text: [TextOnSecondary];
+    --cp-link-color: #00509D;
+    --link-hover-color: #003F88;
 }
 
 /************ theme basics ************/
@@ -648,6 +650,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     border: 2px solid #fff;
 }
 
+
 body.ribbit .btn-ghost {
     color: var(--hl-bs--default-text);
     background: var(--hl-bs--gray-100);
@@ -743,6 +746,125 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-300);
 }
+
+/* Secondary Button */
+
+.make-buttons.secondary em a {
+    background-color: var(--hl-bs--secondary);
+    color: var(--hl-bs--primary);
+    position: relative;
+}
+
+
+.make-buttons.secondary em a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.make-buttons.secondary em a:is(:hover, :focus):before {
+    opacity: 0.4;
+    transition: 0.3s;;
+}
+
+/* White Button */
+
+.make-buttons.grey em a {
+    background-color: #f5f5f5;
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+.make-buttons.grey em a:is(:hover, :focus) {
+    background-color: #e4e4e4;
+    color: var(--hl-bs--primary);
+}
+
+/* White Button */
+
+.make-buttons.white em a {
+    background-color: #fff;
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+.make-buttons.white em a:is(:hover, :focus) {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+/* White Outline Button */
+
+.make-buttons.white-outline em a {
+    background-color: var(--hl-bs--primary);
+    border-color: 2px solid #fff;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.make-buttons-white-outline em a:is(:hover, :focus) {
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+/* Dark Outline Button */
+
+.make-buttons.dark-outline em a {
+    background-color: #fff;
+    border-color: 2px solid var(--hgl-bs--primary);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.make-buttons-dark-outline em a:is(:hover, :focus) {
+    background-color: var(--hl-bs--primary);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.make-buttons.cta em a {
+    border: 0;
+    background-color: transparent;
+    color: var(--cp-link-color);
+    position: relative;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+}
+
+.make-buttons.cta em a::after {
+    content: '\f061';
+    height: 13px;
+    width: 14px;
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Font Awesomne 5 Pro';
+    margin-left: 8px;
+}
+.make-buttons.cta em a:is(:hover, :focus) {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+
+.make-buttons.cta,small em a {
+    font-size: 14px;
+}
+
+
+.make-buttons.cta.small em a::after {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
 
 /*** carets ***/
 
