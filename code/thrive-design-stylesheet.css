@@ -840,7 +840,6 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     padding: 0;
     display: flex;
     font-size: 16px;
-    align-items: center;
 }
 
 .make-buttons.cta em a::after {
