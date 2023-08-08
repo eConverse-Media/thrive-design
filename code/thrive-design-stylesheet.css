@@ -818,21 +818,21 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* Dark Outline Button */
 
 .make-buttons.dark-outline em a {
-    background-color: #fff;
+    background: #fff;
     border-color: 2px solid var(--hgl-bs--primary);
     border-radius: 4px;
     transition: 0.3s;
 }
 
 .make-buttons-dark-outline em a:is(:hover, :focus) {
-    background-color: var(--hl-bs--primary);
+    background: var(--hl-bs--primary);
     color: #fff;
     transition: 0.3s;
 }
 
 .make-buttons.cta em a {
     border: 0;
-    background-color: transparent;
+    background: transparent;
     color: var(--cp-link-color);
     position: relative;
     padding: 0;
