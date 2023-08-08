@@ -10,7 +10,7 @@ handleSearch = () => {
         "Search..."
     );
 
-    $(".search-wrap").insertAfter("#MPSearchBlock");
+    $(".search-wrap").insertBefore("#RibbitWelcome");
     $(document).click(function (e) {
         var searchBar = $(".search-bar-top"),
             searchButton = $(".search-btn-top"),
