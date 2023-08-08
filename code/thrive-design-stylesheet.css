@@ -804,7 +804,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 .make-buttons.white-outline em a {
     background-color: var(--hl-bs--primary);
-    border-color: 2px solid #fff;
+    border: 2px solid #fff;
     border-radius: 4px;
     transition: 0.3s;
 }
@@ -846,7 +846,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     width: 14px;
     font-size: 14px;
     font-weight: 900;
-    font-family: 'Font Awesomne 5 Pro';
+    font-family: 'Font Awesome 5 Pro';
     margin-left: 8px;
 }
 .make-buttons.cta em a:is(:hover, :focus) {
