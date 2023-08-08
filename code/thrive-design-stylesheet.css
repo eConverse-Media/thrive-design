@@ -809,8 +809,9 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     transition: 0.3s;
 }
 
-.make-buttons-white-outline em a:is(:hover, :focus) {
-    color: var(--hl-bs--primary);
+.make-buttons.white-outline em a:is(:hover, :focus) {
+    background: var(--hl-bs--primary);
+    color: white;
     transition: 0.3s;
 }
 
@@ -823,7 +824,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     transition: 0.3s;
 }
 
-.make-buttons-dark-outline em a:is(:hover, :focus) {
+.make-buttons.dark-outline em a:is(:hover, :focus) {
     background: var(--hl-bs--primary);
     color: #fff;
     transition: 0.3s;
