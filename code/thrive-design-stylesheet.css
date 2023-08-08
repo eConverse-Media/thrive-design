@@ -121,18 +121,12 @@ body.ribbit .col-md-6 .ContentUserControl .heading {
 
 body.ribbit .col-md-4 .ContentUserControl .heading h2,
 body.ribbit .col-md-6 .ContentUserControl .heading h2,
-body.ribbit .col-md-4 .ContentItemHtml>h2,
+body.ribbit .home .col-md-3 .ContentItemHtml>h2,
 body.ribbit .row:not(.flex-row) > .col-md-6 .ContentItemHtml>h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact.card .row.heading h2,
 body.ribbit .card .ContentMainHeader {
     font-size: 16px;
-}
-
-/*** paragraph with extra margin ***/
-
-body.ribbit .extra-p-margin p:not(:last-child) {
-    margin-bottom: 24px;
 }
 
 /* Paragraph on multi Card */
@@ -153,14 +147,6 @@ body.ribbit .extra-p-margin p:not(:last-child) {
     background-color: transparent !important;
 }
 
-body.ribbit .overline p:first-of-type>strong {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
 @media (max-width: 991px) {
     .col-md-12>.FeaturedCardGrid .featured-card-single:not(.layout-hero) .px-5 {
         padding-left: 0 !important;
@@ -172,6 +158,11 @@ body.ribbit .overline p:first-of-type>strong {
 
 body {
     overflow-x: hidden;
+}
+
+p:has(img),
+p:has( > i) {
+    margin-bottom: 0;
 }
 
 .hl-primary-row-bkgd,
@@ -1224,7 +1215,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.card.ContentItemReact 
 body.ribbit .card .ContentMainHeader,
 body.ribbit .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit .ContentUserControl .narrow-widget.widget-container .widget-header h2,
-body.ribbit .card h2 {
+body.ribbit .home .col-md-3 .card h2 {
     padding-bottom: 16px;
     border-bottom: 1px solid #e9e9e9;
     font-weight: 500;
@@ -1235,6 +1226,14 @@ body.ribbit .card h2 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #666;
+}
+
+body.ribbit .card h2 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 4px;
 }
 
 body.ribbit .alt-h2 h2,
@@ -1461,18 +1460,23 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     margin: unset;
 }
 
-/************ homepage ************/
+/************ extra padding between columns ************/
 
-.home .row-wide>.col-md-6:first-child,
-.memberhome .row-wide>.col-md-6:first-child,
-.member-dashboard .row-wide>.col-md-4:first-child {
-    padding-right: 24px;
-}
 
-.home .row-wide>.col-md-6:last-child,
-.memberhome .row-wide>.col-md-6:last-child,
-.member-dashboard .row-wide>.col-md-8:last-child {
-    padding-left: 24px;
+@media (min-width: 992px) {
+    .row-wide:not(.default-pad) > .col-md-6:first-child,
+    .row-wide:not(.default-pad) > .col-md-8:first-child,
+    .row-wide:not(.default-pad) > .col-md-9:first-child {
+        padding-right: 24px;
+    }
+    
+    .row-wide:not(.default-pad) > .col-md-6:last-child,
+    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
+    .row-wide:not(.default-pad) > .col-md-9 + .col-md-3,
+    .row-wide:not(.default-pad) > .col-md-8:last-child,
+    .row-wide:not(.default-pad) > .col-md-9:last-child {
+        padding-left: 24px;
+    }
 }
 
 /************ slick arrows & dots ************/
@@ -1895,23 +1899,8 @@ body.ribbit .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a
     border-bottom: 0;
 }
 
-.promo-tile .HtmlContent>h2:nth-child(2),
-.promo-tile.overline .HtmlContent>p:nth-child(2) {
+.promo-tile .HtmlContent>h2:nth-child(2) {
     margin-top: auto;
-}
-
-.promo-tile.overline .HtmlContent>p:first-of-type>strong {
-    color: var(--ui-secondary-text);
-    font-size: 10px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    padding: 3px 6px;
-    border-radius: 4px;
-    background: var(--hl-bs--secondary);
-    border-radius: 4px;
-    margin-bottom: 0;
 }
 
 .promo-tile h2 {
@@ -2154,6 +2143,20 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
     flex-direction: column;
 }
+.flex-cards .card.img {
+    display: flex;
+    flex-direction: column;
+}
+.flex-cards .card.img .text-container,
+.flex-cards .card.img .text-container .HtmlContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: unset;
+}
+.flex-cards .card.img.make-buttons .text-container p:last-child {
+    margin-top: auto;
+}
 
 .FeaturedCardGrid.no-image .img-container {
     display: none;
@@ -2276,6 +2279,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     color: var(--hl-bs--default-text);
 }
 
+#MPOuterMost .ContentItemHtml.card.img h3 {
+    margin-top: 0;
+}
 
 #MPOuterMost .ContentItemHtml.card.img i:not(.fa-pen) {
     width: 100px;
@@ -2287,12 +2293,17 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -76px;
+    position: absolute;
+    top: -53px;
+    left: 24px;
 }
 
 #MPOuterMost .ContentItemHtml.card.img .text-container {
     padding: 24px;
     position: relative;
+}
+#MPOuterMost .ContentItemHtml.card.icon-card .text-container {
+    padding-top: 48px;
 }
 
 .ContentItemHtml.card:not(.link-card):not(.team),
@@ -2316,6 +2327,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     height: 205.717px;
     aspect-ratio: 2.81;
     width: 100%;
+    overflow: hidden;
 }
 
 
@@ -2462,10 +2474,6 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 .card .HtmlContent>i {
     font-size: 40px;
     color: var(--hl-bs--primary);
-}
-
-.card .HtmlContent>p:first-child {
-    margin-bottom: 0;
 }
 
 .card.make-buttons em:not(:last-child) {
