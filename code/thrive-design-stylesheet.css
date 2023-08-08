@@ -750,7 +750,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* Secondary Button */
 
 .make-buttons.secondary em a {
-    background-color: var(--hl-bs--secondary);
+    background: var(--hl-bs--secondary);
     color: var(--hl-bs--primary);
     position: relative;
 }
@@ -763,7 +763,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background: #fff;
     opacity: 0;
     transition: 0.3s;
 }
@@ -776,26 +776,26 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* White Button */
 
 .make-buttons.grey em a {
-    background-color: #f5f5f5;
+    background: #f5f5f5;
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
 .make-buttons.grey em a:is(:hover, :focus) {
-    background-color: #e4e4e4;
+    background: #e4e4e4;
     color: var(--hl-bs--primary);
 }
 
 /* White Button */
 
 .make-buttons.white em a {
-    background-color: #fff;
+    background: #fff;
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
 .make-buttons.white em a:is(:hover, :focus) {
-    background-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
@@ -803,14 +803,13 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* White Outline Button */
 
 .make-buttons.white-outline em a {
-    background-color: var(--hl-bs--primary);
+    background: transparent;
     border: 2px solid #fff;
     border-radius: 4px;
     transition: 0.3s;
 }
 
 .make-buttons-white-outline em a:is(:hover, :focus) {
-    background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
