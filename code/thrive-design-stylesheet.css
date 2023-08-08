@@ -2227,6 +2227,7 @@ body.ribbit .QuickLinksWidget {
 
 .ContentItemHtml.card:not(.link-card):not(.team),
 .ContentItemMVC.card,
+.ContentUserControl.card,
 .card.link-card a,
 .card.team button,
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
@@ -2554,6 +2555,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 
     .ContentItemHtml.card:not(.link-card):not(.team),
     .ContentItemMVC.card,
+    .ContentUserControl.card,
     .card.link-card a,
     .card.team button {
         max-width: 500px;
@@ -2866,10 +2868,10 @@ body.has-modal.bio-modal-open {
     margin-top: 32px;
 }
 
-/* .sponsors>.col-md-12.slick-slider .slick-track,
+/* .sponsors>.col-md-12.slick-slider .slick-track, */
 .grid-sponsors>.col-md-12 {
     display: flex;
-} */
+}
 
 .grid-sponsors>.col-md-12 {
     flex-wrap: wrap;
