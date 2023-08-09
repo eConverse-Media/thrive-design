@@ -741,8 +741,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* Secondary Button */
 
 .make-buttons.secondary em a {
-    background: linear-gradient(#ffff, rgba(255,255,255/40%), rgba(255 255 255/40%)) top/100% 800%;
-    background-color: var(--hl-bs--secondary);
+    background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
     color: var(--hl-bs--primary);
     
 }
