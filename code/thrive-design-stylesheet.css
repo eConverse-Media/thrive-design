@@ -852,7 +852,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 }
 
 
-.make-buttons.cta,small em a {
+.make-buttons.cta.small em a {
     font-size: 14px;
 }
 
