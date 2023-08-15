@@ -741,22 +741,18 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* Secondary Button */
 
 .make-buttons.secondary em a {
-    background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
+    background: linear-gradient(rgb(255 255 255 0%), rgb(255 255 255/40%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
     color: var(--hl-bs--primary);
     
 }
-
-
 
 .make-buttons.secondary em a:is(:hover, :focus) {
     background-position: bottom;
     transition: 0.3s;
 }
 
-/* .make-buttons.secondary em a:is(:hover, :focus):before {
-    opacity: 0.4;
-    transition: 0.3s;;
-} */
+
 
 /* White Button */
 
