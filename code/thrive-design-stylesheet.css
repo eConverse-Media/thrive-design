@@ -211,7 +211,7 @@ body.ribbit:not(.interior).bodyBackground {
     background-color: #fff;
 }
 
-.row-full[class="bg-"] {
+.row-full[class*="bg-"] {
     position: relative;
 }
 
@@ -240,6 +240,7 @@ body.ribbit:not(.interior).bodyBackground {
 .row-full.bg-primary,
 .row-full.bg-primary-light,
 .row-full.bg-primary-dark,
+.row-full.bg-primary-light-grey,
 .row-full.bg-primary-medium-grey {
     background-color: var(--hl-bs--primary);
 }
