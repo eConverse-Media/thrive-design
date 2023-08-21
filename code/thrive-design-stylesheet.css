@@ -1038,18 +1038,83 @@ body.ribbit .make-link-standalone a.link-standalone::after {
 /* Promo Section Background Colours */
 
 .promo {
-    background-color: var(--hl-bs--primary);
     position: relative;
 }
 
-.promo.light-graphic::after {
+.promo.primary {
+    background-color: var(--hl-bs--primary);
+}
+.promo.secondary {
+    background-color: var(--hl-bs--secondary);
+}
+.promo.black {
+    background-color: #000;
+}
+.promo.secondary.light {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+.promo.secondary.dark {
+    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+.promo.primary.light {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.promo.primary.dark {
+    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.promo.grey.light {
+    background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.promo.grey.medium {
+    background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.promo.white {
+    background: #FFF;
+    background-position: bottom;
+}
+
+.promo::after {
     height: 157px;
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
+    background-size: cover;
+}
+
+.promo > div {
+    position: relative;
+    z-index: 1;
+}
+
+.promo h2, .promo p {
+    color: white;
+}
+
+.promo.white h2, .promo.white p {
+    color: #000;
+}
+
+
+.promo.light-graphic::after {
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png'); 
+}
+
+.promo.dark-graphic::after {
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/dark-graphic.png'); 
 }
 
 
