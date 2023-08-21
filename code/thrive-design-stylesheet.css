@@ -673,8 +673,8 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 .make-buttons.outline em a,
 .make-buttons.outline-first em:first-child a:first-child {
     background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
+    color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
     padding: 8px 18px;
 }
 
