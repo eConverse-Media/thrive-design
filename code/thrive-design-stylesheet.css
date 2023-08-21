@@ -1035,6 +1035,24 @@ body.ribbit .make-link-standalone a.link-standalone::after {
 
 /************ Layout Classes ************/
 
+/* Promo Section Background Colours */
+
+.promo {
+    background-color: var(--hl-bs--primary);
+    position: relative;
+}
+
+.promo.light-graphic::after {
+    height: 157px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
+}
+
+
 .no-bottom-padding {
     padding-bottom: 0 !important;
 }
