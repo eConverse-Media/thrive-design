@@ -680,9 +680,9 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 
 .make-buttons.outline em a:is(:hover, :focus),
 .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
-    color: var(--hl-bs--primary);
-    background-color: #fff;
-    border: 2px solid #fff;
+    color: #fff;
+    background-color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
 }
 
 
