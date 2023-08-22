@@ -396,8 +396,8 @@ body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding.no-bottom-pa
     padding-bottom: 0;
 }
 
-#MainCopy_ContentWrapper .row>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
-#MainCopy_ContentWrapper .row>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
+#MainCopy_ContentWrapper .row:not(.cards)>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
+#MainCopy_ContentWrapper .row:not(.cards)>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
     margin-top: 16px;
 }
 
@@ -2370,6 +2370,22 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 /*** multiple instances of a featured card in a row ***/
 
+.cards > div {
+    display: flex;
+}
+
+.cards > div .card {
+    margin: 0 12px;
+}
+
+.cards > div .card:first-of-type {
+    margin-left: 0;
+}
+
+.cards > div .card:last-of-type {
+    margin-right: 0;
+}
+
 .flex-cards {
     display: flex;
 }
@@ -2856,11 +2872,10 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     border-radius: 8px;
     text-align: center;
     font-size: 32px;
-    color: #000;
+    color: var(--ui-secondary-text);
 }
 .card.icon.primary .HtmlContent p i {
     background-color: var(--hl-bs--primary);
-    color: #fff;
 }
 .card.icon.primary.light .HtmlContent p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
@@ -2902,6 +2917,18 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 
 .card.icon.make-link {
     text-align: center;
+}
+.card.circle-icon {
+    text-align: center;
+}
+
+.circle-icon i {
+    height: 60px;
+    width: 60px;
+    background-color: var(--hl-bs--secondary);
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--hl-bs--default-text);
 }
 
 /****** bios ******/

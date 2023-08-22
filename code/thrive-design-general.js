@@ -213,8 +213,8 @@ function handleFeaturedCards() {
     });
 }
 
-function handleCardLink() {
-    $('.card.link').each(function() {
+function handleClickableItem() {
+    $('.clickable').each(function() {
         handleLink(this);
     });
 }
@@ -222,6 +222,7 @@ function handleCardLink() {
 
 
 $(function () {
+    handleClickableItem();
     handleInteriorPadding();
     handleLinkCards();
     handleEvents();
