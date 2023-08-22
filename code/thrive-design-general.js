@@ -13,8 +13,8 @@ function handleInteriorPadding() {
     }
 }
 
-function handleLinkCards() {
-    $('.card.link-card').each(function () {
+function handleClickable() {
+    $('.clickable').each(function () {
         var self = $(this),
             link = $(self).find('a'),
             onclick = $(link).attr('onclick'),
@@ -213,18 +213,13 @@ function handleFeaturedCards() {
     });
 }
 
-function handleClickableItem() {
-    $('.clickable').each(function() {
-        handleLink(this);
-    });
-}
+
 
 
 
 $(function () {
-    handleClickableItem();
     handleInteriorPadding();
-    handleLinkCards();
+    handleClickable();
     handleEvents();
     handleSlider();
     handlePromoTile();
