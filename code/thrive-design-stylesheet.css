@@ -1160,6 +1160,14 @@ body.ribbit .make-link-standalone a.link-standalone::after {
     padding: 32px;
 }
 
+.margin-top-30 {
+    margin-top: 30px !important;
+}
+
+.clickable > a {
+    text-decoration: none;
+}
+
 /************ Header ************/
 
 body.ribbit #NAV {
