@@ -784,7 +784,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /* Secondary Button */
 
-.make-buttons.secondary em a {
+.make-buttons.secondary-bg em a {
     background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
     color: var(--hl-bs--primary);
     
@@ -792,7 +792,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 
 
-.make-buttons.secondary em a:is(:hover, :focus) {
+.make-buttons.secondary-bg em a:is(:hover, :focus) {
     background-position: bottom;
     transition: 0.3s;
 }
@@ -2635,6 +2635,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     display: block;
     text-decoration: none;
     color: var(--hl-bs--default-text);
+    
 }
 
 .card.link-card a:is(:hover, :focus),
@@ -2690,10 +2691,10 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 
 .ContentItemHtml.card:not(.team) img {
-    margin: -16px -16px 16px -16px;
+    margin: -24px -24px 24px -24px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    max-width: calc(100% + 32px);
+    max-width: calc(100% + 48px);
 }
 
 .card.member-card .user-details {
@@ -2803,22 +2804,22 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 
 /*** primary ***/
 
-#MPOuterMost #MPOuter .card.primary {
+#MPOuterMost #MPOuter .card.primary:not(.icon) {
     background-color: var(--hl-bs--primary);
 }
-#MPOuterMost #MPOuter .card.primary h2,
-#MPOuterMost #MPOuter .card.primary h3,
-#MPOuterMost #MPOuter .card.primary h4,
-#MPOuterMost #MPOuter .card.primary h5,
-#MPOuterMost #MPOuter .card.primary p {
+#MPOuterMost #MPOuter .card.primary:not(.icon) h2,
+#MPOuterMost #MPOuter .card.primary:not(.icon) h3,
+#MPOuterMost #MPOuter .card.primary:not(.icon) h4,
+#MPOuterMost #MPOuter .card.primary:not(.icon) h5,
+#MPOuterMost #MPOuter .card.primary:not(.icon) p {
     color: var(--hl-bs--primary-opposite);
 }
-#MPOuterMost #MPOuter .card.primary.make-buttons em a {
+#MPOuterMost #MPOuter .card.primary.make-buttons:not(.icon) em a {
     color: var(--hl-bs--primary-opposite);
     background: transparent;
     border: 2px solid var(--hl-bs--primary-opposite);
 }
-#MPOuterMost #MPOuter .card.primary.make-buttons em a:is(:hover, :focus) {
+#MPOuterMost #MPOuter .card.primary.make-buttons:not(.icon) em a:is(:hover, :focus) {
     border-color: var(--hl-bs--primary-opposite);
     background: var(--hl-bs--primary-opposite);
     color: var(--hl-bs--primary);
@@ -2826,25 +2827,80 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 
 /*** secondary ***/
 
-#MPOuterMost #MPOuter .card.secondary {
+#MPOuterMost #MPOuter .card.secondary:not(.icon) {
     background-color: var(--hl-bs--secondary);
 }
-#MPOuterMost #MPOuter .card.secondary h2,
-#MPOuterMost #MPOuter .card.secondary h3,
-#MPOuterMost #MPOuter .card.secondary h4,
-#MPOuterMost #MPOuter .card.secondary h5,
-#MPOuterMost #MPOuter .card.secondary p {
+#MPOuterMost #MPOuter .card.secondary:not(.icon)  h2,
+#MPOuterMost #MPOuter .card.secondary:not(.icon)  h3,
+#MPOuterMost #MPOuter .card.secondary:not(.icon)  h4,
+#MPOuterMost #MPOuter .card.secondary:not(.icon)  h5,
+#MPOuterMost #MPOuter .card.secondary:not(.icon)  p {
     color: var(--ui-secondary-text);
 }
-#MPOuterMost #MPOuter .card.secondary.make-buttons em a {
+#MPOuterMost #MPOuter .card.secondary.make-buttons:not(.icon) em a {
     color: var(--ui-secondary-text);
     background: transparent;
     border: 2px solid var(--ui-secondary-text);
 }
-#MPOuterMost #MPOuter .card.secondary.make-buttons em a:is(:hover, :focus) {
+#MPOuterMost #MPOuter .card.secondary.make-buttons:not(.icon) em a:is(:hover, :focus) {
     border-color: var(--ui-secondary-text);
     background: var(--ui-secondary-text);
     color: var(--hl-bs--secondary);
+}
+
+/* Icon Cards */
+
+.card.icon .HtmlContent p i {
+    width: 100%;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 32px;
+    color: #000;
+}
+.card.icon.primary .HtmlContent p i {
+    background-color: var(--hl-bs--primary);
+}
+.card.icon.primary.light .HtmlContent p i {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.card.icon.primary.dark .HtmlContent p i {
+    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.card.icon.secondary .HtmlContent p i {
+    background-color: var(--hl-bs--secondary);
+}
+.card.icon.secondary.light .HtmlContent p i {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+.card.icon.secondary.dark .HtmlContent p i {
+    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+.card.icon.grey.light .HtmlContent p  i {
+    background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.card.icon.grey.medium .HtmlContent p  i {
+    background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+.card.icon.white .HtmlContent p  i {
+    background: #fff;
+    color: #000;
+}
+
+.card.icon.make-link {
+    text-align: center;
 }
 
 /****** bios ******/
