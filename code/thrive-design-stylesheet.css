@@ -3347,6 +3347,7 @@ body.has-modal.bio-modal-open {
 
 .grid-sponsors .sponsor {
     padding: 8px;
+    max-width: 250px;
 }
 
 .sponsor .HtmlContent {
