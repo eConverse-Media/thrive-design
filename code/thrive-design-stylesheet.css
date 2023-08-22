@@ -981,7 +981,8 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
 .card.full-width-icon .card-link,
-body.ribbit .make-link-standalone a.link-standalone {
+body.ribbit .make-link-standalone a.link-standalone,
+.card-link em {
     font-style: normal;
     color: var(--hl-bs--primary);
     font-weight: 600;
@@ -1016,7 +1017,8 @@ body.ribbit .make-link-standalone a.link-standalone:is(:hover, :focus) {
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
 .card.full-width-icon .card-link::after,
-body.ribbit .make-link-standalone a.link-standalone::after {
+body.ribbit .make-link-standalone a.link-standalone::after,
+.card-link em::after {
     font-family: 'Font Awesome 6 Pro';
     margin-left: 8px;
     content: '\f061';
@@ -2384,6 +2386,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 .cards > div .card {
     margin: 0 12px;
+    flex: 1;
 }
 
 .cards > div .card:first-of-type {
@@ -2502,7 +2505,7 @@ body.ribbit .QuickLinksWidget {
 
 /****** HTML cards ******/
 
-.card.link-card a {
+.card.clickable a {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 100%;
@@ -2523,10 +2526,10 @@ body.ribbit .QuickLinksWidget {
     flex-direction: column;
 }
 
-.ContentItemHtml.card:not(.link-card):not(.team),
+.ContentItemHtml.card:not(.clickable):not(.team),
 .ContentItemMVC.card,
 .ContentUserControl.card,
-.card.link-card a,
+.card.clickable a,
 .card.team button,
 body.ribbit .QuickLinksWidget .bootstrap-4 .quick-links,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.card,
@@ -2538,10 +2541,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
     border: none;
 }
-.col-md-3 .ContentItemHtml.card:not(.link-card):not(.team),
+.col-md-3 .ContentItemHtml.card:not(.clickable):not(.team),
 .col-md-3 .ContentItemMVC.card,
 .col-md-3 .ContentUserControl.card,
-.col-md-3 .card.link-card a,
+.col-md-3 .card.clickable a,
 .col-md-3 .card.team button,
 body.ribbit .col-md-3 .QuickLinksWidget .bootstrap-4 .quick-links,
 body.ribbit:not(.interior) .row>div.col-md-3 >div[class*="Content"] .HLLandingControl.card,
@@ -2594,7 +2597,7 @@ body.ribbit:not(.interior) .row>div.col-md-3 >div.FeedWidget .row.heading {
     padding-top: 48px;
 }
 
-.ContentItemHtml.card:not(.link-card):not(.team),
+.ContentItemHtml.card:not(.clickable):not(.team),
 .ContentItemMVC.card {
     position: relative;
 }
@@ -2627,8 +2630,8 @@ body.ribbit:not(.interior) .row>div.col-md-3 >div.FeedWidget .row.heading {
     width: 100%;
 }
 
-.col-md-3 .card:not(.link-card):not(.team),
-.col-md-3 .card.link-card a,
+.col-md-3 .card:not(.clickable):not(.team),
+.col-md-3 .card.clickable a,
 body.ribbit .col-md-3 .QuickLinksWidget .bootstrap-4 .quick-links {
     padding: 16px;
 }
@@ -2654,7 +2657,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     line-height: 1.4;
 }
 
-.card.link-card a,
+.card.clickable a,
 .card.team button {
     display: block;
     text-decoration: none;
@@ -2662,22 +2665,26 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 
 }
 
-.card.link-card a:is(:hover, :focus),
+.card.clickable a:is(:hover, :focus),
 .card.team button:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
-.card.link-card {
+.card.clickable {
     padding: 0;
 }
 
-.card.link-card,
+.card.clickable,
 .card.team {
     box-shadow: none;
 }
 
-.card.link-card a i {
+.card.clickable p {
+    text-align: center;
+}
+
+.card.clickable a i {
     color: var(--hl-bs--primary);
     font-size: 32px;
     line-height: 60px;
@@ -2687,6 +2694,9 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     border-radius: 50%;
     background-color: var(--hl-bs--secondary);
     margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card.social ul {
@@ -2778,7 +2788,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     text-align: center;
 }
 
-.card.full-width-icon.link-card .HtmlContent>p:first-child i {
+.card.full-width-icon.clickable .HtmlContent>p:first-child i {
     background: transparent;
     margin-bottom: 0;
 }
@@ -2997,10 +3007,10 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
         flex-basis: calc(33.333333% - 16px);
     }
 
-    .ContentItemHtml.card:not(.link-card):not(.team),
+    .ContentItemHtml.card:not(.clickable):not(.team),
     .ContentItemMVC.card,
     .ContentUserControl.card,
-    .card.link-card a,
+    .card.clickable a,
     .card.team button {
         max-width: 500px;
         width: 100%;
@@ -5689,9 +5699,9 @@ body.ribbit.memberhome #MPFooterLink {
         justify-content: center;
     }
 
-    .ContentItemHtml.card:not(.link-card):not(.team),
+    .ContentItemHtml.card:not(.clickable):not(.team),
     .ContentItemMVC.card,
-    .card.link-card a,
+    .card.clickable a,
     .card.team button {
         max-width: 100%;
     }
