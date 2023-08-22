@@ -213,6 +213,14 @@ function handleFeaturedCards() {
     });
 }
 
+function handleCardLink() {
+    $('.card.link').each(function() {
+        handleLink(this);
+    });
+}
+
+
+
 $(function () {
     handleInteriorPadding();
     handleLinkCards();
