@@ -2635,7 +2635,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     display: block;
     text-decoration: none;
     color: var(--hl-bs--default-text);
-    
+
 }
 
 .card.link-card a:is(:hover, :focus),
@@ -2860,6 +2860,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 .card.icon.primary .HtmlContent p i {
     background-color: var(--hl-bs--primary);
+    color: #fff;
 }
 .card.icon.primary.light .HtmlContent p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
