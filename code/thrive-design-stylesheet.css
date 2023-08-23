@@ -2909,6 +2909,13 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 .card.icon.secondary .HtmlContent p i {
     background-color: var(--hl-bs--secondary);
+    transition: 0.3s;
+}
+.card.icon.secondary.clickable:is(:hover,:focus) .HtmlContent p i {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+    transition: 0.3s;
 }
 .card.icon.secondary.light .HtmlContent p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
