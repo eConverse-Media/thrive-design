@@ -87,7 +87,7 @@ function handlePromoTile() {
 }
 
 function handleHero() {
-    handleBgImage($('.hero-text'), $('.hero'));
+    handleBgImage($('.hero-text'), $('.hero:not(.overlay-primary)'));
 }
 
 function handlePageTitleBg() {
