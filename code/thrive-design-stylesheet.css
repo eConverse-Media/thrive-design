@@ -197,6 +197,10 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>d
     margin-bottom: 16px;
 }
 
+body.ribbit.memberhome  .row.row.hl-lg-v-padding {
+    padding-bottom: 0;
+}
+
 .rounded-img img {
     border-radius: 8px;
 }
@@ -265,6 +269,7 @@ body.ribbit:not(.interior).bodyBackground {
     height: 480px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .memberhome .hero {
@@ -5764,6 +5769,11 @@ body.ribbit.memberhome #FOOTER,
 body.ribbit.memberhome #MPOuterFooter,
 body.ribbit.memberhome #MPFooterLink {
     display: block !important;
+}
+
+#MPFooterLink.row.siteFrame {
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 #MPOuterFooter p {
