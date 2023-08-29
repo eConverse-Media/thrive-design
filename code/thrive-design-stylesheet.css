@@ -1380,9 +1380,13 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
     align-items: center
 }
 
-#searchColumn {
-    position: relative;
+/* Making the search Column position Absolute to avvoid expanded from shrinking the nav */
+
+body.ribbit #searchColumn {
+    position: absolute;
 }
+
+
 
 .search-wrap {
     border: 1px solid transparent;
@@ -1392,6 +1396,7 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
     height: 48px;
     transition: width .3s;
     background: #fff;
+    position: relative;
 }
 
 .search-wrap.not-logged-in {
@@ -1399,7 +1404,7 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
 }
 
 .search-wrap.open {
-    width: 300px;
+    width: 250px;
     transition: width .3s;
     border: 1px solid var(--hl-bs--primary);
     box-shadow: 0px 9px 10px 2px rgba(0, 0, 0, 0.03),
@@ -1413,7 +1418,10 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
     opacity: 0;
     z-index: -1;
     transition: .3s;
-    width: calc(100% - 48px);
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 
 .open .search-bar-top {
@@ -1430,7 +1438,7 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
     padding: 0;
     border: none;
     box-shadow: none;
-    width: calc(100% - 40px);
+    width: 100%;
     font-size: 16px;
     line-height: 22px;
     color: #5b5b5b;
@@ -1450,6 +1458,7 @@ body:not(.ribbit) #searchColumn {
     height: 46px;
     transition: width .3s;
     outline: none;
+    background: transparent
 }
 
 .SearchInputs button[id*="SearchButton"] {
@@ -1506,16 +1515,19 @@ body.ribbit .search-bar-top button[id*="SearchButton"],
     border: none;
     background: transparent;
     margin: 10px 0px 0px 4px;
-    position: relative;
+    position: absolute;
     transition: background-color .3s;
     font-size: 16px;
     line-height: 16px;
     color: #2E334E;
+    right: 0px;
+    z-index: 15;
 }
 
 .open .search-btn-top {
     font-size: 12px;
     transition: background-color .3s;
+    right: 30px;
 }
 
 .search-btn-top::before {
