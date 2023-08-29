@@ -5205,6 +5205,10 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 
 @media (max-width: 992px) {
 
+    body.ribbit .navbar-header {
+    position: relative;
+    }
+
     .navbar-header {
         float: none;
     }
@@ -5655,49 +5659,6 @@ body.ribbit .ideation-home .ideation-vote .btn-secondary {
     padding: 0;
 }
 
-/****** responsive ******/
-
-@media only screen and (max-width: 1190px) {
-    .ideation-home .ideation-filter .ideation-filter-buttons {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-
-    .ideation-home .card-content>.row,
-    .ideation-home>.row {
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-
-    .ideation-home .ideation-byline .row .col-md-3 {
-        padding: 0;
-        width: 70px;
-        margin-right: 15px;
-        float: left;
-    }
-
-    .ideation-home .ideation-byline .row .col-md-9 {
-        padding: 0;
-        width: calc(100% - 85px);
-        float: left;
-    }
-}
-
-@media (max-width: 768px) {
-    .ideation-home .ideation-footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .ideation-filter .btn-group {
-        margin-bottom: 5px;
-    }
-}
-
 /************ profile card ************/
 
 .profile-snippet-card.hl-widget-card.bg-alt-bg5 {
@@ -6049,6 +6010,12 @@ body.ribbit.memberhome #MPFooterLink {
     }
 }
 
+@media only screen and (max-width: 1190px) {
+    .ideation-home .ideation-filter .ideation-filter-buttons {
+        width: 100%;
+    }
+}
+
 @media (max-width: 991px) {
 
     .footer-middle-row::before,
@@ -6205,6 +6172,38 @@ body.ribbit.memberhome #MPFooterLink {
 
 }
 
+
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .ideation-home .card-content>.row,
+    .ideation-home>.row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .ideation-home .ideation-byline .row .col-md-3 {
+        padding: 0;
+        width: 70px;
+        margin-right: 15px;
+        float: left;
+    }
+
+    .ideation-home .ideation-byline .row .col-md-9 {
+        padding: 0;
+        width: calc(100% - 85px);
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .ideation-home .ideation-footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 @media (width < 767px) {
 
     .slider .slide .HtmlContent h6,
@@ -6250,6 +6249,12 @@ body.ribbit.memberhome #MPFooterLink {
         display: block;
     }
 
+}
+
+@media (max-width: 600px) {
+    .ideation-filter .btn-group {
+        margin-bottom: 5px;
+    }
 }
 
 
