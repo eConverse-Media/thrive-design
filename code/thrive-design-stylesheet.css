@@ -1489,7 +1489,7 @@ body.ribbit .search-bar-top button[id*="SearchButton"],
     height: 30px;
     border-radius: 50%;
     border: none;
-    background-color: #F5F5F5;
+    background: transparent;
     margin: 10px 0px 0px 4px;
     position: relative;
     transition: background-color .3s;
