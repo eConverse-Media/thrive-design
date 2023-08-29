@@ -675,6 +675,10 @@ table tr td {
 
 /****** buttons ******/
 
+.Login a.btn-primary {
+    padding: 20px 10px;
+}
+
 .make-buttons em {
     margin: -8px;
     display: inline-block;
