@@ -1371,6 +1371,12 @@ body.ribbit .navbar-default .navbar-nav>li>a {
 
 /****** search ******/
 
+/* Fixing parent searchColumn div to prevent position absolute div overlapping nav items */
+
+#MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse>.row>.col-md-12 {
+    padding-right:225px;
+}
+
 body.ribbit #SearchControl_SearchButton,
 #MPOuterMost #MPSearchBlock {
     display: none;
@@ -1384,6 +1390,7 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
 
 body.ribbit #searchColumn {
     position: absolute;
+    right:0;
 }
 
 
@@ -4259,9 +4266,19 @@ body.ribbit .community-home .row.no-community-html.row-full {
 /*** responsive ***/
 
 @media (max-width: 1200px) {
+    #NAV >.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .commHTMLOptionsToAttach>div>.col-md-12 {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left:25px;
+        margin-right:25px;
     }
 }
 
