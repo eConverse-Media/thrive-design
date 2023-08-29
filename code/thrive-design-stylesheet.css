@@ -266,6 +266,11 @@ body.ribbit:not(.interior).bodyBackground {
     display: flex;
     align-items: center;
 }
+
+.memberhome .hero {
+    height: 300px;
+}
+
 .hero.overlay::before{
     background-color: rgba(0, 0, 0, 0.50);
 }
@@ -1331,6 +1336,7 @@ body.ribbit .make-link-standalone a.link-standalone::after,
 }
 
 .white-text,
+.white-text h1,
 .white-text h2,
 .white-text p {
     color: white;
@@ -1658,6 +1664,16 @@ body.ribbit .row>div[class*="col-md-"]>div.card[class*="Content"] .HLLandingCont
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #666;
+}
+
+body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .engagement-leaderboard {
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+body.ribbit .engagement-leaderboard ul.nav.nav-tabs > li > a {
+    padding: 8px 0;
 }
 
 body.ribbit .card h2 {
@@ -3238,41 +3254,6 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     color: var(--hl-bs--default-text);
 }
 
-@media (max-width: 991px) {
-    .cards>.col-md-12 {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .cards .card {
-        flex-basis: calc(33.333333% - 16px);
-    }
-
-    .ContentItemHtml.card:not(.clickable):not(.team),
-    .ContentItemMVC.card,
-    .ContentUserControl.card,
-    .card.clickable a,
-    .card.team button {
-        max-width: 500px;
-        width: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .cards .card,
-    .col-md-6 .cards .card {
-        flex-basis: calc(50% - 16px);
-    }
-}
-
-@media (max-width: 360px) {
-
-    .cards .card,
-    .col-md-6 .cards .card {
-        flex-basis: calc(100% - 16px);
-    }
-}
 
 /****** bio modals ******/
 
@@ -3640,6 +3621,12 @@ body.ribbit #MPOuterMost .top-blog-slider-wrapper>div,
 body.ribbit #MPOuterMost .top-tile-slider-wrapper>div {
     max-width: 1200px;
     margin: 40px auto;
+}
+
+
+.blog-list-featured-entry .item-content {
+    display: flex;
+    align-items: center;
 }
 
 body.ribbit.blogs #MainCopy_ContentWrapper {
@@ -5218,6 +5205,11 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     font-size: 21px !important;
 }
 
+.memberhome .community-events-list h3 a {
+    font-size: 18px !important;
+
+}
+
 .community-events-list .calendar-stamp {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--secondary);
@@ -5967,6 +5959,24 @@ body.ribbit.memberhome #MPFooterLink {
         justify-content: center;
     }
 
+    .cards>.col-md-12 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards .card {
+        flex-basis: calc(33.333333% - 16px);
+    }
+
+    .ContentItemHtml.card:not(.clickable):not(.team),
+    .ContentItemMVC.card,
+    .ContentUserControl.card,
+    .card.clickable a,
+    .card.team button {
+        max-width: 500px;
+        width: 100%;
+    }
+
     .ContentItemHtml.card:not(.clickable):not(.team),
     .ContentItemMVC.card,
     .card.clickable a,
@@ -6010,6 +6020,7 @@ body.ribbit.memberhome #MPFooterLink {
     body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
         margin-bottom: 15px;
     }
+
 
     .ribbit .featured-tile-slider-wrapper .slick-dots li {
         border-bottom: none;
@@ -6132,3 +6143,18 @@ body.ribbit.memberhome #MPFooterLink {
     }
 }
 
+@media (max-width: 500px) {
+
+    .cards .card,
+    .col-md-6 .cards .card {
+        flex-basis: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 360px) {
+
+    .cards .card,
+    .col-md-6 .cards .card {
+        flex-basis: calc(100% - 16px);
+    }
+}
