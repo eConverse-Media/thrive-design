@@ -30,7 +30,7 @@ function handleClickable() {
             $(link).closest('p').addClass('card-link');
         }
         
-        if ($(link).parent().is('h3')) {
+        if ($(link).parent().is('h3') || $(this).hasClass('link-text')) {
             $(link).contents().unwrap();
         } else {
             $(link).hide();
@@ -62,7 +62,7 @@ function handleSlider() {
 
     $('.slide').wrapAll('<div class="slider"></div>');
 
-    $('.slider').slick({
+    $('.slider:not(.hero)').slick({
         dots: true,
         arrows: true,
         infinite: true,
@@ -106,7 +106,7 @@ function handleImageCards() {
         $(this).wrapInner('<div class="text-container"></div>');
         let Img = $(this).find('img');
         let ImgSrc = $(Img).attr('src');
-        $(this).prepend('<div class="img-container"><img src="' + ImgSrc + '"></div> ');
+        $(this).prepend('<div class="img-container" style="background-image: url('+ ImgSrc +'"></div> ');
     });
 }
 
