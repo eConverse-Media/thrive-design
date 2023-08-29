@@ -5200,7 +5200,15 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 @media (max-width: 992px) {
 
     body.ribbit .navbar-header {
+        display: flex;
+        }
+
+/*     body.ribbit .navbar-header {
     position: relative;
+    }
+
+    body.ribbit #RibbitWelcomeMobile {
+        display:block
     }
 
 
@@ -5209,15 +5217,54 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+    } */
+
+    body.ribbit #searchColumn {
+        display: block !important;
+        position: static;
     }
+
+    body.ribbit #SearchControl_SearchButton, #MPOuterMost #MPSearchBlock {
+        display: block;
+    }
+
+    body.ribbit .navbar-header #LogoNavPlaceholder {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex: 1 0;
+        flex: 1 0;
+        margin-left: 1em;
+      }
+
+    body.ribbit #RibbitWelcomeMobile {
+        display: block;
+      }
+
+      body.ribbit #RibbitWelcome {
+        display: none;
+      }
 
     .navbar-header {
         float: none;
     }
-    .navbar-toggle {
+    .navbar-default .navbar-toggle {
         display: block;
-        border-color: transparent;
+        border: 0;
     }
+
+    .navbar-default .navbar-toggle:is(:hover,:focus) {
+        border: 0;
+        background: transparent;
+    }
+
+    body.ribbit #MPOuterHeader .navbar-toggle .icon-bar {
+        background-color: var(--hl-bs--default-text);
+    }
+
+    body.ribbit #CreateBtnWrapper {
+        display: none;
+    }
+
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
