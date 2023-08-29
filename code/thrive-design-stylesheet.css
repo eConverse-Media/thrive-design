@@ -149,12 +149,6 @@ body.ribbit .card .ContentMainHeader {
     background-color: transparent !important;
 }
 
-@media (max-width: 991px) {
-    .col-md-12>.FeaturedCardGrid .featured-card-single:not(.layout-hero) .px-5 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-}
 
 /************ basics / reset ************/
 
@@ -5209,16 +5203,26 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     position: relative;
     }
 
+
+    body.ribbit .navbar-header #LogoNavPlaceholder {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .navbar-header {
         float: none;
     }
     .navbar-toggle {
         display: block;
+        border-color: transparent;
     }
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     .navbar-collapse.collapse {
         display: none !important;
     }
@@ -6011,6 +6015,13 @@ body.ribbit.memberhome #MPFooterLink {
 }
 
 @media (max-width: 991px) {
+
+
+    .col-md-12>.FeaturedCardGrid .featured-card-single:not(.layout-hero) .px-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
 
     .footer-middle-row::before,
     .footer-bottom-row::before {
