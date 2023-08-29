@@ -4280,6 +4280,14 @@ body.ribbit .community-home .row.no-community-html.row-full {
         margin-left:25px;
         margin-right:25px;
     }
+
+
+    #MPOuterHeader #NAV > .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
 }
 
 /****** all widgets ******/
@@ -5194,6 +5202,77 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 }
 
 /****** responsive ******/
+
+@media (max-width: 992px) {
+
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .collapsing {
+        overflow: hidden !important;
+    }
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+    .navbar-nav .open .dropdown-menu>li>a {
+        line-height: 20px;
+    }
+    .navbar-nav .open .dropdown-menu>li>a,
+    .navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 25px;
+    }
+    body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default,
+    body.ribbit .navbar,
+    body.ribbit .navbar-default .navbar-nav {
+        display: inline-block;
+    }
+   body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
+        transform: none;
+        margin-left: 10px;
+        box-shadow: none
+    }
+    #MPSearchBlock {
+        display: block;
+    }
+    .search-wrap {
+        display: none;
+    }
+
+}
 
 @media (max-width: 991px) {
     .summary-edit .Content {
