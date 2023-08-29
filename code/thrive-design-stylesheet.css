@@ -5591,18 +5591,7 @@ body.ribbit .side-nav h3 {
     margin-top: 0;
 }
 
-@media (max-width: 1230px) {
-    body.ribbit .side-nav {
-        left: 15px;
-    }
-}
 
-@media (max-width: 991px) {
-    body.ribbit .side-nav {
-        position: relative;
-        left: auto;
-    }
-}
 
 /************ ideation page ************/
 
@@ -6008,6 +5997,11 @@ body.ribbit.memberhome #MPFooterLink {
     .milestone-slider .slick-arrow.slick-next {
         right: 10px;
     }
+
+    body.ribbit .side-nav {
+        left: 15px;
+    }
+
 }
 
 @media only screen and (max-width: 1190px) {
@@ -6169,6 +6163,11 @@ body.ribbit.memberhome #MPFooterLink {
         flex-direction: column;
     }
 
+
+    body.ribbit .side-nav {
+        position: relative;
+        left: auto;
+    }
 
 }
 
