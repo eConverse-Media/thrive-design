@@ -5938,6 +5938,7 @@ body.ribbit.memberhome #MPFooterLink {
         left: 15px;
     }
 
+    /************* styling to transfrom the hamburger to x *************/
     body.ribbit .icon-bar-start.collapsing + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar {
        transform: translate(0px, 7px) rotate(45deg) scale(80%, 80%);
   }
