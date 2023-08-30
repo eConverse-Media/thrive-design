@@ -5939,17 +5939,29 @@ body.ribbit.memberhome #MPFooterLink {
     }
 
     /************* styling to transfrom the hamburger to x *************/
+
+      body.ribbit .navbar-toggle .icon-bar {
+    background-color: var(--hl-bs--default-text);
+    width: 20px;
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out;
+  }
+
     body.ribbit .icon-bar-start.collapsing + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar {
        transform: translate(0px, 7px) rotate(45deg) scale(80%, 80%);
+    transition: .3s ease-out;
   }
 
   body.ribbit .icon-bar-start.collapsing + span.icon-bar + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar + span.icon-bar {
     transform: rotate(135deg) scale(0);
+    transition: .3s ease-out;
   }
   
 
   body.ribbit .icon-bar-start.collapsing + span.icon-bar + span.icon-bar + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar + span.icon-bar + span.icon-bar {
     transform: translate(0px, -5px) rotate(-45deg) scale(80%, 80%);
+    transition: .3s ease-out;
   }
 
 }
@@ -6184,6 +6196,8 @@ body.ribbit.memberhome #MPFooterLink {
     #MPButtonBar > nav > div.collapse.navbar-collapse.navbar-ex1-collapse > .row > .col-md-12 {
         padding-right: 0;
     }
+
+    
 }
 
 @media (min-width: 769px) {
