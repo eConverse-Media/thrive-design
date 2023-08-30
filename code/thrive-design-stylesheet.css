@@ -5748,6 +5748,14 @@ body.ribbit.memberhome #MPFooterLink {
 
 }
 
+/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
+
+@media only screen and (max-width: 1190px) {
+    .ideation-home .ideation-filter .ideation-filter-buttons {
+        width: 100%;
+    }
+}
+
 /*** mobile padding ***/
 
 @media (max-width: 1135px) {
@@ -5757,17 +5765,6 @@ body.ribbit.memberhome #MPFooterLink {
 }
 
 
-
-/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
-
-
-
-
-@media only screen and (max-width: 1190px) {
-    .ideation-home .ideation-filter .ideation-filter-buttons {
-        width: 100%;
-    }
-}
 
 
 @media (min-width: 992px) {
@@ -5920,14 +5917,9 @@ body.ribbit.memberhome #MPFooterLink {
         display: none;
     }
 
-
-
-
 }
 
 @media (max-width: 991px) {
-
-
     .col-md-12>.FeaturedCardGrid .featured-card-single:not(.layout-hero) .px-5 {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -6321,10 +6313,6 @@ body.ribbit.memberhome #MPFooterLink {
     body.ribbit .featured-resources .HLMyDocuments ul li {
         flex-basis: 100%;
     }
-
-
-
-
 }
 
 @media (max-width: 360px) {
