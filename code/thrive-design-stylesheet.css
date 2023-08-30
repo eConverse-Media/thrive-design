@@ -6197,7 +6197,12 @@ body.ribbit.memberhome #MPFooterLink {
         padding-right: 0;
     }
 
-    
+        /* Resetting the mb-4 margin as it makes the cards mar */
+
+        .bootstrap-4 .mb-4 {
+            margin-bottom: 0px !important;
+          }
+
 }
 
 @media (min-width: 769px) {
