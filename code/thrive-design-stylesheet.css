@@ -454,38 +454,11 @@ body.ribbit .row-wide.flex-6>.col-md-12 {
     margin-top: 8px;
 }
 
-@media (min-width: 992px) {
-    .flex-row {
-        display: flex;
-        align-items: center;
-    }
-
-    .flex-row .HtmlContent>*:first-child {
-        margin-top: 0;
-    }
-
-    .flex-row .HtmlContent>*:last-child {
-        margin-bottom: 0;
-    }
-}
-
 .flex-heading {
     margin-bottom: 10px;
 }
 
-@media (min-width: 769px) {
-    .flex-heading {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
 
-    body.ribbit .flex-heading h2 {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
 
 
 /*** removing margin on final paragraph ***/
@@ -567,50 +540,7 @@ body.ribbit #MainCopy_ContentWrapper .featured-card-multi {
     height: 140px;
 }
 
-/*** mobile padding ***/
 
-@media (max-width: 1135px) {
-    .featured-card-multi > div > div{
-        margin: 1em 0;
-    }
-}
-
-@media (max-width: 991px) {
-    #PageTitleH1 {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:first-child {
-        padding-left: 0;
-    }
-
-    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:last-child {
-        padding-right: 0;
-    }
-
-    body.ribbit .row-wide>[class*="col-"]>.row-wide,
-    body.ribbit .row-wide>[class*="col-"]>.row-full {
-        margin: 0 -8px;
-        max-width: calc(100% + 16px);
-    }
-}
-
-/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
-
-@media (max-width: 992px) {
-    .interior .row-wide div[class*="section"] {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-}
-
-@media (max-width: 991px) {
-    .interior .row-wide div[class*="section"] {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
 
 /****** unstyled lists ******/
 
@@ -1630,14 +1560,7 @@ body.ribbit #MPButtonBar .dropdown-menu .active>a {
     border-radius: 4px;
 }
 
-/* Nav width for under 1600px screens */
 
-@media (width < 1600px) {
-    #MPOuterHeader #NAV #MPButtonBar {
-        margin-left: 50px;
-        margin-right: 50px
-    }
-}
 
 /******* logo *******/
 
@@ -1927,21 +1850,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     margin: unset;
 }
 
-/************ extra padding between columns ************/
-
-
-@media (min-width: 992px) {
-    .row-wide:not(.default-pad) > .col-md-6:first-child,
-    .row-wide:not(.default-pad) > .col-md-8:first-child {
-        padding-right: 24px;
-    }
-    
-    .row-wide:not(.default-pad) > .col-md-6:last-child,
-    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
-    .row-wide:not(.default-pad) > .col-md-8:last-child {
-        padding-left: 24px;
-    }
-}
 
 /************ slick arrows & dots ************/
 
@@ -2252,20 +2160,7 @@ body.ribbit .overlay-secondary  .hero-text.make-buttons.white em + em a:is(:hove
 
 
 
-/*** responsive ***/
 
-@media (max-width: 991px) {
-    .hero.with-bg::before {
-        background: linear-gradient(to bottom, var(--hl-bs--primary), transparent);
-    }
-}
-
-@media (max-width: 550px) {
-    .hero .card.make-buttons em {
-        display: block;
-        margin-bottom: 8px;
-    }
-}
 
 /****** engagement leaderboard ******/
 
@@ -2712,11 +2607,6 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
 }
 
 
-@media (max-width: 991px) {
-    .flex-cards {
-        display: block;
-    }
-}
 
 /*** narrow column featured cards ***/
 
@@ -3442,21 +3332,6 @@ body.ribbit .cta-tile a {
     background: var(--hl-bs--gray-400);
 }
 
-/*** mobile ***/
-
-@media (max-width: 475px) {
-    .cta-tile.icon a {
-        padding-left: 24px;
-    }
-
-    .cta-tile.icon a>p:first-child {
-        position: relative;
-        top: auto;
-        left: auto;
-        margin-bottom: 10px;
-        transform: none;
-    }
-}
 
 /****** accordions ******/
 
@@ -4257,32 +4132,6 @@ body.ribbit .community-home .row.no-community-html.row-full {
 }
 
 
-/*** responsive ***/
-
-@media (max-width: 1200px) {
-    #NAV >.col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .commHTMLOptionsToAttach>div>.col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #MPOuterHeader #NAV #MPButtonBar {
-        margin-left:25px;
-        margin-right:25px;
-    }
-
-
-    #MPOuterHeader #NAV > .col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-
-}
 
 /****** all widgets ******/
 
@@ -4748,32 +4597,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     position: static;
 }
 
-/****** responsive ******/
 
-
-@media (max-width: 550px) {
-
-    .col-md-6 .HLEventList ul li>.row,
-    .col-md-6 .HLRecentBlogs ul li,
-    .col-md-6 .HLMyDocuments ul li {
-        flex-direction: column;
-    }
-
-    .home .col-md-6 .HLEventList ul li .date-block,
-    .col-md-6 .HLRecentBlogs ul li .img-container,
-    .col-md-6 .HLMyDocuments ul li .img-container {
-        margin-bottom: 16px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .home .col-md-6 .HLEventList ul li .col-md-10,
-    .col-md-6 .HLRecentBlogs ul li .text-container,
-    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
-        width: 100%;
-        padding-right: 0;
-    }
-}
 
 /****** Event Cards  ******/
 
@@ -5195,177 +5019,9 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     content: 'Ignore';
 }
 
-/****** responsive ******/
-
-@media (max-width: 992px) {
-
-    body.ribbit .navbar-header {
-        display: flex;
-        }
-
-/*     body.ribbit .navbar-header {
-    position: relative;
-    }
-
-    body.ribbit #RibbitWelcomeMobile {
-        display:block
-    }
 
 
-    body.ribbit .navbar-header #LogoNavPlaceholder {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
 
-    body.ribbit #searchColumn {
-        display: block !important;
-        position: static;
-    }
-
-    body.ribbit #SearchControl_SearchButton, #MPOuterMost #MPSearchBlock {
-        display: block;
-    }
-
-    body.ribbit .navbar-header #LogoNavPlaceholder {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex: 1 0;
-        flex: 1 0;
-        margin-left: 1em;
-      }
-
-    body.ribbit #RibbitWelcomeMobile {
-        display: block;
-      }
-
-      body.ribbit #RibbitWelcome {
-        display: none;
-      }
-
-    .navbar-header {
-        float: none;
-    }
-    .navbar-default .navbar-toggle {
-        display: block;
-        border: 0;
-    }
-
-    .navbar-default .navbar-toggle:is(:hover,:focus) {
-        border: 0;
-        background: transparent;
-    }
-
-    body.ribbit #MPOuterHeader .navbar-toggle .icon-bar {
-        background-color: var(--hl-bs--default-text);
-    }
-
-    body.ribbit #CreateBtnWrapper {
-        display: none;
-    }
-
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    }
-
-    .navbar-collapse.collapse {
-        display: none !important;
-    }
-    .navbar-nav {
-        float: none !important;
-        margin: 7.5px -15px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .navbar-text {
-        float: none;
-        margin: 15px 0;
-    }
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .collapsing {
-        overflow: hidden !important;
-    }
-    .navbar-nav .open .dropdown-menu {
-        position: static;
-        float: none;
-        width: auto;
-        margin-top: 0;
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-    }
-    .navbar-nav .open .dropdown-menu>li>a {
-        line-height: 20px;
-    }
-    .navbar-nav .open .dropdown-menu>li>a,
-    .navbar-nav .open .dropdown-menu .dropdown-header {
-        padding: 5px 15px 5px 25px;
-    }
-    body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default,
-    body.ribbit .navbar,
-    body.ribbit .navbar-default .navbar-nav {
-        display: inline-block;
-    }
-   body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
-        transform: none;
-        margin-left: 10px;
-        box-shadow: none
-    }
-    #MPSearchBlock {
-        display: block;
-    }
-    .search-wrap {
-        display: none;
-    }
-
-}
-
-@media (max-width: 991px) {
-    .summary-edit .Content {
-        display: block;
-    }
-
-    .summary-edit .text-container,
-    .summary-edit .img-container {
-        width: 100%;
-    }
-
-    .summary-edit .text-container {
-        padding-right: 0;
-        margin-top: 40px;
-    }
-
-    .recent-news .HLRecentBlogs ul,
-    .featured-resources .HLMyDocuments ul {
-        flex-wrap: wrap;
-        margin: -5px;
-    }
-
-    body.ribbit .recent-news .HLRecentBlogs ul li,
-    body.ribbit .featured-resources .HLMyDocuments ul li {
-        flex-basis: 50%;
-        padding: 5px;
-    }
-
-
-}
-
-@media (max-width: 425px) {
-
-    body.ribbit .recent-news .HLRecentBlogs ul li,
-    body.ribbit .featured-resources .HLMyDocuments ul li {
-        flex-basis: 100%;
-    }
-}
 
 /************ Events Page ************/
 
@@ -6035,6 +5691,15 @@ body.ribbit.memberhome #MPFooterLink {
 
 /****** mobile ******/
 
+
+
+@media (width < 1600px) {
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 50px;
+        margin-right: 50px
+    }
+}
+
 @media (max-width: 1230px) {
     .milestone-slider ul.slick-dots {
         left: 0;
@@ -6055,10 +5720,209 @@ body.ribbit.memberhome #MPFooterLink {
 
 }
 
+
+/*** responsive ***/
+
+@media (max-width: 1200px) {
+    #NAV >.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .commHTMLOptionsToAttach>div>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left:25px;
+        margin-right:25px;
+    }
+
+
+    #MPOuterHeader #NAV > .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+}
+
+/*** mobile padding ***/
+
+@media (max-width: 1135px) {
+    .featured-card-multi > div > div{
+        margin: 1em 0;
+    }
+}
+
+
+
+/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
+
+
+
+
 @media only screen and (max-width: 1190px) {
     .ideation-home .ideation-filter .ideation-filter-buttons {
         width: 100%;
     }
+}
+
+
+@media (min-width: 992px) {
+    .flex-row {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-row .HtmlContent>*:first-child {
+        margin-top: 0;
+    }
+
+    .flex-row .HtmlContent>*:last-child {
+        margin-bottom: 0;
+    }
+
+    .interior .row-wide div[class*="section"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+/************ extra padding between columns ************/
+
+
+    .row-wide:not(.default-pad) > .col-md-6:first-child,
+    .row-wide:not(.default-pad) > .col-md-8:first-child {
+        padding-right: 24px;
+    }
+    
+    .row-wide:not(.default-pad) > .col-md-6:last-child,
+    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
+    .row-wide:not(.default-pad) > .col-md-8:last-child {
+        padding-left: 24px;
+    }
+
+    /****** responsive ******/
+
+
+    body.ribbit .navbar-header {
+        display: flex;
+        }
+
+
+    body.ribbit #searchColumn {
+        display: block !important;
+        position: static;
+    }
+
+    body.ribbit #SearchControl_SearchButton, #MPOuterMost #MPSearchBlock {
+        display: block;
+    }
+
+    body.ribbit .navbar-header #LogoNavPlaceholder {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex: 1 0;
+        flex: 1 0;
+        margin-left: 1em;
+      }
+
+    body.ribbit #RibbitWelcomeMobile {
+        display: block;
+      }
+
+      body.ribbit #RibbitWelcome {
+        display: none;
+      }
+
+    .navbar-header {
+        float: none;
+    }
+    .navbar-default .navbar-toggle {
+        display: block;
+        border: 0;
+    }
+
+    .navbar-default .navbar-toggle:is(:hover,:focus) {
+        border: 0;
+        background: transparent;
+    }
+
+    body.ribbit #MPOuterHeader .navbar-toggle .icon-bar {
+        background-color: var(--hl-bs--default-text);
+    }
+
+    body.ribbit #CreateBtnWrapper {
+        display: none;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .collapsing {
+        overflow: hidden !important;
+    }
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+    .navbar-nav .open .dropdown-menu>li>a {
+        line-height: 20px;
+    }
+    .navbar-nav .open .dropdown-menu>li>a,
+    .navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 25px;
+    }
+    body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default,
+    body.ribbit .navbar,
+    body.ribbit .navbar-default .navbar-nav {
+        display: inline-block;
+    }
+   body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
+        transform: none;
+        margin-left: 10px;
+        box-shadow: none
+    }
+    #MPSearchBlock {
+        display: block;
+    }
+    .search-wrap {
+        display: none;
+    }
+
+
+
+
 }
 
 @media (max-width: 991px) {
@@ -6227,10 +6091,83 @@ body.ribbit.memberhome #MPFooterLink {
         left: auto;
     }
 
+    #PageTitleH1 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:first-child {
+        padding-left: 0;
+    }
+
+    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:last-child {
+        padding-right: 0;
+    }
+
+    body.ribbit .row-wide>[class*="col-"]>.row-wide,
+    body.ribbit .row-wide>[class*="col-"]>.row-full {
+        margin: 0 -8px;
+        max-width: calc(100% + 16px);
+    }
+
+    .interior .row-wide div[class*="section"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /*** responsive ***/
+
+    .hero.with-bg::before {
+        background: linear-gradient(to bottom, var(--hl-bs--primary), transparent);
+    }
+
+
+    .flex-cards {
+        display: block;
+    }
+
+
+    .summary-edit .Content {
+        display: block;
+    }
+
+    .summary-edit .text-container,
+    .summary-edit .img-container {
+        width: 100%;
+    }
+
+    .summary-edit .text-container {
+        padding-right: 0;
+        margin-top: 40px;
+    }
+
+    .recent-news .HLRecentBlogs ul,
+    .featured-resources .HLMyDocuments ul {
+        flex-wrap: wrap;
+        margin: -5px;
+    }
+
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+        flex-basis: 50%;
+        padding: 5px;
+    }
+
 }
 
+@media (min-width: 769px) {
+    .flex-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
 
-
+    body.ribbit .flex-heading h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 1200px) {
 
@@ -6323,12 +6260,71 @@ body.ribbit.memberhome #MPFooterLink {
     }
 }
 
+
+@media (max-width: 550px) {
+
+    .col-md-6 .HLEventList ul li>.row,
+    .col-md-6 .HLRecentBlogs ul li,
+    .col-md-6 .HLMyDocuments ul li {
+        flex-direction: column;
+    }
+
+    .home .col-md-6 .HLEventList ul li .date-block,
+    .col-md-6 .HLRecentBlogs ul li .img-container,
+    .col-md-6 .HLMyDocuments ul li .img-container {
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home .col-md-6 .HLEventList ul li .col-md-10,
+    .col-md-6 .HLRecentBlogs ul li .text-container,
+    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .hero .card.make-buttons em {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+}
+
 @media (max-width: 500px) {
 
     .cards .card,
     .col-md-6 .cards .card {
         flex-basis: calc(50% - 16px);
     }
+}
+
+/*** mobile ***/
+
+@media (max-width: 475px) {
+    .cta-tile.icon a {
+        padding-left: 24px;
+    }
+
+    .cta-tile.icon a>p:first-child {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 10px;
+        transform: none;
+    }
+}
+
+@media (max-width: 425px) {
+
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+        flex-basis: 100%;
+    }
+
+
+
+
 }
 
 @media (max-width: 360px) {
