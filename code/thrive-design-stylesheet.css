@@ -5767,7 +5767,7 @@ body.ribbit.memberhome #MPFooterLink {
 
 
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     .flex-row {
         display: flex;
         align-items: center;
@@ -5817,6 +5817,8 @@ body.ribbit.memberhome #MPFooterLink {
     body.ribbit #SearchControl_SearchButton, #MPOuterMost #MPSearchBlock {
         display: block;
     }
+
+
 
     body.ribbit .navbar-header #LogoNavPlaceholder {
         display: -ms-flexbox;
@@ -5880,6 +5882,7 @@ body.ribbit.memberhome #MPFooterLink {
     }
     .navbar-collapse.collapse.in {
         display: block !important;
+        border-color: transparent;
     }
     .collapsing {
         overflow: hidden !important;
@@ -5913,9 +5916,40 @@ body.ribbit.memberhome #MPFooterLink {
     #MPSearchBlock {
         display: block;
     }
+    #MPSearchBlock .input-group {
+        width: 100%;
+    }
     .search-wrap {
         display: none;
     }
+   #MPButtonBar > nav.navbar.navbar-default .row > .col-md-12 {
+        display: flex !important;
+        align-items: unset !important;
+        flex-flow: column !important;
+    }
+
+    #MPButtonBar  .SearchInputs input {
+        border: 1px solid var(--hl-bs--primary);
+    }
+
+    body.ribbit #searchColumn #SearchControl_SearchBoxToggle {
+        top: 50%;
+        transform:translateY(-50%);
+        left: 15px;
+    }
+
+    body.ribbit .icon-bar-start.collapsing + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar {
+       transform: translate(0px, 7px) rotate(45deg) scale(80%, 80%);
+  }
+
+  body.ribbit .icon-bar-start.collapsing + span.icon-bar + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar + span.icon-bar {
+    transform: rotate(135deg) scale(0);
+  }
+  
+
+  body.ribbit .icon-bar-start.collapsing + span.icon-bar + span.icon-bar + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar + span.icon-bar + span.icon-bar {
+    transform: translate(0px, -5px) rotate(-45deg) scale(80%, 80%);
+  }
 
 }
 
@@ -6145,6 +6179,10 @@ body.ribbit.memberhome #MPFooterLink {
         padding: 5px;
     }
 
+
+    #MPButtonBar > nav > div.collapse.navbar-collapse.navbar-ex1-collapse > .row > .col-md-12 {
+        padding-right: 0;
+    }
 }
 
 @media (min-width: 769px) {
