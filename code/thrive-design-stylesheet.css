@@ -4881,6 +4881,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 
 .HLMyDocuments .listIconContainer div.HLMListTypeYoutube::before,
 .HLMyDocuments .listIconContainer div.HLMListTypeYoutubeMul::before {
+    font-family: "Font Awesome 6 Brands";
     content: "\f167";
 }
 
@@ -5881,6 +5882,10 @@ body.ribbit.memberhome #MPFooterLink {
         padding-right: 8px
     }
 
+    .row-wide > .col-md-6:last-child > .ContentUserControl > .HLLandingControl {
+        padding-left: 0;
+    }
+
 
     /****** responsive ******/
 
@@ -6101,7 +6106,6 @@ body.ribbit.memberhome #MPFooterLink {
     .ContentUserControl.card,
     .card.clickable a,
     .card.team button {
-        max-width: 500px;
         width: 100%;
     }
 
@@ -6312,6 +6316,21 @@ body.ribbit.memberhome #MPFooterLink {
    body.ribbit .cards {
         flex-direction: column;
     }
+
+    body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"] .HLLandingControl .row.heading  .col-md-12 {
+        width: 100%;
+    }
+
+
+    body.ribbit .engagement-leaderboard .tab-content .HLEngagement > .Content ul.display-vertical > li > a {
+        flex: 1;
+    }
+
+
+    .leaderboard .Content ul li .title-row {
+        width: 100%;
+    }
+
 }
 
 @media (min-width: 769px) {
