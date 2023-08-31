@@ -191,9 +191,6 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>d
     margin-bottom: 16px;
 }
 
-body.ribbit.memberhome  .row.row.hl-lg-v-padding {
-    padding-bottom: 0;
-}
 
 .rounded-img img {
     border-radius: 8px;
@@ -270,6 +267,10 @@ body.ribbit:not(.interior).bodyBackground {
     height: 300px;
 }
 
+.memberhome .hero.height-unset {
+    height: unset
+}
+
 .hero.overlay::before{
     background-color: rgba(0, 0, 0, 0.50);
 }
@@ -303,6 +304,18 @@ body.ribbit:not(.interior).bodyBackground {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, var(--hl-bs--primary), transparent);
+}
+
+.hero.overlay-partial-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--hl-bs--secondary), transparent);
 }
 
 .hero.overlay-primary::before {
@@ -501,6 +514,10 @@ body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding.no-bottom-pa
 #MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors)>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
 #MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors)>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
     margin-top: 16px;
+}
+
+#MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors) > div[class*="col-md-"] > .ContentUserControl:not(:first-child).explore-community {
+    margin-top: 24px;
 }
 
 body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:first-child {
@@ -745,6 +762,19 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 }
 
 .make-buttons.outline em a:is(:hover, :focus),
+.make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+    color: #fff;
+    background-color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
+}
+
+.make-buttons.outline-first.white-outline em:first-child a:first-child {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 18px;
+}
+
 .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
@@ -1256,6 +1286,11 @@ body.ribbit .make-link-standalone a.link-standalone::after,
    z-index: 5;
 }
 
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
 .clickable > a {
     text-decoration: none;
 }
@@ -1550,7 +1585,7 @@ body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li
 
 body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li a:is(:hover, :focus),
 body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li.active a {
-    font-weight: 500;
+    font-weight: 300;
 }
 
 
@@ -1705,7 +1740,10 @@ body.ribbit a.link-container.link-container-link {
     padding: 8px;
     border-radius: 4px;
     display: flex;
+    margin-left: 0;
+    margin-right: 0;
 }
+
 
 body.ribbit a.link-container.link-container-link:is(:hover, :focus) {
     text-decoration: none;
@@ -1766,12 +1804,14 @@ body.ribbit .recently-followed .link-container-content {
     padding-right: 0;
 }
 
-body.ribbit a.link-container.link-container-link {
-    margin-left: -8px;
-    margin-right: -8px;
-}
+
 
 /****** Activity Feed Styling Reset ******/
+
+body.ribbit .narrow-widget-container .view-more-link {
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
 .feed-list .hl-profile-avatar.lg img {
     width: 3.5em;
@@ -1793,6 +1833,10 @@ body.ribbit a.link-container.link-container-link {
     border-top: 0 !important;
 }
 
+body.ribbit .profile-snippet-progress > .my-2 {
+    margin-top: 0 !important;
+}
+
 .profile-snippet-progress .progress {
     height: 1em;
 }
@@ -1800,6 +1844,10 @@ body.ribbit a.link-container.link-container-link {
 .ribbit .profile-snippet-stats>a {
     display: flex !important;
     flex-direction: column-reverse !important;
+}
+
+body.ribbit .feed-list .feed-title-filter {
+    border-radius: 8px;
 }
 
 .feed-list .feed-item-row.card {
@@ -1936,6 +1984,7 @@ li.slick-active button::before {
     border: none;
     padding: 0;
     bottom: -40px;
+    z-index: 15;
 }
 
 .member-dashboard .prev-arrow {
@@ -2538,8 +2587,13 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
 
 /*** multiple instances of a featured card in a row ***/
 
+.cards {
+    display:flex;
+}
+
 .cards > div {
     display: flex;
+    flex:1;
 }
 
 .cards > div .card {
@@ -2817,7 +2871,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     display: block;
     text-decoration: none;
     color: var(--hl-bs--default-text);
-
+    height: 100%;
 }
 
 .card.clickable a:is(:hover, :focus),
@@ -3857,13 +3911,13 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
 .event-cards .Content ul {
-    margin: 12px -12px -12px -12px;
+    margin: 16px -12px -12px -12px;
     display: flex;
 }
 
 #MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
 #MPOuterMost #MPOuter .event-cards .Content ul li {
-    margin: 12px;
+    margin: 0 12px;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -4207,18 +4261,28 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     padding: 0;
 }
 
-/****** tags ******/
+
+/****** Discussions ******/
+
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.HLDiscussions .heading > .col-md-12{
+    flex: 1;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"] .HLLandingControl.HLDiscussions div[id$="_BottomLink"] a {
+    font-size: 16px;
+}
+
 
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag,
 body.ribbit .tags-list a.label-search-tag {
-    color: #595959;
+    color: #272727;
     font-weight: 600;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 13px;
     letter-spacing: 0.25px;
     text-transform: uppercase;
     padding: 4px 10px;
-    background: #F7F9FA;
+    background: #f7f6f6;
     border-radius: 4px;
     border: none;
     text-decoration: none;
@@ -4236,6 +4300,11 @@ body.ribbit .tags-list a.label-search-tag {
 
 body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
     background-color: #d9d9d9 !important;
+}
+
+body.ribbit .tags-list a > div.text-truncate:hover {
+    text-decoration: none;
+    color: var(--hl-bs--default-text);
 }
 
 /****** announcements ******/
@@ -4403,6 +4472,10 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     border: none;
 }
 
+.memberhome #MPOuterMost #MPOuter .col-md-6 .featured-resources .HLMyDocuments ul li {
+    padding-right: 48px;
+}
+
 #MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li::before,
 #MPOuterMost #MPOuter .col-md-6 .HLEventList ul li::before,
 #MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li::before {
@@ -4531,8 +4604,12 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
 
 .col-md-6 .HLRecentBlogs ul li .text-container .title-row div.col-sm-10.col-md-10,
 .col-md-6 .HLMyDocuments ul li .title-row div.col-sm-10.col-md-10 {
-    width: 100%;
+    width: 95%;
     padding: 0;
+}
+
+body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"] .HLLandingControl div[id$="_BottomLink"] a {
+    color: var(--hl-bs--primary);
 }
 
 #MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li .ByLine,
@@ -4999,10 +5076,15 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     line-height: 0;
     padding: 4px 10px;
     text-transform: none;
+    border-radius: 4px;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary {
     margin-top: 0;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
+    background-color: #f7f6f6;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn::before {
@@ -5018,10 +5100,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default::before {
     content: 'Ignore';
 }
-
-
-
-
 
 /************ Events Page ************/
 
@@ -5076,7 +5154,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 /****** hero slider ******/
 
 .slider {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.39);
     padding: 40px;
     border-radius: 4px;
 }
@@ -5093,6 +5171,9 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     padding-left: 20px;
 }
 
+.slider .slide .HtmlContent p:first-of-type {
+    margin-bottom: 24px;
+}
 
 .slider .slide .HtmlContent h6 {
     font-size: 11px;
@@ -5116,6 +5197,11 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     width: 25%;
     height: 226px;
     border-radius: 8px;
+}
+
+
+.slider .slide .HtmlContent em a {
+    font-size: 16px;
 }
 
 
@@ -5297,8 +5383,6 @@ body.ribbit .side-nav {
 body.ribbit .side-nav h3 {
     margin-top: 0;
 }
-
-
 
 /************ ideation page ************/
 
@@ -5691,8 +5775,6 @@ body.ribbit.memberhome #MPFooterLink {
 
 /****** mobile ******/
 
-
-
 @media (width < 1600px) {
     #MPOuterHeader #NAV #MPButtonBar {
         margin-left: 50px;
@@ -5720,7 +5802,6 @@ body.ribbit.memberhome #MPFooterLink {
 
 }
 
-
 /*** responsive ***/
 
 @media (max-width: 1200px) {
@@ -5745,7 +5826,6 @@ body.ribbit.memberhome #MPFooterLink {
         padding-right: 0;
     }
 
-
 }
 
 /* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
@@ -5763,9 +5843,6 @@ body.ribbit.memberhome #MPFooterLink {
         margin: 1em 0;
     }
 }
-
-
-
 
 @media (max-width: 992px) {
     .flex-row {
@@ -5786,20 +5863,24 @@ body.ribbit.memberhome #MPFooterLink {
         padding-right: 8px;
     }
 
-
 /************ extra padding between columns ************/
 
 
     .row-wide:not(.default-pad) > .col-md-6:first-child,
     .row-wide:not(.default-pad) > .col-md-8:first-child {
-        padding-right: 24px;
+        padding-right: 8px;
     }
     
     .row-wide:not(.default-pad) > .col-md-6:last-child,
     .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
     .row-wide:not(.default-pad) > .col-md-8:last-child {
-        padding-left: 24px;
+        padding-left: 8px;
     }
+
+    .row-wide > .col-md-6:first-child > .ContentUserControl > .HLLandingControl {
+        padding-right: 8px
+    }
+
 
     /****** responsive ******/
 
@@ -5967,16 +6048,23 @@ body.ribbit.memberhome #MPFooterLink {
 }
 
 @media (max-width: 991px) {
+
+    .hero {
+        height: unset;
+    }
+
     .col-md-12>.FeaturedCardGrid .featured-card-single:not(.layout-hero) .px-5 {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-
-
     .footer-middle-row::before,
     .footer-bottom-row::before {
         left: 8px;
         right: 8px;
+    }
+
+    body.ribbit .navbar-nav {
+        overflow-y: scroll;
     }
 
     #MPFooterLink .col-md-12 {
@@ -6026,6 +6114,7 @@ body.ribbit.memberhome #MPFooterLink {
 
     .featured-cards ul {
         flex-direction: column;
+        width: 100%;
     }
 
     body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li {
@@ -6060,7 +6149,6 @@ body.ribbit.memberhome #MPFooterLink {
     body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
         margin-bottom: 15px;
     }
-
 
     .ribbit .featured-tile-slider-wrapper .slick-dots li {
         border-bottom: none;
@@ -6124,7 +6212,6 @@ body.ribbit.memberhome #MPFooterLink {
         flex-direction: column;
     }
 
-
     body.ribbit .side-nav {
         position: relative;
         left: auto;
@@ -6165,7 +6252,6 @@ body.ribbit.memberhome #MPFooterLink {
         display: block;
     }
 
-
     .summary-edit .Content {
         display: block;
     }
@@ -6203,6 +6289,29 @@ body.ribbit.memberhome #MPFooterLink {
             margin-bottom: 0px !important;
           }
 
+          .flex-row, .event-cards .Content ul, .hero.image > div:nth-of-type(1) > div {
+            flex-direction: column;
+          }
+
+          #MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content > ul li:not(.slick-slide),
+          #MPOuterMost #MPOuter .event-cards .Content ul li {
+            margin: 12px auto;
+            width: calc(100% - 30px);
+          }
+
+          body.ribbit .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
+            padding-bottom: 50px;
+          }
+
+          body.ribbit .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
+            bottom: 0;
+            left: 0;
+            transform: none;
+          }
+
+   body.ribbit .cards {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 769px) {
@@ -6363,6 +6472,11 @@ body.ribbit.memberhome #MPFooterLink {
         margin-bottom: 10px;
         transform: none;
     }
+
+    body.ribbit .slider {
+        padding: 15px;
+    }
+
 }
 
 @media (max-width: 425px) {
