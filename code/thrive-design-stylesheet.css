@@ -5876,6 +5876,7 @@ body.ribbit.memberhome #MPFooterLink {
     .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
     .row-wide:not(.default-pad) > .col-md-8:last-child {
         padding-left: 8px;
+        width: 100%;
     }
 
     .row-wide > .col-md-6:first-child > .ContentUserControl > .HLLandingControl {
