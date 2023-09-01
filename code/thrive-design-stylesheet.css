@@ -3516,10 +3516,11 @@ body.has-modal.bio-modal-open {
     margin-bottom: 24px;
 }
 
-.sponsors .slick-slider .sponsor{
+body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor{
     padding: 0 8px;
     display: flex;
     height: auto;
+    margin: 0;
 }
 
 
