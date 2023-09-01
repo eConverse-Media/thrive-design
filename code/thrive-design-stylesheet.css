@@ -3512,9 +3512,6 @@ body.has-modal.bio-modal-open {
     padding: 15px 0;
 }
 
-.sponsors .slick-track img {
-    margin-bottom: 24px;
-}
 
 body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor{
     padding: 0 8px;
