@@ -713,7 +713,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 }
 
 .make-buttons em a,
-button,
+button:not[onlick],
 .btn,
 body.ribbit .btn,
 body.ribbit .btn:is(:hover, :focus),
@@ -1561,7 +1561,7 @@ body.ribbit #MPButtonBar .dropdown-menu li a {
 
 .nav.navbar-nav .dropdown-submenu>ul.dropdown-submenu {
     padding: 0;
-    margin: 0;
+    margin-left: 16px;
 }
 
 /* Dropdown avtive/hover state */
