@@ -682,6 +682,10 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     white-space: pre-wrap;
 }
 
+/* .bootstrap-4:not(#CreateBtnWrapper) .btn {
+    padding: 0 !important;
+} */
+
 .make-buttons em a:is(:hover, :focus),
 .card.social ul li a:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
@@ -797,6 +801,13 @@ body.ribbit .btn-ghost:is(:hover, :focus):not(.disabled) {
 .ribbit .narrow-widget a.link-standalone {
     color: #fff;
     font-size: 16px !important;
+    font-weight:600;
+}
+
+.bootstrap-4 .view-more-link a.link-standalone {
+    font-weight: 600;
+    color: var(--hl-bs--primary);
+    font-size: 14px;
 }
 
 .btn.btn-success,
@@ -1114,7 +1125,6 @@ body.ribbit .make-link-standalone a.link-standalone:is(:hover, :focus) {
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
 .card.full-width-icon .card-link::after,
-body.ribbit .make-link-standalone a.link-standalone::after,
 .card-link em::after {
     font-family: 'Font Awesome 6 Pro';
     margin-left: 8px;
@@ -1223,7 +1233,6 @@ body.ribbit .make-link-standalone a.link-standalone::after,
     text-transform: uppercase;
     font-size: 10px;
     font-weight: 600;
-    text-transform: uppercase;
     display: inline-block;
 }
 
@@ -1809,9 +1818,32 @@ body.ribbit .recently-followed .link-container-content {
 
 /****** Activity Feed Styling Reset ******/
 
+body.ribbit .narrow-widget-container .widget-heading {
+    padding: 0 !important;
+}
+
 body.ribbit .narrow-widget-container {
     padding: 16px;
 }
+
+body.ribbit #MPOuterMost #MPOuter .overlay h2.my-2,
+body.ribbit #MPOuterMost #MPOuter .overlay .people-you-should-know h2 {
+    padding: 0;
+    margin: 0;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    color: var(--hl-bs--gray-600);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+
+body.ribbit #MPOuterMost #MPOuter .overlay .people-you-should-know h2 {
+    padding-bottom: 8px !important;
+     border-bottom: 1px solid var(--hl-bs--bg2);
+}
+
 
 body.ribbit .narrow-widget-container .view-more-link {
     padding-left: 8px;
@@ -1903,6 +1935,12 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     margin: unset;
 }
 
+
+/****** Activity Feed SideBar ******/
+
+.col-md-3 .narrow-widget-container {
+    padding: 16px;
+}
 
 /************ slick arrows & dots ************/
 
@@ -5044,7 +5082,7 @@ body.ribbit .featured-resources .HLMyDocuments ul li {
 }
 
 .people-you-should-know .HL-contact-suggestions ul li .col-md-4 {
-    width: 54px;
+    width: 30px;
     padding: 0;
     float: left;
 }
@@ -5078,31 +5116,56 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn {
     font-size: 0;
     line-height: 0;
-    padding: 4px 10px;
+    padding: 0px;
     text-transform: none;
     border-radius: 4px;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary {
     margin-top: 0;
+    background: transparent;
+    border: transparent;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     background-color: #f7f6f6;
+    background: transparent;
+    border: transparent;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn::before {
-    font-size: 12px;
+    font-size: 20px;
     line-height: 1;
     font-weight: 600;
 }
 
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before,
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default::before {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 300;
+}
+
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
-    content: 'Add';
+    content: '\f058';
+    color: #828282;
+    transition: .3s;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary:hover::before {
+    color: #008000;
+    transition: .3s;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default::before {
-    content: 'Ignore';
+    content: '\f057';
+    color: #828282;
+    transition: .3s;
+}
+
+.people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default:hover::before {
+    color: #CB0303;
+    transition: .3s;
 }
 
 /************ Events Page ************/
