@@ -1561,6 +1561,7 @@ body.ribbit #MPButtonBar .dropdown-menu li a {
 
 .nav.navbar-nav .dropdown-submenu>ul.dropdown-submenu {
     padding: 0;
+    margin: 0;
     margin-left: 16px;
 }
 
@@ -1807,6 +1808,10 @@ body.ribbit .recently-followed .link-container-content {
 
 
 /****** Activity Feed Styling Reset ******/
+
+body.ribbit .narrow-widget-container {
+    padding: 16px;
+}
 
 body.ribbit .narrow-widget-container .view-more-link {
     padding-left: 8px;
