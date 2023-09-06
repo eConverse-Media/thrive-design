@@ -2929,9 +2929,6 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     box-shadow: none;
 }
 
-.card.clickable p {
-    text-align: center;
-}
 
 .card.clickable .HtmlContent  a i {
     color: var(--hl-bs--primary);
