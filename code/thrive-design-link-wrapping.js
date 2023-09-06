@@ -9,7 +9,7 @@ function handleLink(self) {
         $(self).wrapInner('<a href="' + href + '" />');
     }
 
-    if ($(link).parent().is('h3')) {
+    if ($(link).parent().is('h3') || $(self).hasClass('link-text') ) {
         $(link).contents().unwrap();
     } else {
         $(link).hide();
