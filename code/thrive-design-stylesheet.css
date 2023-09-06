@@ -217,8 +217,8 @@ body.ribbit:not(.interior).bodyBackground {
 .overlay::before,
 .row-full.bg-primary-light::before,
 .row-full.bg-primary-dark::before,
-.row-full.bg-primary-light-grey::before,
-.row-full.bg-primary-medium-grey::before,
+.row-full.bg-primary-light-gray::before,
+.row-full.bg-primary-medium-gray::before,
 .row-full.bg-secondary-light::before,
 .row-full.bg-secondary-dark::before {
     content: '';
@@ -382,8 +382,8 @@ body.ribbit:not(.interior).bodyBackground {
 .row-full.bg-primary,
 .row-full.bg-primary-light,
 .row-full.bg-primary-dark,
-.row-full.bg-primary-light-grey,
-.row-full.bg-primary-medium-grey {
+.row-full.bg-primary-light-gray,
+.row-full.bg-primary-medium-gray {
     background-color: var(--hl-bs--primary);
 }
 
@@ -391,11 +391,11 @@ body.ribbit:not(.interior).bodyBackground {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.row-full.bg-primary-light-grey::before {
+.row-full.bg-primary-light-gray::before {
     background-color: rgba(244, 244, 244, 0.97);
 }
 
-.row-full.bg-primary-medium-grey {
+.row-full.bg-primary-medium-gray {
     background-color: rgba(244, 244, 244, 1)
 }
 
@@ -887,7 +887,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /* Secondary Button */
 
-.make-buttons.secondary-bg em a {
+.make-buttons.secondary-btn em a {
     background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
     color: var(--hl-bs--default-text);
     
@@ -895,7 +895,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 
 
-.make-buttons.secondary-bg em a:is(:hover, :focus) {
+.make-buttons.secondary-btn em a:is(:hover, :focus) {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
@@ -908,26 +908,26 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /* White Button */
 
-.make-buttons.grey em a {
+.make-buttons.gray-btn em a {
     background: #f5f5f5;
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
-.make-buttons.grey em a:is(:hover, :focus) {
+.make-buttons.gray-btn em a:is(:hover, :focus) {
     background: #e4e4e4;
     color: var(--hl-bs--primary);
 }
 
 /* White Button */
 
-.make-buttons.white em a {
+.make-buttons.white-btn em a {
     background: #fff;
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
-.make-buttons.white em a:is(:hover, :focus) {
+.make-buttons.white-btn em a:is(:hover, :focus) {
     background: rgba(255, 255, 255, 0.8);
     color: var(--hl-bs--primary);
     transition: 0.3s;
@@ -935,14 +935,14 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /* White Outline Button */
 
-.make-buttons.white-outline em a {
+.make-buttons.white-outline-btn em a {
     background: transparent;
     border: 2px solid #fff;
     border-radius: 4px;
     transition: 0.3s;
 }
 
-.make-buttons.white-outline em a:is(:hover, :focus) {
+.make-buttons.white-outline-btn em a:is(:hover, :focus) {
     background: var(--hl-bs--primary);
     border-color: var(--hl-bs--primary);
     color: white;
@@ -951,7 +951,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /* Dark Outline Button */
 
-.make-buttons.dark-outline em a {
+.make-buttons.dark-outline-btn em a {
     background: transparent;
     color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
@@ -959,13 +959,13 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     transition: 0.3s;
 }
 
-.make-buttons.dark-outline em a:is(:hover, :focus) {
+.make-buttons.dark-outline-btn em a:is(:hover, :focus) {
     background: var(--hl-bs--primary);
     color: #fff;
     transition: 0.3s;
 }
 
-.make-buttons.cta em a {
+.make-buttons.cta-btn em a {
     border: 0;
     background: transparent;
     color: var(--cp-link-color);
@@ -975,7 +975,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     font-size: 16px;
 }
 
-.make-buttons.cta em a::after {
+.make-buttons.cta-btn em a::after {
     content: '\f061';
     height: 13px;
     width: 14px;
@@ -984,11 +984,11 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     font-family: 'Font Awesome 5 Pro';
     margin-left: 8px;
 }
-.make-buttons.cta em a:is(:hover, :focus) {
+.make-buttons.cta-btn em a:is(:hover, :focus) {
     color: var(--link-hover-color);
 }
 
-.make-buttons.cta em a:is(:hover, :focus)::before {
+.make-buttons.cta-btn em a:is(:hover, :focus)::before {
     content: '';
     width: 100%;
     height: 1px;
@@ -1000,12 +1000,12 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 }
 
 
-.make-buttons.cta.small em a {
+.make-buttons.cta-btn.small em a {
     font-size: 14px;
 }
 
 
-.make-buttons.cta.small em a::after {
+.make-buttons.cta-btn.small em a::after {
     font-size: 12px;
     margin-left: 8px;
 }
@@ -1175,12 +1175,12 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.promo.grey-light {
+.promo.gray-light {
     background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.promo.grey-medium {
+.promo.gray-medium {
     background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
@@ -3141,12 +3141,12 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 .card.icon.primary .HtmlContent p i {
     background-color: var(--hl-bs--primary);
 }
-.card.icon.primary.light .HtmlContent p i {
+.card.icon.primary-light .HtmlContent p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.card.icon.primary.dark .HtmlContent p i {
+.card.icon.primary-dark .HtmlContent p i {
     background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
@@ -3155,28 +3155,28 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     background-color: var(--hl-bs--secondary);
     transition: 0.3s;
 }
-.card.icon.secondary.clickable:is(:hover,:focus) .HtmlContent p i {
+.card.icon.secondary-clickable:is(:hover,:focus) .HtmlContent p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
     transition: 0.3s;
 }
-.card.icon.secondary.light .HtmlContent p i {
+.card.icon.secondary-light .HtmlContent p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
-.card.icon.secondary.dark .HtmlContent p i {
+.card.icon.secondary-dark .HtmlContent p i {
     background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
-.card.icon.grey.light .HtmlContent p  i {
+.card.icon.gray-light .HtmlContent p  i {
     background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.card.icon.grey.medium .HtmlContent p  i {
+.card.icon.gray-medium .HtmlContent p  i {
     background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
