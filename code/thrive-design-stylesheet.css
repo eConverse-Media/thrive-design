@@ -682,10 +682,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     white-space: pre-wrap;
 }
 
-/* .bootstrap-4:not(#CreateBtnWrapper) .btn {
-    padding: 0 !important;
-} */
-
 .make-buttons em a:is(:hover, :focus),
 .card.social ul li a:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
@@ -717,7 +713,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 }
 
 .make-buttons em a,
-button:not[onlick],
+button:not([onlick]),
 .btn,
 body.ribbit .btn,
 body.ribbit .btn:is(:hover, :focus),
@@ -1159,32 +1155,32 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 .promo.black {
     background-color: #000;
 }
-.promo.secondary.light {
+.promo.secondary-light {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
-.promo.secondary.dark {
+.promo.secondary-dark {
     background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
-.promo.primary.light {
+.promo.primary-light {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.promo.primary.dark {
+.promo.primary-dark {
     background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.promo.grey.light {
+.promo.grey-light {
     background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
-.promo.grey.medium {
+.promo.grey-medium {
     background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
@@ -1207,6 +1203,7 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 .promo > div, .promo-block > div {
     position: relative;
     z-index: 1;
+    float: none;
 }
 
 .promo h2, .promo p {
