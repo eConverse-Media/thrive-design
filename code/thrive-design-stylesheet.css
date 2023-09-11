@@ -750,9 +750,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     border: none;
 }
 
-
-
-
 .make-buttons.outline em a,
 .make-buttons.outline-first em:first-child a:first-child {
     background: transparent;
@@ -3138,54 +3135,14 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     font-size: 32px;
     color: var(--ui-secondary-text);
 }
-.card.icon.primary .HtmlContent p i {
+.card.icon.primary-icon-bg .HtmlContent p i {
     background-color: var(--hl-bs--primary);
-}
-.card.icon.primary-light .HtmlContent p i {
-    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
-    background-color: var(--hl-bs--primary);
-    background-position: bottom;
-}
-.card.icon.primary-dark .HtmlContent p i {
-    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
-    background-color: var(--hl-bs--primary);
-    background-position: bottom;
-}
-.card.icon.secondary .HtmlContent p i {
-    background-color: var(--hl-bs--secondary);
-    transition: 0.3s;
-}
-.card.icon.secondary-clickable:is(:hover,:focus) .HtmlContent p i {
-    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
-    background-color: var(--hl-bs--secondary);
-    background-position: bottom;
-    transition: 0.3s;
-}
-.card.icon.secondary-light .HtmlContent p i {
-    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
-    background-color: var(--hl-bs--secondary);
-    background-position: bottom;
-}
-.card.icon.secondary-dark .HtmlContent p i {
-    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
-    background-color: var(--hl-bs--secondary);
-    background-position: bottom;
-}
-.card.icon.gray-light .HtmlContent p  i {
-    background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
-    background-color: var(--hl-bs--primary);
-    background-position: bottom;
-}
-.card.icon.gray-medium .HtmlContent p  i {
-    background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
-    background-color: var(--hl-bs--primary);
-    background-position: bottom;
-}
-.card.icon.white .HtmlContent p  i {
-    background: #fff;
-    color: #000;
 }
 
+.card.icon.secondary-icon-bg .HtmlContent p i {
+    background-color: var(--hl-bs--secondary);
+    transition: 0.3s;
+}
 .icon-circle .HtmlContent > p {
     text-align: center;
 }
