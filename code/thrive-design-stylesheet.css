@@ -11,6 +11,10 @@
 
 /************ theme basics ************/
 
+.col-md-8[class*="section"]+.col-md-4[class*="section"] {
+    
+}
+
 .ribbit h2.card-title {
     font-weight: 700;
     font-size: 42px;
@@ -194,7 +198,6 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>d
     margin-bottom: 16px;
 }
 
-
 .rounded-img img {
     border-radius: 8px;
     padding-right: 32px;
@@ -373,10 +376,6 @@ body.ribbit:not(.interior).bodyBackground {
 .hero.graphic>.col-md-12 .HtmlContent p {
     color:white;
 }
-
-
-
-
 
 
 .hero .hero-text .HtmlContent{
@@ -944,9 +943,9 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 }
 
 .make-buttons.white-outline-btn em a:is(:hover, :focus) {
-    background: var(--hl-bs--primary);
-    border-color: var(--hl-bs--primary);
-    color: white;
+    background: #fff;
+    border-color: #fff;
+    color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
@@ -1199,6 +1198,7 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     left: 0;
     right: 0;
     background-size: cover;
+    mix-blend-mode: soft-light;
 }
 
 .promo > div, .promo-block > div {
@@ -1235,11 +1235,11 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 }
 
 .promo.light-graphic::after {
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png'); 
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh_1_.png'); 
 }
 
 .promo.dark-graphic::after {
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/dark-graphic.png'); 
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/darkdark-graphic.png'); 
 }
 
 
