@@ -981,18 +981,14 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     color: var(--link-hover-color);
 }
 
-
-
 .make-buttons.arrow-link.small em a {
     font-size: 14px;
 }
-
 
 .make-buttons.arrow-link.small em a::after {
     font-size: 12px;
     margin-left: 8px;
 }
-
 
 /*** carets ***/
 
@@ -3145,6 +3141,14 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     background-color: var(--hl-bs--secondary);
     transition: 0.3s;
 }
+
+.card.icon.secondary-icon-bg:is(:hover, :focus) .HtmlContent p i {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+
+
 .icon-circle .HtmlContent > p {
     text-align: center;
 }
