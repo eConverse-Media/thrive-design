@@ -110,12 +110,12 @@ h4 {
 
 body.ribbit h5 {
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 body.ribbit h6 {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 body.ribbit .col-md-4 .ContentUserControl .heading,
@@ -1665,7 +1665,7 @@ body.ribbit .card h2 {
     font-weight: 700;
     line-height: 1.2;
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 body.ribbit .alt-h2 h2,
