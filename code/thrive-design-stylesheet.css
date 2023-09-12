@@ -5242,6 +5242,7 @@ height: 157px;
   left: 0;
   right: 0;
   background-size: cover;
+  mix-blend-mode: soft-light;
   background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
 
 }
