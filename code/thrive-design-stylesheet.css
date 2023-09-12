@@ -5225,13 +5225,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 
 /****** Interior Header Title *******/
 
-#InteriorPageTitle svg {
-    display: none;
-}
 
-#InteriorPageTitle:not(.has-bg-img) {
-    background: radial-gradient(21.74% 226.67% at 71.71% 0%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(18.34% 191.25% at 74.21% 173.33%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(70.32% 733.33% at 16.89% 117.92%, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 100%), var(--hl-bs--primary);
-}
 
 #InteriorPageTitle.has-bg-img {
     position: relative;
