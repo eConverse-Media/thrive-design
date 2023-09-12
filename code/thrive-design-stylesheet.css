@@ -1,6 +1,3 @@
-/* Font import for including 700 weight fromn Inter Fam REMOVE ONCE IN CODE DEPLOYMENT */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 /************ adding text on secondary variable ************/
 
 :root {
@@ -10,10 +7,6 @@
 }
 
 /************ theme basics ************/
-
-.col-md-8[class*="section"]+.col-md-4[class*="section"] {
-    
-}
 
 .ribbit h2.card-title {
     font-weight: 700;
@@ -988,16 +981,6 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     color: var(--link-hover-color);
 }
 
-.make-buttons.arrow-link em a:is(:hover, :focus)::before {
-    content: '';
-    width: 100%;
-    height: 1px;
-    background: var(--link-hover-color);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right:0;
-}
 
 
 .make-buttons.arrow-link.small em a {
@@ -1081,11 +1064,11 @@ body .bootstrap-4 .btn:is(:hover, :focus) {
     transition: 0.3s;
 }
 
-.make-link em a,
+.arrow-link em a,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
 .card.full-width-icon .card-link,
-body.ribbit .make-link-standalone a.link-standalone,
+body.ribbit .arrow-link-standalone a.link-standalone,
 .card-link em {
     font-style: normal;
     color: var(--hl-bs--primary);
@@ -1108,16 +1091,16 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     line-height: 19px;
 }
 
-.make-link em a:is(:hover, :focus),
+.arrow-link em a:is(:hover, :focus),
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
 .card.full-width-icon a:is(:hover, :focus) .card-link,
-body.ribbit .make-link-standalone a.link-standalone:is(:hover, :focus) {
+body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
     border-bottom-color: var(--hl-bs--primary);
     text-decoration: none;
 }
 
-.make-link em a::after,
+.arrow-link em a::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
 .card.full-width-icon .card-link::after,
@@ -2699,7 +2682,7 @@ body.ribbit .flex-cards > [class*="col-"]:last-of-type {
     height: 100%;
 }
 .flex-cards .card.make-buttons p:last-child,
-.flex-cards .card.make-link p:last-child,
+.flex-cards .card.arrow-link p:last-child,
 .flex-scards .card {
     margin-top: auto;
 }
