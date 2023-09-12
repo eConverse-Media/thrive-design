@@ -1,3 +1,6 @@
+/* Font import for including 700 weight fromn Inter Fam REMOVE ONCE IN CODE DEPLOYMENT */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 /************ adding text on secondary variable ************/
 
 :root {
@@ -194,6 +197,7 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>d
 
 .rounded-img img {
     border-radius: 8px;
+    padding-right: 32px;
 }
 
 /*** homepage backgrounds ***/
