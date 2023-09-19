@@ -215,12 +215,12 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 .overlay::before,
-#MPOuterMost .bg-primary-light::before,
-#MPOuterMost .bg-primary-dark::before,
-#MPOuterMost .bg-primary-light-gray::before,
-#MPOuterMost .bg-primary-medium-gray::before,
-#MPOuterMost .bg-secondary-light::before,
-#MPOuterMost .bg-secondary-dark::before {
+.row-full.bg-primary-light::before,
+.row-full.bg-primary-dark::before,
+.row-full.bg-primary-light-gray::before,
+.row-full.bg-primary-medium-gray::before,
+.row-full.bg-secondary-light::before,
+.row-full.bg-secondary-dark::before {
     content: '';
     position: absolute;
     top: 0;
@@ -253,7 +253,16 @@ body.ribbit:not(.interior).bodyBackground {
     z-index: 5;
 }
 
-
+.row-full.bg-primary:not(.overlay),
+.row-full.bg-primary:not(.overlay) h1,
+.row-full.bg-primary:not(.overlay) h2,
+.row-full.bg-primary:not(.overlay) h3,
+.row-full.bg-primary:not(.overlay) h4,
+.row-full.bg-primary:not(.overlay) h5,
+.row-full.bg-primary:not(.overlay) h6,
+.row-full.bg-primary:not(.overlay) p {
+    color: var(--hl-bs--primary-opposite);
+}
 
 .hero {
     position: relative;
@@ -376,49 +385,47 @@ body.ribbit:not(.interior).bodyBackground {
     max-width: 784px;
 }
 
-#MPOuterMost .bg-primary,
-#MPOuterMost .bg-primary-light,
-#MPOuterMost .bg-primary-dark,
-#MPOuterMost .bg-primary-light-gray,
-#MPOuterMost .bg-primary-medium-gray {
+.row-full.bg-primary,
+.row-full.bg-primary-light,
+.row-full.bg-primary-dark,
+.row-full.bg-primary-light-gray,
+.row-full.bg-primary-medium-gray {
     background-color: var(--hl-bs--primary);
 }
 
-#MPOuterMost .bg-primary-light::before {
+.row-full.bg-primary-light::before {
     background: rgba(255, 255, 255, 0.85);
 }
 
-#MPOuterMost .bg-primary-dark::before {
+.row-full.bg-primary-dark::before {
     background: rgba(255, 255, 255, 0.85);
 }
 
-#MPOuterMost .bg-primary-light-gray::before {
+.row-full.bg-primary-light-gray::before {
     background: rgba(245, 245, 245, 0.97);
 }
 
-#MPOuterMost .bg-primary-medium-gray {
+.row-full.bg-primary-medium-gray {
     background: rgba(244, 244, 244, 0.85);
 }
 
-#MPOuterMost .bg-secondary,
-#MPOuterMost .bg-secondary-light,
-#MPOuterMost .bg-secondary-dark {
+.row-full.bg-secondary,
+.row-full.bg-secondary-light,
+.row-full.bg-secondary-dark {
     background-color: var(--hl-bs--secondary);
 }
 
-#MPOuterMost .bg-secondary-light::before {
+.row-full.bg-secondary-light::before {
     background: rgba(255, 255, 255, 0.85);
 }
 
-#MPOuterMost .bg-secondary-dark::before {
+.row-full.bg-secondary-dark::before {
     background: rgba(0, 0, 0, 0.20);
 }
 
 .overlay {
     position: relative;
 }
-
-/*** text colours ***/
 
 .hl-primary-row-bkgd.overlay,
 .hl-primary-row-bkgd.overlay h1,
@@ -429,12 +436,6 @@ body.ribbit:not(.interior).bodyBackground {
 .hl-primary-row-bkgd.overlay h6,
 .hl-primary-row-bkgd.overlay p {
     color: #000;
-}
-.bg-primary * {
-    color: var(--hl-bs--primary-opposite);
-}
-.bg-secondary * {
-    color: var(--ui-secondary-text);
 }
 
 /*** removing HTML Footer ***/
@@ -757,37 +758,35 @@ body.ribbit .summary-edit em a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus),
-body.ribbit .make-buttons.primary-btn em a,
-body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
 }
 
-body.ribbit .make-buttons.outline em a,
-body.ribbit .make-buttons.outline-first em:first-child a:first-child {
+.make-buttons.outline em a,
+.make-buttons.outline-first em:first-child a:first-child {
     background: transparent;
     color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
     padding: 8px 18px;
 }
 
-body.ribbit .make-buttons.outline em a:is(:hover, :focus),
-body.ribbit .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+.make-buttons.outline em a:is(:hover, :focus),
+.make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
 }
 
-body.ribbit .make-buttons.outline-first.white-outline-btn em:first-child a {
+.make-buttons.outline-first.white-outline-btn em:first-child a {
     background: transparent;
     color: white;
     border: 2px solid white;
     padding: 8px 18px;
 }
 
-body.ribbit .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+.make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
@@ -899,7 +898,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 
 /* Secondary Button */
 
-body.ribbit .make-buttons.secondary-btn em a {
+.make-buttons.secondary-btn em a {
     background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
     color: var(--hl-bs--default-text);
 
@@ -907,7 +906,7 @@ body.ribbit .make-buttons.secondary-btn em a {
 
 
 
-body.ribbit .make-buttons.secondary-btn em a:is(:hover, :focus) {
+.make-buttons.secondary-btn em a:is(:hover, :focus) {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
@@ -920,26 +919,26 @@ body.ribbit .make-buttons.secondary-btn em a:is(:hover, :focus) {
 
 /* White Button */
 
-body.ribbit .make-buttons.gray-btn em a {
+.make-buttons.gray-btn em a {
     background: #f5f5f5;
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
-body.ribbit .make-buttons.gray-btn em a:is(:hover, :focus) {
+.make-buttons.gray-btn em a:is(:hover, :focus) {
     background: #e4e4e4;
     color: var(--hl-bs--primary);
 }
 
 /* White Button */
 
-body.ribbit .make-buttons.white-btn em a {
+.make-buttons.white-btn em a {
     background: #fff;
     color: var(--hl-bs--primary);
     transition: 0.3s;
 }
 
-body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
+.make-buttons.white-btn em a:is(:hover, :focus) {
     background: rgba(255, 255, 255, 0.8);
     color: var(--hl-bs--primary);
     transition: 0.3s;
@@ -947,19 +946,14 @@ body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
 
 /* White Outline Button */
 
-body.ribbit .make-buttons.white-outline-btn em a,
-.make-buttons.bg-primary em a,
-.bg-primary .make-buttons em a {
+.make-buttons.white-outline-btn em a {
     background: transparent;
     border: 2px solid #fff;
-    color: #fff;
     border-radius: 4px;
     transition: 0.3s;
 }
 
-body.ribbit .make-buttons.white-outline-btn em a:is(:hover, :focus),
-.make-buttons.bg-primary em a:is(:hover, :focus),
-.bg-primary .make-buttons em a:is(:hover, :focus) {
+.make-buttons.white-outline-btn em a:is(:hover, :focus) {
     background: #fff;
     border-color: #fff;
     color: var(--hl-bs--primary);
@@ -968,7 +962,7 @@ body.ribbit .make-buttons.white-outline-btn em a:is(:hover, :focus),
 
 /* Dark Outline Button */
 
-body.ribbit .make-buttons.dark-outline-btn em a {
+.make-buttons.dark-outline-btn em a {
     background: transparent;
     color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
@@ -976,25 +970,10 @@ body.ribbit .make-buttons.dark-outline-btn em a {
     transition: 0.3s;
 }
 
-body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
+.make-buttons.dark-outline-btn em a:is(:hover, :focus) {
     background: var(--hl-bs--primary);
     color: #fff;
     transition: 0.3s;
-}
-
-/* secondary outline button */
-
-.make-buttons.bg-secondary em a,
-.bg-secondary .make-buttons em a {
-    background: transparent;
-    border: 2px solid var(--ui-secondary-text);
-    color: var(--ui-secondary-text);
-}
-.make-buttons.bg-secondary em a:is(:hover, :focus),
-.bg-secondary .make-buttons em a:is(:hover, :focus) {
-    background: var(--ui-secondary-text);
-    color: var(--hl-bs--secondary);
-    border-color: var(--ui-secondary-text);
 }
 
 .make-buttons.arrow-link em a {
@@ -1165,6 +1144,59 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     position: relative;
 }
 
+.promo.primary {
+    background-color: var(--hl-bs--primary);
+}
+
+.promo.secondary {
+    background-color: var(--hl-bs--secondary);
+}
+
+.promo.black {
+    background-color: #000;
+}
+
+.promo.secondary-light {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+
+.promo.secondary-dark {
+    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+
+.promo.primary-light {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+
+.promo.primary-dark {
+    background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+
+.promo.gray-light {
+    background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+
+.promo.gray-medium {
+    background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
+    background-color: var(--hl-bs--primary);
+    background-position: bottom;
+}
+
+.promo.white {
+    background: #FFF;
+    background-position: bottom;
+}
+
 .promo::after {
     height: 157px;
     width: 100%;
@@ -1181,6 +1213,16 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     position: relative;
     z-index: 1;
     float: none;
+}
+
+.promo h2,
+.promo p {
+    color: white;
+}
+
+.promo.white h2,
+.promo.white p {
+    color: #000;
 }
 
 .promo-block {
@@ -1907,21 +1949,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 .col-md-3 .narrow-widget-container {
     padding: 16px;
-}
-
-/************ extra padding between columns ************/
-
-@media (min-width: 992px) {
-    .row-wide:not(.default-pad) > .col-md-6:first-child,
-    .row-wide:not(.default-pad) > .col-md-8:first-child {
-        padding-right: 24px;
-    }
-    
-    .row-wide:not(.default-pad) > .col-md-6:last-child,
-    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
-    .row-wide:not(.default-pad) > .col-md-8:last-child {
-        padding-left: 24px;
-    }
 }
 
 /************ slick arrows & dots ************/
@@ -5910,6 +5937,30 @@ body.ribbit.memberhome #MPFooterLink {
         padding-left: 8px;
         padding-right: 8px;
     }
+
+    /************ extra padding between columns ************/
+
+
+    .row-wide:not(.default-pad)>.col-md-6:first-child,
+    .row-wide:not(.default-pad)>.col-md-8:first-child {
+        padding-right: 8px;
+    }
+
+    .row-wide:not(.default-pad)>.col-md-6:last-child,
+    .row-wide:not(.default-pad)>.col-md-8+.col-md-4,
+    .row-wide:not(.default-pad)>.col-md-8:last-child {
+        padding-left: 8px;
+        width: 100%;
+    }
+
+    .row-wide>.col-md-6:first-child>.ContentUserControl>.HLLandingControl {
+        padding-right: 8px
+    }
+
+    .row-wide>.col-md-6:last-child>.ContentUserControl>.HLLandingControl {
+        padding-left: 0;
+    }
+
 
     /****** responsive ******/
 
