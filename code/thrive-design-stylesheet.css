@@ -680,7 +680,8 @@ body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLink
 body.ribbit .summary-edit em a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
+body.ribbit .make-buttons.primary-btn em a {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
 }
 
@@ -720,7 +721,8 @@ body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus),
+body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
@@ -947,9 +949,7 @@ body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
 
 /* White Outline Button */
 
-body.ribbit .make-buttons.white-outline-btn em a,
-.make-buttons.bg-primary em a,
-.bg-primary .make-buttons em a {
+body.ribbit .make-buttons.white-outline-btn em a {
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
@@ -980,6 +980,21 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
     background: var(--hl-bs--primary);
     color: #fff;
     transition: 0.3s;
+}
+
+/* primary outline button */
+
+.make-buttons.bg-primary em a,
+.bg-primary .make-buttons em a {
+    background: transparent;
+    color: var(--hl-bs--primary-opposite);
+    border: 2px solid var(--hl-bs--primary-opposite);
+}
+.make-buttons.bg-primary em a:is(:hover, :focus),
+.bg-primary .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background-color: var(--hl-bs--primary-opposite);
+    border-color: var(--hl-bs--primary-opposite);
 }
 
 /* secondary outline button */
@@ -1109,7 +1124,7 @@ body.ribbit .arrow-link-standalone a.link-standalone,
     font-style: normal;
     color: var(--hl-bs--primary);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 17px;
     text-decoration: none;
     border-bottom: 1px solid transparent;
@@ -2805,7 +2820,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 .hl-primary-row-bkgd .card h4,
 .hl-primary-row-bkgd .card h5,
 .hl-primary-row-bkgd .card h6,
-.hl-primary-row-bkgd .card p {
+.hl-primary-row-bkgd .card p,
+.bg-primary .card * {
     color: var(--hl-bs--default-text);
 }
 
