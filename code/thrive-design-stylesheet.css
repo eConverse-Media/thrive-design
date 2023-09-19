@@ -124,7 +124,7 @@ body.ribbit .col-md-6 .ContentUserControl .heading {
 body.ribbit .col-md-4 .ContentUserControl .heading h2,
 body.ribbit .col-md-6 .ContentUserControl .heading h2,
 body.ribbit .home .col-md-3 .ContentItemHtml>h2,
-body.ribbit .row:not(.flex-row) > .col-md-6 .ContentItemHtml>h2,
+body.ribbit .row:not(.flex-row)>.col-md-6 .ContentItemHtml>h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl .row.heading h2,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.ContentItemReact.card .row.heading h2,
 body.ribbit .card .ContentMainHeader {
@@ -157,7 +157,7 @@ body {
 }
 
 p:has(img),
-p:has( > i) {
+p:has(> i) {
     margin-bottom: 0;
 }
 
@@ -236,7 +236,7 @@ body.ribbit:not(.interior).bodyBackground {
     position: relative;
 }
 
-.overlay-down::before{
+.overlay-down::before {
     content: '';
     position: absolute;
     top: 0;
@@ -271,7 +271,7 @@ body.ribbit:not(.interior).bodyBackground {
     height: unset
 }
 
-.hero.overlay::before{
+.hero.overlay::before {
     background-color: rgba(0, 0, 0, 0.50);
 }
 
@@ -287,11 +287,11 @@ body.ribbit:not(.interior).bodyBackground {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.50) 45.34%, rgba(0, 0, 0, 0.00) 69.99%);
 }
 
-.hero.overlay-partial >.col-md-12>.row,
-.hero.overlay-partial-primary >.col-md-12>.row {
+.hero.overlay-partial>.col-md-12>.row,
+.hero.overlay-partial-primary>.col-md-12>.row {
     display: flex;
     align-items: center;
-} 
+}
 
 
 .hero.overlay-partial-primary::before {
@@ -364,14 +364,15 @@ body.ribbit:not(.interior).bodyBackground {
 
 
 .hero.graphic>.col-md-12 .HtmlContent h2 {
-    color:white;
+    color: white;
 }
+
 .hero.graphic>.col-md-12 .HtmlContent p {
-    color:white;
+    color: white;
 }
 
 
-.hero .hero-text .HtmlContent{
+.hero .hero-text .HtmlContent {
     max-width: 784px;
 }
 
@@ -383,16 +384,20 @@ body.ribbit:not(.interior).bodyBackground {
     background-color: var(--hl-bs--primary);
 }
 
+.row-full.bg-primary-light::before {
+    background: rgba(255, 255, 255, 0.85);
+}
+
 .row-full.bg-primary-dark::before {
-    background-color: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .row-full.bg-primary-light-gray::before {
-    background-color: rgba(244, 244, 244, 0.97);
+    background: rgba(245, 245, 245, 0.97);
 }
 
 .row-full.bg-primary-medium-gray {
-    background-color: rgba(244, 244, 244, 1)
+    background: rgba(244, 244, 244, 0.85);
 }
 
 .row-full.bg-secondary,
@@ -401,8 +406,12 @@ body.ribbit:not(.interior).bodyBackground {
     background-color: var(--hl-bs--secondary);
 }
 
+.row-full.bg-secondary-light::before {
+    background: rgba(255, 255, 255, 0.85);
+}
+
 .row-full.bg-secondary-dark::before {
-    background-color: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.20);
 }
 
 .overlay {
@@ -512,7 +521,7 @@ body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding.no-bottom-pa
     margin-top: 16px;
 }
 
-#MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors) > div[class*="col-md-"] > .ContentUserControl:not(:first-child).explore-community {
+#MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors)>div[class*="col-md-"]>.ContentUserControl:not(:first-child).explore-community {
     margin-top: 24px;
 }
 
@@ -790,7 +799,7 @@ body.ribbit .btn-ghost:is(:hover, :focus):not(.disabled) {
 .ribbit .narrow-widget a.link-standalone {
     color: #fff;
     font-size: 16px !important;
-    font-weight:600;
+    font-weight: 600;
 }
 
 .bootstrap-4 .view-more-link a.link-standalone {
@@ -883,7 +892,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 .make-buttons.secondary-btn em a {
     background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
     color: var(--hl-bs--default-text);
-    
+
 }
 
 
@@ -977,6 +986,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     font-family: 'Font Awesome 5 Pro';
     margin-left: 8px;
 }
+
 .make-buttons.arrow-link em a:is(:hover, :focus) {
     color: var(--link-hover-color);
 }
@@ -1128,42 +1138,51 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 .promo.primary {
     background-color: var(--hl-bs--primary);
 }
+
 .promo.secondary {
     background-color: var(--hl-bs--secondary);
 }
+
 .promo.black {
     background-color: #000;
 }
+
 .promo.secondary-light {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
+
 .promo.secondary-dark {
     background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /20%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
+
 .promo.primary-light {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
+
 .promo.primary-dark {
     background: linear-gradient(rgb(0 0 0 /0%), rgb(0 0 0 /30%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
+
 .promo.gray-light {
     background: linear-gradient(rgb(245 245 245 /0%), rgb(245 245 245 /97%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
+
 .promo.gray-medium {
     background: linear-gradient(rgb(244 244 244 /0%), rgb(244 244 244 /85%)) top/100% 800%;
     background-color: var(--hl-bs--primary);
     background-position: bottom;
 }
+
 .promo.white {
     background: #FFF;
     background-position: bottom;
@@ -1180,17 +1199,20 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     mix-blend-mode: soft-light;
 }
 
-.promo > div, .promo-block > div {
+.promo>div,
+.promo-block>div {
     position: relative;
     z-index: 1;
     float: none;
 }
 
-.promo h2, .promo p {
+.promo h2,
+.promo p {
     color: white;
 }
 
-.promo.white h2, .promo.white p {
+.promo.white h2,
+.promo.white p {
     color: #000;
 }
 
@@ -1214,11 +1236,11 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 }
 
 .promo.light-graphic::after {
-    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh_1_.png'); 
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh_1_.png');
 }
 
 .promo.dark-graphic::after {
-    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/darkdark-graphic.png'); 
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/darkdark-graphic.png');
 }
 
 
@@ -1267,9 +1289,10 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 .margin-top-30 {
     margin-top: 30px !important;
 }
+
 .negative-top {
-   top: -42px !important;
-   z-index: 5;
+    top: -42px !important;
+    z-index: 5;
 }
 
 .flex-row {
@@ -1277,7 +1300,7 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     align-items: center;
 }
 
-.clickable > a {
+.clickable>a {
     text-decoration: none;
 }
 
@@ -1319,7 +1342,7 @@ body.ribbit .navbar-default .navbar-nav>li>a {
 /* Fixing parent searchColumn div to prevent position absolute div overlapping nav items */
 
 #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse>.row>.col-md-12 {
-    padding-right:225px;
+    padding-right: 225px;
 }
 
 body.ribbit #SearchControl_SearchButton,
@@ -1335,7 +1358,7 @@ body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .r
 
 body.ribbit #searchColumn {
     position: absolute;
-    right:0;
+    right: 0;
 }
 
 
@@ -1635,7 +1658,7 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .engagement-leaderb
     border-radius: 8px;
 }
 
-body.ribbit .engagement-leaderboard ul.nav.nav-tabs > li > a {
+body.ribbit .engagement-leaderboard ul.nav.nav-tabs>li>a {
     padding: 8px 0;
 }
 
@@ -1656,7 +1679,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.alt-h2.ContentItemReac
 }
 
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl>.Content h3 a,
-body.ribbit .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl>.Content h3 a  {
+body.ribbit .row>div[class*=col-md-]>div.card[class*=Content] .HLLandingControl>.Content h3 a {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.3;
@@ -1818,7 +1841,7 @@ body.ribbit #MPOuterMost #MPOuter .overlay .people-you-should-know h2 {
 
 body.ribbit #MPOuterMost #MPOuter .overlay .people-you-should-know h2 {
     padding-bottom: 8px !important;
-     border-bottom: 1px solid var(--hl-bs--bg2);
+    border-bottom: 1px solid var(--hl-bs--bg2);
 }
 
 
@@ -1847,7 +1870,7 @@ body.ribbit .narrow-widget-container .view-more-link {
     border-top: 0 !important;
 }
 
-body.ribbit .profile-snippet-progress > .my-2 {
+body.ribbit .profile-snippet-progress>.my-2 {
     margin-top: 0 !important;
 }
 
@@ -2113,26 +2136,26 @@ li.slick-active button::before {
     color: white;
 }
 
-body.ribbit .hero-text.make-buttons em + em a{
+body.ribbit .hero-text.make-buttons em+em a {
     background: transparent;
     border: 2px solid white;
     color: white;
 }
 
 
-body.ribbit .hero-text.make-buttons em + em a:is(:hover,:focus) {
+body.ribbit .hero-text.make-buttons em+em a:is(:hover, :focus) {
     background-color: white;
     border: 2px solid white;
     color: var(--hl-bs--default-text);
 }
 
-body.ribbit .overlay-secondary  .hero-text.make-buttons.white em + em a{
+body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a {
     background: var(--hl-bs--primary);
     border: none;
     color: white;
 }
 
-body.ribbit .overlay-secondary  .hero-text.make-buttons.white em + em a:is(:hover,:focus){
+body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
@@ -2203,6 +2226,7 @@ body.ribbit .overlay-secondary  .hero-text.make-buttons.white em + em a:is(:hove
     left: 0;
     right: 0;
 }
+
 .hero.slider {
     display: block;
 }
@@ -2543,8 +2567,7 @@ body.ribbit .feed-list .layout-grid-cell-children {
 
 /****** Most Active Members ******/
 
-body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement
- {
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
     position: relative;
 }
 
@@ -2608,24 +2631,24 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
 /*** multiple instances of a featured card in a row ***/
 
 .cards {
-    display:flex;
-}
-
-.cards > div {
     display: flex;
-    flex:1;
 }
 
-.cards > div .card {
+.cards>div {
+    display: flex;
+    flex: 1;
+}
+
+.cards>div .card {
     margin: 0 12px;
     flex: 1;
 }
 
-.cards > div .card:first-of-type {
+.cards>div .card:first-of-type {
     margin-left: 0;
 }
 
-.cards > div .card:last-of-type {
+.cards>div .card:last-of-type {
     margin-right: 0;
 }
 
@@ -2633,14 +2656,15 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
     display: flex;
 }
 
-body.ribbit .flex-cards > [class*="col-"] {
+body.ribbit .flex-cards>[class*="col-"] {
     padding: 0 12px;
 }
 
-body.ribbit .flex-cards > [class*="col-"]:first-of-type {
-    padding-left:  8px;
+body.ribbit .flex-cards>[class*="col-"]:first-of-type {
+    padding-left: 8px;
 }
-body.ribbit .flex-cards > [class*="col-"]:last-of-type {
+
+body.ribbit .flex-cards>[class*="col-"]:last-of-type {
     padding-right: 8px;
 }
 
@@ -2665,10 +2689,12 @@ body.ribbit .flex-cards > [class*="col-"]:last-of-type {
     display: flex;
     flex-direction: column;
 }
+
 .flex-cards .card.ContentItemHtml {
     display: flex;
     flex-direction: column;
 }
+
 .flex-cards .card.img .text-container,
 .flex-cards .card .HtmlContent {
     display: flex;
@@ -2677,6 +2703,7 @@ body.ribbit .flex-cards > [class*="col-"]:last-of-type {
     justify-content: unset;
     height: 100%;
 }
+
 .flex-cards .card.make-buttons p:last-child,
 .flex-cards .card.arrow-link p:last-child,
 .flex-scards .card {
@@ -2824,12 +2851,13 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     padding: 24px;
     position: relative;
 }
+
 #MPOuterMost .ContentItemHtml.card.icon-card .text-container {
     padding-top: 48px;
 }
 
 #MPOuterMost .ContentItemHtml.card.icon-card .text-container em {
-margin-top:10px;
+    margin-top: 10px;
 }
 
 .ContentItemHtml.card:not(.clickable):not(.team),
@@ -2916,7 +2944,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 
 
-.card.clickable .HtmlContent  a i {
+.card.clickable .HtmlContent a i {
     color: var(--hl-bs--primary);
     font-size: 32px;
     line-height: 60px;
@@ -3073,6 +3101,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 #MPOuterMost #MPOuter .card.primary:not(.icon) {
     background-color: var(--hl-bs--primary);
 }
+
 #MPOuterMost #MPOuter .card.primary:not(.icon) h2,
 #MPOuterMost #MPOuter .card.primary:not(.icon) h3,
 #MPOuterMost #MPOuter .card.primary:not(.icon) h4,
@@ -3080,11 +3109,13 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 #MPOuterMost #MPOuter .card.primary:not(.icon) p {
     color: var(--hl-bs--primary-opposite);
 }
+
 #MPOuterMost #MPOuter .card.primary.make-buttons:not(.icon) em a {
     color: var(--hl-bs--primary-opposite);
     background: transparent;
     border: 2px solid var(--hl-bs--primary-opposite);
 }
+
 #MPOuterMost #MPOuter .card.primary.make-buttons:not(.icon) em a:is(:hover, :focus) {
     border-color: var(--hl-bs--primary-opposite);
     background: var(--hl-bs--primary-opposite);
@@ -3096,18 +3127,21 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 #MPOuterMost #MPOuter .card.secondary:not(.icon) {
     background-color: var(--hl-bs--secondary);
 }
-#MPOuterMost #MPOuter .card.secondary:not(.icon)  h2,
-#MPOuterMost #MPOuter .card.secondary:not(.icon)  h3,
-#MPOuterMost #MPOuter .card.secondary:not(.icon)  h4,
-#MPOuterMost #MPOuter .card.secondary:not(.icon)  h5,
-#MPOuterMost #MPOuter .card.secondary:not(.icon)  p {
+
+#MPOuterMost #MPOuter .card.secondary:not(.icon) h2,
+#MPOuterMost #MPOuter .card.secondary:not(.icon) h3,
+#MPOuterMost #MPOuter .card.secondary:not(.icon) h4,
+#MPOuterMost #MPOuter .card.secondary:not(.icon) h5,
+#MPOuterMost #MPOuter .card.secondary:not(.icon) p {
     color: var(--ui-secondary-text);
 }
+
 #MPOuterMost #MPOuter .card.secondary.make-buttons:not(.icon) em a {
     color: var(--ui-secondary-text);
     background: transparent;
     border: 2px solid var(--ui-secondary-text);
 }
+
 #MPOuterMost #MPOuter .card.secondary.make-buttons:not(.icon) em a:is(:hover, :focus) {
     border-color: var(--ui-secondary-text);
     background: var(--ui-secondary-text);
@@ -3125,6 +3159,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     color: var(--ui-secondary-text);
     margin-bottom: 6px;
 }
+
 .card.icon.primary-icon-bg .HtmlContent p i {
     background-color: var(--hl-bs--primary);
 }
@@ -3141,36 +3176,36 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 
 
-.icon-circle .HtmlContent > p {
+.icon-circle .HtmlContent>p {
     text-align: center;
 }
 
-.card.icon:is(:hover,:focus) em {
+.card.icon:is(:hover, :focus) em {
     border-bottom: 1px solid var(--hl-bs--primary);
 }
 
-.icon-circle .HtmlContent > p  i {
+.icon-circle .HtmlContent>p i {
     height: 60px;
     width: 60px;
     background-color: var(--hl-bs--secondary);
     border-radius: 50%;
     font-size: 24px;
     color: var(--hl-bs--default-text);
-    display:inline-flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
 }
 
 
-.icon-circle:is(:hover, :focus) .HtmlContent > p  i {
+.icon-circle:is(:hover, :focus) .HtmlContent>p i {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: rgba(0, 0, 0, 0);
     background-position-x: center;
     background-position-y: top;
-  background-color: var(--hl-bs--secondary);
-  background-position: bottom;
-  transition: 0.3s;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+    transition: 0.3s;
 }
 
 /****** bios ******/
@@ -3505,7 +3540,7 @@ body.has-modal.bio-modal-open {
 }
 
 
-body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor{
+body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor {
     padding: 0 8px;
     display: flex;
     height: auto;
@@ -3549,8 +3584,8 @@ body.ribbit .sponsor a {
 }
 
 
-body.ribbit .sponsor a:is(:hover,:focus) {
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 16px 0px rgba(0, 0, 0, 0.15); 
+body.ribbit .sponsor a:is(:hover, :focus) {
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
 
@@ -4254,11 +4289,11 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 
 /****** Discussions ******/
 
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.HLDiscussions .heading > .col-md-12{
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.HLDiscussions .heading>.col-md-12 {
     flex: 1;
 }
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"] .HLLandingControl.HLDiscussions div[id$="_BottomLink"] a {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl.HLDiscussions div[id$="_BottomLink"] a {
     font-size: 16px;
 }
 
@@ -4292,7 +4327,7 @@ body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
     background-color: #d9d9d9 !important;
 }
 
-body.ribbit .tags-list a > div.text-truncate:hover {
+body.ribbit .tags-list a>div.text-truncate:hover {
     text-decoration: none;
     color: var(--hl-bs--default-text);
 }
@@ -4598,7 +4633,7 @@ body.ribbit .community-home .row-wide>div[class*="col-md-"]:not(.col-md-12) .HLL
     padding: 0;
 }
 
-body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"] .HLLandingControl div[id$="_BottomLink"] a {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl div[id$="_BottomLink"] a {
     color: var(--hl-bs--primary);
 }
 
@@ -5223,7 +5258,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 
 /****** Interior Header Title *******/
 
-#InteriorPageTitle{
+#InteriorPageTitle {
     position: relative;
     background: var(--hl-bs--primary);
 }
@@ -5231,17 +5266,18 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 #InteriorPageTitle svg {
     display: none;
 }
+
 #InteriorPageTitle::after {
     content: '';
-height: 157px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-size: cover;
-  mix-blend-mode: soft-light;
-  background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
+    height: 157px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
 
 }
 
@@ -5835,7 +5871,7 @@ body.ribbit.memberhome #MPFooterLink {
 /*** responsive ***/
 
 @media (max-width: 1200px) {
-    #NAV >.col-md-12 {
+    #NAV>.col-md-12 {
         padding-left: 0;
         padding-right: 0;
     }
@@ -5846,12 +5882,12 @@ body.ribbit.memberhome #MPFooterLink {
     }
 
     #MPOuterHeader #NAV #MPButtonBar {
-        margin-left:25px;
-        margin-right:25px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
 
 
-    #MPOuterHeader #NAV > .col-md-12 {
+    #MPOuterHeader #NAV>.col-md-12 {
         padding-left: 0;
         padding-right: 0;
     }
@@ -5869,7 +5905,7 @@ body.ribbit.memberhome #MPFooterLink {
 /*** mobile padding ***/
 
 @media (max-width: 1135px) {
-    .featured-card-multi > div > div{
+    .featured-card-multi>div>div {
         margin: 1em 0;
     }
 }
@@ -5893,26 +5929,26 @@ body.ribbit.memberhome #MPFooterLink {
         padding-right: 8px;
     }
 
-/************ extra padding between columns ************/
+    /************ extra padding between columns ************/
 
 
-    .row-wide:not(.default-pad) > .col-md-6:first-child,
-    .row-wide:not(.default-pad) > .col-md-8:first-child {
+    .row-wide:not(.default-pad)>.col-md-6:first-child,
+    .row-wide:not(.default-pad)>.col-md-8:first-child {
         padding-right: 8px;
     }
-    
-    .row-wide:not(.default-pad) > .col-md-6:last-child,
-    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
-    .row-wide:not(.default-pad) > .col-md-8:last-child {
+
+    .row-wide:not(.default-pad)>.col-md-6:last-child,
+    .row-wide:not(.default-pad)>.col-md-8+.col-md-4,
+    .row-wide:not(.default-pad)>.col-md-8:last-child {
         padding-left: 8px;
         width: 100%;
     }
 
-    .row-wide > .col-md-6:first-child > .ContentUserControl > .HLLandingControl {
+    .row-wide>.col-md-6:first-child>.ContentUserControl>.HLLandingControl {
         padding-right: 8px
     }
 
-    .row-wide > .col-md-6:last-child > .ContentUserControl > .HLLandingControl {
+    .row-wide>.col-md-6:last-child>.ContentUserControl>.HLLandingControl {
         padding-left: 0;
     }
 
@@ -5922,7 +5958,7 @@ body.ribbit.memberhome #MPFooterLink {
 
     body.ribbit .navbar-header {
         display: flex;
-        }
+    }
 
 
     body.ribbit #searchColumn {
@@ -5930,7 +5966,8 @@ body.ribbit.memberhome #MPFooterLink {
         position: static;
     }
 
-    body.ribbit #SearchControl_SearchButton, #MPOuterMost #MPSearchBlock {
+    body.ribbit #SearchControl_SearchButton,
+    #MPOuterMost #MPSearchBlock {
         display: block;
     }
 
@@ -5942,25 +5979,26 @@ body.ribbit.memberhome #MPFooterLink {
         -ms-flex: 1 0;
         flex: 1 0;
         margin-left: 1em;
-      }
+    }
 
     body.ribbit #RibbitWelcomeMobile {
         display: block;
-      }
+    }
 
-      body.ribbit #RibbitWelcome {
+    body.ribbit #RibbitWelcome {
         display: none;
-      }
+    }
 
     .navbar-header {
         float: none;
     }
+
     .navbar-default .navbar-toggle {
         display: block;
         border: 0;
     }
 
-    .navbar-default .navbar-toggle:is(:hover,:focus) {
+    .navbar-default .navbar-toggle:is(:hover, :focus) {
         border: 0;
         background: transparent;
     }
@@ -5981,28 +6019,35 @@ body.ribbit.memberhome #MPFooterLink {
     .navbar-collapse.collapse {
         display: none !important;
     }
+
     .navbar-nav {
         float: none !important;
         margin: 7.5px -15px;
     }
+
     .navbar-nav>li {
         float: none;
     }
+
     .navbar-nav>li>a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+
     .navbar-text {
         float: none;
         margin: 15px 0;
     }
+
     .navbar-collapse.collapse.in {
         display: block !important;
         border-color: transparent;
     }
+
     .collapsing {
         overflow: hidden !important;
     }
+
     .navbar-nav .open .dropdown-menu {
         position: static;
         float: none;
@@ -6012,73 +6057,84 @@ body.ribbit.memberhome #MPFooterLink {
         border: 0;
         box-shadow: none;
     }
+
     .navbar-nav .open .dropdown-menu>li>a {
         line-height: 20px;
     }
+
     .navbar-nav .open .dropdown-menu>li>a,
     .navbar-nav .open .dropdown-menu .dropdown-header {
         padding: 5px 15px 5px 25px;
     }
+
     body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default,
     body.ribbit .navbar,
     body.ribbit .navbar-default .navbar-nav {
         display: inline-block;
     }
-   body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
+
+    body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
         transform: none;
         margin-left: 10px;
         box-shadow: none
     }
+
     #MPSearchBlock {
         display: block;
     }
+
     #MPSearchBlock .input-group {
         width: 100%;
     }
+
     .search-wrap {
         display: none;
     }
-   #MPButtonBar > nav.navbar.navbar-default .row > .col-md-12 {
+
+    #MPButtonBar>nav.navbar.navbar-default .row>.col-md-12 {
         display: flex !important;
         align-items: unset !important;
         flex-flow: column !important;
     }
 
-    #MPButtonBar  .SearchInputs input {
+    #MPButtonBar .SearchInputs input {
         border: 1px solid var(--hl-bs--primary);
     }
 
     body.ribbit #searchColumn #SearchControl_SearchBoxToggle {
         top: 50%;
-        transform:translateY(-50%);
+        transform: translateY(-50%);
         left: 15px;
     }
 
     /************* styling to transfrom the hamburger to x *************/
 
-      body.ribbit .navbar-toggle .icon-bar {
-    background-color: var(--hl-bs--default-text);
-    width: 20px;
-    -webkit-transition: .3s ease-out;
-    -o-transition: .3s ease-out;
-    transition: .3s ease-out;
-  }
+    body.ribbit .navbar-toggle .icon-bar {
+        background-color: var(--hl-bs--default-text);
+        width: 20px;
+        -webkit-transition: .3s ease-out;
+        -o-transition: .3s ease-out;
+        transition: .3s ease-out;
+    }
 
-    body.ribbit .icon-bar-start.collapsing + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar {
-       transform: translate(0px, 7px) rotate(45deg) scale(80%, 80%);
-    transition: .3s ease-out;
-  }
+    body.ribbit .icon-bar-start.collapsing+span.icon-bar,
+    body.ribbit .icon-bar-start.collapse.in+span.icon-bar {
+        transform: translate(0px, 7px) rotate(45deg) scale(80%, 80%);
+        transition: .3s ease-out;
+    }
 
-  body.ribbit .icon-bar-start.collapsing + span.icon-bar + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar + span.icon-bar {
-    transform: rotate(135deg) scale(0);
-    transition: .3s ease-out;
-  }
-  
+    body.ribbit .icon-bar-start.collapsing+span.icon-bar+span.icon-bar,
+    body.ribbit .icon-bar-start.collapse.in+span.icon-bar+span.icon-bar {
+        transform: rotate(135deg) scale(0);
+        transition: .3s ease-out;
+    }
 
-  body.ribbit .icon-bar-start.collapsing + span.icon-bar + span.icon-bar + span.icon-bar, body.ribbit .icon-bar-start.collapse.in + span.icon-bar + span.icon-bar + span.icon-bar {
-    transform: translate(0px, -5px) rotate(-45deg) scale(80%, 80%);
-    transition: .3s ease-out;
-  }
+
+    body.ribbit .icon-bar-start.collapsing+span.icon-bar+span.icon-bar+span.icon-bar,
+    body.ribbit .icon-bar-start.collapse.in+span.icon-bar+span.icon-bar+span.icon-bar {
+        transform: translate(0px, -5px) rotate(-45deg) scale(80%, 80%);
+        transition: .3s ease-out;
+    }
 
 }
 
@@ -6092,6 +6148,7 @@ body.ribbit.memberhome #MPFooterLink {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
     .footer-middle-row::before,
     .footer-bottom-row::before {
         left: 8px;
@@ -6313,46 +6370,48 @@ body.ribbit.memberhome #MPFooterLink {
     }
 
 
-    #MPButtonBar > nav > div.collapse.navbar-collapse.navbar-ex1-collapse > .row > .col-md-12 {
+    #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse>.row>.col-md-12 {
         padding-right: 0;
     }
 
-        /* Resetting the mb-4 margin as it makes the cards mar */
+    /* Resetting the mb-4 margin as it makes the cards mar */
 
-        .bootstrap-4 .mb-4 {
-            margin-bottom: 0px !important;
-          }
+    .bootstrap-4 .mb-4 {
+        margin-bottom: 0px !important;
+    }
 
-          .flex-row, .event-cards .Content ul, .hero.image > div:nth-of-type(1) > div {
-            flex-direction: column;
-          }
-
-          #MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content > ul li:not(.slick-slide),
-          #MPOuterMost #MPOuter .event-cards .Content ul li {
-            margin: 12px auto;
-            width: calc(100% - 30px);
-          }
-
-          body.ribbit .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
-            padding-bottom: 50px;
-          }
-
-          body.ribbit .row > div[class*="col-md-"] > div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
-            bottom: 0;
-            left: 0;
-            transform: none;
-          }
-
-   body.ribbit .cards {
+    .flex-row,
+    .event-cards .Content ul,
+    .hero.image>div:nth-of-type(1)>div {
         flex-direction: column;
     }
 
-    body.ribbit:not(.interior) .row > div[class*="col-md-"] > div[class*="Content"] .HLLandingControl .row.heading  .col-md-12 {
+    #MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
+    #MPOuterMost #MPOuter .event-cards .Content ul li {
+        margin: 12px auto;
+        width: calc(100% - 30px);
+    }
+
+    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
+        padding-bottom: 50px;
+    }
+
+    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
+        bottom: 0;
+        left: 0;
+        transform: none;
+    }
+
+    body.ribbit .cards {
+        flex-direction: column;
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl .row.heading .col-md-12 {
         width: 100%;
     }
 
 
-    body.ribbit .engagement-leaderboard .tab-content .HLEngagement > .Content ul.display-vertical > li > a {
+    body.ribbit .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a {
         flex: 1;
     }
 
