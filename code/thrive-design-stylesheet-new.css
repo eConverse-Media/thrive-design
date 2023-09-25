@@ -36,8 +36,8 @@ body.ribbit #MPOuterMost #MPOuter h2 {
     font-size: 30px;
     line-height: 1.2;
 }
-body.ribbit #MPOuterMost #MPOuter .col-md-3 h2,
-body.ribbit #MPOuterMost #MPOuter .col-md-4 h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .HLLandingControl h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-4 .HLLandingControl h2,
 body.ribbit .col-md-3 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader {
     color: var(--ui-default-text-small);
@@ -329,29 +329,29 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
     border: none;
 }
 
-body.ribbit .make-buttons.outline em a,
-body.ribbit .make-buttons.outline-first em:first-child a:first-child {
+body.ribbit .make-buttons.outline-btn em a,
+body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child {
     background: transparent;
     color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
     padding: 8px 18px;
 }
 
-body.ribbit .make-buttons.outline em a:is(:hover, :focus),
-body.ribbit .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+body.ribbit .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
 }
 
-body.ribbit .make-buttons.outline-first.white-outline-btn em:first-child a {
+body.ribbit .make-buttons.outline-first-btn.white-outline-btn em:first-child a {
     background: transparent;
     color: white;
     border: 2px solid white;
     padding: 8px 18px;
 }
 
-body.ribbit .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
@@ -469,18 +469,11 @@ body.ribbit .make-buttons.secondary-btn em a {
 
 }
 
-
-
 body.ribbit .make-buttons.secondary-btn em a:is(:hover, :focus) {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     background-position: bottom;
 }
-
-/* .make-buttons.secondary em a:is(:hover, :focus):before {
-    opacity: 0.4;
-    transition: 0.3s;;
-} */
 
 /* White Button */
 
@@ -574,14 +567,20 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
     border-color: var(--ui-secondary-text);
 }
 
+/****** arrow link ******/
+
 .make-arrow-link em a {
     border: 0;
     background: transparent;
-    color: var(--cp-link-color);
+    color: var(--hl-bs--link);
     position: relative;
     padding: 0;
     display: flex;
     font-size: 16px;
+    text-decoration: none;
+    font-style: normal;
+    display: inline-block;
+    font-weight: 600;
 }
 
 .make-arrow-link em a::after {
@@ -595,7 +594,7 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
 }
 
 .make-arrow-link em a:is(:hover, :focus) {
-    color: var(--link-hover-color);
+    color: var(--hl-bs--link-hover);
 }
 
 .make-arrow-link.small-link em a {
@@ -605,4 +604,289 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
 .make-arrow-link.small-link em a::after {
     font-size: 12px;
     margin-left: 8px;
+}
+
+/****** backgrounds ******/
+
+body.ribbit:not(.interior).bodyBackground {
+    background-color: rgba(245, 245, 245, 0.97);
+}
+
+.row-full.bg-white {
+    background-color: #fff;
+}
+
+.row-full[class*="bg-"] {
+    position: relative;
+}
+
+.row-full.bg-black {
+    background-color: #000;
+}
+
+.overlay::before,
+#MPOuterMost .bg-primary-light::before,
+#MPOuterMost .bg-primary-dark::before,
+#MPOuterMost .bg-primary-light-gray::before,
+#MPOuterMost .bg-primary-medium-gray::before,
+#MPOuterMost .bg-secondary-light::before,
+#MPOuterMost .bg-secondary-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.85);
+}
+
+.overlay-down {
+    position: relative;
+}
+
+.overlay-down::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+.overlay-down .HtmlContent {
+    position: relative;
+    z-index: 5;
+}
+
+#MPOuterMost .bg-primary,
+#MPOuterMost .bg-primary-light,
+#MPOuterMost .bg-primary-dark,
+#MPOuterMost .bg-primary-light-gray,
+#MPOuterMost .bg-primary-medium-gray {
+    background-color: var(--hl-bs--primary);
+}
+
+#MPOuterMost .bg-primary-light::before {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#MPOuterMost .bg-primary-dark::before {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#MPOuterMost .bg-primary-light-gray::before {
+    background: rgba(245, 245, 245, 0.97);
+}
+
+#MPOuterMost .bg-primary-medium-gray {
+    background: rgba(244, 244, 244, 0.85);
+}
+
+#MPOuterMost .bg-secondary,
+#MPOuterMost .bg-secondary-light,
+#MPOuterMost .bg-secondary-dark {
+    background-color: var(--hl-bs--secondary);
+}
+
+#MPOuterMost .bg-secondary-light::before {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+#MPOuterMost .bg-secondary-dark::before {
+    background: rgba(0, 0, 0, 0.20);
+}
+
+.overlay {
+    position: relative;
+}
+
+/*** wave overlay ***/
+
+.overlay-wave,
+.light-graphic,
+.dark-graphic {
+    position: relative;
+}
+.overlay-wave::after {
+    height: 157px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+}
+.overlay-wave > *,
+.light-graphic > *,
+.dark-graphic > * {
+    position: relative;
+    z-index: 1;
+    float: none;
+}
+
+/*** graphic overlays ***/
+
+.light-graphic::after {
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh_1_.png');
+}
+
+.dark-graphic::after {
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/darkdark-graphic.png');
+}
+
+/*** text colours ***/
+
+.hl-primary-row-bkgd.overlay,
+.hl-primary-row-bkgd.overlay h1,
+.hl-primary-row-bkgd.overlay h2,
+.hl-primary-row-bkgd.overlay h3,
+.hl-primary-row-bkgd.overlay h4,
+.hl-primary-row-bkgd.overlay h5,
+.hl-primary-row-bkgd.overlay h6,
+.hl-primary-row-bkgd.overlay p {
+    color: #000;
+}
+body.ribbit .bg-primary *,
+body.ribbit #MPOuterMost #MPOuter .bg-primary h2 {
+    color: var(--hl-bs--primary-opposite);
+}
+body.ribbit .bg-secondary *,
+body.ribbit #MPOuterMost #MPOuter .bg-secondary h2 {
+    color: var(--ui-secondary-text);
+}
+body.ribbit .bg-gray {
+    background-color: rgba(245, 245, 245, 0.97);
+}
+
+/************ extra padding between columns ************/
+
+@media (min-width: 992px) {
+    .row-wide:not(.default-pad) > .col-md-6:first-child,
+    .row-wide:not(.default-pad) > .col-md-8:first-child {
+        padding-right: 24px;
+    }
+    
+    .row-wide:not(.default-pad) > .col-md-6:last-child,
+    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
+    .row-wide:not(.default-pad) > .col-md-8:last-child {
+        padding-left: 24px;
+    }
+}
+
+/************ tiles ************/
+
+.tile {
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    background-color: #fff;
+}
+.tile + .tile {
+    margin-top: 16px;
+}
+.tile .HtmlContent > *:first-child {
+    margin-top: 0;
+}
+.tile .HtmlContent > *:last-child {
+    margin-bottom: 0;
+}
+
+/****** image tiles ******/
+
+.tile.img-tile {
+    padding: 0;
+}
+.tile.img-tile .HtmlContent {
+    padding: 24px;
+}
+.tile.img-tile .img-container {
+    height: 200px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/****** CTA tiles ******/
+
+.cta-tile a {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 24px 100px 24px 24px;
+    position: relative;
+    background: var(--hl-bs--gray-100);
+    margin-bottom: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cta-tile.icon a {
+    padding-left: 110px;
+}
+
+.cta-tile.icon a>p:first-child {
+    margin-bottom: 0;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cta-tile.icon a i {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    background: var(--hl-bs--gray-300);
+    color: var(--hl-bs--primary);
+    font-size: 30px;
+}
+
+body.ribbit .cta-tile a {
+    color: var(--hl-bs--default-text);
+}
+
+.cta-tile a::after {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-family: "Font Awesome 5 Pro";
+    content: "\f061";
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.cta-tile h3 {
+    margin-top: 0;
+    transition: 0.3s;
+}
+
+.cta-tile a:hover,
+.cta-tile a:focus {
+    background: var(--hl-bs--gray-200);
+    transition: 0.3s;
+    color: var(--hl-bs--primary);
+}
+
+.cta-tile a:hover::after,
+.cta-tile a:focus::after {
+    transition: 0.3s;
+}
+
+.cta-tile.icon a:is(:hover, :focus) i {
+    background: var(--hl-bs--gray-400);
 }

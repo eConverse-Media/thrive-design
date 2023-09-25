@@ -102,11 +102,11 @@ function handlePageTitleBg() {
 function handleImageCards() {
 
 
-    $('.ContentItemHtml.card.img').each(function() {
-        $(this).wrapInner('<div class="text-container"></div>');
+    $('.ContentItemHtml.tile.img-tile').each(function() {
         let Img = $(this).find('img');
         let ImgSrc = $(Img).attr('src');
         $(this).prepend('<div class="img-container" style="background-image: url('+ ImgSrc +'"></div> ');
+        $(Img).parent().remove();
     });
 }
 
