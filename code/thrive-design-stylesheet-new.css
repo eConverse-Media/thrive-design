@@ -1,0 +1,122 @@
+:root {
+    --ui-default-text: #595959;
+    --ui-heading-text: #272727;
+    --ui-default-text-small: #666;
+    --ui-secondary-text: [TextOnSecondary];
+}
+
+/************ basics ************/
+
+body.ribbit {
+    color: var(--ui-default-text);
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+body.ribbit h1,
+body.ribbit h2,
+body.ribbit #MPOuterMost #MPOuter h2,
+body.ribbit h3,
+body.ribbit h4,
+body.ribbit h5,
+body.ribbit h6 {
+    color: var(--ui-heading-text);
+    font-weight: 700;
+}
+
+body.ribbit h1 {
+    font-size: 42px;
+    line-height: 1.1;
+}
+body.ribbit h2,
+body.ribbit #MPOuterMost #MPOuter h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+body.ribbit #MPOuterMost #MPOuter .col-md-3 h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-4 h2,
+body.ribbit .col-md-3 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
+body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader {
+    color: var(--ui-default-text-small);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+body.ribbit .col-md-3 h2.font-size-sm,
+body.ribbit .col-md-4 h2.font-size-sm {
+    font-size: 12px !important;
+}
+body.ribbit h3 {
+    font-size: 21px;
+    line-height: 1.2;
+}
+body.ribbit h3 a,
+body.ribbit #MPOuterMost #MPOuter h3 a {
+    font-size: 18px;
+    line-height: 1.2;
+}
+body.ribbit .bootstrap-4 h3 {
+    line-height: 1.2;
+}
+body.ribbit .bootstrap-4 a.link-title {
+    color: var(--ui-heading-text);
+    font-size: 18px;
+    line-height: 1.2;
+}
+body.ribbit h4 {
+    font-size: 16px;
+    line-height: 1.2;
+}
+body.ribbit h5,
+body.ribbit h6 {
+    font-size: 14px;
+    line-height: 1.2;
+}
+body.ribbit h6 {
+    font-weight: 600;
+}
+body.ribbit .p-large {
+    font-size: 18px;
+    line-height: 1.4;
+}
+body.ribbit .p-small {
+    font-size: 14px;
+    line-height: 1.4;
+}
+body.ribbit .bootstrap-4 .text-secondary {
+    color: var(--hl-default-text) !important;
+}
+body.ribbit .bootstrap-4 .text-meta {
+    color: var(--ui-default-text-small) !important;
+}
+body.ribbit .font-size-xs {
+    font-size: 14px !important;
+}
+body.ribbit .bootstrap-4 a.link-meta {
+    color: var(--hl-heading-text);
+}
+body.ribbit .bootstrap-4 a.link-meta:is(:hover, :focus) {
+    text-decoration: underline;
+    color: var(--hl-bs--link);
+}
+body.ribbit #MPOuterMost #MPOuter .ByLine,
+body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 300;
+    color: var(--ui-default-text-small);
+}
+body.ribbit #MPOuterMost #MPOuter .ByLine a,
+body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 a {
+    color: var(--ui-heading-text);
+    font-weight: 600;
+    text-decoration: none;
+}
+body.ribbit #MPOuterMost #MPOuter .ByLine a:is(:hover, :focus),
+body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 a:is(:hover, :focus) {
+    color: var(--ui-heading-text);
+    text-decoration: underline;
+}
