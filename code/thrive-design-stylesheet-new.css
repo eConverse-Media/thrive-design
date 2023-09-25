@@ -7,6 +7,8 @@
 
 /************ basics ************/
 
+/****** fonts ******/
+
 body.ribbit {
     color: var(--ui-default-text);
     font-size: 16px;
@@ -119,4 +121,488 @@ body.ribbit #MPOuterMost #MPOuter .ByLine a:is(:hover, :focus),
 body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 a:is(:hover, :focus) {
     color: var(--ui-heading-text);
     text-decoration: underline;
+}
+
+/****** transitions ******/
+
+a,
+a:is(:hover, :focus),
+button,
+button:is(:hover, :focus),
+input,
+input:is(:hover, :focus) {
+    transition: .3s;
+}
+
+/****** unstyled lists ******/
+
+.unstyled-list ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/****** tables ******/
+
+/*** default table style ***/
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+}
+
+table th {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: inherit;
+    border: 0;
+}
+
+table tr:nth-child(2n) {
+    border-bottom: 2px solid #ededed;
+    background: #FaFaFa;
+}
+
+table tr td {
+    padding: 15px;
+    vertical-align: middle;
+    border: 0;
+}
+
+/*** plain table style ***/
+.plain-table tr td {
+    padding: 10px 15px;
+    vertical-align: middle;
+    border: solid;
+    border-width: 1px;
+    background-color: #FFF;
+    border-color: #EDEDED;
+}
+
+.plain-table th {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: inherit;
+    background-color: #FaFaFa;
+    border: 1px solid #f5f5f5;
+}
+
+.plain-table tr:nth-child(2n) {
+    border-bottom: 1px solid #EDEDED;
+    background: #FFF;
+}
+
+/****** background images ******/
+
+.bg-image,
+.img-container {
+    background-size: cover;
+    background-position: center;
+}
+
+/****** buttons ******/
+
+.Login a.btn-primary {
+    padding: 10px 20px;
+}
+
+.make-buttons em {
+    margin: -8px;
+    display: inline-block;
+}
+
+.make-buttons em a {
+    margin: 8px;
+}
+
+.make-buttons em a,
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit .summary-edit em a,
+body.ribbit .featured-card-single .btn,
+body.ribbit .featured-card-multi .btn,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus) {
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.make-buttons em a,
+.card.social ul li a,
+.cta-tile a::after,
+button,
+.btn,
+body.ribbit .btn,
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit .summary-edit em a,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
+body.ribbit .make-buttons.primary-btn em a {
+    background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
+}
+
+.moxman-btn button,
+.moxman-btn button:is(:hover, :focus) {
+    background: transparent;
+    color: #333;
+}
+
+.make-buttons em a,
+.bootstrap-4:not(#CreateBtnWrapper) .btn {
+    white-space: pre-wrap;
+}
+
+.make-buttons em a:is(:hover, :focus),
+.card.social ul li a:is(:hover, :focus),
+.cta-tile a:is(:hover, :focus)::after,
+button:is(:hover, :focus),
+.btn:is(:hover, :focus),
+body.ribbit .btn:is(:hover, :focus),
+body.ribbit .btn:is(:hover, :focus),
+.btn.btn-primary:is(:hover, :focus),
+body.ribbit .btn.btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary:focus,
+body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
+.btn.btn-success:is(:hover, :focus),
+body.ribbit .btn-success:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-success:focus,
+body.ribbit :not(.no-theme) .btn-success:hover:not(:disabled),
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus),
+.btn.btn-default:is(:hover, :focus),
+body.ribbit .btn.btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default:focus,
+body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
+body.ribbit .summary-edit em a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus),
+body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
+    background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
+    background-position: bottom;
+}
+
+.make-buttons em a,
+button:not([onlick]),
+.btn,
+body.ribbit .btn,
+body.ribbit .btn:is(:hover, :focus),
+body.ribbit .btn:is(:hover, :focus):not(.disabled),
+.cta-tile a::after,
+.make-buttons em a:is(:hover, :focus),
+button:is(:hover, :focus),
+.btn:is(:hover, :focus),
+.cta-tile a:is(:hover, :focus)::after,
+.btn.btn-info,
+.btn.btn-info:is(:hover, :focus),
+body.ribbit .btn.btn-info,
+body.ribbit .btn.btn-info:is(:hover, :focus),
+.btn.btn-primary,
+.btn.btn-primary:is(:hover, :focus),
+body.ribbit .btn.btn-primary,
+body.ribbit .btn.btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary,
+body.ribbit :not(.no-theme) .btn-primary:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-primary:focus,
+body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
+body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default,
+body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
+body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
+body.ribbit .summary-edit em a,
+body.ribbit .summary-edit em a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus),
+body.ribbit .make-buttons.primary-btn em a,
+body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+    border: none;
+}
+
+body.ribbit .make-buttons.outline em a,
+body.ribbit .make-buttons.outline-first em:first-child a:first-child {
+    background: transparent;
+    color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
+    padding: 8px 18px;
+}
+
+body.ribbit .make-buttons.outline em a:is(:hover, :focus),
+body.ribbit .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+    color: #fff;
+    background-color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
+}
+
+body.ribbit .make-buttons.outline-first.white-outline-btn em:first-child a {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 18px;
+}
+
+body.ribbit .make-buttons.outline-first em:first-child a:first-child:is(:hover, :focus) {
+    color: #fff;
+    background-color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
+}
+
+
+body.ribbit .btn-ghost {
+    color: var(--hl-bs--default-text);
+    background: var(--hl-bs--gray-100);
+    border: none;
+}
+
+body.ribbit .btn-ghost:is(:hover, :focus),
+body.ribbit .btn-ghost:is(:hover, :focus):not(.disabled) {
+    color: var(--hl-bs--default-text);
+    background: var(--hl-bs--gray-300);
+}
+
+.ribbit .narrow-widget a.link-standalone {
+    color: #fff;
+    font-size: 16px !important;
+    font-weight: 600;
+}
+
+.bootstrap-4 .view-more-link a.link-standalone {
+    font-weight: 600;
+    color: var(--hl-bs--primary);
+    font-size: 14px;
+}
+
+.btn.btn-success,
+.btn.btn-success:is(:hover, :focus),
+body.ribbit .btn.btn-success,
+body.ribbit .btn.btn-success:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-success,
+body.ribbit :not(.no-theme) .btn-success:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-success:focus,
+body.ribbit :not(.no-theme) .btn-success:hover:not(:disabled),
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary,
+body.ribbit .bootstrap-4 .featured-card .card-edit .btn-group .btn-group .btn-primary:is(:hover, :focus) {
+    background-color: var(--hl-bs--secondary);
+    color: var(--ui-secondary-text);
+    border: none;
+}
+
+.narrow-widget a.link-standalone i {
+    display: none;
+}
+
+.btn.btn-default,
+.btn.btn-default:is(:hover, :focus),
+.btn.btn-default-override,
+.btn.btn-default-override:is(:hover, :focus),
+body.ribbit .btn.btn-default-override,
+body.ribbit .btn.btn-default-override:is(:hover, :focus),
+body.ribbit .btn.btn-default,
+body.ribbit .btn.btn-default:is(:hover, :focus),
+body.ribbit .people-you-should-know .HLLandingControl .btn.btn-default,
+body.ribbit .people-you-should-know .HLLandingControl .btn.btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default,
+body.ribbit :not(.no-theme) .btn-default:is(:hover, :focus),
+body.ribbit :not(.no-theme) .btn-default:focus,
+body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
+.volunteer-opportunities-filter .bootstrap-select button.btn.btn-default,
+.volunteer-opportunities-filter .bootstrap-select button.btn.btn-default:is(:hover, :focus) {
+    background-color: var(--hl-bs--gray-300);
+    color: var(--hl-bs--default-text);
+    border: none;
+}
+
+body.ribbit .btn.btn-default .caret::before {
+    color: var(--hl-bs--default-text);
+}
+
+.categorize-message-buttons button {
+    color: var(--hl-bs--default-text);
+}
+
+.btn.btn-link,
+.btn.btn-link:is(:hover, :focus),
+body.ribbit .btn.btn-link,
+body.ribbit .btn.btn-link:is(:hover, :focus) {
+    background: transparent;
+    color: var(--hl-bs--default-text);
+}
+
+.hl-primary-row-bkgd:not(.overlay) .make-buttons em a,
+.hl-primary-row-bkgd:not(.overlay).make-buttons em a,
+.hl-primary-row-bkgd:not(.overlay) .hero.image .make-buttons em+em a {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-100);
+}
+
+.hl-primary-row-bkgd:not(.overlay) .make-buttons em a:is(:hover, :focus),
+.hl-primary-row-bkgd:not(.overlay).make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-300);
+}
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a {
+    color: var(--hl-bs--gray-100);
+    background: var(--hl-bs--secondary);
+}
+
+.hl-primary-row-bkgd .hero.image .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background: var(--hl-bs--gray-300);
+}
+
+/* Secondary Button */
+
+body.ribbit .make-buttons.secondary-btn em a {
+    background: linear-gradient(var(--hl-bs--secondary), rgb(255 255 255/40%)) top/100% 800%;
+    color: var(--hl-bs--default-text);
+
+}
+
+
+
+body.ribbit .make-buttons.secondary-btn em a:is(:hover, :focus) {
+    background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
+    background-color: var(--hl-bs--secondary);
+    background-position: bottom;
+}
+
+/* .make-buttons.secondary em a:is(:hover, :focus):before {
+    opacity: 0.4;
+    transition: 0.3s;;
+} */
+
+/* White Button */
+
+body.ribbit .make-buttons.gray-btn em a {
+    background: #f5f5f5;
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+body.ribbit .make-buttons.gray-btn em a:is(:hover, :focus) {
+    background: #e4e4e4;
+    color: var(--hl-bs--primary);
+}
+
+/* White Button */
+
+body.ribbit .make-buttons.white-btn em a {
+    background: #fff;
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+/* White Outline Button */
+
+body.ribbit .make-buttons.white-outline-btn em a {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+body.ribbit .make-buttons.white-outline-btn em a:is(:hover, :focus),
+.make-buttons.bg-primary em a:is(:hover, :focus),
+.bg-primary .make-buttons em a:is(:hover, :focus) {
+    background: #fff;
+    border-color: #fff;
+    color: var(--hl-bs--primary);
+    transition: 0.3s;
+}
+
+/* Dark Outline Button */
+
+body.ribbit .make-buttons.dark-outline-btn em a {
+    background: transparent;
+    color: var(--hl-bs--primary);
+    border: 2px solid var(--hl-bs--primary);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
+    background: var(--hl-bs--primary);
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* primary outline button */
+
+.make-buttons.bg-primary em a,
+.bg-primary .make-buttons em a {
+    background: transparent;
+    color: var(--hl-bs--primary-opposite);
+    border: 2px solid var(--hl-bs--primary-opposite);
+}
+.make-buttons.bg-primary em a:is(:hover, :focus),
+.bg-primary .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background-color: var(--hl-bs--primary-opposite);
+    border-color: var(--hl-bs--primary-opposite);
+}
+
+/* secondary outline button */
+
+.make-buttons.bg-secondary em a,
+.bg-secondary .make-buttons em a {
+    background: transparent;
+    border: 2px solid var(--ui-secondary-text);
+    color: var(--ui-secondary-text);
+}
+.make-buttons.bg-secondary em a:is(:hover, :focus),
+.bg-secondary .make-buttons em a:is(:hover, :focus) {
+    background: var(--ui-secondary-text);
+    color: var(--hl-bs--secondary);
+    border-color: var(--ui-secondary-text);
+}
+
+.make-arrow-link em a {
+    border: 0;
+    background: transparent;
+    color: var(--cp-link-color);
+    position: relative;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+}
+
+.make-arrow-link em a::after {
+    content: '\f061';
+    height: 13px;
+    width: 14px;
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Pro';
+    margin-left: 8px;
+}
+
+.make-arrow-link em a:is(:hover, :focus) {
+    color: var(--link-hover-color);
+}
+
+.make-arrow-link.small-link em a {
+    font-size: 14px;
+}
+
+.make-arrow-link.small-link em a::after {
+    font-size: 12px;
+    margin-left: 8px;
 }
