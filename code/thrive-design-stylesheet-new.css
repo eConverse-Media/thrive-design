@@ -316,7 +316,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 .make-buttons em a,
 .card.social ul li a,
 .cta-tile a::after,
-button,
 .btn,
 body.ribbit .btn,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
@@ -342,7 +341,6 @@ body.ribbit .make-buttons.primary-btn em a {
 .make-buttons em a:is(:hover, :focus),
 .card.social ul li a:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
-button:is(:hover, :focus),
 .btn:is(:hover, :focus),
 body.ribbit .btn:is(:hover, :focus),
 body.ribbit .btn:is(:hover, :focus),
@@ -371,7 +369,6 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
 }
 
 .make-buttons em a,
-button:not([onlick]),
 .btn,
 body.ribbit .btn,
 body.ribbit .btn:is(:hover, :focus),
@@ -1110,18 +1107,13 @@ body.ribbit .cta-tile a {
     display: flex;
     flex: 1;
 }
+#MPOuterMost #MPOuter .cards > .col-md-12 {
+    margin: -12px;
+}
 
 .cards>div .card {
-    margin: 0 12px;
+    margin: 12px;
     flex: 1;
-}
-
-.cards>div .card:first-of-type {
-    margin-left: 0;
-}
-
-.cards>div .card:last-of-type {
-    margin-right: 0;
 }
 
 .flex-cards {
@@ -1237,6 +1229,7 @@ body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>d
 
 .card.team button {
     width: 100%;
+    border: none;
 }
 .card.team button:is(:hover, :focus) {
     background: #fff;
@@ -1868,5 +1861,724 @@ body.ribbit.memberhome #MPFooterLink {
     #MPOuterHeader #NAV #MPButtonBar {
         margin-left: 50px;
         margin-right: 50px
+    }
+}
+
+@media (max-width: 1200px) {
+    #NAV>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .commHTMLOptionsToAttach>div>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+
+    #MPOuterHeader #NAV>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
+
+@media only screen and (max-width: 1190px) {
+    .ideation-home .ideation-filter .ideation-filter-buttons {
+        width: 100%;
+    }
+}
+
+/*** mobile padding ***/
+
+@media (max-width: 1135px) {
+    .featured-card-multi>div>div {
+        margin: 1em 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .flex-row {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-row .HtmlContent>*:first-child {
+        margin-top: 0;
+    }
+
+    .flex-row .HtmlContent>*:last-child {
+        margin-bottom: 0;
+    }
+
+    .interior .row-wide div[class*="section"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    /****** responsive ******/
+
+
+    body.ribbit .navbar-header {
+        display: flex;
+    }
+
+
+    body.ribbit #searchColumn {
+        display: block !important;
+        position: static;
+    }
+
+    body.ribbit #SearchControl_SearchButton,
+    #MPOuterMost #MPSearchBlock {
+        display: block;
+    }
+
+
+
+    body.ribbit .navbar-header #LogoNavPlaceholder {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex: 1 0;
+        flex: 1 0;
+        margin-left: 1em;
+    }
+
+    body.ribbit #RibbitWelcomeMobile {
+        display: block;
+    }
+
+    body.ribbit #RibbitWelcome {
+        display: none;
+    }
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-default .navbar-toggle {
+        display: block;
+        border: 0;
+    }
+
+    .navbar-default .navbar-toggle:is(:hover, :focus) {
+        border: 0;
+        background: transparent;
+    }
+
+    body.ribbit #MPOuterHeader .navbar-toggle .icon-bar {
+        background-color: var(--hl-bs--default-text);
+    }
+
+    body.ribbit #CreateBtnWrapper {
+        display: none;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px -15px;
+    }
+
+    .navbar-nav>li {
+        float: none;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+        border-color: transparent;
+    }
+
+    .collapsing {
+        overflow: hidden !important;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .navbar-nav .open .dropdown-menu>li>a {
+        line-height: 20px;
+    }
+
+    .navbar-nav .open .dropdown-menu>li>a,
+    .navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 25px;
+    }
+
+    body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default,
+    body.ribbit .navbar,
+    body.ribbit .navbar-default .navbar-nav {
+        display: inline-block;
+    }
+
+    body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
+        transform: none;
+        margin-left: 10px;
+        box-shadow: none
+    }
+
+    #MPSearchBlock {
+        display: block;
+    }
+
+    #MPSearchBlock .input-group {
+        width: 100%;
+    }
+
+    .search-wrap {
+        display: none;
+    }
+
+    #MPButtonBar>nav.navbar.navbar-default .row>.col-md-12 {
+        display: flex !important;
+        align-items: unset !important;
+        flex-flow: column !important;
+    }
+
+    #MPButtonBar .SearchInputs input {
+        border: 1px solid var(--hl-bs--primary);
+    }
+
+    body.ribbit #searchColumn #SearchControl_SearchBoxToggle {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+    }
+
+    /************* styling to transfrom the hamburger to x *************/
+
+    body.ribbit .navbar-toggle .icon-bar {
+        background-color: var(--hl-bs--default-text);
+        width: 20px;
+        -webkit-transition: .3s ease-out;
+        -o-transition: .3s ease-out;
+        transition: .3s ease-out;
+    }
+
+    body.ribbit .icon-bar-start.collapsing+span.icon-bar,
+    body.ribbit .icon-bar-start.collapse.in+span.icon-bar {
+        transform: translate(0px, 7px) rotate(45deg) scale(80%, 80%);
+        transition: .3s ease-out;
+    }
+
+    body.ribbit .icon-bar-start.collapsing+span.icon-bar+span.icon-bar,
+    body.ribbit .icon-bar-start.collapse.in+span.icon-bar+span.icon-bar {
+        transform: rotate(135deg) scale(0);
+        transition: .3s ease-out;
+    }
+
+
+    body.ribbit .icon-bar-start.collapsing+span.icon-bar+span.icon-bar+span.icon-bar,
+    body.ribbit .icon-bar-start.collapse.in+span.icon-bar+span.icon-bar+span.icon-bar {
+        transform: translate(0px, -5px) rotate(-45deg) scale(80%, 80%);
+        transition: .3s ease-out;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .hero {
+        height: unset;
+    }
+
+    .col-md-12>.FeaturedCardGrid .featured-card-single:not(.layout-hero) .px-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .footer-middle-row::before,
+    .footer-bottom-row::before {
+        left: 8px;
+        right: 8px;
+    }
+
+    body.ribbit .navbar-nav {
+        overflow-y: scroll;
+    }
+
+    #MPFooterLink .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-middle-row,
+    #MPCopyright,
+    #MPFooterLink #MPFooterLinkContent {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+    
+    body.ribbit .flex-cards>[class*="col-"]:first-of-type {
+        padding-left: 0;
+    }
+    
+    body.ribbit .flex-cards>[class*="col-"]:last-of-type {
+        padding-right: 0;
+    }
+
+    .cards>.col-md-12 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #MPOuterMost #MPOuter .cards > .col-md-12 {
+        margin: -8px;
+    }
+
+    .cards .col-md-12 .card {
+        flex-basis: calc(33.333333% - 16px);
+        margin: 8px;
+    }
+
+    .ContentItemHtml.card:not(.clickable):not(.team),
+    .ContentItemMVC.card,
+    .ContentUserControl.card,
+    .card.clickable a,
+    .card.team button {
+        width: 100%;
+    }
+
+    .ContentItemHtml.card:not(.clickable):not(.team),
+    .ContentItemMVC.card,
+    .card.clickable a,
+    .card.team button {
+        max-width: 100%;
+    }
+
+    .featured-cards ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li {
+        width: calc(100% - 30px);
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
+        margin-left: 15px;
+    }
+
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
+        margin-right: 15px;
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
+        width: calc(100% - 30px);
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
+        margin-left: 15px;
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
+        margin-right: 15px;
+    }
+
+    .cards.events>.HLEventList ul:not(.dropdown-menu) {
+        flex-direction: column;
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
+        margin-bottom: 15px;
+    }
+
+    .ribbit .featured-tile-slider-wrapper .slick-dots li {
+        border-bottom: none;
+    }
+
+    .thrive-blogs .blogs-block {
+        padding-top: 170px;
+        position: relative;
+        padding-bottom: 25px;
+        padding-left: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .thrive-blogs .blogs-block .img-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 170px;
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .ContentUserControl.featured-blogs ul {
+        flex-direction: column
+    }
+
+    .ContentUserControl.featured-blogs ul li,
+    .ContentUserControl.featured-resource ul li {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+
+    .ContentUserControl.featured-blogs ul li:first-of-type {
+        margin-left: 0px;
+    }
+
+    .ContentUserControl.featured-blogs ul li:last-of-type {
+        margin-right: 0px;
+    }
+
+    .latest-news-list.ContentUserControl .blogs-block,
+    .ContentUserControl.featured-resource ul li,
+    .resources-list.ContentUserControl ul li {
+        width: calc(33.3333333333% - 30px);
+    }
+
+    .ContentUserControl.featured-resource ul li {
+        width: 100%;
+    }
+
+    .ContentUserControl.featured-blogs ul,
+    .ContentUserControl.featured-resource ul,
+    .featured-tile-slider-wrapper .slick-list .slick-track {
+        flex-direction: column;
+    }
+
+    body.ribbit .side-nav {
+        position: relative;
+        left: auto;
+    }
+
+    #PageTitleH1 {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:first-child {
+        padding-left: 0;
+    }
+
+    body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:last-child {
+        padding-right: 0;
+    }
+
+    body.ribbit .row-wide>[class*="col-"]>.row-wide,
+    body.ribbit .row-wide>[class*="col-"]>.row-full {
+        margin: 0 -8px;
+        max-width: calc(100% + 16px);
+    }
+
+    .interior .row-wide div[class*="section"] {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /*** responsive ***/
+
+    .hero.with-bg::before {
+        background: linear-gradient(to bottom, var(--hl-bs--primary), transparent);
+    }
+
+
+    .flex-cards {
+        display: block;
+    }
+
+    .summary-edit .Content {
+        display: block;
+    }
+
+    .summary-edit .text-container,
+    .summary-edit .img-container {
+        width: 100%;
+    }
+
+    .summary-edit .text-container {
+        padding-right: 0;
+        margin-top: 40px;
+    }
+
+    .recent-news .HLRecentBlogs ul,
+    .featured-resources .HLMyDocuments ul {
+        flex-wrap: wrap;
+        margin: -5px;
+    }
+
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+        flex-basis: 50%;
+        padding: 5px;
+    }
+
+
+    #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse>.row>.col-md-12 {
+        padding-right: 0;
+    }
+
+    /* Resetting the mb-4 margin as it makes the cards mar */
+
+    .bootstrap-4 .mb-4 {
+        margin-bottom: 0px !important;
+    }
+
+    .flex-row,
+    .event-cards .Content ul,
+    .hero.image>div:nth-of-type(1)>div {
+        flex-direction: column;
+    }
+
+    #MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
+    #MPOuterMost #MPOuter .event-cards .Content ul li {
+        margin: 12px auto;
+        width: calc(100% - 30px);
+    }
+
+    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
+        padding-bottom: 50px;
+    }
+
+    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
+        bottom: 0;
+        left: 0;
+        transform: none;
+    }
+
+    body.ribbit .cards {
+        flex-direction: column;
+    }
+
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl .row.heading .col-md-12 {
+        width: 100%;
+    }
+
+
+    body.ribbit .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a {
+        flex: 1;
+    }
+
+
+    .leaderboard .Content ul li .title-row {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .flex-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    body.ribbit .flex-heading h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .ideation-home .card-content>.row,
+    .ideation-home>.row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .ideation-home .ideation-byline .row .col-md-3 {
+        padding: 0;
+        width: 70px;
+        margin-right: 15px;
+        float: left;
+    }
+
+    .ideation-home .ideation-byline .row .col-md-9 {
+        padding: 0;
+        width: calc(100% - 85px);
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .ideation-home .ideation-footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (width < 767px) {
+
+    .slider .slide .HtmlContent h6,
+    .slider .slide .HtmlContent h2,
+    .slider .slide .HtmlContent p {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .slider .slide .HtmlContent {
+        padding-bottom: 240px;
+    }
+
+    .slider .slide .HtmlContent .img-container {
+        top: unset;
+        bottom: 0;
+        transform: unset;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .ribbit .profile-snippet-card .profile-snippet-bio {
+        padding-top: 0;
+    }
+
+
+
+    .latest-news-list.ContentUserControl .blogs-block,
+    .resources-list.ContentUserControl ul li {
+        width: calc(50% - 30px);
+    }
+
+    .ContentUserControl.featured-resource ul li {
+        width: 100%;
+    }
+
+    .slideout-search {
+        display: none;
+    }
+
+    #MPSearchBlock {
+        display: block;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .ideation-filter .btn-group {
+        margin-bottom: 5px;
+    }
+}
+
+
+@media (width < 551px) {
+
+    .latest-news-list.ContentUserControl .blogs-block,
+    .resources-list.ContentUserControl ul li {
+        width: calc(100% - 30px);
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .col-md-6 .HLEventList ul li>.row,
+    .col-md-6 .HLRecentBlogs ul li,
+    .col-md-6 .HLMyDocuments ul li {
+        flex-direction: column;
+    }
+
+    .home .col-md-6 .HLEventList ul li .date-block,
+    .col-md-6 .HLRecentBlogs ul li .img-container,
+    .col-md-6 .HLMyDocuments ul li .img-container {
+        margin-bottom: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home .col-md-6 .HLEventList ul li .col-md-10,
+    .col-md-6 .HLRecentBlogs ul li .text-container,
+    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .hero .card.make-buttons em {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .cards .card,
+    .col-md-6 .cards .card {
+        flex-basis: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 475px) {
+    .cta-tile.icon a {
+        padding-left: 24px;
+    }
+
+    .cta-tile.icon a>p:first-child {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 10px;
+        transform: none;
+    }
+
+    body.ribbit .slider {
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    body.ribbit .recent-news .HLRecentBlogs ul li,
+    body.ribbit .featured-resources .HLMyDocuments ul li {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .cards .card,
+    .col-md-6 .cards .card {
+        flex-basis: calc(100% - 16px);
     }
 }
