@@ -700,6 +700,7 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 .overlay::before,
+.overlay-dark::before,
 #MPOuterMost .bg-primary-light::before,
 #MPOuterMost .bg-primary-dark::before,
 #MPOuterMost .bg-primary-light-gray::before,
@@ -715,6 +716,10 @@ body.ribbit:not(.interior).bodyBackground {
     width: 100%;
     height: 100%;
     background-color: rgba(244, 244, 244, 0.85);
+}
+
+.overlay-dark::before {
+    background-color: rgba(0,0,0,0.5);
 }
 
 .overlay-down {
@@ -1116,8 +1121,10 @@ body.ribbit .cta-tile a {
     flex: 1;
 }
 
-.flex-cards {
+body.ribbit .row-wide.flex-cards {
     display: flex;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 body.ribbit .flex-cards>[class*="col-"] {
@@ -1125,14 +1132,6 @@ body.ribbit .flex-cards>[class*="col-"] {
     flex-grow: 0;
     flex-shrink: 1;
     display: flex;
-}
-
-body.ribbit .flex-cards>[class*="col-"]:first-of-type {
-    padding-left: 8px;
-}
-
-body.ribbit .flex-cards>[class*="col-"]:last-of-type {
-    padding-right: 8px;
 }
 
 .flex-cards .card.ContentItemHtml {
@@ -1855,6 +1854,128 @@ body.ribbit.memberhome #MPFooterLink {
     padding: 0;
 }
 
+/************ hero *************/
+
+.hero {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero.image {
+    display: flex;
+}
+
+.hero.image>div:nth-of-type(1) {
+    display: flex;
+}
+
+.hero.image>div:nth-of-type(1)>div {
+    display: flex;
+}
+
+.hero.image>div:nth-of-type(1)>div>div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-text.make-buttons em {
+    margin: -10px;
+}
+.hero-text.make-buttons em a {
+    margin: 10px;
+}
+
+.hero:not(.graphic) .hero-text .HtmlContent {
+    padding: 145px 16px;
+}
+
+#MPOuterMost #MPOuter .hero-text .HtmlContent h2 {
+    color: white;
+}
+
+.hero-text .HtmlContent p {
+    color: white;
+}
+
+body.ribbit .hero-text.make-buttons em a + a {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+
+body.ribbit .hero-text.make-buttons em a + a:is(:hover, :focus) {
+    background-color: white;
+    border: 2px solid white;
+    color: var(--hl-bs--default-text);
+}
+
+.hero {
+    position: relative;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.memberhome .hero {
+    height: 300px;
+}
+
+.memberhome .hero.height-unset {
+    height: unset;
+}
+
+body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a {
+    background: var(--hl-bs--primary);
+    border: none;
+    color: white;
+}
+
+body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a:is(:hover, :focus) {
+    background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
+    background-position: bottom;
+}
+.hero.graphic>.col-md-12::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 86.1728395062%;
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-graphic.png');
+    mix-blend-mode: soft-light;
+    background-size: cover;
+}
+
+
+.hero.graphic>.col-md-12 .HtmlContent {
+    position: relative;
+    z-index: 10;
+}
+
+
+.hero.graphic>.col-md-12 .HtmlContent h2 {
+    color: white;
+}
+
+.hero.graphic>.col-md-12 .HtmlContent p {
+    color: white;
+}
+
+
+.hero .hero-text .HtmlContent {
+    max-width: 784px;
+}
+
+/****** flex cards below hero ******/
+
+#MPOuterMost #MPOuter .hero + .flex-cards {
+    margin-top: -40px;
+}
+
 /************ responsive ************/
 
 @media (width < 1600px) {
@@ -2148,14 +2269,6 @@ body.ribbit.memberhome #MPFooterLink {
     .footer-social {
         justify-content: center;
     }
-    
-    body.ribbit .flex-cards>[class*="col-"]:first-of-type {
-        padding-left: 0;
-    }
-    
-    body.ribbit .flex-cards>[class*="col-"]:last-of-type {
-        padding-right: 0;
-    }
 
     .cards>.col-md-12 {
         flex-wrap: wrap;
@@ -2321,7 +2434,7 @@ body.ribbit.memberhome #MPFooterLink {
     }
 
 
-    .flex-cards {
+    body.ribbit .row-wide.flex-cards {
         display: block;
     }
 
