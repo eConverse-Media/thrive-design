@@ -984,7 +984,7 @@ body.ribbit .bg-gray {
     padding-top: 48px;
     position: relative;
 }
-.card.img-icon-card i {
+.card.img-icon-card .HtmlContent i {
     position: absolute;
     top: -50px;
     height: 100px;
@@ -1442,4 +1442,316 @@ body.ribbit .sponsor a {
 body.ribbit .sponsor a:is(:hover, :focus) {
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
+}
+
+/************ Header ************/
+
+body.ribbit #NAV {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+}
+
+body.ribbit #NAV>div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#MPOuterHeader #NAV #MPButtonBar {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.ribbit .navbar,
+body.ribbit .navbar-default .navbar-nav>li>a {
+    font-weight: 600;
+}
+
+/****** search ******/
+
+/* Fixing parent searchColumn div to prevent position absolute div overlapping nav items */
+
+#MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse>.row>.col-md-12 {
+    padding-right: 225px;
+}
+
+body.ribbit #SearchControl_SearchButton,
+#MPOuterMost #MPSearchBlock {
+    display: none;
+}
+
+body.ribbit #MPButtonBar>nav>div.collapse.navbar-collapse.navbar-ex1-collapse .row div[class*=col] {
+    align-items: center
+}
+
+/* Making the search Column position Absolute to avvoid expanded from shrinking the nav */
+
+body.ribbit #searchColumn {
+    position: absolute;
+    right: 0;
+}
+
+
+
+.search-wrap {
+    border: 1px solid transparent;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 52px;
+    height: 48px;
+    transition: width .3s;
+    background: #fff;
+    position: relative;
+}
+
+.search-wrap.not-logged-in {
+    right: 80px;
+}
+
+.search-wrap.open {
+    width: 250px;
+    transition: width .3s;
+    border: 1px solid var(--hl-bs--primary);
+    box-shadow: 0px 9px 10px 2px rgba(0, 0, 0, 0.03),
+        0px 4px 4px rgba(4, 21, 81, 0.03),
+        0px 6px 10px rgba(4, 21, 81, 0.04);
+    z-index: 10
+}
+
+.search-bar-top {
+    float: left;
+    opacity: 0;
+    z-index: -1;
+    transition: .3s;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.open .search-bar-top {
+    opacity: 1;
+    z-index: 10;
+    transition: .3s;
+}
+
+.SearchInputs {
+    background: #fff;
+}
+
+.SearchInputs .form-control {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5b5b5b;
+}
+
+.SearchInputs .form-control::placeholder {
+    font-style: normal;
+}
+
+body:not(.ribbit) #searchColumn {
+    display: none;
+}
+
+.search-bar-top .form-control,
+.open .search-bar-top .form-control {
+    padding: 12px 20px;
+    height: 46px;
+    transition: width .3s;
+    outline: none;
+    background: transparent
+}
+
+.SearchInputs button[id*="SearchButton"] {
+    padding: 0;
+    width: 0;
+    border: none;
+    background: transparent;
+    transition: width .3s;
+}
+
+
+body.ribbit .search-bar-top button[id*="SearchButton"],
+.open .search-bar-top button[id*="SearchButton"] {
+    margin-right: 15px;
+    color: #2E334E;
+    font-size: 16px;
+    line-height: 22px;
+    border: none;
+    background: transparent;
+    ;
+    padding: 0;
+    width: auto;
+}
+
+#searchColumn button[id*="SearchButton"]:hover,
+#searchColumn button[id*="SearchButton"]:focus,
+.open .search-bar-top button[id*="SearchButton"]:hover,
+.open .search-bar-top button[id*="SearchButton"]:focus {
+    color: var(--hl-bs--primary);
+    background: transparent
+}
+
+#searchColumn button[id*="SearchButton"] .glyphicon-search,
+.open .search-bar-top button[id*="SearchButton"] .glyphicon-search {
+    width: auto;
+    vertical-align: unset !important;
+    top: 0;
+}
+
+#searchColumn button[id*="SearchButton"] .glyphicon-search::before,
+.open .search-bar-top button[id*="SearchButton"] .glyphicon-search::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f061';
+    font-size: 20px;
+    color: #C54644;
+}
+
+.search-btn-top {
+    padding: 0;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    margin: 10px 0px 0px 4px;
+    position: absolute;
+    transition: background-color .3s;
+    font-size: 16px;
+    line-height: 16px;
+    color: #2E334E;
+    right: 0px;
+    z-index: 15;
+}
+
+.open .search-btn-top {
+    font-size: 12px;
+    transition: background-color .3s;
+    right: 30px;
+}
+
+.search-btn-top::before {
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f002';
+    font-weight: 900;
+}
+
+.open .search-btn-top::before {
+    content: '\f00d';
+    font-size: 18px;
+    transition: 0s;
+}
+
+/* Nav Bar */
+
+body.ribbit .navbar,
+body.ribbit .navbar-default .navbar-nav,
+body.ribbit #NAV #MPButtonBar nav.navbar.navbar-default {
+    padding: 0;
+}
+
+body.ribbit #NAV * {
+    line-height: 1;
+}
+
+/* Nav Items */
+
+body.ribbit #NAV .navbar-nav>li {
+    line-height: 1;
+}
+
+body.ribbit #NAV .navbar-nav>li>a {
+    line-height: 1.4;
+    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+/* Nav Active Hover */
+body.ribbit :not(.no-theme) .navbar .navbar-nav>.active>a,
+body.ribbit :not(.no-theme) .navbar .navbar-nav>.active>a:hover,
+body.ribbit :not(.no-theme) .navbar .navbar-nav>.active>a:focus,
+body.ribbit :not(.no-theme) .navbar .navbar-nav>li>a:hover,
+body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a,
+body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:hover,
+body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:focus {
+    color: var(--hl-bs--primary);
+}
+
+/* Nav Dropdown */
+
+.navbar-nav>li>.dropdown-menu {
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 2px 16px 0px rgba(0, 0, 0, 0.15);
+    min-width: 221px;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+
+body.ribbit #MPButtonBar .dropdown-menu li a {
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+.nav.navbar-nav .dropdown-submenu>ul.dropdown-submenu {
+    padding: 0;
+    margin: 0;
+    margin-left: 16px;
+}
+
+/* Dropdown avtive/hover state */
+
+body.ribbit #MPButtonBar .dropdown-menu>li>a:hover,
+body.ribbit #MPButtonBar .dropdown-menu>li>a:focus,
+body.ribbit #MPButtonBar .dropdown-menu li a:hover,
+body.ribbit #MPButtonBar .dropdown-menu li a:focus,
+body.ribbit #MPButtonBar .dropdown-menu .active>li>a:hover,
+body.ribbit #MPButtonBar .dropdown-menu>li>a:focus {
+    background: #f7f6f6;
+    border-radius: 4px;
+}
+
+body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li a {
+    font-size: 13px;
+    font-weight: 300;
+    color: #666;
+    display: inline-block;
+}
+
+body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li a:is(:hover, :focus),
+body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li.active a {
+    font-weight: 300;
+}
+
+
+body.ribbit #MPButtonBar .dropdown-menu .active>a {
+    display: inline-block;
+    background: #F7F6F6;
+    border-radius: 4px;
+}
+
+
+
+/******* logo *******/
+
+#MPOuterHeader #NAV #MPButtonBar .navbar-header {
+    min-width: 190px;
+}
+
+
+body.ribbit #LogoNavPlaceholder {
+    margin: 0;
+}
+
+/************ responsive ************/
+
+@media (width < 1600px) {
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 50px;
+        margin-right: 50px
+    }
 }
