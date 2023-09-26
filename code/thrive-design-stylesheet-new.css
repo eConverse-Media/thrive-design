@@ -411,7 +411,8 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
 }
 
 body.ribbit .make-buttons.outline-btn em a,
-body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child {
+body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .make-buttons.outline-first-btn.white-outline-btn em:first-child a {
     background: transparent;
     color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
@@ -419,26 +420,16 @@ body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child {
 }
 
 body.ribbit .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus),
 body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
 }
-
-body.ribbit .make-buttons.outline-first-btn.white-outline-btn em:first-child a {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 8px 18px;
+body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus) {
+    text-decoration: none;
 }
-
-body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
-    color: #fff;
-    background-color: var(--hl-bs--primary);
-    border: 2px solid var(--hl-bs--primary);
-}
-
-
 body.ribbit .btn-ghost {
     color: var(--hl-bs--default-text);
     background: var(--hl-bs--gray-100);
@@ -1745,6 +1736,130 @@ body.ribbit #MPButtonBar .dropdown-menu .active>a {
 
 body.ribbit #LogoNavPlaceholder {
     margin: 0;
+}
+
+/************ footer ************/
+
+#MPOuterFooter {
+    padding: 0;
+}
+
+body.ribbit.memberhome #FOOTER,
+body.ribbit.memberhome #MPOuterFooter,
+body.ribbit.memberhome #MPFooterLink {
+    display: block !important;
+}
+
+#MPFooterLink.row.siteFrame {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#MPOuterFooter p {
+    color: inherit;
+}
+
+#MPOuterFooter::after {
+    border: none;
+}
+
+#MPFooterLink a {
+    letter-spacing: 0;
+    font-size: inherit;
+}
+
+#FOOTER h2 {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 0;
+}
+
+#FOOTER.col-md-12,
+#FOOTER .Footer {
+    padding: 0;
+}
+
+.footer-middle-row,
+.footer-bottom-row {
+    position: relative;
+}
+
+.footer-middle-row::before,
+.footer-bottom-row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    border-top: 1px solid rgba(217, 217, 217, 0.2);
+    display: block;
+}
+
+.footer-middle-row .ContentItemHtml+.ContentItemHtml {
+    margin-top: 16px;
+}
+
+.footer-logo p {
+    margin-bottom: 0;
+}
+
+.footer-logo img {
+    max-height: 35px;
+    max-width: unset;
+}
+
+#FOOTER .footer-links a:is(:hover, :focus) {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    padding-left: 7px;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.footer-social ul li {
+    margin-left: 3px;
+}
+
+.footer-social ul li a {
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    display: block;
+}
+
+.footer-social ul li a:is(:hover, :focus) {
+    background: #f7f6f6;
+}
+
+#FOOTER .footer-social h2 {
+    margin-bottom: 0;
+}
+
+#FOOTER .footer-social a {
+    color: [FooterBackgroundColor];
+}
+
+#MPCopyright {
+    text-align: left;
+    padding: 0;
+}
+
+#MPFooterLink #MPFooterLinkContent {
+    text-align: right;
+    padding: 0;
 }
 
 /************ responsive ************/
