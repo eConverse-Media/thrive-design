@@ -102,7 +102,7 @@ function handlePageTitleBg() {
 function handleImageCards() {
 
 
-    $('.ContentItemHtml.tile.img-tile').each(function() {
+    $('.ContentItemHtml.card.img-card').each(function() {
         let Img = $(this).find('img');
         let ImgSrc = $(Img).attr('src');
         $(this).prepend('<div class="img-container" style="background-image: url('+ ImgSrc +'"></div> ');
