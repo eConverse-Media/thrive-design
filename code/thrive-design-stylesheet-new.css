@@ -43,7 +43,9 @@ body.ribbit #MPOuterMost #MPOuter h2 {
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .HLLandingControl h2,
 body.ribbit #MPOuterMost #MPOuter .col-md-4 .HLLandingControl h2,
 body.ribbit .col-md-3 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
-body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader {
+body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .widget-heading h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-4 .widget-heading h2 {
     color: var(--ui-default-text-small);
     font-size: 12px;
     line-height: 1;
@@ -863,16 +865,19 @@ body.ribbit .bg-gray {
 
 .card,
 .card.clickable > a,
-.card.team button {
+.card.team button,
+body.ribbit .narrow-widget-container {
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     background: #fff;
 }
+body.ribbit .narrow-widget-container,
 .col-md-3 .card,
 .col-md-3 .card.clickable > a {
     padding: 16px;
 }
+
 .card + .card {
     margin-top: 16px;
 }
@@ -885,6 +890,42 @@ body.ribbit .bg-gray {
 }
 .card .HtmlContent > p:has(em):last-child {
     margin-top: auto;
+}
+
+/*** widget cards ***/
+
+body.ribbit .narrow-widget-container .widget-heading {
+    padding: 0 0 8px 0 !important;
+}
+body.ribbit .narrow-widget-container .widget-heading h2 {
+    margin: 0 !important;
+}
+body.ribbit .narrow-widget-container .widget-content-item,
+body.ribbit .narrow-widget-container .view-more-link {
+    padding: 8px !important;
+}
+body.ribbit a.link-container {
+    border-radius: 4px;
+}
+body.ribbit a.link-container:hover, 
+body.ribbit a.link-container .link-container-content:hover {
+    background-color: #F7F6F6;
+    border: none;
+}
+body.ribbit a.link-container.link-container-link:hover {
+    color: initial;
+    text-decoration: none;
+}
+body.ribbit .bootstrap-4 .view-more-link a.link-standalone {
+    border-bottom: 1px solid transparent;
+    font-size: 16px;
+}
+body.ribbit .bootstrap-4 .view-more-link a.link-standalone:is(:hover, :focus) {
+    text-decoration: none;
+    border-bottom-color: var(--hl-bs--link-hover);
+}
+body.ribbit .bootstrap-4 .narrow-widget-container .font-size-sm {
+    font-weight: 600;
 }
 
 /*** basic icons ***/
@@ -1212,6 +1253,10 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 
 body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]):last-child {
     margin-bottom: 0;
+}
+body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 /****** bios ******/
