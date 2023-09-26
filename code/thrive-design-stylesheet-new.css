@@ -1164,7 +1164,7 @@ p:last-child {
 
 /****** resetting padding/margins ******/
 
-body.ribbit.interior #MainCopy_ContentWrapper.no-top-padding,
+body.ribbit.interior #MainCopy_ContentWrapper:has(>div[class*="bg-"]:first-child),
 body.ribbit.interior.community-pages #MainCopy_ContentWrapper,
 body.ribbit #MPOuterMost #MPOuter .no-top-padding {
     padding-top: 0;
@@ -1183,7 +1183,7 @@ body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding:not(:first-c
     padding-bottom: 48px;
 }
 
-body.ribbit.interior #MainCopy_ContentWrapper.no-bottom-padding,
+body.ribbit.interior #MainCopy_ContentWrapper:has(>div[class*="bg-"]:last-child),
 body.ribbit.home #MainCopy_ContentWrapper>.row-wide.hl-lg-v-padding.no-bottom-padding:not(:first-child, .home-hero, .primary-row, .secondary-row),
 body.ribbit #MPOuterMost #MPOuter .no-bottom-padding {
     padding-bottom: 0;
@@ -1890,10 +1890,8 @@ body.ribbit.memberhome #MPFooterLink {
     padding: 145px 16px;
 }
 
-#MPOuterMost #MPOuter .hero-text .HtmlContent h2 {
-    color: white;
-}
-
+#MPOuterMost #MPOuter .hero-text .HtmlContent h2,
+.hero-text .HtmlContent h1,
 .hero-text .HtmlContent p {
     color: white;
 }
@@ -1975,6 +1973,177 @@ body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a:is(:hover, 
 #MPOuterMost #MPOuter .hero + .flex-cards {
     margin-top: -40px;
 }
+
+/************ profile card ************/
+
+.profile-snippet-card.hl-widget-card.bg-alt-bg5 {
+    background-color: var(--hl-bs--primary) !important;
+}
+
+body.ribbit .profile-snippet-card .profile-snippet-bio {
+    padding-left: 120px !important;
+    min-height: 118px;
+    align-content: baseline;
+    justify-content: center;
+}
+
+body.ribbit .col-md-3 .profile-snippet-card .profile-snippet-bio {
+    padding-bottom: 16px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    align-content: center;
+    min-height: 126px;
+}
+
+body.ribbit .profile-snippet-bio .profile-snippet-avatar {
+    width: 102px;
+    height: 102px;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0 !important;
+    margin-bottom: 24px;
+}
+
+body.ribbit .col-md-3 .profile-snippet-bio .profile-snippet-avatar {
+    margin-bottom: 8px;
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(2) {
+    margin-top: 0 !important;
+    font-size: 18px !important;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+    font-size: 14px !important;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+
+body.ribbit .col-md-3 .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+    margin-bottom: 0;
+}
+
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(2),
+body.ribbit .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+    position: relative;
+    top: auto;
+    padding-left: 0;
+    text-align: left !important;
+    width: 100%;
+}
+
+body.ribbit .col-md-3 .profile-snippet-card .profile-snippet-bio div:nth-child(2),
+body.ribbit .col-md-3 .profile-snippet-card .profile-snippet-bio div:nth-child(3) {
+    text-align: center !important;
+    width: 100%;
+}
+
+body.ribbit .profile-snippet-card .profile-snippet-bio,
+body.ribbit .profile-snippet-progress,
+body.ribbit .hl-widget-card .profile-badge-container {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+body.ribbit .col-md-3 .profile-snippet-card .profile-snippet-bio,
+body.ribbit .col-md-3 .profile-snippet-progress,
+body.ribbit .col-md-3 .hl-widget-card .profile-badge-container {
+    border-bottom: 1px solid rgba(242, 242, 242, 0.20);
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+body.ribbit .profile-snippet-progress>.d-flex>span:first-child {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+body.ribbit .profile-snippet-progress>.d-flex>span:last-child {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+body.ribbit .profile-snippet-progress>.my-2 {
+    margin-bottom: 0 !important;
+}
+
+body.ribbit .profile-snippet-progress>.my-2 .progress {
+    border-radius: 20px;
+    background: #f7f7f7 !important;
+    padding: 2px;
+    height: 14px;
+}
+
+body.ribbit .profile-snippet-progress>.my-2 .progress-bar {
+    border-radius: 20px;
+}
+
+body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+body.ribbit .hl-widget-card .profile-badge-container {
+    padding: 16px;
+}
+
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row {
+    padding: 0;
+    margin-right: 16px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body.ribbit .badge-container.stacked.stacked {
+    height: auto;
+}
+
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row+a {
+    align-items: flex-end !important;
+    text-align: right !important;
+    font-size: 14px !important;
+    line-height: 1.2;
+}
+
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row+a strong {
+    font-weight: 600;
+}
+
+body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row+a span {
+    font-weight: 300;
+    color: #fff;
+}
+
+body.ribbit .profile-snippet-stats .btn-alt-ghost {
+    flex-direction: column !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+body.ribbit .profile-snippet-stats .btn-alt-ghost div:first-child {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+}
+
+body.ribbit .profile-snippet-stats .btn-alt-ghost div:last-child {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
 
 /************ responsive ************/
 
