@@ -40,8 +40,8 @@ body.ribbit #MPOuterMost #MPOuter h2 {
     font-size: 30px;
     line-height: 1.2;
 }
-body.ribbit #MPOuterMost #MPOuter .col-md-3 .HLLandingControl h2,
-body.ribbit #MPOuterMost #MPOuter .col-md-4 .HLLandingControl h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-4 .ContentUserControl h2,
 body.ribbit .col-md-3 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .widget-heading h2,
@@ -62,12 +62,17 @@ body.ribbit h3 {
     line-height: 1.2;
 }
 body.ribbit h3 a,
-body.ribbit #MPOuterMost #MPOuter h3 a {
+body.ribbit #MPOuterMost #MPOuter h3 a,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .community-events-list-row:first-child h3 a,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featured-entry h3 a {
     font-size: 18px;
     line-height: 1.2;
 }
 body.ribbit .bootstrap-4 h3 {
     line-height: 1.2;
+}
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl h3 a {
+    font-size: 14px;
 }
 body.ribbit .bootstrap-4 a.link-title {
     color: var(--ui-heading-text);
@@ -244,6 +249,38 @@ body.ribbit .accordion-heading button:focus {
 .accordion-wrap .ContentItemHtml:hover {
     transition: none !important;
 }
+
+/****** labels and tags ******/
+
+.feed-item-row .feed-badge.text-meta,
+.tags-list a.label-search-tag,
+body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag,
+body.ribbit .tags-list a.label-search-tag {
+    background-color: #F7F6F6;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    color: var(--ui-heading-text);
+}
+body.ribbit .tags-list a.label-search-tag,
+body.ribbit .feed-item-row .feed-badge.text-meta span {
+    color: var(--ui-heading-text) !important;
+    font-size: 10px !important;
+}
+body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag:is(:hover, :focus),
+body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
+    background-color: #D9D9D9 !important;
+    text-decoration: none;
+}
+body.ribbit .tags-list a>div.text-truncate:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 /****** modals ******/
 
@@ -877,6 +914,10 @@ body.ribbit .narrow-widget-container,
 .col-md-3 .card.clickable > a {
     padding: 16px;
 }
+body.ribbit .community-events-list.narrow-widget-container,
+body.ribbit .recent-blogs.narrow-widget-container {
+    padding: 0;
+}
 
 .ContentItemHtml.card + .ContentItemHtml.card {
     margin-top: 16px;
@@ -897,6 +938,10 @@ body.ribbit .narrow-widget-container,
 body.ribbit .narrow-widget-container .widget-heading {
     padding: 0 0 8px 0 !important;
 }
+body.ribbit .community-events-list.narrow-widget-container .widget-heading,
+body.ribbit .recent-blogs.narrow-widget-container .widget-heading {
+    padding: 16px 16px 8px 16px !important;
+}
 body.ribbit .narrow-widget-container .widget-heading h2 {
     margin: 0 !important;
 }
@@ -906,6 +951,8 @@ body.ribbit .narrow-widget-container .view-more-link {
 }
 body.ribbit a.link-container {
     border-radius: 4px;
+    background-color: transparent;
+    border: none;
 }
 body.ribbit a.link-container:hover, 
 body.ribbit a.link-container .link-container-content:hover {
@@ -924,7 +971,8 @@ body.ribbit .bootstrap-4 .view-more-link a.link-standalone:is(:hover, :focus) {
     text-decoration: none;
     border-bottom-color: var(--hl-bs--link-hover);
 }
-body.ribbit .bootstrap-4 .narrow-widget-container .font-size-sm {
+body.ribbit .bootstrap-4 .narrow-widget-container .font-size-sm,
+body.ribbit .bootstrap-4 .quick-links-container.narrow-widget-container .link-container-link {
     font-weight: 600;
 }
 
@@ -2401,6 +2449,80 @@ body.ribbit .feed-list .layout-grid-cell-children {
     background-color: transparent !important;
     padding: 0;
     color: #595959 !important;
+}
+
+/************ events & blogs ************/
+
+body .calendar-stamp {
+    background-color: var(--hl-bs--primary);
+    border: none;
+    color: var(--hl-bs--primary-opposite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body.ribbit .calendar-stamp .month {
+    margin-top: 0;
+}
+body.ribbit .community-events-list-row:first-child,
+body.ribbit .blog-list-featured-entry {
+    margin-bottom: 8px;
+}
+body.ribbit .community-events-list-row:first-child,
+body.ribbit .blog-list-featured-entry,
+body.ribbit .community-events-list-row.p-3:last-child,
+body.ribbit div:has(> .blog-list-entry.my-3):last-child {
+    position: relative;
+}
+body.ribbit .community-events-list-row:first-child::after,
+body.ribbit .blog-list-featured-entry::after,
+body.ribbit .community-events-list-row.p-3:last-child::after,
+body.ribbit div:has(> .blog-list-entry.my-3):last-child::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    border-bottom: 1px solid #E9E9E9;
+}
+body.ribbit .community-events-list-row.p-3:not(:first-child),
+body.ribbit div:has(> .blog-list-entry.my-3) {
+    padding: 8px 16px !important;
+}
+body.ribbit .narrow-widget-container .blog-list-entry.my-3 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+body.ribbit .community-events-list-row.p-3:last-child,
+body.ribbit div:has(> .blog-list-entry.my-3):last-child {
+    padding-bottom: 16px !important;
+}
+body.ribbit .community-events-list.narrow-widget-container .view-more-link,
+body.ribbit .recent-blogs.narrow-widget-container .view-more-link {
+    padding: 16px !important;
+}
+body.ribbit .col-md-3 .ContentUserControl .bootstrap-4 h3 {
+    margin-bottom: 4px;
+}
+body.ribbit .col-md-3 .ContentUserControl .bootstrap-4 .community-events-list-row:first-child h3 {
+    margin-bottom: 8px; /* this is smaller than the below to account for the extra margin on the spaced row containing the label */
+}
+body.ribbit .col-md-3 .ContentUserControl .bootstrap-4 .blog-list-featured-entry h3 {
+    margin-bottom: 12px !important;
+}
+body.ribbit .narrow-widget-container .widget-content-item.blog-list-featured-entry {
+    padding: 16px !important;
+}
+body.ribbit .blog-list-featured-entry .title.pt-3 {
+    padding-top: 0 !important;
+}
+body.ribbit .blog-list-featured-entry .content.pb-3.border-bottom {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+body.ribbit .blog-list-featured-entry .content {
+    align-items: center;
 }
 
 /************ responsive ************/
