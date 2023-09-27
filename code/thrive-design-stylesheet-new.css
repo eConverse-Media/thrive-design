@@ -281,6 +281,11 @@ body.ribbit .tags-list a>div.text-truncate:hover {
     text-decoration: none;
 }
 
+/****** rounded images ******/
+
+.rounded-img img {
+    border-radius: 8px;
+}
 
 /****** modals ******/
 
@@ -448,7 +453,7 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
 
 body.ribbit .make-buttons.outline-btn em a,
 body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child,
-body.ribbit .make-buttons.outline-first-btn.white-outline-btn em:first-child a {
+body.ribbit .make-buttons.outline-last-btn em:last-child a:last-child {
     background: transparent;
     color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
@@ -457,12 +462,12 @@ body.ribbit .make-buttons.outline-first-btn.white-outline-btn em:first-child a {
 
 body.ribbit .make-buttons.outline-btn em a:is(:hover, :focus),
 body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
-body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus),
-body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
+body.ribbit .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus) {
     color: #fff;
     background-color: var(--hl-bs--primary);
     border: 2px solid var(--hl-bs--primary);
 }
+
 body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus) {
     text-decoration: none;
 }
@@ -613,7 +618,13 @@ body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
 
 /* White Outline Button */
 
-body.ribbit .make-buttons.white-outline-btn em a {
+body.ribbit .make-buttons.white-outline-btn em a,
+body.ribbit div[class*="bg-"] .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit div[class*="-bkgd"] .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .hero .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit div[class*="bg-"] .make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit div[class*="-bkgd"] .make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child {
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
@@ -623,7 +634,14 @@ body.ribbit .make-buttons.white-outline-btn em a {
 
 body.ribbit .make-buttons.white-outline-btn em a:is(:hover, :focus),
 .make-buttons.bg-primary em a:is(:hover, :focus),
-.bg-primary .make-buttons em a:is(:hover, :focus) {
+.bg-primary .make-buttons em a:is(:hover, :focus),
+body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus),
+body.ribbit div[class*="bg-"] .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit div[class*="-bkgd"] .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .hero .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit div[class*="bg-"] .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit div[class*="-bkgd"] .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus) {
     background: #fff;
     border-color: #fff;
     color: var(--hl-bs--primary);
@@ -903,16 +921,24 @@ body.ribbit .bg-gray {
 .ContentItemHtml.card,
 .card.clickable > a,
 .card.team button,
-body.ribbit .narrow-widget-container {
+body.ribbit .narrow-widget-container,
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl {
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     background: #fff;
+    filter: none;
 }
 body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card,
-.col-md-3 .card.clickable > a {
+.col-md-3 .card.clickable > a,
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl {
     padding: 16px;
+}
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl {
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
 }
 body.ribbit .community-events-list.narrow-widget-container,
 body.ribbit .recent-blogs.narrow-widget-container {
@@ -1954,111 +1980,81 @@ body.ribbit.memberhome #MPFooterLink {
     background-position: center;
 }
 
-.hero.image {
+.hero .row-wide {
     display: flex;
+    align-items: center;
 }
 
-.hero.image>div:nth-of-type(1) {
-    display: flex;
-}
-
-.hero.image>div:nth-of-type(1)>div {
-    display: flex;
-}
-
-.hero.image>div:nth-of-type(1)>div>div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.hero-text.make-buttons em {
+.hero .make-buttons em {
     margin: -10px;
 }
-.hero-text.make-buttons em a {
+.hero .make-buttons em a {
     margin: 10px;
 }
-
-.hero:not(.graphic) .hero-text .HtmlContent {
-    padding: 145px 16px;
+#MPOuterMost .hero {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+#MPOuterMost .hero.hl-l-v-padding {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+#MPOuterMost .hero.hl-xl-v-padding {
+    padding-top: 125px;
+    padding-bottom: 125px;
 }
 
-#MPOuterMost #MPOuter .hero-text .HtmlContent h2,
-.hero-text .HtmlContent h1,
-.hero-text .HtmlContent p {
+#MPOuterMost #MPOuter .hero .HtmlContent h2,
+.hero .HtmlContent h1,
+.hero .HtmlContent p {
     color: white;
-}
-
-body.ribbit .hero-text.make-buttons em a + a {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
-
-body.ribbit .hero-text.make-buttons em a + a:is(:hover, :focus) {
-    background-color: white;
-    border: 2px solid white;
-    color: var(--hl-bs--default-text);
 }
 
 .hero {
     position: relative;
-    height: 480px;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
-
-.memberhome .hero {
-    height: 300px;
+.hero h2 {
+    margin-top: 0;
+}
+.hero .HtmlContent > *:last-child {
+    margin-bottom: 0;
 }
 
-.memberhome .hero.height-unset {
-    height: unset;
-}
-
-body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a {
+body.ribbit .hero.overlay-secondary .hero .make-buttons.white em+em a {
     background: var(--hl-bs--primary);
     border: none;
     color: white;
 }
 
-body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a:is(:hover, :focus) {
+body.ribbit .hero.overlay-secondary .hero .make-buttons.white em+em a:is(:hover, :focus) {
     background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
     background-position: bottom;
 }
-.hero.graphic>.col-md-12::before {
+.hero[class*="bg-"]::before,
+.hero[class*="-bkgd"]::before {
+    display: block;
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 86.1728395062%;
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-graphic.png');
+    top: 0;
     mix-blend-mode: soft-light;
+    background: radial-gradient(145.93% 137.01% at 71.71% 0%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(30.03% 106.8% at 73.42% 141.5%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(96.99% 34.59% at 0% 100%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.00) 100%);    
     background-size: cover;
 }
+.hero.overlay-wave::before {
+    top: 48px;
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-graphic.png');
+}
 
-
-.hero.graphic>.col-md-12 .HtmlContent {
+.hero[class*="bg-"]>.col-md-12 .HtmlContent,
+.hero[class*="-bkgd"]>.col-md-12 .HtmlContent {
     position: relative;
     z-index: 10;
-}
-
-
-.hero.graphic>.col-md-12 .HtmlContent h2 {
-    color: white;
-}
-
-.hero.graphic>.col-md-12 .HtmlContent p {
-    color: white;
-}
-
-
-.hero .hero-text .HtmlContent {
-    max-width: 784px;
 }
 
 /****** flex cards below hero ******/
@@ -2523,6 +2519,81 @@ body.ribbit .blog-list-featured-entry .content.pb-3.border-bottom {
 }
 body.ribbit .blog-list-featured-entry .content {
     align-items: center;
+}
+
+/************ most active members ************/
+
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs {
+    justify-content: space-between;
+    gap: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li:first-child {
+    margin-right: auto;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li:last-child {
+    margin-left: auto;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li {
+    display: block;
+    flex: unset;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li>a {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--ui-default-text-small);
+    margin: 10px 0;
+    padding: 0;
+    border: 1px solid transparent;
+    border-top: none;
+    transform: none;
+    width: auto;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li>a:is(:hover, :focus) {
+    color: var(--ui-heading-text);
+    border-bottom-color: var(--ui-heading-text);
+}
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li.active>a,
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li.active>a:is(:hover, :focus) {
+    color: var(--ui-heading-text);
+    border-bottom-color: var(--ui-heading-text);
+    font-weight: 700;
+}
+body.ribbit #MPOuterMost #MainCopy_ContentWrapper>.row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLEngagement {
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 8px 0;
+    margin: 0;
+}
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLEngagement .row.heading {
+    border: none;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader {
+    padding: 0 0 8px 0;
+}
+body.ribbit:not(.interior) .HLLandingControl.HLEngagement ul.display-vertical {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 0;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li:hover {
+    background: transparent;
+}
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li > a .leaderboard-user-info > a {
+    color: var(--ui-heading-text);
+}
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li > a:is(:hover, :focus) .leaderboard-user-info > a {
+    text-decoration: underline;
+    color: var(--ui-heading-text);
+}
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical .leaderboard-points-label>.points-label {
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    color: #9a9a9a;
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 300;
 }
 
 /************ responsive ************/

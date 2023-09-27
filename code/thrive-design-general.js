@@ -87,7 +87,16 @@ function handlePromoTile() {
 }
 
 function handleHero() {
-    handleBgImage($('.hero-text'), $('.hero:not(.overlay-primary)'));
+    var classList = $('.hero').attr('class').split(' ');
+
+    for (var i = 0; i < classList.length; i++) {
+        if (classList[i].indexOf('-bkgd') > -1 ||
+        classList[i].indexOf('bg-') > -1) {
+            return;
+        }
+    }
+
+    handleBgImage($('.hero .ContentItemHtml'), $('.hero'));
 }
 
 function handlePageTitleBg() {
