@@ -51,7 +51,8 @@ body.ribbit #MPOuterMost #MPOuter .col-md-4 .ContentUserControl h2,
 body.ribbit .col-md-3 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .widget-heading h2,
-body.ribbit #MPOuterMost #MPOuter .col-md-4 .widget-heading h2 {
+body.ribbit #MPOuterMost #MPOuter .col-md-4 .widget-heading h2,
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h2 {
     color: var(--ui-default-text-small);
     font-size: 12px;
     line-height: 1;
@@ -263,7 +264,7 @@ body.ribbit .accordion-heading button:focus {
 .tags-list a.label-search-tag,
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag,
 body.ribbit .tags-list a.label-search-tag {
-    background-color: #F7F6F6;
+    background-color: var(--hl-bs--gray-100);
     border-radius: 4px;
     padding: 4px 10px;
     font-size: 10px;
@@ -280,7 +281,7 @@ body.ribbit .feed-item-row .feed-badge.text-meta span {
 }
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag:is(:hover, :focus),
 body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
-    background-color: #D9D9D9 !important;
+    background-color: var(--hl-bs--gray-300) !important;
     text-decoration: none;
 }
 body.ribbit .tags-list a>div.text-truncate:hover {
@@ -745,6 +746,14 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
     margin-left: 8px;
 }
 
+
+/****** flex rows ******/
+
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
 /****** backgrounds ******/
 
 body.ribbit:not(.interior).bodyBackground {
@@ -836,7 +845,7 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 #MPOuterMost .bg-primary-dark::before {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.85);
 }
 
 #MPOuterMost .bg-primary-light-gray::before {
@@ -902,25 +911,21 @@ body.ribbit:not(.interior).bodyBackground {
 
 /*** text colours ***/
 
-.hl-primary-row-bkgd.overlay,
-.hl-primary-row-bkgd.overlay h1,
-.hl-primary-row-bkgd.overlay h2,
-.hl-primary-row-bkgd.overlay h3,
-.hl-primary-row-bkgd.overlay h4,
-.hl-primary-row-bkgd.overlay h5,
-.hl-primary-row-bkgd.overlay h6,
-.hl-primary-row-bkgd.overlay p {
+body.ribbit [class*="bg-"] *:not(em a),
+body.ribbit [class*="-bkgd"] *:not(em a),
+body.ribbit #MPOuterMost #MPOuter [class*="bg-"] h2,
+body.ribbit #MPOuterMost #MPOuter [class*="-bkgd"] h2 {
     color: #000;
 }
-body.ribbit .bg-primary *,
+body.ribbit .bg-primary *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary h2,
-body.ribbit .hl-primary-row-bkgd *,
+body.ribbit .hl-primary-row-bkgd *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd h2 {
     color: var(--hl-bs--primary-opposite);
 }
-body.ribbit .bg-secondary *,
+body.ribbit .bg-secondary *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary h2,
-body.ribbit .hl-secondary-row-bkgd *,
+body.ribbit .hl-secondary-row-bkgd *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd h2 {
     color: var(--ui-secondary-text);
 }
@@ -949,6 +954,47 @@ body.ribbit .bg-gray {
     }
 }
 
+/****** Icon List ******/
+
+.icon-list {
+    position: relative;
+}
+
+.icon-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.icon-list ul li {
+    position: relative;
+    padding-left: 76px;
+    margin-bottom: 24px;
+}
+
+.icon-list ul li:last-child {
+    margin-bottom: 0;
+}
+
+.icon-list ul li i {
+    height: 60px;
+    width: 60px;
+    background: var(--hl-bs--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--hl-bs--primary-opposite);
+}
+
+.icon-list ul li h4 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
 /****** cards ******/
 
 .ContentItemHtml.card,
@@ -967,6 +1013,9 @@ body.ribbit .narrow-widget-container,
 .col-md-3 .card.clickable > a,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl {
     padding: 16px;
+}
+body.ribbit .narrow-widget-container {
+    margin-bottom: 0 !important;
 }
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl {
     padding: 0;
@@ -994,14 +1043,16 @@ body.ribbit .recent-blogs.narrow-widget-container {
 
 /*** widget cards ***/
 
-body.ribbit .narrow-widget-container .widget-heading {
+body.ribbit .narrow-widget-container .widget-heading,
+body.ribbit .card .HLLandingControl .row.heading {
     padding: 0 0 8px 0 !important;
 }
 body.ribbit .community-events-list.narrow-widget-container .widget-heading,
 body.ribbit .recent-blogs.narrow-widget-container .widget-heading {
     padding: 16px 16px 8px 16px !important;
 }
-body.ribbit .narrow-widget-container .widget-heading h2 {
+body.ribbit .narrow-widget-container .widget-heading h2,
+body.ribbit .card .HLLandingControl .row.heading h2 {
     margin: 0 !important;
 }
 body.ribbit .narrow-widget-container .widget-content-item,
@@ -1033,6 +1084,18 @@ body.ribbit .bootstrap-4 .view-more-link a.link-standalone:is(:hover, :focus) {
 body.ribbit .bootstrap-4 .narrow-widget-container .font-size-sm,
 body.ribbit .bootstrap-4 .quick-links-container.narrow-widget-container .link-container-link {
     font-weight: 600;
+}
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl .Content ul li {
+    padding: 16px 0;
+    border-bottom: 1px solid #E9E9E9;
+}
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl div[id*="BottomLink"] .col-md-12 {
+    padding: 16px 0 0 0 !important;
+}
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl p,
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl .btn,
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
+    font-size: initial;
 }
 
 /*** basic icons ***/
@@ -2024,18 +2087,6 @@ body.ribbit.memberhome #MPFooterLink {
 .hero .make-buttons em a {
     margin: 10px;
 }
-#MPOuterMost .hero {
-    padding-top: 48px;
-    padding-bottom: 48px;
-}
-#MPOuterMost .hero.hl-l-v-padding {
-    padding-top: 95px;
-    padding-bottom: 95px;
-}
-#MPOuterMost .hero.hl-xl-v-padding {
-    padding-top: 125px;
-    padding-bottom: 125px;
-}
 
 #MPOuterMost #MPOuter .hero .ContentItemHtml:not(.card) .HtmlContent h2,
 .hero .ContentItemHtml:not(.card) .HtmlContent h1,
@@ -2315,14 +2366,14 @@ body.ribbit .profile-snippet-progress>.d-flex>span:last-child {
     line-height: 1.2;
     font-weight: 600;
 }
-
+ 
 body.ribbit .profile-snippet-progress>.my-2 {
     margin-bottom: 0 !important;
 }
 
 body.ribbit .profile-snippet-progress>.my-2 .progress {
     border-radius: 20px;
-    background: #f7f7f7 !important;
+    background: var(--hl-bs--gray-100) !important;
     padding: 2px;
     height: 14px;
 }
@@ -2751,6 +2802,59 @@ body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Con
     font-size: 12px;
     line-height: normal;
     font-weight: 300;
+}
+
+/****** explore the community ******/
+
+body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl {
+    padding: 0;
+    background: transparent;
+    filter: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl .row.heading {
+    display: none;
+}
+
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
+    position: relative;
+}
+
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
+    content: 'Connect with members!';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 230px;
+    padding-left: 13px;
+}
+
+
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li {
+    max-width: unset;
+    min-width: unset;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -10px;
+}
+
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li:first-of-type {
+    margin-left: 0;
+}
+
+.explore-community .HLLandingControl.HLEngagement ul.display-horizontal li a[id*="NameLink"] {
+    display: none;
 }
 
 /************ responsive ************/
