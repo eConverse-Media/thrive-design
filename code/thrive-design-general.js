@@ -51,13 +51,13 @@ function handleEvents() {
 function handleSlider() {
 
     $('.slide').each(function(){
-        const img = $(this).find('img');
-        const HtmlContent = $(this).find('.HtmlContent');
-        $(HtmlContent).append('<div class="img-container"></div>');
-        const imgContainer = $(this).find('.img-container');
-        const imgSrc = $(img).attr('src');
-        $(imgContainer).css('background-image', 'url("'+ imgSrc + '")');
-        $(img).hide();
+        var self = $(this);
+
+        $(self).append('<div class="img-container" />');
+
+        handleBgImage($(self), $(self).find('.img-container'));
+        $(self).find('img').closest('p').remove();
+        $(self).find('img').remove();
     });
 
     $('.slide').wrapAll('<div class="slider"></div>');

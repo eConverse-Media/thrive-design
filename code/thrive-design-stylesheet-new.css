@@ -11,6 +11,12 @@
     display: none;
 }
 
+/****** hiding empty rows ******/
+
+.row-wide:has(> .col-md-12:empty) {
+    display: none;
+}
+
 /****** fonts ******/
 
 body.ribbit {
@@ -91,7 +97,8 @@ body.ribbit h6 {
 body.ribbit h6 {
     font-weight: 600;
 }
-body.ribbit .p-large {
+body.ribbit .p-large,
+body.ribbit .hero p {
     font-size: 18px;
     line-height: 1.4;
 }
@@ -579,7 +586,7 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 body.ribbit .make-buttons.secondary-btn em a {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
-    color: var(--hl-bs--default-text);
+    color: var(--ui-secondary-text);
 
 }
 
@@ -763,7 +770,10 @@ body.ribbit:not(.interior).bodyBackground {
 #MPOuterMost .bg-primary-light-gray::before,
 #MPOuterMost .bg-primary-medium-gray::before,
 #MPOuterMost .bg-secondary-light::before,
-#MPOuterMost .bg-secondary-dark::before {
+#MPOuterMost .bg-secondary-dark::before,
+.overlay-primary-gradient::before,
+.overlay-secondary-gradient::before,
+.overlay-dark-gradient::before {
     content: '';
     position: absolute;
     top: 0;
@@ -779,7 +789,10 @@ body.ribbit:not(.interior).bodyBackground {
     background-color: rgba(0,0,0,0.5);
 }
 
-.overlay-down {
+.overlay-down,
+.overlay-primary-gradient,
+.overlay-secondary-gradient,
+.overlay-dark-gradient {
     position: relative;
 }
 
@@ -798,6 +811,16 @@ body.ribbit:not(.interior).bodyBackground {
 .overlay-down .HtmlContent {
     position: relative;
     z-index: 5;
+}
+
+.overlay-primary-gradient::before {
+    background: linear-gradient(to right, var(--hl-bs--primary), transparent);
+}
+.overlay-secondary-gradient::before {
+    background: linear-gradient(to right, var(--hl-bs--secondary), transparent);
+}
+.overlay-dark-gradient::before {
+    background: linear-gradient(to right, #292929, transparent);
 }
 
 #MPOuterMost .bg-primary,
@@ -890,12 +913,22 @@ body.ribbit:not(.interior).bodyBackground {
     color: #000;
 }
 body.ribbit .bg-primary *,
-body.ribbit #MPOuterMost #MPOuter .bg-primary h2 {
+body.ribbit #MPOuterMost #MPOuter .bg-primary h2,
+body.ribbit .hl-primary-row-bkgd *,
+body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd h2 {
     color: var(--hl-bs--primary-opposite);
 }
 body.ribbit .bg-secondary *,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary h2 {
+body.ribbit #MPOuterMost #MPOuter .bg-secondary h2,
+body.ribbit .hl-secondary-row-bkgd *,
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd h2 {
     color: var(--ui-secondary-text);
+}
+body.ribbit .bg-primary .icon-container *,
+body.ribbit .hl-primary-row-bkgd .icon-container *,
+body.ribbit .bg-secondary .icon-container *,
+body.ribbit .hl-secondary-row-bkgd .icon-container * {
+    color: inherit;
 }
 body.ribbit .bg-gray {
     background-color: rgba(245, 245, 245, 0.97);
@@ -1508,7 +1541,7 @@ body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor {
 
 .grid-sponsors .sponsor {
     padding: 8px;
-    height: 180px;
+    width: 300px;
 }
 
 .sponsor .HtmlContent {
@@ -2004,9 +2037,9 @@ body.ribbit.memberhome #MPFooterLink {
     padding-bottom: 125px;
 }
 
-#MPOuterMost #MPOuter .hero .HtmlContent h2,
-.hero .HtmlContent h1,
-.hero .HtmlContent p {
+#MPOuterMost #MPOuter .hero .ContentItemHtml:not(.card) .HtmlContent h2,
+.hero .ContentItemHtml:not(.card) .HtmlContent h1,
+.hero .ContentItemHtml:not(.card) .HtmlContent p {
     color: white;
 }
 
@@ -2016,6 +2049,7 @@ body.ribbit.memberhome #MPFooterLink {
     align-items: center;
     overflow: hidden;
 }
+.hero h1,
 .hero h2 {
     margin-top: 0;
 }
@@ -2023,16 +2057,6 @@ body.ribbit.memberhome #MPFooterLink {
     margin-bottom: 0;
 }
 
-body.ribbit .hero.overlay-secondary .hero .make-buttons.white em+em a {
-    background: var(--hl-bs--primary);
-    border: none;
-    color: white;
-}
-
-body.ribbit .hero.overlay-secondary .hero .make-buttons.white em+em a:is(:hover, :focus) {
-    background: linear-gradient(#0000, rgb(0 0 0/30%)) top/100% 800%;
-    background-position: bottom;
-}
 .hero[class*="bg-"]::before,
 .hero[class*="-bkgd"]::before {
     display: block;
@@ -2055,6 +2079,136 @@ body.ribbit .hero.overlay-secondary .hero .make-buttons.white em+em a:is(:hover,
 .hero[class*="-bkgd"]>.col-md-12 .HtmlContent {
     position: relative;
     z-index: 10;
+}
+
+/****** hero profile snippet ******/
+
+.hero .ProfileSnippet,
+.hero .profile-snippet-card,
+.hero .profile-snippet.bootstrap-4 .bg-alt-bg5 {
+    background-color: transparent !important;
+    box-shadow: none;
+    filter: none;
+}
+
+/****** hero slider ******/
+
+.slider {
+    background-color: rgba(0, 0, 0, 0.39);
+    border-radius: 8px;
+}
+#MPOuterMost #MPOuter #MainCopy_ContentWrapper .hero .slider.slick-dotted {
+    margin-bottom: 32px;
+}
+.slider .slick-track {
+    display: flex;
+}
+
+.hero .slider .slide {
+    padding: 24px;
+    display: flex;
+    height: auto;
+}
+.slider .slide .HtmlContent {
+    width: 65%;
+    padding: 20px 20px 20px 0;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slider .slide .img-container {
+    width: 35%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border-radius: 8px;
+}
+.slider .slide .HtmlContent >  *:first-child {
+    margin-top: 0;
+}
+body.ribbit .hero .slider p {
+    font-size: 16px;
+}
+body.ribbit .hero .slider p:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+/************ slick arrows & dots ************/
+
+.slider .slick-dots {
+    text-align: left;
+    padding-left: 15px;
+    bottom: 25px;
+}
+
+body .slick-dots li {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--hl-bs--gray-500);
+    border-radius: 50%;
+}
+
+.slider .slick-dots li {
+    border-color: var(--hl-bs--primary-opposite);
+}
+
+body .slick-dots li,
+body .slick-dots li:is(:hover, :focus) {
+    transition: .3s;
+}
+
+body .slick-dots li:is(:hover, :focus),
+body .slick-dots li.slick-active {
+    background: var(--hl-bs--gray-500);
+}
+
+.slider .slick-dots li:is(:hover, :focus),
+.slider .slick-dots li.slick-active {
+    background: var(--hl-bs--primary-opposite);
+}
+
+body .slick-dots li button {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.slick-dots button::before {
+    height: 10px;
+    width: 10px;
+}
+
+.slick-dots li button::before,
+li.slick-active button::before {
+    color: transparent !important;
+}
+
+
+.hero .slick-arrow {
+    color: #fff;
+    position: absolute;
+    background: transparent;
+    border: none;
+    padding: 0;
+    bottom: -40px;
+    z-index: 15;
+}
+
+.hero .prev-arrow {
+    left: 0;
+}
+
+.hero .next-arrow {
+    right: 0;
+}
+
+.hero .slider .slick-dots {
+    bottom: -35px;
+    text-align: center;
+    padding-left: 0;
+    left: 0;
+    right: 0;
 }
 
 /****** flex cards below hero ******/
@@ -2184,6 +2338,9 @@ body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
 
 body.ribbit .hl-widget-card .profile-badge-container {
     padding: 16px;
+}
+body.ribbit .hero .hl-widget-card .profile-badge-container {
+    padding: 16px 0;
 }
 
 body.ribbit .hl-widget-card .profile-badge-container .stacked-badge-row {
@@ -3186,7 +3343,6 @@ body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Con
     .slider .slide .HtmlContent h2,
     .slider .slide .HtmlContent p {
         width: 100%;
-        padding-left: 0;
     }
 
     .slider .slide .HtmlContent {
