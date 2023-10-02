@@ -29,8 +29,11 @@ function handleClickable() {
             $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
             $(link).closest('p').addClass('card-link');
         }
-        
-        if ($(link).parent().is('h3') || $(this).hasClass('link-text')) {
+
+        if ($(link).parent().is('h3') ||
+        $(this).hasClass('link-text') ||
+        $(self).hasClass('icon-card') ||
+        $(self).hasClass('icon-circle')) {
             $(link).contents().unwrap();
         } else {
             $(link).hide();
@@ -241,7 +244,7 @@ $(function () {
     handlePromoTile();
     handleHero();
     handlePageTitleBg();
-    $('.people-you-should-know').append($('.suggested-contacts-btn'));
+    $('.people-you-should-know .HLLandingControl').append($('.suggested-contacts-btn'));
     handleImageCards();
     handleDiscussionByLine();
     handleFeaturedMember();
