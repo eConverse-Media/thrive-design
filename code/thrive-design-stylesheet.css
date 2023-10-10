@@ -4080,7 +4080,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 }
 
 .ContentUserControl.resources-list ul li,
-.featured-cards ul:not(slick-dots):not(.slick-slider)> li {
+.featured-cards ul:not(.slick-dots):not(.slick-slider)> li {
     min-height: 375px;
 }
 

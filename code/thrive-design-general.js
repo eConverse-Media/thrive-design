@@ -220,7 +220,7 @@ function handleBlogs() {
 }
 
 function handleFeaturedCards() {
-    $('.featured-cards ul:not(.slick-dots) li').each(function () {
+    $('.featured-cards ul:not(.slick-dots) > li').each(function () {
         handleLibraryAjax(this);
     });
 }
