@@ -3323,7 +3323,7 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
 }
 
 .team .text-container h3 + h4,
-.team .bio-text h3 + h4 {
+.bio .bio-text h3 + h4 {
     font-weight: 300;
 }
 
