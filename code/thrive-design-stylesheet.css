@@ -3954,7 +3954,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
 }
 
-#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide):not(.slick-dots),
+#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul:not(.slick-dots) > li:not(.slick-slide),
 #MPOuterMost #MPOuter .event-cards .Content ul li {
     margin: 0 12px;
     display: flex;
@@ -4080,7 +4080,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 }
 
 .ContentUserControl.resources-list ul li,
-.featured-cards ul li {
+.featured-cards ul:not(slick-dots):not(.slick-slider)> li {
     min-height: 375px;
 }
 
