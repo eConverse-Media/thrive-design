@@ -727,7 +727,7 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
 }
 
 .make-buttons em a,
-button:not([onlick]),
+button:not([onlick]):not(.slick-arrow),
 .btn,
 body.ribbit .btn,
 body.ribbit .btn:is(:hover, :focus),
@@ -764,6 +764,12 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
     border: none;
+}
+
+.make-carousel button.slick-arrow {
+    box-shadow: none;
+    border: none;
+    background: transparent;
 }
 
 body.ribbit .make-buttons.outline em a,
@@ -5952,7 +5958,8 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
 .featured-tile-slider li:not([id*="slick-slide"]),
 .featured-tile-slider .blogs-block,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li,
-.fetch-test ul li {
+.fetch-test ul li,
+.make-carousel ul .slick-track > li {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
     background: #fff;
@@ -5964,6 +5971,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 }
 
 
+.make-carousel ul.slick-dots  {
+    width: unset;
+}
 
 
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
@@ -5986,7 +5996,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
 }
 
-#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
+#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul:not(.slick-dots) > li:not(.slick-slide),
 #MPOuterMost #MPOuter .event-cards .Content ul li {
     margin: 0 12px;
     display: flex;
