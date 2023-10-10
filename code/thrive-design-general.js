@@ -58,13 +58,13 @@ function handleSlider() {
 
     $('.carsousel-item').wrapAll('<div class="slider"></div>');
 
-    $('.make-carousel:not(.hero)').slick({
+    $('.make-carousel:not(.hero) ul').slick({
         dots: true,
         arrows: true,
         infinite: true,
         fade: false,
         // autoplay: true,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'

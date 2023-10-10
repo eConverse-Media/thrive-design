@@ -3954,7 +3954,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
 }
 
-#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
+#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide):not(.slick-dots),
 #MPOuterMost #MPOuter .event-cards .Content ul li {
     margin: 0 12px;
     display: flex;
