@@ -5993,6 +5993,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     flex-shrink: 1;
     width: calc(25% - 24px);
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    background: #fff;
     border: none;
     border-radius: 8px;
 }
