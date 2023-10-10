@@ -30,14 +30,7 @@ function handleClickable() {
             $(link).closest('p').addClass('card-link');
         }
 
-        if ($(link).parent().is('h3') ||
-        $(this).hasClass('link-text') ||
-        $(self).hasClass('icon-card') ||
-        $(self).hasClass('icon-circle')) {
-            $(link).contents().unwrap();
-        } else {
-            $(link).hide();
-        }
+        $(link).contents().unwrap();
     });
 }
 

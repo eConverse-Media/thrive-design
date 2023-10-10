@@ -72,6 +72,13 @@ body.ribbit .col-md-3 h2.font-size-sm,
 body.ribbit .col-md-4 h2.font-size-sm {
     font-size: 12px !important;
 }
+body.ribbit #MPOuterMost #MPOuter .card h2 {
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
 body.ribbit h3 {
     font-size: 21px;
     line-height: 1.2;
@@ -715,8 +722,19 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
 
 /****** arrow link ******/
 
+body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*, 
+body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>a {
+    padding: 8px 0 !important;
+}
+
 .make-arrow-link em a,
-.card-link em {
+.card-link em,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+.card.full-width-icon .card-link,
+body.ribbit .arrow-link-standalone a.link-standalone {
     border: 0;
     background: transparent;
     color: var(--hl-bs--link);
@@ -731,7 +749,12 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
 }
 
 .make-arrow-link em a::after,
-.card-link em::after {
+.card-link em::after,
+.arrow-link em a::after,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default::after {
     content: '\f061';
     height: 13px;
     width: 14px;
@@ -742,7 +765,13 @@ body.ribbit .make-buttons.dark-outline-btn em a:is(:hover, :focus) {
 }
 
 .make-arrow-link em a:is(:hover, :focus),
-a:is(:hover, :focus) .card-link em {
+a:is(:hover, :focus) .card-link em,
+.arrow-link em a:is(:hover, :focus), 
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus), 
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus), 
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus), 
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus), 
+body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
     color: var(--hl-bs--link-hover);
 }
 
@@ -1051,7 +1080,7 @@ body.ribbit .recent-blogs.narrow-widget-container {
     padding: 0;
 }
 
-.ContentItemHtml.card + .ContentItemHtml.card {
+div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.card {
     margin-top: 16px;
 }
 .card .HtmlContent > *:first-child,
@@ -1122,6 +1151,45 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     font-size: initial;
 }
 
+/*** featured member card ***/
+
+.card.member-card .user-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card.member-card .user-details>strong {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+}
+
+.card.member-card .user-details>strong img {
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+}
+
+.card.member-card .user-details h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 16px;
+}
+
+.card.member-card p:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.card.member-card p:last-child {
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 /*** basic icons ***/
 
 .card .HtmlContent>p i,
@@ -1166,6 +1234,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 .icon-circle .HtmlContent>p {
     text-align: center;
     font-weight: 600;
+    color: var(--ui-heading-text);
 }
 
 .card.icon-card a:is(:hover, :focus) em {
@@ -1209,7 +1278,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 
 /*** icon & image cards ***/
 
-.card.img-card .img-container ~ .HtmlContent {
+.card.img-card .img-container ~ .HtmlContent:has(i) {
     padding-top: 48px;
     position: relative;
 }
@@ -3425,6 +3494,446 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 }
 .promo-block .HtmlContent h2 ~ p + p { /* we only want to have margins between two paragraphs that are in the main text of this component; not on the overline above the h2 or a bottom margin on the last paragraph */
     margin-top: 8px;
+}
+
+/************ widgets ************/
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .HLLandingControl {
+    background: transparent;
+    filter: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/****** events ******/
+
+.HLEventList .pull-right+br {
+    display: none;
+}
+
+/*** date blocks ***/
+
+.HLEventList ul li>.row {
+    display: flex;
+    align-items: center;
+}
+
+.col-md-6 .HLEventList ul li>.row {
+    flex-direction: row-reverse;
+}
+
+.HLEventList ul li .col-md-2 {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.HLEventList ul li .col-md-10 {
+    width: calc(100% - 90px);
+}
+
+.HLEventList ul li .date-block {
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    background: var(--hl-bs--gray-200);
+}
+
+.HLEventList ul li .col-md-2 .margin-bottom-medium {
+    margin-bottom: 0;
+}
+
+.HLEventList ul li .date-block .calendar-day {
+    display: none;
+}
+
+.HLEventList ul li .date-block .calendar-month,
+.HLEventList ul li .date-block .calendary-number {
+    color: var(--hl-bs--primary);
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.col-md-6 .HLEventList ul li .col-md-2 {
+    width: 140px;
+    margin-right: 0;
+}
+
+.col-md-6 .HLEventList ul li .col-md-10 {
+    width: calc(100% - 140px);
+    padding-right: 30px;
+}
+
+.col-md-6 .HLEventList ul li .date-block {
+    width: 140px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+/*** col-md-6 events & blogs ***/
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments h2,
+#MPOuterMost #MPOuter .col-md-6 .HLEventList h2,
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.row-wide>.col-md-6:first-child>.ContentUserControl>.HLLandingControl {
+    padding-right: 16px;
+}
+
+.row-wide>.col-md-6:last-child>.ContentUserControl>.HLLandingControl {
+    padding-left: 16px;
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li,
+#MPOuterMost #MPOuter .col-md-6 .HLEventList ul li,
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li {
+    background-color: var(--hl-bs--primary);
+    position: relative;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    border: none;
+}
+
+.memberhome #MPOuterMost #MPOuter .col-md-6 .featured-resources .HLMyDocuments ul li {
+    padding-right: 48px;
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li::before,
+#MPOuterMost #MPOuter .col-md-6 .HLEventList ul li::before,
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 251, 251, .98);
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li *,
+#MPOuterMost #MPOuter .col-md-6 .HLEventList ul li *,
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li * {
+    position: relative;
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLEventList ul li h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #595959;
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li h3 a,
+#MPOuterMost #MPOuter .col-md-6 .HLEventList ul li h3 a,
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li h3 a {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li h3 a:is(:hover, :focus),
+#MPOuterMost #MPOuter .col-md-6 .HLEventList ul li h3 a:is(:hover, :focus),
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li h3 a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+}
+
+.col-md-6 .HLRecentBlogs ul li,
+.col-md-6 .HLMyDocuments ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-md-6 .HLRecentBlogs ul li .img-container,
+.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) {
+    height: 120px;
+    width: 140px;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image {
+    display: none;
+}
+
+.col-md-6 .HLRecentBlogs ul li .text-container,
+.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+    width: calc(100% - 140px);
+    padding-right: 30px;
+}
+
+/* date blocks */
+
+.home .col-md-6 .HLEventList ul li .date-block {
+    width: 140px;
+    height: 120px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--hl-bs--secondary);
+}
+
+.col-md-6 .HLEventList ul li .col-md-2 .margin-bottom-medium {
+    margin-bottom: 0;
+}
+
+.col-md-6 .HLEventList ul li .date-block .calendar-day {
+    display: none;
+}
+
+.col-md-6 .HLEventList ul li .date-block .calendary-number {
+    color: var(--ui-secondary-text);
+    font-weight: 700;
+    font-size: 51px;
+    margin-bottom: 8px;
+}
+
+.col-md-6 .HLEventList ul li .date-block .calendary-number,
+.col-md-6 .HLEventList ul li .date-block .calendary-number *,
+.col-md-6 .HLEventList ul li .date-block .calendar-month,
+.col-md-6 .HLEventList ul li .date-block .calendar-month * {
+    line-height: 1;
+}
+
+.col-md-6 .HLEventList ul li .date-block .calendar-month {
+    color: var(--ui-secondary-text);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.home .col-md-6 .HLEventList ul li .col-md-2 {
+    width: 140px;
+    margin-right: 0;
+}
+
+.home .col-md-6 .HLEventList ul li .col-md-10 {
+    width: calc(100% - 140px);
+    padding-right: 16px;
+}
+
+/* blogs & resources */
+
+.col-md-6 .HLRecentBlogs ul li .content-row,
+.col-md-6 .HLRecentBlogs ul li .text-container .title-row div.col-sm-2.col-md-2,
+.col-md-6 .HLMyDocuments ul li .title-row div.col-sm-2.col-md-2 {
+    display: none;
+}
+
+.col-md-6 .HLRecentBlogs ul li .text-container .title-row div.col-sm-10.col-md-10,
+.col-md-6 .HLMyDocuments ul li .title-row div.col-sm-10.col-md-10 {
+    width: 95%;
+    padding: 0;
+}
+
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLLandingControl div[id$="_BottomLink"] a {
+    color: var(--hl-bs--primary);
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLRecentBlogs ul li .ByLine,
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li .ByLine {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.col-md-6 .HLRecentBlogs ul li .ByLine a,
+.col-md-6 .HLMyDocuments ul li .ByLine a {
+    margin-right: 8px;
+}
+
+.col-md-6 .HLRecentBlogs ul li .ByLine a[id*="lnkDisplay"],
+.col-md-6 .HLMyDocuments ul li .ByLine a[id*="lnkDisplay"] {
+    width: 32px;
+    height: 32px;
+}
+
+.col-md-6 .HLRecentBlogs ul li .ByLine a[id*="lnkDisplay"] img,
+.col-md-6 .HLMyDocuments ul li .ByLine a[id*="lnkDisplay"] img {
+    width: 32px;
+    height: 32px;
+}
+
+/*** resources ***/
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li .listIconContainer:not(:empty) {
+    position: absolute;
+    background-color: var(--hl-bs--secondary);
+    width: 60px;
+    height: 60px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    right: -8px;
+    top: -8px;
+    left: auto;
+    font-weight: 900;
+    z-index: 500;
+}
+
+.col-md-6 .HLMyDocuments .listIconContainer div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-6 .HLMyDocuments .listIconContainer div::before {
+    color: var(--ui-secondary-text);
+    font-size: 24px;
+    line-height: 1;
+}
+
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li>div:first-child,
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li div[id*="DocumentsList_DisplayDocFiles"],
+#MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li div[id*="DocumentsList_DisplayDocFiles"] .col-md-12 {
+    position: static;
+}
+/*** icons ***/
+
+.HLMyDocuments .listIconContainer {
+    margin: 0;
+    position: absolute;
+    left: -70px;
+    top: 0;
+}
+
+.HLMyDocuments .libListReptEntAttchLble+div>.col-md-12 {
+    padding: 0;
+}
+
+.HLMyDocuments .listIconContainer img,
+.HLMyDocuments .libListReptEntAttchLble,
+.HLMyDocuments .pull-right .btn,
+.HLMyDocuments .listIconContainer>div.inline-block:not(:first-child) {
+    display: none;
+}
+
+.HLMyDocuments .listIconContainer:not(:empty) {
+    width: 50px;
+    height: 50px;
+    background: var(--hl-bs--gray-200);
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+}
+
+.HLMyDocuments .listIconContainer div {
+    background: transparent;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.HLMyDocuments .listIconContainer div.iconNumberDiv {
+    display: none;
+}
+
+.HLMyDocuments .listIconContainer div::before {
+    font-family: "Font Awesome 6 Pro";
+    font-size: 24px;
+    line-height: 50px;
+    color: var(--hl-bs--primary);
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeYoutube::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeYoutubeMul::before {
+    font-family: "Font Awesome 6 Brands";
+    content: "\f167";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeWebinar::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeWebinarMul::before {
+    content: "\f1c8";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeDoc::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeDocMul::before {
+    content: "\f15b";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeSpreadsheet::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeSpreadsheetMul::before {
+    content: "\f65b";
+}
+
+.HLMyDocuments .listIconContainer div.has-image::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeImg::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeImgMul::before {
+    content: "\f1c5";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeVid::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeVidMul::before {
+    content: "\f1c8";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeAudio::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeAudioMul::before {
+    content: "\f1c7";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypePresentation::before,
+.HLMyDocuments .listIconContainer div.HLMListTypePresentationMul::before {
+    content: "\f1c4";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeWordDoc::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeWordDocMul::before {
+    content: "\f1c2";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeHyperlink::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeHyperlinkMul::before {
+    content: "\f0c1";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypePdf::before,
+.HLMyDocuments .listIconContainer div.HLMListTypePdfMul::before {
+    content: "\f1c1";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeZip::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeZipMul::before {
+    content: "\f1c6";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeProject::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeProjectMul::before {
+    content: "\f660";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeText::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeTextMul::before {
+    content: "\f15c";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeHtml::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeHtmlMul::before {
+    content: "\f1c9";
+}
+
+.HLMyDocuments .listIconContainer div.HLMListTypeEps::before,
+.HLMyDocuments .listIconContainer div.HLMListTypeEpsMul::before {
+    content: "\f1c5";
 }
 
 /************ responsive ************/
