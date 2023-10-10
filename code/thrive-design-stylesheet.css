@@ -254,7 +254,6 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 
-
 .hero {
     position: relative;
     height: 480px;
@@ -3254,7 +3253,6 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     color: var(--hl-bs--default-text);
 }
 
-
 /****** bio modals ******/
 
 .bio.no-contact-info p a::before,
@@ -3322,6 +3320,11 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--hl-bs--gray-100);
+}
+
+.team .text-container h3 + h4,
+.bio .bio-text h3 + h4 {
+    font-weight: 300;
 }
 
 .bio button {
@@ -5993,6 +5996,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     flex-shrink: 1;
     width: calc(25% - 24px);
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    background: #fff;
     border: none;
     border-radius: 8px;
 }

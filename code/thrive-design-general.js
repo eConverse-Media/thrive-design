@@ -46,7 +46,7 @@ function handleEvents() {
 
 function handleSlider() {
 
-    $('.slide').each(function(){
+    $('.carsousel-item').each(function(){
         var self = $(this);
 
         $(self).append('<div class="img-container" />');
@@ -56,9 +56,9 @@ function handleSlider() {
         $(self).find('img').remove();
     });
 
-    $('.slide').wrapAll('<div class="slider"></div>');
+    $('.carsousel-item').wrapAll('<div class="slider"></div>');
 
-    $('.slider:not(.hero)').slick({
+    $('.make-carousel:not(.hero)').slick({
         dots: true,
         arrows: true,
         infinite: true,
