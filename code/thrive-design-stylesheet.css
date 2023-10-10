@@ -254,7 +254,6 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 
-
 .hero {
     position: relative;
     height: 480px;
@@ -3254,6 +3253,9 @@ body.ribbit .bootstrap-4 .narrow-widget.widget-container {
     color: var(--hl-bs--default-text);
 }
 
+body.ribbit .team .text-container h3 + h4 {
+    font-weight: 300;
+}
 
 /****** bio modals ******/
 
