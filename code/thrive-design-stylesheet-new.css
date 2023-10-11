@@ -632,6 +632,19 @@ body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
     transition: 0.3s;
 }
 
+/* dark button */
+
+body.ribbit .make-buttons.dark-btn em a {
+    background: #272727;
+    color: #fff;
+    transition: .3s;
+}
+body.ribbit .make-buttons.dark-btn em a:is(:hover, :focus) {
+    background: rgba(39,39,39,0.8);
+    color: #fff;
+    transition: .3s;
+}
+
 /* White Outline Button */
 
 body.ribbit .make-buttons.white-outline-btn em a,
