@@ -872,7 +872,7 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 #MPOuterMost .bg-primary-dark::before {
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #MPOuterMost .bg-primary-light-gray::before {
