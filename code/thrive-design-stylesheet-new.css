@@ -356,7 +356,7 @@ body.has-modal.bio-modal-open {
     padding: 10px 20px;
 }
 
-.make-buttons em:has(a) {
+.make-buttons em {
     margin: -8px;
     display: inline-block;
 }
@@ -2162,7 +2162,7 @@ body.ribbit.memberhome #MPFooterLink {
     align-items: center;
 }
 
-.hero .make-buttons em:has(a) {
+.hero .make-buttons em {
     margin: -10px;
 }
 .hero .make-buttons em a {
@@ -4585,7 +4585,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
         padding-right: 0;
     }
 
-    .hero .card.make-buttons em:has(a) {
+    .hero .card.make-buttons em {
         display: block;
         margin-bottom: 8px;
     }
