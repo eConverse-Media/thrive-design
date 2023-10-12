@@ -879,7 +879,7 @@ body.ribbit:not(.interior).bodyBackground {
     background: rgba(245, 245, 245, 0.97);
 }
 
-#MPOuterMost .bg-primary-medium-gray {
+#MPOuterMost .bg-primary-medium-gray::before {
     background: rgba(244, 244, 244, 0.85);
 }
 
