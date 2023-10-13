@@ -29,8 +29,17 @@ function handleClickable() {
             $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
             $(link).closest('p').addClass('card-link');
         }
+        
+        console.log('>>>>>>>>> ', $(self).attr('class'));
 
-        $(link).contents().unwrap();
+        if ($(link).parent().is('h3') ||
+        $(this).hasClass('link-text') ||
+        $(self).hasClass('icon-card') ||
+        $(self).hasClass('icon-circle')) {
+            $(link).contents().unwrap();
+        } else {
+            $(link).hide();
+        }
     });
 }
 
@@ -46,7 +55,7 @@ function handleEvents() {
 
 function handleSlider() {
 
-    $('.carsousel-item').each(function(){
+    $('.slide').each(function(){
         var self = $(this);
 
         $(self).append('<div class="img-container" />');
@@ -56,15 +65,15 @@ function handleSlider() {
         $(self).find('img').remove();
     });
 
-    $('.carsousel-item').wrapAll('<div class="slider"></div>');
+    $('.slide').wrapAll('<div class="slider"></div>');
 
-    $('.make-carousel:not(.hero) ul').slick({
+    $('.slider:not(.hero)').slick({
         dots: true,
         arrows: true,
         infinite: true,
         fade: false,
         // autoplay: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
@@ -220,7 +229,7 @@ function handleBlogs() {
 }
 
 function handleFeaturedCards() {
-    $('.featured-cards ul:not(.slick-dots) > li').each(function () {
+    $('.featured-cards ul li').each(function () {
         handleLibraryAjax(this);
     });
 }
