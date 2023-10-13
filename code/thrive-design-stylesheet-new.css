@@ -408,6 +408,11 @@ body.ribbit .make-buttons.primary-btn em a {
     white-space: pre-wrap;
 }
 
+body.ribbit .btn.active, 
+body.ribbit .btn:active {
+    box-shadow: none;
+}
+
 .make-buttons em a:is(:hover, :focus),
 .card.social ul li a:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
@@ -723,6 +728,7 @@ body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLand
 .card.full-width-icon .card-link,
 body.ribbit .arrow-link-standalone a.link-standalone {
     border: 0;
+    border-bottom: 1px solid transparent;
     background: transparent;
     color: var(--hl-bs--link);
     position: relative;
@@ -733,6 +739,13 @@ body.ribbit .arrow-link-standalone a.link-standalone {
     font-style: normal;
     display: inline-block;
     font-weight: 600;
+}
+
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default i,
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default i {
+    display: none;
 }
 
 .make-arrow-link em a::after,
@@ -784,7 +797,7 @@ body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
 /****** backgrounds ******/
 
 body.ribbit:not(.interior).bodyBackground {
-    background-color: rgba(245, 245, 245, 0.97);
+    background-color: #fff;
 }
 
 .row-full.bg-white {
@@ -3484,7 +3497,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 }
 
 /************ widgets ************/
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:not(.card) .HLLandingControl {
     background: transparent;
     filter: none;
     border-radius: 0;
