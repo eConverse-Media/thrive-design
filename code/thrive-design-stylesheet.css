@@ -638,8 +638,20 @@ table tr td {
 
 /****** buttons ******/
 
-.Login a.btn-primary {
+.Login a.btn-primary,
+#CreateBtnWrapper .btn-primary {
     padding: 10px 20px;
+}
+
+#CreateBtnWrapper .btn-primary::after {
+    font-family: 'Font Awesome 6 Pro';
+    content: '\f107';
+    font-weight: 400;
+    font-size: 18px;
+    float: right;
+    color: #fff;
+    border: none;
+    margin-left: 8px;
 }
 
 .make-buttons em {
@@ -1352,8 +1364,6 @@ body.ribbit #searchColumn {
     right: 0;
 }
 
-
-
 .search-wrap {
     border: 1px solid transparent;
     border-radius: 50px;
@@ -1376,7 +1386,8 @@ body.ribbit #searchColumn {
     box-shadow: 0px 9px 10px 2px rgba(0, 0, 0, 0.03),
         0px 4px 4px rgba(4, 21, 81, 0.03),
         0px 6px 10px rgba(4, 21, 81, 0.04);
-    z-index: 10
+    z-index: 10;
+    right: -10px;
 }
 
 .search-bar-top {
@@ -1394,6 +1405,7 @@ body.ribbit #searchColumn {
     opacity: 1;
     z-index: 10;
     transition: .3s;
+    width: calc(100% - 38px);
 }
 
 .SearchInputs {
@@ -1493,7 +1505,7 @@ body.ribbit .search-bar-top button[id*="SearchButton"],
 .open .search-btn-top {
     font-size: 12px;
     transition: background-color .3s;
-    right: 30px;
+    right: 10px;
 }
 
 .search-btn-top::before {
