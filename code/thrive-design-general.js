@@ -55,7 +55,7 @@ function handleEvents() {
 
 function handleSlider() {
 
-    $('.slide').each(function(){
+    $('.carousel-item').each(function(){
         var self = $(this);
 
         $(self).append('<div class="img-container" />');
