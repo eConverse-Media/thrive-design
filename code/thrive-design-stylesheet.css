@@ -5251,43 +5251,43 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 
 /****** hero slider ******/
 
-.slider {
+.hero-carousel {
     background-color: rgba(0, 0, 0, 0.39);
     padding: 40px;
     border-radius: 4px;
 }
 
-.slider .slide .HtmlContent {
+.hero-carousel .carousel-item .HtmlContent {
     position: relative;
 }
 
-.slider .slide .HtmlContent h6,
-.slider .slide .HtmlContent h2,
-.slider .slide .HtmlContent p {
+.hero-carousel .carousel-item .HtmlContent h6,
+.hero-carousel .carousel-item .HtmlContent h2,
+.hero-carousel .carousel-item .HtmlContent p {
     width: 75%;
     padding-right: 42px;
     padding-left: 20px;
 }
 
-.slider .slide .HtmlContent p:first-of-type {
+.hero-carousel .carousel-item .HtmlContent p:first-of-type {
     margin-bottom: 24px;
 }
 
-.slider .slide .HtmlContent h6 {
+.hero-carousel .carousel-item .HtmlContent h6 {
     font-size: 11px;
     margin-bottom: 8px;
 }
 
-.slider .slide .HtmlContent h2 {
+.hero-carousel .carousel-item .HtmlContent h2 {
     font-size: 20px;
     margin-top: 0;
 }
 
-.slider .slide .HtmlContent p {
+.hero-carousel .carousel-item .HtmlContent p {
     font-size: 12px;
 }
 
-.slider .slide .HtmlContent .img-container {
+.hero-carousel .carousel-item .HtmlContent .img-container {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -5298,7 +5298,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 }
 
 
-.slider .slide .HtmlContent em a {
+.hero-carousel .carousel-item .HtmlContent em a {
     font-size: 16px;
 }
 
