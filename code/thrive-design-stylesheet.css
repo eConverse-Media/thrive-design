@@ -1977,7 +1977,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
 
 /************ slick arrows & dots ************/
 
-.slider .slick-dots {
+.carousel-item .slick-dots {
     text-align: left;
     padding-left: 15px;
     bottom: 25px;
@@ -1990,7 +1990,7 @@ body .slick-dots li {
     border-radius: 50%;
 }
 
-.slider .slick-dots li {
+.carousel-item  .slick-dots li {
     border-color: var(--hl-bs--primary-opposite);
 }
 
@@ -2004,8 +2004,8 @@ body .slick-dots li.slick-active {
     background: var(--hl-bs--gray-500);
 }
 
-.slider .slick-dots li:is(:hover, :focus),
-.slider .slick-dots li.slick-active {
+.carousel-item  .slick-dots li:is(:hover, :focus),
+.carousel-item  .slick-dots li.slick-active {
     background: var(--hl-bs--primary-opposite);
 }
 
@@ -2026,24 +2026,24 @@ li.slick-active button::before {
 }
 
 
-.slider .slick-arrow::before {
+.carousel-item  .slick-arrow::before {
     font-family: 'Font Awesome 5 Pro';
     font-size: 37px;
 }
 
-.slider .slick-prev {
+.carousel-item  .slick-prev {
     left: 15px;
 }
 
-.slider .slick-next {
+.carousel-item  .slick-next {
     right: 15px;
 }
 
-.slider .slick-prev::before {
+.carousel-item  .slick-prev::before {
     content: '\f053';
 }
 
-.slider .slick-next::before {
+.carousel-item  .slick-next::before {
     content: '\f054';
 }
 
