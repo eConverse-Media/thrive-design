@@ -101,8 +101,10 @@ function handleHero() {
                 return;
             }
         }
-    
-        handleBgImage($('.hero .ContentItemHtml'), $('.hero'));
+
+        $('.hero').each(function() {
+            handleBgImage($(this), $(this));
+        });
 
     }
 }
@@ -117,7 +119,6 @@ function handlePageTitleBg() {
 }
 
 function handleImageCards() {
-
 
     $('.ContentItemHtml.card.img-card').each(function() {
         let Img = $(this).find('img');
