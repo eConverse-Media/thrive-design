@@ -2049,7 +2049,7 @@ li.slick-active button::before {
 
 /****** member dashboard ******/
 
-#MPOuterMost #MPOuter #MainCopy_ContentWrapper .member-dashboard .slider.slick-initialized {
+#MPOuterMost #MPOuter #MainCopy_ContentWrapper .member-dashboard .make-carousel.slick-initialized {
     margin-bottom: 40px;
 }
 
@@ -2071,7 +2071,7 @@ li.slick-active button::before {
     right: 0;
 }
 
-.member-dashboard .slider .slick-dots {
+.member-dashboard .hero-carousel .slick-dots {
     bottom: -35px;
     text-align: center;
     padding-left: 0;
