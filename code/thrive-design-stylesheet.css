@@ -84,6 +84,11 @@ body.ribbit h3 {
     line-height: 140%;
 }
 
+.h3-alt,
+body.ribbit .icon-list h3 {
+    font-size: 18px;
+}
+
 h3.content-card-title.font-size-md {
     font-size: 18px !important;
     line-height: 130%;
@@ -429,7 +434,7 @@ body.ribbit:not(.interior).bodyBackground {
 .hl-primary-row-bkgd.overlay p {
     color: #000;
 }
-.bg-primary * {
+.bg-primary:not(.overlay) * {
     color: var(--hl-bs--primary-opposite);
 }
 .bg-secondary * {
@@ -1226,7 +1231,7 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
 }
 
 
-.promo-block h6 {
+body.ribbit .promo-block h6 {
     background-color: var(--hl-bs--secondary);
     color: var(--hl-bs--default-text);
     padding: 3px 6px;
@@ -1237,6 +1242,16 @@ body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingCon
     font-weight: 600;
     display: inline-block;
 }
+
+.promo-block h6,
+.promo-block h6 + h2 {
+    margin: 0;
+}
+
+.promo-block h6 + h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+} 
 
 .promo.light-graphic::after {
     background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh_1_.png');
@@ -2139,14 +2154,14 @@ li.slick-active button::before {
 }
 
 .hero-text.make-buttons em+em {
-    margin: 0 20px;
+    margin: 0;
 }
 
 .hero:not(.graphic) .hero-text .HtmlContent {
     padding: 145px 0;
 }
 
-.hero-text .HtmlContent h2 {
+.hero-text .HtmlContent h1 {
     color: white;
 }
 
@@ -2226,7 +2241,7 @@ body.ribbit .overlay-secondary .hero-text.make-buttons.white em+em a:is(:hover, 
 }
 
 .hero-text p {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 /*** hero on member home ***/
@@ -5866,9 +5881,9 @@ body.ribbit.memberhome #MPFooterLink {
     color: var(--hl-bs--primary-opposite);
 }
 
-.icon-list ul li h4 {
-    margin-top: 0;
-    margin-bottom: 16px;
+.icon-list ul li h3 {
+    margin: 0;
+    margin-bottom: 8px;
 }
 
 /****** Featured Blogs List ******/
