@@ -352,8 +352,14 @@ body.has-modal.bio-modal-open {
 
 /****** buttons ******/
 
-.Login a.btn-primary {
-    padding: 10px 20px;
+#CreateBtnWrapper .btn-primary::after {
+    font-family: 'Font Awesome 6 Pro';
+    content: '\f107';
+    font-weight: 400;
+    font-size: 18px;
+    float: right;
+    color: #fff;
+    border: none;
 }
 
 .make-buttons em {
@@ -365,6 +371,7 @@ body.has-modal.bio-modal-open {
     margin: 8px;
 }
 
+#CreateBtnWrapper .btn-primary,
 .make-buttons em a,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
@@ -1793,6 +1800,8 @@ body.ribbit #searchColumn {
     transition: width .3s;
     background: #fff;
     position: relative;
+    z-index: 10;
+    right: -10px;
 }
 
 .search-wrap.not-logged-in {
@@ -1818,6 +1827,7 @@ body.ribbit #searchColumn {
     position: absolute;
     right: 0;
     left: 0;
+    width: calc(100% - 38px);
 }
 
 .open .search-bar-top {
@@ -1923,7 +1933,7 @@ body.ribbit .search-bar-top button[id*="SearchButton"],
 .open .search-btn-top {
     font-size: 12px;
     transition: background-color .3s;
-    right: 30px;
+    right: 10px;
 }
 
 .search-btn-top::before {
@@ -1936,6 +1946,11 @@ body.ribbit .search-bar-top button[id*="SearchButton"],
     content: '\f00d';
     font-size: 18px;
     transition: 0s;
+    color: white;
+}
+
+.open .search-btn-top {
+    background-color: var(--hl-bs--primary);
 }
 
 /* Nav Bar */
