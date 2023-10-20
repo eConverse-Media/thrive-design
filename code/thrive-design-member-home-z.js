@@ -1,5 +1,5 @@
 function handleHeroCarousel() {
-    $('.hero.slider .card').wrapAll('<div class="hero-carousel slick-dotted card" />').removeClass('card');
+    $('.hero .carousel-item').wrapAll('<div class="hero-carousel slick-dotted card" />').removeClass('card');
     $('.hero-carousel').slick({
         arrows: true,
         dots: false,

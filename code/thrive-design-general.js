@@ -238,7 +238,6 @@ function handleFeaturedCards() {
 
 
 
-
 $(function () {
     handleInteriorPadding();
     handleClickable();
