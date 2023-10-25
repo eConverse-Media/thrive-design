@@ -2253,7 +2253,7 @@ body.ribbit.memberhome #MPFooterLink {
     border-radius: 4px;
 }
 
-.make-carousel .carousel-item .HtmlContent {
+.make-carousel .carousel-item {
     position: relative;
 }
 
