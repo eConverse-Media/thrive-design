@@ -72,11 +72,27 @@ function handleSlider() {
         arrows: true,
         infinite: true,
         fade: false,
-        // autoplay: true,
+        autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
+    });
+
+    $('.make-carousel-tiles ul').slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        fade: false,
+        autoplay: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
+    });
+
+    $('.make-carousel-tiles li').each(function () {
+        handleLibraryCall(this);
     });
 
 }

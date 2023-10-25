@@ -2333,6 +2333,59 @@ body.ribbit #MPOuterMost .make-carousel .carousel-item .HtmlContent p {
     height: auto;
 }
 
+
+
+.make-carousel-tiles ul .slick-track {
+    display: flex;
+}
+
+.make-carousel-tiles ul .slick-dots {
+    bottom: -25px;
+}
+
+.make-carousel-tiles ul .slick-dots li {
+    margin-bottom: 0px;
+}
+
+.make-carousel-tiles ul:not(.slick-dots) .slick-track li {
+    padding: 24px;
+    background: #fff;
+    height: auto;
+    margin: 0 12px;
+    border: 0;
+}
+
+
+.make-carousel-tiles ul li .col-md-3 {
+    display: none;
+}
+
+.make-carousel-tiles ul li .col-md-9 {
+    width: 100%;
+}
+
+.make-carousel-tiles ul  .slick-list {
+    margin: 0 -15px;
+}
+
+.make-carousel-tiles ul  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    border: 0;
+}
+
+.make-carousel-tiles ul  .next-arrow {
+    right: -30px;
+    z-index: 1;
+}
+
+.make-carousel-tiles ul  .prev-arrow {
+    left: -30px;
+    z-index: 1;
+}
+
+
 /************ slick arrows & dots ************/
 
 .make-carousel .slick-dots {
