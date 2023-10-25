@@ -1571,8 +1571,8 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
 }
 
 .team .HtmlContent .img-container {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1588,6 +1588,14 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     color: var(--hl-bs--default-text);
 }
 
+body.ribbit .team h3,
+body.ribbit .bio h3 {
+    font-size: 18px;
+}
+
+.team button:is(:hover, :focus) {
+	color: unset
+}
 
 /****** bio modals ******/
 
@@ -1652,7 +1660,7 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     margin-top: 0;
 }
 
-.bio h4 {
+.bio h3 + p {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--hl-bs--gray-100);
