@@ -92,7 +92,7 @@ function handleSlider() {
     });
 
     $('.make-carousel-tiles li').each(function () {
-        handleLibraryCall(this);
+        handleAjaxCall(this);
     });
 
 }
