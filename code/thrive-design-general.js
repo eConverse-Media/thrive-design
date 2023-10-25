@@ -65,9 +65,9 @@ function handleSlider() {
         $(self).find('img').remove();
     });
 
-    $('.slide').wrapAll('<div class="slider"></div>');
+    $('.carousel-item').wrapAll('<div class="make-carousel"></div>');
 
-    $('.slider:not(.hero)').slick({
+    $('.make-carousel:not(.hero)').slick({
         dots: true,
         arrows: true,
         infinite: true,

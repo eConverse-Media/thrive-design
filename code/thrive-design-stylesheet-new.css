@@ -2247,45 +2247,45 @@ body.ribbit.memberhome #MPFooterLink {
 
 /****** hero carousel ******/
 
-.hero-carousel {
+.make-carousel {
     background-color: rgba(0, 0, 0, 0.39);
     padding: 40px;
     border-radius: 4px;
 }
 
-.hero-carousel .carousel-item .HtmlContent {
+.make-carousel .carousel-item .HtmlContent {
     position: relative;
 }
 
-.hero-carousel .carousel-item .HtmlContent h6,
-.hero-carousel .carousel-item .HtmlContent h2,
-.hero-carousel .carousel-item .HtmlContent p {
+.make-carousel .carousel-item .HtmlContent h6,
+.make-carousel .carousel-item .HtmlContent h2,
+.make-carousel .carousel-item .HtmlContent p {
     width: 75%;
     padding-right: 42px;
     padding-left: 20px;
 }
 
-.hero-carousel .carousel-item .HtmlContent p:first-of-type {
+.make-carousel .carousel-item .HtmlContent p:first-of-type {
     margin-bottom: 24px;
 }
 
-.hero-carousel .carousel-item .HtmlContent h6 {
+.make-carousel .carousel-item .HtmlContent h6 {
     font-size: 11px;
     margin-bottom: 8px;
 }
 
-.hero-carousel .carousel-item .HtmlContent h2 {
+.make-carousel .carousel-item .HtmlContent h2 {
     font-size: 20px;
     margin-top: 0;
 }
 
-body.ribbit #MPOuterMost .hero-carousel .carousel-item .HtmlContent p {
+body.ribbit #MPOuterMost .make-carousel .carousel-item .HtmlContent p {
     font-size: 12px;
     padding-left: 0;
     padding-right: 0;
 }
 
-.hero-carousel .carousel-item  .img-container {
+.make-carousel .carousel-item  .img-container {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -2296,21 +2296,21 @@ body.ribbit #MPOuterMost .hero-carousel .carousel-item .HtmlContent p {
 }
 
 
-.hero-carousel .carousel-item .HtmlContent em a {
+.make-carousel .carousel-item .HtmlContent em a {
     font-size: 16px;
 }
 
-.hero-carousel .slick-track {
+.make-carousel .slick-track {
     display: flex;
 }
 
-.hero-carousel .slick-track > div {
+.make-carousel .slick-track > div {
     height: auto;
 }
 
 /************ slick arrows & dots ************/
 
-.hero-carousel .slick-dots {
+.make-carousel .slick-dots {
     text-align: center;
     bottom: -35px;
     left: 0;
