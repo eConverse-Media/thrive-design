@@ -2475,6 +2475,10 @@ li.slick-active button::before {
     background-color: var(--hl-bs--primary) !important;
 }
 
+.bootstrap-4.profile-snippet .border-alt-rules {
+    border-top: 0 !important;
+}
+
 body.ribbit .profile-snippet-card .profile-snippet-bio {
     padding-left: 120px !important;
     min-height: 118px;
