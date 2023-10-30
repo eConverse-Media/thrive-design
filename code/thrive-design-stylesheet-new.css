@@ -606,13 +606,43 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     background: var(--hl-bs--gray-300);
 }
 
+/* primary outline button */
+
+body.ribbit .make-buttons.bg-primary em a,
+body.ribbit .bg-primary .make-buttons em a {
+    background: transparent;
+    color: var(--hl-bs--primary-opposite);
+    border: 2px solid var(--hl-bs--primary-opposite);
+}
+body.ribbit .make-buttons.bg-primary em a:is(:hover, :focus),
+body.ribbit .bg-primary .make-buttons em a:is(:hover, :focus) {
+    color: var(--hl-bs--primary);
+    background-color: var(--hl-bs--primary-opposite);
+    border-color: var(--hl-bs--primary-opposite);
+}
+
+/* secondary outline button */
+
+body.ribbit .make-buttons.bg-secondary em a,
+body.ribbit .bg-secondary .make-buttons em a {
+    background: transparent;
+    border: 2px solid var(--ui-secondary-text);
+    color: var(--ui-secondary-text);
+}
+body.ribbit .make-buttons.bg-secondary em a:is(:hover, :focus),
+body.ribbit .bg-secondary .make-buttons em a:is(:hover, :focus) {
+    background: var(--ui-secondary-text);
+    color: var(--hl-bs--secondary);
+    border-color: var(--ui-secondary-text);
+}
+
 /* Secondary Button */
 
 body.ribbit .make-buttons.secondary-btn em a {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
     color: var(--ui-secondary-text);
-
+    border: none;
 }
 
 body.ribbit .make-buttons.secondary-btn em a:is(:hover, :focus) {
@@ -627,6 +657,7 @@ body.ribbit .make-buttons.gray-btn em a {
     background: #f5f5f5;
     color: var(--hl-bs--primary);
     transition: 0.3s;
+    border: none;
 }
 
 body.ribbit .make-buttons.gray-btn em a:is(:hover, :focus) {
@@ -640,6 +671,7 @@ body.ribbit .make-buttons.white-btn em a {
     background: #fff;
     color: var(--hl-bs--primary);
     transition: 0.3s;
+    border: none;
 }
 
 body.ribbit .make-buttons.white-btn em a:is(:hover, :focus) {
@@ -654,6 +686,7 @@ body.ribbit .make-buttons.dark-btn em a {
     background: #272727;
     color: #fff;
     transition: .3s;
+    border: none;
 }
 body.ribbit .make-buttons.dark-btn em a:is(:hover, :focus) {
     background: rgba(39,39,39,0.8);
@@ -691,36 +724,6 @@ body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child:is(:
     border-color: #fff;
     color: var(--hl-bs--primary);
     transition: 0.3s;
-}
-
-/* primary outline button */
-
-body.ribbit .make-buttons.bg-primary em a,
-body.ribbit .bg-primary .make-buttons em a {
-    background: transparent;
-    color: var(--hl-bs--primary-opposite);
-    border: 2px solid var(--hl-bs--primary-opposite);
-}
-body.ribbit .make-buttons.bg-primary em a:is(:hover, :focus),
-body.ribbit .bg-primary .make-buttons em a:is(:hover, :focus) {
-    color: var(--hl-bs--primary);
-    background-color: var(--hl-bs--primary-opposite);
-    border-color: var(--hl-bs--primary-opposite);
-}
-
-/* secondary outline button */
-
-body.ribbit .make-buttons.bg-secondary em a,
-body.ribbit .bg-secondary .make-buttons em a {
-    background: transparent;
-    border: 2px solid var(--ui-secondary-text);
-    color: var(--ui-secondary-text);
-}
-body.ribbit .make-buttons.bg-secondary em a:is(:hover, :focus),
-body.ribbit .bg-secondary .make-buttons em a:is(:hover, :focus) {
-    background: var(--ui-secondary-text);
-    color: var(--hl-bs--secondary);
-    border-color: var(--ui-secondary-text);
 }
 
 /****** arrow link ******/
