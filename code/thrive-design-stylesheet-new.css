@@ -3481,6 +3481,11 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
     margin-top: 0;
 }
 
+.people-you-should-know h2 {
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 8px;
+}
+
 .people-you-should-know .HL-contact-suggestions {
     margin-bottom: 10px;
 }
