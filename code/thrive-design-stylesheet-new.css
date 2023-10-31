@@ -3466,10 +3466,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 
 /************ suggested contacts ************/
 
-.MyCommunitiesQuickList h2 {
-    padding: 20px;
-}
-
 .people-you-should-know h2,
 .MyCommunitiesQuickList h2 {
     margin-bottom: 15px;
