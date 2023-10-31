@@ -3780,8 +3780,12 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
     display: none;
 }
 
+.col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image + .text-container {
+    width: 100%;
+}
+
 .col-md-6 .HLRecentBlogs ul li .text-container,
-.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) + .text-container {
     width: calc(100% - 140px);
     padding-right: 30px;
 }
