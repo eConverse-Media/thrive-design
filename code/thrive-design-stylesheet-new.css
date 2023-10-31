@@ -60,7 +60,8 @@ body.ribbit .col-md-3 .leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit .col-md-4 .leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .widget-heading h2,
 body.ribbit #MPOuterMost #MPOuter .col-md-4 .widget-heading h2,
-body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h2 {
+body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h2,
+body.ribbit .ContentItemMVC.card h2 {
     color: var(--ui-default-text-small);
     font-size: 12px;
     line-height: 1;
@@ -1066,7 +1067,8 @@ body.ribbit .bg-gray {
 .card.clickable > a,
 .card.team button,
 body.ribbit .narrow-widget-container,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
+body.ribbit:not(.interior) .ContentItemMVC.card {
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
@@ -1077,8 +1079,15 @@ body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card,
 .col-md-3 .card.clickable > a,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl,
-.card.leaderboard {
+.card.leaderboard,
+body.ribbit:not(.interior) .col-md-3 .ContentItemMVC.card {
     padding: 16px;
+}
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLandingControl {
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
 }
 body.ribbit .narrow-widget-container {
     margin-bottom: 0 !important;
@@ -3469,7 +3478,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 .people-you-should-know h2,
 .MyCommunitiesQuickList h2 {
     margin-bottom: 15px;
-    font-size: 14px !important;
     margin-top: 0;
 }
 
