@@ -80,7 +80,7 @@ function handleSlider() {
     });
 
     $('.make-carousel-tiles ul').slick({
-        dots: true,
+        dots: false,
         arrows: true,
         infinite: true,
         fade: false,

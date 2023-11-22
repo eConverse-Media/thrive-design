@@ -2290,8 +2290,13 @@ body.ribbit.memberhome #MPFooterLink {
     border-radius: 4px;
 }
 
-.make-carousel .carousel-item {
+.make-carousel .carousel-item,
+.make-carousel-tiles ul:not(.slick-dots) li {
     position: relative;
+}
+
+.make-carousel-tiles ul {
+    margin-top: 0;
 }
 
 .make-carousel .carousel-item .HtmlContent h6,
@@ -2322,7 +2327,8 @@ body.ribbit #MPOuterMost .make-carousel .carousel-item .HtmlContent p {
     padding-right: 0;
 }
 
-.make-carousel .carousel-item  .img-container {
+.make-carousel .carousel-item  .img-container,
+.make-carousel-tiles .img-container {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -2347,26 +2353,37 @@ body.ribbit #MPOuterMost .make-carousel .carousel-item .HtmlContent p {
 
 
 
-.make-carousel-tiles ul .slick-track {
+.make-carousel-tiles ul:not(.slick-dots) .slick-track {
     display: flex;
 }
 
-.make-carousel-tiles ul .slick-dots {
-    bottom: -25px;
+body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
+    bottom: 0px;
+    margin: 0px;
 }
 
-.make-carousel-tiles ul .slick-dots li {
+.make-carousel-tiles ul:not(.slick-dots) li {
     margin-bottom: 0px;
 }
 
 .make-carousel-tiles ul:not(.slick-dots) .slick-track li {
     padding: 24px;
+    padding-top: 160px;
     background: #fff;
     height: auto;
     margin: 0 12px;
     border: 0;
+    border-radius: 8px;
 }
 
+
+.make-carousel-tiles ul:not(.slick-dots) .slick-track li .img-container {
+    height: 140px;
+    top: 0;
+    transform: translateY(0);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
 
 .make-carousel-tiles ul li .col-md-3 {
     display: none;
@@ -3280,7 +3297,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 }
 
 .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
-.event-cards .Content ul {
+.event-cards .Content ul{
     margin: 16px -12px -12px -12px;
     display: flex;
 }
