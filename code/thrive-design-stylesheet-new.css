@@ -1130,6 +1130,30 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 .card .HtmlContent > p:has(em):last-child {
     margin-top: auto;
 }
+.card.social ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card.social ul li a {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+    display: inline-block;
+}
+
+.card.social ul li a:is(:hover, :focus) {
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+}
 
 /*** widget cards ***/
 
