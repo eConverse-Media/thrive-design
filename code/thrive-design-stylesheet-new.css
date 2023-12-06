@@ -1007,6 +1007,7 @@ body.ribbit .bg-gray {
 /****** extra padding between columns ******/
 
 @media (min-width: 992px) {
+    .row-wide:not(.default-pad) > .col-md-4:first-child,
     .row-wide:not(.default-pad) > .col-md-6:first-child,
     .row-wide:not(.default-pad) > .col-md-8:first-child {
         padding-right: 24px;
