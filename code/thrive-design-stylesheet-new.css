@@ -1835,9 +1835,9 @@ body.ribbit #searchColumn {
     right: -10px;
 }
 
-.search-wrap.not-logged-in {
+/* .search-wrap.not-logged-in {
     right: 80px;
-}
+} */
 
 .search-wrap.open {
     width: 250px;
