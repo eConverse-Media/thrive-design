@@ -727,6 +727,19 @@ body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child:is(:
     transition: 0.3s;
 }
 
+/* dropdown buttons */
+
+body.ribbit .btn.form-control,
+body.ribbit .btn.form-control:is(:hover, :focus) {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: var(--ui-default-text);
+}
+body.ribbit .pagination-row .page-size select.form-control,
+body.ribbit .pagination-row .page-size select.form-control:is(:hover, :focus) {
+    border: none;
+}
+
 /****** arrow link ******/
 
 body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*, 
