@@ -1612,6 +1612,14 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     background: #fff;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
+.flex-cards .card.team button {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .col-md-3>.team,
 .col-md-3>.team {
