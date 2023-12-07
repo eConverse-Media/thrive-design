@@ -46,13 +46,12 @@ body.ribbit h1 {
 }
 body.ribbit h2,
 body.ribbit #MPOuterMost #MPOuter h2 {
+    font-size: 21px;
+}
+body.ribbit .HtmlContent h2,
+body.ribbit #MPOuterMost #MPOuter .HtmlContent h2 {
     font-size: 30px;
     line-height: 1.2;
-}
-body.ribbit .alt-h2 h2,
-body.ribbit .ContentUserControl h2,
-body.ribbit #MPOuterMost #MPOuter .ContentUserControl h2 {
-    font-size: 21px;
 }
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl h2,
 body.ribbit #MPOuterMost #MPOuter .col-md-4 .ContentUserControl h2,
@@ -367,7 +366,7 @@ body.has-modal.bio-modal-open {
     padding: 10px 20px;
 }
 
-.make-buttons em {
+.make-buttons em:has(a) {
     margin: -8px;
     display: inline-block;
 }
@@ -2259,7 +2258,7 @@ body.ribbit.memberhome #MPFooterLink {
     align-items: center;
 }
 
-.hero .make-buttons em {
+.hero .make-buttons em:has(a) {
     margin: -10px;
 }
 .hero .make-buttons em a {
@@ -4780,7 +4779,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
         padding-right: 0;
     }
 
-    .hero .card.make-buttons em {
+    .hero .card.make-buttons em:has(a) {
         display: block;
         margin-bottom: 8px;
     }
