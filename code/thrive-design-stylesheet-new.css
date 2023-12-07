@@ -3690,6 +3690,12 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
     padding: 0;
     box-shadow: none;
 }
+.HLLandingControl.SearchResults ul li .row.title-row .col-sm-3.col-md-3.pull-right {
+    display: none;
+}
+.HLLandingControl.SearchResults ul li .row.title-row .col-md-9 {
+    width: 100%;
+}
 
 /****** events ******/
 
