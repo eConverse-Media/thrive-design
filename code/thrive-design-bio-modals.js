@@ -9,7 +9,7 @@ $(function () {
 			klass = classList[index - 1],
 			img = $(self).find('img'),
             name = $(self).find('h3'),
-            position = $(self).find('h3 + p'),
+            position = $(self).find('h4'),
 			link = "<button type='button' onclick='openModal(\"" + klass + "\");'></button>",
 			bioImage = $(img).clone(),
 			bioSelector = '.bio.' + klass,
