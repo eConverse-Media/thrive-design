@@ -251,7 +251,22 @@ function handleFeaturedCards() {
     });
 }
 
+function handleAllContentListIcons() {
+    $('.SearchResults .Content ul li').each(function () {
+        var self = $(this),
+            href = $(self).find('h3 a').attr('href');
 
+        if (href.indexOf('blog') > -1) {
+            $(self).addClass('acl-blog');
+        } else if (href.indexOf('viewdocument') > -1) {
+            $(self).addClass('acl-library');
+        } else if(href.indexOf('discussion') > -1) {
+            $(self).addClass('acl-discussion');
+        }else if(href.indexOf('event') > -1) {
+            $(self).addClass('acl-event');
+        }
+    });
+}
 
 
 $(function () {
@@ -269,4 +284,5 @@ $(function () {
     handleBlogs();
     handleResources();
     handleFeaturedCards();
+    handleAllContentListIcons();
 });
