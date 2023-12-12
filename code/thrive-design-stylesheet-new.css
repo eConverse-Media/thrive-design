@@ -3539,7 +3539,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 
 .SearchResults.HLLandingControl ul li .img-container,
 .blogs-block .img-container {
-    background-color: #D9D9D9;
+    background-color: var(--hl-bs--primary);
     position: relative;
     overflow: hidden;
     height: 140px;
@@ -3547,6 +3547,16 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 }
 .SearchResults.HLLandingControl ul li .img-container::before,
 .blogs-block .img-container::before {
+    background: rgba(244, 244, 244, 0.85);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.SearchResults.HLLandingControl ul li .img-container::after,
+.blogs-block .img-container::after {
     content: '\f15c';
     font-family: 'Font Awesome 6 Pro';
     color: var(--hl-bs--primary);
@@ -3559,28 +3569,28 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.latest-news-list .blogs-block .img-container::before,
-.four-cards .SearchResults.HLLandingControl ul li .img-container::before {
+.latest-news-list .blogs-block .img-container::after,
+.four-cards .SearchResults.HLLandingControl ul li .img-container::after {
     right: 24px;
     bottom: -16px;
     transform: none;
     top: auto;
     left: auto;
 }
-.SearchResults.HLLandingControl ul li.acl-discussion .img-container::before {
+.SearchResults.HLLandingControl ul li.acl-discussion .img-container::after {
     content: '\f4a6';
 }
-.SearchResults.HLLandingControl ul li.acl-event .img-container::before {
+.SearchResults.HLLandingControl ul li.acl-event .img-container::after {
     content: '\f073';
 }
-.SearchResults.HLLandingControl ul li.acl-blog .img-container::before,
-.blogs-block .img-container::before {
+.SearchResults.HLLandingControl ul li.acl-blog .img-container::after,
+.blogs-block .img-container::after {
     content: '\f1ea';
 }
-.SearchResults.HLLandingControl ul li .img-container.loading::before,
-.SearchResults.HLLandingControl ul li .img-container.no-ajax-image::before,
-.blogs-block .img-container.loading::before,
-.blogs-block .img-container.no-ajax-image::before {
+.SearchResults.HLLandingControl ul li .img-container.loading::after,
+.SearchResults.HLLandingControl ul li .img-container.no-ajax-image::after,
+.blogs-block .img-container.loading::after,
+.blogs-block .img-container.no-ajax-image::after {
     opacity: 0.2;
 }
 
