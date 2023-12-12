@@ -3554,6 +3554,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
     left: 0;
     right: 0;
     bottom: 0;
+    opacity: 0;
 }
 .SearchResults.HLLandingControl ul li .img-container::after,
 .blogs-block .img-container::after {
@@ -3586,6 +3587,12 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 .SearchResults.HLLandingControl ul li.acl-blog .img-container::after,
 .blogs-block .img-container::after {
     content: '\f1ea';
+}
+.SearchResults.HLLandingControl ul li .img-container.loading::before,
+.SearchResults.HLLandingControl ul li .img-container.no-ajax-image::before,
+.blogs-block .img-container.loading::before,
+.blogs-block .img-container.no-ajax-image::before {
+    opacity: 1;
 }
 .SearchResults.HLLandingControl ul li .img-container.loading::after,
 .SearchResults.HLLandingControl ul li .img-container.no-ajax-image::after,
