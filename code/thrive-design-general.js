@@ -91,9 +91,9 @@ function handleSlider() {
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
     });
 
-    $('.make-carousel-tiles li').each(function () {
+/*     $('.make-carousel-tiles li').each(function () {
         handleAjaxCall(this);
-    });
+    }); */
 
 }
 
