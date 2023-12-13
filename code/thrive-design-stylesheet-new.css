@@ -2332,7 +2332,6 @@ body.ribbit.memberhome #MPFooterLink {
 
 .make-carousel {
     background-color: rgba(0, 0, 0, 0.39);
-    padding: 40px;
     border-radius: 4px;
 }
 
@@ -2346,7 +2345,7 @@ body.ribbit.memberhome #MPFooterLink {
 }
 
 .hero .make-carousel .carousel-item {
-    padding: 24px;
+    padding: 20px;
     display: flex;
     height: auto;
 }
@@ -2378,6 +2377,9 @@ body.ribbit.memberhome #MPFooterLink {
 
 .make-carousel .carousel-item .HtmlContent h2 {
     font-size: 20px;
+    margin-top: 0;
+}
+.make-carousel .carousel-item .HtmlContent h3 {
     margin-top: 0;
 }
 
@@ -4830,6 +4832,21 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 
     #MPSearchBlock {
         display: block;
+    }
+    .hero .make-carousel .carousel-item {
+        padding: 24px;
+        display: block;
+        height: auto;
+    }
+    
+    .make-carousel .carousel-item .HtmlContent {
+        width: 100%;
+        padding: 0 0 20px 0;
+        display: block;
+    }
+    .make-carousel .carousel-item .img-container {
+        width: 100%;
+        height: 140px;
     }
 
 }
