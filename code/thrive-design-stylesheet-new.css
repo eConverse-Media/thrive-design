@@ -1544,6 +1544,11 @@ body.ribbit #MPOuterMost #MPOuter .no-top-padding {
     padding-top: 0;
 }
 
+
+body.ribbit.interior #MainCopy_ContentWrapper:has(>div[class*="bg-"]:nth-last-child(2)) {
+padding-bottom: 0;
+}
+
 body.ribbit.home #MainCopy_ContentWrapper>.row-wide:not(:last-child, .home-hero, .primary-row, .secondary-row) {
     padding-bottom: 0;
 }
@@ -2445,7 +2450,11 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
 
 .make-carousel-tiles ul  .slick-list {
     margin: 0 -15px;
-}
+} 
+
+.make-carousel-tiles.featured-resource ul  .slick-list {
+    margin: 0;
+} 
 
 .make-carousel-tiles ul  .slick-arrow {
     position: absolute;
@@ -3248,12 +3257,12 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
 
 .ContentUserControl.featured-blogs.tile ul li h3 a::before,
 .ContentUserControl.featured-resource ul li h3 a::before {
-    content: "\f03e";
+    content: "";
     font-family: "Font Awesome 5 Pro";
     font-weight: 300;
     color: var(--hl-bs--default-text);
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
@@ -3548,6 +3557,10 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 .resource-list .library-filterRow,
 .resource-list .library-topRow,
 .resource-list .create-new-entry {
+    display: none;
+}
+
+.library-content .widget-heading  a.btn, .HLMyDocuments span[id*=IsPinned] {
     display: none;
 }
 
@@ -4086,12 +4099,23 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 }
 /*** icons ***/
 
+.featured-resource.make-carousel-tiles .HLMyDocuments .listIconContainer {
+    margin: 0;
+    position: absolute;
+    left: 42%;
+    top: -164px;
+    margin-left: 151px;
+    margin-top: 8px;
+}
+
 .HLMyDocuments .listIconContainer {
     margin: 0;
     position: absolute;
-    left: -70px;
-    top: 0;
+    left: unset;
+    top: -14px;
 }
+
+
 
 .HLMyDocuments .libListReptEntAttchLble+div>.col-md-12 {
     padding: 0;
@@ -4107,7 +4131,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 .HLMyDocuments .listIconContainer:not(:empty) {
     width: 50px;
     height: 50px;
-    background: var(--hl-bs--gray-200);
+    background: var(--hl-bs--secondary);
     text-align: center;
     border-radius: 50%;
     display: block;

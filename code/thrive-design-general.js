@@ -84,7 +84,7 @@ function handleSlider() {
         arrows: true,
         infinite: true,
         fade: false,
-        autoplay: true,
+        autoplay: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
@@ -246,8 +246,8 @@ function handleBlogs() {
 }
 
 function handleFeaturedCards() {
-    $('.featured-cards ul li').each(function () {
-        handleLibraryAjax(this);
+    $('.featured-cards ul li, .featured-resource.make-carousel-tiles ul li').each(function () {
+        handleBlogLibraryAjax(this);
     });
 }
 
