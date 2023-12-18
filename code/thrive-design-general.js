@@ -29,8 +29,6 @@ function handleClickable() {
             $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
             $(link).closest('p').addClass('card-link');
         }
-        
-        console.log('>>>>>>>>> ', $(self).attr('class'));
 
         if ($(link).parent().is('h3') ||
         $(this).hasClass('link-text') ||
@@ -247,7 +245,7 @@ function handleBlogs() {
 
 function handleFeaturedCards() {
     $('.featured-cards ul li, .featured-resource.make-carousel-tiles ul li').each(function () {
-        handleBlogLibraryAjax(this);
+        handleAjaxCall(this);
     });
 }
 

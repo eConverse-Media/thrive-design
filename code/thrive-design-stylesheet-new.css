@@ -1278,6 +1278,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     text-align: center;
     margin-bottom: 16px;
     border-radius: 8px;
+    width: 100%;
 }
 .card.icon-card .HtmlContent p i {
     display: block;
@@ -1314,12 +1315,9 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-.icon-circle .HtmlContent>p {
+.icon-circle .HtmlContent {
     text-align: center;
     color: var(--ui-heading-text);
-}
-.icon-circle .HtmlContent>p.card-link {
-    font-weight: 600;
 }
 
 .card.icon-card a:is(:hover, :focus) em {
@@ -1515,8 +1513,6 @@ body.ribbit .cta-tile a {
 
 body.ribbit .row-wide.flex-cards {
     display: flex;
-    padding-left: 4px;
-    padding-right: 4px;
 }
 
 body.ribbit .flex-cards>[class*="col-"] {
@@ -1540,6 +1536,8 @@ body.ribbit .flex-cards>[class*="col-"] {
     flex: 1;
     justify-content: unset;
     height: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 /*** removing margin on final paragraph ***/
@@ -1810,7 +1808,7 @@ body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor {
 
 
 .grid-sponsors .sponsor {
-    padding: 8px;
+    padding: 12px;
     width: 300px;
 }
 
@@ -1848,6 +1846,12 @@ body.ribbit .sponsor a {
 body.ribbit .sponsor a:is(:hover, :focus) {
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
+}
+
+body.ribbit .sponsor a strong {
+    font-weight: 300;
+    display: inline-block;
+    margin-top: 16px;
 }
 
 /************ Header ************/
@@ -2190,8 +2194,8 @@ body.ribbit.memberhome #MPFooterLink {
 }
 
 #FOOTER h2 {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 1.2;
     margin-top: 0;
 }
 
@@ -4564,7 +4568,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     }
 
     .cards .col-md-12 .card {
-        flex-basis: calc(33.333333% - 16px);
+        flex-basis: calc(33.333333% - 24px);
         margin: 8px;
     }
 
@@ -4947,8 +4951,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 @media (max-width: 500px) {
 
     .cards .card,
-    .col-md-6 .cards .card {
-        flex-basis: calc(50% - 16px);
+    .col-md-6 .cards .card,
+    .cards .col-md-12 .card {
+        flex-basis: calc(50% - 24px);
     }
 }
 
@@ -4983,6 +4988,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 
     .cards .card,
     .col-md-6 .cards .card {
-        flex-basis: calc(100% - 16px);
+        flex-basis: calc(100% - 24px);
     }
 }

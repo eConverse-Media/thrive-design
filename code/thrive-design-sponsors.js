@@ -6,7 +6,7 @@ $(function () {
         slidesToShow: 5,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: 'calc(50% - 600px)',
+        centerPadding: 'calc(50% - 592px)',
         responsive: [
             {
                 breakpoint: 1224,
