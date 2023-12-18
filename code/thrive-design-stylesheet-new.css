@@ -38,6 +38,8 @@ body.ribbit h5,
 body.ribbit h6 {
     color: var(--ui-heading-text);
     font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 8px; 
 }
 
 body.ribbit h1 {
@@ -86,7 +88,8 @@ body.ribbit h3 {
 body.ribbit h3 a,
 body.ribbit #MPOuterMost #MPOuter h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .community-events-list-row:first-child h3 a,
-body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featured-entry h3 a {
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featured-entry h3 a,
+body.ribbit .card.icon-circle h3 {
     font-size: 18px;
     line-height: 1.2;
 }
@@ -1030,6 +1033,10 @@ body.ribbit .bg-gray {
     .row-wide:not(.default-pad) > .col-md-8:last-child {
         padding-left: 24px;
     }
+    body.ribbit .row-wide:not(.default-pad) > .col-md-3 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 }
 
 /****** Icon List ******/
@@ -1096,7 +1103,8 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl,
 body.ribbit:not(.interior) .col-md-3 .ContentItemMVC.card {
     padding: 16px;
 }
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLandingControl,
+.ContentItemHtml.card.team {
     box-shadow: none;
     padding: 0;
     background: transparent;
@@ -1126,9 +1134,15 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 .card .HtmlContent > *:last-child {
     margin-bottom: 0;
 }
+.card .HtmlContent:has(p > em) > p:nth-last-child(2) {
+    margin-bottom: 24px;
+}
 .card .HtmlContent > p:has(em):last-child {
     margin-top: auto;
 }
+
+/****** social cards ******/
+
 .card.social ul {
     display: flex;
     list-style-type: none;
@@ -1262,7 +1276,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 
 .card.icon-card .HtmlContent p:has(i) {
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 16px;
     border-radius: 8px;
 }
 .card.icon-card .HtmlContent p i {
@@ -1302,8 +1316,10 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 
 .icon-circle .HtmlContent>p {
     text-align: center;
-    font-weight: 600;
     color: var(--ui-heading-text);
+}
+.icon-circle .HtmlContent>p.card-link {
+    font-weight: 600;
 }
 
 .card.icon-card a:is(:hover, :focus) em {
@@ -1492,7 +1508,9 @@ body.ribbit .cta-tile a {
 
 .cards>div .card {
     margin: 12px;
-    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 20%;
 }
 
 body.ribbit .row-wide.flex-cards {
@@ -1771,6 +1789,11 @@ body.ribbit .bio h3 {
     margin-top: 0;
 }
 
+body.ribbit .sponsors .slick-slider {
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
 .sponsors .slick-track {
     display: flex;
     padding: 15px 0;
@@ -1778,7 +1801,7 @@ body.ribbit .bio h3 {
 
 
 body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor {
-    padding: 0 8px;
+    padding: 0 12px;
     display: flex;
     height: auto;
     margin: 0;
