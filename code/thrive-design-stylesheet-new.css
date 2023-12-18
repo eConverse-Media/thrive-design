@@ -4305,6 +4305,33 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     }
 }
 
+/****** Interior Header Title *******/
+#InteriorPageTitle {
+    position: relative;
+    background: var(--hl-bs--primary);
+}
+
+#InteriorPageTitle svg {
+    display: none;
+}
+
+#InteriorPageTitle::after {
+    content: '';
+    height: 157px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
+}
+
+#InteriorPageTitle.has-bg-img {
+    position: relative;
+}
+
 /*** mobile padding ***/
 
 @media (max-width: 1135px) {
