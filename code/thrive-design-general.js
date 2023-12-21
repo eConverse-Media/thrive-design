@@ -89,9 +89,7 @@ function handleSlider() {
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
     });
 
-/*     $('.make-carousel-tiles li').each(function () {
-        handleAjaxCall(this);
-    }); */
+
 
 }
 
@@ -249,6 +247,12 @@ function handleFeaturedCards() {
     });
 }
 
+function handleInteriorCards() {
+    $('.list-tiles ul li, .list-tiles .blogs-block').each(function () {
+        handleAjaxCall(this);
+    });
+}
+
 function handleAllContentListIcons() {
     $('.SearchResults .Content ul li').each(function () {
         var self = $(this),
@@ -283,4 +287,5 @@ $(function () {
     handleResources();
     handleFeaturedCards();
     handleAllContentListIcons();
+    handleInteriorCards();
 });

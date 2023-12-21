@@ -92,6 +92,7 @@ body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featu
 body.ribbit .card.icon-circle h3 {
     font-size: 18px;
     line-height: 1.2;
+    color: var(--ui-heading-text);
 }
 body.ribbit .bootstrap-4 h3 {
     line-height: 1.2;
@@ -2372,7 +2373,12 @@ body.ribbit.memberhome #MPFooterLink {
     position: relative;
 }
 
-.make-carousel-tiles ul {
+body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles ul {
+    margin-top: 0;
+}
+
+
+body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles .heading h2 {
     margin-top: 0;
 }
 
@@ -2483,6 +2489,12 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     margin: 0;
 } 
 
+
+
+
+.make-carousel-tiles .HLLandingControl .Content .title-row .content-tags {
+    padding-top: 10px;
+}
 .make-carousel-tiles ul  .slick-arrow {
     position: absolute;
     top: 50%;
@@ -2498,6 +2510,40 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
 .make-carousel-tiles ul  .prev-arrow {
     left: -30px;
     z-index: 1;
+}
+
+
+
+/************ image left list ************/
+
+.img-left-list .blogs-block {
+    display: flex;
+}
+
+.img-left-list .blogs-block .img-container {
+    flex-basis: 550px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.img-left-list .blogs-block .text-container div[id*=ThreadFollowIcon],
+.list-tiles .blogs-block .text-container div[id*=ThreadFollowIcon]  {
+    display: none;
+}
+
+
+.img-left-list .blogs-block .text-container > .row.title-row {
+    margin: 0;
+}
+
+
+.img-left-list .blogs-block .text-container .col-md-12 {
+    padding: 0;
+}
+
+
+.img-left-list .blogs-block .text-container .col-md-12 > .margin-top-small {
+    margin-top: 0;
 }
 
 
@@ -3263,12 +3309,33 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
     display: flex;
 }
 
+.ContentUserControl.featured-resource:not(.make-carousel-tiles) ul li h3 {
+    margin-top: 48px;
+}
+
+
+
+.ContentUserControl.featured-resource.make-carousel-tiles ul li h3 {
+    margin-top: 0;
+}
+
+.ContentUserControl.featured-resource ul li h5 {
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.ContentUserControl.featured-resource .HLMyDocuments .listIconContainer {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .ContentUserControl.featured-blogs ul li,
 .ContentUserControl.featured-resource ul li {
     width: 33.3333333333%;
     padding: 30px 25px;
     background-color: #eee;
     border: 0;
+    border-radius: 8px;
     margin: 0 15px;
 }
 
@@ -3282,18 +3349,6 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
     margin-right: 0;
 }
 
-.ContentUserControl.featured-blogs.tile ul li h3 a::before,
-.ContentUserControl.featured-resource ul li h3 a::before {
-    content: "";
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 300;
-    color: var(--hl-bs--default-text);
-    display: block;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-}
-
 .ContentUserControl.featured-blogs ul li .title-row .col-md-3,
 .ContentUserControl.featured-resource ul li .title-row .col-md-3,
 .featured-tile-slider-wrapper li .col-md-3 {
@@ -3304,6 +3359,15 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
 .ContentUserControl.featured-resource ul li .title-rwo .col-md-9,
 .featured-tile-slider-wrapper li .col-md-9 {
     width: 100%;
+}
+
+.ContentUserControl.featured-blogs ul li h3 {
+    margin-top: 0;
+}
+
+
+.ContentUserControl.featured-blogs ul li .content-tags {
+    padding-top: 8px;
 }
 
 .recent-blogs-react {
@@ -3384,7 +3448,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 }
 
 
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
     margin-right: 0;
 }
 
@@ -3393,13 +3457,41 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding-top: 130px;
 }
 
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
-.event-cards .Content ul{
+.featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
+.event-cards .Content ul,
+.list-tiles .Content ul, 
+.list-tiles div[id*=_BlogContents]{
     margin: 16px -12px -12px -12px;
     display: flex;
 }
 
-#MPOuterMost #MPOuter .featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
+.list-tiles .Content ul,  
+.list-tiles div[id*=_BlogContents]{
+    flex-wrap: wrap;
+}
+
+
+.list-tiles div[id*=_BlogContents]>.row{
+    display: none;
+}
+
+
+.list-tiles .Content ul li,
+.list-tiles div[id*=_BlogContents] .blogs-block {
+    background-color: #fff;
+    border-radius: 8px;
+    flex-basis: 274px;
+    margin: 8px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+
+.list-tiles .Content ul li .content-row {
+    display: none;
+}
+
+#MPOuterMost #MPOuter .featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
 #MPOuterMost #MPOuter .event-cards .Content ul li {
     margin: 0 12px;
     display: flex;
@@ -3431,8 +3523,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     border-radius: 8px;
 }
 
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .img-container,
-#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-3 {
+.featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .img-container,
+#MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-3,
+.list-tiles ul li .img-container {
     width: 100%;
     height: 140px;
     position: relative;
@@ -3441,7 +3534,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     overflow: hidden;
 }
 
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container {
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container,.list-tiles ul li .text-container,.list-tiles .blogs-block .text-container {
     padding: 16px;
 }
 
@@ -3449,6 +3542,11 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding: 16px !important;
     width: 100%;
     margin-bottom: auto;
+}
+
+.list-tiles ul li .text-container h3,
+.list-tiles  .blogs-block .text-container h3  {
+    margin-top: 0;
 }
 
 #MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-12 {
@@ -3459,6 +3557,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     flex-basis: 100%;
     border-radius: 8px;
 }
+
+
 
 #MPOuterMost #MPOuter .event-cards .Content ul li .title-row .col-md-12::before {
     position: absolute;
@@ -3594,16 +3694,19 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 /****** cards with no image ******/
 
 .SearchResults.HLLandingControl ul li .img-container,
-.blogs-block .img-container {
-    background-color: var(--hl-bs--primary);
+.blogs-block .img-container,
+.list-tiles ul li .img-container {
+    background: var(--hl-bs--primary);
     position: relative;
     overflow: hidden;
     height: 140px;
     border-radius: 8px 8px 0 0;
+    background-size: cover;
 }
 .SearchResults.HLLandingControl ul li .img-container::before,
-.blogs-block .img-container::before {
-    background: rgba(244, 244, 244, 0.85);
+.blogs-block .img-container::before,
+.list-tiles ul li .img-container::before {
+    background-color: rgba(244, 244, 244, 0.85);
     content: '';
     position: absolute;
     top: 0;
@@ -3613,7 +3716,8 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
     opacity: 0;
 }
 .SearchResults.HLLandingControl ul li .img-container::after,
-.blogs-block .img-container::after {
+.blogs-block .img-container::after,
+.list-tiles ul li .img-container::after  {
     content: '\f15c';
     font-family: 'Font Awesome 6 Pro';
     color: var(--hl-bs--primary);
@@ -3627,7 +3731,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
     transform: translate(-50%, -50%);
 }
 .latest-news-list .blogs-block .img-container::after,
-.four-cards .SearchResults.HLLandingControl ul li .img-container::after {
+.four-cards .SearchResults.HLLandingControl ul li .img-container::after  {
     right: 24px;
     bottom: -16px;
     transform: none;
@@ -3647,13 +3751,17 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 .SearchResults.HLLandingControl ul li .img-container.loading::before,
 .SearchResults.HLLandingControl ul li .img-container.no-ajax-image::before,
 .blogs-block .img-container.loading::before,
-.blogs-block .img-container.no-ajax-image::before {
+.blogs-block .img-container.no-ajax-image::before,
+.list-tiles ul li .img-container.loading::before,
+.list-tiles ul li .img-container.no-ajax-image::before  {
     opacity: 1;
 }
 .SearchResults.HLLandingControl ul li .img-container.loading::after,
 .SearchResults.HLLandingControl ul li .img-container.no-ajax-image::after,
 .blogs-block .img-container.loading::after,
-.blogs-block .img-container.no-ajax-image::after {
+.blogs-block .img-container.no-ajax-image::after,
+.list-tiles ul li .img-container.loading::after,
+.list-tiles ul li .img-container.no-ajax-image::after {
     opacity: 0.2;
 }
 
@@ -4687,7 +4795,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
         width: 100%;
         margin: 0px;
         margin-bottom: 15px;
+        border-radius: 8px;
     }
+
 
     .ContentUserControl.featured-blogs ul li:first-of-type {
         margin-left: 0px;
@@ -4706,6 +4816,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     .ContentUserControl.featured-resource ul li {
         width: 100%;
     }
+
 
     .ContentUserControl.featured-blogs ul,
     .ContentUserControl.featured-resource ul,
