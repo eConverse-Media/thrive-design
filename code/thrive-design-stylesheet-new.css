@@ -3457,6 +3457,15 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding-top: 130px;
 }
 
+.list-tiles > div {
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: var(--ui-heading-text);
+}
+
 .featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
 .event-cards .Content ul,
 .list-tiles .Content ul, 
