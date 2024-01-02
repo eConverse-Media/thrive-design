@@ -3339,6 +3339,14 @@ margin-bottom: 0;
     margin: 0 15px;
 }
 
+div[class*=bg-primary].row .ContentUserControl.featured-blogs ul li,
+div[class*=bg-secondary].row .ContentUserControl.featured-blogs ul li,
+div[class*=bg-primary].ContentUserControl.featured-resource ul li, 
+div[class*=bg-secondary].row .ContentUserControl.featured-resource ul li 
+ {
+    background-color: #fff;
+}
+
 .ContentUserControl.featured-blogs ul li:first-of-type,
 .ContentUserControl.featured-resource ul li:first-of-type {
     margin-left: 0;
@@ -4662,6 +4670,12 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 }
 
 @media (max-width: 991px) {
+
+    .featured-resource.make-carousel-tiles .HLMyDocuments .listIconContainer {
+            left: unset;
+            right: -41px;
+            top: -164px;
+    }
 
     .hero,
     .hero .row-wide {
