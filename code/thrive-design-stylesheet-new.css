@@ -381,6 +381,13 @@ body.has-modal.bio-modal-open {
     margin: -8px;
     display: inline-block;
 }
+body.ribbit .summary-edit .Content > ul li {
+    margin: -8px;
+}
+body.ribbit .summary-edit > .Content > ul li a {
+    margin: 8px;
+    display: inline-block;
+}
 
 .make-buttons em a {
     margin: 8px;
@@ -390,6 +397,7 @@ body.has-modal.bio-modal-open {
 .make-buttons em a,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
+body.ribbit .summary-edit .Content > ul a,
 body.ribbit .featured-card-single .btn,
 body.ribbit .featured-card-multi .btn,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
@@ -412,6 +420,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 body.ribbit .btn,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
+body.ribbit .summary-edit .Content > ul a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
@@ -458,6 +467,7 @@ body.ribbit :not(.no-theme) .btn-default:focus,
 body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a:is(:hover, :focus),
+body.ribbit .summary-edit .Content > ul a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus),
 body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
@@ -493,6 +503,8 @@ body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLink
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a,
 body.ribbit .summary-edit em a:is(:hover, :focus),
+body.ribbit .summary-edit .Content > ul a,
+body.ribbit .summary-edit .Content > ul a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
@@ -4476,6 +4488,21 @@ body.ribbit .community-tabs-container-outer {
 }
 body.ribbit.groupdetails .community-tabs-container-outer {
     margin-bottom: 0;
+}
+.summary-edit .Content .img-container {
+    width: 42%;
+}
+.summary-edit .Content .text-container {
+    width: 58%;
+    padding-right: 115px;
+}
+.summary-edit .Content > ul {
+    width: 25%;
+    padding-left: 15px;
+    list-style-type: none;
+}
+.summary-edit .Content ul + .text-container {
+    width: 75%;
 }
 
 /*** mobile padding ***/
