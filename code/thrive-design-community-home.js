@@ -13,7 +13,14 @@ function handleCommunityHtml() {
 }
 
 function handleAnnouncements() {
-    
+    $('.HLAnnouncements ul').slick({
+        arrows: true,
+        dots: false,
+        autoplay: false,
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-regular fa-arrow-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-regular fa-arrow-left"></i></button>'
+    });
+
     // handle link
     $('.HLAnnouncements ul li').each(function () {
         var self = $(this),
@@ -29,20 +36,36 @@ function handleAnnouncements() {
         
         $(link).remove();
     });
+}
 
-    // handle carousel
-    $('.HLAnnouncements ul').slick({
-        arrows: true,
-        dots: false,
-        autoplay: false,
-        infinite: false,
-        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-regular fa-arrow-right"></i></button>',
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-regular fa-arrow-left"></i></button>'
+function handleSidebarResources() {
+    $('.HLMyDocuments .Content ul li').each(function () {
+        var self = $(this);
+
+        // handle icons
+        var iconContainer = $(self).find('.libListReptEntAttchLble').parent();
+
+        $(iconContainer).prependTo(self);
+
+        $(self).find('.listIconContainer a').contents().unwrap();
+        $(self).find('.listIconContainer img').parent().addClass('has-image');
+
+        $(self).find('.listIconContainer').each(function () {
+            var container = $(this);
+
+            if (!($(container).find('> *').html())) {
+                var text = $(container).text();
+
+                text = $.trim(text);
+                $(container).text(text);
+            }
+        });
     });
+
 }
 
 function handleNewsAndResources() {
-    $('.recent-news .HLRecentBlogs ul li, .ContentUserControl.featured-resources .HLMyDocuments ul li').each(function () {
+    $('.recent-news .HLRecentBlogs ul li, .featured-resources .HLMyDocuments ul li').each(function () {
         var self = $(this);
 
         handleAjaxCall(self);
@@ -52,5 +75,6 @@ function handleNewsAndResources() {
 $(function () {
     handleCommunityHtml();
     handleAnnouncements();
+    handleSidebarResources();
     handleNewsAndResources();
 });
