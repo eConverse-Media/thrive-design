@@ -38,6 +38,13 @@ body.ribbit h5,
 body.ribbit h6 {
     color: var(--ui-heading-text);
     font-weight: 700;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 16px;
     margin-bottom: 8px; 
 }
@@ -1509,7 +1516,7 @@ body.ribbit .cta-tile a {
     margin: 12px;
     flex-grow: 0;
     flex-shrink: 1;
-    flex-basis: 20%;
+    flex-basis: 100%;
 }
 
 body.ribbit .row-wide.flex-cards {
@@ -4455,6 +4462,20 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 
 #InteriorPageTitle.has-bg-img {
     position: relative;
+}
+
+/************ community landing page ************/
+
+.summary-edit .Content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+body.ribbit .community-tabs-container-outer {
+    height: 40px;
+}
+body.ribbit.groupdetails .community-tabs-container-outer {
+    margin-bottom: 0;
 }
 
 /*** mobile padding ***/
