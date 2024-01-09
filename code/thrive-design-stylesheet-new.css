@@ -2401,6 +2401,11 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles .heading h2 {
     margin-top: 0;
 }
 
+body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
+    margin-bottom: 8px;
+}
+
+
 .hero .make-carousel .carousel-item {
     padding: 20px;
     display: flex;
@@ -2563,6 +2568,16 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
 
 .img-left-list .blogs-block .text-container .col-md-12 > .margin-top-small {
     margin-top: 0;
+}
+
+.img-left-list .row-border-top, .list-tiles .row-border-top {
+    display: block;
+    border-top: none;
+}
+
+
+.img-left-list .row-border-top .pagination,  .list-tiles .row-border-top .pagination {
+    margin: 0;
 }
 
 
@@ -3351,11 +3366,22 @@ margin-bottom: 0;
 .ContentUserControl.featured-blogs ul li,
 .ContentUserControl.featured-resource ul li {
     width: 33.3333333333%;
-    padding: 30px 25px;
+    padding: 24px;
     background-color: #eee;
     border: 0;
     border-radius: 8px;
     margin: 0 15px;
+}
+
+
+.ContentUserControl.featured-blogs ul li .ByLine,
+.ContentUserControl.featured-resource ul li .ByLine {
+    margin-bottom: 8px;
+}
+
+
+.ContentUserControl.featured-cards ul li  h5 {
+    margin-top:0;
 }
 
 div[class*=bg-primary].row .ContentUserControl.featured-blogs ul li,
@@ -3799,6 +3825,15 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 .list-tiles ul li .img-container.loading::after,
 .list-tiles ul li .img-container.no-ajax-image::after {
     opacity: 0.2;
+}
+
+.list-tiles div[id*=_BottomLink] {
+    padding-top: 25px;
+}
+
+
+.list-tiles div[id*=_BottomLink] .col-md-12 {
+    padding: 0;
 }
 
 /************ suggested contacts ************/
@@ -4306,6 +4341,8 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     text-align: center;
     border-radius: 50%;
     display: block;
+    border: 3px solid #fff;
+    box-sizing: content-box;
 }
 
 .HLMyDocuments .listIconContainer div {
@@ -4323,7 +4360,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     font-family: "Font Awesome 6 Pro";
     font-size: 24px;
     line-height: 50px;
-    color: var(--hl-bs--primary);
+    color: var(--ui-secondary-text);
 }
 
 .HLMyDocuments .listIconContainer div.HLMListTypeYoutube::before,
