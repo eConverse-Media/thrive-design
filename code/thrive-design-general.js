@@ -257,7 +257,7 @@ function handleFeaturedCards() {
 }
 
 function handleInteriorCards() {
-    $('.list-tiles ul li, .list-tiles .blogs-block').each(function () {
+    $('.list-tiles ul:not(.pagination) li, .list-tiles .blogs-block').each(function () {
         handleAjaxCall(this);
     });
 }

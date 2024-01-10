@@ -2580,6 +2580,11 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     margin: 0;
 }
 
+.list-tiles .row-border-top {
+    flex-basis: 100%;
+    margin-left: 8px;
+    margin-top: 8px;
+}
 
 /************ slick arrows & dots ************/
 
