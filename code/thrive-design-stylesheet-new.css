@@ -499,6 +499,8 @@ body.ribbit :not(.no-theme) .btn-primary:focus,
 body.ribbit :not(.no-theme) .btn-primary:hover:not(:disabled),
 body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default,
 body.ribbit .ContentUserControl .HLLandingControl .btn.btn-default:is(:hover, :focus),
+body.ribbit #MPOuterMost #MPOuter .ContentUserControl .HLLandingControl h3 a.btn.btn-default,
+body.ribbit #MPOuterMost #MPOuter .ContentUserControl .HLLandingControl h3 a.btn.btn-default:is(:hover, :focus),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a,
@@ -760,6 +762,19 @@ body.ribbit .btn.form-control:is(:hover, :focus) {
 body.ribbit .pagination-row .page-size select.form-control,
 body.ribbit .pagination-row .page-size select.form-control:is(:hover, :focus) {
     border: none;
+}
+
+/*** small buttons ***/
+
+body.ribbit .btn-sm,
+body.ribbit #MPOuterMost #MPOuter h3 a.btn-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+body.ribbit .btn-xs,
+body.ribbit #MPOuterMost #MPOuter h3 a.btn-xs {
+    padding: 2px 5px;
+    font-size: 11px;
 }
 
 /****** arrow link ******/
@@ -3467,7 +3482,6 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
 
 .featured-cards ul {
     display: flex;
-    justify-content: space-evenly;
 }
 
 .ContentUserControl.featured-blogs .top-blogs-slider ul li,
@@ -3694,6 +3708,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 .ContentUserControl.resources-list ul li,
 .featured-cards ul li {
     min-height: 375px;
+    background-color: #fff;
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
@@ -4339,22 +4354,27 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     display: none;
 }
 
+.HLMyDocuments ul li:has(.listIconContainer) {
+    padding-left: 64px;
+}
 .HLMyDocuments .listIconContainer:not(:empty) {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background: var(--hl-bs--secondary);
     text-align: center;
     border-radius: 50%;
     display: block;
     border: 3px solid #fff;
     box-sizing: content-box;
+    left: -64px;
+    top: 0;
 }
 
 .HLMyDocuments .listIconContainer div {
     background: transparent;
     margin: 0;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
 }
 
 .HLMyDocuments .listIconContainer div.iconNumberDiv {
@@ -4545,6 +4565,61 @@ body.ribbit.groupdetails .community-tabs-container-outer {
 }
 .summary-edit .Content ul + .text-container {
     width: 75%;
+}
+
+/****** widgets ******/
+
+.groupdetails #MPOuterMost #MPOuter .col-md-4 .HLLandingControl {
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    padding: 24px;
+}
+.groupdetails .col-md-4 .HLLandingControl:not(:last-child) {
+    margin-bottom: 24px;
+}
+.groupdetails div[id*="BottomLink"] .col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.groupdetails .HLLandingControl ul li .title-row .col-md-2 {
+    width: 48px;
+    margin-right: 16px;
+    float: left;
+}
+.groupdetails .HLLandingControl ul li .title-row .col-md-10 {
+    width: calc(100% - 64px);
+    padding: 0;
+    float: left;
+}
+
+/*** announcements ***/
+
+body.ribbit.groupdetails .HLAnnouncements ul li {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+body.ribbit.groupdetails .HLAnnouncements ul li .row.HLContainer > .col-md-12 >  div:not(:first-child),
+body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
+    display: none;
+}
+.groupdetails .HLAnnouncements .slick-arrow {
+    background: transparent;
+    color: var(--hl-bs--link);
+    border: none;
+    padding: 0;
+    position: absolute;
+    bottom: 16px;
+    right: 0;
+    font-size: 16px;
+    line-height: 1;
+    z-index: 10;
+}
+.groupdetails .HLAnnouncements .slick-arrow.prev-arrow {
+    right: 32px;
+}
+.groupdetails .HLAnnouncements .slick-arrow:is(:hover, :focus) {
+    color: var(--hl-bs--link-hover);
 }
 
     /************ milestone carousel ************/
@@ -5084,12 +5159,14 @@ body.ribbit.groupdetails .community-tabs-container-outer {
         display: block;
     }
 
-    .summary-edit .text-container,
-    .summary-edit .img-container {
+    .summary-edit .Content ul + .text-container,
+    .summary-edit .Content .text-container,
+    .summary-edit .Content .img-container,
+    .summary-edit .Content > ul {
         width: 100%;
     }
 
-    .summary-edit .text-container {
+    .summary-edit .Content .text-container {
         padding-right: 0;
         margin-top: 40px;
     }
