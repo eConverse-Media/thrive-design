@@ -767,7 +767,9 @@ body.ribbit .pagination-row .page-size select.form-control:is(:hover, :focus) {
 /*** small buttons ***/
 
 body.ribbit .btn-sm,
-body.ribbit #MPOuterMost #MPOuter h3 a.btn-sm {
+body.ribbit #MPOuterMost #MPOuter h3 a.btn-sm,
+body.ribbit .btn-group-sm > .btn,
+body.ribbit .btn-group-sm.btn {
     padding: 4px 8px;
     font-size: 12px;
 }
@@ -4545,12 +4547,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     flex-direction: row-reverse;
     align-items: center;
 }
-body.ribbit .community-tabs-container-outer {
-    height: 40px;
-}
-body.ribbit.groupdetails .community-tabs-container-outer {
-    margin-bottom: 0;
-}
+
 .summary-edit .Content .img-container {
     width: 42%;
 }
@@ -4565,6 +4562,71 @@ body.ribbit.groupdetails .community-tabs-container-outer {
 }
 .summary-edit .Content ul + .text-container {
     width: 75%;
+}
+
+/****** tabs ******/
+
+body.ribbit .community-tabs-container-outer {
+    background: transparent;
+    margin-top: -36.5px;
+    margin-bottom: 36px;
+    margin-left: calc(50% - 584px);
+    margin-right: calc(50% - 584px);
+    width: auto;
+}
+body.ribbit.groupdetails .community-tabs-container-outer {
+    margin-bottom: 0;
+}
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li {
+    border: none;
+}
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 600;
+    color: var(--ui-heading-text);
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.08) inset;
+    text-transform: none;
+    height: 36px;
+    margin-right: 8px;
+}
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a:is(:hover, :focus),
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li.active a {
+    color: var(--ui-heading-text);
+    background-color: #fff;
+    box-shadow: none;
+}
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a .badge {
+    color: var(--ui-secondary-text);
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.25px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 10px;
+    background: var(--hl-bs--secondary);
+    float: right;
+    margin-top: 3px;
+    margin-left: 8px;
+}
+
+/* mobile tabs */
+
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .dropdown li a {
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid var(--hl-bs--gray-100);
+    box-shadow: none;
+    margin-right: 0;
+}
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .dropdown li:last-child a {
+    border-bottom: none;
+}
+body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .dropdown li a .badge {
+    float: none;
+    margin-top: 0;
 }
 
 /****** widgets ******/
@@ -4728,6 +4790,13 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
 @media (max-width: 1135px) {
     .featured-card-multi>div>div {
         margin: 1em 0;
+    }
+}
+
+@media (max-width: 1232px) {
+    body.ribbit .community-tabs-container-outer {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
