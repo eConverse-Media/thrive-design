@@ -4686,6 +4686,53 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
 
     /************ milestone carousel ************/
 
+    .milestone-slider .slick-arrow {
+        bottom: -34px;
+        top:unset;
+        z-index: 5;
+        position: absolute;
+        border: none;
+        background: transparent;
+    }
+
+
+    .milestone-slider .slick-arrow i {
+        color: var(--hl-bs--secondary);
+     }
+
+     .milestone-slider .slick-arrow:last-child,
+     .milestone-slider .slick-arrow:nth-last-child(1) {
+        bottom: 30px;
+     }
+
+    .milestone-slider .slick-arrow:is(:hover, :focus) {
+        color: white;
+    }
+
+
+    .milestone-slider .slick-arrow::before {
+        opacity: 1;
+    }
+
+    .milestone-slider .slick-prev:before,.milestone-slider .slick-next:before {
+        font-family: 'Font Awesome 6 Pro';
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        content: none;
+    }
+
+    .milestone-slider .prev-arrow {
+        left: calc(50% - 584px);
+        z-index: 4;
+    }
+
+    .milestone-slider .next-arrow {
+        right: calc(50% - 584px);
+    }
+
+
     .milestone-slider.slick-dotted.slick-slider {
         margin-bottom: 120px;
     }
@@ -4785,6 +4832,13 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         font-size: 28px;
     }
 
+    .milestone-slider .slick-dots li {
+       border-color: var(--hl-bs--secondary);
+    }
+
+    .milestone-slider .slick-dots li.slick-active {
+        background-color: var(--hl-bs--secondary);
+     }
 /*** mobile padding ***/
 
 @media (max-width: 1135px) {

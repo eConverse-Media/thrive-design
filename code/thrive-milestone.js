@@ -9,6 +9,8 @@
             autoplay: false,
             centerMode: true,
             centerPadding: 'calc(50% - 250px)',
+            prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
             responsive: [
                 {
                     breakpoint: 1070,
@@ -25,6 +27,9 @@
                 }
             ]
         });
+
+        $('.milestone-slider button.prev-arrow').clone().appendTo('.milestone-slider');
+        $('.milestone-slider button.next-arrow').clone().appendTo('.milestone-slider');
     }
 
 
