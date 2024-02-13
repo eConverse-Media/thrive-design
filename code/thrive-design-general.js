@@ -75,6 +75,20 @@ function handleSlider() {
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
+    }); 
+
+    $('.slide').wrapAll('<div class="slider"></div>');
+
+    $('.slider:not(.hero)').slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        fade: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>'
     });
 
     $('.make-carousel-tiles ul').slick({

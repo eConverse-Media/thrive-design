@@ -2532,7 +2532,6 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
 
 
 
-
 .make-carousel-tiles .HLLandingControl .Content .title-row .content-tags {
     padding-top: 10px;
 }
@@ -2551,6 +2550,28 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
 .make-carousel-tiles ul  .prev-arrow {
     left: -30px;
     z-index: 1;
+}
+
+/* Change the slick arrow size for all except memberhome and clp announcement widgets */
+body.ribbit  .milestone-slider .slick-arrow i,
+.make-carousel-tiles.featured-cards .slick-arrow i,
+.make-carousel-tiles.featured-resource .slick-arrow i  {
+    font-size: 24px;
+}
+
+
+.make-carousel-tiles.featured-cards .prev-arrow {
+    left: -45px;
+}
+
+
+.make-carousel-tiles.featured-cards .next-arrow {
+    right: -45px;
+}
+
+
+.make-carousel-tiles.featured-resource ul .next-arrow {
+    right: -10px;
 }
 
 
@@ -3392,12 +3413,20 @@ margin-bottom: 0;
     background-color: #eee;
     border: 0;
     border-radius: 8px;
-    margin: 0 15px;
+    margin: 0 12px;
 }
+
+body div[class*=bg-primary] .ContentUserControl.featured-blogs ul li,
+body div[class*=bg-secondary] .ContentUserControl.featured-blogs ul li,
+body div[class*=bg-primary] .ContentUserControl.featured-resource ul li,
+body div[class*=bg-secondary] .ContentUserControl.featured-resource ul li {
+    background-color: #fff;
+}  
 
 
 .ContentUserControl.featured-blogs ul li .ByLine,
-.ContentUserControl.featured-resource ul li .ByLine {
+.ContentUserControl.featured-resource ul li .ByLine,
+.ContentUserControl.featured-resource ul li h5 {
     margin-bottom: 8px;
 }
 
@@ -4332,7 +4361,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     position: absolute;
     left: 42%;
     top: -164px;
-    margin-left: 151px;
+    margin-left: 174px;
     margin-top: 8px;
 }
 
@@ -4688,11 +4717,28 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
 
     .milestone-slider .slick-arrow {
         bottom: -34px;
-        top:unset;
+        top: 0;
         z-index: 5;
         position: absolute;
         border: none;
         background: transparent;
+        width: 15%;
+    }
+
+
+    body.ribbit .milestone-slider .prev-arrow {
+        text-align:left;
+    }
+
+
+    body.ribbit .milestone-slider .next-arrow {
+        text-align: right;
+    }
+
+    body.ribbit  .milestone-slider .slick-arrow i {
+        position: absolute;
+        font-size: 24px;
+        bottom: 0;
     }
 
     body div[class*="bg-primary"] .milestone-slider .slick-arrow i {
@@ -4741,9 +4787,7 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     .milestone-slider.slick-dotted.slick-slider {
         margin-bottom: 120px;
     }
-    .milestone-slider.slick-dotted .slick-list {
-        height: 380px;
-    }
+
     .milestone-slider.slick-dotted::before {
         content: '';
         opacity: 0.1;
