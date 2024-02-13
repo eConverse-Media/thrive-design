@@ -4695,10 +4695,15 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         background: transparent;
     }
 
+    body div[class*="bg-primary"] .milestone-slider .slick-arrow i {
+        color: var(--hl-bs--primary-opposite);
+    }
 
-    .milestone-slider .slick-arrow i {
-        color: var(--hl-bs--secondary);
-     }
+    body div[class*="bg-secondary"] .milestone-slider .slick-arrow i {
+        color: var(--ui-secondary-text);
+    }
+
+
 
      .milestone-slider .slick-arrow:last-child,
      .milestone-slider .slick-arrow:nth-last-child(1) {
@@ -4748,6 +4753,16 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         right: 0;
         top: 76px;
     }
+
+
+    body div[class*="secondary"] .milestone-slider.slick-dotted::before {
+        border-top: 6px solid var(--hl-bs--secondary);
+        }
+
+
+    body div[class*="primary"] .milestone-slider.slick-dotted::before {
+        border-top: 6px solid var(--hl-bs--primary);
+        }
     .milestone {
         text-align: center;
     }
@@ -4775,6 +4790,21 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         height: 25px;
         background: var(--hl-bs--secondary);
     }
+    body div[class*="bg-primary"] .milestone h2::before {
+        background: var(--hl-bs--primary);
+    }
+
+    body div[class*="bg-secondary"] .milestone h2::before {
+        background: var(--ui-default-text);
+    }
+
+    body div[class*="bg-primary"] .milestone h2::before {
+        color: var(--hl-bs--primary-opposite);
+    }
+    body div[class*="bg-secondary"] .milestone h2::before {
+        color: var(--ui-secondary-text);
+    }
+
     .milestone h2::after {
         width: 13px;
         height: 13px;
@@ -4800,6 +4830,15 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         content: '\f277';
         bottom: -30px;
     }
+
+    body div[class*="bg-primary"] .milestone.slick-current h2::after {
+        color: var(--hl-bs--primary-opposite);
+    }
+
+    body div[class*="bg-secondary"] .milestone.slick-current h2::after {
+        color: var(--ui-secondary-text);
+    }
+
     .milestone .HtmlContent {
         opacity: 0;
         padding: 20px 25px;
@@ -4816,6 +4855,16 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         left: calc(50% - 57.5px);
         top: 0;
     }
+    body div[class*="bg-primary"] .milestone .HtmlContent::before,
+    body div[class*="bg-primary"] .milestone .HtmlContent::after {
+        border-top: 1px solid var(--hl-bs--primary-opposite);
+    }
+
+    body div[class*="bg-secondary"] .milestone .HtmlContent::before,
+    body div[class*="bg-secondary"] .milestone .HtmlContent::after {
+        border-top: 1px solid var(--ui-secondary-text);
+    }
+
     .milestone .HtmlContent::after {
         top: auto;
         bottom: 0;
@@ -4832,12 +4881,20 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         font-size: 28px;
     }
 
-    .milestone-slider .slick-dots li {
-       border-color: var(--hl-bs--secondary);
+    body div[class*="bg-primary"] .milestone-slider .slick-dots li {
+        border-color: var(--hl-bs--primary-opposite);
+     }
+ 
+     body div[class*="bg-primary"] .milestone-slider .slick-dots li.slick-active {
+         background-color: var(--hl-bs--primary-opposite);
+      }
+
+    body div[class*="bg-secondary"] .milestone-slider .slick-dots li {
+       border-color: var(--ui-secondary-text);
     }
 
-    .milestone-slider .slick-dots li.slick-active {
-        background-color: var(--hl-bs--secondary);
+    body div[class*="bg-secondary"] .milestone-slider .slick-dots li.slick-active {
+        background-color: var(--ui-secondary-text);
      }
 /*** mobile padding ***/
 
