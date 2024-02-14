@@ -722,6 +722,8 @@ body.ribbit .make-buttons.dark-btn em a:is(:hover, :focus) {
 /* White Outline Button */
 
 body.ribbit .make-buttons.white-outline-btn em a,
+body.ribbit .bg-primary-dark .make-buttons em a,
+body.ribbit .bg-primary-dark.make-buttons em a,
 body.ribbit div[class*="bg-"] .make-buttons.outline-first-btn em:first-child a:first-child,
 body.ribbit div[class*="-bkgd"] .make-buttons.outline-first-btn em:first-child a:first-child,
 body.ribbit .hero .make-buttons.outline-first-btn em:first-child a:first-child,
@@ -738,6 +740,8 @@ body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child {
 body.ribbit .make-buttons.white-outline-btn em a:is(:hover, :focus),
 .make-buttons.bg-primary em a:is(:hover, :focus),
 .bg-primary .make-buttons em a:is(:hover, :focus),
+body.ribbit .bg-primary-dark .make-buttons em a:is(:hover, :focus),
+body.ribbit .bg-primary-dark.make-buttons em a:is(:hover, :focus),
 body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus),
 body.ribbit div[class*="bg-"] .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
 body.ribbit div[class*="-bkgd"] .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
@@ -878,7 +882,30 @@ body.ribbit:not(.interior).bodyBackground {
 .row-full.bg-black {
     background-color: #000;
 }
-
+.overlay,
+.overlay-dark,
+#MPOuterMost .bg-primary-light,
+#MPOuterMost .bg-primary-dark,
+#MPOuterMost .bg-primary-light-gray,
+#MPOuterMost .bg-primary-medium-gray,
+#MPOuterMost .bg-secondary-light,
+#MPOuterMost .bg-secondary-dark,
+.overlay-primary-gradient,
+.overlay-secondary-gradient,
+.overlay-dark-gradient,
+.overlay > *,
+.overlay-dark > *,
+#MPOuterMost .bg-primary-light > *,
+#MPOuterMost .bg-primary-dark > *,
+#MPOuterMost .bg-primary-light-gray > *,
+#MPOuterMost .bg-primary-medium-gray > *,
+#MPOuterMost .bg-secondary-light > *,
+#MPOuterMost .bg-secondary-dark > *,
+.overlay-primary-gradient > *,
+.overlay-secondary-gradient > *,
+.overlay-dark-gradient > * {
+    position: relative;
+}
 .overlay::before,
 .overlay-dark::before,
 #MPOuterMost .bg-primary-light::before,
@@ -1027,7 +1054,11 @@ body.ribbit #MPOuterMost #MPOuter [class*="bg-"].ContentItemHtml h2 {
     color: #000;
 }
 body.ribbit .bg-image.ContentItemHtml .HtmlContent *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2 {
+body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2,
+body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
+body.ribbit .bg-primary-dark.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml h2 {
     color: #fff;
 }
 body.ribbit .bg-primary .ContentItemHtml:not(.card) *:not(em a),
