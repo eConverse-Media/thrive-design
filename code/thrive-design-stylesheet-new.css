@@ -2567,9 +2567,6 @@ body.ribbit  .milestone-slider .slick-arrow i,
 }
 
 
-.make-carousel-tiles.featured-resource ul .next-arrow {
-    right: -10px;
-}
 
 
 
@@ -4357,8 +4354,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
     position: absolute;
     left: 42%;
     top: -164px;
-    margin-left: 174px;
+    margin-left: 177px;
     margin-top: 8px;
+    margin-right: 8px;
 }
 
 .HLMyDocuments .listIconContainer {
