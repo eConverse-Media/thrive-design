@@ -3378,6 +3378,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
 .ContentUserControl.featured-resource ul,
 .featured-tile-slider-wrapper .slick-list .slick-track {
     display: flex;
+    gap: 24px
 }
 
 .ContentUserControl.featured-resource:not(.make-carousel-tiles) ul li h3 {
