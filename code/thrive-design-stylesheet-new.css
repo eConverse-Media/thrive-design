@@ -2485,6 +2485,7 @@ body.ribbit #MPOuterMost .make-carousel .carousel-item .HtmlContent p {
 
 .make-carousel-tiles ul:not(.slick-dots) .slick-track {
     display: flex;
+    gap: 24px;
 }
 
 body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
@@ -2500,7 +2501,6 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     padding: 24px;
     background: #fff;
     height: auto;
-    margin: 0 12px;
     border: 0;
     border-radius: 8px;
 }
@@ -2526,9 +2526,6 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     margin: 0 -15px;
 } 
 
-.make-carousel-tiles.featured-resource ul  .slick-list {
-    margin: 0;
-} 
 
 
 
@@ -3413,7 +3410,6 @@ margin-bottom: 0;
     background-color: #eee;
     border: 0;
     border-radius: 8px;
-    margin: 0 12px;
 }
 
 body div[class*=bg-primary] .ContentUserControl.featured-blogs ul li,
