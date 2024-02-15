@@ -265,7 +265,7 @@ function handleBlogs() {
 }
 
 function handleFeaturedCards() {
-    $('.featured-cards ul li, .featured-resource.make-carousel-tiles ul li').each(function () {
+    $('.featured-cards ul:not(.pagination) li, .featured-resource.make-carousel-tiles ul li').each(function () {
         handleAjaxCall(this);
     });
 }

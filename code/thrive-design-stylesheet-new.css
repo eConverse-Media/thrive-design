@@ -915,6 +915,10 @@ body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
     align-items: center;
 }
 
+.flex-wrap ul {
+    flex-wrap:wrap;
+}
+
 /****** backgrounds ******/
 
 body.ribbit:not(.interior).bodyBackground {
@@ -3460,7 +3464,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
 }
 
 .ContentUserControl.featured-resource:not(.make-carousel-tiles) ul li h3 {
-    margin-top: 48px;
+    margin-top: 56px;
 }
 
 
@@ -3632,6 +3636,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding-top: 130px;
 }
 
+.featured-cards.flex-wrap .pagination {
+    margin-top: 24px;
+}
+
 .list-tiles > div {
     font-family: Inter;
     font-size: 21px;
@@ -3639,6 +3647,11 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     font-weight: 700;
     line-height: 120%;
     color: var(--ui-heading-text);
+}
+
+.list-tiles .pagination {
+    font-weight: 300;
+    font-size: 16px;
 }
 
 .featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
@@ -3668,7 +3681,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     margin: 8px;
     padding-bottom: 0;
     padding-top: 0;
+    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
 }
+
 
 
 .list-tiles .Content ul li .content-row {
@@ -3687,6 +3702,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     border: none;
     border-radius: 8px;
+}
+
+#MPOuterMost #MPOuter .featured-cards.flex-wrap div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) {
+    margin: 12px;
 }
 
 .event-cards .Content ul li>div,
@@ -3809,9 +3828,14 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 }
 
 .ContentUserControl.resources-list ul li,
-.featured-cards ul li {
+.featured-cards:not(.flex-wrap) ul:not(.pagination) li {
     min-height: 375px;
     background-color: #fff;
+}
+
+
+body.ribbit .featured-cards ul.pagination  li { 
+    border-bottom: 0;
 }
 
 .top-blog-slider-wrapper .featured-blogs .HLLandingControl .top-blogs-slider .img-container,
@@ -4461,6 +4485,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 .HLMyDocuments ul li:has(.listIconContainer) {
     padding-left: 64px;
 }
+
+body.ribbit .featured-resource .HLMyDocuments ul li:has(.listIconContainer) {
+    padding-left: 24px;
+}
 .HLMyDocuments .listIconContainer:not(:empty) {
     width: 48px;
     height: 48px;
@@ -4817,6 +4845,11 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     body div[class*="bg-primary"] .milestone-slider .slick-arrow i {
         color: var(--hl-bs--primary-opposite);
     }
+    body div[class*="bg-primary-light"] .milestone-slider .slick-arrow i,
+    body div[class*="bg-primary-medium-gray"] .milestone-slider .slick-arrow i,
+    body div[class*="bg-primary-medium-gray"] .milestone-slider .slick-arrow i {
+        color: #000;
+    }
 
     body div[class*="bg-secondary"] .milestone-slider .slick-arrow i {
         color: var(--ui-secondary-text);
@@ -4872,14 +4905,43 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     }
 
 
-    body div[class*="secondary"] .milestone-slider.slick-dotted::before {
+    body.ribbit div[class*="bg-secondary-light"] .milestone-slider.slick-dotted::before {
         border-top: 6px solid var(--hl-bs--secondary);
         }
 
+        body div[class*="bg-secondary"] .milestone-slider.slick-dotted::before {
+            border-top: 6px solid rgba(255, 255, 255, 0.85);
+        }
 
     body div[class*="primary"] .milestone-slider.slick-dotted::before {
         border-top: 6px solid var(--hl-bs--primary);
         }
+
+        body div[class*="bg-primary-dark"] .milestone-slider.slick-dotted::before,
+        body div[class*="bg-primary"] .milestone-slider.slick-dotted::before {
+            border-top: 6px solid rgba(255, 255, 255, 0.15);
+        }
+
+        body.ribbit div[class*="bg-primary-light"] .milestone-slider.slick-dotted::before,
+        body.ribbit div[class*="bg-primary-medium-gray"] .milestone-slider.slick-dotted::before,
+        body.ribbit div[class*="primary-light-gray"] .milestone-slider.slick-dotted::before {
+            border-color: #000;
+        }
+
+        body.ribbit div[class*="bg-primary-light"] .milestone-slider .slick-dots li,
+        body.ribbit div[class*="bg-primary-medium-gray"] .milestone-slider .slick-dots li,
+        body.ribbit div[class*="primary-light-gray"] .milestone-slider .slick-dots li {
+            border-color: #000;
+        }
+
+        body.ribbit #MPOuterMost div[class*="bg-primary-light"] .milestone-slider .slick-dots li.slick-active,
+        body.ribbit #MPOuterMost div[class*="bg-primary-medium-gray"] .milestone-slider .slick-dots li.slick-active,
+        body.ribbit #MPOuterMost div[class*="primary-light-gray"] .milestone-slider .slick-dots li.slick-active
+        {
+            background-color: #000;
+        }
+
+    
     .milestone {
         text-align: center;
     }
@@ -4910,9 +4972,20 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     body div[class*="bg-primary"] .milestone h2::before {
         background: var(--hl-bs--primary);
     }
+    body.ribbit div[class*="bg-primary-dark"] .milestone h2::before,
+    body.ribbit div[class*="bg-primary"] .milestone h2::before {
+        background: #fff;
+    }
 
     body div[class*="bg-secondary"] .milestone h2::before {
         background: var(--ui-default-text);
+    }
+
+
+    body div[class*="bg-secondary"] .milestone h2::before,
+    body div[class*="bg-secondary-dark"] .milestone h2::before,
+    body div[class*="bg-secondary-light"] .milestone h2::before {
+        background: #fff;
     }
 
     body div[class*="bg-primary"] .milestone h2::before {
@@ -4952,8 +5025,20 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
         color: var(--hl-bs--primary-opposite);
     }
 
+
+    body div[class*="bg-primary-dark"] .milestone.slick-current h2::after,
+    body div[class*="bg-primary"] .milestone.slick-current h2::after {
+        color: var(--hl-bs--primary);
+    }
+
     body div[class*="bg-secondary"] .milestone.slick-current h2::after {
         color: var(--ui-secondary-text);
+    }
+
+    body div[class*="bg-secondary"] .milestone.slick-current h2::after,
+    body div[class*="bg-secondary-dark"] .milestone.slick-current h2::after,
+    body div[class*="bg-secondary-light"] .milestone.slick-current h2::after {
+        color: var(--hl-bs--secondary);
     }
 
     .milestone .HtmlContent {
