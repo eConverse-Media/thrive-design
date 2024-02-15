@@ -618,15 +618,15 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
     color: var(--hl-bs--default-text);
 }
 
-.hl-primary-row-bkgd:not(.overlay) .make-buttons em a,
-.hl-primary-row-bkgd:not(.overlay).make-buttons em a,
-.hl-primary-row-bkgd:not(.overlay) .hero.image .make-buttons em+em a {
+.hl-primary-row-bkgd .make-buttons em a,
+.hl-primary-row-bkgd.make-buttons em a,
+.hl-primary-row-bkgd .hero.image .make-buttons em+em a {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-100);
 }
 
-.hl-primary-row-bkgd:not(.overlay) .make-buttons em a:is(:hover, :focus),
-.hl-primary-row-bkgd:not(.overlay).make-buttons em a:is(:hover, :focus) {
+.hl-primary-row-bkgd .make-buttons em a:is(:hover, :focus),
+.hl-primary-row-bkgd.make-buttons em a:is(:hover, :focus) {
     color: var(--hl-bs--primary);
     background: var(--hl-bs--gray-300);
 }
