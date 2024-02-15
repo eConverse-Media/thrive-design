@@ -634,31 +634,59 @@ body.ribbit .btn.btn-link:is(:hover, :focus) {
 /* primary outline button */
 
 body.ribbit .make-buttons.bg-primary em a,
-body.ribbit .bg-primary .make-buttons em a {
+body.ribbit .bg-primary .make-buttons em a,
+body.ribbit .overlay-primary-gradient .make-buttons.outline-btn em a,
+body.ribbit .overlay-primary-gradient.make-buttons.outline-btn em a,
+body.ribbit .overlay-primary-gradient .make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-primary-gradient.make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-primary-gradient .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-child a:first-child {
     background: transparent;
     color: var(--hl-bs--primary-opposite);
     border: 2px solid var(--hl-bs--primary-opposite);
+    padding: 8px 18px;
 }
 body.ribbit .make-buttons.bg-primary em a:is(:hover, :focus),
-body.ribbit .bg-primary .make-buttons em a:is(:hover, :focus) {
+body.ribbit .bg-primary .make-buttons em a:is(:hover, :focus),
+body.ribbit .overlay-primary-gradient .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-primary-gradient.make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-primary-gradient .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-primary-gradient.make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-primary-gradient .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
     color: var(--hl-bs--primary);
     background-color: var(--hl-bs--primary-opposite);
     border-color: var(--hl-bs--primary-opposite);
+    padding: 8px 18px;
 }
 
 /* secondary outline button */
 
 body.ribbit .make-buttons.bg-secondary em a,
-body.ribbit .bg-secondary .make-buttons em a {
+body.ribbit .bg-secondary .make-buttons em a,
+body.ribbit .overlay-secondary-gradient .make-buttons.outline-btn em a,
+body.ribbit .overlay-secondary-gradient.make-buttons.outline-btn em a,
+body.ribbit .overlay-secondary-gradient .make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-secondary-gradient.make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-secondary-gradient .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .overlay-secondary-gradient.make-buttons.outline-first-btn em:first-child a:first-child {
     background: transparent;
     border: 2px solid var(--ui-secondary-text);
     color: var(--ui-secondary-text);
+    padding: 8px 18px;
 }
 body.ribbit .make-buttons.bg-secondary em a:is(:hover, :focus),
-body.ribbit .bg-secondary .make-buttons em a:is(:hover, :focus) {
+body.ribbit .bg-secondary .make-buttons em a:is(:hover, :focus),
+body.ribbit .overlay-secondary-gradient .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-secondary-gradient.make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-secondary-gradient .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-secondary-gradient.make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-secondary-gradient .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .overlay-secondary-gradient.make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
     background: var(--ui-secondary-text);
     color: var(--hl-bs--secondary);
     border-color: var(--ui-secondary-text);
+    padding: 8px 18px;
 }
 
 /* Secondary Button */
@@ -724,35 +752,57 @@ body.ribbit .make-buttons.dark-btn em a:is(:hover, :focus) {
 body.ribbit .make-buttons.white-outline-btn em a,
 body.ribbit .bg-primary-dark .make-buttons em a,
 body.ribbit .bg-primary-dark.make-buttons em a,
+body.ribbit .overlay-dark .make-buttons.outline-btn em a,
+body.ribbit .overlay-dark.make-buttons.outline-btn em a,
+body.ribbit .overlay-dark-gradient .make-buttons.outline-btn em a,
+body.ribbit .overlay-dark-gradient.make-buttons.outline-btn em a,
 body.ribbit div[class*="bg-"] .make-buttons.outline-first-btn em:first-child a:first-child,
 body.ribbit div[class*="-bkgd"] .make-buttons.outline-first-btn em:first-child a:first-child,
-body.ribbit .hero .make-buttons.outline-first-btn em:first-child a:first-child,
 body.ribbit div[class*="bg-"] .make-buttons.outline-last-btn em:last-child a:last-child,
 body.ribbit div[class*="-bkgd"] .make-buttons.outline-last-btn em:last-child a:last-child,
-body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child {
+body.ribbit .overlay-dark .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .overlay-dark .make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-dark-gradient .make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .overlay-dark-gradient .make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-dark.make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .overlay-dark.make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .overlay-dark-gradient.make-buttons.outline-first-btn em:first-child a:first-child,
+body.ribbit .overlay-dark-gradient.make-buttons.outline-last-btn em:last-child a:last-child {
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
     border-radius: 4px;
     transition: 0.3s;
+    padding: 8px 18px;
 }
 
 body.ribbit .make-buttons.white-outline-btn em a:is(:hover, :focus),
 .make-buttons.bg-primary em a:is(:hover, :focus),
 .bg-primary .make-buttons em a:is(:hover, :focus),
-body.ribbit .bg-primary-dark .make-buttons em a:is(:hover, :focus),
-body.ribbit .bg-primary-dark.make-buttons em a:is(:hover, :focus),
-body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus),
+body.ribbit .bg-primary-dark .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .bg-primary-dark.make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-dark .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-dark.make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-dark-gradient .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .overlay-dark-gradient.make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit #FOOTER .make-buttons.white-outline-btn.outline-btn em a:is(:hover, :focus),
 body.ribbit div[class*="bg-"] .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
 body.ribbit div[class*="-bkgd"] .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
-body.ribbit .hero .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
 body.ribbit div[class*="bg-"] .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
 body.ribbit div[class*="-bkgd"] .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
-body.ribbit .hero .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus) {
+body.ribbit .overlay-dark .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .overlay-dark .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-dark-gradient .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .overlay-dark-gradient .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-dark.make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .overlay-dark.make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .overlay-dark-gradient.make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .overlay-dark-gradient.make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus) {
     background: #fff;
     border-color: #fff;
     color: var(--hl-bs--primary);
     transition: 0.3s;
+    padding: 8px 18px;
 }
 
 /* dropdown buttons */
@@ -882,7 +932,6 @@ body.ribbit:not(.interior).bodyBackground {
 .row-full.bg-black {
     background-color: #000;
 }
-.overlay,
 .overlay-dark,
 #MPOuterMost .bg-primary-light,
 #MPOuterMost .bg-primary-dark,
@@ -893,7 +942,6 @@ body.ribbit:not(.interior).bodyBackground {
 .overlay-primary-gradient,
 .overlay-secondary-gradient,
 .overlay-dark-gradient,
-.overlay > *,
 .overlay-dark > *,
 #MPOuterMost .bg-primary-light > *,
 #MPOuterMost .bg-primary-dark > *,
@@ -906,7 +954,6 @@ body.ribbit:not(.interior).bodyBackground {
 .overlay-dark-gradient > * {
     position: relative;
 }
-.overlay::before,
 .overlay-dark::before,
 #MPOuterMost .bg-primary-light::before,
 #MPOuterMost .bg-primary-dark::before,
@@ -925,7 +972,6 @@ body.ribbit:not(.interior).bodyBackground {
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(244, 244, 244, 0.85);
 }
 
 .overlay-dark::before {
@@ -1058,7 +1104,11 @@ body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2,
 body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
 body.ribbit .bg-primary-dark.ContentItemHtml *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml h2 {
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml h2,
+body.ribbit .overlay-dark .HtmlContent :not(em a),
+body.ribbit .overlay-dark-gradient .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-dark .HtmlContent h2,
+body.ribbit #MPOuterMost #MPOuter .overlay-dark-gradient .HtmlContent h2 {
     color: #fff;
 }
 body.ribbit .bg-primary .ContentItemHtml:not(.card) *:not(em a),
@@ -1066,7 +1116,9 @@ body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) h2,
 body.ribbit .bg-primary.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml h2,
 body.ribbit .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) h2 {
+body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) h2,
+body.ribbit .overlay-primary-gradient .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .HtmlContent h2 {
     color: var(--hl-bs--primary-opposite);
 }
 body.ribbit .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
@@ -1074,7 +1126,9 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
 body.ribbit .bg-secondary.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
 body.ribbit .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2 {
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2,
+body.ribbit .overlay-secondary-gradient .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .HtmlContent h2 {
     color: var(--ui-secondary-text);
 }
 body.ribbit .bg-primary .ContentItemHtml:not(.card) .icon-container *,
@@ -2373,13 +2427,6 @@ body.ribbit.memberhome #MPFooterLink {
 .hero .make-buttons em a {
     margin: 10px;
 }
-
-#MPOuterMost #MPOuter .hero .ContentItemHtml:not(.card) .HtmlContent h2,
-.hero .ContentItemHtml:not(.card) .HtmlContent h1,
-.hero .ContentItemHtml:not(.card) .HtmlContent p {
-    color: white;
-}
-
 .hero {
     position: relative;
     display: flex;
