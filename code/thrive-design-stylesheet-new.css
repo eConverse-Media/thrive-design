@@ -3896,8 +3896,7 @@ body.ribbit .featured-cards ul.pagination  li {
 .resource-list .create-new-entry {
     display: none;
 }
-
-.library-content .widget-heading  a.btn, .HLMyDocuments span[id*=IsPinned] {
+ .HLMyDocuments span[id*=IsPinned] {
     display: none;
 }
 
