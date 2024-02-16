@@ -53,7 +53,7 @@ function handleEvents() {
 
 function handleSlider() {
 
-    $('.carousel-item').each(function(){
+    $('.memberhome-slide').each(function(){
         var self = $(this);
 
         $(self).append('<div class="img-container" />');
@@ -63,9 +63,9 @@ function handleSlider() {
         $(self).find('img').remove();
     });
 
-    $('.carousel-item').wrapAll('<div class="make-carousel"></div>');
+    $('.memberhome-slide').wrapAll('<div class="memberhome-slider"></div>');
 
-    $('.make-carousel:not(.hero)').slick({
+    $('.memberhome-slider').slick({
         dots: true,
         arrows: true,
         infinite: true,

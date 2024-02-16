@@ -2482,12 +2482,12 @@ body.ribbit.memberhome #MPFooterLink {
 
 /****** hero carousel ******/
 
-.make-carousel {
+.memberhome-slider {
     background-color: rgba(0, 0, 0, 0.39);
     border-radius: 4px;
 }
 
-.make-carousel .carousel-item,
+.memberhome-slider .memberhome-slide,
 .make-carousel-tiles ul:not(.slick-dots) li {
     position: relative;
 }
@@ -2506,13 +2506,13 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
 }
 
 
-.hero .make-carousel .carousel-item {
+.hero .memberhome-slider .memberhome-slide {
     padding: 20px;
     display: flex;
     height: auto;
 }
 
-.make-carousel .carousel-item .HtmlContent {
+.memberhome-slider .memberhome-slide .HtmlContent {
     width: 65%;
     padding: 20px 20px 20px 0;
     flex-grow: 0;
@@ -2521,49 +2521,97 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
     flex-direction: column;
     justify-content: center;
 }
-.make-carousel .carousel-item .img-container {
+.memberhome-slider .memberhome-slide .img-container {
     width: 35%;
     flex-grow: 0;
     flex-shrink: 1;
     border-radius: 8px;
 }
 
-.make-carousel .carousel-item .HtmlContent p:first-of-type {
+.memberhome-slider .memberhome-slide .HtmlContent p:first-of-type {
     margin-bottom: 24px;
 }
 
-.make-carousel .carousel-item .HtmlContent h6 {
+.memberhome-slider .memberhome-slide .HtmlContent h6 {
     font-size: 11px;
     margin-bottom: 8px;
 }
 
-.make-carousel .carousel-item .HtmlContent h2 {
+.memberhome-slider .memberhome-slide .HtmlContent h2 {
     font-size: 20px;
     margin-top: 0;
 }
-.make-carousel .carousel-item .HtmlContent h3 {
+.memberhome-slider .memberhome-slide .HtmlContent h3 {
     margin-top: 0;
 }
 
-body.ribbit #MPOuterMost .make-carousel .carousel-item .HtmlContent p {
+body.ribbit #MPOuterMost .memberhome-slider .memberhome-slide .HtmlContent p {
     font-size: 12px;
     padding-left: 0;
     padding-right: 0;
 }
 
 
-.make-carousel .carousel-item .HtmlContent em a {
+.memberhome-slider .memberhome-slide .HtmlContent em a {
     font-size: 16px;
 }
 
-.make-carousel .slick-track {
+.memberhome-slider .slick-track {
     display: flex;
 }
 
-.make-carousel .slick-track > div {
+.memberhome-slider .slick-track > div {
     height: auto;
 }
 
+
+/* Slider Dot BG Color Support */
+
+body.ribbit div[class*="bg-primary"] .memberhome-slider .slick-dots li,
+body.ribbit div[class*="bg-primary-dark"] .memberhome-slider .slick-dots li {
+    border-color: #fff;
+}
+
+body.ribbit div[class*="bg-primary"] .memberhome-slider .slick-dots li.slick-active,
+body.ribbit div[class*="bg-primary-dark"] .memberhome-slider .slick-dots li.slick-active {
+    background: #fff;
+}
+
+body.ribbit div[class*="bg-primary"] .memberhome-slider  button.slick-arrow,
+body.ribbit div[class*="bg-primary-dark"] .memberhome-slider  button.slick-arrow {
+    color: #fff;
+}
+
+body.ribbit div[class*="bg-primary-medium-gray"] .memberhome-slider .slick-dots li,
+body.ribbit div[class*="bg-primary-light-gray"] .memberhome-slider .slick-dots li,
+body.ribbit div[class*="bg-primary-light"] .memberhome-slider .slick-dots li  {
+    border-color: #000;
+}
+
+body.ribbit div[class*="bg-primary-medium-gray"] .memberhome-slider .slick-dots li.slick-active,
+body.ribbit div[class*="bg-primary-light-gray"] .memberhome-slider .slick-dots li.slick-active,
+body.ribbit div[class*="bg-primary-light"] .memberhome-slider .slick-dots li.slick-active {
+    background: #000;
+}
+
+body.ribbit div[class*="bg-primary-medium-gray"] .memberhome-slider  button.slick-arrow,
+body.ribbit div[class*="bg-primary-light-gray"] .memberhome-slider  button.slick-arrow,
+body.ribbit div[class*="bg-primary-light"] .memberhome-slider  button.slick-arrow {
+    color: #000;
+}
+
+body.ribbit div[class*="bg-secondary"] .memberhome-slider .slick-dots li {
+    border-color: var(--ui-secondary-text);
+}
+
+body.ribbit div[class*="bg-secondary"] .memberhome-slider .slick-dots li.slick-active {
+    background: var(--ui-secondary-text);
+}
+
+body.ribbit div[class*="bg-secondary"] .memberhome-slider  button.slick-arrow
+{
+    color: var(--ui-secondary-text);
+}
 
 
 .make-carousel-tiles ul:not(.slick-dots) .slick-track {
@@ -2703,7 +2751,7 @@ body.ribbit  .milestone-slider .slick-arrow i,
 
 /************ slick arrows & dots ************/
 
-.make-carousel .slick-dots {
+.memberhome-slider .slick-dots {
     text-align: center;
     bottom: -35px;
     left: 0;
@@ -4602,6 +4650,74 @@ body.ribbit .featured-resource .HLMyDocuments ul li:has(.listIconContainer) {
     content: "\f1c5";
 }
 
+
+/****** interior slider ******/
+
+.interior .slider .slick-arrow::before,
+.interior .slider .slick-arrow::after {
+    content: none;
+}
+
+.interior .slider .slick-arrow i::before,
+.interior .slider .slick-arrow i::after {
+    font-family: "Font Awesome 5 Pro";
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+div[class*="bg-primary"] .slider .slick-dots li,
+div[class*="bg-primary-dark"] .slider .slick-dots li {
+    border-color: #fff;
+}
+
+div[class*="bg-primary"] .slider .slick-dots li.slick-active,
+div[class*="bg-primary-dark"] .slider .slick-dots li.slick-active {
+    background: #fff;
+}
+
+div[class*="bg-primary"] .slider .slick-arrow i::before,
+div[class*="bg-primary-dark"] .slider .slick-arrow i::before {
+    color: #fff;
+}
+
+div[class*="bg-primary-medium-gray"] .slider .slick-dots li,
+div[class*="bg-primary-light"] .slider .slick-dots li,
+div[class*="bg-primary-light-gray"] .slider .slick-dots li {
+    border-color: #000;
+}
+
+div[class*="bg-primary-medium-gray"] .slider .slick-dots li.slick-active,
+div[class*="bg-primary-light"] .slider .slick-dots li.slick-active,
+div[class*="bg-primary-light-gray"] .slider .slick-dots li.slick-active {
+    background: #000;
+}
+
+div[class*="bg-primary-medium-gray"] .slider .slick-arrow i::before,
+div[class*="bg-primary-light"] .slider .slick-arrow i::before,
+div[class*="bg-primary-light-gray"] .slider .slick-arrow i::before {
+    color: #000;
+}
+
+div[class*="bg-secondary"] .slider .slick-dots li,
+div[class*="bg-secondary-dark"] .slider .slick-dots li,
+div[class*="bg-secondary-light"] .slider .slick-dots li   {
+    border-color: var(--ui-secondary-text);
+}
+
+div[class*="bg-secondary"] .slider .slick-dots li.slick-active,
+div[class*="bg-secondary-dark"] .slider .slick-dots li.slick-active,
+div[class*="bg-secondary-light"] .slider .slick-dots li.slick-active {
+    background: var(--ui-secondary-text);
+}
+
+div[class*="bg-secondary"] .slider .slick-arrow i::before,
+div[class*="bg-secondary-dark"] .slider .slick-arrow i::before,
+div[class*="bg-secondary-light"] .slider .slick-arrow i::before {
+    color: var(--ui-secondary-text);
+}
+
+
 /************ responsive ************/
 
 @media (width < 1600px) {
@@ -5697,18 +5813,18 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     #MPSearchBlock {
         display: block;
     }
-    .hero .make-carousel .carousel-item {
+    .hero .memberhome-slider .memberhome-slide {
         padding: 24px;
         display: block;
         height: auto;
     }
     
-    .make-carousel .carousel-item .HtmlContent {
+    .memberhome-slider .memberhome-slide .HtmlContent {
         width: 100%;
         padding: 0 0 20px 0;
         display: block;
     }
-    .make-carousel .carousel-item .img-container {
+    .memberhome-slider .memberhome-slide .img-container {
         width: 100%;
         height: 140px;
     }
