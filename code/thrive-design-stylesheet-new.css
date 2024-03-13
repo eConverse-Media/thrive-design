@@ -1936,7 +1936,8 @@ body.ribbit #MainCopy_ContentWrapper .sponsors .slick-slider .sponsor {
 
 .grid-sponsors .sponsor {
     padding: 12px;
-    width: 300px;
+    max-width: 300px;
+    width: auto;
 }
 
 .sponsor .HtmlContent {
@@ -1960,7 +1961,7 @@ body.ribbit .sponsor a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 24px;
     display: flex;
     text-decoration: none;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
