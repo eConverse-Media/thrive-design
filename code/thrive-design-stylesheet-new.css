@@ -434,6 +434,10 @@ body.ribbit .make-buttons.primary-btn em a {
     color: #333;
 }
 
+.library-entry-description button {
+    color: var(--hl-bs--primary-opposite);
+}
+
 .make-buttons em a,
 .bootstrap-4:not(#CreateBtnWrapper) .btn {
     white-space: pre-wrap;
