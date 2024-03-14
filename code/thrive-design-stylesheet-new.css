@@ -434,7 +434,7 @@ body.ribbit .make-buttons.primary-btn em a {
     color: #333;
 }
 
-body.ribbit #MPOterMost #MPOuter .library-details .library-entry-description button {
+body.ribbit #MPOuterMost #MPOuter .library-details .library-entry-description button {
     color: var(--hl-bs--primary-opposite);
 }
 
