@@ -1215,7 +1215,8 @@ body.ribbit .bg-gray {
 .card.team button,
 body.ribbit .narrow-widget-container,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
-body.ribbit:not(.interior) .ContentItemMVC.card {
+body.ribbit:not(.interior) .ContentItemMVC.card,
+body.ribbit .card .HLLandingControl {
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
