@@ -4723,6 +4723,226 @@ div[class*="bg-secondary-light"] .slider .slick-arrow i::before {
 }
 
 
+/********** conference template **********/
+
+/* accomodate the interior top padding  */
+body.ribbit .row-full.hero.banner {
+    margin-top: -40px;
+    z-index: 1;
+}
+
+body.ribbit .row-full.hero.banner::before {
+    z-index: -1;
+}
+
+.hero.banner .HtmlContent {
+    max-width: 544px
+}
+
+/* remove position for synd nav menu that ends up syndicating into hero  */
+.hero.banner .col-md-8,
+.hero.banner .col-md-12 {
+    position: static
+}
+
+.hero.banner p strong i {
+    margin-right: 8px;
+}
+
+.conference-nav-tabs ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 2px
+}
+
+.conference-nav-tabs ul li a {
+    border-radius: 4px 4px 0px 0px;
+    background: #DEDEDF;
+    box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.08) inset;
+    padding: 10px 16px;
+    margin-right: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+body.ribbit .overlay-dark-gradient .conference-nav-tabs .HtmlContent a {
+    color: var(--hl-bs--primary);
+}
+
+body.ribbit .overlay-dark-gradient .conference-nav-tabs .HtmlContent a.active {
+    background: #fff;
+}
+
+/* announcement box */
+
+.schedule-announcement {
+    background: var(--hl-bs--bg1);
+    border-radius: 8px;
+}
+
+.schedule-announcement .HtmlContent {
+    padding: 4px 24px 10px;
+}
+
+.schedule-announcement ul,
+.schedule-tabs ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.schedule-announcement ul {
+    display: flex;
+}
+
+.schedule-announcement ul li a {
+    margin-right: 8px;
+    padding-right: 8px;
+    text-decoration: none;
+    color: var(--Links-CP-Link, #06225B);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.schedule-announcement ul li:not(:last-child) a {
+    border-right: 2px solid var(--hl-bs--primary);
+}
+
+/* schedule tabs */
+
+body.ribbit .schedule-tabs ul li a,
+body.ribbit .schedule-tabs ul li a:is(:hover, :focus) {
+    background-color: var(--hl-bs--primary);
+    color: var(--hl-bs--primary-opposite);
+    margin: 8px 0;
+    display: inline-block;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100%;
+}
+
+body.ribbit .schedule-tabs ul li a.active {
+    background-color: var(--hl-bs--secondary);
+    color: var(--hl-bs--default-text);
+}
+
+body.ribbit .tabbed-schedule .row[class*="tab"] {
+    margin: 0 8px;
+}
+
+.tabbed-schedule .row[class*="tab"] table {
+    margin-bottom: 30px;
+}
+
+.tabbed-schedule .row[class*="tab"] h2 {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+}
+
+body.ribbit .btn.back-to-top {
+    background: #f5f5f5;
+    color: var(--hl-bs--primary);
+    float: right
+}
+
+body.ribbit .btn.back-to-top:is(:hover, :focus) {
+    background: #e4e4e4;
+    color: var(--hl-bs--primary);
+}
+
+.btn.back-to-top.fixed {
+	position: fixed;
+    bottom: 20px;
+    right: calc(50% - 593px);
+}
+
+.tabbed-schedule .col-md-3.fixed,
+.tabbed-schedule .col-md-3.absolute {
+    left: calc(50% - 590px); 
+	max-width: 295px
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 991px) {
+	.tabbed-schedule .col-md-3.fixed,
+	.tabbed-schedule .col-md-3.absolute {
+		position: static !important;
+	}
+	
+	body.ribbit .tabbed-schedule .row[class*="tab"] {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+	
+	.hero.banner .conference-nav-tabs .HtmlContent {
+		max-width: 100%;
+	}
+
+	.conference-nav-tabs ul {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.3s ease;
+		flex-direction: column;
+		text-align: left;
+		right: 0;
+		bottom: -3px;
+		border-radius: 8px 0 0 0;
+	}
+
+	/* Hamburger menu styling */
+	.menu-icon {
+		display: none;
+		cursor: pointer;
+	}
+
+	.menu-icon {
+		display: block;
+		color: white;
+		position: absolute;
+		left: 10px;
+		bottom: 20px;
+	}
+	
+	.menu-icon i {
+		margin-left: 8px;
+	}
+
+	.conference-nav-tabs li {
+		margin: 0px 0;
+	}
+
+	.conference-nav-tabs ul li a {
+		margin-right: 0;
+		width: 100%;
+		display: block;
+		border-radius: 0;
+	}
+
+	ul.displayed {
+		max-height: 200px;
+	}
+}
+
+
 /************ responsive ************/
 
 @media (width < 1600px) {
