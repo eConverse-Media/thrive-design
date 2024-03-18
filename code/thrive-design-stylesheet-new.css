@@ -5219,7 +5219,15 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     body div[class*="bg-secondary"] .milestone-slider .slick-dots li.slick-active {
         background-color: var(--ui-secondary-text);
      }
-/*** mobile padding ***/
+
+/****** event page ******/
+
+body.ribbit #edit-event-button-container {
+    position: relative;
+    z-index: 1;
+}
+
+/*** RESPONSIVE START ***/
 
 @media (max-width: 1135px) {
     .featured-card-multi>div>div {
