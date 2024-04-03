@@ -3501,6 +3501,11 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .HLLandi
     border-radius: 0;
     box-shadow: none;
     padding: 0;
+    padding-bottom: 20px;
+}
+
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .featured-cards .HLLandingControl {
+    padding-bottom: 20px;
 }
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading {
     padding: 0;
