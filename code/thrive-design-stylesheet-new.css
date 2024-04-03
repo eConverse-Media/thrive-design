@@ -4297,7 +4297,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
 
 /* date blocks */
 
-.home .col-md-6 .HLEventList ul li .date-block {
+.col-md-6 .HLEventList ul li .date-block {
     width: 140px;
     height: 120px;
     border-radius: 8px;
@@ -4337,12 +4337,14 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
     font-size: 18px;
 }
 
-.home .col-md-6 .HLEventList ul li .col-md-2 {
+.home .col-md-6 .HLEventList ul li .col-md-2,
+.memberhome .col-md-6 .HLEventList ul li .col-md-2 {
     width: 140px;
     margin-right: 0;
 }
 
-.home .col-md-6 .HLEventList ul li .col-md-10 {
+.home .col-md-6 .HLEventList ul li .col-md-10,
+.memberhome .col-md-6 .HLEventList ul li .col-md-10 {
     width: calc(100% - 140px);
     padding-right: 16px;
 }
@@ -5655,6 +5657,7 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     }
 
     .home .col-md-6 .HLEventList ul li .date-block,
+    .memberhome .col-md-6 .HLEventList ul li .date-block,
     .col-md-6 .HLRecentBlogs ul li .img-container,
     .col-md-6 .HLMyDocuments ul li .img-container {
         margin-bottom: 16px;
@@ -5663,6 +5666,7 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     }
 
     .home .col-md-6 .HLEventList ul li .col-md-10,
+    .memberhome .col-md-6 .HLEventList ul li .col-md-10,
     .col-md-6 .HLRecentBlogs ul li .text-container,
     .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
         width: 100%;
