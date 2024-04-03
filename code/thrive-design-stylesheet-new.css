@@ -3054,7 +3054,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
-    overflow: hidden;
 }
 
 
