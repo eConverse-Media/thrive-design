@@ -18,7 +18,8 @@ function handleClickable() {
         var self = $(this),
             link = $(self).find('a'),
             onclick = $(link).attr('onclick'),
-            href = $(link).attr('href');
+            href = $(link).attr('href'),
+            target = $(link).attr('target');
 
         if (!!onclick) {
             $(self).wrapInner('<a onclick="' + onclick + '" />');
@@ -26,8 +27,14 @@ function handleClickable() {
             var target = $(link).attr('target'),
                 rel = $(link).attr('rel');
 
-            $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
-            $(link).closest('p').addClass('card-link');
+            if(target === '_blank') {
+                $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
+                $(link).closest('p').addClass('card-link');
+            }
+            if(target === 'self' || target === undefined) {
+                $(self).wrapInner('<a href="' + href + '" />');
+                $(link).closest('p').addClass('card-link');
+            }
         }
 
         if ($(link).parent().is('h3') ||
