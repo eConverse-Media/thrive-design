@@ -1404,6 +1404,10 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     color: var(--hl-bs--primary);
 }
 
+.card .HtmlContent p em a > i {
+    font-size: inherit;
+}
+
 /*** icon cards ***/
 
 .card.icon-card .HtmlContent p:has(i) {
