@@ -23,14 +23,28 @@ function handleAjaxCall(self, asBackground) {
 
         if (isBlog) {
             img = $(resp).find('.blogs-block .blog-featured-image-row img');
+
             if (!($(img).attr('src'))) {
                 img = $(resp).find('.blogs-block > div[id*="UpdatePanel"] > .row:not(.margin-bottom-medium) > .col-md-12 img:first-of-type')
+
             }
-        } else {
-            img = $(resp).find('div[id*="DetailPanel"] > .row  .row.margin-bottom-medium > .col-md-12 img:first-of-type');
-            if (!($(img).attr('src'))) {
-                img = $(resp).find('span[id*="Description"] img:first-of-type');
+
+            src = $(img).attr('src');
+            if (src) {
+                var url = "url('" + src + "')";
+                if (asBackground) {
+                    $(self).css('background-image', url);
+                } else {
+                    $(self).find('.img-container').css('background-image', url);
+                }
+                
+
+
+                $(self).find('.img-container').addClass('no-ajax-image');
+            } else {
+                $(self).find('.img-container').addClass('no-ajax-image');
             }
+
         }
 
         src = $(img).attr('src');
