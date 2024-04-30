@@ -40,7 +40,7 @@ function handleAjaxCall(self, asBackground) {
                 
 
 
-                $(self).find('.img-container').addClass('no-ajax-image');
+                
             } else {
                 $(self).find('.img-container').addClass('no-ajax-image');
             }
