@@ -1788,13 +1788,21 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     width: 120px;
     height: 120px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 24px;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.team .HtmlContent .img-container img {
+display: block;
+max-width: 230px;
+max-height: 180px;
+width: auto;
+height: auto;
 }
 
 .team p a {
@@ -3058,7 +3066,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.headin
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
-    overflow: hidden;
 }
 
 
