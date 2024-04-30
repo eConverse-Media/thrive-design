@@ -3513,6 +3513,11 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .HLLandi
     border-radius: 0;
     box-shadow: none;
     padding: 0;
+    padding-bottom: 20px;
+}
+
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .featured-cards .HLLandingControl {
+    padding-bottom: 20px;
 }
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading {
     padding: 0;
@@ -3760,9 +3765,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
     flex-direction: column;
     padding: 0;
-    flex-grow: 0;
-    flex-shrink: 1;
-    width: calc(25% - 24px);
+    flex: 1;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     border: none;
     border-radius: 8px;
