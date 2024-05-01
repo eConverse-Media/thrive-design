@@ -393,6 +393,7 @@ body.ribbit .summary-edit > .Content > ul li a {
     margin: 8px;
 }
 
+.make-buttons.conditional a[id*="Link"],
 #CreateBtnWrapper .btn-primary,
 .make-buttons em a,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
@@ -413,6 +414,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     font-weight: 600;
 }
 
+.make-buttons.conditional a[id*="Link"],
 .make-buttons em a,
 .card.social ul li a,
 .cta-tile a::after,
@@ -448,6 +450,7 @@ body.ribbit .btn:active {
     box-shadow: none;
 }
 
+.make-buttons.conditional a[id*="Link"]:is(:hover, :focus),
 .make-buttons em a:is(:hover, :focus),
 .card.social ul li a:is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
@@ -479,6 +482,8 @@ body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
     background-position: bottom;
 }
 
+.make-buttons.conditional a[id*="Link"],
+.make-buttons.conditional a[id*="Link"]:is(:hover, :focus),
 .make-buttons em a,
 .btn,
 body.ribbit .btn,
@@ -552,6 +557,10 @@ body.ribbit .btn-ghost:is(:hover, :focus),
 body.ribbit .btn-ghost:is(:hover, :focus):not(.disabled) {
     color: var(--hl-bs--default-text);
     background: var(--hl-bs--gray-300);
+}
+
+.make-buttons.conditional a[id*="Link"] {
+    width: 100%;
 }
 
 .ribbit .narrow-widget a.link-standalone {
