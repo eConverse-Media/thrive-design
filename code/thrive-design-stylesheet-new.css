@@ -1668,8 +1668,6 @@ body.ribbit .flex-cards>[class*="col-"] {
     flex: 1;
     justify-content: unset;
     height: 100%;
-    align-items: center;
-    text-align: center;
 }
 
 /*** removing margin on final paragraph ***/
