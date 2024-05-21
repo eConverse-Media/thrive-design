@@ -12,7 +12,7 @@ function handleBgImage(imgElem, elem) {
 }
 
 $(function () {
-    $('.bg-image').each(function () {
+    $('.bg-image, .promo-block').each(function () {
         handleBgImage($(this), $(this));
     });
 });
