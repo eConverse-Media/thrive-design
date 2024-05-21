@@ -3267,6 +3267,10 @@ body.ribbit .feed-list .layout-grid-cell-children {
     right: 0;
 }
 
+.events-list .HLEventList h2 {
+    background-color: transparent;
+}
+
 .events-list br {
     display: none;
 }
@@ -3323,6 +3327,8 @@ body.ribbit .feed-list .layout-grid-cell-children {
 
 
 
+
+
 .events-list .HLEventList ul li .col-md-10 {
     width: calc(100% - 156px)
 }
@@ -3332,12 +3338,12 @@ body.ribbit .feed-list .layout-grid-cell-children {
 }
 
 .events-list .HLEventList div[id*="More"] a {
-    color: #142739 !important;
+    color: var(--hl-bs--secondary);
 }
 
 
 .events-list .HLEventList div[id*="More"] a::after {
-    color: #0090C0;
+    color: var(--hl-bs--secondary);
 }
 
 body .calendar-stamp {
