@@ -5137,6 +5137,19 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
         padding-right: 0;
     }
 
+    .events-list ul:not(.dropdown-menu) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .events-list ul li:first-of-type {
+        margin-left: 12px;
+    }
+
+    .events-list ul li:last-of-type {
+        margin-right: 12px;
+    }
+
 }
 
 /* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
