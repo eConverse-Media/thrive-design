@@ -714,7 +714,7 @@ body.ribbit .make-buttons.secondary-btn em a {
 body.ribbit .make-buttons.secondary-btn em a:is(:hover, :focus) {
     background: linear-gradient(rgb(255 255 255/0%), rgb(255 255 255/85%)) top/100% 800%;
     background-color: var(--hl-bs--secondary);
-    background-position: bottom;
+    background-position: left;
 }
 
 /* White Button */
@@ -1129,23 +1129,36 @@ body.ribbit #MPOuterMost #MPOuter .overlay-dark .ContentItemHtml:not(.card) .Htm
 body.ribbit #MPOuterMost #MPOuter .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: #fff;
 }
-body.ribbit .bg-primary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) h2,
-body.ribbit .bg-primary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml h2,
-body.ribbit .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) h2,
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--primary-opposite);
 }
-body.ribbit .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
-body.ribbit .bg-secondary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
-body.ribbit .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2,
-body.ribbit .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--ui-secondary-text);
 }
@@ -1269,7 +1282,8 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
     margin-top: 16px;
 }
 .card .HtmlContent > *:first-child,
-.card.icon-card .HtmlContent > h3:nth-child(2) {
+.card.icon-card .HtmlContent > h3:nth-child(2),
+.card.icon-card .HtmlContent > h4:nth-child(2)  {
     margin-top: 0;
 }
 .card .HtmlContent > *:last-child {
@@ -1280,6 +1294,11 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 }
 .card .HtmlContent > p:has(em):last-child {
     margin-top: auto;
+}
+
+
+.card.icon-card .HtmlContent > h3 {
+    font-size: 18px;
 }
 
 /****** social cards ******/
@@ -1482,7 +1501,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     width: 60px;
     border-radius: 50%;
     font-size: 24px;
-    color: var(--hl-bs--default-text);
+    color: var(--ui-secondary-text);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -1645,11 +1664,11 @@ body.ribbit .cta-tile a {
     display: flex;
     flex: 1;
 }
-#MPOuterMost #MPOuter .cards > .col-md-12 {
+ #MPOuterMost #MPOuter .cards > .col-md-12 {
     margin: -12px;
-}
+} 
 
-.cards>div .card {
+body.ribbit #MPOuterMost #MPOuter .cards>div .card {
     margin: 12px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -1748,9 +1767,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
     padding: 20px 16px;
 }
 
-body.ribbit.memberhome #MPOuterMost #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]):last-child {
-    margin-bottom: 0;
-}
+
 body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
     margin-top: 16px;
     margin-bottom: 16px;
@@ -2571,7 +2588,7 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
 }
 
 body.ribbit #MPOuterMost .memberhome-slider .memberhome-slide .HtmlContent p {
-    font-size: 12px;
+    font-size: 16px;
     padding-left: 0;
     padding-right: 0;
 }
@@ -2836,11 +2853,11 @@ li.slick-active button::before {
 }
 
 .hero .prev-arrow {
-    left:calc(50% - 50px);
+    left: 0;
 }
 
 .hero .next-arrow {
-    right: calc(50% - 50px);
+    right: 0;
 }
 
 .hero .slider .slick-dots {
@@ -4265,12 +4282,12 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     flex-direction: column;
     padding: 24px;
 }
-.promo-block .HtmlContent > *:first-child,
-.promo-block .HtmlContent > p:has(img):first-child + * {
+.promo-block .HtmlContent > p:first-of-type,
+.promo-block .HtmlContent > img:first-of-type {
     margin-top: auto;
 }
-.promo-block.overline p:first-child strong,
-.promo-block .HtmlContent > p:has(img):first-child + p strong {
+.promo-block p:first-of-type strong,
+.promo-block .HtmlContent > img:first-child + p strong {
     display: inline-block;
     background-color: var(--hl-bs--secondary);
     color: var(--ui-secondary-text);
@@ -4282,6 +4299,19 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     text-transform: uppercase;
     letter-spacing: 0.25px;
 }
+.promo-block .HtmlContent,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h2,
+body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h3,
+body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h4,
+body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h5,
+body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h6  {
+    color: white;
+}
+
+.promo-block .HtmlContent p > a {
+    color: white;
+}
+
 .promo-block .HtmlContent p {
     margin-bottom: 0;
 }
@@ -4291,6 +4321,27 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 }
 .promo-block .HtmlContent h2 ~ p + p { /* we only want to have margins between two paragraphs that are in the main text of this component; not on the overline above the h2 or a bottom margin on the last paragraph */
     margin-top: 8px;
+}
+
+.promo-block {
+    position: relative;
+}
+
+.promo-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+.promo-block .HtmlContent {
+    position: relative;
+    z-index: 5;
 }
 
 /************ widgets ************/
@@ -5084,6 +5135,10 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     #MPOuterHeader #NAV>.col-md-12 {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .events-list h2 {
+        margin-bottom: 16px;
     }
 
     .events-list ul:not(.dropdown-menu) {
