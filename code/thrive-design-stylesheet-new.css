@@ -1302,7 +1302,9 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 }
 
 
-
+.card.icon-card .HtmlContent > h4 {
+    font-size: 16px;
+}
 
 /****** social cards ******/
 
