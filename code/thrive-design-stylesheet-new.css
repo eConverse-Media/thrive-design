@@ -4790,7 +4790,7 @@ body.ribbit .row-full.hero.banner::before {
     line-height: normal;
 }
 
-body.ribbit .overlay-dark-gradient .conference-nav-tabs .HtmlContent a {
+body.ribbit #MPOuter .overlay-dark-gradient .conference-nav-tabs .HtmlContent a {
     color: var(--hl-bs--primary);
 }
 
