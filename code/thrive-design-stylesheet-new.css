@@ -1269,7 +1269,8 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
     margin-top: 16px;
 }
 .card .HtmlContent > *:first-child,
-.card.icon-card .HtmlContent > h3:nth-child(2) {
+.card.icon-card .HtmlContent > h3:nth-child(2),
+.card.icon-card .HtmlContent > h4:nth-child(2)  {
     margin-top: 0;
 }
 .card .HtmlContent > *:last-child {
