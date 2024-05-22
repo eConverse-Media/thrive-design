@@ -5137,6 +5137,10 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
         padding-right: 0;
     }
 
+    .events-list h2 {
+        margin-bottom: 16px;
+    }
+
     .events-list ul:not(.dropdown-menu) {
         flex-direction: column;
         gap: 16px;
