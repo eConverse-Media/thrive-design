@@ -1284,7 +1284,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 
 
 .card.icon-card .HtmlContent > h3 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /****** social cards ******/
