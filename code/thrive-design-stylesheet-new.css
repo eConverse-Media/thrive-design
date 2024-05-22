@@ -5069,6 +5069,131 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     display: none;
 }
 
+@media (max-width: 991px) {
+	.tabbed-schedule .col-md-3.fixed,
+	.tabbed-schedule .col-md-3.absolute {
+		position: static !important;
+	}
+	
+	body.ribbit .tabbed-schedule .row[class*="tab"] {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+	
+	.hero.banner .conference-nav-tabs .HtmlContent {
+		max-width: 100%;
+	}
+
+	.conference-nav-tabs ul {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.3s ease;
+		flex-direction: column;
+		text-align: left;
+		right: 0;
+		bottom: -3px;
+		border-radius: 8px 0 0 0;
+	}
+
+	/* Hamburger menu styling */
+	.menu-icon {
+		display: none;
+		cursor: pointer;
+	}
+
+	.menu-icon {
+		display: block;
+		color: white;
+		position: absolute;
+		left: 10px;
+		bottom: 20px;
+	}
+	
+	.menu-icon i {
+		margin-left: 8px;
+	}
+
+	.conference-nav-tabs li {
+		margin: 0px 0;
+	}
+
+	.conference-nav-tabs ul li a {
+		margin-right: 0;
+		width: 100%;
+		display: block;
+		border-radius: 0;
+	}
+
+	ul.displayed {
+		max-height: 100%;
+	}
+}
+
+
+/************ responsive ************/
+
+@media (width < 1600px) {
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 50px;
+        margin-right: 50px
+    }
+}
+
+@media (max-width: 1200px) {
+    #NAV>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .commHTMLOptionsToAttach>div>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+
+    #MPOuterHeader #NAV>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .events-list h2 {
+        margin-bottom: 16px;
+    }
+
+    .events-list ul:not(.dropdown-menu) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .events-list ul li:first-of-type {
+        margin-left: 12px;
+    }
+
+    .events-list ul li:last-of-type {
+        margin-right: 12px;
+    }
+
+}
+
+/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
+
+@media only screen and (max-width: 1190px) {
+    .ideation-home .ideation-filter .ideation-filter-buttons {
+        width: 100%;
+    }
+}
+
 /****** Interior Header Title *******/
 #InteriorPageTitle {
     position: relative;
