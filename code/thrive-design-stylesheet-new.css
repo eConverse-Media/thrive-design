@@ -3309,6 +3309,11 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
 .events-list ul li:last-of-type {
     margin-right: 0;
 }
+.events-list .HLEventList ul li .col-md-2 {
+    width: 140px;
+    margin-right: 0;
+}
+
 .events-list .HLEventList ul li>.row {
     flex-direction: row-reverse;
     justify-content: start;
