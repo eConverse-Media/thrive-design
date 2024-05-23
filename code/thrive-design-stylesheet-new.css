@@ -3302,11 +3302,11 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     padding: 24px;
 }
 
-.events-list ul li:first-of-type {
+body.ribbit #MPOuterMost #MPOuter  .events-list ul li:first-of-type {
     margin-left: 0;
 }
 
-.events-list ul li:last-of-type {
+body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
     margin-right: 0;
 }
 .events-list .HLEventList ul li .col-md-2 {
@@ -3314,7 +3314,7 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     margin-right: 0;
 }
 
-.events-list .HLEventList ul li>.row {
+body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList ul li>.row {
     flex-direction: row-reverse;
     justify-content: start;
     gap: 16px;
