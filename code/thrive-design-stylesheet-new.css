@@ -3362,6 +3362,10 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     width: calc(100% - 156px)
 }
 
+body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList ul li h3 a {
+    font-weight: 700;
+}
+
 .events-list .HLEventList div[id*="More"] {
     text-align: right;
 }
