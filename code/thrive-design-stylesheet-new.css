@@ -3300,6 +3300,7 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     margin-left: 12px;
     margin-right: 12px;
     padding: 24px;
+    border-radius: 8px;
 }
 
 body.ribbit #MPOuterMost #MPOuter  .events-list ul li:first-of-type {
