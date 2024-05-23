@@ -2834,11 +2834,11 @@ li.slick-active button::before {
 }
 
 .hero .prev-arrow {
-    left:calc(50% - 50px);
+    left: 0;
 }
 
 .hero .next-arrow {
-    right: calc(50% - 50px);
+    right: 0;
 }
 
 .hero .slider .slick-dots {
