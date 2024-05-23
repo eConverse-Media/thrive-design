@@ -1302,7 +1302,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 }
 
 
-.card.icon-card .HtmlContent > h3 {
+.card.icon-card .HtmlContent > h4 {
     font-size: 16px;
 }
 
@@ -3285,6 +3285,7 @@ body.ribbit .feed-list .layout-grid-cell-children {
 
 .events-list .HLEventList h2 {
     background-color: transparent;
+    margin-bottom: 16px;
 }
 
 .events-list br {
