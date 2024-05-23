@@ -1129,23 +1129,36 @@ body.ribbit #MPOuterMost #MPOuter .overlay-dark .ContentItemHtml:not(.card) .Htm
 body.ribbit #MPOuterMost #MPOuter .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: #fff;
 }
-body.ribbit .bg-primary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) h2,
-body.ribbit .bg-primary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml h2,
-body.ribbit .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) h2,
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--primary-opposite);
 }
-body.ribbit .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
-body.ribbit .bg-secondary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
-body.ribbit .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2,
-body.ribbit .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--ui-secondary-text);
 }
@@ -1269,7 +1282,8 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
     margin-top: 16px;
 }
 .card .HtmlContent > *:first-child,
-.card.icon-card .HtmlContent > h3:nth-child(2) {
+.card.icon-card .HtmlContent > h3:nth-child(2),
+.card.icon-card .HtmlContent > h4:nth-child(2)  {
     margin-top: 0;
 }
 .card .HtmlContent > *:last-child {
@@ -1281,6 +1295,14 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
 .card .HtmlContent > p:has(em):last-child {
     margin-top: auto;
 }
+
+
+.card.icon-card .HtmlContent > h3 {
+    font-size: 18px;
+}
+
+
+
 
 /****** social cards ******/
 
@@ -3247,6 +3269,117 @@ body.ribbit .feed-list .layout-grid-cell-children {
 
 /************ events & blogs ************/
 
+
+.events-list {
+    padding-top: 65px;
+    padding-bottom: 35px;
+}
+
+.events-list .add-event-button {
+    position: absolute;
+    top: -45px;
+    right: 0;
+}
+
+body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList h2 {
+    background-color: transparent;
+    margin-bottom: 16px !important;
+}
+
+.events-list br {
+    display: none;
+}
+
+.events-list ul:not(.dropdown-menu) {
+    display: flex;
+}
+
+body.ribbit #MPOuterMost #MPOuter .events-list ul li {
+    flex: 1;
+    background-color: #f7f7f7;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+body.ribbit #MPOuterMost #MPOuter  .events-list ul li:first-of-type {
+    margin-left: 0;
+}
+
+body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
+    margin-right: 0;
+}
+.events-list .HLEventList ul li .col-md-2 {
+    width: 140px;
+    margin-right: 0;
+}
+
+body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList ul li>.row {
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+
+.events-list .HLEventList ul li>.row::before,
+.events-list .HLEventList ul li>.row::after {
+    content: none;
+}
+
+.events-list .HLEventList ul:not(.dropdown-menu) .date-block {
+    width: 140px;
+    height: 120px;
+    border-radius: 2px; 
+    background-color: var(--hl-bs--secondary);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.events-list .HLEventList ul:not(.dropdown-menu) .date-block .calendary-number {
+    color: #fff;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.events-list .HLEventList ul:not(.dropdown-menu) .date-block .calendar-month {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #fff;
+    text-transform: capitalize;
+ }
+
+
+
+
+
+.events-list .HLEventList ul li .col-md-10 {
+    width: calc(100% - 156px)
+}
+
+body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList ul li h3 a {
+    font-weight: 700;
+}
+
+.events-list .HLEventList div[id*="More"] {
+    text-align: right;
+}
+
+.events-list .HLEventList div[id*="More"] a {
+    color: var(--hl-bs--secondary);
+}
+
+
+.events-list .HLEventList div[id*="More"] a::after {
+    color: var(--hl-bs--secondary);
+}
+
 body .calendar-stamp {
     background-color: var(--hl-bs--primary);
     border: none;
@@ -5025,6 +5158,28 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     #MPOuterHeader #NAV>.col-md-12 {
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .events-list h2 {
+        margin-bottom: 16px;
+    }
+
+    .events-list ul:not(.dropdown-menu) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li:first-of-type {
+        margin-left: 0px !important;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
+        margin-right: 0px !important;
     }
 
 }
