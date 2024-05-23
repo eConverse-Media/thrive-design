@@ -3283,9 +3283,9 @@ body.ribbit .feed-list .layout-grid-cell-children {
     right: 0;
 }
 
-.events-list .HLEventList h2 {
+body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList h2 {
     background-color: transparent;
-    margin-bottom: 16px;
+    margin-bottom: 16px !important;
 }
 
 .events-list br {
