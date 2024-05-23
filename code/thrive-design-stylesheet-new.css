@@ -1301,6 +1301,11 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.c
     font-size: 18px;
 }
 
+
+.card.icon-card .HtmlContent > h4 {
+    font-size: 16px;
+}
+
 /****** social cards ******/
 
 .card.social ul {
@@ -3280,6 +3285,7 @@ body.ribbit .feed-list .layout-grid-cell-children {
 
 .events-list .HLEventList h2 {
     background-color: transparent;
+    margin-bottom: 16px;
 }
 
 .events-list br {
