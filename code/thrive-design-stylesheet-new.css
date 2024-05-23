@@ -5152,12 +5152,17 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
         gap: 16px;
     }
 
-    .events-list ul li:first-of-type {
-        margin-left: 12px;
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
-    .events-list ul li:last-of-type {
-        margin-right: 12px;
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li:first-of-type {
+        margin-left: 0px !important;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
+        margin-right: 0px !important;
     }
 
 }
