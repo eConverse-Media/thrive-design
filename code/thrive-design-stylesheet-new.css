@@ -3294,11 +3294,12 @@ body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList h2 {
     display: flex;
 }
 
-.events-list ul li {
+body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     flex: 1;
     background-color: #f7f7f7;
     margin-left: 12px;
     margin-right: 12px;
+    padding: 24px;
 }
 
 .events-list ul li:first-of-type {
@@ -3311,6 +3312,14 @@ body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList h2 {
 .events-list .HLEventList ul li>.row {
     flex-direction: row-reverse;
     justify-content: start;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+
+.events-list .HLEventList ul li>.row::before,
+.events-list .HLEventList ul li>.row::after {
+    content: none;
 }
 
 .events-list .HLEventList ul:not(.dropdown-menu) .date-block {
