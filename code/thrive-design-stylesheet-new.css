@@ -1359,6 +1359,11 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
+
+.card.icon-card .HtmlContent > h4 {
+    font-size: 16px;
+}
+
 /****** social cards ******/
 
 .card.social ul {
