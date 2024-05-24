@@ -318,4 +318,10 @@ $(function () {
     handleFeaturedCards();
     handleAllContentListIcons();
     handleInteriorCards();
+
+    if (window.Sys && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+            handleSlider();
+        });
+    }
 });
