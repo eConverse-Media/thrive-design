@@ -1754,10 +1754,11 @@ body.ribbit #MPOuterMost #MPOuter .no-bottom-padding {
     padding-bottom: 0;
 }
 
-#MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors)>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
-#MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors)>div[class*="col-md-"]>.ContentItemHtml:not(:first-child) {
+div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml + .ContentItemHtml:not(.slick-slide), div[class*="col-md-"]:not(.col-md-12) .ContentUserControl + .ContentUserControl, div[class*="col-md-"]:not(.col-md-12) .ContentUserControl + .ContentItemHtml, div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml + .ContentUserControl {
     margin-top: 16px;
 }
+
+
 
 #MainCopy_ContentWrapper .row:not(.cards):not(.grid-sponsors)>div[class*="col-md-"]>.ContentUserControl:not(:first-child).explore-community {
     margin-top: 24px;
