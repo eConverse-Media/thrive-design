@@ -2279,10 +2279,6 @@ body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:focus {
     padding: 16px;
 }
 
-body.ribbit .ProfileContainer {
-    padding: 16px;
-}
-
 
 body.ribbit #MPButtonBar .dropdown-menu li a {
     padding: 8px 16px;
