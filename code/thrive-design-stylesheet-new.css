@@ -1163,12 +1163,12 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card
     color: #272727;
 }
 
-body.ribbit .bg-primary-light .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit .bg-primary-light .ContentItemHtml.card *:not(em a),
 body.ribbit .bg-primary-light.ContentItemHtml *:not(em a),
 body.ribbit .bg-primary-light .ContentItemHtml *:not(em a),
 body.ribbit .bg-secondary-light.ContentItemHtml *:not(em a),
 body.ribbit .bg-secondary-light .ContentItemHtml *:not(em a),
-body.ribbit .bg-secondary-light .ContentItemHtml:not(.card) *:not(em a) {
+body.ribbit .bg-secondary-light .ContentItemHtml.card *:not(em a) {
     color: #595959;
 }
 
