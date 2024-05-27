@@ -5906,8 +5906,8 @@ body.ribbit #edit-event-button-container {
 
 @media (max-width: 991px) {
 
-    body.ribbit .row.overlap > div {
-        margin-top: 0;
+    body.ribbit .row.overlap > div:first-of-type {
+        margin-top: -48px;
     }
 
     .featured-resource.make-carousel-tiles .HLMyDocuments .listIconContainer {
