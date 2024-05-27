@@ -3056,215 +3056,22 @@ body.ribbit .profile-snippet-stats .btn-alt-ghost div:last-child {
 
 /************ activity feed ************/
 
-body.ribbit .feed-item-ellipsis .btn.btn-ghost {
-    background: transparent;
+body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .feed-item-row,
+body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .images-preview {
+    border-radius: 0 0 8px 8px;
 }
-
-.FeedWidget .feed-list .p-2,
-.FeedWidget .feed-list .p-2 {
-    border-top: 0 !important;
-}
-
-body.ribbit .feed-list .feed-title-filter {
+body.ribbit .feed-list .layout-grid-cell .feed-item-row {
     border-radius: 8px;
 }
-
-.feed-list .feed-item-row.card {
-    box-shadow: none;
+body.ribbit .feed-list .layout-grid-cell .feed-item-row .images-preview {
+    border-radius: 8px 8px 0 0;
 }
-
-.feed-list .feed-title {
-    margin-bottom: 1em;
-    padding: 1em;
-}
-
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.heading {
-    border: 1px solid var(--hl-bs--bg2);
-    border-radius: 8px;
-}
-
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.heading>div {
-    padding: .5em;
-    border-radius: 8px;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, .25);
-}
-
-.feed-list .layout-grid-cell-children {
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
-}
-
-
-.feed-list .images-preview .img-slot {
-    border-radius: 8px;
-}
-
-.bootstrap-4 .btn-sm.btn-ghost .text-meta {
-    color: var(--hl-bs--primary-opposite) !important;
-}
-
-.bootstrap-4 .btn-sm.btn-ghost:hover .text-meta {
-    color: var(--hl-bs--btn-ghost-text-hover) !important;
-}
-
-.bootstrap-4 .card img.file-type-icon {
-    margin: unset;
-}
-
-body.ribbit .bootstrap-4 .card {
+body.ribbit .FeedWidget .card {
     border: none;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(153, 153, 153, 0.25);
 }
-
-.FeedWidget .bootstrap-4 .p-3 {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-}
-
-body.ribbit .bootstrap-4 .bg-bg2 {
-    background-color: var(--hl-bs--gray-100) !important;
-}
-
-/*** feed title ***/
-
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div.FeedWidget .row.heading>div {
-    padding: 0;
-    box-shadow: none;
-}
-
-.FeedWidget .feed-title-filter .filter-bars-menu.btn-ghost {
-    margin-right: 8px;
-}
-
-/*** content ***/
-
-body.ribbit .feed-list .layout-grid-cell {
+body.ribbit .FeedWidget .layout-grid-cell {
     margin-bottom: 16px !important;
-}
-
-.feed-list .layout-grid-cell-children .feed-item-row {
-    border: none;
-    padding: 0;
-}
-
-body.ribbit .feed-list .layout-grid-cell-children {
-    padding: 8px;
-}
-
-.feed-list .images-preview {
-    padding: 16px;
-}
-
-.feed-list .hl-profile-avatar.lg img {
-    width: 48px;
-    height: 48px;
-}
-
-.feed-list .layout-grid-cell-children .feed-item-row>div>div.flex-grow-1>div.pe-2.me-1:first-child {
-    padding-right: 0 !important;
-    margin-right: 16px !important;
-}
-
-.feed-list .layout-grid-cell-children .feed-item-row h3,
-.feed-list .layout-grid-cell-children .feed-item-row h3 .link-title {
-    line-height: 1.3;
-}
-
-.feed-list .layout-grid-cell-children .feed-item-row .card-byline {
-    color: #595959;
-}
-
-.feed-list .layout-grid-cell-children .feed-item-row .card-byline a {
-    color: #272727;
-}
-
-.feed-list .layout-grid-cell-children .feed-item-row>div:first-child>div:first-child>div:nth-child(2)>.pt-1 {
-    padding-top: 0 !important;
-}
-
-.feed-list .text-secondary.mt-2.font-size-xs {
-    padding-left: 0;
-    font-size: 16px !important;
-    font-weight: 300;
-    line-height: 1.4;
-    color: #595959;
-}
-
-.feed-list .text-secondary.mt-2.font-size-xs button {
-    font-weight: 700;
-    color: #272727 !important;
-    font-size: 16px !important;
-    line-height: 1.4;
-}
-
-.bootstrap-4 .feed-list .btn-sm.btn-ghost {
-    margin-left: 0;
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"],
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"]:is(:hover, :focus) {
-    background: transparent;
-    padding: 0;
-    color: #272727;
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"]:is(:hover, :focus) {
-    color: var(--hl-bs--secondary);
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"] .text-meta {
-    color: #272727 !important;
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost.engaged[qa-id="feed-item-recommend"] .text-meta {
-    color: var(--hl-bs--primary) !important;
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"]:is(:hover, :focus) .text-meta,
-.feed-list .layout-grid-cell-children .btn-ghost.engaged[qa-id="feed-item-recommend"]:is(:hover, :focus) .text-meta {
-    color: var(--hl-bs--secondary) !important;
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"]+.link-standalone {
-    color: #272727;
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 300;
-    padding-right: 0 !important;
-}
-
-.feed-list .layout-grid-cell-children .btn-ghost[qa-id="feed-item-recommend"]+.link-standalone:is(:hover, :focus) {
-    color: var(--hl-bs--primary);
-    text-decoration: underline;
-}
-
-.feed-list .layout-grid-cell-children .bg-bg1 {
-    background-color: var(--hl-bs--gray-100) !important;
-    border-radius: 10px;
-}
-
-.feed-list .layout-grid-cell-children .bg-bg1 .text-secondary.font-size-xs {
-    font-size: 14px !important;
-    font-weight: 300;
-    font-size: 1.4;
-    color: #595959 !important;
-}
-
-.feed-list .layout-grid-cell-children .bg-bg1 .text-secondary.font-size-xs a {
-    font-weight: 700;
-    color: #272727;
-    text-decoration: none !important;
-}
-
-.feed-list .layout-grid-cell-children .bg-bg1 .text-secondary.font-size-xs a:is(:hover, :focus) {
-    text-decoration: underline !important;
-    color: var(--hl-bs--secondary);
-}
-
-.feed-list .layout-grid-cell-children .bg-bg1 .bg-bg1 {
-    background-color: transparent !important;
-    padding: 0;
-    color: #595959 !important;
 }
 
 /************ events & blogs ************/
