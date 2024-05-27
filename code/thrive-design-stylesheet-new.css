@@ -5221,7 +5221,7 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
 
 /************ community landing page ************/
 
-body.ribbit #MPOuter #MPOuterMost .community-pages .no-community-html {
+body.ribbit.community-pages #MPOuterMost #MPOuter  .no-community-html {
     padding: 0;
 }
 
