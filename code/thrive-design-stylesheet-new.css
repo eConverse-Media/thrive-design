@@ -2283,6 +2283,7 @@ body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:focus {
 body.ribbit #MPButtonBar .dropdown-menu li a {
     padding: 8px 16px;
     display: inline-block;
+    width: 100%;
 }
 
 .nav.navbar-nav .dropdown-submenu>ul.dropdown-submenu {
