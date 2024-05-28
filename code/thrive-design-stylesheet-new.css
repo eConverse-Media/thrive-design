@@ -14,6 +14,12 @@
     max-width: 100%;
 }
 
+
+/************ overlap card class ************/
+body.ribbit .row.overlap > div {
+    margin-top: -48px;
+}
+
 /****** row resets ******/
 
 .row-wide:has(> .col-md-12:empty) {
@@ -5805,6 +5811,14 @@ body.ribbit #edit-event-button-container {
 }
 
 @media (max-width: 991px) {
+
+    body.ribbit .row.overlap > div {
+        margin-top: 0px;
+    }
+
+    body.ribbit .row.overlap > div:first-of-type {
+        margin-top: -48px;
+    }
 
     .featured-resource.make-carousel-tiles .HLMyDocuments .listIconContainer {
             left: unset;
