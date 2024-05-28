@@ -1172,26 +1172,6 @@ body.ribbit .bg-gray {
     background-color: rgba(245, 245, 245, 0.97);
 }
 
-/****** extra padding between columns ******/
-
-@media (min-width: 992px) {
-    .row-wide:not(.default-pad) > .col-md-4:first-child,
-    .row-wide:not(.default-pad) > .col-md-6:first-child,
-    .row-wide:not(.default-pad) > .col-md-8:first-child {
-        padding-right: 24px;
-    }
-    
-    .row-wide:not(.default-pad) > .col-md-6:last-child,
-    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
-    .row-wide:not(.default-pad) > .col-md-8:last-child {
-        padding-left: 24px;
-    }
-    body.ribbit .row-wide:not(.default-pad) > .col-md-3 {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-}
-
 /****** Icon List ******/
 
 .icon-list {
@@ -5062,136 +5042,6 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     display: none;
 }
 
-@media (max-width: 991px) {
-	.tabbed-schedule .col-md-3.fixed,
-	.tabbed-schedule .col-md-3.absolute {
-		position: static !important;
-	}
-	
-	body.ribbit .tabbed-schedule .row[class*="tab"] {
-		margin: 0;
-	}
-}
-
-@media screen and (max-width: 768px) {
-
-    .menu-icon {
-        display: block;
-    }
-	
-	.hero.banner .conference-nav-tabs .HtmlContent {
-		max-width: 100%;
-	}
-
-	.conference-nav-tabs ul {
-		overflow: hidden;
-		max-height: 0;
-		transition: max-height 0.3s ease;
-		flex-direction: column;
-		text-align: left;
-		right: 0;
-		bottom: -3px;
-		border-radius: 8px 0 0 0;
-	}
-
-	/* Hamburger menu styling */
-	.menu-icon {
-		display: none;
-		cursor: pointer;
-	}
-
-	.menu-icon {
-		display: block;
-		color: white;
-		position: absolute;
-		left: 10px;
-		bottom: 20px;
-	}
-	
-	.menu-icon i {
-		margin-left: 8px;
-	}
-
-	.conference-nav-tabs li {
-		margin: 0px 0;
-	}
-
-	.conference-nav-tabs ul li a {
-		margin-right: 0;
-		width: 100%;
-		display: block;
-		border-radius: 0;
-	}
-
-	ul.displayed {
-		max-height: 100%;
-	}
-}
-
-
-/************ responsive ************/
-
-@media (width < 1600px) {
-    #MPOuterHeader #NAV #MPButtonBar {
-        margin-left: 50px;
-        margin-right: 50px
-    }
-}
-
-@media (max-width: 1200px) {
-    #NAV>.col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .commHTMLOptionsToAttach>div>.col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    #MPOuterHeader #NAV #MPButtonBar {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-
-
-    #MPOuterHeader #NAV>.col-md-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .events-list h2 {
-        margin-bottom: 16px;
-    }
-
-    .events-list ul:not(.dropdown-menu) {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    body.ribbit #MPOuterMost #MPOuter .events-list ul li {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    body.ribbit #MPOuterMost #MPOuter .events-list ul li:first-of-type {
-        margin-left: 0px !important;
-    }
-
-    body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
-        margin-right: 0px !important;
-    }
-
-}
-
-/* fixing all the bits where padding is removed at 992px, but columns don't become full width until 991px */
-
-@media only screen and (max-width: 1190px) {
-    .ideation-home .ideation-filter .ideation-filter-buttons {
-        width: 100%;
-    }
-}
-
 /****** Interior Header Title *******/
 #InteriorPageTitle {
     position: relative;
@@ -5657,6 +5507,87 @@ body.ribbit #edit-event-button-container {
 
 /*** RESPONSIVE START ***/
 
+/****** larger screens only ******/
+
+@media (min-width: 992px) {
+    .row-wide:not(.default-pad) > .col-md-4:first-child,
+    .row-wide:not(.default-pad) > .col-md-6:first-child,
+    .row-wide:not(.default-pad) > .col-md-8:first-child {
+        padding-right: 24px;
+    }
+    
+    .row-wide:not(.default-pad) > .col-md-6:last-child,
+    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
+    .row-wide:not(.default-pad) > .col-md-8:last-child {
+        padding-left: 24px;
+    }
+    body.ribbit .row-wide:not(.default-pad) > .col-md-3 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/****** smaller screens only ******/
+
+@media (width < 1600px) {
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 50px;
+        margin-right: 50px
+    }
+}
+
+@media (max-width: 1200px) {
+    #NAV>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .commHTMLOptionsToAttach>div>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #MPOuterHeader #NAV #MPButtonBar {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+
+    #MPOuterHeader #NAV>.col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .events-list h2 {
+        margin-bottom: 16px;
+    }
+
+    .events-list ul:not(.dropdown-menu) {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li:first-of-type {
+        margin-left: 0px !important;
+    }
+
+    body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
+        margin-right: 0px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1190px) {
+    .ideation-home .ideation-filter .ideation-filter-buttons {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1135px) {
     .featured-card-multi>div>div {
         margin: 1em 0;
@@ -6080,6 +6011,15 @@ body.ribbit #edit-event-button-container {
         padding-right: 0;
     }
 
+    .tabbed-schedule .col-md-3.fixed,
+	.tabbed-schedule .col-md-3.absolute {
+		position: static !important;
+	}
+	
+	body.ribbit .tabbed-schedule .row[class*="tab"] {
+		margin: 0;
+	}
+
 
 
     /*** responsive ***/
@@ -6226,6 +6166,58 @@ body.ribbit #edit-event-button-container {
         width: 100%;
         height: 240px;
     }
+
+    .menu-icon {
+        display: block;
+    }
+	
+	.hero.banner .conference-nav-tabs .HtmlContent {
+		max-width: 100%;
+	}
+
+	.conference-nav-tabs ul {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.3s ease;
+		flex-direction: column;
+		text-align: left;
+		right: 0;
+		bottom: -3px;
+		border-radius: 8px 0 0 0;
+	}
+
+	/* Hamburger menu styling */
+	.menu-icon {
+		display: none;
+		cursor: pointer;
+	}
+
+	.menu-icon {
+		display: block;
+		color: white;
+		position: absolute;
+		left: 10px;
+		bottom: 20px;
+	}
+	
+	.menu-icon i {
+		margin-left: 8px;
+	}
+
+	.conference-nav-tabs li {
+		margin: 0px 0;
+	}
+
+	.conference-nav-tabs ul li a {
+		margin-right: 0;
+		width: 100%;
+		display: block;
+		border-radius: 0;
+	}
+
+	ul.displayed {
+		max-height: 100%;
+	}
 }
 
 @media (width < 767px) {
