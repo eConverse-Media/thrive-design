@@ -1,4 +1,3 @@
-
 $(function () {
 
     $('.top-blogs ul li').wrapAll('<div class="top-blogs-slider"></div>');
@@ -23,5 +22,23 @@ $(function () {
         slidesToScroll: 1
     });
 
+    if (window.Sys && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+
+
+            // Call handleAjaxCall() function
+            $('.featured-cards ul:not(.pagination) li, .featured-resource.make-carousel-tiles ul li').each(function () {
+                handleAjaxCall(this);
+            });
+
+            $('.top-blogs-slider').each(function () {
+                handleAjaxCall(this);
+            });
+
+            $('.thrive-blogs .blogs-block').each(function () {
+                handleAjaxCall(this);
+            });
+        });
+    }
 
 });
