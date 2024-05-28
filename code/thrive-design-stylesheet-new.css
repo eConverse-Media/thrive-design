@@ -5054,6 +5054,12 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     background: var(--hl-bs--primary);
 }
 
+#InteriorPageTitle > div {
+    position: relative;
+    z-index: 5;
+}
+
+
 #InteriorPageTitle svg {
     display: none;
 }
