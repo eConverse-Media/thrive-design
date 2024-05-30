@@ -5137,6 +5137,8 @@ body.ribbit .community-tabs-container-outer {
     margin-left: calc(50% - 584px);
     margin-right: calc(50% - 584px);
     width: auto;
+    position: relative;
+    z-index: 5;
 }
 body.ribbit.groupdetails .community-tabs-container-outer {
     margin-bottom: 0;
