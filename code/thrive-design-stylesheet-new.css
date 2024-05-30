@@ -1168,6 +1168,22 @@ body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:n
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--ui-secondary-text);
 }
+
+
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) h2,
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2 {
+    color: #272727;
+}
+
+body.ribbit #MPOuterMost #MPOuter  .bg-primary-light .ContentItemHtml.card *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter  .bg-secondary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card *:not(em a) {
+    color: #595959;
+}
+
 body.ribbit .bg-primary .ContentItemHtml:not(.card) .icon-container *,
 body.ribbit .hl-primary-row-bkgd .ContentItemHtml:not(.card) .icon-container *,
 body.ribbit .bg-secondary .ContentItemHtml:not(.card) .icon-container *,
