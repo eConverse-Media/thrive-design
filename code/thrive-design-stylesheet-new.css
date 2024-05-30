@@ -1723,7 +1723,8 @@ p:last-child {
 
 body.ribbit.interior #MainCopy_ContentWrapper:has(>div[class*="bg-"]:first-child),
 body.ribbit.interior.community-pages #MainCopy_ContentWrapper,
-body.ribbit #MPOuterMost #MPOuter .no-top-padding {
+body.ribbit #MPOuterMost #MPOuter .no-top-padding,
+body.ribbit.interior #MainCopy_ContentWrapper:has(.community-tabs-container-outer) {
     padding-top: 0;
 }
 
