@@ -10,13 +10,14 @@
 .HtmlFooter {
     display: none;
 }
+
 #MembershipWebsiteAlertContainer {
     max-width: 100%;
 }
 
 
 /************ overlap card class ************/
-body.ribbit .row.overlap > div {
+body.ribbit .row.overlap>div {
     margin-top: -48px;
 }
 
@@ -45,6 +46,7 @@ body.ribbit h6 {
     color: var(--ui-heading-text);
     font-weight: 700;
 }
+
 h1,
 h2,
 h3,
@@ -52,22 +54,25 @@ h4,
 h5,
 h6 {
     margin-top: 16px;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 body.ribbit h1 {
     font-size: 42px;
     line-height: 1.1;
 }
+
 body.ribbit h2,
 body.ribbit #MPOuterMost #MPOuter h2 {
     font-size: 21px;
 }
+
 body.ribbit .HtmlContent h2,
 body.ribbit #MPOuterMost #MPOuter .HtmlContent h2 {
     font-size: 30px;
     line-height: 1.2;
 }
+
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl h2,
 body.ribbit #MPOuterMost #MPOuter .col-md-4 .ContentUserControl h2,
 body.ribbit .col-md-3 .leaderboard>div[id$=_divContainer]>.ContentMainHeader,
@@ -83,10 +88,12 @@ body.ribbit .ContentItemMVC.card h2 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
 body.ribbit .col-md-3 h2.font-size-sm,
 body.ribbit .col-md-4 h2.font-size-sm {
     font-size: 12px !important;
 }
+
 body.ribbit #MPOuterMost #MPOuter .card h2 {
     font-size: 21px;
     line-height: 1.2;
@@ -94,10 +101,12 @@ body.ribbit #MPOuterMost #MPOuter .card h2 {
     margin-top: 0;
     margin-bottom: 8px;
 }
+
 body.ribbit h3 {
     font-size: 21px;
     line-height: 1.2;
 }
+
 body.ribbit h3 a,
 body.ribbit #MPOuterMost #MPOuter h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .community-events-list-row:first-child h3 a,
@@ -107,57 +116,72 @@ body.ribbit .card.icon-circle h3 {
     line-height: 1.2;
     color: var(--ui-heading-text);
 }
+
 body.ribbit .bootstrap-4 h3 {
     line-height: 1.2;
 }
+
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl h3 a {
     font-size: 14px;
 }
+
 body.ribbit .bootstrap-4 a.link-title {
     color: var(--ui-heading-text);
     font-size: 18px;
     line-height: 1.2;
 }
+
 body.ribbit h4 {
     font-size: 16px;
     line-height: 1.2;
 }
+
 body.ribbit h5,
 body.ribbit h6 {
     font-size: 14px;
     line-height: 1.2;
 }
+
 body.ribbit h6 {
     font-weight: 600;
 }
+
 body.ribbit .p-large,
 body.ribbit .hero p {
     font-size: 18px;
     line-height: 1.4;
 }
+
 body.ribbit .hero .card p {
     font-size: 16px;
 }
+
 body.ribbit .p-small {
     font-size: 14px;
     line-height: 1.4;
 }
+
 body.ribbit .bootstrap-4 .text-secondary {
     color: var(--hl-default-text) !important;
 }
+
 body.ribbit .bootstrap-4 .text-meta {
     color: var(--ui-default-text-small) !important;
 }
+
 body.ribbit .font-size-xs {
     font-size: 14px !important;
 }
+
 body.ribbit .bootstrap-4 a.link-meta {
     color: var(--hl-heading-text);
 }
+
 body.ribbit .bootstrap-4 a.link-meta:is(:hover, :focus) {
     text-decoration: underline;
     color: var(--hl-bs--link);
 }
+
 body.ribbit #MPOuterMost #MPOuter .ByLine,
 body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 {
     font-size: 13px;
@@ -165,12 +189,14 @@ body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 {
     font-weight: 300;
     color: var(--ui-default-text-small);
 }
+
 body.ribbit #MPOuterMost #MPOuter .ByLine a,
 body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 a {
     color: var(--ui-heading-text);
     font-weight: 600;
     text-decoration: none;
 }
+
 body.ribbit #MPOuterMost #MPOuter .ByLine a:is(:hover, :focus),
 body.ribbit #MPOuterMost #MPOuter .HLLandingControl h5 a:is(:hover, :focus) {
     color: var(--ui-heading-text);
@@ -309,16 +335,19 @@ body.ribbit .tags-list a.label-search-tag {
     text-transform: uppercase;
     color: var(--ui-heading-text);
 }
+
 body.ribbit .tags-list a.label-search-tag,
 body.ribbit .feed-item-row .feed-badge.text-meta span {
     color: var(--ui-heading-text) !important;
     font-size: 10px !important;
 }
+
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag:is(:hover, :focus),
 body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
     background-color: var(--hl-bs--gray-300) !important;
     text-decoration: none;
 }
+
 body.ribbit .tags-list a>div.text-truncate:hover {
     color: inherit;
     text-decoration: none;
@@ -387,10 +416,12 @@ body.has-modal.bio-modal-open {
     margin: -8px;
     display: inline-block;
 }
-body.ribbit .summary-edit .Content > ul li {
+
+body.ribbit .summary-edit .Content>ul li {
     margin: -8px;
 }
-body.ribbit .summary-edit > .Content > ul li a {
+
+body.ribbit .summary-edit>.Content>ul li a {
     margin: 8px;
     display: inline-block;
 }
@@ -404,7 +435,7 @@ body.ribbit .summary-edit > .Content > ul li a {
 .make-buttons em a,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
-body.ribbit .summary-edit .Content > ul a,
+body.ribbit .summary-edit .Content>ul a,
 body.ribbit .featured-card-single .btn,
 body.ribbit .featured-card-multi .btn,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
@@ -428,7 +459,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 body.ribbit .btn,
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn),
 body.ribbit .summary-edit em a,
-body.ribbit .summary-edit .Content > ul a,
+body.ribbit .summary-edit .Content>ul a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
@@ -451,7 +482,7 @@ body.ribbit #MPOuterMost #MPOuter .library-details .library-entry-description bu
     white-space: pre-wrap;
 }
 
-body.ribbit .btn.active, 
+body.ribbit .btn.active,
 body.ribbit .btn:active {
     box-shadow: none;
 }
@@ -480,7 +511,7 @@ body.ribbit :not(.no-theme) .btn-default:focus,
 body.ribbit :not(.no-theme) .btn-default:hover:not(:disabled),
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a:is(:hover, :focus),
-body.ribbit .summary-edit .Content > ul a:is(:hover, :focus),
+body.ribbit .summary-edit .Content>ul a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a:is(:hover, :focus),
 body.ribbit .make-buttons.primary-btn em a:is(:hover, :focus) {
@@ -520,8 +551,8 @@ body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLink
 body.ribbit :not(.no-theme) .HLLandingControl .Content div[id*="AnnouncementLinkPos"] a:not(.btn):is(:hover, :focus),
 body.ribbit .summary-edit em a,
 body.ribbit .summary-edit em a:is(:hover, :focus),
-body.ribbit .summary-edit .Content > ul a,
-body.ribbit .summary-edit .Content > ul a:is(:hover, :focus),
+body.ribbit .summary-edit .Content>ul a,
+body.ribbit .summary-edit .Content>ul a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a,
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].card .HLLandingControl div[id$="_BottomLink"] a:is(:hover, :focus),
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchResults div[id$=_pnlMoreLink] a,
@@ -553,6 +584,7 @@ body.ribbit .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover,
 body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus) {
     text-decoration: none;
 }
+
 body.ribbit .btn-ghost {
     color: var(--hl-bs--default-text);
     background: var(--hl-bs--gray-100);
@@ -665,6 +697,7 @@ body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-ch
     border: 2px solid var(--hl-bs--primary-opposite);
     padding: 8px 18px;
 }
+
 body.ribbit .make-buttons.bg-primary em a:is(:hover, :focus),
 body.ribbit .bg-primary .make-buttons em a:is(:hover, :focus),
 body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-btn em a:is(:hover, :focus),
@@ -694,6 +727,7 @@ body.ribbit .overlay-secondary-gradient.make-buttons.outline-first-btn em:first-
     color: var(--ui-secondary-text);
     padding: 8px 18px;
 }
+
 body.ribbit .make-buttons.bg-secondary em a:is(:hover, :focus),
 body.ribbit .bg-secondary .make-buttons em a:is(:hover, :focus),
 body.ribbit .overlay-secondary-gradient .ContentItemHtml:not(.card).make-buttons.outline-btn em a:is(:hover, :focus),
@@ -760,8 +794,9 @@ body.ribbit .make-buttons.dark-btn em a {
     transition: .3s;
     border: none;
 }
+
 body.ribbit .make-buttons.dark-btn em a:is(:hover, :focus) {
-    background: rgba(39,39,39,0.8);
+    background: rgba(39, 39, 39, 0.8);
     color: #fff;
     transition: .3s;
 }
@@ -832,6 +867,7 @@ body.ribbit .btn.form-control:is(:hover, :focus) {
     border: 1px solid #ccc;
     color: var(--ui-default-text);
 }
+
 body.ribbit .pagination-row .page-size select.form-control,
 body.ribbit .pagination-row .page-size select.form-control:is(:hover, :focus) {
     border: none;
@@ -841,11 +877,12 @@ body.ribbit .pagination-row .page-size select.form-control:is(:hover, :focus) {
 
 body.ribbit .btn-sm,
 body.ribbit #MPOuterMost #MPOuter h3 a.btn-sm,
-body.ribbit .btn-group-sm > .btn,
+body.ribbit .btn-group-sm>.btn,
 body.ribbit .btn-group-sm.btn {
     padding: 4px 8px;
     font-size: 12px;
 }
+
 body.ribbit .btn-xs,
 body.ribbit #MPOuterMost #MPOuter h3 a.btn-xs {
     padding: 2px 5px;
@@ -854,7 +891,7 @@ body.ribbit #MPOuterMost #MPOuter h3 a.btn-xs {
 
 /****** arrow link ******/
 
-body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*, 
+body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>*,
 body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingControl div[id$=_BottomLink]>a {
     padding: 8px 0 !important;
 }
@@ -906,11 +943,11 @@ body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLand
 
 .make-arrow-link em a:is(:hover, :focus),
 a:is(:hover, :focus) .card-link em,
-.arrow-link em a:is(:hover, :focus), 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus), 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus), 
-body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus), 
-body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus), 
+.arrow-link em a:is(:hover, :focus),
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
 body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
     color: var(--hl-bs--link-hover);
 }
@@ -935,7 +972,7 @@ body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
 }
 
 .flex-wrap ul {
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 /****** backgrounds ******/
@@ -955,6 +992,7 @@ body.ribbit:not(.interior).bodyBackground {
 .row-full.bg-black {
     background-color: #000;
 }
+
 .overlay-dark,
 #MPOuterMost .bg-primary-light,
 #MPOuterMost .bg-primary-dark,
@@ -965,18 +1003,19 @@ body.ribbit:not(.interior).bodyBackground {
 .overlay-primary-gradient,
 .overlay-secondary-gradient,
 .overlay-dark-gradient,
-.overlay-dark > *,
-#MPOuterMost .bg-primary-light > *,
-#MPOuterMost .bg-primary-dark > *,
-#MPOuterMost .bg-primary-light-gray > *,
-#MPOuterMost .bg-primary-medium-gray > *,
-#MPOuterMost .bg-secondary-light > *,
-#MPOuterMost .bg-secondary-dark > *,
-.overlay-primary-gradient > *,
-.overlay-secondary-gradient > *,
-.overlay-dark-gradient > * {
+.overlay-dark>*,
+#MPOuterMost .bg-primary-light>*,
+#MPOuterMost .bg-primary-dark>*,
+#MPOuterMost .bg-primary-light-gray>*,
+#MPOuterMost .bg-primary-medium-gray>*,
+#MPOuterMost .bg-secondary-light>*,
+#MPOuterMost .bg-secondary-dark>*,
+.overlay-primary-gradient>*,
+.overlay-secondary-gradient>*,
+.overlay-dark-gradient>* {
     position: relative;
 }
+
 .overlay-dark::before,
 #MPOuterMost .bg-primary-light::before,
 #MPOuterMost .bg-primary-dark::before,
@@ -999,7 +1038,7 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 .overlay-dark::before {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay-down,
@@ -1029,9 +1068,11 @@ body.ribbit:not(.interior).bodyBackground {
 .overlay-primary-gradient::before {
     background: linear-gradient(to right, var(--hl-bs--primary), transparent);
 }
+
 .overlay-secondary-gradient::before {
     background: linear-gradient(to right, var(--hl-bs--secondary), transparent);
 }
+
 .overlay-dark-gradient::before {
     background: linear-gradient(to right, #292929, transparent);
 }
@@ -1085,6 +1126,7 @@ body.ribbit:not(.interior).bodyBackground {
 .dark-graphic {
     position: relative;
 }
+
 .overlay-wave::after {
     height: 157px;
     width: 100%;
@@ -1095,9 +1137,10 @@ body.ribbit:not(.interior).bodyBackground {
     background-size: cover;
     mix-blend-mode: soft-light;
 }
-.overlay-wave > *,
-.light-graphic > *,
-.dark-graphic > * {
+
+.overlay-wave>*,
+.light-graphic>*,
+.dark-graphic>* {
     position: relative;
     z-index: 1;
     float: none;
@@ -1123,6 +1166,7 @@ body.ribbit #MPOuterMost #MPOuter [class*="-bkgd"] .ContentItemHtml:not(.card) h
 body.ribbit #MPOuterMost #MPOuter [class*="bg-"].ContentItemHtml h2 {
     color: #000;
 }
+
 body.ribbit .bg-image.ContentItemHtml .HtmlContent *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2,
 body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
@@ -1135,6 +1179,7 @@ body.ribbit #MPOuterMost #MPOuter .overlay-dark .ContentItemHtml:not(.card) .Htm
 body.ribbit #MPOuterMost #MPOuter .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: #fff;
 }
+
 body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml *:not(em a),
@@ -1151,6 +1196,7 @@ body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not
 body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--primary-opposite);
 }
+
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
@@ -1175,11 +1221,11 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card
     color: #272727;
 }
 
-body.ribbit #MPOuterMost #MPOuter  .bg-primary-light .ContentItemHtml.card *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a),
-body.ribbit #MPOuterMost #MPOuter  .bg-secondary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card *:not(em a) {
     color: #595959;
 }
@@ -1190,6 +1236,7 @@ body.ribbit .bg-secondary .ContentItemHtml:not(.card) .icon-container *,
 body.ribbit .hl-secondary-row-bkgd .ContentItemHtml:not(.card) .icon-container * {
     color: inherit;
 }
+
 body.ribbit .bg-gray {
     background-color: rgba(245, 245, 245, 0.97);
 }
@@ -1239,7 +1286,7 @@ body.ribbit .bg-gray {
 
 .ContentItemHtml.card,
 .card.leaderboard,
-.card.clickable > a,
+.card.clickable>a,
 .card.team button,
 body.ribbit .narrow-widget-container,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
@@ -1251,14 +1298,16 @@ body.ribbit .card .HLLandingControl {
     background: #fff;
     filter: none;
 }
+
 body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card,
-.col-md-3 .card.clickable > a,
+.col-md-3 .card.clickable>a,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl,
 .card.leaderboard,
 body.ribbit:not(.interior) .col-md-3 .ContentItemMVC.card {
     padding: 16px;
 }
+
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLandingControl,
 .ContentItemHtml.card.team {
     box-shadow: none;
@@ -1266,40 +1315,47 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLanding
     background: transparent;
     border-radius: 0;
 }
+
 body.ribbit .narrow-widget-container {
     margin-bottom: 0 !important;
 }
+
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .leaderboard .HLLandingControl {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
 }
+
 body.ribbit .community-events-list.narrow-widget-container,
 body.ribbit .recent-blogs.narrow-widget-container {
     padding: 0;
 }
 
-div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card + .ContentItemHtml.card {
+div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.card {
     margin-top: 16px;
 }
-.card .HtmlContent > *:first-child,
-.card.icon-card .HtmlContent > h3:nth-child(2),
-.card.icon-card .HtmlContent > h4:nth-child(2)  {
+
+.card .HtmlContent>*:first-child,
+.card.icon-card .HtmlContent>h3:nth-child(2),
+.card.icon-card .HtmlContent>h4:nth-child(2) {
     margin-top: 0;
 }
-.card .HtmlContent > *:last-child {
+
+.card .HtmlContent>*:last-child {
     margin-bottom: 0;
 }
-.card .HtmlContent:has(p > em) > p:nth-last-child(2) {
+
+.card .HtmlContent:has(p > em)>p:nth-last-child(2) {
     margin-bottom: 24px;
 }
-.card .HtmlContent > p:has(em):last-child {
+
+.card .HtmlContent>p:has(em):last-child {
     margin-top: auto;
 }
 
 
-.card.icon-card .HtmlContent > h3 {
+.card.icon-card .HtmlContent>h3 {
     font-size: 18px;
 }
 
@@ -1339,51 +1395,63 @@ body.ribbit .narrow-widget-container .widget-heading,
 body.ribbit .card .HLLandingControl .row.heading {
     padding: 0 0 8px 0 !important;
 }
+
 body.ribbit .community-events-list.narrow-widget-container .widget-heading,
 body.ribbit .recent-blogs.narrow-widget-container .widget-heading {
     padding: 16px 16px 8px 16px !important;
 }
+
 body.ribbit .narrow-widget-container .widget-heading h2,
 body.ribbit .card .HLLandingControl .row.heading h2 {
     margin: 0 !important;
 }
+
 body.ribbit .narrow-widget-container .widget-content-item,
 body.ribbit .narrow-widget-container .view-more-link {
     padding: 8px !important;
 }
+
 body.ribbit a.link-container {
     border-radius: 4px;
     background-color: transparent;
     border: none;
 }
-body.ribbit a.link-container:hover, 
+
+body.ribbit a.link-container:hover,
 body.ribbit a.link-container .link-container-content:hover {
     background-color: var(--hl-bs--gray-100);
     border: none;
 }
+
 body.ribbit a.link-container.link-container-link:hover {
     color: initial;
     text-decoration: none;
 }
+
 body.ribbit .bootstrap-4 .view-more-link a.link-standalone {
     border-bottom: 1px solid transparent;
     font-size: 16px;
 }
+
 body.ribbit .bootstrap-4 .view-more-link a.link-standalone:is(:hover, :focus) {
     text-decoration: none;
     border-bottom-color: var(--hl-bs--link-hover);
 }
+
 body.ribbit .bootstrap-4 .narrow-widget-container .font-size-sm,
 body.ribbit .bootstrap-4 .quick-links-container.narrow-widget-container .link-container-link {
     font-weight: 600;
 }
+
 body.ribbit #MPOuterMost #MPOuter .card:not(.leaderboard) .HLLandingControl .Content ul li {
     padding: 16px 0;
     border-bottom: 1px solid #E9E9E9;
 }
+
 body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl div[id*="BottomLink"] .col-md-12 {
     padding: 16px 0 0 0 !important;
 }
+
 body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl p,
 body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl .btn,
 body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
@@ -1437,7 +1505,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     color: var(--hl-bs--primary);
 }
 
-.card .HtmlContent p em a > i {
+.card .HtmlContent p em a>i {
     font-size: inherit;
 }
 
@@ -1449,6 +1517,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     border-radius: 8px;
     width: 100%;
 }
+
 .card.icon-card .HtmlContent p i {
     display: block;
     width: 100%;
@@ -1458,6 +1527,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     color: var(--ui-secondary-text);
 
 }
+
 .card.icon-card .HtmlContent p:has(i) {
     background-color: var(--hl-bs--primary);
 }
@@ -1469,7 +1539,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 
 
 .card.icon-card .HtmlContent p i,
-.icon-circle .HtmlContent > p i {
+.icon-circle .HtmlContent>p i {
     background: transparent;
 }
 
@@ -1479,8 +1549,9 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
         background-color: var(--hl-bs--secondary);
     }
 }
+
 .card.icon-card a:is(:hover, :focus) .HtmlContent p i,
-.icon-circle a:is(:hover, :focus) .HtmlContent > p i {
+.icon-circle a:is(:hover, :focus) .HtmlContent>p i {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -1501,6 +1572,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     margin-left: auto;
     margin-right: auto;
 }
+
 .icon-circle .HtmlContent>p i {
     height: 60px;
     width: 60px;
@@ -1519,9 +1591,11 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 .col-md-3 .card.img-card {
     padding: 0;
 }
+
 .card.img-card .HtmlContent {
     padding: 24px;
 }
+
 .card.img-card .img-container {
     height: 200px;
     border-top-left-radius: 8px;
@@ -1530,11 +1604,12 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 
 /*** icon & image cards ***/
 
-.card.img-card .img-container ~ .HtmlContent:has(i) {
+.card.img-card .img-container~.HtmlContent:has(i) {
     padding-top: 48px;
     position: relative;
 }
-.card.img-card .img-container ~ .HtmlContent i {
+
+.card.img-card .img-container~.HtmlContent i {
     position: absolute;
     top: -50px;
     height: 100px;
@@ -1548,7 +1623,8 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     font-size: 44px;
     left: 24px;
 }
-.img-card .img-container ~ .HtmlContent p:has(i) {
+
+.img-card .img-container~.HtmlContent p:has(i) {
     margin-bottom: 0;
 }
 
@@ -1563,7 +1639,8 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     padding: 0;
     box-shadow: none;
 }
-.card.clickable > a {
+
+.card.clickable>a {
     padding: 24px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -1571,11 +1648,13 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     text-decoration: none;
     display: block;
 }
-.card.clickable > a,
-.card.clickable > a:is(:hover, :focus) {
+
+.card.clickable>a,
+.card.clickable>a:is(:hover, :focus) {
     color: var(--ui-default-text);
 }
-.card.clickable > a:is(:hover, :focus) {
+
+.card.clickable>a:is(:hover, :focus) {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
@@ -1669,9 +1748,10 @@ body.ribbit .cta-tile a {
     display: flex;
     flex: 1;
 }
- #MPOuterMost #MPOuter .cards > .col-md-12 {
+
+#MPOuterMost #MPOuter .cards>.col-md-12 {
     margin: -12px;
-} 
+}
 
 body.ribbit #MPOuterMost #MPOuter .cards>div .card {
     margin: 12px;
@@ -1730,7 +1810,7 @@ body.ribbit.interior #MainCopy_ContentWrapper:has(.community-tabs-container-oute
 
 
 body.ribbit.interior #MainCopy_ContentWrapper:has(>div[class*="bg-"]:nth-last-child(2)) {
-padding-bottom: 0;
+    padding-bottom: 0;
 }
 
 body.ribbit.home #MainCopy_ContentWrapper>.row-wide:not(:last-child, .home-hero, .primary-row, .secondary-row) {
@@ -1752,7 +1832,10 @@ body.ribbit #MPOuterMost #MPOuter .no-bottom-padding {
     padding-bottom: 0;
 }
 
-div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml + .ContentItemHtml:not(.slick-slide), div[class*="col-md-"]:not(.col-md-12) .ContentUserControl + .ContentUserControl, div[class*="col-md-"]:not(.col-md-12) .ContentUserControl + .ContentItemHtml, div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml + .ContentUserControl {
+div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml+.ContentItemHtml:not(.slick-slide),
+div[class*="col-md-"]:not(.col-md-12) .ContentUserControl+.ContentUserControl,
+div[class*="col-md-"]:not(.col-md-12) .ContentUserControl+.ContentItemHtml,
+div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml+.ContentUserControl {
     margin-top: 16px;
 }
 
@@ -1786,6 +1869,7 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     padding: 8px;
     position: relative;
 }
+
 .card.team {
     box-shadow: none;
     border-radius: 0;
@@ -1796,10 +1880,12 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     width: 100%;
     border: none;
 }
+
 .card.team button:is(:hover, :focus) {
     background: #fff;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
+
 .flex-cards .card.team button {
     flex-grow: 0;
     flex-shrink: 1;
@@ -1829,11 +1915,11 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
 }
 
 .team .HtmlContent .img-container img {
-display: block;
-max-width: 230px;
-max-height: 180px;
-width: auto;
-height: auto;
+    display: block;
+    max-width: 230px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
 }
 
 .team p a {
@@ -1847,7 +1933,7 @@ body.ribbit .bio h3 {
 }
 
 .team button:is(:hover, :focus) {
-	color: unset
+    color: unset
 }
 
 /****** bio modals ******/
@@ -2479,20 +2565,24 @@ body.ribbit.memberhome #MPFooterLink {
 .hero .make-buttons em:has(a) {
     margin: -10px;
 }
+
 .hero .make-buttons em a {
     margin: 10px;
 }
+
 .hero {
     position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
+
 .hero h1,
 .hero h2 {
     margin-top: 0;
 }
-.hero .HtmlContent > *:last-child {
+
+.hero .HtmlContent>*:last-child {
     margin-bottom: 0;
 }
 
@@ -2506,9 +2596,10 @@ body.ribbit.memberhome #MPFooterLink {
     right: 0;
     top: 0;
     mix-blend-mode: soft-light;
-    background: radial-gradient(145.93% 137.01% at 71.71% 0%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(30.03% 106.8% at 73.42% 141.5%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(96.99% 34.59% at 0% 100%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.00) 100%);    
+    background: radial-gradient(145.93% 137.01% at 71.71% 0%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(30.03% 106.8% at 73.42% 141.5%, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(96.99% 34.59% at 0% 100%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.00) 100%);
     background-size: cover;
 }
+
 .hero.overlay-wave::before {
     top: 48px;
     background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-graphic.png');
@@ -2518,6 +2609,70 @@ body.ribbit.memberhome #MPFooterLink {
 .hero[class*="-bkgd"]>.col-md-12 .HtmlContent {
     position: relative;
     z-index: 10;
+}
+
+/****** hero slider ******/
+
+.hero-slider .slick-track {
+    display: flex;
+}
+
+body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide {
+    max-width: 100%;
+    padding: 128px 16px;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    margin: unset;
+}
+
+body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.50) 45.34%, rgba(0, 0, 0, 0.00) 69.99%);
+    z-index: -1;
+}
+
+body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide .HtmlContent {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* hero slick */
+.hero-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 44px;
+    background: transparent;
+    border: 0;
+    z-index: 1;
+    color: #FFF;
+    opacity: 0.7;
+}
+
+.hero-slider .prev-arrow {
+    left: 30px;
+}
+
+.hero-slider .next-arrow {
+    right: 30px;
+}
+
+.hero-slider .slick-dots {
+
+    bottom: 80px;
+}
+
+.hero-slider .slick-arrow:is(:hover, :focus) {
+    opacity: 1;
 }
 
 /****** hero profile snippet ******/
@@ -2571,6 +2726,7 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
     flex-direction: column;
     justify-content: center;
 }
+
 .memberhome-slider .memberhome-slide .img-container {
     width: 35%;
     flex-grow: 0;
@@ -2591,6 +2747,7 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
     font-size: 20px;
     margin-top: 0;
 }
+
 .memberhome-slider .memberhome-slide .HtmlContent h3 {
     margin-top: 0;
 }
@@ -2610,7 +2767,7 @@ body.ribbit #MPOuterMost .memberhome-slider .memberhome-slide .HtmlContent p {
     display: flex;
 }
 
-.memberhome-slider .slick-track > div {
+.memberhome-slider .slick-track>div {
     height: auto;
 }
 
@@ -2627,14 +2784,14 @@ body.ribbit div[class*="bg-primary-dark"] .memberhome-slider .slick-dots li.slic
     background: #fff;
 }
 
-body.ribbit div[class*="bg-primary"] .memberhome-slider  button.slick-arrow,
-body.ribbit div[class*="bg-primary-dark"] .memberhome-slider  button.slick-arrow {
+body.ribbit div[class*="bg-primary"] .memberhome-slider button.slick-arrow,
+body.ribbit div[class*="bg-primary-dark"] .memberhome-slider button.slick-arrow {
     color: #fff;
 }
 
 body.ribbit div[class*="bg-primary-medium-gray"] .memberhome-slider .slick-dots li,
 body.ribbit div[class*="bg-primary-light-gray"] .memberhome-slider .slick-dots li,
-body.ribbit div[class*="bg-primary-light"] .memberhome-slider .slick-dots li  {
+body.ribbit div[class*="bg-primary-light"] .memberhome-slider .slick-dots li {
     border-color: #000;
 }
 
@@ -2644,9 +2801,9 @@ body.ribbit div[class*="bg-primary-light"] .memberhome-slider .slick-dots li.sli
     background: #000;
 }
 
-body.ribbit div[class*="bg-primary-medium-gray"] .memberhome-slider  button.slick-arrow,
-body.ribbit div[class*="bg-primary-light-gray"] .memberhome-slider  button.slick-arrow,
-body.ribbit div[class*="bg-primary-light"] .memberhome-slider  button.slick-arrow {
+body.ribbit div[class*="bg-primary-medium-gray"] .memberhome-slider button.slick-arrow,
+body.ribbit div[class*="bg-primary-light-gray"] .memberhome-slider button.slick-arrow,
+body.ribbit div[class*="bg-primary-light"] .memberhome-slider button.slick-arrow {
     color: #000;
 }
 
@@ -2658,8 +2815,7 @@ body.ribbit div[class*="bg-secondary"] .memberhome-slider .slick-dots li.slick-a
     background: var(--ui-secondary-text);
 }
 
-body.ribbit div[class*="bg-secondary"] .memberhome-slider  button.slick-arrow
-{
+body.ribbit div[class*="bg-secondary"] .memberhome-slider button.slick-arrow {
     color: var(--ui-secondary-text);
 }
 
@@ -2703,9 +2859,9 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     width: 100%;
 }
 
-.make-carousel-tiles ul  .slick-list {
+.make-carousel-tiles ul .slick-list {
     margin: 0 -15px;
-} 
+}
 
 
 
@@ -2713,27 +2869,28 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
 .make-carousel-tiles .HLLandingControl .Content .title-row .content-tags {
     padding-top: 10px;
 }
-.make-carousel-tiles ul  .slick-arrow {
+
+.make-carousel-tiles ul .slick-arrow {
     position: absolute;
     top: 50%;
     background: transparent;
     border: 0;
 }
 
-.make-carousel-tiles ul  .next-arrow {
+.make-carousel-tiles ul .next-arrow {
     right: -30px;
     z-index: 1;
 }
 
-.make-carousel-tiles ul  .prev-arrow {
+.make-carousel-tiles ul .prev-arrow {
     left: -30px;
     z-index: 1;
 }
 
 /* Change the slick arrow size for all except memberhome and clp announcement widgets */
-body.ribbit  .milestone-slider .slick-arrow i,
+body.ribbit .milestone-slider .slick-arrow i,
 .make-carousel-tiles.featured-cards .slick-arrow i,
-.make-carousel-tiles.featured-resource .slick-arrow i  {
+.make-carousel-tiles.featured-resource .slick-arrow i {
     font-size: 24px;
 }
 
@@ -2764,12 +2921,12 @@ body.ribbit  .milestone-slider .slick-arrow i,
 }
 
 .img-left-list .blogs-block .text-container div[id*=ThreadFollowIcon],
-.list-tiles .blogs-block .text-container div[id*=ThreadFollowIcon]  {
+.list-tiles .blogs-block .text-container div[id*=ThreadFollowIcon] {
     display: none;
 }
 
 
-.img-left-list .blogs-block .text-container > .row.title-row {
+.img-left-list .blogs-block .text-container>.row.title-row {
     margin: 0;
 }
 
@@ -2779,17 +2936,19 @@ body.ribbit  .milestone-slider .slick-arrow i,
 }
 
 
-.img-left-list .blogs-block .text-container .col-md-12 > .margin-top-small {
+.img-left-list .blogs-block .text-container .col-md-12>.margin-top-small {
     margin-top: 0;
 }
 
-.img-left-list .row-border-top, .list-tiles .row-border-top {
+.img-left-list .row-border-top,
+.list-tiles .row-border-top {
     display: block;
     border-top: none;
 }
 
 
-.img-left-list .row-border-top .pagination,  .list-tiles .row-border-top .pagination {
+.img-left-list .row-border-top .pagination,
+.list-tiles .row-border-top .pagination {
     margin: 0;
 }
 
@@ -2849,7 +3008,6 @@ li.slick-active button::before {
     color: transparent !important;
 }
 
-
 .hero .slick-arrow {
     color: #fff;
     position: absolute;
@@ -2858,6 +3016,7 @@ li.slick-active button::before {
     padding: 0;
     bottom: -40px;
     z-index: 15;
+    opacity: 0.7;
 }
 
 .hero .prev-arrow {
@@ -2866,6 +3025,10 @@ li.slick-active button::before {
 
 .hero .next-arrow {
     right: 0;
+}
+
+.hero .slick-arrow:is(:hover, :focus) {
+    opacity: 1;
 }
 
 .hero .slider .slick-dots {
@@ -2878,7 +3041,7 @@ li.slick-active button::before {
 
 /****** flex cards below hero ******/
 
-.home #MPOuterMost #MPOuter .hero + .flex-cards {
+.home #MPOuterMost #MPOuter .hero+.flex-cards {
     margin-top: -40px;
 }
 
@@ -2984,7 +3147,7 @@ body.ribbit .profile-snippet-progress>.d-flex>span:last-child {
     line-height: 1.2;
     font-weight: 600;
 }
- 
+
 body.ribbit .profile-snippet-progress>.my-2 {
     margin-bottom: 0 !important;
 }
@@ -3008,6 +3171,7 @@ body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
 body.ribbit .hl-widget-card .profile-badge-container {
     padding: 16px;
 }
+
 body.ribbit .hero .hl-widget-card .profile-badge-container {
     padding: 16px 0;
 }
@@ -3308,13 +3472,14 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     border-radius: 8px;
 }
 
-body.ribbit #MPOuterMost #MPOuter  .events-list ul li:first-of-type {
+body.ribbit #MPOuterMost #MPOuter .events-list ul li:first-of-type {
     margin-left: 0;
 }
 
 body.ribbit #MPOuterMost #MPOuter .events-list ul li:last-of-type {
     margin-right: 0;
 }
+
 .events-list .HLEventList ul li .col-md-2 {
     width: 140px;
     margin-right: 0;
@@ -3336,7 +3501,7 @@ body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList ul li>.row {
 .events-list .HLEventList ul:not(.dropdown-menu) .date-block {
     width: 140px;
     height: 120px;
-    border-radius: 2px; 
+    border-radius: 2px;
     background-color: var(--hl-bs--secondary);
     color: #fff;
     display: flex;
@@ -3358,7 +3523,7 @@ body.ribbit #MPOuterMost #MPOuter .events-list .HLEventList ul li>.row {
     line-height: 120%;
     color: #fff;
     text-transform: capitalize;
- }
+}
 
 
 
@@ -3394,19 +3559,23 @@ body .calendar-stamp {
     align-items: center;
     justify-content: center;
 }
+
 body.ribbit .calendar-stamp .month {
     margin-top: 0;
 }
+
 body.ribbit .community-events-list-row:first-child,
 body.ribbit .blog-list-featured-entry {
     margin-bottom: 8px;
 }
+
 body.ribbit .community-events-list-row:first-child,
 body.ribbit .blog-list-featured-entry,
 body.ribbit .community-events-list-row.p-3:last-child,
 body.ribbit div:has(> .blog-list-entry.my-3):last-child {
     position: relative;
 }
+
 body.ribbit .community-events-list-row:first-child::after,
 body.ribbit .blog-list-featured-entry::after,
 body.ribbit .community-events-list-row.p-3:last-child::after,
@@ -3418,41 +3587,53 @@ body.ribbit div:has(> .blog-list-entry.my-3):last-child::after {
     bottom: 0;
     border-bottom: 1px solid #E9E9E9;
 }
+
 body.ribbit .community-events-list-row.p-3:not(:first-child),
 body.ribbit div:has(> .blog-list-entry.my-3) {
     padding: 8px 16px !important;
 }
+
 body.ribbit .narrow-widget-container .blog-list-entry.my-3 {
     margin: 0 !important;
     padding: 0 !important;
 }
+
 body.ribbit .community-events-list-row.p-3:last-child,
 body.ribbit div:has(> .blog-list-entry.my-3):last-child {
     padding-bottom: 16px !important;
 }
+
 body.ribbit .community-events-list.narrow-widget-container .view-more-link,
 body.ribbit .recent-blogs.narrow-widget-container .view-more-link {
     padding: 16px !important;
 }
+
 body.ribbit .col-md-3 .ContentUserControl .bootstrap-4 h3 {
     margin-bottom: 4px;
 }
+
 body.ribbit .col-md-3 .ContentUserControl .bootstrap-4 .community-events-list-row:first-child h3 {
-    margin-bottom: 8px; /* this is smaller than the below to account for the extra margin on the spaced row containing the label */
+    margin-bottom: 8px;
+    /* this is smaller than the below to account for the extra margin on the spaced row containing the label */
 }
+
 body.ribbit .col-md-3 .ContentUserControl .bootstrap-4 .blog-list-featured-entry h3 {
     margin-bottom: 12px !important;
 }
+
 body.ribbit .narrow-widget-container .widget-content-item.blog-list-featured-entry {
     padding: 16px !important;
 }
+
 body.ribbit .blog-list-featured-entry .title.pt-3 {
     padding-top: 0 !important;
 }
+
 body.ribbit .blog-list-featured-entry .content.pb-3.border-bottom {
     padding-bottom: 0 !important;
     border-bottom: none !important;
 }
+
 body.ribbit .blog-list-featured-entry .content {
     align-items: center;
 }
@@ -3468,16 +3649,20 @@ body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs {
     margin-bottom: 0;
     border: none;
 }
+
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li:first-child {
     margin-right: auto;
 }
+
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li:last-child {
     margin-left: auto;
 }
+
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li {
     display: block;
     flex: unset;
 }
+
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li>a {
     font-size: 12px;
     line-height: 20px;
@@ -3490,42 +3675,52 @@ body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li>a {
     transform: none;
     width: auto;
 }
+
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li>a:is(:hover, :focus) {
     color: var(--ui-heading-text);
     border-bottom-color: var(--ui-heading-text);
 }
+
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li.active>a,
 body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li.active>a:is(:hover, :focus) {
     color: var(--ui-heading-text);
     border-bottom-color: var(--ui-heading-text);
     font-weight: 700;
 }
+
 body.ribbit #MPOuterMost #MainCopy_ContentWrapper>.row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLEngagement {
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding: 8px 0;
     margin: 0;
 }
+
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl.HLEngagement .row.heading {
     border: none;
 }
+
 body.ribbit #MPOuterMost .leaderboard>div[id$=_divContainer]>.ContentMainHeader {
     padding: 0 0 8px 0;
 }
+
 body.ribbit:not(.interior) .HLLandingControl.HLEngagement ul.display-vertical {
     margin-left: -16px;
     margin-right: -16px;
     padding: 0;
 }
+
 body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li:hover {
     background: transparent;
 }
-body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li > a .leaderboard-user-info > a {
+
+body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a .leaderboard-user-info>a {
     color: var(--ui-heading-text);
 }
-body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li > a:is(:hover, :focus) .leaderboard-user-info > a {
+
+body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a:is(:hover, :focus) .leaderboard-user-info>a {
     text-decoration: underline;
     color: var(--ui-heading-text);
 }
+
 body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical .leaderboard-points-label>.points-label {
     border-radius: 0;
     background: transparent;
@@ -3535,6 +3730,7 @@ body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.dis
     line-height: normal;
     font-weight: 300;
 }
+
 body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].leaderboard .HLLandingControl ul:not(.dropdown-menu)>li:last-child {
     padding-bottom: 0;
 }
@@ -3604,6 +3800,7 @@ body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl {
     box-shadow: none;
     border-radius: 0;
 }
+
 body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl .row.heading {
     display: none;
 }
@@ -3650,7 +3847,7 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .
 
 /************ featured resources and blogs ************/
 
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide>.col-md-12 .HLLandingControl {
     background: transparent;
     filter: none;
     border-radius: 0;
@@ -3659,14 +3856,16 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .HLLandi
     padding-bottom: 20px;
 }
 
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide > .col-md-12 .featured-cards .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .row-wide>.col-md-12 .featured-cards .HLLandingControl {
     padding-bottom: 20px;
 }
+
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading {
     padding: 0;
     border: none;
 }
-.HLEventList .pull-right + br {
+
+.HLEventList .pull-right+br {
     display: none;
 }
 
@@ -3688,8 +3887,8 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
 }
 
 .ContentUserControl.featured-resource ul li h5 {
-margin-top: 0;
-margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .ContentUserControl.featured-resource .HLMyDocuments .listIconContainer {
@@ -3711,7 +3910,7 @@ body div[class*=bg-secondary] .ContentUserControl.featured-blogs ul li,
 body div[class*=bg-primary] .ContentUserControl.featured-resource ul li,
 body div[class*=bg-secondary] .ContentUserControl.featured-resource ul li {
     background-color: #fff;
-}  
+}
 
 
 .ContentUserControl.featured-blogs ul li .ByLine,
@@ -3721,15 +3920,14 @@ body div[class*=bg-secondary] .ContentUserControl.featured-resource ul li {
 }
 
 
-.ContentUserControl.featured-cards ul li  h5 {
-    margin-top:0;
+.ContentUserControl.featured-cards ul li h5 {
+    margin-top: 0;
 }
 
 div[class*=bg-primary].row .ContentUserControl.featured-blogs ul li,
 div[class*=bg-secondary].row .ContentUserControl.featured-blogs ul li,
-div[class*=bg-primary].ContentUserControl.featured-resource ul li, 
-div[class*=bg-secondary].row .ContentUserControl.featured-resource ul li 
- {
+div[class*=bg-primary].ContentUserControl.featured-resource ul li,
+div[class*=bg-secondary].row .ContentUserControl.featured-resource ul li {
     background-color: #fff;
 }
 
@@ -3821,6 +4019,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     border-radius: 8px;
     box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
+
 .ContentUserControl.featured-blogs .top-blogs-slider ul li .img-container,
 .ContentUserControl.resources-list ul li .img-container,
 .latest-news-list.ContentUserControl .blogs-block .img-container,
@@ -3854,7 +4053,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     margin-top: 24px;
 }
 
-.list-tiles > div {
+.list-tiles>div {
     font-family: Inter;
     font-size: 21px;
     font-style: normal;
@@ -3870,19 +4069,19 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 .featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul:not(.slider),
 .event-cards .Content ul,
-.list-tiles .Content ul, 
-.list-tiles div[id*=_BlogContents]{
+.list-tiles .Content ul,
+.list-tiles div[id*=_BlogContents] {
     margin: 16px -12px -12px -12px;
     display: flex;
 }
 
-.list-tiles .Content ul,  
-.list-tiles div[id*=_BlogContents]{
+.list-tiles .Content ul,
+.list-tiles div[id*=_BlogContents] {
     flex-wrap: wrap;
 }
 
 
-.list-tiles div[id*=_BlogContents]>.row{
+.list-tiles div[id*=_BlogContents]>.row {
     display: none;
 }
 
@@ -3947,7 +4146,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     overflow: hidden;
 }
 
-.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container,.list-tiles ul li .text-container,.list-tiles .blogs-block .text-container {
+.featured-cards div[id*="Main"] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .text-container,
+.list-tiles ul li .text-container,
+.list-tiles .blogs-block .text-container {
     padding: 16px;
 }
 
@@ -3958,7 +4159,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 }
 
 .list-tiles ul li .text-container h3,
-.list-tiles  .blogs-block .text-container h3  {
+.list-tiles .blogs-block .text-container h3 {
     margin-top: 0;
 }
 
@@ -4044,7 +4245,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.featured-cards[class*=Co
 }
 
 
-body.ribbit .featured-cards ul.pagination  li { 
+body.ribbit .featured-cards ul.pagination li {
     border-bottom: 0;
 }
 
@@ -4105,7 +4306,8 @@ body.ribbit .featured-cards ul.pagination  li {
 .resource-list .create-new-entry {
     display: none;
 }
- .HLMyDocuments span[id*=IsPinned] {
+
+.HLMyDocuments span[id*=IsPinned] {
     display: none;
 }
 
@@ -4121,6 +4323,7 @@ body.ribbit .featured-cards ul.pagination  li {
     border-radius: 8px 8px 0 0;
     background-size: cover;
 }
+
 .SearchResults.HLLandingControl ul li .img-container::before,
 .blogs-block .img-container::before,
 .list-tiles ul li .img-container::before {
@@ -4133,9 +4336,10 @@ body.ribbit .featured-cards ul.pagination  li {
     bottom: 0;
     opacity: 0;
 }
+
 .SearchResults.HLLandingControl ul li .img-container::after,
 .blogs-block .img-container::after,
-.list-tiles ul li .img-container::after  {
+.list-tiles ul li .img-container::after {
     content: '\f15c';
     font-family: 'Font Awesome 6 Pro';
     color: var(--hl-bs--primary);
@@ -4148,32 +4352,38 @@ body.ribbit .featured-cards ul.pagination  li {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .latest-news-list .blogs-block .img-container::after,
-.four-cards .SearchResults.HLLandingControl ul li .img-container::after  {
+.four-cards .SearchResults.HLLandingControl ul li .img-container::after {
     right: 24px;
     bottom: -16px;
     transform: none;
     top: auto;
     left: auto;
 }
+
 .SearchResults.HLLandingControl ul li.acl-discussion .img-container::after {
     content: '\f4a6';
 }
+
 .SearchResults.HLLandingControl ul li.acl-event .img-container::after {
     content: '\f073';
 }
+
 .SearchResults.HLLandingControl ul li.acl-blog .img-container::after,
 .blogs-block .img-container::after {
     content: '\f1ea';
 }
+
 .SearchResults.HLLandingControl ul li .img-container.loading::before,
 .SearchResults.HLLandingControl ul li .img-container.no-ajax-image::before,
 .blogs-block .img-container.loading::before,
 .blogs-block .img-container.no-ajax-image::before,
 .list-tiles ul li .img-container.loading::before,
-.list-tiles ul li .img-container.no-ajax-image::before  {
+.list-tiles ul li .img-container.no-ajax-image::before {
     opacity: 1;
 }
+
 .SearchResults.HLLandingControl ul li .img-container.loading::after,
 .SearchResults.HLLandingControl ul li .img-container.no-ajax-image::after,
 .blogs-block .img-container.loading::after,
@@ -4222,10 +4432,12 @@ body.ribbit .featured-cards ul.pagination  li {
     width: 40px;
     height: 40px;
 }
+
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .title-row {
     display: flex;
     align-items: center;
 }
+
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .col-md-2 {
     width: 40px;
     padding: 0;
@@ -4271,21 +4483,25 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     display: flex;
     flex-direction: column;
 }
+
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary {
     font-size: 0;
     line-height: 0;
 }
+
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before,
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     font-size: 12px;
     line-height: normal;
     font-weight: 600;
 }
+
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary,
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     padding: 4px 8px;
     border-radius: 4px;
 }
+
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
     content: 'Add';
 }
@@ -4302,6 +4518,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     min-height: 340px;
     display: flex;
 }
+
 .promo-block .HtmlContent {
     flex-grow: 0;
     flex-shrink: 1;
@@ -4310,12 +4527,14 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     flex-direction: column;
     padding: 24px;
 }
-.promo-block .HtmlContent > p:first-of-type,
-.promo-block .HtmlContent > img:first-of-type {
+
+.promo-block .HtmlContent>p:first-of-type,
+.promo-block .HtmlContent>img:first-of-type {
     margin-top: auto;
 }
+
 .promo-block p:first-of-type strong,
-.promo-block .HtmlContent > img:first-child + p strong {
+.promo-block .HtmlContent>img:first-child+p strong {
     display: inline-block;
     background-color: var(--hl-bs--secondary);
     color: var(--ui-secondary-text);
@@ -4327,27 +4546,31 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     text-transform: uppercase;
     letter-spacing: 0.25px;
 }
+
 .promo-block .HtmlContent,
 body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h2,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h3,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h4,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h5,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h6  {
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h3,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h4,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h5,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h6 {
     color: white;
 }
 
-.promo-block .HtmlContent p > a {
+.promo-block .HtmlContent p>a {
     color: white;
 }
 
 .promo-block .HtmlContent p {
     margin-bottom: 0;
 }
+
 .promo-block .HtmlContent h2 {
     margin-top: 8px;
     margin-bottom: 8px;
 }
-.promo-block .HtmlContent h2 ~ p + p { /* we only want to have margins between two paragraphs that are in the main text of this component; not on the overline above the h2 or a bottom margin on the last paragraph */
+
+.promo-block .HtmlContent h2~p+p {
+    /* we only want to have margins between two paragraphs that are in the main text of this component; not on the overline above the h2 or a bottom margin on the last paragraph */
     margin-top: 8px;
 }
 
@@ -4380,9 +4603,11 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
     padding: 0;
     box-shadow: none;
 }
+
 .HLLandingControl.SearchResults ul li .row.title-row .col-sm-3.col-md-3.pull-right {
     display: none;
 }
+
 .HLLandingControl.SearchResults ul li .row.title-row .col-md-9 {
     width: 100%;
 }
@@ -4552,12 +4777,12 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
     display: none;
 }
 
-.col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image + .text-container {
+.col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image+.text-container {
     width: 100%;
 }
 
 .col-md-6 .HLRecentBlogs ul li .text-container,
-.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) + .text-container {
+.col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image)+.text-container {
     width: calc(100% - 140px);
     padding-right: 30px;
 }
@@ -4695,6 +4920,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 #MPOuterMost #MPOuter .col-md-6 .HLMyDocuments ul li div[id*="DocumentsList_DisplayDocFiles"] .col-md-12 {
     position: static;
 }
+
 /*** icons ***/
 
 .featured-resource.make-carousel-tiles .HLMyDocuments .listIconContainer {
@@ -4734,6 +4960,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"] .HLL
 body.ribbit .featured-resource .HLMyDocuments ul li:has(.listIconContainer) {
     padding-left: 24px;
 }
+
 .HLMyDocuments .listIconContainer:not(:empty) {
     width: 48px;
     height: 48px;
@@ -4897,7 +5124,7 @@ div[class*="bg-primary-light-gray"] .slider .slick-arrow i::before {
 
 div[class*="bg-secondary"] .slider .slick-dots li,
 div[class*="bg-secondary-dark"] .slider .slick-dots li,
-div[class*="bg-secondary-light"] .slider .slick-dots li   {
+div[class*="bg-secondary-light"] .slider .slick-dots li {
     border-color: var(--ui-secondary-text);
 }
 
@@ -5052,15 +5279,15 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
 }
 
 .btn.back-to-top.fixed {
-	position: fixed;
+    position: fixed;
     bottom: 20px;
     right: calc(50% - 593px);
 }
 
 .tabbed-schedule .col-md-3.fixed,
 .tabbed-schedule .col-md-3.absolute {
-    left: calc(50% - 590px); 
-	max-width: 295px
+    left: calc(50% - 590px);
+    max-width: 295px
 }
 
 .menu-icon {
@@ -5073,7 +5300,7 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     background: var(--hl-bs--primary);
 }
 
-#InteriorPageTitle > div {
+#InteriorPageTitle>div {
     position: relative;
     z-index: 5;
 }
@@ -5102,7 +5329,7 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
 
 /************ community landing page ************/
 
-body.ribbit.community-pages #MPOuterMost #MPOuter  .no-community-html {
+body.ribbit.community-pages #MPOuterMost #MPOuter .no-community-html {
     padding: 0;
 }
 
@@ -5115,16 +5342,19 @@ body.ribbit.community-pages #MPOuterMost #MPOuter  .no-community-html {
 .summary-edit .Content .img-container {
     width: 42%;
 }
+
 .summary-edit .Content .text-container {
     width: 58%;
     padding-right: 115px;
 }
-.summary-edit .Content > ul {
+
+.summary-edit .Content>ul {
     width: 25%;
     padding-left: 15px;
     list-style-type: none;
 }
-.summary-edit .Content ul + .text-container {
+
+.summary-edit .Content ul+.text-container {
     width: 75%;
 }
 
@@ -5140,12 +5370,15 @@ body.ribbit .community-tabs-container-outer {
     position: relative;
     z-index: 5;
 }
+
 body.ribbit.groupdetails .community-tabs-container-outer {
     margin-bottom: 0;
 }
+
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li {
     border: none;
 }
+
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a {
     font-size: 16px;
     line-height: normal;
@@ -5158,12 +5391,14 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a 
     height: 36px;
     margin-right: 8px;
 }
+
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a:is(:hover, :focus),
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li.active a {
     color: var(--ui-heading-text);
     background-color: #fff;
     box-shadow: none;
 }
+
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs li a .badge {
     color: var(--ui-secondary-text);
     font-size: 10px;
@@ -5187,9 +5422,11 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .drop
     box-shadow: none;
     margin-right: 0;
 }
+
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .dropdown li:last-child a {
     border-bottom: none;
 }
+
 body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .dropdown li a .badge {
     float: none;
     margin-top: 0;
@@ -5202,18 +5439,22 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .drop
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     padding: 24px;
 }
+
 .groupdetails .col-md-4 .HLLandingControl:not(:last-child) {
     margin-bottom: 24px;
 }
+
 .groupdetails div[id*="BottomLink"] .col-md-12 {
     padding-left: 0;
     padding-right: 0;
 }
+
 .groupdetails .HLLandingControl ul li .title-row .col-md-2 {
     width: 48px;
     margin-right: 16px;
     float: left;
 }
+
 .groupdetails .HLLandingControl ul li .title-row .col-md-10 {
     width: calc(100% - 64px);
     padding: 0;
@@ -5227,10 +5468,12 @@ body.ribbit.groupdetails .HLAnnouncements ul li {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-body.ribbit.groupdetails .HLAnnouncements ul li .row.HLContainer > .col-md-12 >  div:not(:first-child),
+
+body.ribbit.groupdetails .HLAnnouncements ul li .row.HLContainer>.col-md-12>div:not(:first-child),
 body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     display: none;
 }
+
 .groupdetails .HLAnnouncements .slick-arrow {
     background: transparent;
     color: var(--hl-bs--link);
@@ -5243,297 +5486,315 @@ body.ribbit.groupdetails .HLAnnouncements div[id*="MoreLinkPanel"] {
     line-height: 1;
     z-index: 10;
 }
+
 .groupdetails .HLAnnouncements .slick-arrow.prev-arrow {
     right: 32px;
 }
+
 .groupdetails .HLAnnouncements .slick-arrow:is(:hover, :focus) {
     color: var(--hl-bs--link-hover);
 }
 
-    /************ milestone carousel ************/
+/************ milestone carousel ************/
 
-    .milestone-slider .slick-arrow {
-        bottom: -34px;
-        top: 0;
-        z-index: 5;
-        position: absolute;
-        border: none;
-        background: transparent;
-        width: 15%;
-    }
-
-
-    body.ribbit .milestone-slider .prev-arrow {
-        text-align:left;
-    }
+.milestone-slider .slick-arrow {
+    bottom: -34px;
+    top: 0;
+    z-index: 5;
+    position: absolute;
+    border: none;
+    background: transparent;
+    width: 15%;
+}
 
 
-    body.ribbit .milestone-slider .next-arrow {
-        text-align: right;
-    }
-
-    body.ribbit  .milestone-slider .slick-arrow i {
-        position: absolute;
-        font-size: 24px;
-        bottom: 0;
-    }
-
-    body div[class*="bg-primary"] .milestone-slider .slick-arrow i {
-        color: var(--hl-bs--primary-opposite);
-    }
-    body div[class*="bg-primary-light"] .milestone-slider .slick-arrow i,
-    body div[class*="bg-primary-medium-gray"] .milestone-slider .slick-arrow i,
-    body div[class*="bg-primary-medium-gray"] .milestone-slider .slick-arrow i {
-        color: #000;
-    }
-
-    body div[class*="bg-secondary"] .milestone-slider .slick-arrow i {
-        color: var(--ui-secondary-text);
-    }
+body.ribbit .milestone-slider .prev-arrow {
+    text-align: left;
+}
 
 
+body.ribbit .milestone-slider .next-arrow {
+    text-align: right;
+}
 
-     .milestone-slider .slick-arrow:last-child,
-     .milestone-slider .slick-arrow:nth-last-child(1) {
-        bottom: 30px;
-     }
+body.ribbit .milestone-slider .slick-arrow i {
+    position: absolute;
+    font-size: 24px;
+    bottom: 0;
+}
 
-    .milestone-slider .slick-arrow:is(:hover, :focus) {
-        color: white;
-    }
+body div[class*="bg-primary"] .milestone-slider .slick-arrow i {
+    color: var(--hl-bs--primary-opposite);
+}
 
+body div[class*="bg-primary-light"] .milestone-slider .slick-arrow i,
+body div[class*="bg-primary-medium-gray"] .milestone-slider .slick-arrow i,
+body div[class*="bg-primary-medium-gray"] .milestone-slider .slick-arrow i {
+    color: #000;
+}
 
-    .milestone-slider .slick-arrow::before {
-        opacity: 1;
-    }
-
-    .milestone-slider .slick-prev:before,.milestone-slider .slick-next:before {
-        font-family: 'Font Awesome 6 Pro';
-    }
-
-    .slick-prev::before,
-    .slick-next::before {
-        content: none;
-    }
-
-    .milestone-slider .prev-arrow {
-        left: calc(50% - 584px);
-        z-index: 4;
-    }
-
-    .milestone-slider .next-arrow {
-        right: calc(50% - 584px);
-    }
+body div[class*="bg-secondary"] .milestone-slider .slick-arrow i {
+    color: var(--ui-secondary-text);
+}
 
 
-    .milestone-slider.slick-dotted.slick-slider {
-        margin-bottom: 120px;
-    }
 
-    .milestone-slider.slick-dotted::before {
-        content: '';
-        opacity: 0.1;
-        border-top: 6px solid var(--hl-bs--secondary);
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 76px;
-    }
+.milestone-slider .slick-arrow:last-child,
+.milestone-slider .slick-arrow:nth-last-child(1) {
+    bottom: 30px;
+}
+
+.milestone-slider .slick-arrow:is(:hover, :focus) {
+    color: white;
+}
 
 
-    body.ribbit div[class*="bg-secondary-light"] .milestone-slider.slick-dotted::before {
-        border-top: 6px solid var(--hl-bs--secondary);
-        }
+.milestone-slider .slick-arrow::before {
+    opacity: 1;
+}
 
-        body div[class*="bg-secondary"] .milestone-slider.slick-dotted::before {
-            border-top: 6px solid rgba(255, 255, 255, 0.85);
-        }
+.milestone-slider .slick-prev:before,
+.milestone-slider .slick-next:before {
+    font-family: 'Font Awesome 6 Pro';
+}
 
-    body div[class*="primary"] .milestone-slider.slick-dotted::before {
-        border-top: 6px solid var(--hl-bs--primary);
-        }
+.slick-prev::before,
+.slick-next::before {
+    content: none;
+}
 
-        body div[class*="bg-primary-dark"] .milestone-slider.slick-dotted::before,
-        body div[class*="bg-primary"] .milestone-slider.slick-dotted::before {
-            border-top: 6px solid rgba(255, 255, 255, 0.15);
-        }
+.milestone-slider .prev-arrow {
+    left: calc(50% - 584px);
+    z-index: 4;
+}
 
-        body.ribbit div[class*="bg-primary-light"] .milestone-slider.slick-dotted::before,
-        body.ribbit div[class*="bg-primary-medium-gray"] .milestone-slider.slick-dotted::before,
-        body.ribbit div[class*="primary-light-gray"] .milestone-slider.slick-dotted::before {
-            border-color: #000;
-        }
-
-        body.ribbit div[class*="bg-primary-light"] .milestone-slider .slick-dots li,
-        body.ribbit div[class*="bg-primary-medium-gray"] .milestone-slider .slick-dots li,
-        body.ribbit div[class*="primary-light-gray"] .milestone-slider .slick-dots li {
-            border-color: #000;
-        }
-
-        body.ribbit #MPOuterMost div[class*="bg-primary-light"] .milestone-slider .slick-dots li.slick-active,
-        body.ribbit #MPOuterMost div[class*="bg-primary-medium-gray"] .milestone-slider .slick-dots li.slick-active,
-        body.ribbit #MPOuterMost div[class*="primary-light-gray"] .milestone-slider .slick-dots li.slick-active
-        {
-            background-color: #000;
-        }
-
-    
-    .milestone {
-        text-align: center;
-    }
-    .milestone .HtmlContent,
-    .milestone h2 {
-        transition: .3s;
-        position: relative;
-    }
-    .milestone h2 {
-        margin-top: 0;
-        margin-bottom: 0;
-        height: 48px;
-    }
-    .milestone h2::before,
-    .milestone h2::after {
-        content: '';
-        border-radius: 50%;
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translate(-50%, 50%);
-    }
-    .milestone h2::before {
-        width: 25px;
-        height: 25px;
-        background: var(--hl-bs--secondary);
-    }
-    body div[class*="bg-primary"] .milestone h2::before {
-        background: var(--hl-bs--primary);
-    }
-    body.ribbit div[class*="bg-primary-dark"] .milestone h2::before,
-    body.ribbit div[class*="bg-primary"] .milestone h2::before {
-        background: #fff;
-    }
-
-    body div[class*="bg-secondary"] .milestone h2::before {
-        background: var(--ui-default-text);
-    }
+.milestone-slider .next-arrow {
+    right: calc(50% - 584px);
+}
 
 
-    body div[class*="bg-secondary"] .milestone h2::before,
-    body div[class*="bg-secondary-dark"] .milestone h2::before,
-    body div[class*="bg-secondary-light"] .milestone h2::before {
-        background: #fff;
-    }
+.milestone-slider.slick-dotted.slick-slider {
+    margin-bottom: 120px;
+}
 
-    body div[class*="bg-primary"] .milestone h2::before {
-        color: var(--hl-bs--primary-opposite);
-    }
-    body div[class*="bg-secondary"] .milestone h2::before {
-        color: var(--ui-secondary-text);
-    }
-
-    .milestone h2::after {
-        width: 13px;
-        height: 13px;
-        background: #DEF5FF;
-    }
-    .milestone:not(.slick-current) h2 {
-        transform: translateY(10px);
-    }
-    .milestone.slick-current h2::before {
-        width: 45px;
-        height: 45px;
-        bottom: -30px;
-    }
-    .milestone.slick-current h2::after {
-        font-family: 'Font Awesome 5 Pro';
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        background: transparent;
-        color: #DEF5FF;
-        font-weight: 300;
-        font-size: 28px;
-        content: '\f277';
-        bottom: -30px;
-    }
-
-    body div[class*="bg-primary"] .milestone.slick-current h2::after {
-        color: var(--hl-bs--primary-opposite);
-    }
+.milestone-slider.slick-dotted::before {
+    content: '';
+    opacity: 0.1;
+    border-top: 6px solid var(--hl-bs--secondary);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 76px;
+}
 
 
-    body div[class*="bg-primary-dark"] .milestone.slick-current h2::after,
-    body div[class*="bg-primary"] .milestone.slick-current h2::after {
-        color: var(--hl-bs--primary);
-    }
+body.ribbit div[class*="bg-secondary-light"] .milestone-slider.slick-dotted::before {
+    border-top: 6px solid var(--hl-bs--secondary);
+}
 
-    body div[class*="bg-secondary"] .milestone.slick-current h2::after {
-        color: var(--ui-secondary-text);
-    }
+body div[class*="bg-secondary"] .milestone-slider.slick-dotted::before {
+    border-top: 6px solid rgba(255, 255, 255, 0.85);
+}
 
-    body div[class*="bg-secondary"] .milestone.slick-current h2::after,
-    body div[class*="bg-secondary-dark"] .milestone.slick-current h2::after,
-    body div[class*="bg-secondary-light"] .milestone.slick-current h2::after {
-        color: var(--hl-bs--secondary);
-    }
+body div[class*="primary"] .milestone-slider.slick-dotted::before {
+    border-top: 6px solid var(--hl-bs--primary);
+}
 
-    .milestone .HtmlContent {
-        opacity: 0;
-        padding: 20px 25px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 70px;
-    }
-    .milestone .HtmlContent::before,
-    .milestone .HtmlContent::after {
-        content: '';
-        position: absolute;
-        width: 115px;
-        border-top: 1px solid var(--hl-bs--secondary);
-        left: calc(50% - 57.5px);
-        top: 0;
-    }
-    body div[class*="bg-primary"] .milestone .HtmlContent::before,
-    body div[class*="bg-primary"] .milestone .HtmlContent::after {
-        border-top: 1px solid var(--hl-bs--primary-opposite);
-    }
+body div[class*="bg-primary-dark"] .milestone-slider.slick-dotted::before,
+body div[class*="bg-primary"] .milestone-slider.slick-dotted::before {
+    border-top: 6px solid rgba(255, 255, 255, 0.15);
+}
 
-    body div[class*="bg-secondary"] .milestone .HtmlContent::before,
-    body div[class*="bg-secondary"] .milestone .HtmlContent::after {
-        border-top: 1px solid var(--ui-secondary-text);
-    }
+body.ribbit div[class*="bg-primary-light"] .milestone-slider.slick-dotted::before,
+body.ribbit div[class*="bg-primary-medium-gray"] .milestone-slider.slick-dotted::before,
+body.ribbit div[class*="primary-light-gray"] .milestone-slider.slick-dotted::before {
+    border-color: #000;
+}
 
-    .milestone .HtmlContent::after {
-        top: auto;
-        bottom: 0;
-    }
-    .milestone.slick-current .HtmlContent {
-        opacity: 1;
-    }
-    .milestone.slick-current h2,
-    .milestone h3 {
-        color: #003045;
-    }
-    .milestone:not(.slick-current) h2 {
-        color: var(--hl-bs--secondary);
-        font-size: 28px;
-    }
+body.ribbit div[class*="bg-primary-light"] .milestone-slider .slick-dots li,
+body.ribbit div[class*="bg-primary-medium-gray"] .milestone-slider .slick-dots li,
+body.ribbit div[class*="primary-light-gray"] .milestone-slider .slick-dots li {
+    border-color: #000;
+}
 
-    body div[class*="bg-primary"] .milestone-slider .slick-dots li {
-        border-color: var(--hl-bs--primary-opposite);
-     }
- 
-     body div[class*="bg-primary"] .milestone-slider .slick-dots li.slick-active {
-         background-color: var(--hl-bs--primary-opposite);
-      }
+body.ribbit #MPOuterMost div[class*="bg-primary-light"] .milestone-slider .slick-dots li.slick-active,
+body.ribbit #MPOuterMost div[class*="bg-primary-medium-gray"] .milestone-slider .slick-dots li.slick-active,
+body.ribbit #MPOuterMost div[class*="primary-light-gray"] .milestone-slider .slick-dots li.slick-active {
+    background-color: #000;
+}
 
-    body div[class*="bg-secondary"] .milestone-slider .slick-dots li {
-       border-color: var(--ui-secondary-text);
-    }
 
-    body div[class*="bg-secondary"] .milestone-slider .slick-dots li.slick-active {
-        background-color: var(--ui-secondary-text);
-     }
+.milestone {
+    text-align: center;
+}
+
+.milestone .HtmlContent,
+.milestone h2 {
+    transition: .3s;
+    position: relative;
+}
+
+.milestone h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 48px;
+}
+
+.milestone h2::before,
+.milestone h2::after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.milestone h2::before {
+    width: 25px;
+    height: 25px;
+    background: var(--hl-bs--secondary);
+}
+
+body div[class*="bg-primary"] .milestone h2::before {
+    background: var(--hl-bs--primary);
+}
+
+body.ribbit div[class*="bg-primary-dark"] .milestone h2::before,
+body.ribbit div[class*="bg-primary"] .milestone h2::before {
+    background: #fff;
+}
+
+body div[class*="bg-secondary"] .milestone h2::before {
+    background: var(--ui-default-text);
+}
+
+
+body div[class*="bg-secondary"] .milestone h2::before,
+body div[class*="bg-secondary-dark"] .milestone h2::before,
+body div[class*="bg-secondary-light"] .milestone h2::before {
+    background: #fff;
+}
+
+body div[class*="bg-primary"] .milestone h2::before {
+    color: var(--hl-bs--primary-opposite);
+}
+
+body div[class*="bg-secondary"] .milestone h2::before {
+    color: var(--ui-secondary-text);
+}
+
+.milestone h2::after {
+    width: 13px;
+    height: 13px;
+    background: #DEF5FF;
+}
+
+.milestone:not(.slick-current) h2 {
+    transform: translateY(10px);
+}
+
+.milestone.slick-current h2::before {
+    width: 45px;
+    height: 45px;
+    bottom: -30px;
+}
+
+.milestone.slick-current h2::after {
+    font-family: 'Font Awesome 5 Pro';
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background: transparent;
+    color: #DEF5FF;
+    font-weight: 300;
+    font-size: 28px;
+    content: '\f277';
+    bottom: -30px;
+}
+
+body div[class*="bg-primary"] .milestone.slick-current h2::after {
+    color: var(--hl-bs--primary-opposite);
+}
+
+
+body div[class*="bg-primary-dark"] .milestone.slick-current h2::after,
+body div[class*="bg-primary"] .milestone.slick-current h2::after {
+    color: var(--hl-bs--primary);
+}
+
+body div[class*="bg-secondary"] .milestone.slick-current h2::after {
+    color: var(--ui-secondary-text);
+}
+
+body div[class*="bg-secondary"] .milestone.slick-current h2::after,
+body div[class*="bg-secondary-dark"] .milestone.slick-current h2::after,
+body div[class*="bg-secondary-light"] .milestone.slick-current h2::after {
+    color: var(--hl-bs--secondary);
+}
+
+.milestone .HtmlContent {
+    opacity: 0;
+    padding: 20px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.milestone .HtmlContent::before,
+.milestone .HtmlContent::after {
+    content: '';
+    position: absolute;
+    width: 115px;
+    border-top: 1px solid var(--hl-bs--secondary);
+    left: calc(50% - 57.5px);
+    top: 0;
+}
+
+body div[class*="bg-primary"] .milestone .HtmlContent::before,
+body div[class*="bg-primary"] .milestone .HtmlContent::after {
+    border-top: 1px solid var(--hl-bs--primary-opposite);
+}
+
+body div[class*="bg-secondary"] .milestone .HtmlContent::before,
+body div[class*="bg-secondary"] .milestone .HtmlContent::after {
+    border-top: 1px solid var(--ui-secondary-text);
+}
+
+.milestone .HtmlContent::after {
+    top: auto;
+    bottom: 0;
+}
+
+.milestone.slick-current .HtmlContent {
+    opacity: 1;
+}
+
+.milestone.slick-current h2,
+.milestone h3 {
+    color: #003045;
+}
+
+.milestone:not(.slick-current) h2 {
+    color: var(--hl-bs--secondary);
+    font-size: 28px;
+}
+
+body div[class*="bg-primary"] .milestone-slider .slick-dots li {
+    border-color: var(--hl-bs--primary-opposite);
+}
+
+body div[class*="bg-primary"] .milestone-slider .slick-dots li.slick-active {
+    background-color: var(--hl-bs--primary-opposite);
+}
+
+body div[class*="bg-secondary"] .milestone-slider .slick-dots li {
+    border-color: var(--ui-secondary-text);
+}
+
+body div[class*="bg-secondary"] .milestone-slider .slick-dots li.slick-active {
+    background-color: var(--ui-secondary-text);
+}
 
 /****** event page ******/
 
@@ -5546,19 +5807,40 @@ body.ribbit #edit-event-button-container {
 
 /****** larger screens only ******/
 
+@media (min-width: 1200px) {
+    .hero-slider .HtmlContent>* {
+        max-width: 800px;
+    }
+
+    body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide {
+        padding: 128px 0px;
+    }
+
+    .hero-slider .slick-dots {
+        text-align: left;
+        left: calc(50% - 600px);
+    }
+}
+
+.hero-slider.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
 @media (min-width: 992px) {
-    .row-wide:not(.default-pad) > .col-md-4:first-child,
-    .row-wide:not(.default-pad) > .col-md-6:first-child,
-    .row-wide:not(.default-pad) > .col-md-8:first-child {
+
+    .row-wide:not(.default-pad)>.col-md-4:first-child,
+    .row-wide:not(.default-pad)>.col-md-6:first-child,
+    .row-wide:not(.default-pad)>.col-md-8:first-child {
         padding-right: 24px;
     }
-    
-    .row-wide:not(.default-pad) > .col-md-6:last-child,
-    .row-wide:not(.default-pad) > .col-md-8 + .col-md-4,
-    .row-wide:not(.default-pad) > .col-md-8:last-child {
+
+    .row-wide:not(.default-pad)>.col-md-6:last-child,
+    .row-wide:not(.default-pad)>.col-md-8+.col-md-4,
+    .row-wide:not(.default-pad)>.col-md-8:last-child {
         padding-left: 24px;
     }
-    body.ribbit .row-wide:not(.default-pad) > .col-md-3 {
+
+    body.ribbit .row-wide:not(.default-pad)>.col-md-3 {
         padding-left: 12px;
         padding-right: 12px;
     }
@@ -5843,18 +6125,18 @@ body.ribbit #edit-event-button-container {
 
 @media (max-width: 991px) {
 
-    body.ribbit .row.overlap > div {
+    body.ribbit .row.overlap>div {
         margin-top: 0px;
     }
 
-    body.ribbit .row.overlap > div:first-of-type {
+    body.ribbit .row.overlap>div:first-of-type {
         margin-top: -48px;
     }
 
     .featured-resource.make-carousel-tiles .HLMyDocuments .listIconContainer {
-            left: unset;
-            right: -41px;
-            top: -164px;
+        left: unset;
+        right: -41px;
+        top: -164px;
     }
 
     .hero,
@@ -5901,7 +6183,8 @@ body.ribbit #edit-event-button-container {
         flex-wrap: wrap;
         justify-content: center;
     }
-    #MPOuterMost #MPOuter .cards > .col-md-12 {
+
+    #MPOuterMost #MPOuter .cards>.col-md-12 {
         margin: -8px;
     }
 
@@ -6057,13 +6340,13 @@ body.ribbit #edit-event-button-container {
     }
 
     .tabbed-schedule .col-md-3.fixed,
-	.tabbed-schedule .col-md-3.absolute {
-		position: static !important;
-	}
-	
-	body.ribbit .tabbed-schedule .row[class*="tab"] {
-		margin: 0;
-	}
+    .tabbed-schedule .col-md-3.absolute {
+        position: static !important;
+    }
+
+    body.ribbit .tabbed-schedule .row[class*="tab"] {
+        margin: 0;
+    }
 
 
 
@@ -6082,10 +6365,10 @@ body.ribbit #edit-event-button-container {
         display: block;
     }
 
-    .summary-edit .Content ul + .text-container,
+    .summary-edit .Content ul+.text-container,
     .summary-edit .Content .text-container,
     .summary-edit .Content .img-container,
-    .summary-edit .Content > ul {
+    .summary-edit .Content>ul {
         width: 100%;
     }
 
@@ -6200,13 +6483,16 @@ body.ribbit #edit-event-button-container {
         padding-left: 0;
         padding-right: 0;
     }
+
     .hero .slider .slide {
         display: block;
     }
+
     .hero .slider .slide .HtmlContent {
         padding-top: 0;
         width: 100%;
     }
+
     .hero .slider .slide .img-container {
         width: 100%;
         height: 240px;
@@ -6215,54 +6501,54 @@ body.ribbit #edit-event-button-container {
     .menu-icon {
         display: block;
     }
-	
-	.hero.banner .conference-nav-tabs .HtmlContent {
-		max-width: 100%;
-	}
 
-	.conference-nav-tabs ul {
-		overflow: hidden;
-		max-height: 0;
-		transition: max-height 0.3s ease;
-		flex-direction: column;
-		text-align: left;
-		right: 0;
-		bottom: -3px;
-		border-radius: 8px 0 0 0;
-	}
+    .hero.banner .conference-nav-tabs .HtmlContent {
+        max-width: 100%;
+    }
 
-	/* Hamburger menu styling */
-	.menu-icon {
-		display: none;
-		cursor: pointer;
-	}
+    .conference-nav-tabs ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+        flex-direction: column;
+        text-align: left;
+        right: 0;
+        bottom: -3px;
+        border-radius: 8px 0 0 0;
+    }
 
-	.menu-icon {
-		display: block;
-		color: white;
-		position: absolute;
-		left: 10px;
-		bottom: 20px;
-	}
-	
-	.menu-icon i {
-		margin-left: 8px;
-	}
+    /* Hamburger menu styling */
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+    }
 
-	.conference-nav-tabs li {
-		margin: 0px 0;
-	}
+    .menu-icon {
+        display: block;
+        color: white;
+        position: absolute;
+        left: 10px;
+        bottom: 20px;
+    }
 
-	.conference-nav-tabs ul li a {
-		margin-right: 0;
-		width: 100%;
-		display: block;
-		border-radius: 0;
-	}
+    .menu-icon i {
+        margin-left: 8px;
+    }
 
-	ul.displayed {
-		max-height: 100%;
-	}
+    .conference-nav-tabs li {
+        margin: 0px 0;
+    }
+
+    .conference-nav-tabs ul li a {
+        margin-right: 0;
+        width: 100%;
+        display: block;
+        border-radius: 0;
+    }
+
+    ul.displayed {
+        max-height: 100%;
+    }
 }
 
 @media (width < 767px) {
@@ -6290,17 +6576,19 @@ body.ribbit #edit-event-button-container {
     #MPSearchBlock {
         display: block;
     }
+
     .hero .memberhome-slider .memberhome-slide {
         padding: 24px;
         display: block;
         height: auto;
     }
-    
+
     .memberhome-slider .memberhome-slide .HtmlContent {
         width: 100%;
         padding: 0 0 20px 0;
         display: block;
     }
+
     .memberhome-slider .memberhome-slide .img-container {
         width: 100%;
         height: 140px;
