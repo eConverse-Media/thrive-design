@@ -1355,7 +1355,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 }
 
 
-.card.icon-card .HtmlContent > h3 {
+.card.icon-card .HtmlContent>h3 {
     font-size: 18px;
 }
 
@@ -1753,7 +1753,7 @@ body.ribbit .cta-tile a {
 
 #MPOuterMost #MPOuter .cards>.col-md-12 {
     margin: -12px;
-} 
+}
 
 body.ribbit #MPOuterMost #MPOuter .cards>div .card {
     margin: 12px;
@@ -4548,16 +4548,17 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     text-transform: uppercase;
     letter-spacing: 0.25px;
 }
+
 .promo-block .HtmlContent,
 body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h2,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h3,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h4,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h5,
-body.ribbit #MPOuterMost #MPOuter .promo-block  .HtmlContent h6  {
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h3,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h4,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h5,
+body.ribbit #MPOuterMost #MPOuter .promo-block .HtmlContent h6 {
     color: white;
 }
 
-.promo-block .HtmlContent p > a {
+.promo-block .HtmlContent p>a {
     color: white;
 }
 
