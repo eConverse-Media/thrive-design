@@ -5653,23 +5653,33 @@ body.ribbit #edit-event-button-container {
 }
 
 @media (min-width: 992px) {
+    
+    body.ribbit .row-wide>.col-md-6:last-child, 
+    body.ribbit .row-wide>.col-md-8+.col-md-4, 
+    body.ribbit .row-wide>.col-md-8:last-child {
+        padding-left: 24px;
+    }
 
-    .row-wide:not(.default-pad)>.col-md-4:first-child,
-    .row-wide:not(.default-pad)>.col-md-6:first-child,
-    .row-wide:not(.default-pad)>.col-md-8:first-child {
+    body.ribbit .row-wide>.col-md-4:first-child, 
+    body.ribbit .row-wide>.col-md-6:first-child, 
+    body.ribbit .row-wide>.col-md-8:first-child {
         padding-right: 24px;
     }
 
-    .row-wide:not(.default-pad)>.col-md-6:last-child,
-    .row-wide:not(.default-pad)>.col-md-8+.col-md-4,
-    .row-wide:not(.default-pad)>.col-md-8:last-child {
-        padding-left: 24px;
+    body.ribbit .row-wide>.col-md-4:first-child:has(+.col-md-4), 
+    body.ribbit .row-wide>.col-md-4:nth-child(2):has(+.col-md-4) {
+        padding-right: 12px;
+    }
+
+    body.ribbit .row-wide>.col-md-4+.col-md-4 {
+        padding-left: 12px;
     }
 
     body.ribbit .row-wide:not(.default-pad)>.col-md-3 {
         padding-left: 12px;
         padding-right: 12px;
     }
+
 }
 
 /****** smaller screens only ******/
