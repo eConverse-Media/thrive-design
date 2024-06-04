@@ -75,10 +75,11 @@ body.ribbit #MPOuterMost #MPOuter .HtmlContent h2 {
 
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl h2,
 body.ribbit #MPOuterMost #MPOuter .col-md-4 .ContentUserControl h2,
-body.ribbit .col-md-3 .leaderboard>div[id$=_divContainer]>.ContentMainHeader,
-body.ribbit .col-md-4 .leaderboard>div[id$=_divContainer]>.ContentMainHeader,
+body.ribbit .col-md-3 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
+body.ribbit .col-md-4 .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .widget-heading h2,
 body.ribbit #MPOuterMost #MPOuter .col-md-4 .widget-heading h2,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .HLLandingControl .ContentMainHeader,
 body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h2,
 body.ribbit .ContentItemMVC.card h2 {
     color: var(--ui-default-text-small);
@@ -918,6 +919,10 @@ body.ribbit .arrow-link-standalone a.link-standalone {
     font-weight: 600;
 }
 
+.col-md-3 .make-arrow-link em a {
+    font-size: 14px;
+}
+
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
 body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default i,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
@@ -1285,7 +1290,7 @@ body.ribbit .bg-gray {
 /****** cards ******/
 
 .ContentItemHtml.card,
-.card.leaderboard,
+.card.engagement-leaderboard,
 .card.clickable>a,
 .card.team button,
 body.ribbit .narrow-widget-container,
@@ -1303,7 +1308,7 @@ body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card,
 .col-md-3 .card.clickable>a,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl,
-.card.leaderboard,
+.card.engagement-leaderboard,
 body.ribbit:not(.interior) .col-md-3 .ContentItemMVC.card {
     padding: 16px;
 }
@@ -1321,7 +1326,7 @@ body.ribbit .narrow-widget-container {
 }
 
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .leaderboard .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
@@ -1392,6 +1397,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 /*** widget cards ***/
 
 body.ribbit .narrow-widget-container .widget-heading,
+body.ribbit #MPOuterMost #MPOuter .col-md-3 .HLLandingControl .ContentMainHeader,
 body.ribbit .card .HLLandingControl .row.heading {
     padding: 0 0 8px 0 !important;
 }
@@ -1432,6 +1438,9 @@ body.ribbit .bootstrap-4 .view-more-link a.link-standalone {
     border-bottom: 1px solid transparent;
     font-size: 16px;
 }
+body.ribbit .col-md-3 .view-more-link a.link-standalone {
+    font-size: 14px;
+}
 
 body.ribbit .bootstrap-4 .view-more-link a.link-standalone:is(:hover, :focus) {
     text-decoration: none;
@@ -1443,7 +1452,7 @@ body.ribbit .bootstrap-4 .quick-links-container.narrow-widget-container .link-co
     font-weight: 600;
 }
 
-body.ribbit #MPOuterMost #MPOuter .card:not(.leaderboard) .HLLandingControl .Content ul li {
+body.ribbit #MPOuterMost #MPOuter .card:not(.engagement-leaderboard) .HLLandingControl .Content ul li {
     padding: 16px 0;
     border-bottom: 1px solid #E9E9E9;
 }
@@ -3640,7 +3649,7 @@ body.ribbit .blog-list-featured-entry .content {
 
 /************ most active members ************/
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs {
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs {
     justify-content: space-between;
     gap: 0;
     padding-left: 10px;
@@ -3650,20 +3659,20 @@ body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs {
     border: none;
 }
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li:first-child {
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li:first-child {
     margin-right: auto;
 }
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li:last-child {
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li:last-child {
     margin-left: auto;
 }
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li {
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li {
     display: block;
     flex: unset;
 }
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li>a {
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li>a {
     font-size: 12px;
     line-height: 20px;
     color: var(--ui-default-text-small);
@@ -3676,15 +3685,15 @@ body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li>a {
     width: auto;
 }
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li>a:is(:hover, :focus) {
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li>a:is(:hover, :focus) {
     color: var(--ui-heading-text);
     border-bottom-color: var(--ui-heading-text);
 }
 
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li.active>a,
-body.ribbit #MPOuterMost .leaderboard ul.nav.nav-tabs>li.active>a:is(:hover, :focus) {
-    color: var(--ui-heading-text);
-    border-bottom-color: var(--ui-heading-text);
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li.active>a,
+body.ribbit #MPOuterMost .engagement-leaderboard ul.nav.nav-tabs>li.active>a:is(:hover, :focus) {
+    color: var(--hl-bs--link);
+    border-bottom-color: var(--hl-bs--link);
     font-weight: 700;
 }
 
@@ -3698,7 +3707,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandi
     border: none;
 }
 
-body.ribbit #MPOuterMost .leaderboard>div[id$=_divContainer]>.ContentMainHeader {
+body.ribbit #MPOuterMost .engagement-leaderboard>div[id$=_divContainer]>.ContentMainHeader {
     padding: 0 0 8px 0;
 }
 
@@ -3708,20 +3717,20 @@ body.ribbit:not(.interior) .HLLandingControl.HLEngagement ul.display-vertical {
     padding: 0;
 }
 
-body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li:hover {
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li:hover {
     background: transparent;
 }
 
-body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a .leaderboard-user-info>a {
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a .engagement-leaderboard-user-info>a {
     color: var(--ui-heading-text);
 }
 
-body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a:is(:hover, :focus) .leaderboard-user-info>a {
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a:is(:hover, :focus) .engagement-leaderboard-user-info>a {
     text-decoration: underline;
     color: var(--ui-heading-text);
 }
 
-body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical .leaderboard-points-label>.points-label {
+body.ribbit #MPOuterMost .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical .engagement-leaderboard-points-label>.points-label {
     border-radius: 0;
     background: transparent;
     border: none;
@@ -3731,50 +3740,50 @@ body.ribbit #MPOuterMost .leaderboard .tab-content .HLEngagement>.Content ul.dis
     font-weight: 300;
 }
 
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].leaderboard .HLLandingControl ul:not(.dropdown-menu)>li:last-child {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"].engagement-leaderboard .HLLandingControl ul:not(.dropdown-menu)>li:last-child {
     padding-bottom: 0;
 }
 
-.home .leaderboard .Content ul li,
-.home .leaderboard .Content ul li .title-row {
+.home .engagement-leaderboard .Content ul li,
+.home .engagement-leaderboard .Content ul li .title-row {
     display: flex;
     align-items: center;
 }
 
-.home .leaderboard .Content ul li .title-row {
+.home .engagement-leaderboard .Content ul li .title-row {
     width: 75%;
 }
 
-.home .leaderboard .Content ul li .content-row {
+.home .engagement-leaderboard .Content ul li .content-row {
     width: 25%;
 }
 
-.home .leaderboard .Content ul li .title-row img {
+.home .engagement-leaderboard .Content ul li .title-row img {
     max-height: 30px;
     max-width: 30px;
 }
 
-.home .leaderboard .Content ul li .title-row .Picture {
+.home .engagement-leaderboard .Content ul li .title-row .Picture {
     width: 30px;
     margin-right: 10px;
 }
 
-.home .leaderboard .Content ul li .title-row .col-md-9 {
+.home .engagement-leaderboard .Content ul li .title-row .col-md-9 {
     width: calc(100% - 40px);
     padding: 0;
 }
 
-.home .leaderboard .Content ul li .content-row .Picture {
+.home .engagement-leaderboard .Content ul li .content-row .Picture {
     display: none;
 }
 
-.home .leaderboard .Content ul li .content-row .col-md-9 {
+.home .engagement-leaderboard .Content ul li .content-row .col-md-9 {
     padding: 0;
     width: 100%;
     text-align: right;
 }
 
-body.ribbit.home .leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a {
+body.ribbit.home .engagement-leaderboard .HLLandingControl .Content ul li .title-row .col-md-9 a {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -3782,7 +3791,7 @@ body.ribbit.home .leaderboard .HLLandingControl .Content ul li .title-row .col-m
     color: #272727;
 }
 
-.home .leaderboard .Content ul li .content-row .points-label {
+.home .engagement-leaderboard .Content ul li .content-row .points-label {
     background: transparent;
     padding: 0;
     color: #9A9A9A;
@@ -3805,11 +3814,11 @@ body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl .row.head
     display: none;
 }
 
-body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement {
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
     position: relative;
 }
 
-body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
     content: 'Connect with members!';
     position: absolute;
     top: 50%;
@@ -3819,7 +3828,7 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .
 }
 
 
-body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li {
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li {
     max-width: unset;
     min-width: unset;
     width: 50px;
@@ -3832,12 +3841,12 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .
     margin-left: -10px;
 }
 
-body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li img {
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li img {
     border: 2px solid #fff;
     border-radius: 50%;
 }
 
-body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li:first-of-type {
+body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement ul:not(.dropdown-menu)>li:first-of-type {
     margin-left: 0;
 }
 
@@ -4008,7 +4017,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row>div[class*="col-md-"]>div[cla
 .latest-news-list.ContentUserControl .blogs-block,
 .featured-tile-slider li:not([id*="slick-slide"]),
 .featured-tile-slider .blogs-block,
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li,
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li,
 .fetch-test ul li {
     width: calc(25% - 30px);
     margin: 0 15px 30px;
@@ -4035,16 +4044,16 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 }
 
 
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
     margin-left: 0;
 }
 
 
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
     margin-right: 0;
 }
 
-body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li {
+body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li {
     min-height: unset;
     padding-top: 130px;
 }
@@ -6212,28 +6221,28 @@ body.ribbit #edit-event-button-container {
         flex-direction: column;
     }
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li {
         width: calc(100% - 30px);
     }
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
         margin-left: 15px;
     }
 
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .featured-cards .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
         margin-right: 15px;
     }
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
         width: calc(100% - 30px);
     }
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li:first-of-type {
         margin-left: 15px;
     }
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li:last-of-type {
         margin-right: 15px;
     }
 
@@ -6241,7 +6250,7 @@ body.ribbit #edit-event-button-container {
         flex-direction: column;
     }
 
-    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
+    body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .cards.events .HLLandingControl ul:not(.dropdown-menu)>li {
         margin-bottom: 15px;
     }
 
@@ -6412,11 +6421,11 @@ body.ribbit #edit-event-button-container {
         width: calc(100% - 24px);
     }
 
-    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement {
+    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
         padding-bottom: 50px;
     }
 
-    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
+    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
         bottom: 0;
         left: 0;
         transform: none;
@@ -6431,12 +6440,12 @@ body.ribbit #edit-event-button-container {
     }
 
 
-    body.ribbit .leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a {
+    body.ribbit .engagement-leaderboard .tab-content .HLEngagement>.Content ul.display-vertical>li>a {
         flex: 1;
     }
 
 
-    .leaderboard .Content ul li .title-row {
+    .engagement-leaderboard .Content ul li .title-row {
         width: 100%;
     }
 
