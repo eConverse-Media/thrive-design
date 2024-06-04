@@ -549,14 +549,14 @@ body.ribbit #FOOTER .make-buttons.white-outline-btn em a:is(:hover, :focus) {
 }
 body.ribbit .btn-ghost {
     color: var(--hl-bs--default-text);
-    background: var(--hl-bs--gray-100);
+    background: transparent;
     border: none;
 }
 
 body.ribbit .btn-ghost:is(:hover, :focus),
 body.ribbit .btn-ghost:is(:hover, :focus):not(.disabled) {
     color: var(--hl-bs--default-text);
-    background: var(--hl-bs--gray-300);
+    background: transparent;
 }
 
 .make-buttons.conditional a[id*="Link"] {
@@ -3056,9 +3056,11 @@ body.ribbit .profile-snippet-stats .btn-alt-ghost div:last-child {
 
 /************ activity feed ************/
 
-body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .feed-item-row,
-body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .images-preview {
+body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .feed-item-row {
     border-radius: 0 0 8px 8px;
+}
+body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .images-preview {
+    border-radius: 0;
 }
 body.ribbit .feed-list .layout-grid-cell .feed-item-row {
     border-radius: 8px;
@@ -3072,6 +3074,13 @@ body.ribbit .FeedWidget .card {
 }
 body.ribbit .FeedWidget .layout-grid-cell {
     margin-bottom: 16px !important;
+}
+body.ribbit .feed-image {
+    aspect-ratio: 3 / 1;
+}
+body.ribbit .col-md-8[class*="section"] .feed-list .text-secondary.font-size-xs,
+body.ribbit .col-md-9[class*="section"] .feed-list .text-secondary.font-size-xs {
+    font-size: 16px !important;
 }
 
 /************ events & blogs ************/
