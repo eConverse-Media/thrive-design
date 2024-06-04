@@ -1,14 +1,14 @@
 function handleInteriorPadding() {
     var firstRow = $('#MainCopy_ContentWrapper > .row:first-child'),
         lastRow = $('#MainCopy_ContentWrapper > *:last-child').is('#MainCopy_extraPanel') ? $('#MainCopy_ContentWrapper > .row:nth-last-child(2)') : $('#MainCopy_ContentWrapper > .row:last-child');
-    
+
     if ($(firstRow).hasClass('hl-secondary-row-bkgd') ||
-    $(firstRow).hasClass('hl-primary-row-bkgd')) {
+        $(firstRow).hasClass('hl-primary-row-bkgd')) {
         $('#MainCopy_ContentWrapper').addClass('no-top-padding');
     }
 
     if ($(lastRow).hasClass('hl-secondary-row-bkgd') ||
-    $(lastRow).hasClass('hl-primary-row-bkgd')) {
+        $(lastRow).hasClass('hl-primary-row-bkgd')) {
         $('#MainCopy_ContentWrapper').addClass('no-bottom-padding');
     }
 }
@@ -27,20 +27,20 @@ function handleClickable() {
             var target = $(link).attr('target'),
                 rel = $(link).attr('rel');
 
-            if(target === '_blank') {
+            if (target === '_blank') {
                 $(self).wrapInner('<a href="' + href + '" target="' + target + '" rel="' + rel + '" />');
                 $(link).closest('p').addClass('card-link');
             }
-            if(target === 'self' || target === undefined) {
+            if (target === 'self' || target === undefined) {
                 $(self).wrapInner('<a href="' + href + '" />');
                 $(link).closest('p').addClass('card-link');
             }
         }
 
         if ($(link).parent().is('h3') ||
-        $(this).hasClass('link-text') ||
-        $(self).hasClass('icon-card') ||
-        $(self).hasClass('icon-circle')) {
+            $(this).hasClass('link-text') ||
+            $(self).hasClass('icon-card') ||
+            $(self).hasClass('icon-circle')) {
             $(link).contents().unwrap();
         } else {
             $(link).hide();
@@ -60,7 +60,7 @@ function handleEvents() {
 
 function handleSlider() {
 
-    $('.memberhome-slide').each(function(){
+    $('.memberhome-slide').each(function () {
         var self = $(this);
 
         $(self).append('<div class="img-container" />');
@@ -68,6 +68,29 @@ function handleSlider() {
         handleBgImage($(self), $(self).find('.img-container'));
         $(self).find('img').closest('p').remove();
         $(self).find('img').remove();
+    });
+
+    $('.hero-slide').wrapAll('<div class="hero-slider"></div>');
+
+    $('.hero-slider').slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        fade: false,
+        autoplay: false,
+        autoplaySpeed: 7000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
     });
 
     $('.memberhome-slide').wrapAll('<div class="memberhome-slider"></div>');
@@ -82,7 +105,7 @@ function handleSlider() {
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
-    }); 
+    });
 
     $('.slide').wrapAll('<div class="slider"></div>');
 
@@ -110,13 +133,14 @@ function handleSlider() {
         nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
         responsive: [
             {
-              breakpoint: 991,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-              }}]
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            }]
     });
 
 
@@ -136,15 +160,15 @@ function handlePromoTile() {
 function handleHero() {
     if (!!($('.hero').html())) {
         var classList = $('.hero').attr('class').split(' ');
-    
+
         for (var i = 0; i < classList.length; i++) {
             if (classList[i].indexOf('-bkgd') > -1 ||
-            classList[i].indexOf('bg-') > -1) {
+                classList[i].indexOf('bg-') > -1) {
                 return;
             }
         }
 
-        $('.hero').each(function() {
+        $('.hero').each(function () {
             handleBgImage($(this), $(this));
         });
 
@@ -162,10 +186,10 @@ function handlePageTitleBg() {
 
 function handleImageCards() {
 
-    $('.ContentItemHtml.card.img-card').each(function() {
+    $('.ContentItemHtml.card.img-card').each(function () {
         let Img = $(this).find('img');
         let ImgSrc = $(Img).attr('src');
-        $(this).prepend('<div class="img-container" style="background-image: url('+ ImgSrc +'"></div> ');
+        $(this).prepend('<div class="img-container" style="background-image: url(' + ImgSrc + '"></div> ');
         $(Img).parent().remove();
     });
 }
@@ -210,7 +234,7 @@ function handleByLineAndLink(self) {
 
     if (!!$(bylineLink).html()) {
         $(bylineLink).insertBefore(byline);
-        
+
         var text = $(byline).text();
         text = $.trim(text);
         text = text.substring(4, text.length);
@@ -227,7 +251,7 @@ function handleByLineAndLink(self) {
 }
 
 function handleResources() {
-    $('.col-md-6 .HLMyDocuments ul li').each(function() {
+    $('.col-md-6 .HLMyDocuments ul li').each(function () {
         var self = $(this);
 
         handleAjaxCall(self);
@@ -292,9 +316,9 @@ function handleAllContentListIcons() {
             $(self).addClass('acl-blog');
         } else if (href.indexOf('viewdocument') > -1) {
             $(self).addClass('acl-library');
-        } else if(href.indexOf('discussion') > -1) {
+        } else if (href.indexOf('discussion') > -1) {
             $(self).addClass('acl-discussion');
-        }else if(href.indexOf('event') > -1) {
+        } else if (href.indexOf('event') > -1) {
             $(self).addClass('acl-event');
         }
     });
