@@ -1149,11 +1149,11 @@ body.ribbit:not(.interior).bodyBackground {
 /*** graphic overlays ***/
 
 .light-graphic::after {
-    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh_1_.png');
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-swoosh_1_.png');
 }
 
 .dark-graphic::after {
-    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/darkdark-graphic.png');
+    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/darkdark-graphic.png');
 }
 
 /*** text colours ***/
@@ -2602,7 +2602,7 @@ body.ribbit.memberhome #MPFooterLink {
 
 .hero.overlay-wave::before {
     top: 48px;
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-graphic.png');
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-graphic.png');
 }
 
 .hero[class*="bg-"]>.col-md-12 .HtmlContent,
@@ -5320,7 +5320,7 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     right: 0;
     background-size: cover;
     mix-blend-mode: soft-light;
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/lightlight-swoosh.png');
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-swoosh.png');
 }
 
 #InteriorPageTitle.has-bg-img {
