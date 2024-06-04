@@ -147,7 +147,8 @@ body.ribbit h6 {
 }
 
 body.ribbit .p-large,
-body.ribbit .hero p {
+body.ribbit .hero p,
+body.ribbit .hero-slide p {
     font-size: 18px;
     line-height: 1.4;
 }
