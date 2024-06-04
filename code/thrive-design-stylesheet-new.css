@@ -1128,7 +1128,7 @@ body.ribbit:not(.interior).bodyBackground {
 }
 
 .overlay-wave::after {
-    height: 157px;
+    height: 70%;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -1149,7 +1149,7 @@ body.ribbit:not(.interior).bodyBackground {
 /*** graphic overlays ***/
 
 .light-graphic::after {
-    background-image: url('//higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-swoosh_1_.png');
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-swoosh_1_.png');
 }
 
 .dark-graphic::after {
@@ -5320,7 +5320,7 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     right: 0;
     background-size: cover;
     mix-blend-mode: soft-light;
-    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-swoosh.png');
+    background-image: url('https://higherlogicdownload.s3.amazonaws.com/ECONVERSETEST/c1b65cc9-eb19-48eb-9619-1c784c9c7071/UploadedImages/Dev_Files/lightlight-swoosh_1_.png');
 }
 
 #InteriorPageTitle.has-bg-img {
