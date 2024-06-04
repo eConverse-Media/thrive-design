@@ -5138,7 +5138,7 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
 
 #InteriorPageTitle::after {
     content: '';
-    height: 70%;
+    height: 150px;
     width: 100%;
     position: absolute;
     bottom: 0;
