@@ -1554,12 +1554,6 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 }
 
 
-@supports not selector(:has(+ *)) {
-    .card.icon-card .HtmlContent p i {
-        background-color: var(--hl-bs--secondary);
-    }
-}
-
 .card.icon-card a:is(:hover, :focus) .HtmlContent p i,
 .icon-circle a:is(:hover, :focus) .HtmlContent>p i {
     background-color: rgba(255, 255, 255, 0.4);
