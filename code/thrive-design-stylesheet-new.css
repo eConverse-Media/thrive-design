@@ -1178,6 +1178,8 @@ body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2,
 body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
 body.ribbit .bg-primary-dark.ContentItemHtml:not(.card) *:not(em a),
+body.ribbit .bg-black .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter [class*="bg-black"] .ContentItemHtml:not(.card) .HtmlContent h2,
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml:not(.card) h2,
 body.ribbit .overlay-dark .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
@@ -2919,9 +2921,14 @@ body.ribbit .milestone-slider .slick-arrow i,
 }
 
 .img-left-list .blogs-block .img-container {
-    flex-basis: 550px;
+    flex-basis: 240px;
     border-radius: 8px;
     margin-right: 16px;
+}
+
+
+.img-left-list .blogs-block .text-container {
+    flex-basis: 500px;
 }
 
 .img-left-list .blogs-block .text-container div[id*=ThreadFollowIcon],
