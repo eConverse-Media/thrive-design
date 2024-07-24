@@ -447,6 +447,8 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     display: inline-block;
     font-style: normal;
     text-decoration: none;
+    font-size: 16px;
+    line-height: normal;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
