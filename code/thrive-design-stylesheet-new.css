@@ -326,7 +326,9 @@ body.ribbit .accordion-heading button:focus {
 .feed-item-row .feed-badge.text-meta,
 .tags-list a.label-search-tag,
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag,
-body.ribbit .tags-list a.label-search-tag {
+body.ribbit .tags-list a.label-search-tag,
+.hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable,
+body.ribbit .community-events-list-badges .bg-bg2 {
     background-color: var(--hl-bs--gray-100);
     border-radius: 4px;
     padding: 4px 10px;
@@ -339,13 +341,29 @@ body.ribbit .tags-list a.label-search-tag {
 }
 
 body.ribbit .tags-list a.label-search-tag,
+.feed-item-row .feed-badge.text-meta,
+body.ribbit .community-events-list-badges .bg-bg2 {
+    background-color: var(--hl-bs--gray-100) !important;
+}
+
+body.ribbit .tags-list a.label-search-tag,
 body.ribbit .feed-item-row .feed-badge.text-meta span {
     color: var(--ui-heading-text) !important;
     font-size: 10px !important;
 }
-
+body.ribbit .tags-list a.label-search-tag *,
+.hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable * {
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: inherit;
+    color: inherit;
+}
+.hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable .text-icon {
+    font-size: 18px;
+}
 body.ribbit #MPOuterMost .HLLandingControl .content-tags a.label-search-tag:is(:hover, :focus),
-body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
+body.ribbit .tags-list a.label-search-tag:is(:hover, :focus),
+.hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable:is(:hover, :focus) {
     background-color: var(--hl-bs--gray-300) !important;
     text-decoration: none;
 }
@@ -353,6 +371,21 @@ body.ribbit .tags-list a.label-search-tag:is(:hover, :focus) {
 body.ribbit .tags-list a>div.text-truncate:hover {
     color: inherit;
     text-decoration: none;
+}
+.hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable,
+.hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable:is(:hover, :focus) {
+    transition: .3s;
+}
+
+/*** tags in comments on activity feed ***/
+
+body.ribbit .FeedWidget .rounded.bg-bg1 .text-meta.feed-badge {
+    padding: 0;
+    background: transparent !important;
+    font-size: 13px;
+    color: var(--hl-bs--default-text);
+    line-height: 1.4;
+    border-radius: 0;
 }
 
 /****** rounded images ******/
