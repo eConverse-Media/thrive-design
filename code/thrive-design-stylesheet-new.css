@@ -991,6 +991,7 @@ body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLand
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
 body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
     color: var(--hl-bs--link-hover);
+    border-bottom-color: var(--hl-bs--link-hover);
 }
 
 .make-arrow-link.small-link em a,
