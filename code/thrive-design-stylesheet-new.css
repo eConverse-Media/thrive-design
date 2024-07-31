@@ -480,6 +480,8 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     display: inline-block;
     font-style: normal;
     text-decoration: none;
+    font-size: 16px;
+    line-height: normal;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -1210,6 +1212,8 @@ body.ribbit .bg-image.ContentItemHtml .HtmlContent *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2,
 body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
+.hero:not([class*="overlay"]):not([class*="bg-"]) .ContentItemHtml:not(.card) *:not(em a),
+#MPOuterMost #MPOuter .hero:not([class*="overlay"]):not([class*="bg-"]) .ContentItemHtml:not(.card) h2,
 body.ribbit .bg-primary-dark.ContentItemHtml:not(.card) *:not(em a),
 body.ribbit .bg-black .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter [class*="bg-black"] .ContentItemHtml:not(.card) .HtmlContent h2,
