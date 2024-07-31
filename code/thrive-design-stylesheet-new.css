@@ -1273,7 +1273,7 @@ body.ribbit .bg-gray {
 .icon-list ul li i {
     height: 60px;
     width: 60px;
-    background: var(--hl-bs--primary);
+    background: var(--hl-bs--secondary);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -1282,12 +1282,14 @@ body.ribbit .bg-gray {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--hl-bs--primary-opposite);
+}
+#MPOuterMost #MPOuter .icon-list ul li i {
+    color: var(--ui-secondary-text);
 }
 
 .icon-list ul li h4 {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 /****** cards ******/
