@@ -445,6 +445,9 @@ body.has-modal.bio-modal-open {
 
 .Login a.btn-primary {
     padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .make-buttons em:has(a) {
