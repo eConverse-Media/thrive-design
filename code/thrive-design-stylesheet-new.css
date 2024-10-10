@@ -423,6 +423,18 @@ body.has-modal.bio-modal-open {
     overflow: hidden;
 }
 
+/****** Utility Classes *******/
+
+body.ribbit .white-text h1,
+body.ribbit .white-text h2
+body.ribbit .white-text h3,
+body.ribbit .white-text h4,
+body.ribbit .white-text h5,
+body.ribbit .white-text h6,
+body.ribbit .white-text p{
+    color: #fff !important;
+}
+
 /****** background images ******/
 
 .bg-image,
