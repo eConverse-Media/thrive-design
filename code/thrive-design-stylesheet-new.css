@@ -737,7 +737,7 @@ body.ribbit .make-buttons.bg-primary em a,
 body.ribbit .bg-primary .make-buttons em a,
 body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-btn em a,
 body.ribbit .overlay-primary-gradient.make-buttons.outline-btn em a,
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .ContentItemHtml:not(.card).make-buttons.outline-last-btn em:last-child a:last-child,
 body.ribbit .overlay-primary-gradient.make-buttons.outline-last-btn em:last-child a:last-child,
 body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-first-btn em:first-child a:first-child,
 body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-child a:first-child {
