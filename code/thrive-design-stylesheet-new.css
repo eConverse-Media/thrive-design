@@ -1410,7 +1410,9 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
-
+.col-md-3 .card .HtmlContent>h3 {
+    font-size: 18px;
+}
 
 
 /****** social cards ******/
@@ -1649,6 +1651,9 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     height: 200px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+.col-md-3 .card.img-card .img-container {
+    height: 140px;
 }
 
 /*** icon & image cards ***/
