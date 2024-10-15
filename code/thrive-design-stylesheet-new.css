@@ -3220,6 +3220,7 @@ body.ribbit .profile-snippet-progress>.my-2 .progress {
 
 body.ribbit .profile-snippet-progress>.my-2 .progress-bar {
     border-radius: 20px;
+    background-color: var(--hl-bs--secondary) !important;
 }
 
 body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
