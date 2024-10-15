@@ -4650,7 +4650,8 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
 }
 
 .col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image {
-    display: none;
+    height: 120px;
+    display: block;
 }
 
 .col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image+.text-container {
