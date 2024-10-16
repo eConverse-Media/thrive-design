@@ -1407,6 +1407,34 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
+.bg-white > .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: thin solid rgba(0, 0, 0, .125) !important;
+    border-radius: .25rem;
+    margin: 10px 0;
+    background-color: #efefef;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 0;
+    border-radius: .25rem;
+    margin: 10px 0;
+    background-color: #efefef;
+}
 
 
 
@@ -2428,7 +2456,7 @@ body.ribbit #MPButtonBar .dropdown-menu li a {
     margin-left: 16px;
 }
 
-/* Dropdown avtive/hover state */
+/* Dropdown active/hover state */
 
 body.ribbit #MPButtonBar .dropdown-menu>li>a:hover,
 body.ribbit #MPButtonBar .dropdown-menu>li>a:focus,
@@ -2459,6 +2487,16 @@ body.ribbit #MPButtonBar .dropdown-menu .active>a {
     border-radius: 4px;
 }
 
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: var(--hl-bs--primary-opposite);
+    text-decoration: none;
+    background-color: var(--hl-bs--primary);
+    outline: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: var(--hl-bs--primary-opposite);
+    background-color: var(--hl-bs--primary);
+}
 
 
 /******* logo *******/
