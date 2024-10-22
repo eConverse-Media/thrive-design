@@ -1328,7 +1328,6 @@ body.ribbit .bg-gray {
 .icon-list ul li h3 {
     margin-top: 0;
     margin-bottom: 8px;
-    padding-top: 16px; /***align headline to center of icon image***/
 }
 /***update icon list headline to alt h3 styling***/
 body.ribbit .icon-list h3 {
