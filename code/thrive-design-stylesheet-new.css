@@ -3433,9 +3433,12 @@ body.ribbit .calendar-stamp .month {
     margin-top: 0;
 }
 
-body.ribbit .community-events-list.narrow-widget-container .community-events-list-container {
-    padding-top: 8px;
+@media (min-width: 459px) {
+    body.ribbit .community-events-list.narrow-widget-container .community-events-list-container {
+        padding-top: 8px;
+    }
 }
+    
     
 
 body.ribbit .community-events-list-row:first-child,
