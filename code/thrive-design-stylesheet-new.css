@@ -1325,10 +1325,17 @@ body.ribbit .bg-gray {
     color: var(--ui-secondary-text);
 }
 
-.icon-list ul li h4 {
+.icon-list ul li h3 {
     margin-top: 0;
     margin-bottom: 8px;
 }
+/***update icon list headline to alt h3 styling***/
+body.ribbit .icon-list h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
 
 /****** cards ******/
 
