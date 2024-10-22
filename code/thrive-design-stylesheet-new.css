@@ -1407,34 +1407,9 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
-.bg-white > .card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
-    border: thin solid rgba(0, 0, 0, .125) !important;
-    border-radius: .25rem;
-    margin: 10px 0;
-    background-color: #efefef;
-}
-.card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-clip: border-box;
-    border: 0;
-    border-radius: .25rem;
-    margin: 10px 0;
-    background-color: #efefef;
-}
+.row.hl-primary-row-bkgd .card, .row.hl-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card {
+    border: none !important; 
+ }
 
 
 
