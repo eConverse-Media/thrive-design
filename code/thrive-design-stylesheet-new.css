@@ -3438,6 +3438,11 @@ body.ribbit .calendar-stamp .month {
         padding-top: 8px;
     }
 }
+@media (min-width: 992px) {
+    body.ribbit .col-md-2 .community-events-list.narrow-widget-container .community-events-list-container, body.ribbit .col-md-3 .community-events-list.narrow-widget-container .community-events-list-container, body.ribbit .col-md-4 .community-events-list.narrow-widget-container .community-events-list-container {
+        padding-top: 0px;
+    }
+}
     
     
 
