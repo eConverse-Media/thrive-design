@@ -5341,6 +5341,13 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .drop
     float: left;
 }
 
+/***Poll Widget***/
+
+.PollTakingContainer h2 {
+    padding: 16px 16px 8px 16px;
+}
+
+
 /*** announcements ***/
 
 body.ribbit.groupdetails .HLAnnouncements ul li {
