@@ -1407,8 +1407,8 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
-.row.hl-primary-row-bkgd .card, .row.hl-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card {
-    border: none !important; 
+.row.hl-primary-row-bkgd .card, .row.hl-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card, .row.bg-black .card {
+    border: none; 
  }
 
 
