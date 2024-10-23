@@ -1462,6 +1462,8 @@ body.ribbit .recent-blogs.narrow-widget-container .widget-heading {
     padding: 16px 16px 8px 16px !important;
 }
 
+    
+
 body.ribbit .narrow-widget-container .widget-heading h2,
 body.ribbit .card .HLLandingControl .row.heading h2 {
     margin: 0 !important;
@@ -3446,6 +3448,19 @@ body .calendar-stamp {
 body.ribbit .calendar-stamp .month {
     margin-top: 0;
 }
+
+@media (min-width: 459px) {
+    body.ribbit .community-events-list.narrow-widget-container .community-events-list-container {
+        padding-top: 8px;
+    }
+}
+@media (min-width: 992px) {
+    body.ribbit .col-md-2 .community-events-list.narrow-widget-container .community-events-list-container, body.ribbit .col-md-3 .community-events-list.narrow-widget-container .community-events-list-container, body.ribbit .col-md-4 .community-events-list.narrow-widget-container .community-events-list-container {
+        padding-top: 0px;
+    }
+}
+    
+    
 
 body.ribbit .community-events-list-row:first-child,
 body.ribbit .blog-list-featured-entry {
