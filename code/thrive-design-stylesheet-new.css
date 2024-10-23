@@ -445,6 +445,9 @@ body.has-modal.bio-modal-open {
 
 .Login a.btn-primary {
     padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .make-buttons em:has(a) {
@@ -1414,7 +1417,9 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
-
+.col-md-3 .card .HtmlContent>h3 {
+    font-size: 18px;
+}
 
 
 /****** social cards ******/
@@ -1653,6 +1658,9 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     height: 200px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+.col-md-3 .card.img-card .img-container {
+    height: 140px;
 }
 
 /*** icon & image cards ***/
@@ -3219,6 +3227,7 @@ body.ribbit .profile-snippet-progress>.my-2 .progress {
 
 body.ribbit .profile-snippet-progress>.my-2 .progress-bar {
     border-radius: 20px;
+    background-color: var(--hl-bs--secondary) !important;
 }
 
 body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
@@ -4648,7 +4657,8 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
 }
 
 .col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image {
-    display: none;
+    height: 120px;
+    display: block;
 }
 
 .col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image+.text-container {
