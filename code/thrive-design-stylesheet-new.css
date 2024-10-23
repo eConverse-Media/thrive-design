@@ -445,6 +445,9 @@ body.has-modal.bio-modal-open {
 
 .Login a.btn-primary {
     padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .make-buttons em:has(a) {
@@ -1325,10 +1328,17 @@ body.ribbit .bg-gray {
     color: var(--ui-secondary-text);
 }
 
-.icon-list ul li h4 {
+.icon-list ul li h3 {
     margin-top: 0;
     margin-bottom: 8px;
 }
+/***update icon list headline to alt h3 styling***/
+body.ribbit .icon-list h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
 
 /****** cards ******/
 
@@ -1407,10 +1417,14 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
+
 .row.hl-primary-row-bkgd .card, .row.hl-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card, .row.bg-black .card {
     border: none; 
  }
 
+.col-md-3 .card .HtmlContent>h3 {
+    font-size: 18px;
+}
 
 
 /****** social cards ******/
@@ -1452,6 +1466,8 @@ body.ribbit .community-events-list.narrow-widget-container .widget-heading,
 body.ribbit .recent-blogs.narrow-widget-container .widget-heading {
     padding: 16px 16px 8px 16px !important;
 }
+
+    
 
 body.ribbit .narrow-widget-container .widget-heading h2,
 body.ribbit .card .HLLandingControl .row.heading h2 {
@@ -1649,6 +1665,9 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     height: 200px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+.col-md-3 .card.img-card .img-container {
+    height: 140px;
 }
 
 /*** icon & image cards ***/
@@ -3225,6 +3244,7 @@ body.ribbit .profile-snippet-progress>.my-2 .progress {
 
 body.ribbit .profile-snippet-progress>.my-2 .progress-bar {
     border-radius: 20px;
+    background-color: var(--hl-bs--secondary) !important;
 }
 
 body.ribbit .no-bg .profile-snippet-card .p-3:not(.profile-snippet-bio) {
@@ -3443,6 +3463,19 @@ body .calendar-stamp {
 body.ribbit .calendar-stamp .month {
     margin-top: 0;
 }
+
+@media (min-width: 459px) {
+    body.ribbit .community-events-list.narrow-widget-container .community-events-list-container {
+        padding-top: 8px;
+    }
+}
+@media (min-width: 992px) {
+    body.ribbit .col-md-2 .community-events-list.narrow-widget-container .community-events-list-container, body.ribbit .col-md-3 .community-events-list.narrow-widget-container .community-events-list-container, body.ribbit .col-md-4 .community-events-list.narrow-widget-container .community-events-list-container {
+        padding-top: 0px;
+    }
+}
+    
+    
 
 body.ribbit .community-events-list-row:first-child,
 body.ribbit .blog-list-featured-entry {
@@ -4654,7 +4687,8 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
 }
 
 .col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image {
-    display: none;
+    height: 120px;
+    display: block;
 }
 
 .col-md-6 .HLMyDocuments ul li .img-container.no-ajax-image+.text-container {
