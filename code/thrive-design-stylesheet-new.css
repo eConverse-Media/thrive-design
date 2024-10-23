@@ -1417,6 +1417,11 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     font-size: 18px;
 }
 
+
+.row.hl-primary-row-bkgd .card, .row.hl-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card, .row.bg-black .card {
+    border: none; 
+ }
+
 .col-md-3 .card .HtmlContent>h3 {
     font-size: 18px;
 }
@@ -2445,7 +2450,7 @@ body.ribbit #MPButtonBar .dropdown-menu li a {
     margin-left: 16px;
 }
 
-/* Dropdown avtive/hover state */
+/* Dropdown active/hover state */
 
 body.ribbit #MPButtonBar .dropdown-menu>li>a:hover,
 body.ribbit #MPButtonBar .dropdown-menu>li>a:focus,
@@ -2476,6 +2481,16 @@ body.ribbit #MPButtonBar .dropdown-menu .active>a {
     border-radius: 4px;
 }
 
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: var(--hl-bs--primary-opposite);
+    text-decoration: none;
+    background-color: var(--hl-bs--primary);
+    outline: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: var(--hl-bs--primary-opposite);
+    background-color: var(--hl-bs--primary);
+}
 
 
 /******* logo *******/
