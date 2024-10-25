@@ -2032,7 +2032,15 @@ body.ribbit .bio h3 {
 
 .bio p a {
     text-decoration: none;
-    color: var(--hl-bs--default-text);
+    /***color: var(--hl-bs--default-text); removed this line to prevent override of button text color***/
+}
+
+.bio p a:hover {
+    text-decoration: underline; /***applies same hover behavior of link as other card based links***/
+}
+
+.bio p em a:hover {
+    text-decoration: none; /***corrects hover behavior for buttons***/
 }
 
 .bio {
