@@ -423,6 +423,18 @@ body.has-modal.bio-modal-open {
     overflow: hidden;
 }
 
+/****** Utility Classes *******/
+
+body.ribbit .white-text h1,
+body.ribbit .white-text h2,
+body.ribbit .white-text h3,
+body.ribbit .white-text h4,
+body.ribbit .white-text h5,
+body.ribbit .white-text h6,
+body.ribbit .white-text p{
+    color: #fff !important;
+}
+
 /****** background images ******/
 
 .bg-image,
@@ -728,7 +740,7 @@ body.ribbit .make-buttons.bg-primary em a,
 body.ribbit .bg-primary .make-buttons em a,
 body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-btn em a,
 body.ribbit .overlay-primary-gradient.make-buttons.outline-btn em a,
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-last-btn em:last-child a:last-child,
+body.ribbit .ContentItemHtml:not(.card).make-buttons.outline-last-btn em:last-child a:last-child,
 body.ribbit .overlay-primary-gradient.make-buttons.outline-last-btn em:last-child a:last-child,
 body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-first-btn em:first-child a:first-child,
 body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-child a:first-child {
@@ -740,12 +752,12 @@ body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-ch
 
 body.ribbit .make-buttons.bg-primary em a:is(:hover, :focus),
 body.ribbit .bg-primary .make-buttons em a:is(:hover, :focus),
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-btn em a:is(:hover, :focus),
-body.ribbit .overlay-primary-gradient.make-buttons.outline-btn em a:is(:hover, :focus),
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
-body.ribbit .overlay-primary-gradient.make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
-body.ribbit .overlay-primary-gradient .ContentItemHtml:not(.card).make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
-body.ribbit .overlay-primary-gradient.make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
+body.ribbit  .ContentItemHtml:not(.card).make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit .make-buttons.outline-btn em a:is(:hover, :focus),
+body.ribbit  .ContentItemHtml:not(.card).make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit .make-buttons.outline-last-btn em:last-child a:last-child:is(:hover, :focus),
+body.ribbit  .ContentItemHtml:not(.card).make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus),
+body.ribbit .make-buttons.outline-first-btn em:first-child a:first-child:is(:hover, :focus) {
     color: var(--hl-bs--primary);
     background-color: var(--hl-bs--primary-opposite);
     border-color: var(--hl-bs--primary-opposite);
