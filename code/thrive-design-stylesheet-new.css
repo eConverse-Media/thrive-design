@@ -970,6 +970,10 @@ body.ribbit .arrow-link-standalone a.link-standalone {
     font-weight: 600;
 }
 
+.make-arrow-link em a {
+    color: inherit;
+}
+
 .col-md-3 .make-arrow-link em a {
     font-size: 14px;
 }
