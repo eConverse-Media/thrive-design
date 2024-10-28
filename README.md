@@ -64,7 +64,7 @@ This project involves the implementation of a Website Design Suite for the Subsc
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.  
+THIS IS A WIP
 To get a local copy up and running, follow these simple example steps.
 
 ### Prerequisites
