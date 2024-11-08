@@ -3987,6 +3987,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     border: none;
     border-radius: 8px;
 }
+/*** fix uneven Upcoming Events no matter how many events are available ***/
+#MPOuterMost #MPOuter .event-cards .Content ul li {
+    width: 100%;
+}
 
 #MPOuterMost #MPOuter .featured-cards.flex-wrap div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) {
     margin: 12px;
