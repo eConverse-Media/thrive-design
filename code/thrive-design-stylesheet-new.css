@@ -3986,9 +3986,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     border: none;
     border-radius: 8px;
-}
-/*** fix uneven Upcoming Events no matter how many events are available ***/
-#MPOuterMost #MPOuter .event-cards .Content ul li {
     width: 100%;
 }
 
