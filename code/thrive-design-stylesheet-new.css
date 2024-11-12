@@ -3,6 +3,10 @@
     --ui-heading-text: #272727;
     --ui-default-text-small: #666;
     --ui-secondary-text: [TextOnSecondary];
+    --border-radius: 8px;
+    --button-border-radius: 4px;
+    --card-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+    --box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
 }
 
 /************ basics ************/
@@ -330,7 +334,7 @@ body.ribbit .tags-list a.label-search-tag,
 .hltags .tagit-choice.ui-widget-content.ui-state-default.ui-corner-all.tagit-choice-editable,
 body.ribbit .community-events-list-badges .bg-bg2 {
     background-color: var(--hl-bs--gray-100);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     padding: 4px 10px;
     font-size: 10px;
     font-weight: 600;
@@ -391,7 +395,7 @@ body.ribbit .FeedWidget .rounded.bg-bg1 .text-meta.feed-badge {
 /****** rounded images ******/
 
 .rounded-img img {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 /****** modals ******/
@@ -457,7 +461,7 @@ body.ribbit .white-text p{
 
 .Login a.btn-primary {
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     font-weight: 600;
     font-size: 16px;
 }
@@ -499,7 +503,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
     line-height: normal;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     font-weight: 600;
 }
 
@@ -877,7 +881,7 @@ body.ribbit .overlay-dark-gradient.make-buttons.outline-last-btn em:last-child a
     background: transparent;
     border: 2px solid #fff;
     color: #fff;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     transition: 0.3s;
     padding: 8px 18px;
 }
@@ -1366,9 +1370,9 @@ body.ribbit .narrow-widget-container,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
 body.ribbit:not(.interior) .ContentItemMVC.card,
 body.ribbit .card .HLLandingControl {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 24px;
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: var(--box-shadow);
     background: #fff;
     filter: none;
 }
@@ -1455,7 +1459,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 .card.social ul li a {
     width: 40px;
     height: 40px;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     margin-right: 20px;
     text-align: center;
     line-height: 40px;
@@ -1496,7 +1500,7 @@ body.ribbit .narrow-widget-container .view-more-link {
 }
 
 body.ribbit a.link-container {
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     background-color: transparent;
     border: none;
 }
@@ -1601,7 +1605,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 .card.icon-card .HtmlContent p:has(i) {
     text-align: center;
     margin-bottom: 16px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     width: 100%;
 }
 
@@ -1609,7 +1613,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     display: block;
     width: 100%;
     padding: 24px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     font-size: 32px;
     color: var(--ui-secondary-text);
 
@@ -1739,7 +1743,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
 }
 
 .card.clickable>a:is(:hover, :focus) {
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+    box-shadow: var(--card-box-shadow);
 }
 
 /*** CTA tiles ***/
@@ -1754,7 +1758,7 @@ body.ribbit #MPOuterMost #MPOuter .card .HLLandingControl h5 {
     position: relative;
     background: var(--hl-bs--gray-100);
     margin-bottom: 30px;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
@@ -1967,7 +1971,7 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
 
 .card.team button:is(:hover, :focus) {
     background: #fff;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
+    box-shadow: var(--card-box-shadow);
 }
 
 .flex-cards .card.team button {
@@ -2054,11 +2058,11 @@ body.ribbit .bio h3 {
     width: 800px;
     top: calc(50% - 200px);
     left: calc(50% - 350px);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     padding: 40px;
     background: #ffffff;
     box-shadow: 1px 6px 6px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
 }
 
 .bio.open {
@@ -2182,7 +2186,7 @@ body.ribbit .sponsor a {
     flex-shrink: 1;
     flex-basis: 100%;
     background: #fff;
-    border-radius: 8px;
+    border-radius: var(--button-border-radius);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2190,7 +2194,7 @@ body.ribbit .sponsor a {
     padding: 24px;
     display: flex;
     text-decoration: none;
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: var(--box-shadow);
     transition: 0.3s;
     flex-direction: column;
     color: #272727;
@@ -2457,7 +2461,7 @@ body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:focus {
 .navbar-nav>li>.dropdown-menu {
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 2px 16px 0px rgba(0, 0, 0, 0.15);
     min-width: 221px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     padding: 16px;
 }
 
@@ -2483,7 +2487,7 @@ body.ribbit #MPButtonBar .dropdown-menu li a:focus,
 body.ribbit #MPButtonBar .dropdown-menu .active>li>a:hover,
 body.ribbit #MPButtonBar .dropdown-menu>li>a:focus {
     background: var(--hl-bs--gray-100);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
 }
 
 body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li a {
@@ -2502,7 +2506,7 @@ body.ribbit #MPButtonBar .dropdown-menu .dropdown-submenu>ul.dropdown-submenu li
 body.ribbit #MPButtonBar .dropdown-menu .active>a {
     display: inline-block;
     background: var(--hl-bs--gray-100);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
 }
 
 .dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
@@ -2791,7 +2795,7 @@ body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide .HtmlContent {
 
 .memberhome-slider {
     background-color: rgba(0, 0, 0, 0.39);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
 }
 
 .memberhome-slider .memberhome-slide,
@@ -2833,7 +2837,7 @@ body.ribbit #MPOuterMost #MPOuter .make-carousel-tiles h5 {
     width: 35%;
     flex-grow: 0;
     flex-shrink: 1;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .memberhome-slider .memberhome-slide .HtmlContent p:first-of-type {
@@ -2941,7 +2945,7 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     background: #fff;
     height: auto;
     border: 0;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 
@@ -2950,7 +2954,10 @@ body.ribbit #MPOuterMost .make-carousel-tiles ul:not(.slick-dots) {
     position: relative;
     width: calc(100% + 48px);
     margin: -24px -24px 24px -24px;
-    border-radius: 8px 8px 0 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .make-carousel-tiles ul li .col-md-3 {
@@ -3018,7 +3025,7 @@ body.ribbit .milestone-slider .slick-arrow i,
 
 .img-left-list .blogs-block .img-container {
     flex-basis: 240px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin-right: 16px;
 }
 
@@ -3334,16 +3341,22 @@ body.ribbit .profile-snippet-stats .btn-alt-ghost div:last-child {
 /************ activity feed ************/
 
 body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .feed-item-row {
-    border-radius: 0 0 8px 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;    
+    border-bottom-right-radius: var(--border-radius);    
+    border-bottom-left-radius: var(--border-radius);
 }
 body.ribbit .feed-list .feed-title-filter~.feed-cards-grid .layout-grid-cell:first-of-type .images-preview {
     border-radius: 0;
 }
 body.ribbit .feed-list .layout-grid-cell .feed-item-row {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 body.ribbit .feed-list .layout-grid-cell .feed-item-row .images-preview {
-    border-radius: 8px 8px 0 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 body.ribbit .FeedWidget .card {
     border: none;
@@ -3393,7 +3406,7 @@ body.ribbit #MPOuterMost #MPOuter .events-list ul li {
     margin-left: 12px;
     margin-right: 12px;
     padding: 24px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 body.ribbit #MPOuterMost #MPOuter .events-list ul li:first-of-type {
@@ -3839,7 +3852,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .row.heading 
     padding: 24px;
     background-color: #eee;
     border: 0;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 body div[class*=bg-primary] .ContentUserControl.featured-blogs ul li,
@@ -3953,7 +3966,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     padding: 30px;
     min-height: 430px;
     position: relative;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 2px 1px rgba(124, 124, 124, 0.25);
 }
 
@@ -4026,12 +4039,12 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 .list-tiles .Content ul li,
 .list-tiles div[id*=_BlogContents] .blogs-block {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     flex-basis: 274px;
     margin: 8px;
     padding-bottom: 0;
     padding-top: 0;
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: var(--box-shadow);
 }
 
 .list-tiles .Content ul li .content-row {
@@ -4044,9 +4057,9 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     display: flex;
     flex-direction: column;
     padding: 0;
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: var(--box-shadow);
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 #MPOuterMost #MPOuter .featured-cards.flex-wrap div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) {
@@ -4069,7 +4082,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     flex-basis: 100%;
     flex-direction: column-reverse;
     background: #fff;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) .img-container,
@@ -4106,7 +4119,7 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 100%;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 
@@ -4127,7 +4140,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     font-size: 48px;
     line-height: 1;
     color: var(--hl-bs--gray-500);
-    border-radius: 8px 8px 0 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .event-cards .HLLandingControl.HLEventList .title-row img {
@@ -4257,7 +4273,10 @@ body.ribbit .featured-cards ul.pagination li {
     position: relative;
     overflow: hidden;
     height: 140px;
-    border-radius: 8px 8px 0 0;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     background-size: cover;
 }
 
@@ -4436,7 +4455,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary,
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
 }
 
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
@@ -4450,7 +4469,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 /************ promo blocks ************/
 
 .promo-block {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     min-height: 340px;
     display: flex;
@@ -4476,7 +4495,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     background-color: var(--hl-bs--secondary);
     color: var(--ui-secondary-text);
     padding: 3px 6px;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     font-size: 10px;
     line-height: 1.2;
     font-weight: 600;
@@ -4578,7 +4597,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
 .HLEventList ul li .date-block {
     width: 70px;
     height: 70px;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -4645,7 +4664,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
     background-color: var(--hl-bs--primary);
     position: relative;
     padding: 24px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin-bottom: 16px;
     border: none;
 }
@@ -4730,7 +4749,7 @@ body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-6 .ContentUserControl:n
 .col-md-6 .HLEventList ul li .date-block {
     width: 140px;
     height: 120px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -5114,7 +5133,10 @@ body.ribbit .row-full.hero.banner::before {
 }
 
 .conference-nav-tabs ul li a {
-    border-radius: 4px 4px 0px 0px;
+    border-top-left-radius: var(--button-border-radius);
+    border-top-right-radius: var(--button-border-radius);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     background: #DEDEDF;
     box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.08) inset;
     padding: 10px 16px;
@@ -5137,7 +5159,7 @@ body.ribbit .overlay-dark-gradient .conference-nav-tabs .HtmlContent a.active {
 
 .schedule-announcement {
     background: var(--hl-bs--bg1);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 .schedule-announcement .HtmlContent {
@@ -5182,7 +5204,7 @@ body.ribbit .schedule-tabs ul li a:is(:hover, :focus) {
     text-decoration: none;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     font-weight: 600;
     width: 100%;
 }
@@ -5373,8 +5395,8 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .drop
 /****** widgets ******/
 
 .groupdetails #MPOuterMost #MPOuter .col-md-4 .HLLandingControl {
-    border-radius: 8px;
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     padding: 24px;
 }
 
@@ -5407,7 +5429,7 @@ body.ribbit .PollTakingContainer .widget-container {
     -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
     border: none;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 }
 
 body.ribbit .PollTakingContainer .widget-heading {
@@ -6031,7 +6053,7 @@ body.ribbit #edit-event-button-container {
     body.ribbit #MPButtonBar .navbar-nav>li>.dropdown-menu {
         transform: none;
         margin-left: 10px;
-        box-shadow: none
+        box-shadow: none;
     }
 
     #MPSearchBlock {
@@ -6251,7 +6273,7 @@ body.ribbit #edit-event-button-container {
         width: 100%;
         margin: 0px;
         margin-bottom: 15px;
-        border-radius: 8px;
+        border-radius: var(--border-radius);
     }
 
 
@@ -6485,6 +6507,10 @@ body.ribbit #edit-event-button-container {
         right: 0;
         bottom: -3px;
         border-radius: 8px 0 0 0;
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
     }
 
     /* Hamburger menu styling */
