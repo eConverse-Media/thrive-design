@@ -1372,7 +1372,8 @@ body.ribbit .narrow-widget-container {
 }
 
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl,
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl>.Content ul.display-vertical>li>a {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
