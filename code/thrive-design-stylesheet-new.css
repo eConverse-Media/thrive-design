@@ -5266,6 +5266,13 @@ body.ribbit .btn.back-to-top:is(:hover, :focus) {
     position: relative;
 }
 
+/************ Interior Profile Card  ************/
+
+div[id*="upnlProfileImage"] {
+    position: relative;
+    z-index: 5;
+}
+
 /************ community landing page ************/
 
 body.ribbit.community-pages #MPOuterMost #MPOuter .no-community-html {
