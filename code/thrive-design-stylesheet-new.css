@@ -111,7 +111,8 @@ body.ribbit h3 a,
 body.ribbit #MPOuterMost #MPOuter h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .community-events-list-row:first-child h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featured-entry h3 a,
-body.ribbit .card.icon-circle h3 {
+body.ribbit .card.icon-circle h3,
+body.ribbit .cta-tile h3 {
     font-size: 18px;
     line-height: 1.2;
     color: var(--ui-heading-text);
@@ -1445,10 +1446,13 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 /****** social cards ******/
 
 .card.social ul {
-    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+.card.social ul:has(a i) {
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .card.social ul li a {
@@ -4437,6 +4441,9 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     padding: 4px 8px;
     border-radius: 4px;
+}
+#MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .ignore-contact {
+    margin-left: 0;
 }
 
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
