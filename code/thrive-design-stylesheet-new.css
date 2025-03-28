@@ -112,7 +112,8 @@ body.ribbit h3 a,
 body.ribbit #MPOuterMost #MPOuter h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .community-events-list-row:first-child h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featured-entry h3 a,
-body.ribbit .card.icon-circle h3 {
+body.ribbit .card.icon-circle h3,
+body.ribbit .cta-tile h3 {
     font-size: 18px;
     line-height: 1.2;
     color: var(--ui-heading-text);
