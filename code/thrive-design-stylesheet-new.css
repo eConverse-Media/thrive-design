@@ -4383,6 +4383,9 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     padding: 4px 8px;
     border-radius: 4px;
 }
+#MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .ignore-contact {
+    margin-left: 0;
+}
 
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
     content: 'Add';
