@@ -1420,10 +1420,13 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 /****** social cards ******/
 
 .card.social ul {
-    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+.card.social ul:has(a i) {
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .card.social ul li a {
