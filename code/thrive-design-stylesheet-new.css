@@ -493,7 +493,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .SearchR
 
 .make-buttons.conditional a[id*="Link"],
 .make-buttons em a,
-.card.social ul li a,
+.card.social ul li a:has(i),
 .cta-tile a::after,
 .btn,
 body.ribbit .btn,
@@ -529,7 +529,7 @@ body.ribbit .btn:active {
 
 .make-buttons.conditional a[id*="Link"]:is(:hover, :focus),
 .make-buttons em a:is(:hover, :focus),
-.card.social ul li a:is(:hover, :focus),
+.card.social ul li a:has(i):is(:hover, :focus),
 .cta-tile a:is(:hover, :focus)::after,
 .btn:is(:hover, :focus),
 body.ribbit .btn:is(:hover, :focus),
@@ -1420,16 +1420,15 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 /****** social cards ******/
 
 .card.social ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 15px;
 }
 .card.social ul:has(a i) {
     display: flex;
-    margin-bottom: 10px;
+    list-style-type: none;
+    padding: 0;
 }
 
-.card.social ul li a {
+.card.social ul li a:has(i) {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -1442,7 +1441,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     display: inline-block;
 }
 
-.card.social ul li a:is(:hover, :focus) {
+.card.social ul li a:has(i):is(:hover, :focus) {
     background-color: var(--hl-bs--primary);
     color: var(--hl-bs--primary-opposite);
 }
