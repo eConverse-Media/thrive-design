@@ -1301,7 +1301,7 @@ body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml a i,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml a i,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml a i,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card a i {
-    color: #FFF;
+    color: var(--hl-bs--secondary-opposite);
 }
 
 body.ribbit .bg-primary .ContentItemHtml:not(.card) .icon-container *,
