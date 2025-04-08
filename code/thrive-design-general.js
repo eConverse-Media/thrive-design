@@ -95,7 +95,14 @@ function handleSlider() {
 
     $('.memberhome-slide').wrapAll('<div class="memberhome-slider"></div>');
 
-    $('.memberhome-slider').slick({
+    $('.slide-content').wrapAll('<div class="slide-content-wrapper" />');
+
+        // Check if any element has the class 'white-text' and add it to 'slide-content-wrapper'
+    if ($('.slide-content').hasClass('white-text')) {
+        $('.slide-content-wrapper').addClass('white-text');
+    }
+
+    $('.memberhome-slider,.slide-content-wrapper').slick({
         dots: true,
         arrows: true,
         infinite: true,

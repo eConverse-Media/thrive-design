@@ -2653,6 +2653,34 @@ body.ribbit.memberhome #MPFooterLink {
     padding: 0;
 }
 
+
+/************ basic-slider *************/
+
+.slide-content-wrapper .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 44px;
+    background: transparent;
+    border: 0;
+    z-index: 1;
+    color: #000;
+    opacity: 0.7;
+}
+
+.slide-content-wrapper:has(.white-text) .slick-arrow {
+    color: #fff;
+}
+
+.slide-content-wrapper .prev-arrow {
+    left: -45px;
+}
+
+.slide-content-wrapper .next-arrow {
+    right: -45px;
+}
+
+
 /************ hero *************/
 
 .hero {
