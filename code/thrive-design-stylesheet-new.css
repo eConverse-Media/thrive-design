@@ -3859,10 +3859,10 @@ div[class*=bg-secondary].row .ContentUserControl.featured-resource ul li {
     display: none;
 }
 
-.pagination>.active>span,
-.pagination>.active>span:hover,
-.pagination li.active>a,
-.pagination li.active>a:hover {
+body.ribbit .pagination>.active>span,
+body.ribbit .pagination>.active>span:hover,
+body.ribbit .pagination li.active>a,
+body.ribbit .pagination li.active>a:hover {
     background-color: var(--hl-bs--primary);
 
 }
