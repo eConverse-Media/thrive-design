@@ -1286,12 +1286,12 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card
     color: #272727;
 }
 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card *:not(a:is(:has(i))),
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not( a:is(:has(i))),
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml *:not(a:is(:has(i))),
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(a:is(:has(i))),
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(a:is(:has(i))),
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card *:not(a:is(:has(i))) {
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card :not(a:has(i)), 
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml :not(a::has(i)), 
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml :not(a:has(i)), 
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml :not(a:has(i)), 
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml :not(a:has(i)), 
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card :not(a:has(i)) {
     color: #595959;
 }
 
