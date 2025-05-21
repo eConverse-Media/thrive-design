@@ -1,3 +1,5 @@
+/*** WDS Staging ONLY - fix nav width error ***/#NAV.stickyNav-wide {    max-width: 100%;}
+
 :root {
     --ui-default-text: #595959;
     --ui-heading-text: #272727;
@@ -1260,7 +1262,6 @@ body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not
     color: var(--hl-bs--primary-opposite);
 }
 
-/***TD-52 - Text not legible on the 15% opacity secondary background ***/
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
@@ -1272,36 +1273,26 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml:not(.card)
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--secondary-opposite);
 }
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2 {
-    color: var(--ui-default-text);
-}
+
 
 body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2 {
     color: #272727;
 }
 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card :not(a:has(i)), 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml :not(a::has(i)), 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml :not(a:has(i)), 
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml :not(a:has(i)), 
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml :not(a:has(i)), 
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card :not(a:has(i)) {
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card *:not(em a) {
     color: #595959;
-}
-
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card a i,
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card a i {
-    color: var(--hl-bs--secondary-opposite);
 }
 
 body.ribbit .bg-primary .ContentItemHtml:not(.card) .icon-container *,
@@ -1403,8 +1394,7 @@ body.ribbit .narrow-widget-container {
 }
 
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl>.Content ul.display-vertical>li>a {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
@@ -1457,13 +1447,13 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 .card.social ul {
     padding-left: 15px;
 }
-.card.social ul:has(a i) {
-    display: flex;
+.card.social ul:has(i) {
     list-style-type: none;
     padding: 0;
+    display: flex;
 }
 
-.card.social ul li a:has(i) {
+.card.social ul li a:has(i)  {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -2661,34 +2651,6 @@ body.ribbit.memberhome #MPFooterLink {
     text-align: right;
     padding: 0;
 }
-
-
-/************ basic-slider *************/
-
-.slide-content-wrapper .slick-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 44px;
-    background: transparent;
-    border: 0;
-    z-index: 1;
-    color: #000;
-    opacity: 0.7;
-}
-
-.slide-content-wrapper:has(.white-text) .slick-arrow {
-    color: #fff;
-}
-
-.slide-content-wrapper .prev-arrow {
-    left: -45px;
-}
-
-.slide-content-wrapper .next-arrow {
-    right: -45px;
-}
-
 
 /************ hero *************/
 
@@ -4085,7 +4047,6 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     border: none;
     border-radius: 8px;
-    width: 100%;
 }
 
 #MPOuterMost #MPOuter .featured-cards.flex-wrap div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) {
@@ -6711,3 +6672,65 @@ body.ribbit #edit-event-button-container {
         flex-basis: calc(100% - 24px);
     }
 }
+
+.HLAnnouncements ul {
+z-index: 1050;
+}
+
+
+
+.HLAnnouncements ul .slick-list  .modal-dialog {
+width: 315px;
+margin-left: 315px;
+position: relative;
+z-index: 1050;
+}
+
+.HLAnnouncements ul .slick-list  .modal-dialog .form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 5px;
+}
+
+.HLAnnouncements ul .slick-list  .modal-dialog .form-group label {
+    width: 100%;
+    text-align: left;
+}
+
+.HLAnnouncements ul .slick-list  .modal-dialog .form-group .col-md-9 {
+    width: 100%;
+}
+
+.HLAnnouncements ul .slick-list .modal-dialog .form-group .col-md-9.col-md-offset-3 {
+    margin-left: 0;
+}
+
+.HLAnnouncements ul .slick-list .modal-dialog .form-group .col-md-9.col-md-offset-3 input[type="checkbox"] {
+    margin-left: 0;
+}
+
+
+body.modal-open .HLAnnouncements ul.slick-slider .slick-arrow {
+    display: none;
+}
+
+body.modal-open .HLAnnouncements ul.slick-slider .modal {
+position: initial;
+}
+.stickyNav,#admin-toolbar {
+    z-index: 1350;
+}
+
+body.modal-open {
+    overflow: initial !important;
+}
+
+body.modal-open .stickyNav,body.modal-open #admin-toolbar {
+    z-index: 1035;
+}
+
+
+
+
+
+
