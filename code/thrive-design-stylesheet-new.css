@@ -1372,6 +1372,11 @@ body.ribbit .card .HLLandingControl {
     border: none;
 }
 
+body.ribbit .card:has(.HLDiscussions) {
+    border: none;
+    border-radius: 8px;
+}
+
 body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card,
 .col-md-3 .card.clickable>a,
