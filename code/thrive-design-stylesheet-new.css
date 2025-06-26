@@ -2133,7 +2133,7 @@ body.ribbit .bio h3 {
 .grid-sponsors>.col-md-12 {
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 #MainCopy_ContentWrapper .grid-sponsors>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
@@ -2206,7 +2206,12 @@ body.ribbit .sponsor a:is(:hover, :focus) {
 body.ribbit .sponsor a strong {
     font-weight: 300;
     display: inline-block;
-    margin-top: 16px;
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+body.ribbit .sponsor a:has(strong) img {
+    margin-top: auto;
 }
 
 /************ Header ************/
