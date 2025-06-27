@@ -15,6 +15,10 @@
     max-width: 100%;
 }
 
+body.ribbit a[href*="#needslink" i] {
+    outline: 5px dashed red !important;
+}
+
 
 /************ overlap card class ************/
 body.ribbit .row.overlap>div {
