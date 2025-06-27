@@ -6328,10 +6328,15 @@ body.ribbit #edit-event-button-container {
         padding-bottom: 50px;
     }
 
+    body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl {
+        margin-bottom: 15px;
+    }
+
     body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
         bottom: 0;
         left: 0;
         transform: none;
+        top: 110%;
     }
 
     body.ribbit .cards {
