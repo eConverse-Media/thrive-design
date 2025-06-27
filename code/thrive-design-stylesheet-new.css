@@ -3329,6 +3329,12 @@ body.ribbit .col-md-8[class*="section"] .feed-list .text-secondary.font-size-xs,
 body.ribbit .col-md-9[class*="section"] .feed-list .text-secondary.font-size-xs {
     font-size: 16px !important;
 }
+body.ribbit .feed-list .layout-grid-cell .feed-item-row .card-byline a {
+    color: var(--hl-bs--link);
+}
+body.ribbit .feed-list .layout-grid-cell .feed-item-row .card-byline a:is(:hover, :focus) {
+    color: var(--hl-bs--link-hover);
+}
 
 /************ events & blogs ************/
 
