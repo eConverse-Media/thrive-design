@@ -3779,12 +3779,16 @@ body.ribbit.home .engagement-leaderboard .HLLandingControl .Content ul li .title
 
 /****** explore the community ******/
 
-body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl {
+body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl.HLEngagement {
     padding: 0;
     background: transparent;
     filter: none;
     box-shadow: none;
     border-radius: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl .row.heading {
@@ -3797,11 +3801,6 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
 
 body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
     content: 'Connect with members!';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 230px;
-    padding-left: 13px;
 }
 
 
@@ -6449,12 +6448,6 @@ body.ribbit #edit-event-button-container {
 
     body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement {
         padding-bottom: 50px;
-    }
-
-    body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
-        bottom: 0;
-        left: 0;
-        transform: none;
     }
 
     body.ribbit .cards {
