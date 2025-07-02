@@ -15,7 +15,7 @@
 }
 
 body.ribbit a[href*="#needslink" i] {
-    outline: 5px dashed red !important;
+    outline: 5px dashed red;
 }
 
 
