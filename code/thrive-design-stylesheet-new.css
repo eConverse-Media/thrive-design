@@ -1,3 +1,9 @@
+/*** WDS Staging ONLY - fix nav width error ***/#NAV.stickyNav-wide {    max-width: 100%;}
+
+#admin-toolbar {
+    z-index: 999999 !important;
+}
+
 :root {
     --ui-default-text: #595959;
     --ui-heading-text: #272727;
@@ -1264,7 +1270,6 @@ body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not
     color: var(--hl-bs--primary-opposite);
 }
 
-/***TD-52 - Text not legible on the 15% opacity secondary background ***/
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
@@ -1276,14 +1281,13 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml:not(.card)
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--secondary-opposite);
 }
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2 {
-    color: var(--ui-default-text);
-}
+
 
 body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2 {
@@ -1334,7 +1338,7 @@ body.ribbit .bg-gray {
 .icon-list ul li i {
     height: 60px;
     width: 60px;
-    background: var(--hl-bs--primary);
+    background: var(--hl-bs--secondary);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -1343,7 +1347,7 @@ body.ribbit .bg-gray {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--hl-bs--primary-opposite);
+    color: var(--hl-bs--secondary-opposite);
 }
 
 .icon-list ul li h4 {
@@ -1376,11 +1380,6 @@ body.ribbit .card .HLLandingControl {
     border: none;
 }
 
-body.ribbit .card:has(.HLDiscussions) {
-    border: none;
-    border-radius: 8px;
-}
-
 body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card,
 .col-md-3 .card.clickable>a,
@@ -1403,8 +1402,7 @@ body.ribbit .narrow-widget-container {
 }
 
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl .HLLandingControl,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl,
-body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl>.Content ul.display-vertical>li>a {
+body.ribbit:not(.interior) #MPOuterMost #MPOuter .engagement-leaderboard .HLLandingControl {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
@@ -1457,13 +1455,13 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 .card.social ul {
     padding-left: 15px;
 }
-.card.social ul:has(a i) {
-    display: flex;
+.card.social ul:has(i) {
     list-style-type: none;
     padding: 0;
+    display: flex;
 }
 
-.card.social ul li a:has(i) {
+.card.social ul li a:has(i)  {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -2142,7 +2140,7 @@ body.ribbit .bio h3 {
 .grid-sponsors>.col-md-12 {
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
 }
 
 #MainCopy_ContentWrapper .grid-sponsors>div[class*="col-md-"]>.ContentUserControl:not(:first-child),
@@ -2215,12 +2213,7 @@ body.ribbit .sponsor a:is(:hover, :focus) {
 body.ribbit .sponsor a strong {
     font-weight: 300;
     display: inline-block;
-    margin-top: auto;
-    padding-top: 16px;
-}
-
-body.ribbit .sponsor a:has(strong) img {
-    margin-top: auto;
+    margin-top: 16px;
 }
 
 /************ Header ************/
@@ -2666,34 +2659,6 @@ body.ribbit.memberhome #MPFooterLink {
     text-align: right;
     padding: 0;
 }
-
-
-/************ basic-slider *************/
-
-.slide-content-wrapper .slick-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 44px;
-    background: transparent;
-    border: 0;
-    z-index: 1;
-    color: #000;
-    opacity: 0.7;
-}
-
-.slide-content-wrapper:has(.white-text) .slick-arrow {
-    color: #fff;
-}
-
-.slide-content-wrapper .prev-arrow {
-    left: -45px;
-}
-
-.slide-content-wrapper .next-arrow {
-    right: -45px;
-}
-
 
 /************ hero *************/
 
@@ -3549,6 +3514,13 @@ body.ribbit .calendar-stamp .month {
 }
     
     
+body.ribbit .community-events-list-row h2 a.link-title {
+    text-transform: none;
+    font-weight: 700;
+}
+body.ribbit .community-events-list-row:not(:first-child) h2 a.link-title {
+    font-size: 14px;
+}
 
 body.ribbit .community-events-list-row:first-child,
 body.ribbit .blog-list-featured-entry {
@@ -3799,6 +3771,7 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
     position: relative;
 }
 
+
 body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
     content: 'Connect with members!';
 }
@@ -3964,10 +3937,10 @@ div[class*=bg-secondary].row .ContentUserControl.featured-resource ul li {
     display: none;
 }
 
-body.ribbit .pagination>.active>span,
-body.ribbit .pagination>.active>span:hover,
-body.ribbit .pagination li.active>a,
-body.ribbit .pagination li.active>a:hover {
+.pagination>.active>span,
+.pagination>.active>span:hover,
+.pagination li.active>a,
+.pagination li.active>a:hover {
     background-color: var(--hl-bs--primary);
 
 }
@@ -4088,14 +4061,13 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
 
 #MPOuterMost #MPOuter .featured-cards div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide),
 #MPOuterMost #MPOuter .event-cards .Content ul li {
-    margin: 0 12px;
+    margin: 0 12px 12px 12px;
     display: flex;
     flex-direction: column;
     padding: 0;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
     border: none;
     border-radius: 8px;
-    width: 100%;
 }
 
 #MPOuterMost #MPOuter .featured-cards.flex-wrap div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) {
@@ -6450,6 +6422,10 @@ body.ribbit #edit-event-button-container {
         padding-bottom: 50px;
     }
 
+    body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl {
+        margin-bottom: 15px;
+    }
+
     body.ribbit .cards {
         flex-direction: column;
     }
@@ -6714,4 +6690,77 @@ body.ribbit #edit-event-button-container {
     .col-md-6 .cards .card {
         flex-basis: calc(100% - 24px);
     }
+}
+
+.HLAnnouncements ul {
+z-index: 1050;
+}
+
+
+
+.HLAnnouncements ul .slick-list  .modal-dialog {
+width: 315px;
+margin-left: 315px;
+position: relative;
+z-index: 1050;
+}
+
+.HLAnnouncements ul .slick-list  .modal-dialog .form-group {
+display: flex;
+flex-direction: column;
+margin-bottom: 5px;
+}
+
+.HLAnnouncements ul .slick-list  .modal-dialog .form-group label {
+    width: 100%;
+    text-align: left;
+}
+
+.HLAnnouncements ul .slick-list  .modal-dialog .form-group .col-md-9 {
+    width: 100%;
+}
+
+.HLAnnouncements ul .slick-list .modal-dialog .form-group .col-md-9.col-md-offset-3 {
+    margin-left: 0;
+}
+
+.HLAnnouncements ul .slick-list .modal-dialog .form-group .col-md-9.col-md-offset-3 input[type="checkbox"] {
+    margin-left: 0;
+}
+
+
+body.modal-open .HLAnnouncements ul.slick-slider .slick-arrow {
+    display: none;
+}
+
+body.modal-open .HLAnnouncements ul.slick-slider .modal {
+position: initial;
+}
+.stickyNav, #admin-toolbar {
+    z-index: 1350;
+}
+
+body.modal-open {
+    overflow: initial !important;
+}
+
+body.modal-open .stickyNav,body.modal-open #admin-toolbar {
+    z-index: 1035;
+}
+
+/*** RP Sponsor test for TD-75***/
+.grid-sponsors>.col-md-12 {
+    align-items: stretch;
+}
+body.ribbit .sponsor a:has(strong) img, body.ribbit .sponsor a strong {
+    margin-top: auto;
+}
+body.ribbit .sponsor a strong {
+    padding-top: 16px;
+}
+
+/*** RP Test for TD-74 ***/
+body.ribbit .card:has(.HLDiscussions) {
+    border: none;
+    border-radius: 8px;
 }
