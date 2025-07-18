@@ -1392,7 +1392,7 @@ body.ribbit:not(.interior) .col-md-3 .ContentItemMVC.card {
 }
 
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLandingControl,
-.ContentItemHtml.card.team {
+.ContentItemHtml.card.team:has(button) {
     box-shadow: none;
     padding: 0;
     background: transparent;
