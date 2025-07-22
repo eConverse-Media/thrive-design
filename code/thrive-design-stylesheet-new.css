@@ -1364,6 +1364,7 @@ body.ribbit .icon-list h3 {
 .card.engagement-leaderboard,
 .card.clickable>a,
 .card.team button,
+.card.team:not(:has(button)),
 body.ribbit .narrow-widget-container,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
 body.ribbit:not(.interior) .ContentItemMVC.card,
@@ -1382,7 +1383,7 @@ body.ribbit .card:has(.HLDiscussions) {
 }
 
 body.ribbit .narrow-widget-container,
-.col-md-3 .ContentItemHtml.card,
+.col-md-3 .ContentItemHtml.card:not(.team, .clickable),
 .col-md-3 .card.clickable>a,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl,
 .card.engagement-leaderboard,
@@ -1391,7 +1392,7 @@ body.ribbit:not(.interior) .col-md-3 .ContentItemMVC.card {
 }
 
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .ContentItemMVC.card .HLLandingControl,
-.ContentItemHtml.card.team {
+.ContentItemHtml.card.team:has(button) {
     box-shadow: none;
     padding: 0;
     background: transparent;
@@ -1952,7 +1953,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 }
 
 
-body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+body.ribbit.memberhome #MainCopy_ContentWrapper .row[classs*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -1970,9 +1971,13 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     background: transparent;
 }
 
-.card.team button {
+.card.team button,
+.card.team:not(:has(button)) {
     width: 100%;
     border: none;
+}
+.card.team:not(:has(button)) {
+    text-align: center;
 }
 
 .card.team button:is(:hover, :focus) {
@@ -1980,7 +1985,8 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15), 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 2px rgba(153, 153, 153, 0.25);
 }
 
-.flex-cards .card.team button {
+.flex-cards .card.team button,
+.card.team:not(:has(button)) {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 100%;
@@ -6231,14 +6237,16 @@ body.ribbit #edit-event-button-container {
     .ContentItemMVC.card,
     .ContentUserControl.card,
     .card.clickable a,
-    .card.team button {
+    .card.team button,
+    .card.team:not(:has(button)) {
         width: 100%;
     }
 
     .ContentItemHtml.card:not(.clickable):not(.team),
     .ContentItemMVC.card,
     .card.clickable a,
-    .card.team button {
+    .card.team button,
+    .card.team:not(:has(button)) {
         max-width: 100%;
     }
 
