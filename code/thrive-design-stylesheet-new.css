@@ -1334,7 +1334,7 @@ body.ribbit .bg-gray {
 .icon-list ul li i {
     height: 60px;
     width: 60px;
-    background: var(--hl-bs--primary);
+    background: var(--hl-bs--secondary);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -1343,7 +1343,7 @@ body.ribbit .bg-gray {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--hl-bs--primary-opposite);
+    color: var(--hl-bs--secondary-opposite);
 }
 
 .icon-list ul li h4 {
