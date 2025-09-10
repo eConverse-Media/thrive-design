@@ -1377,7 +1377,8 @@ body.ribbit .icon-list h3 {
 body.ribbit .narrow-widget-container,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
 body.ribbit:not(.interior) .ContentItemMVC.card,
-body.ribbit .card .HLLandingControl {
+body.ribbit .card .HLLandingControl,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .row ul {
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
@@ -5844,47 +5845,53 @@ body.ribbit #edit-event-button-container {
 
 /****** Suggested Contacts Cards ******/
 
-body.ribbit .suggested-contacts-cards .people-you-should-know .Content {
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content,
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row,
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a {
     display: flex;
+}
+
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content {
     margin: -12px;
 }
 
 body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row {
     margin: 12px;
-    flex-grow: 0;
-    flex-shrink: 1;
     flex-basis: calc(33.3333333% - 24px);
-    display: flex;
 }
 
 body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12 {
-    flex-grow: 0;
-    flex-shrink: 1;
     flex-basis: 100%;
-    display: flex;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .row ul,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a img,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-6,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-4 {
+    width: 100%;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions .row ul {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
-    border: none;
-    padding: 24px 24px 24px 96px;
-    filter: none;
-    width: 100%;
+    padding-left: 96px;
     margin-bottom: 12px;
+}
+
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .HLLandingControl.HL-contact-suggestions ul:not(.dropdown-menu) li,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul li .title-row,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-6,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-4 {
+    height: 100%;
 }
 
 body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .HLLandingControl.HL-contact-suggestions ul:not(.dropdown-menu) li {
     padding: 0;
     margin: 0;
     border: none;
-    height: 100%;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul li .title-row {
     flex-direction: column;
-    height: 100%;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 {
@@ -5896,22 +5903,14 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl u
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a img {
-    width: 100%;
     height: auto;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-6,
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-4 {
-    width: 100%;
-    height: 100%;
     padding: 0;
 }
 
@@ -5924,18 +5923,16 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl.H
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details {
     font-size: 18px;
-    line-height: 28px;
-    font-weight: 500;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details span:empty + br {
     display: none;
 }
 
-body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details br + span {
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details br + span,
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary,
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
 }
 
 body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary,
@@ -5943,9 +5940,7 @@ body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-k
     margin-top: 8px;
     font-weight: 600;
     padding: 8px 16px;
-    border-radius: 4px;
     margin-right: 6px;
-    font-size: 14px;
     line-height: initial;
 }
 
@@ -5959,7 +5954,6 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-def
     border: none;
     padding: 0;
     background: transparent;
-    font-weight: 500;
 }
 
 body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-default:is(:hover, :focus) {
