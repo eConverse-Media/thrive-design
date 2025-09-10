@@ -6677,7 +6677,7 @@ body.ribbit #edit-event-button-container {
     .home .col-md-6 .HLEventList ul li .col-md-10,
     .memberhome .col-md-6 .HLEventList ul li .col-md-10,
     .col-md-6 .HLRecentBlogs ul li .text-container,
-    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) .text-container {
+    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image)+.text-container {
         width: 100%;
         padding-right: 0;
     }
