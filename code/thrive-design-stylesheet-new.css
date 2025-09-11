@@ -6594,6 +6594,14 @@ body.ribbit #edit-event-button-container {
     ul.displayed {
         max-height: 100%;
     }
+
+    body.ribbit.profile .profile-tabs-toggle {
+        color: var(--hl-bs--primary);
+    }
+    
+    body.ribbit.profile .profile-tabs-toggle:is(:hover, :focus) {
+        color: #fff;
+    }
 }
 
 @media (width < 767px) {
