@@ -954,8 +954,8 @@ body.ribbit:not(.interior) .row>div.col-md-6>div[class*=Content] .HLLandingContr
 
 .make-arrow-link em a,
 .card-link em,
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default,
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default,
 .card.full-width-icon .card-link,
@@ -982,8 +982,8 @@ body.ribbit .arrow-link-standalone a.link-standalone {
     font-size: 14px;
 }
 
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default i,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default i,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default i,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default i {
     display: none;
@@ -992,8 +992,8 @@ body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLand
 .make-arrow-link em a::after,
 .card-link em::after,
 .arrow-link em a::after,
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default::after,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default::after,
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default::after {
     content: '\f061';
@@ -1008,8 +1008,8 @@ body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLand
 .make-arrow-link em a:is(:hover, :focus),
 a:is(:hover, :focus) .card-link em,
 .arrow-link em a:is(:hover, :focus),
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
-body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card)>.HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
+body.ribbit.home #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="BottomLink"] .btn.btn-default:is(:hover, :focus),
 body.ribbit.memberhome #MPOuterMost div[class*="col-md-"]>div:not(.card) .HLLandingControl div[id*="MoreLink"] .btn.btn-default:is(:hover, :focus),
 body.ribbit .arrow-link-standalone a.link-standalone:is(:hover, :focus) {
