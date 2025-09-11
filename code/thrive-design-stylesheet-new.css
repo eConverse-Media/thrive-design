@@ -2079,7 +2079,8 @@ body.ribbit .bio h3 {
     height: 450px;
     width: 800px;
     top: calc(50% - 200px);
-    left: calc(50% - 350px);
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 4px;
     padding: 40px;
     background: #ffffff;
@@ -6731,6 +6732,11 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-def
     
     body.ribbit.profile .profile-tabs-toggle:is(:hover, :focus) {
         color: #fff;
+    }
+
+    .bio {
+        height: 350px;
+        width: calc(100% - 30px);
     }
 }
 
