@@ -33,7 +33,7 @@ $(function () {
 
 	});
 	
-	$('.bio').prepend('<button type="button" onclick="closeModal();" class="close-modal"></button>');
+	$('.bio').prepend('<button type="button" onclick="closeModal();" class="close-modal"><span class="sr-only">Close</span></button>');
 	
 	$(document).keyup(function (e){
 		if (e.keyCode == 27) {
