@@ -1377,7 +1377,8 @@ body.ribbit .icon-list h3 {
 body.ribbit .narrow-widget-container,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .HLLandingControl,
 body.ribbit:not(.interior) .ContentItemMVC.card,
-body.ribbit .card .HLLandingControl {
+body.ribbit .card .HLLandingControl,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .row ul {
     border-radius: 8px;
     padding: 24px;
     box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
@@ -4433,6 +4434,7 @@ body.ribbit .featured-cards ul.pagination li {
 .people-you-should-know .HL-contact-suggestions ul li .col-md-2 a img {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
 .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .title-row {
@@ -5842,6 +5844,123 @@ body.ribbit #edit-event-button-container {
     z-index: 1;
 }
 
+/****** Suggested Contacts Cards ******/
+
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content,
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row,
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a {
+    display: flex;
+}
+
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content {
+    margin: -12px;
+}
+
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row {
+    margin: 12px;
+    flex-basis: calc(33.3333333% - 24px);
+}
+
+body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12 {
+    flex-basis: 100%;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .row ul,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a img,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-6,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-4 {
+    width: 100%;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .row ul {
+    padding-left: 96px;
+    margin-bottom: 12px;
+}
+
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .HLLandingControl.HL-contact-suggestions ul:not(.dropdown-menu) li,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul li .title-row,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-6,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-4 {
+    height: 100%;
+}
+
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .HLLandingControl.HL-contact-suggestions ul:not(.dropdown-menu) li {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul li .title-row {
+    flex-direction: column;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 {
+    position: absolute;
+    left: 24px;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a {
+    width: 48px;
+    height: 48px;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-2 > a img {
+    height: auto;
+    border-radius: 50%;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-6,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl ul .title-row .col-md-4 {
+    padding: 0;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl.HL-contact-suggestions ul li .update-friend {
+    text-align: left;
+    margin-top: 8px;
+    flex-direction: row;
+    align-items: end;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details {
+    font-size: 18px;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details span:empty + br {
+    display: none;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-6 .details br + span,
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary,
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
+    font-size: 14px;
+}
+
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary,
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
+    margin-top: 8px;
+    font-weight: 600;
+    padding: 8px 16px;
+    margin-right: 6px;
+    line-height: initial;
+}
+
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before,
+body.ribbit #MPOuterMost #MPOuter .suggested-contacts-cards .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default::before {
+    content: none;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-default,
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-default:is(:hover, :focus) {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-default:is(:hover, :focus) {
+    text-decoration: underline;
+}
+
 /*** RESPONSIVE START ***/
 
 /****** larger screens only ******/
@@ -6482,6 +6601,17 @@ body.ribbit #edit-event-button-container {
 
 
     .engagement-leaderboard .Content ul li .title-row {
+        width: 100%;
+    }
+
+    body.ribbit .suggested-contacts-cards .people-you-should-know .Content,
+    body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row,
+    body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12,
+    body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl.HL-contact-suggestions ul li .update-friend {
+        display: block;
+    }
+
+    body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12 {
         width: 100%;
     }
 
