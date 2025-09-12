@@ -5376,6 +5376,11 @@ body.ribbit.community-pages #MPOuterMost #MPOuter .no-community-html {
     width: 75%;
 }
 
+.summary-edit .Content > .text-container:first-child {
+    width: 100%;
+    padding-right: 0;
+}
+
 /****** tabs ******/
 
 body.ribbit .community-tabs-container-outer {
