@@ -81,8 +81,8 @@ function handleSlider() {
         autoplaySpeed: 7000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><span class="sr-only">Back</span><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><span class="sr-only">Next</span><i class="fa-solid fa-chevron-right"></i></button>',
         responsive: [
             {
                 breakpoint: 1200,
@@ -110,8 +110,8 @@ function handleSlider() {
         autoplay: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>'
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><span class="sr-only">Back</span><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><span class="sr-only">Next</span><i class="fa-solid fa-chevron-right"></i></button>'
     });
 
     $('.make-carousel-tiles ul').slick({
@@ -122,8 +122,8 @@ function handleSlider() {
         autoplay: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+        prevArrow: '<button type="button" class="slick-arrow prev-arrow"><span class="sr-only">Back</span><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-arrow next-arrow"><span class="sr-only">Next</span><i class="fa-solid fa-chevron-right"></i></button>',
         responsive: [
             {
                 breakpoint: 991,
