@@ -4318,7 +4318,6 @@ body.ribbit .featured-cards ul.pagination li {
 .SearchResults.HLLandingControl ul li .img-container,
 .blogs-block .img-container,
 .list-tiles ul li .img-container {
-    background: var(--hl-bs--primary);
     position: relative;
     overflow: hidden;
     height: 140px;
@@ -4327,9 +4326,17 @@ body.ribbit .featured-cards ul.pagination li {
     background-position: center;
 }
 
+.SearchResults.HLLandingControl ul li .img-container,
+.blogs-block .img-container,
+.list-tiles ul li .img-container,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image {
+    background: var(--hl-bs--primary);
+}
+
 .SearchResults.HLLandingControl ul li .img-container::before,
 .blogs-block .img-container::before,
-.list-tiles ul li .img-container::before {
+.list-tiles ul li .img-container::before,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image::before {
     background-color: rgba(244, 244, 244, 0.85);
     content: '';
     position: absolute;
@@ -4342,7 +4349,8 @@ body.ribbit .featured-cards ul.pagination li {
 
 .SearchResults.HLLandingControl ul li .img-container::after,
 .blogs-block .img-container::after,
-.list-tiles ul li .img-container::after {
+.list-tiles ul li .img-container::after,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after {
     content: '\f15c';
     font-family: 'Font Awesome 6 Pro';
     color: var(--hl-bs--primary);
@@ -4374,7 +4382,8 @@ body.ribbit .featured-cards ul.pagination li {
 }
 
 .SearchResults.HLLandingControl ul li.acl-blog .img-container::after,
-.blogs-block .img-container::after {
+.blogs-block .img-container::after,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after {
     content: '\f1ea';
 }
 
@@ -4383,7 +4392,8 @@ body.ribbit .featured-cards ul.pagination li {
 .blogs-block .img-container.loading::before,
 .blogs-block .img-container.no-ajax-image::before,
 .list-tiles ul li .img-container.loading::before,
-.list-tiles ul li .img-container.no-ajax-image::before {
+.list-tiles ul li .img-container.no-ajax-image::before,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image::before {
     opacity: 1;
 }
 
@@ -4392,14 +4402,14 @@ body.ribbit .featured-cards ul.pagination li {
 .blogs-block .img-container.loading::after,
 .blogs-block .img-container.no-ajax-image::after,
 .list-tiles ul li .img-container.loading::after,
-.list-tiles ul li .img-container.no-ajax-image::after {
+.list-tiles ul li .img-container.no-ajax-image::after,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after {
     opacity: 0.2;
 }
 
 .list-tiles div[id*=_BottomLink] {
     padding-top: 25px;
 }
-
 
 .list-tiles div[id*=_BottomLink] .col-md-12 {
     padding: 0;
