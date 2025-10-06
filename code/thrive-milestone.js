@@ -9,8 +9,8 @@
             autoplay: false,
             centerMode: true,
             centerPadding: 'calc(50% - 250px)',
-            prevArrow: '<button type="button" class="slick-arrow prev-arrow"><i class="fa-solid fa-chevron-left"></i></button>',
-            nextArrow: '<button type="button" class="slick-arrow next-arrow"><i class="fa-solid fa-chevron-right"></i></button>',
+            prevArrow: '<button type="button" class="slick-arrow prev-arrow"><span class="sr-only">Back</span><i class="fa-solid fa-chevron-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-arrow next-arrow"><span class="sr-only">Next</span><i class="fa-solid fa-chevron-right"></i></button>',
             responsive: [
                 {
                     breakpoint: 1070,

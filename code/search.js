@@ -1,7 +1,7 @@
 handleSearch = () => {
     $(".search-bar-top").wrap('<div class="search-wrap" />');
     $(".search-wrap").append(
-        '<button class="search-btn-top" type="button" onclick="toggleSearch();"></button>'
+        '<button class="search-btn-top" type="button" onclick="toggleSearch();"><span class="sr-only">Search</span></button>'
     );
     $(".search-bar-top .form-control").attr("placeholder", "Search...");
     $("#searchColumn .form-control").attr("placeholder", "Search...");
