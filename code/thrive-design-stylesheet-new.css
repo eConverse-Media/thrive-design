@@ -2226,7 +2226,7 @@ body.ribbit .sponsor a {
 
 
 body.ribbit .sponsor a:is(:hover, :focus) {
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--card-shadow), 0px 0px 16px 0px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
 }
 
@@ -2488,7 +2488,7 @@ body.ribbit :not(.no-theme) .navbar-default .navbar-nav>.open>a:focus {
 /* Nav Dropdown */
 
 .navbar-nav>li>.dropdown-menu {
-    box-shadow: 0px 0px 2px 0px rgba(153, 153, 153, 0.25), 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 2px 16px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--card-shadow), 0px 2px 16px 0px rgba(0, 0, 0, 0.15);
     min-width: 221px;
     border-radius: 8px;
     padding: 16px;
