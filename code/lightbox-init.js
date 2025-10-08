@@ -6,7 +6,7 @@ $(function () {
 		$(this).wrap('<a href="' + src + '" class="big" rel="' + rel + '"></a>');
 	});
 	
-	// As A jQuery Plugin -->
+	// Using Pure JS call as the CDN for pure js lightbox is more stable -->
 	new SimpleLightbox('.gallery a', {
 		// default source attribute
 	sourceAttr: 'href',
