@@ -1231,52 +1231,52 @@ body.ribbit #MPOuterMost #MPOuter [class*="bg-"].ContentItemHtml h2 {
     color: #000;
 }
 
-body.ribbit .bg-image.ContentItemHtml .HtmlContent *:not(em a),
+body.ribbit .bg-image.ContentItemHtml .HtmlContent *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-image.ContentItemHtml .HtmlContent h2,
-body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
-body.ribbit .bg-primary-dark.ContentItemHtml:not(.card) *:not(em a),
-body.ribbit .bg-black .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit .bg-primary-dark.ContentItemHtml:not(.card) *:not(em a, i),
+body.ribbit .bg-black .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-black .ContentItemHtml:not(.card) h2,
-body.ribbit .bg-black.ContentItemHtml:not(.card) *:not(em a),
+body.ribbit .bg-black.ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml:not(.card) h2,
-body.ribbit .overlay-dark .ContentItemHtml:not(.card) .HtmlContent :not(em a),
-body.ribbit .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit .overlay-dark .ContentItemHtml:not(.card) .HtmlContent :not(em a, i),
+body.ribbit .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .overlay-dark .ContentItemHtml:not(.card) .HtmlContent h2,
 body.ribbit #MPOuterMost #MPOuter .overlay-dark-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: #fff;
 }
 
-body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-primary .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-primary-dark .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-dark.ContentItemHtml *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-primary.ContentItemHtml h2,
-body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .hl-primary-row-bkgd .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--primary-opposite);
 }
 
 /***TD-52 - Text not legible on the 15% opacity secondary background ***/
-body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
-body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a),
+body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--secondary-opposite);
 }
