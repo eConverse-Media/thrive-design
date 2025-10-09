@@ -3410,8 +3410,7 @@ body.ribbit .feed-list .layout-grid-cell .feed-item-row .images-preview {
     border-radius: 8px 8px 0 0;
 }
 body.ribbit .FeedWidget .card,
-body.ribbit .MicrositeFeedWidget .card,
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact.FeedWidget .feed-item-row.card {
+body.ribbit .MicrositeFeedWidget .card {
     border: none;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(153, 153, 153, 0.25);
 }
@@ -5475,7 +5474,7 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .drop
 
 /****** disable default Thrive filter drop shadow ******/
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl,
-body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact,
+body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact:not(.FeedWidget),
 body.ribbit.interior .QuickLinksWidget,
 body.ribbit.interior .ThreadListWidget,
 body.ribbit.interior .most-active-members-list-view,
