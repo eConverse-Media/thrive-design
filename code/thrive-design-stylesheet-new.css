@@ -3214,7 +3214,7 @@ li.slick-active button::before {
 
 /************ profile card ************/
 
-body.ribbit .ProfileSnippet {
+body.ribbit .ProfileSnippet:not(.no-bg) {
     box-shadow: var(--card-shadow);
 }
 
