@@ -2718,6 +2718,11 @@ body.ribbit.memberhome #MPFooterLink {
 .hero {
     background-size: cover;
     background-position: center;
+    background-color: var(--hl-bs--primary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .hero .row-wide {
@@ -2731,13 +2736,6 @@ body.ribbit.memberhome #MPFooterLink {
 
 .hero .make-buttons em a {
     margin: 10px;
-}
-
-.hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
 }
 
 .hero h1,
@@ -2787,6 +2785,7 @@ body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide {
     z-index: 1;
     height: auto;
     margin: unset;
+    background-color: var(--hl-bs--primary);
 }
 
 body.ribbit #MainCopy_ContentWrapper .ContentItemHtml.hero-slide::before {
@@ -4541,6 +4540,7 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     overflow: hidden;
     min-height: 340px;
     display: flex;
+    background-color: var(--hl-bs--primary);
 }
 
 .promo-block .HtmlContent {
