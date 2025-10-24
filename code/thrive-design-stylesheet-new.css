@@ -117,6 +117,7 @@ body.ribbit #MPOuterMost #MPOuter h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .community-events-list-row:first-child h3 a,
 body.ribbit #MPOuterMost #MPOuter .col-md-3 .ContentUserControl .blog-list-featured-entry h3 a,
 body.ribbit .card.icon-circle h3,
+body.ribbit .card.icon-circle h3,
 body.ribbit .cta-tile h3 {
     font-size: 18px;
     line-height: 1.2;
@@ -1265,24 +1266,26 @@ body.ribbit #MPOuterMost #MPOuter .overlay-primary-gradient .ContentItemHtml:not
     color: var(--hl-bs--primary-opposite);
 }
 
-/***TD-52 - Text not legible on the 15% opacity secondary background ***/
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) h2,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary .ContentItemHtml:not(.card) *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a, i),
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark.ContentItemHtml *:not(em a, i),
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-dark .ContentItemHtml *:not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .bg-secondary.ContentItemHtml h2,
+body.ribbit #MPOuterMost #MPOuter .hl-muted-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .hl-muted-secondary-row-bkgd .ContentItemHtml:not(.card) h2,
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent :not(em a, i),
 body.ribbit #MPOuterMost #MPOuter .overlay-secondary-gradient .ContentItemHtml:not(.card) .HtmlContent h2 {
     color: var(--hl-bs--secondary-opposite);
 }
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
-body.ribbit #MPOuterMost #MPOuter .hl-secondary-row-bkgd .ContentItemHtml:not(.card) h2 {
+
+body.ribbit #MPOuterMost #MPOuter .hl-muted-secondary-row-bkgd .ContentItemHtml:not(.card) *:not(em a),
+body.ribbit #MPOuterMost #MPOuter .hl-muted-secondary-row-bkgd .ContentItemHtml:not(.card) h2 {
     color: var(--ui-default-text);
 }
 
@@ -1291,28 +1294,19 @@ body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml:not(.card
     color: #272727;
 }
 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card :not(em a, i), 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml :not(em a, i), 
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml :not(em a, i), 
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml :not(em a, i), 
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml :not(em a, i), 
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card :not(em a, i) {
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml *:not(em a, i),
+body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card *:not(em a, i) {
     color: #595959;
-}
-
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml.card a i,
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light.ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-primary-light .ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light.ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml a i,
-body.ribbit #MPOuterMost #MPOuter .bg-secondary-light .ContentItemHtml.card a i {
-    color: var(--hl-bs--secondary-opposite);
 }
 
 body.ribbit .bg-primary .ContentItemHtml:not(.card) .icon-container *,
 body.ribbit .hl-primary-row-bkgd .ContentItemHtml:not(.card) .icon-container *,
 body.ribbit .bg-secondary .ContentItemHtml:not(.card) .icon-container *,
-body.ribbit .hl-secondary-row-bkgd .ContentItemHtml:not(.card) .icon-container * {
+body.ribbit .hl-muted-secondary-row-bkgd .ContentItemHtml:not(.card) .icon-container * {
     color: inherit;
 }
 
@@ -1395,6 +1389,7 @@ body.ribbit .card:has(.HLDiscussions) {
 
 body.ribbit .narrow-widget-container,
 .col-md-3 .ContentItemHtml.card:not(.team, .clickable),
+.col-md-3 .ContentItemHtml.card,
 .col-md-3 .card.clickable>a,
 body.ribbit:not(.interior) #MPOuterMost #MPOuter .col-md-3 .HLLandingControl,
 .card.engagement-leaderboard,
@@ -1455,7 +1450,7 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
 }
 
 
-.row.hl-primary-row-bkgd .card, .row.hl-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card, .row.bg-black .card {
+.row.hl-primary-row-bkgd .card, .row.hl-muted-secondary-row-bkgd .card , .row.bg-primary .card , .row.bg-secondary .card , .row.bg-gray .card, .row.bg-black .card {
     border: none; 
  }
 
@@ -1473,6 +1468,12 @@ div[class*="col-md-"]:not(.col-md-12) .ContentItemHtml.card+.ContentItemHtml.car
     display: flex;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+.card.social ul:has(a i) {
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .card.social ul li a:has(i) {
@@ -1964,7 +1965,7 @@ body.ribbit.interior #MainCopy_ContentWrapper>.row-wide>div[class*="col-md-"]:la
 }
 
 
-body.ribbit.memberhome #MainCopy_ContentWrapper .row[classs*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
+body.ribbit.memberhome #MainCopy_ContentWrapper .row[class*=row-]>div[class*=col-md-]>*:not(.row[class*=row-]) {
     margin-top: 16px;
     margin-bottom: 16px;
 }
@@ -1987,6 +1988,7 @@ body.ribbit.memberhome #MainCopy_ContentWrapper .row[classs*=row-]>div[class*=co
     width: 100%;
     border: none;
 }
+
 .card.team:not(:has(button)) {
     text-align: center;
 }
@@ -2685,7 +2687,6 @@ body.ribbit.memberhome #MPFooterLink {
     padding: 0;
 }
 
-
 /************ basic-slider *************/
 
 .slide-content-wrapper .slick-arrow {
@@ -2711,7 +2712,6 @@ body.ribbit.memberhome #MPFooterLink {
 .slide-content-wrapper .next-arrow {
     right: -45px;
 }
-
 
 /************ hero *************/
 
@@ -3408,8 +3408,7 @@ body.ribbit .feed-list .layout-grid-cell .feed-item-row {
 body.ribbit .feed-list .layout-grid-cell .feed-item-row .images-preview {
     border-radius: 8px 8px 0 0;
 }
-body.ribbit .FeedWidget .card,
-body.ribbit .MicrositeFeedWidget .card {
+body.ribbit .FeedWidget .card, body.ribbit .MicrositeFeedWidget .card {
     border: none;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(153, 153, 153, 0.25);
 }
@@ -3424,6 +3423,7 @@ body.ribbit .col-md-8[class*="section"] .feed-list .text-secondary.font-size-xs,
 body.ribbit .col-md-9[class*="section"] .feed-list .text-secondary.font-size-xs {
     font-size: 16px !important;
 }
+
 body.ribbit .feed-list .layout-grid-cell .feed-item-row .card-byline a {
     color: var(--hl-bs--link);
 }
@@ -3801,7 +3801,7 @@ body.ribbit.home .engagement-leaderboard .HLLandingControl .Content ul li .title
 
 /****** explore the community ******/
 
-body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl.HLEngagement {
+body.ribbit #MPOuterMost #MPOuter .explore-community .HLLandingControl {
     padding: 0;
     background: transparent;
     filter: none;
@@ -3823,6 +3823,7 @@ body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-lea
 
 body.ribbit .row>div[class*="col-md-"]>div[class*="Content"]:not(.engagement-leaderboard) .explore-community .HLLandingControl.HLEngagement::after {
     content: 'Connect with members!';
+
 }
 
 
@@ -4120,6 +4121,10 @@ body.ribbit:not(.interior) .row>div[class*="col-md-"]>div[class*="Content"]:not(
     width: 100%;
 }
 
+#MPOuterMost #MPOuter .event-cards .Content ul li { 
+    flex: 1;
+}
+
 #MPOuterMost #MPOuter .featured-cards.flex-wrap div[id*=Main] .SearchResults.HLLandingControl div .Content>ul li:not(.slick-slide) {
     margin: 12px;
     flex-basis: 274px;
@@ -4389,7 +4394,7 @@ body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after {
 
 .SearchResults.HLLandingControl ul li.acl-blog .img-container::after,
 .blogs-block .img-container::after,
-body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after {
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after  {
     content: '\f1ea';
 }
 
@@ -4416,6 +4421,7 @@ body.ribbit .HLRecentBlogs .img-container.no-ajax-image::after {
 .list-tiles div[id*=_BottomLink] {
     padding-top: 25px;
 }
+
 
 .list-tiles div[id*=_BottomLink] .col-md-12 {
     padding: 0;
@@ -4509,6 +4515,10 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
     line-height: 0;
 }
 
+#MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .ignore-contact {
+    margin-left: 0;
+}
+
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before,
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     font-size: 12px;
@@ -4520,9 +4530,6 @@ body.ribbit:not(.interior) .row>div[class*=col-md-]>div.card[class*=Content] .pe
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-default {
     padding: 4px 8px;
     border-radius: 4px;
-}
-#MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .ignore-contact {
-    margin-left: 0;
 }
 
 #MPOuterMost #MPOuter .people-you-should-know .HLLandingControl.HL-contact-suggestions ul li .update-friend .btn-primary::before {
@@ -5473,6 +5480,8 @@ body.ribbit .community-tabs-container #CommunityTabsContainer.nav.nav-tabs .drop
 }
 
 /****** disable default Thrive filter drop shadow ******/
+
+
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div[class*=Content] .HLLandingControl,
 body.ribbit:not(.interior) .row>div[class*=col-md-]>div.ContentItemReact:not(.FeedWidget),
 body.ribbit.interior .QuickLinksWidget,
@@ -5485,6 +5494,8 @@ body.ribbit.interior .RecentBlogs, body.ribbit.interior .RecentlyFollowedContent
     -webkit-filter: none;
     filter: none;
 }
+
+
 
 /****** widgets ******/
 
@@ -5878,6 +5889,7 @@ body.ribbit #edit-event-button-container {
     position: relative;
     z-index: 1;
 }
+
 
 /****** Suggested Contacts Cards ******/
 
@@ -6621,6 +6633,8 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-def
         padding-bottom: 50px;
     }
 
+
+
     body.ribbit .cards {
         flex-direction: column;
     }
@@ -6636,17 +6650,6 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-def
 
 
     .engagement-leaderboard .Content ul li .title-row {
-        width: 100%;
-    }
-
-    body.ribbit .suggested-contacts-cards .people-you-should-know .Content,
-    body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row,
-    body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12,
-    body.ribbit .suggested-contacts-cards .HL-contact-suggestions.HLLandingControl.HL-contact-suggestions ul li .update-friend {
-        display: block;
-    }
-
-    body.ribbit .suggested-contacts-cards .people-you-should-know .Content > .row > .col-md-12 {
         width: 100%;
     }
 
@@ -6763,7 +6766,7 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-def
     body.ribbit.profile .profile-tabs-toggle {
         color: var(--hl-bs--primary);
     }
-    
+
     body.ribbit.profile .profile-tabs-toggle:is(:hover, :focus) {
         color: #fff;
     }
@@ -6855,7 +6858,7 @@ body.ribbit .suggested-contacts-cards .HL-contact-suggestions .col-md-4 .btn-def
     .home .col-md-6 .HLEventList ul li .col-md-10,
     .memberhome .col-md-6 .HLEventList ul li .col-md-10,
     .col-md-6 .HLRecentBlogs ul li .text-container,
-    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image)+.text-container {
+    .col-md-6 .HLMyDocuments ul li .img-container:not(.no-ajax-image) + .text-container {
         width: 100%;
         padding-right: 0;
     }
