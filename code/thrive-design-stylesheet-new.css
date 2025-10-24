@@ -4324,6 +4324,13 @@ body.ribbit .featured-cards ul.pagination li {
 
 .SearchResults.HLLandingControl ul li .img-container,
 .blogs-block .img-container,
+.list-tiles ul li .img-container,
+body.ribbit .HLRecentBlogs .img-container.no-ajax-image {
+    background: var(--hl-bs--primary);
+}
+
+.SearchResults.HLLandingControl ul li .img-container,
+.blogs-block .img-container,
 .list-tiles ul li .img-container {
     position: relative;
     overflow: hidden;
@@ -4331,13 +4338,6 @@ body.ribbit .featured-cards ul.pagination li {
     border-radius: 8px 8px 0 0;
     background-size: cover;
     background-position: center;
-}
-
-.SearchResults.HLLandingControl ul li .img-container,
-.blogs-block .img-container,
-.list-tiles ul li .img-container,
-body.ribbit .HLRecentBlogs .img-container.no-ajax-image {
-    background: var(--hl-bs--primary);
 }
 
 .SearchResults.HLLandingControl ul li .img-container::before,
